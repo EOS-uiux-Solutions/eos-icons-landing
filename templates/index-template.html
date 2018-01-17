@@ -9,7 +9,10 @@
 				color: #222;
 				font-size: 16px;
 				margin: 0;
-				padding: 10px 20px;
+			}
+
+			.container {
+				padding: 16px;
 			}
 
 			h1,
@@ -59,35 +62,42 @@
 			}
 
 			footer {
-				margin-top: 40px;
-				font-size: 14px;
+				background: #ededed;
+				bottom: 0px;
 				color: #999;
+				font-size: 14px;
+				margin-top: 40px;
+				padding: 1em;
+				position: fixed;
+				width: 100%;
 			}
 
 		<%= styles %>
 		</style>
 	</head>
 	<body>
-		<h1><%= fontFamilyName %><% if (version) { %><small>version <%= version %></small><% } %></h1>
+		<div class='container'>
+			<h1><%= fontFamilyName %><% if (version) { %><small>version <%= version %></small><% } %></h1>
 
-		<div class="icons" id="icons">
-			<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
-				<div class="icons__item" data-name="<%= glyph %>"><i class="<%= baseClass %>"><%= glyph %></i> <%= glyph %></div>
+			<div class="icons" id="icons">
+				<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+					<div class="icons__item" data-name="<%= glyph %>"><i class="<%= baseClass %>"><%= glyph %></i> <%= glyph %></div>
+				<% } %>
+			</div>
+
+			<h1>
+			  How to use them:
+				<small>
+				  (click on an icon to see the code snippet)
+				</small>
+			</h1>
+			<% if (addLigatures) { %>
+			<pre><code>&lt;i class=&quot;<%= baseClass %>&quot;&gt;<span id="name2">icon_name</span>&lt;/i&gt;</code></pre>
 			<% } %>
-		</div>
-
-		<h1>
-		  How to use them:
-			<small>
-			  (click on an icon to see the code snippet)
-			</small>
-		</h1>
-		<% if (addLigatures) { %>
-		<pre><code>&lt;i class=&quot;<%= baseClass %>&quot;&gt;<span id="name2">icon_name</span>&lt;/i&gt;</code></pre>
-		<% } %>
-
+    </div>
 		<footer>
-		  Generated with <a href="https://github.com/sapegin/grunt-webfont">grunt-webfont</a>.
+		  Download from gitlab at <a href="https://gitlab.com/SUSE-UIUX/eos-icons">EOS icons</a>.
+			Thanks to <a href="https://github.com/sapegin/grunt-webfont">grunt-webfont</a>.
 		</footer>
 
 		<script>
