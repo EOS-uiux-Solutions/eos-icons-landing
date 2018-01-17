@@ -1,0 +1,29 @@
+{
+  "name": "eos-icons",
+  "version": "1.0.0",
+  "description": "The iconic font made for EOS Design System to work together with Material Icons. Extends the library for SUSE and open SUSE product specific usage.",
+  "main": "gruntfile.js",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-webfont": "^1.6.0"
+  },
+  "scripts": {
+    "build": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/SUSE-UIUX/eos-icons.git"
+  },
+  "keywords": [
+    "iconic",
+    "font",
+    "eos",
+    "icons"
+  ],
+  "author": "SUSE UX/UI team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/SUSE-UIUX/eos-icons/issues"
+  },
+  "homepage": "https://gitlab.com/SUSE-UIUX/eos-icons#README"
+}
