@@ -10,16 +10,20 @@ module.exports = function(grunt) {
         destLess: 'dist/less',
     		options: {
     			font: 'eos-icons',
+          syntax: 'bootstrap',
           ligatures: true,
           normalize: true,
           types: 'woff2,woff,ttf,svg,eot',
           metadata: 'something here',
           templateOptions: {
-            "baseClass": "eos",
-            "classPrefix": "eos_"
+            baseClass: "eos-icons",
+            classPrefix: "eos-",
+            template: 'templates/css-template.css',
+            iconsStyles: false
           },
-          stylesheets: ['less', 'scss', 'css'],
+          stylesheets: ['css', 'less', 'scss'],
           destHtml: 'dist/',
+          htmlDemoTemplate: 'templates/index-template.html',
           htmlDemoFilename: 'index.html'
     		}
     	}

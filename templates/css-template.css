@@ -5,22 +5,25 @@ Visit our Design System: https://gitlab.com/SUSE-UIUX/eos/
 Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 */
 
-
+<% if (fontfaceStyles) { %>
+<% if (fontSrc1 && embed.length) { %>
 @font-face {
-	font-family: "eos-icons";
-	src: url("../fonts/eos-icons.eot?802c833c964f715615ac287dc6620aa4");
-	src: url("../fonts/eos-icons.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/eos-icons.woff2?802c833c964f715615ac287dc6620aa4") format("woff2"),
-		url("../fonts/eos-icons.woff?802c833c964f715615ac287dc6620aa4") format("woff"),
-		url("../fonts/eos-icons.ttf?802c833c964f715615ac287dc6620aa4") format("truetype"),
-		url("../fonts/eos-icons.svg?802c833c964f715615ac287dc6620aa4#eos-icons") format("svg");
+    font-family: "<%= fontFamilyName %>";
+    src: <%= fontSrc1 %>;
+    font-weight: normal;
+    font-style: normal;
+}
+<% } %>@font-face {
+	font-family: "<%= fontFamilyName %>";<% if (fontSrc1) { %>
+	src: <%= fontSrc1 %>;<% }%>
+	src: <%= fontSrc2 %>;
 	font-weight: normal;
 	font-style: normal;
 }
+<% } %>
 
-
-.eos-icons {
-	font-family: "eos-icons";
+.<%= baseClass %> {
+	font-family: "<%= fontFamilyName %>";
 	font-weight: normal;
   font-style: normal;
   font-size: 24px;  /* Preferred icon size */
