@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20170925 at Wed Jan 17 18:02:31 2018
+ By cynthia sanchez
+</metadata>
+<defs>
+<font id="eos-icons" horiz-adv-x="512" >
+  <font-face 
+    font-family="eos-icons"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 -21 428 405"
+    underline-thickness="25"
+    underline-position="-76"
+    unicode-range="U+005F-F103"
+  />
+<missing-glyph horiz-adv-x="187" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name="constraint" unicode="constraint" horiz-adv-x="426" 
+d="M426 342l-426 -2v43l426 1v-42zM426 256l-426 -1v43l426 1v-43zM234 171l-234 -1v42l234 2v-43zM234 86l-234 -2v43l234 1v-42zM234 0l-234 -1v43l234 1v-43zM405 128q8 -1 14.5 -7t6.5 -14v-86q0 -8 -6.5 -14t-14.5 -7h-107q-8 1 -14.5 7t-6.5 14v86q0 8 6.5 14t14.5 7
+v32q0 14 7.5 26.5t19.5 19.5t27 7q22 0 37.5 -15.5t15.5 -37.5v-32zM384 128v32q0 13 -9.5 22.5t-23 9.5t-22.5 -9.5t-9 -22.5v-32h64z" />
+    <glyph glyph-name="organization" unicode="organization" horiz-adv-x="428" 
+d="M385 214h11v-86h-43v43h-117v-43h-43v43h-118v-43h-43v86h12h31h118v42h43v-42h117h32zM161 352q0 22 15.5 37.5t37.5 15.5t38 -15.5t16 -37.5t-16 -38t-38 -16t-37.5 16t-15.5 38zM0 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5z
+M161 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5zM321 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5z" />
+    <glyph glyph-name="product_subscriptions" unicode="product_subscriptions" horiz-adv-x="428" 
+d="M43 277v43h342v-43h-342zM86 362v43h256v-43h-256zM385 235q18 0 30.5 -12.5t12.5 -30.5v-170q0 -18 -12.5 -30.5t-30.5 -12.5h-342q-18 0 -30.5 12.5t-12.5 30.5v170q0 18 12.5 30.5t30.5 12.5h342zM272 16l-23 68l59 43h-72l-23 71l-22 -70h-72l58 -42l-22 -70l59 43z
+" />
+    <glyph glyph-name=".notdef" horiz-adv-x="187" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="170" 
+ />
+    <glyph glyph-name="_" unicode="_" 
+d="M0 0z" />
+    <glyph glyph-name="a" unicode="a" 
+d="M0 0z" />
+    <glyph glyph-name="b" unicode="b" 
+d="M0 0z" />
+    <glyph glyph-name="c" unicode="c" 
+d="M0 0z" />
+    <glyph glyph-name="d" unicode="d" 
+d="M0 0z" />
+    <glyph glyph-name="g" unicode="g" 
+d="M0 0z" />
+    <glyph glyph-name="i" unicode="i" 
+d="M0 0z" />
+    <glyph glyph-name="n" unicode="n" 
+d="M0 0z" />
+    <glyph glyph-name="o" unicode="o" 
+d="M0 0z" />
+    <glyph glyph-name="p" unicode="p" 
+d="M0 0z" />
+    <glyph glyph-name="r" unicode="r" 
+d="M0 0z" />
+    <glyph glyph-name="s" unicode="s" 
+d="M0 0z" />
+    <glyph glyph-name="t" unicode="t" 
+d="M0 0z" />
+    <glyph glyph-name="u" unicode="u" 
+d="M0 0z" />
+    <glyph glyph-name="z" unicode="z" 
+d="M0 0z" />
+  </font>
+</defs></svg>
