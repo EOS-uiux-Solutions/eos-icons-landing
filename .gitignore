@@ -1,1 +1,4 @@
-WIP/.DS_Store
+.DS_store
+node_modules
+package-lock.json
+npm-debug.log
