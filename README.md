@@ -36,4 +36,7 @@ SVG file names with more than one word in it should not have a minus character s
 
 Then all you need to do, being in the project directory, is run `grunt`, which will build the assets under the `dist/` folder.
 
+Open the `index.html` in your browser to easily navigate the iconic font and check the look of the icons in different sizes.
+We added the recommended sizes MD icons uses: 18, 24, 36, and 48 pixel icons, plus 16px which is our minimum allowed size at EOS Design System.
+
 **That's it!!.. easy as pie, they say**
