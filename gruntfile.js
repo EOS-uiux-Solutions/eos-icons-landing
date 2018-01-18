@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             template: 'templates/css-template.css',
             iconsStyles: false
           },
-          stylesheets: ['css', 'less', 'scss'],
+          stylesheets: ['css'],
           destHtml: 'dist/',
           htmlDemoTemplate: 'templates/index-template.html',
           htmlDemoFilename: 'index.html'
