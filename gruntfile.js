@@ -11,6 +11,7 @@ module.exports = function(grunt) {
     		options: {
     			font: 'eos-icons',
           syntax: 'bootstrap',
+          version: '1.0.0',
           ligatures: true,
           normalize: true,
           types: 'woff2,woff,ttf,svg,eot',
