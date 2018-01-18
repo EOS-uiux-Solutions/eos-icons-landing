@@ -3,11 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title><%= fontFamilyName %> demo page</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 		<style>
 			body {
 				background: #fff;
-				color: #222;
+				color: #5f5f5f;
 				font-size: 16px;
+				font-family: 'Lato', sans-serif;
+				font-weight: 400;
 				margin: 0;
 			}
 
@@ -15,29 +18,47 @@
 				padding: 16px;
 			}
 
+			header {
+				background: #fe673a;
+        margin-bottom: 2em;
+				position: fixed;
+				top: 0px;
+				width: 100%;
+			}
+
+			.icons-container {
+				margin-top: 120px;
+			}
+
 			h1,
-			div,
 			footer {
-				font-family: "Helvetica Neue", Arial, sans-serif;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
 			}
 
 			h1 {
 				font-size: 32px;
-				font-weight: normal;
+				margin: 0px;
+				color: white;
 			}
 
-			h1 small {
+			h2 small {
 				font-size: 0.5em;
 			}
 
 			.icons {
-				margin-bottom: 40px;
 				-webkit-column-count: 6;
 				   -moz-column-count: 6;
 				        column-count: 6;
 				-webkit-column-gap: 20px;
 				   -moz-column-gap: 20px;
 				        column-gap: 20px;
+			}
+
+			.two-columns {
+				-webkit-column-count: 2;
+				   -moz-column-count: 2;
+				        column-count: 2;
 			}
 
 			.icons__item,
@@ -50,19 +71,16 @@
 				color: #fe673a;
 			}
 
-			.icons__item i {
-				display: inline-block;
-				font-size: 48px;
-				text-align: center;
+			.icons__item {
+				margin-bottom: 3em;
 			}
 
-			.icons__item:hover i {
-				-webkit-transform: scale(1.1);
-				        transform: scale(1.1);
+			.icons__item i {
+				font-size: 48px;
 			}
 
 			.how-to-use {
-				background: #fe673a;
+				background: #333;
 				bottom: 44px;
 				position: fixed;
 				width: 100%;
@@ -94,15 +112,47 @@
 				cursor: pointer;
 			}
 
+			.eos-logo-color-gradients {
+			  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff890a+0,ff420a+50,bc0289+100 */
+			  background: #ff890a;
+			  background: -moz-linear-gradient(-45deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+			  background: -webkit-linear-gradient(-45deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+			  background: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+			  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff890a', endColorstr='#bc0289', GradientType=1 );
+			}
+
+			.toolbar {
+				padding: 10px;
+			}
+
+			.version {
+				font-size: 12px;
+			}
+
 		<%= styles %>
 		</style>
 	</head>
 	<body>
-		<div class='container'>
-			<h1>EOS Icons<% if (version) { %><small>version <%= version %></small><% } %></h1>
-
+		<header class='eos-logo-color-gradients'>
+		  <div class='container two-columns'>
+		    <h1>
+				  <img src='../templates/logo.png'/>
+				  <% if (version) { %><small class='version'>version <%= version %></small><% } %>
+				</h1>
+				<div class='pull-right toolbar'>
+				  <span class='text-white'>Try different sizes: </span>
+				  <button class='change-size'>16px</button>
+				  <button class='change-size'>18px</button>
+					<button class='change-size'>24px</button>
+					<button class='change-size'>36px</button>
+					<button class='change-size'>48px</button>
+				</div>
+			</div>
+		</header>
+		<div class='container icons-container'>
 			<div class="icons" id="icons">
-				<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+				<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) {
+					var glyph = glyphs[glyphIdx] %>
 					<div class="icons__item" data-name="<%= glyph %>">
 					  <i class="<%= baseClass %>"><%= glyph %></i>
 						<br>
@@ -156,6 +206,16 @@
 				document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
 			}
 
+			var buttonsSizes = document.getElementsByClassName('change-size')
+			for (i = 0; i < buttonsSizes.length; i++) {
+		    buttonsSizes[i].onclick = function(e) {
+					e = e || window.event;
+					iconSize = e.target.innerHTML
+	        for (i = 0; i < document.getElementsByClassName('eos-icons').length; i++) {
+					  document.getElementsByClassName('eos-icons')[i].style.fontSize = iconSize;
+					}
+		    };
+			}
 
 		})();
 		</script>
