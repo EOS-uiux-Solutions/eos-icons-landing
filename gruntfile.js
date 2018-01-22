@@ -25,7 +25,7 @@ module.exports = function(grunt) {
           stylesheets: ['css'],
           destHtml: 'dist/',
           htmlDemoTemplate: 'templates/index-template.html',
-          htmlDemoFilename: 'index.html'
+          htmlDemoFilename: 'index'
     		}
     	}
     }
