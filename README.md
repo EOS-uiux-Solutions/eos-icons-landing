@@ -27,10 +27,10 @@ cd eos-icons
 brew install node
 ```
 
-- Install grunt:
+- Install npm dependencies:
 
 ```
-npm install -g grunt-cli
+npm install
 ```
 
 Install the dependencies:
@@ -39,7 +39,6 @@ Install the dependencies:
 
 ```
 brew install ttfautohint fontforge --with-python
-npm install grunt-webfont
 ```
 
 You will need to have Xcode installed. First install the command line tool:
@@ -56,7 +55,6 @@ https://developer.apple.com/xcode/
 
 ```
 sudo apt-get install fontforge ttfautohint
-npm install grunt-webfont --save-dev
 ```
 
 Add your icons into the `svg/` folder. All our icons have been designed with Illustrator, but designing with any tool like Inkscape will work just fine, just make sure the exported SVG code is as clean as possible.
