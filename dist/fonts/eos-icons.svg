@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Thu Jan 18 18:59:28 2018
+Created by FontForge 20170925 at Mon Jan 22 15:24:42 2018
  By cynthia sanchez
 </metadata>
 <defs>
@@ -15,10 +15,10 @@ Created by FontForge 20170925 at Thu Jan 18 18:59:28 2018
     panose-1="2 0 5 3 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="0 -21 428 405"
+    bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F104"
+    unicode-range="U+0020-F105"
   />
 <missing-glyph horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -39,6 +39,8 @@ d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
  />
     <glyph glyph-name="nonmarkingreturn" horiz-adv-x="170" 
  />
+    <glyph glyph-name=" " unicode=" " 
+d="M0 0z" />
     <glyph glyph-name="_" unicode="_" 
 d="M0 0z" />
     <glyph glyph-name="a" unicode="a" 
@@ -54,6 +56,8 @@ d="M0 0z" />
     <glyph glyph-name="g" unicode="g" 
 d="M0 0z" />
     <glyph glyph-name="i" unicode="i" 
+d="M0 0z" />
+    <glyph glyph-name="k" unicode="k" 
 d="M0 0z" />
     <glyph glyph-name="n" unicode="n" 
 d="M0 0z" />
@@ -73,5 +77,8 @@ d="M0 0z" />
 d="M0 0z" />
     <glyph glyph-name="z" unicode="z" 
 d="M0 0z" />
+    <glyph glyph-name="background _tasks" unicode="&#xf102;" 
+d="M64 363v21h256v-21h-256zM64 320v21h256v-21h-256zM64 277v22h32v-22h-32zM64 235v21h32v-21h-32zM512 32q0 -13 -9.5 -22.5t-22.5 -9.5h-128v-32h32v-32h-128v32h32v32h-128q-13 0 -22.5 9.5t-9.5 22.5v213q0 14 9.5 23t22.5 9h320q13 0 22.5 -9t9.5 -23v-213zM160 32
+h320v213h-320v-213zM107 203v-32h-75q-13 0 -22.5 9t-9.5 23v213q0 13 9.5 22.5t22.5 9.5h320q13 0 22.5 -9.5t9.5 -22.5v-117h-32v117h-320v-213h75z" />
   </font>
 </defs></svg>
