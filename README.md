@@ -14,14 +14,43 @@ If you want to know more about all the standards we follow for the EOS, visit ou
 
 ### Installing dependencies
 
-Install the dependencies (this assumes you already have Node.js and npm in your machine):
+- Clone this repository and go to the folder:
+
+```
+git clone git@gitlab.com:SUSE-UIUX/eos-icons.git
+cd eos-icons
+```
+
+- Make sure you have NODE.js installed, if not:
+
+```
+brew install node
+```
+
+- Install grunt:
+
+```
+npm install -g grunt-cli
+```
+
+Install the dependencies:
 
 - OSX
 
 ```
 brew install ttfautohint fontforge --with-python
-npm install grunt-webfont --save-dev
+npm install grunt-webfont
 ```
+
+You will need to have Xcode installed. First install the command line tool:
+
+```
+xcode-select --install
+```
+
+And then download the latest version from:
+
+https://developer.apple.com/xcode/
 
 - Linux
 
@@ -30,13 +59,13 @@ sudo apt-get install fontforge ttfautohint
 npm install grunt-webfont --save-dev
 ```
 
-Add your icons into the `svg/` folder. All our icons have been designed with Illustrator, but designing with any tool like Inkscape will work as well, just make sure the exported SVG code is as clean as possible.
+Add your icons into the `svg/` folder. All our icons have been designed with Illustrator, but designing with any tool like Inkscape will work just fine, just make sure the exported SVG code is as clean as possible.
 
 SVG file names with more than one word in it should not have a minus character separating the words (e.g.: some-name.svg), use an underscore (e.g.: some_name.svg). For some reason the minus symbol creates some issues in the built library.
 
-Then all you need to do, being in the project directory, is run `grunt`, which will build the assets under the `dist/` folder.
+Then all you need to do, is run `grunt`, which will build the assets under the `dist/` folder.
 
 Open the `index.html` in your browser to easily navigate the iconic font and check the look of the icons in different sizes.
 We added the recommended sizes MD icons uses: 18, 24, 36, and 48 pixel icons, plus 16px which is our minimum allowed size at EOS Design System.
 
-**That's it!!.. easy as pie, they say**
+**That's it!!.. easy as pie**
