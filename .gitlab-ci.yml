@@ -2,7 +2,7 @@ pages:
   stage: deploy
   script:
   - mkdir .public
-  - cp -r dist/index.html fonts/* .public
+  - cp -r dist/index.html fonts .public
   - mv .public public
   artifacts:
     paths:
