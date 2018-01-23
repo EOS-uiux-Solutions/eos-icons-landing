@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Tue Jan 23 13:55:57 2018
- By cynthia sanchez
+Created by FontForge 20170925 at Tue Jan 23 16:59:21 2018
+ By Manuele Carlini
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Tue Jan 23 13:55:57 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F105"
+    unicode-range="U+005F-F106"
   />
 <missing-glyph horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -36,6 +36,10 @@ M161 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 
     <glyph glyph-name="product_subscriptions" unicode="product_subscriptions" horiz-adv-x="428" 
 d="M43 277v43h342v-43h-342zM86 362v43h256v-43h-256zM385 235q18 0 30.5 -12.5t12.5 -30.5v-170q0 -18 -12.5 -30.5t-30.5 -12.5h-342q-18 0 -30.5 12.5t-12.5 30.5v170q0 18 12.5 30.5t30.5 12.5h342zM272 16l-23 68l59 43h-72l-23 71l-22 -70h-72l58 -42l-22 -70l59 43z
 " />
+    <glyph glyph-name="sap" unicode="sap" horiz-adv-x="469" 
+d="M231 220v-1l15 -49q-7 -2 -15 -2t-15 3zM346 235q25 0 25 -20q0 -19 -25 -19h-11v39h11zM235 427q97 0 165.5 -69t68.5 -166t-68.5 -166t-165.5 -69t-166 69t-69 166t69 166t166 69zM351 163q28 0 44 13.5t18 38.5q0 52 -68 52h-48v-115l-43 114h-43l-36 -96
+q-2 12 -10.5 20t-16.5 11.5t-21 7.5q-27 9 -27 17q0 10 21 10q19 0 35 -9l17 29q-26 12 -55 13h-2q-27 0 -46 -18q-11 -11 -11 -28v-3q0 -20 16 -31q15 -10 33 -15q24 -7 24 -15q0 -5 -3 -8q-6 -5 -14 -5h-2h-2q-20 0 -37 12l-15 -30q25 -14 54 -14h2h1q23 0 41 14l2 2
+l-5 -13h44l7 21q13 -4 26 -4t25 4l7 -21h72v46h16z" />
     <glyph glyph-name=".notdef" horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
     <glyph glyph-name=".null" horiz-adv-x="0" 
