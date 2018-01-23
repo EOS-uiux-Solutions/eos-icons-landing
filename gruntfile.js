@@ -28,11 +28,19 @@ module.exports = function(grunt) {
           htmlDemoFilename: 'index'
     		}
     	}
+    },
+    copy: {
+      logo: {
+        files: [
+          { src: 'templates/logo.png', dest: 'dist/images/' }
+        ]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-webfont');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['webfont']);
+  grunt.registerTask('default', ['webfont','copy']);
 
 };
