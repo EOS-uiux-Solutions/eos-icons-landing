@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Mon Jan 22 16:11:30 2018
- By cynthia sanchez
+Created by FontForge 20170925 at Tue Jan 23 13:04:59 2018
+ By Manuele Carlini
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Mon Jan 22 16:11:30 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F105"
+    unicode-range="U+005F-F106"
   />
 <missing-glyph horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -36,6 +36,11 @@ M161 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 
     <glyph glyph-name="product_subscriptions" unicode="product_subscriptions" horiz-adv-x="428" 
 d="M43 277v43h342v-43h-342zM86 362v43h256v-43h-256zM385 235q18 0 30.5 -12.5t12.5 -30.5v-170q0 -18 -12.5 -30.5t-30.5 -12.5h-342q-18 0 -30.5 12.5t-12.5 30.5v170q0 18 12.5 30.5t30.5 12.5h342zM272 16l-23 68l59 43h-72l-23 71l-22 -70h-72l58 -42l-22 -70l59 43z
 " />
+    <glyph glyph-name="troubleshooting" unicode="troubleshooting" 
+d="M491 213q8 0 14.5 -6t6.5 -15t-6.5 -15t-14.5 -6h-22q-7 -73 -63 -129t-129 -63v-22q0 -8 -6 -14.5t-15 -6.5q-6 0 -11 3t-7.5 8t-2.5 10v22q-48 4 -90.5 31.5t-70 70t-31.5 90.5h-22q-8 0 -14.5 6t-6.5 15t6.5 15t14.5 6h23q7 73 63 129t128 63v22q0 8 6 14.5t15 6.5
+t15 -6.5t6 -14.5v-23q73 -7 129 -63t63 -128h22zM425 213q-7 55 -50 98t-98 50v-48q35 -7 64 -36t36 -64h48zM235 229v51q-22 -6 -41.5 -25.5t-25.5 -41.5h51q6 10 16 16zM219 171h-51q6 -22 25.5 -41.5t41.5 -25.5v51q-10 6 -16 16zM277 155v-51q22 6 41.5 25.5t25.5 41.5
+h-51q-6 -10 -16 -16zM293 213h51q-6 22 -25.5 41.5t-41.5 25.5v-51q10 -6 16 -16zM235 361q-55 -7 -98 -50t-50 -98h48q7 35 36 64t64 36v48zM87 171q4 -36 25.5 -68.5t54 -54t68.5 -25.5v48q-35 7 -64 36t-36 64h-48zM277 23q36 4 68.5 25.5t54 54t25.5 68.5h-48
+q-7 -35 -36 -64t-64 -36v-48z" />
     <glyph glyph-name=".notdef" horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
     <glyph glyph-name=".null" horiz-adv-x="0" 
@@ -56,9 +61,13 @@ d="M0 0z" />
 d="M0 0z" />
     <glyph glyph-name="g" unicode="g" 
 d="M0 0z" />
+    <glyph glyph-name="h" unicode="h" 
+d="M0 0z" />
     <glyph glyph-name="i" unicode="i" 
 d="M0 0z" />
     <glyph glyph-name="k" unicode="k" 
+d="M0 0z" />
+    <glyph glyph-name="l" unicode="l" 
 d="M0 0z" />
     <glyph glyph-name="n" unicode="n" 
 d="M0 0z" />
