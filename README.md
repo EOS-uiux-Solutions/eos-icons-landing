@@ -1,5 +1,7 @@
 # EOS iconic font
 
+Demo: https://suse-uiux.gitlab.io/eos-icons/
+
 This is the iconic font used in the EOS Design System [public URL here when available - yes, we are still working on it]. The official SUSE Design System, and for all open source projects to use and re-use.
 
 To view the EOS Design System project check gitlab https://gitlab.com/SUSE-UIUX/eos
