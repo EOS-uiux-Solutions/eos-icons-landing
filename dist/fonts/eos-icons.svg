@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Tue Jan 23 16:39:14 2018
+Created by FontForge 20170925 at Wed Jan 24 16:14:57 2018
  By Manuele Carlini
 </metadata>
 <defs>
@@ -31,7 +31,7 @@ h320v213h-320v-213zM107 203v-32h-75q-13 0 -22.5 9t-9.5 23v213q0 13 9.5 22.5t22.5
 d="M426 342l-426 -2v43l426 1v-42zM426 256l-426 -1v43l426 1v-43zM234 171l-234 -1v42l234 2v-43zM234 86l-234 -2v43l234 1v-42zM234 0l-234 -1v43l234 1v-43zM405 128q8 -1 14.5 -7t6.5 -14v-86q0 -8 -6.5 -14t-14.5 -7h-107q-8 1 -14.5 7t-6.5 14v86q0 8 6.5 14t14.5 7
 v32q0 14 7.5 26.5t19.5 19.5t27 7q22 0 37.5 -15.5t15.5 -37.5v-32zM384 128v32q0 13 -9.5 22.5t-23 9.5t-22.5 -9.5t-9 -22.5v-32h64z" />
     <glyph glyph-name="network_file_system" unicode="network_file_system" horiz-adv-x="469" 
-d="M469 64v-43h-149v-21h-171v21h-149v43h149v21h64v86h-85q-9 0 -15 6t-6 15v171q0 8 6 14.5t15 6.5h107l21 -21h107q8 0 14.5 -6.5t6.5 -15.5v-149q0 -9 -6.5 -15t-14.5 -6h-107v-86h64v-21h149z" />
+d="M320 85v-21h149v-43h-149v-21h-171v21h-149v43h149v21h64v86h43v-86h64zM299 171h-192q-9 0 -15.5 6t-6.5 15v171q0 8 6.5 14.5t15.5 6.5h128l21 -21h107q8 0 14.5 -6.5t6.5 -15.5v-149q0 -9 -6.5 -15t-14.5 -6h-64z" />
     <glyph glyph-name="organization" unicode="organization" horiz-adv-x="428" 
 d="M385 214h11v-86h-43v43h-117v-43h-43v43h-118v-43h-43v86h12h31h118v42h43v-42h117h32zM161 352q0 22 15.5 37.5t37.5 15.5t38 -15.5t16 -37.5t-16 -38t-38 -16t-37.5 16t-15.5 38zM0 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5z
 M161 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5zM321 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5z" />
