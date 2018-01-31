@@ -46,15 +46,6 @@
 				font-size: 0.5em;
 			}
 
-			.icons {
-				-webkit-column-count: 6;
-				   -moz-column-count: 6;
-				        column-count: 6;
-				-webkit-column-gap: 20px;
-				   -moz-column-gap: 20px;
-				        column-gap: 20px;
-			}
-
 			.two-columns {
 				-webkit-column-count: 2;
 				   -moz-column-count: 2;
@@ -72,7 +63,9 @@
 			}
 
 			.icons__item {
+				display: inline-block;
 				margin-bottom: 3em;
+				width: 200px;
 			}
 
 			.icons__item i {
@@ -139,12 +132,12 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 
 @font-face {
 	font-family: "eos-icons";
-	src: url("fonts/eos-icons.eot?67621c0de8d3187159d8e89a38aadcb5");
+	src: url("fonts/eos-icons.eot?d5252900865ea13a88e6cf502d4b463f");
 	src: url("fonts/eos-icons.eot?#iefix") format("embedded-opentype"),
-		url("fonts/eos-icons.woff2?67621c0de8d3187159d8e89a38aadcb5") format("woff2"),
-		url("fonts/eos-icons.woff?67621c0de8d3187159d8e89a38aadcb5") format("woff"),
-		url("fonts/eos-icons.ttf?67621c0de8d3187159d8e89a38aadcb5") format("truetype"),
-		url("fonts/eos-icons.svg?67621c0de8d3187159d8e89a38aadcb5#eos-icons") format("svg");
+		url("fonts/eos-icons.woff2?d5252900865ea13a88e6cf502d4b463f") format("woff2"),
+		url("fonts/eos-icons.woff?d5252900865ea13a88e6cf502d4b463f") format("woff"),
+		url("fonts/eos-icons.ttf?d5252900865ea13a88e6cf502d4b463f") format("truetype"),
+		url("fonts/eos-icons.svg?d5252900865ea13a88e6cf502d4b463f#eos-icons") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -195,7 +188,7 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 			</div>
 		</header>
 		<div class='container icons-container'>
-			<div class="icons" id="icons">
+			<div id="icons">
 				
 					<div class="icons__item" data-name="activate_subscriptions">
 					  <i class="eos-icons">activate_subscriptions</i>
