@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Wed Jan 31 14:51:27 2018
- By cynthia sanchez
+Created by FontForge 20170925 at Thu Feb  1 12:23:05 2018
+ By Zvezdana Marjanovic
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,10 +18,13 @@ Created by FontForge 20170925 at Wed Jan 31 14:51:27 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F109"
+    unicode-range="U+005F-F10A"
   />
 <missing-glyph horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name="action_chains" unicode="action_chains" horiz-adv-x="470" 
+d="M342 21.5q0 26.5 18.5 45t45 18.5t45.5 -18.5t19 -45t-19 -45.5t-45.5 -19t-45 19t-18.5 45.5zM363 384q44 0 75 -31.5t31 -75.5t-31 -75t-75 -31h-68q-6 -18 -24 -30t-36 -12t-36 12t-24 30h-68q-27 0 -45.5 -19t-18.5 -45.5t18.5 -45t45.5 -18.5h128v64l85 -86l-85 -85
+v64h-128q-44 0 -75.5 31.5t-31.5 75.5t31.5 75t75.5 31h68q6 18 23.5 30t36 12t36.5 -12t24 -30h68q26 0 45 19t19 45.5t-19 45t-45 18.5h-239q-6 -17 -23.5 -29.5t-36.5 -12.5q-26 0 -45 18.5t-19 45t19 45.5t45 19q12 0 24.5 -6t22 -15.5t13.5 -21.5h239z" />
     <glyph glyph-name="activate_subscriptions" unicode="activate_subscriptions" horiz-adv-x="427" 
 d="M43 277v43h341v-43h-341zM85 363v42h256v-42h-256zM384 235q18 0 30.5 -12.5t12.5 -30.5v-171q0 -17 -12.5 -29.5t-30.5 -12.5h-341q-18 0 -30.5 12.5t-12.5 29.5v171q0 12 5.5 21.5t15.5 15.5t22 6h341zM277 85v43h-42v43h-43v-43h-43v-43h43v-42h43v42h42z" />
     <glyph glyph-name="background_tasks" unicode="background_tasks" 
