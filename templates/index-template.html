@@ -46,15 +46,6 @@
 				font-size: 0.5em;
 			}
 
-			.icons {
-				-webkit-column-count: 6;
-				   -moz-column-count: 6;
-				        column-count: 6;
-				-webkit-column-gap: 20px;
-				   -moz-column-gap: 20px;
-				        column-gap: 20px;
-			}
-
 			.two-columns {
 				-webkit-column-count: 2;
 				   -moz-column-count: 2;
@@ -72,7 +63,9 @@
 			}
 
 			.icons__item {
+				display: inline-block;
 				margin-bottom: 3em;
+				width: 200px;
 			}
 
 			.icons__item i {
@@ -150,7 +143,7 @@
 			</div>
 		</header>
 		<div class='container icons-container'>
-			<div class="icons" id="icons">
+			<div id="icons">
 				<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) {
 					var glyph = glyphs[glyphIdx] %>
 					<div class="icons__item" data-name="<%= glyph %>">
