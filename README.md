@@ -61,11 +61,21 @@ sudo apt-get install fontforge ttfautohint
 
 Add your icons into the `svg/` folder. All our icons have been designed with Illustrator, but designing with any tool like Inkscape will work just fine, just make sure the exported SVG code is as clean as possible.
 
-SVG file names with more than one word in it should not have a minus character separating the words (e.g.: some-name.svg), use an underscore (e.g.: some_name.svg). For some reason the minus symbol creates some issues in the built library.
+SVG file names with more than one word in it should not have a minus character separating the words (e.g.: some-name.svg), instead, use an underscore (e.g.: some_name.svg). The use of spaces in the filename also creates conflicts in the resulting iconic font.
 
-Then all you need to do, is run `grunt`, which will build the assets under the `dist/` folder.
+Then all you need to do, is run
+
+```
+grunt
+```
+This will build the assets under the `dist/` folder.
 
 Open the `index.html` in your browser to easily navigate the iconic font and check the look of the icons in different sizes.
-We added the recommended sizes MD icons uses: 18, 24, 36, and 48 pixel icons, plus 16px which is our minimum allowed size at EOS Design System.
+
+```
+open dist/index.html
+```
+
+We added the recommended sizes MD icons use: 18, 24, 36, and 48 pixels, plus 16px which is our minimum allowed size at EOS Design System.
 
 **That's it!!.. easy as pie**

@@ -46,15 +46,6 @@
 				font-size: 0.5em;
 			}
 
-			.icons {
-				-webkit-column-count: 6;
-				   -moz-column-count: 6;
-				        column-count: 6;
-				-webkit-column-gap: 20px;
-				   -moz-column-gap: 20px;
-				        column-gap: 20px;
-			}
-
 			.two-columns {
 				-webkit-column-count: 2;
 				   -moz-column-count: 2;
@@ -72,7 +63,9 @@
 			}
 
 			.icons__item {
+				display: inline-block;
 				margin-bottom: 3em;
+				width: 200px;
 			}
 
 			.icons__item i {
@@ -139,12 +132,12 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 
 @font-face {
 	font-family: "eos-icons";
-	src: url("fonts/eos-icons.eot?9adc8c07f5da36ee6d37c4634bc41a59");
+	src: url("fonts/eos-icons.eot?a516640d052a02d007860bce500b8956");
 	src: url("fonts/eos-icons.eot?#iefix") format("embedded-opentype"),
-		url("fonts/eos-icons.woff2?9adc8c07f5da36ee6d37c4634bc41a59") format("woff2"),
-		url("fonts/eos-icons.woff?9adc8c07f5da36ee6d37c4634bc41a59") format("woff"),
-		url("fonts/eos-icons.ttf?9adc8c07f5da36ee6d37c4634bc41a59") format("truetype"),
-		url("fonts/eos-icons.svg?9adc8c07f5da36ee6d37c4634bc41a59#eos-icons") format("svg");
+		url("fonts/eos-icons.woff2?a516640d052a02d007860bce500b8956") format("woff2"),
+		url("fonts/eos-icons.woff?a516640d052a02d007860bce500b8956") format("woff"),
+		url("fonts/eos-icons.ttf?a516640d052a02d007860bce500b8956") format("truetype"),
+		url("fonts/eos-icons.svg?a516640d052a02d007860bce500b8956#eos-icons") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -195,7 +188,13 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 			</div>
 		</header>
 		<div class='container icons-container'>
-			<div class="icons" id="icons">
+			<div id="icons">
+				
+					<div class="icons__item" data-name="action_chains">
+					  <i class="eos-icons">action_chains</i>
+						<br>
+						action_chains
+					</div>
 				
 					<div class="icons__item" data-name="activate_subscriptions">
 					  <i class="eos-icons">activate_subscriptions</i>
@@ -215,10 +214,34 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 						constraint
 					</div>
 				
+					<div class="icons__item" data-name="file_system">
+					  <i class="eos-icons">file_system</i>
+						<br>
+						file_system
+					</div>
+				
+					<div class="icons__item" data-name="multistate">
+					  <i class="eos-icons">multistate</i>
+						<br>
+						multistate
+					</div>
+				
+					<div class="icons__item" data-name="network_file_system">
+					  <i class="eos-icons">network_file_system</i>
+						<br>
+						network_file_system
+					</div>
+				
 					<div class="icons__item" data-name="organization">
 					  <i class="eos-icons">organization</i>
 						<br>
 						organization
+					</div>
+				
+					<div class="icons__item" data-name="packages">
+					  <i class="eos-icons">packages</i>
+						<br>
+						packages
 					</div>
 				
 					<div class="icons__item" data-name="product_subscriptions">
@@ -231,6 +254,12 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 					  <i class="eos-icons">sap</i>
 						<br>
 						sap
+					</div>
+				
+					<div class="icons__item" data-name="troubleshooting">
+					  <i class="eos-icons">troubleshooting</i>
+						<br>
+						troubleshooting
 					</div>
 				
 			</div>
