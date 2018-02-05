@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<<<<<<< HEAD
+<svg version="1.1" id="Layer_2_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{clip-path:url(#SVGID_4_);}
+	.st2{clip-path:url(#SVGID_29_);}
+	.st3{clip-path:url(#SVGID_30_);}
+	.st4{clip-path:url(#SVGID_31_);}
+	.st5{clip-path:url(#SVGID_32_);}
+	.st6{clip-path:url(#SVGID_33_);}
+	.st7{clip-path:url(#SVGID_34_);}
+	.st8{clip-path:url(#SVGID_35_);}
+	.st9{clip-path:url(#SVGID_36_);}
+	.st10{clip-path:url(#SVGID_37_);}
+	.st11{clip-path:url(#SVGID_38_);}
+	.st12{clip-path:url(#SVGID_39_);}
+	.st13{clip-path:url(#SVGID_40_);}
+	.st14{clip-path:url(#SVGID_41_);}
+	.st15{clip-path:url(#SVGID_42_);}
+	.st16{clip-path:url(#SVGID_43_);}
+	.st17{clip-path:url(#SVGID_44_);}
+	.st18{clip-path:url(#SVGID_45_);}
+	.st19{clip-path:url(#SVGID_46_);}
+	.st20{clip-path:url(#SVGID_47_);}
+	.st21{clip-path:url(#SVGID_48_);}
+	.st22{clip-path:url(#SVGID_49_);}
+	.st23{clip-path:url(#SVGID_50_);}
+	.st24{clip-path:url(#SVGID_51_);}
+	.st25{clip-path:url(#SVGID_52_);}
+	.st26{fill:none;stroke:#E9D0F7;stroke-width:2.000000e-02;stroke-miterlimit:10;}
+	.st27{clip-path:url(#SVGID_52_);fill:none;stroke:#E9D0F7;stroke-width:2.000000e-02;stroke-miterlimit:10;}
+	.st28{fill:none;stroke:#000000;stroke-width:1.000000e-02;}
+	.st29{opacity:0.52;}
+	.st30{clip-path:url(#SVGID_54_);}
+	.st31{fill:none;stroke:#000000;stroke-width:2.000000e-02;}
+	.st32{clip-path:url(#SVGID_56_);}
+	.st33{fill:none;stroke:#000000;stroke-width:2.000000e-02;stroke-linecap:round;stroke-linejoin:round;}
+	.st34{opacity:0.39;}
+	.st35{clip-path:url(#SVGID_58_);}
+	.st36{clip-path:url(#SVGID_60_);}
+</style>
+<title>network_file_system</title>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" width="24" height="24"/>
+=======
 <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
@@ -45,10 +93,857 @@
 	<g class="st1">
 		<defs>
 			<rect id="SVGID_1_" x="0" width="24" height="24"/>
+>>>>>>> version.1.0.0.WIP
 		</defs>
 		<clipPath id="SVGID_2_">
 			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
+<<<<<<< HEAD
+		<g class="st0">
+			<g>
+				<defs>
+					<rect id="SVGID_3_" width="24" height="24"/>
+				</defs>
+				<clipPath id="SVGID_4_">
+					<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+				</clipPath>
+				<g class="st1">
+					<g>
+						<defs>
+							<rect id="SVGID_5_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_6_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_7_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_8_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_9_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_10_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_11_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_12_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_13_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_14_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_15_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_16_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_17_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_18_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_19_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_20_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_21_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_22_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_23_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_24_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_25_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_26_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_27_" width="24" height="24"/>
+						</defs>
+						<defs>
+							<rect id="SVGID_28_" width="24" height="24"/>
+						</defs>
+						<clipPath id="SVGID_29_">
+							<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_30_" class="st2">
+							<use xlink:href="#SVGID_6_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_31_" class="st3">
+							<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_32_" class="st4">
+							<use xlink:href="#SVGID_8_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_33_" class="st5">
+							<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_34_" class="st6">
+							<use xlink:href="#SVGID_10_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_35_" class="st7">
+							<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_36_" class="st8">
+							<use xlink:href="#SVGID_12_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_37_" class="st9">
+							<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_38_" class="st10">
+							<use xlink:href="#SVGID_14_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_39_" class="st11">
+							<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_40_" class="st12">
+							<use xlink:href="#SVGID_16_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_41_" class="st13">
+							<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_42_" class="st14">
+							<use xlink:href="#SVGID_18_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_43_" class="st15">
+							<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_44_" class="st16">
+							<use xlink:href="#SVGID_20_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_45_" class="st17">
+							<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_46_" class="st18">
+							<use xlink:href="#SVGID_22_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_47_" class="st19">
+							<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_48_" class="st20">
+							<use xlink:href="#SVGID_24_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_49_" class="st21">
+							<use xlink:href="#SVGID_25_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_50_" class="st22">
+							<use xlink:href="#SVGID_26_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_51_" class="st23">
+							<use xlink:href="#SVGID_27_"  style="overflow:visible;"/>
+						</clipPath>
+						<clipPath id="SVGID_52_" class="st24">
+							<use xlink:href="#SVGID_28_"  style="overflow:visible;"/>
+						</clipPath>
+						<g class="st25">
+							<rect x="0" y="0" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="0" class="st27" width="1" height="1"/>
+						<rect x="2" y="0" class="st27" width="1" height="1"/>
+						<rect x="3" y="0" class="st27" width="1" height="1"/>
+						<rect x="4" y="0" class="st27" width="1" height="1"/>
+						<rect x="5" y="0" class="st27" width="1" height="1"/>
+						<rect x="6" y="0" class="st27" width="1" height="1"/>
+						<rect x="7" y="0" class="st27" width="1" height="1"/>
+						<rect x="8" y="0" class="st27" width="1" height="1"/>
+						<rect x="9" y="0" class="st27" width="1" height="1"/>
+						<rect x="10" y="0" class="st27" width="1" height="1"/>
+						<rect x="11" y="0" class="st27" width="1" height="1"/>
+						<rect x="12" y="0" class="st27" width="1" height="1"/>
+						<rect x="13" y="0" class="st27" width="1" height="1"/>
+						<rect x="14" y="0" class="st27" width="1" height="1"/>
+						<rect x="15" y="0" class="st27" width="1" height="1"/>
+						<rect x="16" y="0" class="st27" width="1" height="1"/>
+						<rect x="17" y="0" class="st27" width="1" height="1"/>
+						<rect x="18" y="0" class="st27" width="1" height="1"/>
+						<rect x="19" y="0" class="st27" width="1" height="1"/>
+						<rect x="20" y="0" class="st27" width="1" height="1"/>
+						<rect x="21" y="0" class="st27" width="1" height="1"/>
+						<rect x="22" y="0" class="st27" width="1" height="1"/>
+						<rect x="23" y="0" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="1" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="1" class="st27" width="1" height="1"/>
+						<rect x="2" y="1" class="st27" width="1" height="1"/>
+						<rect x="3" y="1" class="st27" width="1" height="1"/>
+						<rect x="4" y="1" class="st27" width="1" height="1"/>
+						<rect x="5" y="1" class="st27" width="1" height="1"/>
+						<rect x="6" y="1" class="st27" width="1" height="1"/>
+						<rect x="7" y="1" class="st27" width="1" height="1"/>
+						<rect x="8" y="1" class="st27" width="1" height="1"/>
+						<rect x="9" y="1" class="st27" width="1" height="1"/>
+						<rect x="10" y="1" class="st27" width="1" height="1"/>
+						<rect x="11" y="1" class="st27" width="1" height="1"/>
+						<rect x="12" y="1" class="st27" width="1" height="1"/>
+						<rect x="13" y="1" class="st27" width="1" height="1"/>
+						<rect x="14" y="1" class="st27" width="1" height="1"/>
+						<rect x="15" y="1" class="st27" width="1" height="1"/>
+						<rect x="16" y="1" class="st27" width="1" height="1"/>
+						<rect x="17" y="1" class="st27" width="1" height="1"/>
+						<rect x="18" y="1" class="st27" width="1" height="1"/>
+						<rect x="19" y="1" class="st27" width="1" height="1"/>
+						<rect x="20" y="1" class="st27" width="1" height="1"/>
+						<rect x="21" y="1" class="st27" width="1" height="1"/>
+						<rect x="22" y="1" class="st27" width="1" height="1"/>
+						<rect x="23" y="1" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="2" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="2" class="st27" width="1" height="1"/>
+						<rect x="2" y="2" class="st27" width="1" height="1"/>
+						<rect x="3" y="2" class="st27" width="1" height="1"/>
+						<rect x="4" y="2" class="st27" width="1" height="1"/>
+						<rect x="5" y="2" class="st27" width="1" height="1"/>
+						<rect x="6" y="2" class="st27" width="1" height="1"/>
+						<rect x="7" y="2" class="st27" width="1" height="1"/>
+						<rect x="8" y="2" class="st27" width="1" height="1"/>
+						<rect x="9" y="2" class="st27" width="1" height="1"/>
+						<rect x="10" y="2" class="st27" width="1" height="1"/>
+						<rect x="11" y="2" class="st27" width="1" height="1"/>
+						<rect x="12" y="2" class="st27" width="1" height="1"/>
+						<rect x="13" y="2" class="st27" width="1" height="1"/>
+						<rect x="14" y="2" class="st27" width="1" height="1"/>
+						<rect x="15" y="2" class="st27" width="1" height="1"/>
+						<rect x="16" y="2" class="st27" width="1" height="1"/>
+						<rect x="17" y="2" class="st27" width="1" height="1"/>
+						<rect x="18" y="2" class="st27" width="1" height="1"/>
+						<rect x="19" y="2" class="st27" width="1" height="1"/>
+						<rect x="20" y="2" class="st27" width="1" height="1"/>
+						<rect x="21" y="2" class="st27" width="1" height="1"/>
+						<rect x="22" y="2" class="st27" width="1" height="1"/>
+						<rect x="23" y="2" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="3" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="3" class="st27" width="1" height="1"/>
+						<rect x="2" y="3" class="st27" width="1" height="1"/>
+						<rect x="3" y="3" class="st27" width="1" height="1"/>
+						<rect x="4" y="3" class="st27" width="1" height="1"/>
+						<rect x="5" y="3" class="st27" width="1" height="1"/>
+						<rect x="6" y="3" class="st27" width="1" height="1"/>
+						<rect x="7" y="3" class="st27" width="1" height="1"/>
+						<rect x="8" y="3" class="st27" width="1" height="1"/>
+						<rect x="9" y="3" class="st27" width="1" height="1"/>
+						<rect x="10" y="3" class="st27" width="1" height="1"/>
+						<rect x="11" y="3" class="st27" width="1" height="1"/>
+						<rect x="12" y="3" class="st27" width="1" height="1"/>
+						<rect x="13" y="3" class="st27" width="1" height="1"/>
+						<rect x="14" y="3" class="st27" width="1" height="1"/>
+						<rect x="15" y="3" class="st27" width="1" height="1"/>
+						<rect x="16" y="3" class="st27" width="1" height="1"/>
+						<rect x="17" y="3" class="st27" width="1" height="1"/>
+						<rect x="18" y="3" class="st27" width="1" height="1"/>
+						<rect x="19" y="3" class="st27" width="1" height="1"/>
+						<rect x="20" y="3" class="st27" width="1" height="1"/>
+						<rect x="21" y="3" class="st27" width="1" height="1"/>
+						<rect x="22" y="3" class="st27" width="1" height="1"/>
+						<rect x="23" y="3" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="4" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="4" class="st27" width="1" height="1"/>
+						<rect x="2" y="4" class="st27" width="1" height="1"/>
+						<rect x="3" y="4" class="st27" width="1" height="1"/>
+						<rect x="4" y="4" class="st27" width="1" height="1"/>
+						<rect x="5" y="4" class="st27" width="1" height="1"/>
+						<rect x="6" y="4" class="st27" width="1" height="1"/>
+						<rect x="7" y="4" class="st27" width="1" height="1"/>
+						<rect x="8" y="4" class="st27" width="1" height="1"/>
+						<rect x="9" y="4" class="st27" width="1" height="1"/>
+						<rect x="10" y="4" class="st27" width="1" height="1"/>
+						<rect x="11" y="4" class="st27" width="1" height="1"/>
+						<rect x="12" y="4" class="st27" width="1" height="1"/>
+						<rect x="13" y="4" class="st27" width="1" height="1"/>
+						<rect x="14" y="4" class="st27" width="1" height="1"/>
+						<rect x="15" y="4" class="st27" width="1" height="1"/>
+						<rect x="16" y="4" class="st27" width="1" height="1"/>
+						<rect x="17" y="4" class="st27" width="1" height="1"/>
+						<rect x="18" y="4" class="st27" width="1" height="1"/>
+						<rect x="19" y="4" class="st27" width="1" height="1"/>
+						<rect x="20" y="4" class="st27" width="1" height="1"/>
+						<rect x="21" y="4" class="st27" width="1" height="1"/>
+						<rect x="22" y="4" class="st27" width="1" height="1"/>
+						<rect x="23" y="4" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="5" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="5" class="st27" width="1" height="1"/>
+						<rect x="2" y="5" class="st27" width="1" height="1"/>
+						<rect x="3" y="5" class="st27" width="1" height="1"/>
+						<rect x="4" y="5" class="st27" width="1" height="1"/>
+						<rect x="5" y="5" class="st27" width="1" height="1"/>
+						<rect x="6" y="5" class="st27" width="1" height="1"/>
+						<rect x="7" y="5" class="st27" width="1" height="1"/>
+						<rect x="8" y="5" class="st27" width="1" height="1"/>
+						<rect x="9" y="5" class="st27" width="1" height="1"/>
+						<rect x="10" y="5" class="st27" width="1" height="1"/>
+						<rect x="11" y="5" class="st27" width="1" height="1"/>
+						<rect x="12" y="5" class="st27" width="1" height="1"/>
+						<rect x="13" y="5" class="st27" width="1" height="1"/>
+						<rect x="14" y="5" class="st27" width="1" height="1"/>
+						<rect x="15" y="5" class="st27" width="1" height="1"/>
+						<rect x="16" y="5" class="st27" width="1" height="1"/>
+						<rect x="17" y="5" class="st27" width="1" height="1"/>
+						<rect x="18" y="5" class="st27" width="1" height="1"/>
+						<rect x="19" y="5" class="st27" width="1" height="1"/>
+						<rect x="20" y="5" class="st27" width="1" height="1"/>
+						<rect x="21" y="5" class="st27" width="1" height="1"/>
+						<rect x="22" y="5" class="st27" width="1" height="1"/>
+						<rect x="23" y="5" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="6" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="6" class="st27" width="1" height="1"/>
+						<rect x="2" y="6" class="st27" width="1" height="1"/>
+						<rect x="3" y="6" class="st27" width="1" height="1"/>
+						<rect x="4" y="6" class="st27" width="1" height="1"/>
+						<rect x="5" y="6" class="st27" width="1" height="1"/>
+						<rect x="6" y="6" class="st27" width="1" height="1"/>
+						<rect x="7" y="6" class="st27" width="1" height="1"/>
+						<rect x="8" y="6" class="st27" width="1" height="1"/>
+						<rect x="9" y="6" class="st27" width="1" height="1"/>
+						<rect x="10" y="6" class="st27" width="1" height="1"/>
+						<rect x="11" y="6" class="st27" width="1" height="1"/>
+						<rect x="12" y="6" class="st27" width="1" height="1"/>
+						<rect x="13" y="6" class="st27" width="1" height="1"/>
+						<rect x="14" y="6" class="st27" width="1" height="1"/>
+						<rect x="15" y="6" class="st27" width="1" height="1"/>
+						<rect x="16" y="6" class="st27" width="1" height="1"/>
+						<rect x="17" y="6" class="st27" width="1" height="1"/>
+						<rect x="18" y="6" class="st27" width="1" height="1"/>
+						<rect x="19" y="6" class="st27" width="1" height="1"/>
+						<rect x="20" y="6" class="st27" width="1" height="1"/>
+						<rect x="21" y="6" class="st27" width="1" height="1"/>
+						<rect x="22" y="6" class="st27" width="1" height="1"/>
+						<rect x="23" y="6" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="7" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="7" class="st27" width="1" height="1"/>
+						<rect x="2" y="7" class="st27" width="1" height="1"/>
+						<rect x="3" y="7" class="st27" width="1" height="1"/>
+						<rect x="4" y="7" class="st27" width="1" height="1"/>
+						<rect x="5" y="7" class="st27" width="1" height="1"/>
+						<rect x="6" y="7" class="st27" width="1" height="1"/>
+						<rect x="7" y="7" class="st27" width="1" height="1"/>
+						<rect x="8" y="7" class="st27" width="1" height="1"/>
+						<rect x="9" y="7" class="st27" width="1" height="1"/>
+						<rect x="10" y="7" class="st27" width="1" height="1"/>
+						<rect x="11" y="7" class="st27" width="1" height="1"/>
+						<rect x="12" y="7" class="st27" width="1" height="1"/>
+						<rect x="13" y="7" class="st27" width="1" height="1"/>
+						<rect x="14" y="7" class="st27" width="1" height="1"/>
+						<rect x="15" y="7" class="st27" width="1" height="1"/>
+						<rect x="16" y="7" class="st27" width="1" height="1"/>
+						<rect x="17" y="7" class="st27" width="1" height="1"/>
+						<rect x="18" y="7" class="st27" width="1" height="1"/>
+						<rect x="19" y="7" class="st27" width="1" height="1"/>
+						<rect x="20" y="7" class="st27" width="1" height="1"/>
+						<rect x="21" y="7" class="st27" width="1" height="1"/>
+						<rect x="22" y="7" class="st27" width="1" height="1"/>
+						<rect x="23" y="7" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="8" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="8" class="st27" width="1" height="1"/>
+						<rect x="2" y="8" class="st27" width="1" height="1"/>
+						<rect x="3" y="8" class="st27" width="1" height="1"/>
+						<rect x="4" y="8" class="st27" width="1" height="1"/>
+						<rect x="5" y="8" class="st27" width="1" height="1"/>
+						<rect x="6" y="8" class="st27" width="1" height="1"/>
+						<rect x="7" y="8" class="st27" width="1" height="1"/>
+						<rect x="8" y="8" class="st27" width="1" height="1"/>
+						<rect x="9" y="8" class="st27" width="1" height="1"/>
+						<rect x="10" y="8" class="st27" width="1" height="1"/>
+						<rect x="11" y="8" class="st27" width="1" height="1"/>
+						<rect x="12" y="8" class="st27" width="1" height="1"/>
+						<rect x="13" y="8" class="st27" width="1" height="1"/>
+						<rect x="14" y="8" class="st27" width="1" height="1"/>
+						<rect x="15" y="8" class="st27" width="1" height="1"/>
+						<rect x="16" y="8" class="st27" width="1" height="1"/>
+						<rect x="17" y="8" class="st27" width="1" height="1"/>
+						<rect x="18" y="8" class="st27" width="1" height="1"/>
+						<rect x="19" y="8" class="st27" width="1" height="1"/>
+						<rect x="20" y="8" class="st27" width="1" height="1"/>
+						<rect x="21" y="8" class="st27" width="1" height="1"/>
+						<rect x="22" y="8" class="st27" width="1" height="1"/>
+						<rect x="23" y="8" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="9" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="9" class="st27" width="1" height="1"/>
+						<rect x="2" y="9" class="st27" width="1" height="1"/>
+						<rect x="3" y="9" class="st27" width="1" height="1"/>
+						<rect x="4" y="9" class="st27" width="1" height="1"/>
+						<rect x="5" y="9" class="st27" width="1" height="1"/>
+						<rect x="6" y="9" class="st27" width="1" height="1"/>
+						<rect x="7" y="9" class="st27" width="1" height="1"/>
+						<rect x="8" y="9" class="st27" width="1" height="1"/>
+						<rect x="9" y="9" class="st27" width="1" height="1"/>
+						<rect x="10" y="9" class="st27" width="1" height="1"/>
+						<rect x="11" y="9" class="st27" width="1" height="1"/>
+						<rect x="12" y="9" class="st27" width="1" height="1"/>
+						<rect x="13" y="9" class="st27" width="1" height="1"/>
+						<rect x="14" y="9" class="st27" width="1" height="1"/>
+						<rect x="15" y="9" class="st27" width="1" height="1"/>
+						<rect x="16" y="9" class="st27" width="1" height="1"/>
+						<rect x="17" y="9" class="st27" width="1" height="1"/>
+						<rect x="18" y="9" class="st27" width="1" height="1"/>
+						<rect x="19" y="9" class="st27" width="1" height="1"/>
+						<rect x="20" y="9" class="st27" width="1" height="1"/>
+						<rect x="21" y="9" class="st27" width="1" height="1"/>
+						<rect x="22" y="9" class="st27" width="1" height="1"/>
+						<rect x="23" y="9" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="10" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="10" class="st27" width="1" height="1"/>
+						<rect x="2" y="10" class="st27" width="1" height="1"/>
+						<rect x="3" y="10" class="st27" width="1" height="1"/>
+						<rect x="4" y="10" class="st27" width="1" height="1"/>
+						<rect x="5" y="10" class="st27" width="1" height="1"/>
+						<rect x="6" y="10" class="st27" width="1" height="1"/>
+						<rect x="7" y="10" class="st27" width="1" height="1"/>
+						<rect x="8" y="10" class="st27" width="1" height="1"/>
+						<rect x="9" y="10" class="st27" width="1" height="1"/>
+						<rect x="10" y="10" class="st27" width="1" height="1"/>
+						<rect x="11" y="10" class="st27" width="1" height="1"/>
+						<rect x="12" y="10" class="st27" width="1" height="1"/>
+						<rect x="13" y="10" class="st27" width="1" height="1"/>
+						<rect x="14" y="10" class="st27" width="1" height="1"/>
+						<rect x="15" y="10" class="st27" width="1" height="1"/>
+						<rect x="16" y="10" class="st27" width="1" height="1"/>
+						<rect x="17" y="10" class="st27" width="1" height="1"/>
+						<rect x="18" y="10" class="st27" width="1" height="1"/>
+						<rect x="19" y="10" class="st27" width="1" height="1"/>
+						<rect x="20" y="10" class="st27" width="1" height="1"/>
+						<rect x="21" y="10" class="st27" width="1" height="1"/>
+						<rect x="22" y="10" class="st27" width="1" height="1"/>
+						<rect x="23" y="10" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="11" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="11" class="st27" width="1" height="1"/>
+						<rect x="2" y="11" class="st27" width="1" height="1"/>
+						<rect x="3" y="11" class="st27" width="1" height="1"/>
+						<rect x="4" y="11" class="st27" width="1" height="1"/>
+						<rect x="5" y="11" class="st27" width="1" height="1"/>
+						<rect x="6" y="11" class="st27" width="1" height="1"/>
+						<rect x="7" y="11" class="st27" width="1" height="1"/>
+						<rect x="8" y="11" class="st27" width="1" height="1"/>
+						<rect x="9" y="11" class="st27" width="1" height="1"/>
+						<rect x="10" y="11" class="st27" width="1" height="1"/>
+						<rect x="11" y="11" class="st27" width="1" height="1"/>
+						<rect x="12" y="11" class="st27" width="1" height="1"/>
+						<rect x="13" y="11" class="st27" width="1" height="1"/>
+						<rect x="14" y="11" class="st27" width="1" height="1"/>
+						<rect x="15" y="11" class="st27" width="1" height="1"/>
+						<rect x="16" y="11" class="st27" width="1" height="1"/>
+						<rect x="17" y="11" class="st27" width="1" height="1"/>
+						<rect x="18" y="11" class="st27" width="1" height="1"/>
+						<rect x="19" y="11" class="st27" width="1" height="1"/>
+						<rect x="20" y="11" class="st27" width="1" height="1"/>
+						<rect x="21" y="11" class="st27" width="1" height="1"/>
+						<rect x="22" y="11" class="st27" width="1" height="1"/>
+						<rect x="23" y="11" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="12" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="12" class="st27" width="1" height="1"/>
+						<rect x="2" y="12" class="st27" width="1" height="1"/>
+						<rect x="3" y="12" class="st27" width="1" height="1"/>
+						<rect x="4" y="12" class="st27" width="1" height="1"/>
+						<rect x="5" y="12" class="st27" width="1" height="1"/>
+						<rect x="6" y="12" class="st27" width="1" height="1"/>
+						<rect x="7" y="12" class="st27" width="1" height="1"/>
+						<rect x="8" y="12" class="st27" width="1" height="1"/>
+						<rect x="9" y="12" class="st27" width="1" height="1"/>
+						<rect x="10" y="12" class="st27" width="1" height="1"/>
+						<rect x="11" y="12" class="st27" width="1" height="1"/>
+						<rect x="12" y="12" class="st27" width="1" height="1"/>
+						<rect x="13" y="12" class="st27" width="1" height="1"/>
+						<rect x="14" y="12" class="st27" width="1" height="1"/>
+						<rect x="15" y="12" class="st27" width="1" height="1"/>
+						<rect x="16" y="12" class="st27" width="1" height="1"/>
+						<rect x="17" y="12" class="st27" width="1" height="1"/>
+						<rect x="18" y="12" class="st27" width="1" height="1"/>
+						<rect x="19" y="12" class="st27" width="1" height="1"/>
+						<rect x="20" y="12" class="st27" width="1" height="1"/>
+						<rect x="21" y="12" class="st27" width="1" height="1"/>
+						<rect x="22" y="12" class="st27" width="1" height="1"/>
+						<rect x="23" y="12" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="13" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="13" class="st27" width="1" height="1"/>
+						<rect x="2" y="13" class="st27" width="1" height="1"/>
+						<rect x="3" y="13" class="st27" width="1" height="1"/>
+						<rect x="4" y="13" class="st27" width="1" height="1"/>
+						<rect x="5" y="13" class="st27" width="1" height="1"/>
+						<rect x="6" y="13" class="st27" width="1" height="1"/>
+						<rect x="7" y="13" class="st27" width="1" height="1"/>
+						<rect x="8" y="13" class="st27" width="1" height="1"/>
+						<rect x="9" y="13" class="st27" width="1" height="1"/>
+						<rect x="10" y="13" class="st27" width="1" height="1"/>
+						<rect x="11" y="13" class="st27" width="1" height="1"/>
+						<rect x="12" y="13" class="st27" width="1" height="1"/>
+						<rect x="13" y="13" class="st27" width="1" height="1"/>
+						<rect x="14" y="13" class="st27" width="1" height="1"/>
+						<rect x="15" y="13" class="st27" width="1" height="1"/>
+						<rect x="16" y="13" class="st27" width="1" height="1"/>
+						<rect x="17" y="13" class="st27" width="1" height="1"/>
+						<rect x="18" y="13" class="st27" width="1" height="1"/>
+						<rect x="19" y="13" class="st27" width="1" height="1"/>
+						<rect x="20" y="13" class="st27" width="1" height="1"/>
+						<rect x="21" y="13" class="st27" width="1" height="1"/>
+						<rect x="22" y="13" class="st27" width="1" height="1"/>
+						<rect x="23" y="13" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="14" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="14" class="st27" width="1" height="1"/>
+						<rect x="2" y="14" class="st27" width="1" height="1"/>
+						<rect x="3" y="14" class="st27" width="1" height="1"/>
+						<rect x="4" y="14" class="st27" width="1" height="1"/>
+						<rect x="5" y="14" class="st27" width="1" height="1"/>
+						<rect x="6" y="14" class="st27" width="1" height="1"/>
+						<rect x="7" y="14" class="st27" width="1" height="1"/>
+						<rect x="8" y="14" class="st27" width="1" height="1"/>
+						<rect x="9" y="14" class="st27" width="1" height="1"/>
+						<rect x="10" y="14" class="st27" width="1" height="1"/>
+						<rect x="11" y="14" class="st27" width="1" height="1"/>
+						<rect x="12" y="14" class="st27" width="1" height="1"/>
+						<rect x="13" y="14" class="st27" width="1" height="1"/>
+						<rect x="14" y="14" class="st27" width="1" height="1"/>
+						<rect x="15" y="14" class="st27" width="1" height="1"/>
+						<rect x="16" y="14" class="st27" width="1" height="1"/>
+						<rect x="17" y="14" class="st27" width="1" height="1"/>
+						<rect x="18" y="14" class="st27" width="1" height="1"/>
+						<rect x="19" y="14" class="st27" width="1" height="1"/>
+						<rect x="20" y="14" class="st27" width="1" height="1"/>
+						<rect x="21" y="14" class="st27" width="1" height="1"/>
+						<rect x="22" y="14" class="st27" width="1" height="1"/>
+						<rect x="23" y="14" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="15" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="15" class="st27" width="1" height="1"/>
+						<rect x="2" y="15" class="st27" width="1" height="1"/>
+						<rect x="3" y="15" class="st27" width="1" height="1"/>
+						<rect x="4" y="15" class="st27" width="1" height="1"/>
+						<rect x="5" y="15" class="st27" width="1" height="1"/>
+						<rect x="6" y="15" class="st27" width="1" height="1"/>
+						<rect x="7" y="15" class="st27" width="1" height="1"/>
+						<rect x="8" y="15" class="st27" width="1" height="1"/>
+						<rect x="9" y="15" class="st27" width="1" height="1"/>
+						<rect x="10" y="15" class="st27" width="1" height="1"/>
+						<rect x="11" y="15" class="st27" width="1" height="1"/>
+						<rect x="12" y="15" class="st27" width="1" height="1"/>
+						<rect x="13" y="15" class="st27" width="1" height="1"/>
+						<rect x="14" y="15" class="st27" width="1" height="1"/>
+						<rect x="15" y="15" class="st27" width="1" height="1"/>
+						<rect x="16" y="15" class="st27" width="1" height="1"/>
+						<rect x="17" y="15" class="st27" width="1" height="1"/>
+						<rect x="18" y="15" class="st27" width="1" height="1"/>
+						<rect x="19" y="15" class="st27" width="1" height="1"/>
+						<rect x="20" y="15" class="st27" width="1" height="1"/>
+						<rect x="21" y="15" class="st27" width="1" height="1"/>
+						<rect x="22" y="15" class="st27" width="1" height="1"/>
+						<rect x="23" y="15" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="16" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="16" class="st27" width="1" height="1"/>
+						<rect x="2" y="16" class="st27" width="1" height="1"/>
+						<rect x="3" y="16" class="st27" width="1" height="1"/>
+						<rect x="4" y="16" class="st27" width="1" height="1"/>
+						<rect x="5" y="16" class="st27" width="1" height="1"/>
+						<rect x="6" y="16" class="st27" width="1" height="1"/>
+						<rect x="7" y="16" class="st27" width="1" height="1"/>
+						<rect x="8" y="16" class="st27" width="1" height="1"/>
+						<rect x="9" y="16" class="st27" width="1" height="1"/>
+						<rect x="10" y="16" class="st27" width="1" height="1"/>
+						<rect x="11" y="16" class="st27" width="1" height="1"/>
+						<rect x="12" y="16" class="st27" width="1" height="1"/>
+						<rect x="13" y="16" class="st27" width="1" height="1"/>
+						<rect x="14" y="16" class="st27" width="1" height="1"/>
+						<rect x="15" y="16" class="st27" width="1" height="1"/>
+						<rect x="16" y="16" class="st27" width="1" height="1"/>
+						<rect x="17" y="16" class="st27" width="1" height="1"/>
+						<rect x="18" y="16" class="st27" width="1" height="1"/>
+						<rect x="19" y="16" class="st27" width="1" height="1"/>
+						<rect x="20" y="16" class="st27" width="1" height="1"/>
+						<rect x="21" y="16" class="st27" width="1" height="1"/>
+						<rect x="22" y="16" class="st27" width="1" height="1"/>
+						<rect x="23" y="16" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="17" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="17" class="st27" width="1" height="1"/>
+						<rect x="2" y="17" class="st27" width="1" height="1"/>
+						<rect x="3" y="17" class="st27" width="1" height="1"/>
+						<rect x="4" y="17" class="st27" width="1" height="1"/>
+						<rect x="5" y="17" class="st27" width="1" height="1"/>
+						<rect x="6" y="17" class="st27" width="1" height="1"/>
+						<rect x="7" y="17" class="st27" width="1" height="1"/>
+						<rect x="8" y="17" class="st27" width="1" height="1"/>
+						<rect x="9" y="17" class="st27" width="1" height="1"/>
+						<rect x="10" y="17" class="st27" width="1" height="1"/>
+						<rect x="11" y="17" class="st27" width="1" height="1"/>
+						<rect x="12" y="17" class="st27" width="1" height="1"/>
+						<rect x="13" y="17" class="st27" width="1" height="1"/>
+						<rect x="14" y="17" class="st27" width="1" height="1"/>
+						<rect x="15" y="17" class="st27" width="1" height="1"/>
+						<rect x="16" y="17" class="st27" width="1" height="1"/>
+						<rect x="17" y="17" class="st27" width="1" height="1"/>
+						<rect x="18" y="17" class="st27" width="1" height="1"/>
+						<rect x="19" y="17" class="st27" width="1" height="1"/>
+						<rect x="20" y="17" class="st27" width="1" height="1"/>
+						<rect x="21" y="17" class="st27" width="1" height="1"/>
+						<rect x="22" y="17" class="st27" width="1" height="1"/>
+						<rect x="23" y="17" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="18" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="18" class="st27" width="1" height="1"/>
+						<rect x="2" y="18" class="st27" width="1" height="1"/>
+						<rect x="3" y="18" class="st27" width="1" height="1"/>
+						<rect x="4" y="18" class="st27" width="1" height="1"/>
+						<rect x="5" y="18" class="st27" width="1" height="1"/>
+						<rect x="6" y="18" class="st27" width="1" height="1"/>
+						<rect x="7" y="18" class="st27" width="1" height="1"/>
+						<rect x="8" y="18" class="st27" width="1" height="1"/>
+						<rect x="9" y="18" class="st27" width="1" height="1"/>
+						<rect x="10" y="18" class="st27" width="1" height="1"/>
+						<rect x="11" y="18" class="st27" width="1" height="1"/>
+						<rect x="12" y="18" class="st27" width="1" height="1"/>
+						<rect x="13" y="18" class="st27" width="1" height="1"/>
+						<rect x="14" y="18" class="st27" width="1" height="1"/>
+						<rect x="15" y="18" class="st27" width="1" height="1"/>
+						<rect x="16" y="18" class="st27" width="1" height="1"/>
+						<rect x="17" y="18" class="st27" width="1" height="1"/>
+						<rect x="18" y="18" class="st27" width="1" height="1"/>
+						<rect x="19" y="18" class="st27" width="1" height="1"/>
+						<rect x="20" y="18" class="st27" width="1" height="1"/>
+						<rect x="21" y="18" class="st27" width="1" height="1"/>
+						<rect x="22" y="18" class="st27" width="1" height="1"/>
+						<rect x="23" y="18" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="19" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="19" class="st27" width="1" height="1"/>
+						<rect x="2" y="19" class="st27" width="1" height="1"/>
+						<rect x="3" y="19" class="st27" width="1" height="1"/>
+						<rect x="4" y="19" class="st27" width="1" height="1"/>
+						<rect x="5" y="19" class="st27" width="1" height="1"/>
+						<rect x="6" y="19" class="st27" width="1" height="1"/>
+						<rect x="7" y="19" class="st27" width="1" height="1"/>
+						<rect x="8" y="19" class="st27" width="1" height="1"/>
+						<rect x="9" y="19" class="st27" width="1" height="1"/>
+						<rect x="10" y="19" class="st27" width="1" height="1"/>
+						<rect x="11" y="19" class="st27" width="1" height="1"/>
+						<rect x="12" y="19" class="st27" width="1" height="1"/>
+						<rect x="13" y="19" class="st27" width="1" height="1"/>
+						<rect x="14" y="19" class="st27" width="1" height="1"/>
+						<rect x="15" y="19" class="st27" width="1" height="1"/>
+						<rect x="16" y="19" class="st27" width="1" height="1"/>
+						<rect x="17" y="19" class="st27" width="1" height="1"/>
+						<rect x="18" y="19" class="st27" width="1" height="1"/>
+						<rect x="19" y="19" class="st27" width="1" height="1"/>
+						<rect x="20" y="19" class="st27" width="1" height="1"/>
+						<rect x="21" y="19" class="st27" width="1" height="1"/>
+						<rect x="22" y="19" class="st27" width="1" height="1"/>
+						<rect x="23" y="19" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="20" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="20" class="st27" width="1" height="1"/>
+						<rect x="2" y="20" class="st27" width="1" height="1"/>
+						<rect x="3" y="20" class="st27" width="1" height="1"/>
+						<rect x="4" y="20" class="st27" width="1" height="1"/>
+						<rect x="5" y="20" class="st27" width="1" height="1"/>
+						<rect x="6" y="20" class="st27" width="1" height="1"/>
+						<rect x="7" y="20" class="st27" width="1" height="1"/>
+						<rect x="8" y="20" class="st27" width="1" height="1"/>
+						<rect x="9" y="20" class="st27" width="1" height="1"/>
+						<rect x="10" y="20" class="st27" width="1" height="1"/>
+						<rect x="11" y="20" class="st27" width="1" height="1"/>
+						<rect x="12" y="20" class="st27" width="1" height="1"/>
+						<rect x="13" y="20" class="st27" width="1" height="1"/>
+						<rect x="14" y="20" class="st27" width="1" height="1"/>
+						<rect x="15" y="20" class="st27" width="1" height="1"/>
+						<rect x="16" y="20" class="st27" width="1" height="1"/>
+						<rect x="17" y="20" class="st27" width="1" height="1"/>
+						<rect x="18" y="20" class="st27" width="1" height="1"/>
+						<rect x="19" y="20" class="st27" width="1" height="1"/>
+						<rect x="20" y="20" class="st27" width="1" height="1"/>
+						<rect x="21" y="20" class="st27" width="1" height="1"/>
+						<rect x="22" y="20" class="st27" width="1" height="1"/>
+						<rect x="23" y="20" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="21" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="21" class="st27" width="1" height="1"/>
+						<rect x="2" y="21" class="st27" width="1" height="1"/>
+						<rect x="3" y="21" class="st27" width="1" height="1"/>
+						<rect x="4" y="21" class="st27" width="1" height="1"/>
+						<rect x="5" y="21" class="st27" width="1" height="1"/>
+						<rect x="6" y="21" class="st27" width="1" height="1"/>
+						<rect x="7" y="21" class="st27" width="1" height="1"/>
+						<rect x="8" y="21" class="st27" width="1" height="1"/>
+						<rect x="9" y="21" class="st27" width="1" height="1"/>
+						<rect x="10" y="21" class="st27" width="1" height="1"/>
+						<rect x="11" y="21" class="st27" width="1" height="1"/>
+						<rect x="12" y="21" class="st27" width="1" height="1"/>
+						<rect x="13" y="21" class="st27" width="1" height="1"/>
+						<rect x="14" y="21" class="st27" width="1" height="1"/>
+						<rect x="15" y="21" class="st27" width="1" height="1"/>
+						<rect x="16" y="21" class="st27" width="1" height="1"/>
+						<rect x="17" y="21" class="st27" width="1" height="1"/>
+						<rect x="18" y="21" class="st27" width="1" height="1"/>
+						<rect x="19" y="21" class="st27" width="1" height="1"/>
+						<rect x="20" y="21" class="st27" width="1" height="1"/>
+						<rect x="21" y="21" class="st27" width="1" height="1"/>
+						<rect x="22" y="21" class="st27" width="1" height="1"/>
+						<rect x="23" y="21" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="22" class="st26" width="1" height="1"/>
+						</g>
+						<rect x="1" y="22" class="st27" width="1" height="1"/>
+						<rect x="2" y="22" class="st27" width="1" height="1"/>
+						<rect x="3" y="22" class="st27" width="1" height="1"/>
+						<rect x="4" y="22" class="st27" width="1" height="1"/>
+						<rect x="5" y="22" class="st27" width="1" height="1"/>
+						<rect x="6" y="22" class="st27" width="1" height="1"/>
+						<rect x="7" y="22" class="st27" width="1" height="1"/>
+						<rect x="8" y="22" class="st27" width="1" height="1"/>
+						<rect x="9" y="22" class="st27" width="1" height="1"/>
+						<rect x="10" y="22" class="st27" width="1" height="1"/>
+						<rect x="11" y="22" class="st27" width="1" height="1"/>
+						<rect x="12" y="22" class="st27" width="1" height="1"/>
+						<rect x="13" y="22" class="st27" width="1" height="1"/>
+						<rect x="14" y="22" class="st27" width="1" height="1"/>
+						<rect x="15" y="22" class="st27" width="1" height="1"/>
+						<rect x="16" y="22" class="st27" width="1" height="1"/>
+						<rect x="17" y="22" class="st27" width="1" height="1"/>
+						<rect x="18" y="22" class="st27" width="1" height="1"/>
+						<rect x="19" y="22" class="st27" width="1" height="1"/>
+						<rect x="20" y="22" class="st27" width="1" height="1"/>
+						<rect x="21" y="22" class="st27" width="1" height="1"/>
+						<rect x="22" y="22" class="st27" width="1" height="1"/>
+						<rect x="23" y="22" class="st27" width="1" height="1"/>
+						<g class="st25">
+							<rect x="0" y="23" class="st26" width="1" height="1"/>
+							<rect x="1" y="23" class="st26" width="1" height="1"/>
+							<rect x="2" y="23" class="st26" width="1" height="1"/>
+							<rect x="3" y="23" class="st26" width="1" height="1"/>
+							<rect x="4" y="23" class="st26" width="1" height="1"/>
+							<rect x="5" y="23" class="st26" width="1" height="1"/>
+							<rect x="6" y="23" class="st26" width="1" height="1"/>
+							<rect x="7" y="23" class="st26" width="1" height="1"/>
+							<rect x="8" y="23" class="st26" width="1" height="1"/>
+							<rect x="9" y="23" class="st26" width="1" height="1"/>
+							<rect x="10" y="23" class="st26" width="1" height="1"/>
+							<rect x="11" y="23" class="st26" width="1" height="1"/>
+							<rect x="12" y="23" class="st26" width="1" height="1"/>
+							<rect x="13" y="23" class="st26" width="1" height="1"/>
+							<rect x="14" y="23" class="st26" width="1" height="1"/>
+							<rect x="15" y="23" class="st26" width="1" height="1"/>
+							<rect x="16" y="23" class="st26" width="1" height="1"/>
+							<rect x="17" y="23" class="st26" width="1" height="1"/>
+							<rect x="18" y="23" class="st26" width="1" height="1"/>
+							<rect x="19" y="23" class="st26" width="1" height="1"/>
+							<rect x="20" y="23" class="st26" width="1" height="1"/>
+							<rect x="21" y="23" class="st26" width="1" height="1"/>
+							<rect x="22" y="23" class="st26" width="1" height="1"/>
+							<rect x="23" y="23" class="st26" width="1" height="1"/>
+							<rect x="0" y="0" class="st28" width="24" height="24"/>
+							<line class="st28" x1="0" y1="12" x2="24" y2="12"/>
+							<line class="st28" x1="0" y1="8" x2="24" y2="8"/>
+							<line class="st28" x1="0" y1="16" x2="24" y2="16"/>
+							<line class="st28" x1="12" y1="0" x2="12" y2="24"/>
+							<line class="st28" x1="16" y1="0" x2="16" y2="24"/>
+							<line class="st28" x1="8" y1="0" x2="8" y2="24"/>
+							<g id="material-icon-grid-20-24-lines">
+								<g class="st29">
+									<defs>
+										<rect id="SVGID_53_" x="2" y="2" class="st29" width="20" height="20"/>
+									</defs>
+									<clipPath id="SVGID_54_">
+										<use xlink:href="#SVGID_53_"  style="overflow:visible;"/>
+									</clipPath>
+									<g class="st30">
+										<circle class="st31" cx="12" cy="12" r="10"/>
+									</g>
+								</g>
+								<g>
+									<g class="st29">
+										<defs>
+											<rect id="SVGID_55_" x="7" y="7" class="st29" width="10" height="10"/>
+										</defs>
+										<clipPath id="SVGID_56_">
+											<use xlink:href="#SVGID_55_"  style="overflow:visible;"/>
+										</clipPath>
+										<g class="st32">
+											<circle class="st33" cx="12" cy="12" r="5"/>
+										</g>
+									</g>
+									<g>
+										<g class="st34">
+											<defs>
+												<rect id="SVGID_57_" class="st34" width="24" height="24"/>
+											</defs>
+											<clipPath id="SVGID_58_">
+												<use xlink:href="#SVGID_57_"  style="overflow:visible;"/>
+											</clipPath>
+											<g class="st35">
+												<line class="st31" x1="0" y1="0" x2="24" y2="24"/>
+											</g>
+										</g>
+										<g>
+											<g class="st34">
+												<defs>
+													<rect id="SVGID_59_" class="st34" width="24" height="24"/>
+												</defs>
+												<clipPath id="SVGID_60_">
+													<use xlink:href="#SVGID_59_"  style="overflow:visible;"/>
+												</clipPath>
+												<g class="st36">
+													<line class="st31" x1="24" y1="0" x2="0" y2="24"/>
+												</g>
+											</g>
+											<path class="st33" d="M6,2h12c1.1,0,2,0.9,2,2v16c0,1.1-0.9,2-2,2H6c-1.1,0-2-0.9-2-2V4C4,2.9,4.9,2,6,2z"/>
+											<path class="st33" d="M4,4h16c1.1,0,2,0.9,2,2v12c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V6C2,4.9,2.9,4,4,4z"/>
+											<path class="st33" d="M5,3h14c1.1,0,2,0.9,2,2v14c0,1.1-0.9,2-2,2H5c-1.1,0-2-0.9-2-2V5C3,3.9,3.9,3,5,3z"/>
+										</g>
+									</g>
+								</g>
+							</g>
+							<polygon points="16,17 13,17 13,13 11,13 11,17 8,17 8,18 2,18 2,20 8,20 8,21 16,21 16,20 22,20 22,18 16,18 							"/>
+							<path d="M15,13h3c0.6,0,1-0.4,1-1V5c0-0.6-0.4-1-1-1h-6l-1-1H6C5.4,3,5,3.4,5,4v8c0,0.6,0.4,1,1,1H15z"/>
+						</g>
+					</g>
+				</g>
+=======
 		<g class="st2">
 			<defs>
 				<rect id="SVGID_3_" x="0" width="24" height="24"/>
@@ -877,12 +1772,16 @@
 				<path class="st36" d="M18,22H6c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h12c1.1,0,2,0.9,2,2v16C20,21.1,19.1,22,18,22z"/>
 				<path class="st36" d="M22,6v12c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V6c0-1.1,0.9-2,2-2h16C21.1,4,22,4.9,22,6z"/>
 				<path class="st36" d="M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2h14c1.1,0,2,0.9,2,2v14C21,20.1,20.1,21,19,21z"/>
+>>>>>>> version.1.0.0.WIP
 			</g>
 		</g>
 	</g>
 </g>
+<<<<<<< HEAD
+=======
 <g>
 	<polygon points="16,17 13,17 13,13 11,13 11,17 8,17 8,18 2,18 2,20 8,20 8,21 16,21 16,20 22,20 22,18 16,18 	"/>
 	<path d="M15,13h2h1c0.6,0,1-0.4,1-1V7V5c0-0.6-0.4-1-1-1h-1h-2h-3l-1-1H6C5.4,3,5,3.4,5,4v8c0,0.6,0.4,1,1,1h4h2H15z"/>
 </g>
+>>>>>>> version.1.0.0.WIP
 </svg>
