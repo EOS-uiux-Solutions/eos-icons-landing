@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Mon Feb 12 12:30:48 2018
+Created by FontForge 20170925 at Mon Feb 12 15:21:23 2018
  By Manuele Carlini
 </metadata>
 <defs>
@@ -37,8 +37,8 @@ v32q0 14 7.5 26.5t19.5 19.5t27 7q22 0 37.5 -15.5t15.5 -37.5v-32zM384 128v32q0 13
 d="M235 171q-6 0 -11 2.5t-8 7.5t-3 11v21h-106v-149h106v21q0 9 6.5 15.5t15.5 6.5h42l22 -22h64q8 0 14.5 -6t6.5 -15v-64q0 -9 -6.5 -15t-14.5 -6h-128q-9 0 -15.5 6t-6.5 15v21h-149v278h-43q-8 0 -14.5 6t-6.5 15v85q0 9 6.5 15.5t14.5 6.5h43l21 -22h64q9 0 15.5 -6
 t6.5 -15v-64q0 -9 -6.5 -15t-15.5 -6h-42v-43h106v21q0 9 6.5 15.5t15.5 6.5h42l22 -22h64q8 0 14.5 -6t6.5 -15v-64q0 -9 -6.5 -15t-14.5 -6h-128z" />
     <glyph glyph-name="image" unicode="image" horiz-adv-x="320" 
-d="M320 21q0 -17 -12.5 -29.5t-30.5 -12.5h-234q-18 0 -30.5 12.5t-12.5 29.5v320q0 18 12.5 30.5t30.5 12.5h234l43 21v-384zM85 107h107v21h-107v-21zM107 85h-22v-21h22v21zM149 149h22v22h-22v-22zM149 192h128v21h-128v-21zM277 235v21h-106v-21h106zM192 277v22h-128
-v-22h128zM149 341v-21h22v21h-22zM128 341h-85v-21h85v21zM171 21v22h-128v-22h128zM213 64v21h-85v-21h85zM256 149v22h-64v-22h64z" />
+d="M277 384l43 21v-384q0 -17 -12.5 -29.5t-30.5 -12.5h-234q-18 0 -30.5 12.5t-12.5 29.5v320q0 18 12.5 30.5t30.5 12.5h234zM43 320v-43h170v43h-170zM128 21v43h-43v-43h43zM128 149v-42h85v42h-85zM277 21v43h-128v-43h128zM277 107v42h-42v-42h42zM277 192v43h-106
+v-43h106zM277 277v43h-42v-43h42z" />
     <glyph glyph-name="miscellaneous" unicode="miscellaneous" horiz-adv-x="384" 
 d="M320 171l21 -168v-3q0 -9 -6 -15t-15 -6h-256q-9 0 -15.5 6t-6.5 15v2l22 169h256zM0 192v42h384v-42h-384zM250 324q16 -10 30 -30t18 -38h-42q0 9 -6.5 15t-15 6t-15 -6t-6.5 -15h-43q0 9 -6 15t-15 6t-15 -6t-6 -15h-43q4 18 18.5 37.5t30.5 29.5q-6 20 -6 40v3
 q0 25 6 43t15 18q6 0 11 -8.5t7.5 -22.5t2.5 -30q0 -14 -2 -28q12 3 24 3t24 -3q-3 13 -3 27v1q0 25 6.5 43t15 18t15 -18t6.5 -42v-3q0 -21 -6 -40z" />
