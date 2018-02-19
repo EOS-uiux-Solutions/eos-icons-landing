@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Mon Feb 19 18:12:39 2018
+Created by FontForge 20170925 at Mon Feb 19 18:41:46 2018
  By Manuele Carlini
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Mon Feb 19 18:12:39 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F111"
+    unicode-range="U+005F-F112"
   />
 <missing-glyph horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -30,6 +30,9 @@ d="M43 277v43h341v-43h-341zM85 363v42h256v-42h-256zM384 235q18 0 30.5 -12.5t12.5
     <glyph glyph-name="background_tasks" unicode="background_tasks" 
 d="M64 363v21h256v-21h-256zM64 320v21h256v-21h-256zM64 277v22h32v-22h-32zM64 235v21h32v-21h-32zM512 32q0 -13 -9.5 -22.5t-22.5 -9.5h-128v-32h32v-32h-128v32h32v32h-128q-13 0 -22.5 9.5t-9.5 22.5v213q0 14 9.5 23t22.5 9h320q13 0 22.5 -9t9.5 -23v-213zM160 32
 h320v213h-320v-213zM107 203v-32h-75q-13 0 -22.5 9t-9.5 23v213q0 13 9.5 22.5t22.5 9.5h320q13 0 22.5 -9.5t9.5 -22.5v-117h-32v117h-320v-213h75z" />
+    <glyph glyph-name="collocation" unicode="collocation" horiz-adv-x="427" 
+d="M384 405q18 0 30.5 -12.5t12.5 -29.5v-342q0 -17 -12.5 -29.5t-30.5 -12.5h-341q-18 0 -30.5 12.5t-12.5 29.5v342q0 17 12.5 29.5t30.5 12.5h341zM384 21v342h-341v-342h341zM118 64h1q-22 0 -38 15.5t-16 37.5t16 38t38 16l50 87q-9 14 -9 30q0 22 15.5 37.5t38 15.5
+t38 -15.5t15.5 -37.5q0 -16 -9 -30l51 -87h1q22 0 38 -16t16 -38t-16 -37.5t-38 -15.5q-11 0 -22.5 5.5t-19.5 15.5t-10 22h-87q-4 -18 -19.5 -30.5t-33.5 -12.5zM185 243l-44 -78q10 -4 18.5 -15t11.5 -22h86q3 11 11.5 22t18.5 15l-45 78q-13 -8 -28.5 -8t-28.5 8z" />
     <glyph glyph-name="constraint" unicode="constraint" horiz-adv-x="426" 
 d="M426 342l-426 -2v43l426 1v-42zM426 256l-426 -1v43l426 1v-43zM234 171l-234 -1v42l234 2v-43zM234 86l-234 -2v43l234 1v-42zM234 0l-234 -1v43l234 1v-43zM405 128q8 -1 14.5 -7t6.5 -14v-86q0 -8 -6.5 -14t-14.5 -7h-107q-8 1 -14.5 7t-6.5 14v86q0 8 6.5 14t14.5 7
 v32q0 14 7.5 26.5t19.5 19.5t27 7q22 0 37.5 -15.5t15.5 -37.5v-32zM384 128v32q0 13 -9.5 22.5t-23 9.5t-22.5 -9.5t-9 -22.5v-32h64z" />
