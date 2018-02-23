@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Wed Feb 21 17:08:06 2018
- By Manuele Carlini
+Created by FontForge 20170925 at Fri Feb 23 12:53:50 2018
+ By Zvezdana Marjanovic
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Wed Feb 21 17:08:06 2018
     bbox="-0.595506 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F114"
+    unicode-range="U+005F-F115"
   />
 <missing-glyph horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -76,6 +76,9 @@ d="M107 405q8 0 14.5 -6t6.5 -15v-384q0 -9 -6.5 -15t-14.5 -6h-86q-8 0 -14.5 6t-6.
 t15.5 -6.5t6.5 -15t-6.5 -15t-15.5 -6.5t-15 6.5t-6 15zM277 405q9 0 15.5 -6t6.5 -15v-384q0 -9 -6.5 -15t-15.5 -6h-85q-9 0 -15 6t-6 15v384q0 9 6 15t15 6h85zM234.5 0q17.5 0 30 12.5t12.5 30.5q0 11 -5.5 21t-15.5 15.5t-21 5.5q-18 0 -30.5 -12.5t-12.5 -30t12.5 -30
 t30 -12.5zM277 192v192h-85v-192h85zM214 42.5q0 8.5 6 15t15 6.5t15 -6.5t6 -15.5q0 -4 -1.5 -8t-4.5 -7t-7 -4.5t-8 -1.5q-9 0 -15 6.5t-6 15zM448 405q9 0 15 -6t6 -15v-384q0 -9 -6 -15t-15 -6h-85q-9 0 -15.5 6t-6.5 15v384q0 9 6.5 15t15.5 6h85zM405 0q12 0 22 5.5
 t15.5 15.5t5.5 22q0 17 -12.5 29.5t-30 12.5t-30 -12.5t-12.5 -30t12.5 -30t29.5 -12.5zM448 192v192h-85v-192h85zM384 42.5q0 8.5 6.5 15t15 6.5t15 -6.5t6.5 -15t-6.5 -15t-15 -6.5t-15 6.5t-6.5 15z" />
+    <glyph glyph-name="repositories" unicode="repositories" horiz-adv-x="341" 
+d="M85 -43v86h107v-86l-53 32zM85 299v42h43v-42h-43zM85 192v43h43v-43h-43zM85 85v43h43v-43h-43zM306 426q15 -3 25 -15t10 -27v-341q0 -12 -5.5 -22t-15.5 -15.5t-21 -5.5h-64v43h64v341h-256v-384q-18 0 -30.5 12.5t-12.5 30.5v341q0 18 12.5 30.5t30.5 12.5h256
+q4 0 7 -1z" />
     <glyph glyph-name="resource" unicode="resource" horiz-adv-x="384" 
 d="M363 235h21v-43h-43v-21q0 -31 -14 -60.5t-38.5 -52t-53.5 -30.5v-49h-86v49q-44 13 -75 55t-31 88v21h-43v43h85v170h43v-170h128v170h43v-170h64z" />
     <glyph glyph-name="sap" unicode="sap" horiz-adv-x="427" 
