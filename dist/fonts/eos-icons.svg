@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Thu Mar  1 14:41:07 2018
+Created by FontForge 20170925 at Wed Mar  7 16:41:42 2018
  By Manuele Carlini
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Thu Mar  1 14:41:07 2018
     bbox="-0.595506 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F116"
+    unicode-range="U+005F-F117"
   />
 <missing-glyph horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -71,6 +71,10 @@ q-30 9 -59 22q-30 -13 -60 -22q12 -33 27.5 -52t32.5 -19zM397 85q8 14 -0.5 38t-32.
     <glyph glyph-name="product_subscriptions" unicode="product_subscriptions" horiz-adv-x="428" 
 d="M43 277v43h342v-43h-342zM86 362v43h256v-43h-256zM385 235q18 0 30.5 -12.5t12.5 -30.5v-170q0 -18 -12.5 -30.5t-30.5 -12.5h-342q-18 0 -30.5 12.5t-12.5 30.5v170q0 18 12.5 30.5t30.5 12.5h342zM272 16l-23 68l59 43h-72l-23 71l-22 -70h-72l58 -42l-22 -70l59 43z
 " />
+    <glyph glyph-name="products_classes" unicode="products_classes" horiz-adv-x="469" 
+d="M106.5 107q17.5 0 30 -12.5t12.5 -30.5t-12.5 -30.5t-30 -12.5t-30 12.5t-12.5 30.5t12.5 30.5t30 12.5zM106.5 43q8.5 0 15 6t6.5 15t-6.5 15t-15 6t-15 -6t-6.5 -15t6.5 -15t15 -6zM64 170v192h86v-192h-86zM448 427q9 0 15 -6.5t6 -15.5v-426q0 -9 -6 -15.5t-15 -6.5
+h-427q-8 0 -14.5 6.5t-6.5 15.5v426q0 9 6.5 15.5t14.5 6.5h427zM171 149v214q0 8 -6.5 14.5t-15.5 6.5h-85q-9 0 -15 -6.5t-6 -14.5v-342q0 -8 6 -14.5t15 -6.5h85q9 0 15.5 6.5t6.5 14.5v128zM299 0v43h-86v-43h86zM299 64v107h-86v-107h86zM299 213v43h-86v-43h86z
+M299 277v107h-86v-107h86zM427 0v43h-86v-43h86zM427 64v107h-86v-107h86zM427 213v43h-86v-43h86zM427 277v107h-86v-107h86z" />
     <glyph glyph-name="products" unicode="products" horiz-adv-x="469" 
 d="M107 405q8 0 14.5 -6t6.5 -15v-384q0 -9 -6.5 -15t-14.5 -6h-86q-8 0 -14.5 6t-6.5 15v384q0 9 6.5 15t14.5 6h86zM64 0q18 0 30.5 12.5t12.5 30t-12.5 30t-30.5 12.5t-30.5 -12.5t-12.5 -30t12.5 -30t30.5 -12.5zM107 192v192h-86v-192h86zM43 42.5q0 8.5 6 15t15 6.5
 t15.5 -6.5t6.5 -15t-6.5 -15t-15.5 -6.5t-15 6.5t-6 15zM277 405q9 0 15.5 -6t6.5 -15v-384q0 -9 -6.5 -15t-15.5 -6h-85q-9 0 -15 6t-6 15v384q0 9 6 15t15 6h85zM234.5 0q17.5 0 30 12.5t12.5 30.5q0 11 -5.5 21t-15.5 15.5t-21 5.5q-18 0 -30.5 -12.5t-12.5 -30t12.5 -30
