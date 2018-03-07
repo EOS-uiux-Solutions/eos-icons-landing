@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Thu Mar  1 12:58:29 2018
+Created by FontForge 20170925 at Wed Mar  7 16:41:42 2018
  By Manuele Carlini
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Thu Mar  1 12:58:29 2018
     bbox="-0.595506 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F116"
+    unicode-range="U+005F-F117"
   />
 <missing-glyph horiz-adv-x="187" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -89,6 +89,9 @@ d="M363 235h21v-43h-43v-21q0 -31 -14 -60.5t-38.5 -52t-53.5 -30.5v-49h-86v49q-44 
 d="M323 231q24 0 24 -18q0 -19 -24 -19h-10v37h10zM213 216h1l15 -46q-7 -2 -15 -2q-7 0 -14 3zM213.5 405q88.5 0 151 -62.5t62.5 -150.5t-62.5 -150.5t-151 -62.5t-151 62.5t-62.5 150.5t62.5 150.5t151 62.5zM327 163q27 0 42 12.5t15 35.5q0 50 -64 50h-45v-109l-40 109
 h-42l-34 -91q-2 11 -10.5 18.5t-15.5 11t-20 7.5q-25 8 -25 16q0 9 21 9q18 0 34 -9l15 28q-24 12 -51 12h-3q-24 0 -42 -17q-10 -10 -11 -25v-2q0 -19 16 -30q14 -9 31 -14q23 -7 23 -15q-1 -4 -3 -7q-6 -4 -13 -4h-2h-2q-20 0 -36 10l-14 -28q24 -13 52 -13h2h1
 q22 0 38 13q1 1 2 1l-5 -12h42l7 21q12 -3 24 -3h1q12 0 23 3l7 -21h68v43h14z" />
+    <glyph glyph-name="smt" unicode="smt" horiz-adv-x="427" 
+d="M85 -43v86h107v-86l-53 32zM85 299v42h43v-42h-43zM85 192v43h43v-43h-43zM85 85v43h43v-43h-43zM392 427q14 -3 24.5 -15.5t10.5 -26.5v-1v-341q0 -18 -12.5 -30.5t-30.5 -12.5h-64v-43l-53 32l-54 -32v470h171h4h4zM320 85v43h-43v-43h43zM320 192v43h-43v-43h43z
+M320 299v42h-43v-42h43zM43 427h149v-43h-149v-384q-18 0 -30.5 12.5t-12.5 30.5v341q0 18 12.5 30.5t30.5 12.5z" />
     <glyph glyph-name="software" unicode="software" horiz-adv-x="469" 
 d="M277 57v-36h43v-42h-171v42h43v43h-149q-12 0 -22 5.5t-15.5 15.5t-5.5 22v256q0 17 12.5 29.5t30.5 12.5h384q17 0 29.5 -12.5t12.5 -29.5v-94q-16 27 -42 45v49h-384v-256h176q10 -14 27 -28.5t31 -21.5zM341 320q53 0 90.5 -37.5t37.5 -90.5t-37.5 -90.5t-90.5 -37.5
 t-90.5 37.5t-37.5 90.5t37.5 90.5t90.5 37.5zM341.5 160q13.5 0 22.5 9.5t9 22.5t-9 22.5t-22.5 9.5t-23 -9.5t-9.5 -22.5t9.5 -22.5t23 -9.5z" />
