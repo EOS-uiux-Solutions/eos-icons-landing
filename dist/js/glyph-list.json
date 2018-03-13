@@ -3,5 +3,5 @@
    "fontname": "eos-icons",
    "repositoryUrl": "https://gitlab.com/SUSE-UIUX/eos-icons",
    "baseClass": "eos-icons",
-   "glyphs": ["action_chains","activate_subscriptions","admin","background_tasks","collocation","constraint","file_system","image","miscellaneous","multistate","network_file_system","organization","packages","primitive","product_subscriptions","products_classes","products","repositories","resource","sap","smt","software","troubleshooting"]
+   "glyphs": ["action_chains","activate_subscriptions","admin","background_tasks","bootstrapping","collocation","constraint","file_system","image","miscellaneous","multistate","network_file_system","organization","packages","primitive","product_subscriptions","products_classes","products","repositories","resource","sap","smt","software","troubleshooting"]
 }
