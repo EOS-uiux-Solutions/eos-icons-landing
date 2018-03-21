@@ -2,11 +2,33 @@
 
 Demo: https://suse-uiux.gitlab.io/eos-icons/
 
-This is the iconic font used in the EOS Design System [public URL here when available - yes, we are still working on it]. The official SUSE Design System, and for all open source projects to use and re-use.
+This is the iconic font used in the EOS Design System. The official SUSE Linux Design System, and for all open source projects to use and re-use.
 
 To view the EOS Design System project check gitlab https://gitlab.com/SUSE-UIUX/eos
 
-# What do you need to build the fonts locally?
+# Using EOS icons in your projects
+
+Just like in any other iconic font, you need to add the Fonts and CSS files in your project:
+
+1- Add the `eos-icons.css` file available under the `dist/css` folder into your projects `<head>`:
+
+`<link rel="stylesheet" href="assets/eos-icons.css">`
+
+2- Make sure the font files available in the `dist/fonts` folder are placed under your `assets/fonts` folder so the .css file can read them correctly.
+
+3- Use the icons in your html as follows:
+
+```
+<i class="eos-icons"> LIGATURE_OF_THE_ICON</i>
+```
+
+Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our online tool to see the icon's name: https://suse-uiux.gitlab.io/eos-icons/, or simply run `open dist/index.html` to see it locally.
+
+# Adding your icons to the iconic font
+
+If you want to create your own icons and add them to this library, follow the next steps:
+
+### What do you need to build the fonts locally?
 
 This project uses Webfont for Grunt to build. More info about the project: https://www.npmjs.com/package/grunt-webfont
 
@@ -58,6 +80,8 @@ https://developer.apple.com/xcode/
 ```
 sudo apt-get install fontforge ttfautohint
 ```
+
+### Design and add your SVG icons
 
 Add your icons into the `svg/` folder. All our icons have been designed with Illustrator, but designing with any tool like Inkscape will work just fine, just make sure the exported SVG code is as clean as possible.
 
