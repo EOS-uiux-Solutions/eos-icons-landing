@@ -1,5 +1,4 @@
 {
-   "version": <%= JSON.stringify(version) %>,
    "fontname": <%= JSON.stringify(fontFamilyName) %>,
    "repositoryUrl": "https://gitlab.com/SUSE-UIUX/eos-icons",
    "baseClass": <%= JSON.stringify(baseClass) %>,
