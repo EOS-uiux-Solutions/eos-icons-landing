@@ -1,11 +1,25 @@
+stages:
+  - deploy
+  - publish
+
 pages:
   stage: deploy
   script:
-  - mkdir .public
-  - cp -r dist/index.html dist/fonts dist/images/ .public
-  - mv .public public
+    - mkdir .public
+    - cp -r dist/index.html dist/fonts dist/images/ .public
+    - mv .public public
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - version.1.0.0.WIP
+    - version.1.0.0.WIP
+    - master
+
+npm-publish:
+  image: node:8
+  stage: publish
+  script:
+    - npm install
+    - npx semantic-release
+  only:
+    - master
