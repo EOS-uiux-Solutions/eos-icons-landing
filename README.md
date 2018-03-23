@@ -51,6 +51,12 @@ cd eos-icons
 brew install node
 ```
 
+- Install Grunt globally:
+
+```
+npm install -g grunt-cli
+```
+
 - Install npm dependencies:
 
 ```
