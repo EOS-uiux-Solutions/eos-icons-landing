@@ -6,6 +6,10 @@ This is the iconic font used in the EOS Design System. The official SUSE Linux D
 
 To view the EOS Design System project check gitlab https://gitlab.com/SUSE-UIUX/eos
 
+# Installing with npm
+
+`npm install eos-icons --save`
+
 # Using EOS icons in your projects
 
 Just like in any other iconic font, you need to add the Fonts and CSS files in your project:
