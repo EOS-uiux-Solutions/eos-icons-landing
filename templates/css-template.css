@@ -1,0 +1,48 @@
+/*
+Generated with grunt-webfont
+Created by EOS Design System - EOS icons
+Visit our Design System: https://gitlab.com/SUSE-UIUX/eos/
+Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
+*/
+
+<% if (fontfaceStyles) { %>
+<% if (fontSrc1 && embed.length) { %>
+@font-face {
+  font-family: "<%= fontFamilyName %>";
+  src: <%= fontSrc1 %>;
+  font-weight: normal;
+  font-style: normal;
+}
+<% } %>@font-face {
+  font-family: "<%= fontFamilyName %>";<% if (fontSrc1) { %>
+  src: <%= fontSrc1 %>;<% }%>
+  src: <%= fontSrc2 %>;
+  font-weight: normal;
+  font-style: normal;
+}
+<% } %>
+
+.<%= baseClass %> {
+  font-family: "<%= fontFamilyName %>";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

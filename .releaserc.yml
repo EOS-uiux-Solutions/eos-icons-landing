@@ -1,0 +1,23 @@
+verifyConditions:
+  - '@semantic-release/npm'
+  - '@semantic-release/gitlab'
+publish:
+  - '@semantic-release/npm'
+  - '@semantic-release/gitlab'
+success: false
+fail: false
+analyzeCommits:
+  preset: 'eslint'
+  releaseRules:
+    -
+      tag: 'Breaking'
+      release: 'major'
+    -
+      tag: 'Fix'
+      release: 'patch'
+    -
+      tag: 'Update'
+      release: 'minor'
+    -
+      tag: 'New'
+      release: 'minor'

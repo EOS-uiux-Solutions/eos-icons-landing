@@ -1,0 +1,58 @@
+{
+  "name": "eos-icons",
+  "version": "0.0.0",
+  "description": "The iconic font made for EOS Design System to work together with Material Icons. Extends the library for SUSE and open SUSE product specific usage.",
+  "devDependencies": {
+    "@semantic-release/gitlab": "^2.1.2",
+    "conventional-changelog-eslint": "^1.0.9",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-webfont": "^1.6.0",
+    "semantic-release": "^15.1.3"
+  },
+  "scripts": {
+    "build": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/SUSE-UIUX/eos-icons.git"
+  },
+  "keywords": [
+    "iconic",
+    "font",
+    "eos",
+    "icons"
+  ],
+  "author": "SUSE UX/UI team",
+  "contributors": [
+    {
+      "name": "Cynthia Sanchez",
+      "web": "https://de.linkedin.com/in/cyntsanchez"
+    },
+    {
+      "name": "Jesus Herman",
+      "web": "https://www.linkedin.com/in/jesusherman"
+    },
+    {
+      "name": "Zvezdana Marjanovic",
+      "web": "https://www.linkedin.com/in/zvezdana-marjanovic-5375b251"
+    },
+    {
+      "name": "Manuele Carlini",
+      "web": "https://www.linkedin.com/in/manuelecarlini"
+    },
+    {
+      "name": "Kenneth Wimer",
+      "web": "https://www.linkedin.com/in/kennethwimer"
+    },
+    {
+      "name": "Richa Bishts",
+      "web": "https://www.linkedin.com/in/richabisht"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/SUSE-UIUX/eos-icons/issues"
+  },
+  "homepage": "https://gitlab.com/SUSE-UIUX/eos-icons#README"
+}
