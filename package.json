@@ -4,6 +4,7 @@
   "description": "The iconic font made for EOS Design System to work together with Material Icons. Extends the library for SUSE and open SUSE product specific usage.",
   "devDependencies": {
     "@semantic-release/gitlab": "^2.1.2",
+    "@semantic-release/git": "^5.0.0",
     "conventional-changelog-eslint": "^1.0.9",
     "grunt": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
