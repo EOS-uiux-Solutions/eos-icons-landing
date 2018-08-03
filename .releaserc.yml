@@ -1,6 +1,14 @@
 verifyConditions:
   - '@semantic-release/npm'
   - '@semantic-release/gitlab'
+prepare:
+  - '@semantic-release/npm'
+  -
+    path: '@semantic-release/git'
+    assets:
+      - 'package.json'
+      - 'package-lock.json'
+    message: 'Release: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
 publish:
   - '@semantic-release/npm'
   - '@semantic-release/gitlab'
