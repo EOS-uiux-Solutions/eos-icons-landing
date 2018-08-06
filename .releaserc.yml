@@ -1,6 +1,14 @@
 verifyConditions:
   - '@semantic-release/npm'
   - '@semantic-release/gitlab'
+prepare:
+  - '@semantic-release/npm'
+  -
+    path: '@semantic-release/git'
+    assets:
+      - 'package.json'
+      - 'package-lock.json'
+    message: 'Release: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
 publish:
   - '@semantic-release/npm'
   - '@semantic-release/gitlab'
@@ -8,16 +16,3 @@ success: false
 fail: false
 analyzeCommits:
   preset: 'eslint'
-  releaseRules:
-    -
-      tag: 'Breaking'
-      release: 'major'
-    -
-      tag: 'Fix'
-      release: 'patch'
-    -
-      tag: 'Update'
-      release: 'minor'
-    -
-      tag: 'New'
-      release: 'minor'
