@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+  const sass = require('node-sass');
 
   grunt.initConfig({
     webfont: {
@@ -39,12 +40,30 @@ module.exports = function(grunt) {
           { src: 'templates/logo.png', dest: 'dist/images/' }
         ]
       }
+    },
+    sass: {
+      options: {
+        implementation: sass
+      },
+      dist: {
+        files: {
+          'templates/css-animated.css': 'animated/scss/index.scss'
+        }
+      }
+    },
+    concat: {
+      dist: {
+        src: ['templates/css-webfont.css', 'templates/css-animated.css'],
+        dest: 'templates/css-template.css',
+      },
     }
   });
 
   grunt.loadNpmTasks('grunt-webfont');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', ['webfont','copy']);
+  grunt.registerTask('default', ['webfont','copy','sass','concat']);
 
 };

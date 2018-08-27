@@ -10,6 +10,7 @@
 // sass-lint:disable variable-for-property
 
 /* Variables */
+$sb-gray-900: #686565; //rgb(104, 101, 101);
 $icon-installing-bg: $sb-gray-900;
 // 18px
 $icon-size-18: md-18;
@@ -193,7 +194,7 @@ $icon-installing-padding-negative-48: -16px;
 }
 
 /* Shared */
-.icon-installing {
+.eos-icon-installing {
   display: inline-block;
   position: relative;
 

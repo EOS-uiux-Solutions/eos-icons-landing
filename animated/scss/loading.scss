@@ -8,8 +8,9 @@
 
 /* Variables */
 $sb-gray-900: #686565; //rgb(104, 101, 101);
+$sb-black: #000000; //rgb(0, 0, 0)
 
-.icon-loading {
+.eos-icon-loading {
   animation: icon-loading-animate 1s infinite linear;
   border: 3px solid rgba($sb-black, 0.2);
   border-radius: 50%;
