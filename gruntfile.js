@@ -64,6 +64,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', ['webfont','copy','sass','concat']);
+  grunt.registerTask('default', ['sass','concat', 'webfont','copy']);
 
 };
