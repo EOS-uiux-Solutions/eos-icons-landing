@@ -46,6 +46,10 @@
 				font-size: 0.5em;
 			}
 
+			h3 {
+				text-align: center;
+			}
+
 			.two-columns {
 				-webkit-column-count: 2;
 				   -moz-column-count: 2;
@@ -72,7 +76,8 @@
 				font-size: 48px;
 			}
 
-			.how-to-use {
+			.how-to-use,
+			.how-to-use-animated {
 				background: #333;
 				bottom: 44px;
 				position: fixed;
@@ -101,7 +106,8 @@
 				float: right;
 			}
 
-			#close-code-snippet {
+			#close-code-snippet,
+			#close-code-snippet-animated {
 				cursor: pointer;
 			}
 
@@ -121,9 +127,8 @@
 			.version {
 				font-size: 12px;
 			}
-
-		<%= styles %>
 		</style>
+		<link rel="stylesheet" type="text/css" href="css/eos-icons.css">
 	</head>
 	<body>
 		<header class='eos-logo-color-gradients'>
@@ -134,10 +139,10 @@
 				</h1>
 				<div class='pull-right toolbar'>
 				  <span class='text-white'>Try different sizes: </span>
-				  <button class='change-size'>18px</button>
-					<button class='change-size'>24px</button>
-					<button class='change-size'>36px</button>
-					<button class='change-size'>48px</button>
+				  <button class='change-size' data-size='18'>18px</button>
+					<button class='change-size' data-size='24'>24px</button>
+					<button class='change-size' data-size='36'>36px</button>
+					<button class='change-size' data-size='48'>48px</button>
 				</div>
 			</div>
 		</header>
@@ -152,17 +157,45 @@
 					</div>
 				<% } %>
 			</div>
+			<div id="icons-animated">
+
+				<h3>Animated icons</h3>
+				<div class="icons__item" data-name="loading">
+					<i class="eos-icons eos-icon-loading"></i>
+					<br/>
+					loading
+				</div>
+
+				<div class="icons__item" data-name="installing">
+					<i class="eos-icons eos-icon-installing md-48" id="eos-icon-installing"></i>
+					<br>
+					installing
+				</div>
+			</div>
     </div>
 
-		<div class='how-to-use'>
+		<div id="how-to-use" class='how-to-use'>
 		  <div class='container'>
 				<h2 class='text-white'>
 					How to use it:
 					<small id='close-code-snippet' class='pull-right'>X Close</small>
 				</h2>
+
+
 				<% if (addLigatures) { %>
 				<pre><code>&lt;i class=&quot;<%= baseClass %>&quot;&gt;<span id="name2">icon_name</span>&lt;/i&gt;</code></pre>
 				<% } %>
+			</div>
+		</div>
+
+		<div id="how-to-use" class='how-to-use-animated'>
+		  <div class='container'>
+				<h2 class='text-white'>
+					How to use it:
+					<small id='close-code-snippet-animated' class='pull-right'>X Close</small>
+				</h2>
+
+				<div id='animatedIconDemo'></div>
 			</div>
 		</div>
 		<footer>
@@ -179,6 +212,7 @@
 
 			//hide code snippet by default
 			document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
+			document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
 
 			document.getElementById('icons').onclick = function(e) {
 				e = e || window.event;
@@ -189,6 +223,19 @@
 					showCodeSnippet = true
 					console.log('something selected')
 					document.getElementsByClassName('how-to-use')[0].style.visibility = 'visible'
+					document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+				}
+			}
+
+			document.getElementById('icons-animated').onclick = function(e) {
+				e = e || window.event;
+				iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
+				iconDemo = '<pre><code>&lt;i class=&quoteos-icons eos-icon-' + iconName + '&quot;&gt;' + '&lt;/i&gt;</code></pre>';
+				document.getElementById('animatedIconDemo').innerHTML = iconDemo;
+				if (iconName) {
+					showCodeSnippet = true
+					console.log(iconName)
+					document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'visible'
 				}
 			}
 
@@ -196,15 +243,25 @@
 				showCodeSnippet = false
 				iconName = ''
 				document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
+				document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+			}
+
+			document.getElementById('close-code-snippet-animated').onclick = function(e) {
+				showCodeSnippet = false
+				iconName = ''
+				document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+				document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
 			}
 
 			var buttonsSizes = document.getElementsByClassName('change-size')
 			for (i = 0; i < buttonsSizes.length; i++) {
 		    buttonsSizes[i].onclick = function(e) {
 					e = e || window.event;
-					iconSize = e.target.innerHTML
+					iconSize = e.target.getAttribute('data-size')
+					iconClass = 'md-' + iconSize
 	        for (i = 0; i < document.getElementsByClassName('eos-icons').length; i++) {
-					  document.getElementsByClassName('eos-icons')[i].style.fontSize = iconSize;
+					  document.getElementsByClassName('eos-icons')[i].style.fontSize = iconSize + 'px';
+						document.getElementById('eos-icon-installing').className = 'eos-icons eos-icon-installing ' + iconClass;
 					}
 		    };
 			}

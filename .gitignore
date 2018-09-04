@@ -1,4 +1,5 @@
 .DS_store
 node_modules
-package-lock.json
 npm-debug.log
+css-template.css
+css-animated.css
