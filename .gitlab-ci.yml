@@ -6,13 +6,13 @@ pages:
   stage: deploy
   script:
     - mkdir .public
-    - cp -r dist/index.html dist/fonts dist/images/ .public
+    - cp -r dist/css dist/index.html dist/fonts dist/images/ .public
     - mv .public public
   artifacts:
     paths:
       - public
   only:
-    - version.1.0.0.WIP
+    - WIP-cherry
     - master
 
 npm-publish:
