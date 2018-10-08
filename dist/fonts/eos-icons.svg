@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Fri Oct  5 15:50:18 2018
+Created by FontForge 20170925 at Mon Oct  8 21:53:20 2018
  By Zvezdana Marjanovic
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Fri Oct  5 15:50:18 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F11B"
+    unicode-range="U+005F-F11C"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -31,6 +31,8 @@ v-42h42v42h43z" />
     <glyph glyph-name="admin" unicode="admin" 
 d="M256 427l192 -86v-128q0 -89 -55 -162.5t-137 -93.5q-82 20 -137 93.5t-55 162.5v128zM256 343q-26 0 -45 -18.5t-19 -45t19 -45.5t45 -19t45 19t19 45.5t-19 45t-45 18.5zM256 175q-23 0 -52 -7t-52.5 -23t-23.5 -36q19 -28 56.5 -48t71.5 -20t71.5 20t56.5 48
 q0 15 -14 28t-34.5 21t-41.5 12.5t-38 4.5z" />
+    <glyph glyph-name="autoinstallation" unicode="autoinstallation" 
+d="M195 128l76 -75q-28 -10 -57 -10q-71 0 -121 50t-50 120.5t50 120.5t121 50q54 0 102.5 -37.5t62.5 -90.5h-59v-128h-125zM171 213.5q0 -17.5 12.5 -30t30 -12.5t30 12.5t12.5 30t-12.5 30t-30 12.5t-30 -12.5t-12.5 -30zM469 85l-85 -85l-85 85h64v128h42v-128h64z" />
     <glyph glyph-name="background_tasks" unicode="background_tasks" 
 d="M128 352v32h192v-32h-192zM64 288v32h32v-32h-32zM64 352v32h32v-32h-32zM64 224v32h32v-32h-32zM96 192v-32h-53q-18 0 -30.5 12.5t-12.5 30.5v202q0 18 12.5 30.5t30.5 12.5h298q18 0 30.5 -12.5t12.5 -30.5v-85h-32v96h-320v-224h64zM469 288q18 0 30.5 -12.5
 t12.5 -30.5v-202q0 -18 -12.5 -30.5t-30.5 -12.5h-117v-32h32v-32h-128v31h33v33h-118q-18 0 -30.5 12.5t-12.5 30.5v202q0 18 12.5 30.5t30.5 12.5h298zM480 32v224h-320v-224h320z" />
