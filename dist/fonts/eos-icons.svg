@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Wed Oct 10 16:56:28 2018
- By cynthia sanchez
+Created by FontForge 20170925 at Fri Oct 12 15:10:37 2018
+ By Zvezdana Marjanovic
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20180321 at Wed Oct 10 16:56:28 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F11B"
+    unicode-range="U+005F-F11C"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -102,6 +102,9 @@ d="M427 235h21v-43h-43v-21q0 -31 -14 -60.5t-38.5 -52t-53.5 -30.5v-49h-86v49q-44 
     <glyph glyph-name="smt" unicode="smt" 
 d="M128 -43v86h107v-86l-54 32zM128 299v42h43v-42h-43zM128 192v43h43v-43h-43zM128 85v43h43v-43h-43zM434 427q15 -3 25 -15.5t10 -26.5v-1v-341q0 -18 -12.5 -30.5t-29.5 -12.5h-64v-43l-54 32l-53 -32v470h171h3.5h3.5zM363 85v43h-43v-43h43zM363 192v43h-43v-43h43z
 M363 299v42h-43v-42h43zM85 427h150v-43h-150v-384q-17 0 -29.5 12.5t-12.5 30.5v341q0 18 12.5 30.5t29.5 12.5z" />
+    <glyph glyph-name="snapshot_rollback" unicode="snapshot_rollback" 
+d="M85 405h86v-42h-86v-86h-42v86q0 17 12.5 29.5t29.5 12.5zM341 405h86q17 0 29.5 -12.5t12.5 -29.5v-86h-42v86h-86v42zM341 -21v42h86v86h42v-86q0 -17 -12.5 -29.5t-29.5 -12.5h-86zM85 21h86v-42h-86q-17 0 -29.5 12.5t-12.5 29.5v86h42v-86zM235 165v-47l-86 80
+l86 79v-45q104 -15 128 -125q-43 58 -128 58z" />
     <glyph glyph-name="software" unicode="software" 
 d="M299 57v-36h42v-42h-170v42h42v43h-149q-12 0 -21.5 5.5t-15.5 15.5t-6 22v256q0 17 12.5 29.5t30.5 12.5h384q18 0 30.5 -12.5t12.5 -29.5v-94q-17 27 -43 45v49h-384v-256h177q9 -14 26 -28.5t32 -21.5zM363 320q53 0 90.5 -37.5t37.5 -90.5t-37.5 -90.5t-90.5 -37.5
 t-90.5 37.5t-37.5 90.5t37.5 90.5t90.5 37.5zM362.5 160q13.5 0 23 9.5t9.5 22.5t-9.5 22.5t-23 9.5t-22.5 -9.5t-9 -22.5t9 -22.5t22.5 -9.5z" />
