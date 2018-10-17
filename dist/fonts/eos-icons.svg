@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Fri Oct 12 15:10:37 2018
- By Zvezdana Marjanovic
+Created by FontForge 20180321 at Wed Oct 17 14:59:24 2018
+ By cynthia sanchez
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Fri Oct 12 15:10:37 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F11C"
+    unicode-range="U+005F-F11D"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -99,6 +99,12 @@ d="M171 -43v86h106v-86l-53 32zM171 299v42h42v-42h-42zM171 192v43h42v-43h-42zM171
 h256q4 0 8 -1z" />
     <glyph glyph-name="resource" unicode="resource" 
 d="M427 235h21v-43h-43v-21q0 -31 -14 -60.5t-38.5 -52t-53.5 -30.5v-49h-86v49q-44 13 -75 55t-31 88v21h-43v43h85v170h43v-170h128v170h43v-170h64z" />
+    <glyph glyph-name="route" unicode="route" 
+d="M107 128q-2 -2 -11 -2q-10 0 -15.5 6t-5.5 15.5t5.5 15.5t15.5 6q2 -1 5.5 -2.5t5.5 -2.5q10 -7 10 -19q0 -10 -10 -17zM139 169l-5 4q5 0 5 -4zM141 166l-2 3zM427 363q0 9 6 15t15 6t15 -6t6 -15t-6 -15.5t-15 -6.5t-15 6.5t-6 15.5zM299 341v43h42v-43h-42zM363 341
+v43h42v-43h-42zM147 154l2 -5q-2 2 -2 5zM107 45l-13 -13q-20 30 -28.5 43t-16.5 32.5t-8 33.5v10q4 23 22.5 35.5t41.5 7.5q2 0 4.5 -1t3.5 -1q10 -3 15 -9l6 -6q1 -1 2.5 -3t2.5 -3l2 -2q8 -12 8 -28v-4v-9q0 -2 -6 -21q-15 -30 -36 -62zM75 147q0 -9 6.5 -15t15 -6
+t10.5 2q10 4 10 17q0 12 -10 19q-9 5 -11 5q-10 0 -15.5 -6t-5.5 -16zM147 149q2 -4 2 -10q-2 4 -2 10zM141 166l-2 3zM149 139zM145 160l2 -4q-2 0 -2 4zM134 175zM137 173l4 -4zM143 164l2 -4q-2 2 -2 4zM418 186q27 -21 43 -52q8 -17 8 -44q0 -47 -33 -79t-80 -32h-260
+q-10 0 -15.5 5.5t-5.5 15.5t5.5 15.5t15.5 5.5h260q29 -1 50 19.5t21 49.5q0 15 -7 27q-5 12 -15 21t-22.5 14.5t-26.5 5.5h-102q-9 0 -30 4q-21 9 -32 15q-30 20 -43 49q-19 43 -2 86.5t60 62.5q20 9 47 9h23v-43h-23q-29 0 -50 -20.5t-21 -49.5q0 -13 7 -26q5 -12 15 -22
+t22.5 -15t26.5 -5h102q11 0 32 -5q18 -3 30 -12z" />
     <glyph glyph-name="smt" unicode="smt" 
 d="M128 -43v86h107v-86l-54 32zM128 299v42h43v-42h-43zM128 192v43h43v-43h-43zM128 85v43h43v-43h-43zM434 427q15 -3 25 -15.5t10 -26.5v-1v-341q0 -18 -12.5 -30.5t-29.5 -12.5h-64v-43l-54 32l-53 -32v470h171h3.5h3.5zM363 85v43h-43v-43h43zM363 192v43h-43v-43h43z
 M363 299v42h-43v-42h43zM85 427h150v-43h-150v-384q-17 0 -29.5 12.5t-12.5 30.5v341q0 18 12.5 30.5t29.5 12.5z" />
