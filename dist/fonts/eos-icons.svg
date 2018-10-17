@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Fri Oct 12 15:10:37 2018
- By Zvezdana Marjanovic
+Created by FontForge 20180321 at Wed Oct 17 14:58:25 2018
+ By cynthia sanchez
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Fri Oct 12 15:10:37 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F11C"
+    unicode-range="U+005F-F11D"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -99,6 +99,8 @@ d="M171 -43v86h106v-86l-53 32zM171 299v42h42v-42h-42zM171 192v43h42v-43h-42zM171
 h256q4 0 8 -1z" />
     <glyph glyph-name="resource" unicode="resource" 
 d="M427 235h21v-43h-43v-21q0 -31 -14 -60.5t-38.5 -52t-53.5 -30.5v-49h-86v49q-44 13 -75 55t-31 88v21h-43v43h85v170h43v-170h128v170h43v-170h64z" />
+    <glyph glyph-name="service" unicode="service" 
+d="M42 364q0 31 5.5 36.5t36.5 5.5h344q31 0 36.5 -5.5t5.5 -36.5v-344q0 -31 -5.5 -36.5t-36.5 -5.5h-344q-31 0 -36.5 5.5t-5.5 36.5v344z" />
     <glyph glyph-name="smt" unicode="smt" 
 d="M128 -43v86h107v-86l-54 32zM128 299v42h43v-42h-43zM128 192v43h43v-43h-43zM128 85v43h43v-43h-43zM434 427q15 -3 25 -15.5t10 -26.5v-1v-341q0 -18 -12.5 -30.5t-29.5 -12.5h-64v-43l-54 32l-53 -32v470h171h3.5h3.5zM363 85v43h-43v-43h43zM363 192v43h-43v-43h43z
 M363 299v42h-43v-42h43zM85 427h150v-43h-150v-384q-17 0 -29.5 12.5t-12.5 30.5v341q0 18 12.5 30.5t29.5 12.5z" />
