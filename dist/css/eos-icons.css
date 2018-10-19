@@ -8,12 +8,12 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 
 @font-face {
   font-family: "eos-icons";
-  src: url("../fonts/eos-icons.eot?3e707e5378a537c5a2a65a98386bb5bd");
-  src: url("../fonts/eos-icons.eot?3e707e5378a537c5a2a65a98386bb5bd#iefix") format("embedded-opentype"),
-		url("../fonts/eos-icons.woff2?3e707e5378a537c5a2a65a98386bb5bd") format("woff2"),
-		url("../fonts/eos-icons.woff?3e707e5378a537c5a2a65a98386bb5bd") format("woff"),
-		url("../fonts/eos-icons.ttf?3e707e5378a537c5a2a65a98386bb5bd") format("truetype"),
-		url("../fonts/eos-icons.svg?3e707e5378a537c5a2a65a98386bb5bd#eos-icons") format("svg");
+  src: url("../fonts/eos-icons.eot?f21a3eec05d28cdc4a24b064575a518f");
+  src: url("../fonts/eos-icons.eot?f21a3eec05d28cdc4a24b064575a518f#iefix") format("embedded-opentype"),
+		url("../fonts/eos-icons.woff2?f21a3eec05d28cdc4a24b064575a518f") format("woff2"),
+		url("../fonts/eos-icons.woff?f21a3eec05d28cdc4a24b064575a518f") format("woff"),
+		url("../fonts/eos-icons.ttf?f21a3eec05d28cdc4a24b064575a518f") format("truetype"),
+		url("../fonts/eos-icons.svg?f21a3eec05d28cdc4a24b064575a518f#eos-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
