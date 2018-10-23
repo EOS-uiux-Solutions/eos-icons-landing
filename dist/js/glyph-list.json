@@ -2,5 +2,9 @@
    "fontname": "eos-icons",
    "repositoryUrl": "https://gitlab.com/SUSE-UIUX/eos-icons",
    "baseClass": "eos-icons",
+<<<<<<< HEAD
    "glyphs": ["action_chains","activate_subscriptions","admin","application_instance","application_state","autoinstallation","background_tasks","bootstrapping","cloud_foundry_space","collocation","constraint","counting","endpoints_connected","endpoints_disconnected","endpoints","file_system","image","miscellaneous","modified_date","multistate","network_file_system","organization","packages","primitive","product_subscriptions","products_classes","products","ptf","repositories","resource","service_instance","service_plan","service","smt","snapshot_rollback","software","system_re_registered","troubleshooting"]
+=======
+   "glyphs": ["action_chains","activate_subscriptions","admin","application_instance","application_state","autoinstallation","background_tasks","bootstrapping","cloud_foundry_space","collocation","constraint","csv_file","endpoints_connected","endpoints_disconnected","endpoints","file_system","image","miscellaneous","modified_date","multistate","network_file_system","organization","packages","primitive","product_subscriptions","products_classes","products","ptf","repositories","resource","route","service_instance","service_plan","service","smt","snapshot_rollback","software","system_re_registered","troubleshooting"]
+>>>>>>> 952655d13f495fe845e6e21e27549a6242b44ff5
 }
