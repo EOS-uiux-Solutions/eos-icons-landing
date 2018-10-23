@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Tue Oct 23 14:29:49 2018
+Created by FontForge 20180321 at Tue Oct 23 17:18:52 2018
  By cynthia sanchez
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20180321 at Tue Oct 23 14:29:49 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F127"
+    unicode-range="U+005F-F128"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -60,6 +60,10 @@ t-28.5 8z" />
     <glyph glyph-name="constraint" unicode="constraint" 
 d="M470 342l-427 -2v43l427 1v-42zM470 256l-427 -1v43l427 1v-43zM278 171l-235 -1v42l235 2v-43zM278 86l-235 -2v43l235 1v-42zM278 0l-235 -1v43l235 1v-43zM448 128q8 -1 14.5 -7t6.5 -14v-86q0 -5 -3 -10t-8 -8t-10 -3h-107q-8 1 -14 7t-7 14v86q1 8 7 14t14 7v32
 q0 22 16 37.5t38 15.5t37.5 -15.5t15.5 -37.5v-32zM427 128v32q0 13 -9.5 22.5t-23 9.5t-22.5 -9.5t-9 -22.5v-32h64z" />
+    <glyph glyph-name="counting" unicode="counting" 
+d="M0 -43v64h512v-64h-512zM42 21v384h43v-384h-43zM85 342h342v-43h-342v43zM85 235h342v-43h-342v43zM85 129h342v-43h-342v43zM427 21v384h42v-384h-42zM107 320.5q0 17.5 12.5 30t29.5 12.5q12 0 21.5 -6t15.5 -15.5t6 -21.5q0 -17 -12.5 -29.5t-30 -12.5t-30 12.5
+t-12.5 30zM341 213.5q0 17.5 12.5 30t30 12.5t30 -12.5t12.5 -30t-12.5 -30t-30 -12.5t-30 12.5t-12.5 30zM234 213.5q0 17.5 12.5 30t30.5 12.5q12 0 21.5 -5.5t15.5 -15.5t6 -21q0 -18 -12.5 -30.5t-30.5 -12.5t-30.5 12.5t-12.5 30zM149 106.5q0 17.5 12.5 30t30 12.5
+t30 -12.5t12.5 -30t-12.5 -30t-30 -12.5t-30 12.5t-12.5 30z" />
     <glyph glyph-name="csv_file" unicode="csv_file" 
 d="M341 20l43 1v-42h-299q-17 0 -29.5 12.5t-12.5 29.5v342q0 17 12.5 29.5t29.5 12.5h171l43 -42l42 -43l43 -43v-42h-43v21h-106v107h-150v-343h256zM454 64h-32l-38 128h32l22 -73l21 73h32zM213 192q9 0 15.5 -6.5t6.5 -14.5v-22h-32v11h-43v-64h43v11h32v-22
 q0 -8 -6.5 -14.5t-15.5 -6.5h-64q-8 0 -14.5 6.5t-6.5 14.5v86q0 8 6.5 14.5t14.5 6.5h64zM363 160h-75v-16h53q9 0 15.5 -6.5t6.5 -15.5v-37q0 -8 -6.5 -14.5t-15.5 -6.5h-85v32h75v16h-54q-8 0 -14.5 6t-6.5 15v38q0 8 6.5 14.5t14.5 6.5h86v-32z" />
