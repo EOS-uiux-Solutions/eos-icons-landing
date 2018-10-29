@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Tue Oct 30 12:47:47 2018
- By Zvezdana Marjanovic
+Created by FontForge 20180321 at Tue Oct 30 15:15:58 2018
+ By Jesús Herman Marina
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Tue Oct 30 12:47:47 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F12A"
+    unicode-range="U+005F-F12B"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -146,6 +146,9 @@ d="M299 57v-36h42v-42h-170v42h42v43h-149q-12 0 -21.5 5.5t-15.5 15.5t-6 22v256q0 
 t-90.5 37.5t-37.5 90.5t37.5 90.5t90.5 37.5zM362.5 160q13.5 0 23 9.5t9.5 22.5t-9.5 22.5t-23 9.5t-22.5 -9.5t-9 -22.5t9 -22.5t22.5 -9.5z" />
     <glyph glyph-name="state" unicode="state" 
 d="M213 320h107v-256h-107v256zM299 171v128h-64v-128h64zM405 427q9 0 17 -3.5t13.5 -9.5t9 -13.5t3.5 -16.5v-384q0 -18 -12.5 -30.5t-30.5 -12.5h-278q-18 0 -30.5 12.5t-12.5 30.5v384q0 18 12.5 30.5t30.5 12.5h278zM405 0v384h-277v-384h277z" />
+    <glyph glyph-name="subscriptions_created" unicode="subscriptions_created" 
+d="M86 277v43h341v-43h-341zM128 362v43h256v-43h-256zM427 235q8 0 16 -3.5t14 -9.5t9 -13.5t3 -16.5v-171q0 -17 -12.5 -29.5t-29.5 -12.5h-342q-17 0 -29.5 12.5t-12.5 29.5v171q0 5 1 10t3 9t5 7.5t6.5 6.5t8 5t9 3.5t9.5 1.5h342zM220 21l143 142l-30 30l-113 -113
+l-41 40l-30 -30z" />
     <glyph glyph-name="system_group" unicode="system_group" 
 d="M363 427v-43h-299v-192h-43v192q0 18 12.5 30.5t30.5 12.5h299zM448 341q18 0 30.5 -12.5t12.5 -29.5v-214q0 -17 -12.5 -29.5t-30.5 -12.5h-118v-33h33v-31h-128v31h32v33h-118q-17 0 -29.5 12.5t-12.5 29.5v214q0 17 12.5 29.5t29.5 12.5h299zM448 85v214h-299v-214
 h299z" />
