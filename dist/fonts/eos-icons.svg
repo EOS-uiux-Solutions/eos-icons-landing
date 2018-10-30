@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Thu Oct 25 20:46:12 2018
+Created by FontForge 20170925 at Tue Oct 30 12:47:47 2018
  By Zvezdana Marjanovic
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Thu Oct 25 20:46:12 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F129"
+    unicode-range="U+005F-F12A"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -156,6 +156,9 @@ h149z" />
 d="M491 213h21v-42h-43q-7 -73 -62.5 -129t-128.5 -63v-43h-42v42q-73 7 -129 63t-63 129h-44v42h44q7 72 63 128.5t128 63.5v44h42v-44q73 -7 129 -63t63 -128h22zM293 213h51q-6 22 -25.5 41.5t-41.5 25.5v-51q10 -6 16 -16zM344 171h-51q-6 -10 -16 -16v-51
 q22 6 41.5 25.5t25.5 41.5zM235 361q-55 -7 -98 -50t-50 -98h48q7 35 36 64t64 36v48zM219 213q6 10 16 16v51q-22 -6 -41.5 -25.5t-25.5 -41.5h51zM235 155q-10 6 -16 16h-51q6 -22 25.5 -41.5t41.5 -25.5v51zM87 171q4 -36 25.5 -68.5t54 -54t68.5 -25.5v48q-35 7 -64 36
 t-36 64h-48zM277 23q36 4 68.5 25.5t54 54t25.5 68.5h-48q-7 -35 -36 -64t-64 -36v-48zM377 213h48q-7 55 -50 98t-98 50v-48q35 -7 64 -36t36 -64z" />
+    <glyph glyph-name="trusted_organization" unicode="trusted_organization" 
+d="M405 256q0 -32 -18.5 -67.5t-45.5 -54.5l64 -113l-45 -7l-29 -35l-75 128l-75 -128l-29 35l-45 7l65 113q-18 12 -33 32.5t-23.5 45t-8.5 45.5q0 62 43.5 105.5t105.5 43.5t105.5 -43.5t43.5 -105.5v-1zM282 153q20 5 37 18q18 13 31 38t13 48q0 44 -31.5 75.5
+t-75.5 31.5t-75.5 -31.5t-31.5 -75.5q0 -23 13 -48t31 -38q17 -13 37 -18q13 -4 26 -4t26 4zM192 255.5q0 26.5 18.5 45.5t45.5 19q17 0 32 -8.5t23.5 -23.5t8.5 -32q0 -27 -18.5 -45.5t-45.5 -18.5t-45.5 18.5t-18.5 45z" />
     <glyph glyph-name=".notdef" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
     <glyph glyph-name=".null" horiz-adv-x="0" 
