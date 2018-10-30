@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Tue Oct 30 17:31:47 2018
+Created by FontForge 20170925 at Tue Oct 30 17:53:12 2018
  By Zvezdana Marjanovic
 </metadata>
 <defs>
@@ -97,7 +97,7 @@ zM203 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5
     <glyph glyph-name="packages" unicode="packages" 
 d="M428 320v-43h-267h-75v43h342zM384 405v-43h-200h-56v43h256zM43 235h426v-43h-42v-171q0 -17 -12.5 -29.5t-30.5 -12.5h-256q-18 0 -30.5 12.5t-12.5 29.5v171h-42v43zM235 43v42h-107v-42h107z" />
     <glyph glyph-name="pin" unicode="pin" 
-d="M390 239l30 -30l-75 -76l90 -90l-31 -30l-90 90l-75 -75l-30 30v60l-121 121l-15 -15l-31 30l151 151l31 -30l-16 -15l122 -121h60z" />
+d="M390 239l30 -30l-75 -76l101 -101l-30 -31l-102 102l-75 -75l-30 30v60l-121 121l-15 -15l-31 30l151 151l31 -30l-16 -15l122 -121h60z" />
     <glyph glyph-name="primitive" unicode="primitive" 
 d="M209 192q0 19 14 33t33 14t33 -14t14 -33t-14 -33t-33 -14t-33 14t-14 33zM461 311q13 -23 3 -54t-40 -65q30 -34 40 -65t-3 -54q-18 -32 -74 -32h-1q-13 0 -27 2q-7 1 -20 3q-14 -41 -36 -65t-47 -24t-47 24t-36 66q-24 -5 -47 -6q-57 0 -75 32q-13 23 -3 54t40 65
 q-63 72 -37 119q25 45 122 26q14 42 36 66t47 24t47 -24t36 -65q18 3 20 3q79 10 102 -30zM363 317q-8 -1 -16 -4q8 -31 12 -63q26 -19 49 -41q15 18 24.5 35t11.5 30.5t-3 22.5q-12 22 -54 22q-12 0 -24 -2zM297 121q20 12 39 25q2 22 2 44v2v2q0 22 -2 44q-19 13 -39 24
