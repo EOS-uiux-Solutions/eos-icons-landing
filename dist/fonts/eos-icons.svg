@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Tue Oct 30 17:53:12 2018
+Created by FontForge 20170925 at Thu Nov  1 14:17:39 2018
  By Zvezdana Marjanovic
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Tue Oct 30 17:53:12 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F12B"
+    unicode-range="U+005F-F12C"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -65,6 +65,8 @@ t30 -12.5t12.5 -30t-12.5 -30t-30 -12.5t-30 12.5t-12.5 30z" />
     <glyph glyph-name="csv_file" unicode="csv_file" 
 d="M341 20l43 1v-42h-299q-17 0 -29.5 12.5t-12.5 29.5v342q0 17 12.5 29.5t29.5 12.5h171l43 -42l42 -43l43 -43v-42h-43v21h-106v107h-150v-343h256zM454 64h-32l-38 128h32l22 -73l21 73h32zM213 192q9 0 15.5 -6.5t6.5 -14.5v-22h-32v11h-43v-64h43v11h32v-22
 q0 -8 -6.5 -14.5t-15.5 -6.5h-64q-8 0 -14.5 6.5t-6.5 14.5v86q0 8 6.5 14.5t14.5 6.5h64zM363 160h-75v-16h53q9 0 15.5 -6.5t6.5 -15.5v-37q0 -8 -6.5 -14.5t-15.5 -6.5h-85v32h75v16h-54q-8 0 -14.5 6t-6.5 15v38q0 8 6.5 14.5t14.5 6.5h86v-32z" />
+    <glyph glyph-name="drag_drop" unicode="drag_drop" 
+d="M470 192l-86 -86v64h-106v-106h64l-86 -86l-85 86h64v106h-107v-64l-85 86l85 85v-64h107v107h-64l85 85l86 -85h-64v-107h106v64z" />
     <glyph glyph-name="endpoints_connected" unicode="endpoints_connected" 
 d="M470 170h-278v-106h21v-85h-85v85h21v106h-85v43h256v107h-21v85h85v-85h-21v-107h107v-43z" />
     <glyph glyph-name="endpoints_disconnected" unicode="endpoints_disconnected" 
