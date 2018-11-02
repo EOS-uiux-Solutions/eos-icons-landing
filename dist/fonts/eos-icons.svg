@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170925 at Fri Nov  2 13:50:03 2018
- By Zvezdana Marjanovic
+Created by FontForge 20180321 at Fri Nov  2 18:27:21 2018
+ By cynthia sanchez
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20170925 at Fri Nov  2 13:50:03 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F12D"
+    unicode-range="U+005F-F12E"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -96,6 +96,8 @@ d="M341 85v-21h128v-43h-128v-21h-170v21h-128v43h128v21h64v86h42v-86h64zM320 171h
     <glyph glyph-name="organization" unicode="organization" 
 d="M427 214h11v-86h-43v43h-117v-43h-43v43h-118v-43h-43v86h12h31h118v42h43v-42h117h32zM203 352q0 22 15.5 37.5t37.5 15.5t38 -15.5t16 -37.5t-16 -38t-38 -16t-37.5 16t-15.5 38zM42 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5
 zM203 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5zM363 32q0 22 15.5 38t37.5 16t38 -16t16 -38t-16 -37.5t-38 -15.5t-37.5 15.5t-15.5 37.5z" />
+    <glyph glyph-name="package_upgrade" unicode="package_upgrade" 
+d="M379 144l-144 -144h-107q-18 0 -30.5 12.5t-12.5 30.5v234h-42v43h426v-43h-42v-181zM128 107v-43h107v43h-107zM470 10l-31 -30l-60 60l-60 -60l-31 30l91 90l30 -30z" />
     <glyph glyph-name="package" unicode="package" 
 d="M43 320h426v-43h-42v-234q0 -12 -6 -22t-15.5 -15.5t-21.5 -5.5h-256q-18 0 -30.5 12.5t-12.5 30.5v234h-42v43zM235 64v43h-107v-43h107z" />
     <glyph glyph-name="packages" unicode="packages" 
