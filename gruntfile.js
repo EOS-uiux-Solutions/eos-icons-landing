@@ -70,14 +70,15 @@ module.exports = function(grunt) {
 
   grunt.registerTask('addanimated', function (key, value) {
     var projectFile = "./dist/js/glyph-list.json";
+    // get file as json object
+    var project = grunt.file.readJSON(projectFile);
+    var animatedIconsArray = ['loading', 'installing'];
 
-    var project = grunt.file.readJSON(projectFile);//get file as json object
+    //edit the value of json object
+    project.animatedIcons = animatedIconsArray;
 
-    var glyphList = project.glyphs;
-
-    project.glyphs = glyphList + ',' + 'loading' + ',' + 'installing'; //edit the value of json object
-
-    grunt.file.write(projectFile, JSON.stringify(project, null, 2));//serialize it back to file
+    //serialize it back to file
+    grunt.file.write(projectFile, JSON.stringify(project, null,2));
 
   });
 
