@@ -1,9 +1,23 @@
 stages:
-  - deploy
+  - deploy-wip
+  - deploy-production
   - publish
 
 pages:
-  stage: deploy
+  stage: deploy-wip
+  script:
+    - mkdir .public/wip
+    - cp -r dist/css dist/index.html dist/fonts dist/images/ .public/wip
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only:
+    - test-demo-deployment
+    - WIP-cherry
+
+pages:
+  stage: deploy-production
   script:
     - mkdir .public
     - cp -r dist/css dist/index.html dist/fonts dist/images/ .public
@@ -12,7 +26,6 @@ pages:
     paths:
       - public
   only:
-    - WIP-cherry
     - master
 
 npm-publish:
