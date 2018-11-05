@@ -59,11 +59,33 @@ module.exports = function(grunt) {
     }
   });
 
+  /**
+   * Add animated icons objects in the exported collection
+   *
+   * Since we only have 2 animated icons, we will manually add the animated icons
+   * to the glyph list json
+   *
+   * This will allow us to consume them in EOS
+   */
+
+  grunt.registerTask('addanimated', function (key, value) {
+    var projectFile = "./dist/js/glyph-list.json";
+
+    var project = grunt.file.readJSON(projectFile);//get file as json object
+
+    var glyphList = project.glyphs;
+
+    project.glyphs = glyphList + ',' + 'loading' + ',' + 'installing'; //edit the value of json object
+
+    grunt.file.write(projectFile, JSON.stringify(project, null, 2));//serialize it back to file
+
+  });
+
   grunt.loadNpmTasks('grunt-webfont');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', ['sass','concat', 'webfont','copy']);
+  grunt.registerTask('default', ['sass','concat','webfont','copy','addanimated']);
 
 };
