@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Mon Nov  5 23:24:02 2018
- By Jesús Herman Marina
+Created by FontForge 20180321 at Tue Nov  6 12:10:00 2018
+ By cynthia sanchez
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20180321 at Mon Nov  5 23:24:02 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F130"
+    unicode-range="U+005F-F131"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -196,8 +196,9 @@ t-24.5 10.5h-1q-10 0 -18 -5q-2 7 -8 11.5t-13 4.5h-1q-11 0 -17 -9l37 61q3 11 15 1
     <glyph glyph-name="service_instance" unicode="service_instance" 
 d="M428 405h1q17 0 29.5 -12.5t12.5 -29.5v-344q0 -17 -12.5 -29.5t-29.5 -12.5h-344q-17 0 -29.5 12.5t-12.5 29.5v344q0 17 12.5 29.5t29.5 12.5h343zM256 138q22 1 37.5 16.5t16.5 37.5q0 22 -16 38t-38 16t-38 -16t-16 -38t16 -38t38 -16z" />
     <glyph glyph-name="service_plan" unicode="service_plan" 
-d="M428 405h1q17 0 29.5 -12.5t12.5 -29.5v-344q0 -17 -12.5 -29.5t-29.5 -12.5h-344q-17 0 -29.5 12.5t-12.5 29.5v344q0 17 12.5 29.5t29.5 12.5h343zM171 21v342h-86v-342h86zM352 21v43h-149v-43h149zM437 107v42h-234v-42h234zM437 213v43h-234v-43h234zM437 320v43
-h-234v-43h234zM106 64q0 9 6.5 15t15 6t15 -6t6.5 -15t-6.5 -15t-15 -6t-15 6t-6.5 15zM106 128v213h43v-213h-43z" />
+d="M128 107q18 0 30.5 -12.5t12.5 -30.5t-12.5 -30.5t-30.5 -12.5t-30.5 12.5t-12.5 30.5t12.5 30.5t30.5 12.5zM128 43q9 0 15 6t6 15t-6 15t-15 6t-15 -6t-6 -15t6 -15t15 -6zM86 170v192h85v-192h-85zM469 427q9 0 15.5 -6.5t6.5 -15.5v-426q0 -9 -6.5 -15.5t-15.5 -6.5
+h-426q-9 0 -15.5 6.5t-6.5 15.5v426q0 9 6.5 15.5t15.5 6.5h426zM192 21v342q0 8 -6.5 14.5t-14.5 6.5h-86q-8 0 -14.5 -6.5t-6.5 -14.5v-342q0 -8 6.5 -14.5t14.5 -6.5h86q8 0 14.5 6.5t6.5 14.5zM405 21v43h-170v-43h170zM448 128v43h-213v-43h213zM448 235v42h-213v-42
+h213zM448 341v43h-213v-43h213z" />
     <glyph glyph-name="service" unicode="service" 
 d="M42 364q0 31 5.5 36.5t36.5 5.5h344q31 0 36.5 -5.5t5.5 -36.5v-344q0 -31 -5.5 -36.5t-36.5 -5.5h-344q-31 0 -36.5 5.5t-5.5 36.5v344z" />
     <glyph glyph-name="smt" unicode="smt" 
@@ -229,6 +230,10 @@ t-36 64h-48zM277 23q36 4 68.5 25.5t54 54t25.5 68.5h-48q-7 -35 -36 -64t-64 -36v-4
     <glyph glyph-name="trusted_organization" unicode="trusted_organization" 
 d="M405 256q0 -32 -18.5 -67.5t-45.5 -54.5l64 -113l-45 -7l-29 -35l-75 128l-75 -128l-29 35l-45 7l65 113q-18 12 -33 32.5t-23.5 45t-8.5 45.5q0 62 43.5 105.5t105.5 43.5t105.5 -43.5t43.5 -105.5v-1zM282 153q20 5 37 18q18 13 31 38t13 48q0 44 -31.5 75.5
 t-75.5 31.5t-75.5 -31.5t-31.5 -75.5q0 -23 13 -48t31 -38q17 -13 37 -18q13 -4 26 -4t26 4zM192 255.5q0 26.5 18.5 45.5t45.5 19q17 0 32 -8.5t23.5 -23.5t8.5 -32q0 -27 -18.5 -45.5t-45.5 -18.5t-45.5 18.5t-18.5 45z" />
+    <glyph glyph-name="virtual_host_manager" unicode="virtual_host_manager" 
+d="M439 43q13 -1 22 -10t9 -22q0 -14 -9 -23t-23 -9h-1q-9 0 -18 6t-12 15h-302q-3 -9 -12 -15t-18 -6q-13 0 -22.5 9.5t-9.5 22.5q0 6 3 12t7.5 11t10.5 7v285q-6 4 -10.5 10t-7.5 13t-3 14q0 18 12.5 30.5t30.5 12.5q15 0 27 -10.5t15 -24.5l177 -32q5 10 16 16.5t22 6.5
+q17 0 29.5 -12t12.5 -30q0 -21 -16 -33zM126 349l51 -61q18 11 39 11q7 0 15.5 -2t16 -5.5t14 -8.5t11.5 -10l32 27q-4 9 -5 18zM216 149l-14 2l-90 -113l145 41q-1 6 -1 11q0 16 9 29l-29 34q-9 -4 -20 -4zM266 58l-130 -37h263l-50 35q-6 -8 -18 -13.5t-22 -5.5v0
+q-11 0 -23.5 6.5t-19.5 14.5zM349 277h-3.5h-2.5q-13 1 -23 7l-35 -29q7 -14 7 -30t-10 -34.5t-24 -27.5l23 -28q13 9 29 9q22 0 38 -15.5t16 -37.5q-1 -8 -3 -15l57 -40zM113 330q-12 -10 -28 -10v-280h2l93 120q-16 8 -27 27t-11 38q0 28 19 49z" />
     <glyph glyph-name=".notdef" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
     <glyph glyph-name=".null" horiz-adv-x="0" 
