@@ -14,7 +14,6 @@ deploy_wip:
     - gem install dpl
     - dpl --provider=heroku --app=eos-icons --api-key=$HEROKU_DEMO_PAGE_KEY
   only:
-    - ops/deploy-dual-demo-pages
     - WIP-cherry
 
 pages:
@@ -23,12 +22,13 @@ pages:
     - mkdir .public
     - cp -r dist/css dist/index.html dist/fonts dist/images/ .public
     - mv .public public
+  environment:
+    name: production
   artifacts:
     paths:
       - public
   only:
     - master
-    - ops/deploy-dual-demo-pages
 
 npm-publish:
   image: node:8
