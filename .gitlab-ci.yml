@@ -2,6 +2,21 @@ stages:
   - deploy
   - publish
 
+deploy_wip:
+  stage: deploy
+  image: ruby:latest
+  environment:
+    name: development
+    url: https://eos-icons.herokuapp.com/
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=eos-icons --api-key=$HEROKU_DEMO_PAGE_KEY
+  only:
+    - ops/deploy-dual-demo-pages
+    - WIP-cherry
+
 pages:
   stage: deploy
   script:
@@ -12,8 +27,8 @@ pages:
     paths:
       - public
   only:
-    - WIP-cherry
     - master
+    - ops/deploy-dual-demo-pages
 
 npm-publish:
   image: node:8
