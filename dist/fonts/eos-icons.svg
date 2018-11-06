@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Tue Nov  6 12:12:41 2018
- By cynthia sanchez
+Created by FontForge 20180321 at Tue Nov  6 11:32:41 2018
+ By admin
 </metadata>
 <defs>
 <font id="eos-icons" horiz-adv-x="512" >
@@ -18,7 +18,7 @@ Created by FontForge 20180321 at Tue Nov  6 12:12:41 2018
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F132"
+    unicode-range="U+005F-F133"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -45,6 +45,8 @@ t12.5 -30.5v-202q0 -18 -12.5 -30.5t-30.5 -12.5h-117v-32h32v-32h-128v31h33v33h-11
     <glyph glyph-name="bootstrapping" unicode="bootstrapping" 
 d="M64 -64v43h384v-43h-384zM256 192q52 0 91 -10.5t59 -27.5t32.5 -37.5t14.5 -41t1.5 -37.5t-3.5 -28l-3 -10h-384q-1 4 -3 11t-3.5 27t1 38t14.5 40t32.5 38t59.5 27t91 11zM64 448h384l-21 -278q-40 54 -171 54q-70 0 -110 -13.5t-61 -39.5zM149 384v-43h214v43h-214z
 M384 256v43h-256v-43h256z" />
+    <glyph glyph-name="cleanup_stale_evaluation" unicode="cleanup_stale_evaluation" 
+d="M427 128v-43h-342v43h107q0 18 12.5 30.5t30.5 12.5l87 234l37 -13l-82 -221q18 0 30.5 -12.5t12.5 -30.5h107zM427 64l42 -85h-42h-342h-42l42 85h342z" />
     <glyph glyph-name="cloud_foundry_space" unicode="cloud_foundry_space" 
 d="M256 405q88 0 150.5 -62.5t62.5 -150.5t-62.5 -150.5t-150.5 -62.5t-150.5 62.5t-62.5 150.5t62.5 150.5t150.5 62.5zM256 21q71 0 121 50t50 121t-50 121t-121 50t-121 -50t-50 -121t50 -121t121 -50zM170 256q0 9 6.5 15.5t15.5 6.5t15 -6.5t6 -15.5t-6 -15t-15 -6
 t-15.5 6t-6.5 15zM235 256q0 9 6 15.5t15 6.5t15 -6.5t6 -15.5t-6 -15t-15 -6t-15 6t-6 15zM235 320q0 9 6 15.5t15 6.5t15 -6.5t6 -15.5t-6 -15t-15 -6t-15 6t-6 15zM299 256q0 9 6 15.5t15 6.5t15.5 -6.5t6.5 -15.5t-6.5 -15t-15.5 -6t-15 6t-6 15zM170 192q0 9 6.5 15
