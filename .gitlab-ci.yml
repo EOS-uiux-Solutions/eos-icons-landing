@@ -1,10 +1,9 @@
 stages:
-  - deploy-wip
-  - deploy-production
+  - deploy
   - publish
 
-pages:
-  stage: deploy-wip
+deploy-wip:
+  stage: deploy
   script:
     - mkdir .public/wip
     - cp -r dist/css dist/index.html dist/fonts dist/images/ .public/wip
@@ -17,7 +16,7 @@ pages:
     - WIP-cherry
 
 pages:
-  stage: deploy-production
+  stage: deploy
   script:
     - mkdir .public
     - cp -r dist/css dist/index.html dist/fonts dist/images/ .public
