@@ -5,8 +5,8 @@ stages:
 deploy-wip:
   stage: deploy
   script:
-    - mkdir .public/wip
-    - cp -r dist/css dist/index.html dist/fonts dist/images/ .public/wip
+    - mkdir .public
+    - cp -r dist/css dist/index.html dist/fonts dist/images/ .public
     - mv .public public
   artifacts:
     paths:
