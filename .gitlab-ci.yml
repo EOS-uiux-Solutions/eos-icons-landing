@@ -12,7 +12,7 @@ deploy-wip:
     paths:
       - public
   only:
-    - test-demo-deployment
+    - ops/deploy-dual-demo-pages
     - WIP-cherry
 
 pages:
