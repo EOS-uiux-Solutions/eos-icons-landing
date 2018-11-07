@@ -56,6 +56,16 @@ module.exports = function(grunt) {
         src: ['templates/css-webfont.css', 'templates/css-animated.css'],
         dest: 'templates/css-template.css',
       },
+    },
+    replace: {
+      replace_metadata: {
+        src: ['dist/fonts/eos-icons.svg'],
+        overwrite: true,
+        replacements: [{
+          from: /<metadata>(.|\n)*?<\/metadata>/,
+          to: "<metadata>Created by EOS Design System</metadata>"
+        }]
+      }
     }
   });
 
@@ -63,7 +73,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-text-replace');
 
-  grunt.registerTask('default', ['sass','concat', 'webfont','copy']);
+  grunt.registerTask('default', ['sass','concat', 'webfont','copy','replace']);
 
 };
