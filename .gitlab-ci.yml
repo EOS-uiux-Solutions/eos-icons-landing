@@ -2,17 +2,32 @@ stages:
   - deploy
   - publish
 
+deploy_wip:
+  stage: deploy
+  image: ruby:latest
+  environment:
+    name: development
+    url: https://eos-icons.herokuapp.com/
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=eos-icons --api-key=$HEROKU_DEMO_PAGE_KEY
+  only:
+    - WIP-cherry
+
 pages:
   stage: deploy
   script:
     - mkdir .public
     - cp -r dist/css dist/index.html dist/fonts dist/images/ .public
     - mv .public public
+  environment:
+    name: production
   artifacts:
     paths:
       - public
   only:
-    - WIP-cherry
     - master
 
 npm-publish:
