@@ -237,7 +237,7 @@ t-36 64h-48zM277 23q36 4 68.5 25.5t54 54t25.5 68.5h-48q-7 -35 -36 -64t-64 -36v-4
     <glyph glyph-name="trusted_organization" unicode="trusted_organization" 
 d="M405 256q0 -32 -18.5 -67.5t-45.5 -54.5l64 -113l-45 -7l-29 -35l-75 128l-75 -128l-29 35l-45 7l65 113q-18 12 -33 32.5t-23.5 45t-8.5 45.5q0 62 43.5 105.5t105.5 43.5t105.5 -43.5t43.5 -105.5v-1zM282 153q20 5 37 18q18 13 31 38t13 48q0 44 -31.5 75.5
 t-75.5 31.5t-75.5 -31.5t-31.5 -75.5q0 -23 13 -48t31 -38q17 -13 37 -18q13 -4 26 -4t26 4zM192 255.5q0 26.5 18.5 45.5t45.5 19q17 0 32 -8.5t23.5 -23.5t8.5 -32q0 -27 -18.5 -45.5t-45.5 -18.5t-45.5 18.5t-18.5 45z" />
-    <glyph glyph-name="unpache" unicode="unpache" 
+    <glyph glyph-name="unpached" unicode="unpached" 
 d="M448 405q18 0 30.5 -12.5t12.5 -29.5v-256q0 -12 -6 -22t-15.5 -15.5t-21.5 -5.5h-149v-43h42v-42h-170v42h42v43h-149q-12 0 -21.5 5.5t-15.5 15.5t-6 22v256q0 17 12.5 29.5t30.5 12.5h384zM448 107v256h-384v-256h384zM235 128v43h43v-43h-43zM235 214v128h43v-128
 h-43z" />
     <glyph glyph-name="virtual_host_manager" unicode="virtual_host_manager" 
