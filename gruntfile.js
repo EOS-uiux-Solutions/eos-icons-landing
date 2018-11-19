@@ -3,14 +3,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     webfont: {
-    	icons: {
-    		src: 'svg/*.svg',
-    		dest: 'dist/fonts',
-    		destCss: 'dist/css',
+      icons: {
+        src: 'svg/*.svg',
+        dest: 'dist/fonts',
+        destCss: 'dist/css',
         destScss: 'dist/scss',
         destLess: 'dist/less',
-    		options: {
-    			font: 'eos-icons',
+        options: {
+          font: 'eos-icons',
           syntax: 'bootstrap',
           version: '1.0.0',
           ligatures: true,
@@ -29,15 +29,46 @@ module.exports = function(grunt) {
           htmlDemoFilename: 'index',
           customOutputs: [{
             template: 'templates/glyph-list-template.json',
-				    dest: 'dist/js/glyph-list.json'
+            dest: 'dist/js/glyph-list.json'
           }]
-    		}
-    	}
+        }
+      },
+      iconsExtended: {
+        src: [ 'svg/*.svg', 'svg/extended/*.svg'],
+        dest: 'dist/extended/fonts',
+        destCss: 'dist/extended/css',
+        destScss: 'dist/extended/scss',
+        destLess: 'dist/extended/less',
+        options: {
+          font: 'eos-icons',
+          syntax: 'bootstrap',
+          version: '1.0.0',
+          ligatures: true,
+          normalize: false,
+          types: 'woff2,woff,ttf,svg,eot',
+          metadata: 'something here',
+          templateOptions: {
+            baseClass: "eos-icons",
+            classPrefix: "eos-",
+            template: 'templates/css-template.css',
+            iconsStyles: false
+          },
+          stylesheets: ['css'],
+          destHtml: 'dist/extended/',
+          htmlDemoTemplate: 'templates/index-template.html',
+          htmlDemoFilename: 'index',
+          customOutputs: [{
+            template: 'templates/glyph-list-template.json',
+            dest: 'dist/extended/js/glyph-list.json'
+          }]
+        }
+      }
     },
     copy: {
       logo: {
         files: [
-          { src: 'templates/logo.png', dest: 'dist/images/' }
+          { src: 'templates/logo.png', dest: 'dist/images/' },
+          { src: 'templates/logo.png', dest: 'dist/extended/images/' }
         ]
       }
     },
@@ -87,6 +118,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', ['sass','concat', 'webfont','copy','addanimated']);
-
+  grunt.registerTask('default', ['sass','concat', 'webfont','copy','addanimated'])
 };
