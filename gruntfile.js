@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         destScss: 'dist/extended/scss',
         destLess: 'dist/extended/less',
         options: {
-          font: 'eos-icons',
+          font: 'eos-icons-extended',
           syntax: 'bootstrap',
           version: '1.0.0',
           ligatures: true,
