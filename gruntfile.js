@@ -55,7 +55,7 @@ module.exports = function(grunt) {
           },
           stylesheets: ['css'],
           destHtml: 'dist/extended/',
-          htmlDemoTemplate: 'templates/index-template.html',
+          htmlDemoTemplate: 'templates/index-template-extended.html',
           htmlDemoFilename: 'index',
           customOutputs: [{
             template: 'templates/glyph-list-template.json',
