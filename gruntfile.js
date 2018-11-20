@@ -3,14 +3,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     webfont: {
-    	icons: {
-    		src: 'svg/*.svg',
-    		dest: 'dist/fonts',
-    		destCss: 'dist/css',
+      icons: {
+        src: 'svg/*.svg',
+        dest: 'dist/fonts',
+        destCss: 'dist/css',
         destScss: 'dist/scss',
         destLess: 'dist/less',
-    		options: {
-    			font: 'eos-icons',
+        options: {
+          font: 'eos-icons',
           syntax: 'bootstrap',
           version: '1.0.0',
           ligatures: true,
@@ -29,15 +29,46 @@ module.exports = function(grunt) {
           htmlDemoFilename: 'index',
           customOutputs: [{
             template: 'templates/glyph-list-template.json',
-				    dest: 'dist/js/glyph-list.json'
+            dest: 'dist/js/glyph-list.json'
           }]
-    		}
-    	}
+        }
+      },
+      iconsExtended: {
+        src: [ 'svg/*.svg', 'svg/extended/*.svg'],
+        dest: 'dist/extended/fonts',
+        destCss: 'dist/extended/css',
+        destScss: 'dist/extended/scss',
+        destLess: 'dist/extended/less',
+        options: {
+          font: 'eos-icons-extended',
+          syntax: 'bootstrap',
+          version: '1.0.0',
+          ligatures: true,
+          normalize: false,
+          types: 'woff2,woff,ttf,svg,eot',
+          metadata: 'something here',
+          templateOptions: {
+            baseClass: "eos-icons",
+            classPrefix: "eos-",
+            template: 'templates/css-template.css',
+            iconsStyles: false
+          },
+          stylesheets: ['css'],
+          destHtml: 'dist/extended/',
+          htmlDemoTemplate: 'templates/index-template-extended.html',
+          htmlDemoFilename: 'index',
+          customOutputs: [{
+            template: 'templates/glyph-list-template.json',
+            dest: 'dist/extended/js/glyph-list.json'
+          }]
+        }
+      }
     },
     copy: {
       logo: {
         files: [
-          { src: 'templates/logo.png', dest: 'dist/images/' }
+          { src: 'templates/logo.png', dest: 'dist/images/' },
+          { src: 'templates/logo.png', dest: 'dist/extended/images/' }
         ]
       }
     },
@@ -67,6 +98,29 @@ module.exports = function(grunt) {
         }]
       }
     }
+  });
+
+   /**
+   * Add animated icons objects in the exported collection
+   *
+   * Since we only have 2 animated icons, we will manually add the animated icons
+   * to the glyph list json
+   *
+   * This will allow us to consume them in EOS
+   */
+
+  grunt.registerTask('addanimated', function (key, value) {
+    var projectFile = "./dist/js/glyph-list.json";
+    // get file as json object
+    var project = grunt.file.readJSON(projectFile);
+    var animatedIconsArray = ['loading', 'installing'];
+
+    //edit the value of json object
+    project.animatedIcons = animatedIconsArray;
+
+    //serialize it back to file
+    grunt.file.write(projectFile, JSON.stringify(project, null,2));
+
   });
 
   grunt.loadNpmTasks('grunt-webfont');
