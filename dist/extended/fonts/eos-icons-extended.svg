@@ -1,11 +1,14 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-<metadata>Created by EOS Design System</metadata>
+<metadata>
+Created by FontForge 20180321 at Wed Nov 21 09:58:04 2018
+ By admin
+</metadata>
 <defs>
-<font id="eos-icons" horiz-adv-x="512" >
+<font id="eos-icons-extended" horiz-adv-x="512" >
   <font-face 
-    font-family="eos-icons"
+    font-family="eos-icons-extended"
     font-weight="400"
     font-stretch="normal"
     units-per-em="512"
@@ -15,7 +18,7 @@
     bbox="0 -64 512 448"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+005F-F13A"
+    unicode-range="U+0032-F13C"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -200,12 +203,18 @@ q8 0 14.5 -6.5t6.5 -14.5v-128q0 -9 -6.5 -15.5t-14.5 -6.5h-214q-8 0 -14.5 6.5t-6.
 d="M439 43q13 -1 22 -10t9 -22q0 -14 -9 -23t-23 -9h-1q-9 0 -18 6t-12 15h-302q-3 -9 -12 -15t-18 -6q-13 0 -22.5 9.5t-9.5 22.5q0 6 3 12t7.5 11t10.5 7v285q-6 4 -10.5 10t-7.5 13t-3 14q0 18 12.5 30.5t30.5 12.5q15 0 27 -10.5t15 -24.5l177 -32q5 10 16 16.5t22 6.5
 q17 0 29.5 -12t12.5 -30q0 -21 -16 -33zM126 349l51 -61q18 11 39 11q7 0 15.5 -2t16 -5.5t14 -8.5t11.5 -10l32 27q-4 9 -5 18zM216 149l-14 2l-90 -113l145 41q-1 6 -1 11q0 16 9 29l-29 34q-9 -4 -20 -4zM266 58l-130 -37h263l-50 35q-6 -8 -18 -13.5t-22 -5.5v0
 q-11 0 -23.5 6.5t-19.5 14.5zM349 277h-3.5h-2.5q-13 1 -23 7l-35 -29q7 -14 7 -30t-10 -34.5t-24 -27.5l23 -28q13 9 29 9q22 0 38 -15.5t16 -37.5q-1 -8 -3 -15l57 -40zM113 330q-12 -10 -28 -10v-280h2l93 120q-16 8 -27 27t-11 38q0 28 19 49z" />
+    <glyph glyph-name="test_2" unicode="test_&#x32;" 
+d="M0 -64v512h512v-512h-512zM140 262q0 29 21 49.5t50 20.5t49.5 -20.5t20.5 -49.5t-20.5 -49.5t-49.5 -20.5t-50 20.5t-21 49.5zM339 262q0 29 20.5 49.5t49.5 20.5t49.5 -20.5t20.5 -49.5t-20.5 -49.5t-49.5 -20.5t-49.5 20.5t-20.5 49.5z" />
+    <glyph glyph-name="test" unicode="test" 
+d="M0 -64v512h512v-512h-512z" />
     <glyph glyph-name=".notdef" 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
     <glyph glyph-name=".null" horiz-adv-x="0" 
  />
     <glyph glyph-name="nonmarkingreturn" 
  />
+    <glyph glyph-name="2" unicode="2" 
+d="M0 0z" />
     <glyph glyph-name="_" unicode="_" 
 d="M0 0z" />
     <glyph glyph-name="a" unicode="a" 
