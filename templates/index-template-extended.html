@@ -1,8 +1,9 @@
+
 <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>eos-icons demo page</title>
+		<title><%= fontFamilyName %> demo page</title>
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 		<style>
 			body {
@@ -128,14 +129,14 @@
 				font-size: 12px;
 			}
 		</style>
-		<link rel="stylesheet" type="text/css" href="css/eos-icons.css">
+		<link rel="stylesheet" type="text/css" href="css/eos-icons-extended.css">
 	</head>
 	<body>
 		<header class='eos-logo-color-gradients'>
 		  <div class='container two-columns'>
 		    <h1>
 				  <img src='images/templates/logo.png'/>
-				  <small class='version'>version 1.0.0</small>
+				  <% if (version) { %><small class='version'>version <%= version %></small><% } %>
 				</h1>
 				<div class='pull-right toolbar'>
 				  <span class='text-white'>Try different sizes: </span>
@@ -148,6 +149,7 @@
 		</header>
 		<div class='container icons-container'>
 			<div id="icons">
+<<<<<<< HEAD:dist/index.html
 				
 					<div class="icons__item" data-name="action_chains">
 					  <i class="eos-icons">action_chains</i>
@@ -173,18 +175,6 @@
 						application_incomplete
 					</div>
 				
-					<div class="icons__item" data-name="application_instance">
-					  <i class="eos-icons">application_instance</i>
-						<br>
-						application_instance
-					</div>
-				
-					<div class="icons__item" data-name="application">
-					  <i class="eos-icons">application</i>
-						<br>
-						application
-					</div>
-				
 					<div class="icons__item" data-name="autoinstallation">
 					  <i class="eos-icons">autoinstallation</i>
 						<br>
@@ -203,58 +193,16 @@
 						bootstrapping
 					</div>
 				
-					<div class="icons__item" data-name="cleanup">
-					  <i class="eos-icons">cleanup</i>
-						<br>
-						cleanup
-					</div>
-				
-					<div class="icons__item" data-name="cloud_foundry_space">
-					  <i class="eos-icons">cloud_foundry_space</i>
-						<br>
-						cloud_foundry_space
-					</div>
-				
 					<div class="icons__item" data-name="collocation">
 					  <i class="eos-icons">collocation</i>
 						<br>
 						collocation
 					</div>
 				
-					<div class="icons__item" data-name="configuration_file">
-					  <i class="eos-icons">configuration_file</i>
-						<br>
-						configuration_file
-					</div>
-				
 					<div class="icons__item" data-name="constraint">
 					  <i class="eos-icons">constraint</i>
 						<br>
 						constraint
-					</div>
-				
-					<div class="icons__item" data-name="counting">
-					  <i class="eos-icons">counting</i>
-						<br>
-						counting
-					</div>
-				
-					<div class="icons__item" data-name="critical_bug">
-					  <i class="eos-icons">critical_bug</i>
-						<br>
-						critical_bug
-					</div>
-				
-					<div class="icons__item" data-name="csv_file">
-					  <i class="eos-icons">csv_file</i>
-						<br>
-						csv_file
-					</div>
-				
-					<div class="icons__item" data-name="drag_drop">
-					  <i class="eos-icons">drag_drop</i>
-						<br>
-						drag_drop
 					</div>
 				
 					<div class="icons__item" data-name="endpoints_connected">
@@ -275,12 +223,6 @@
 						endpoints
 					</div>
 				
-					<div class="icons__item" data-name="enhancement">
-					  <i class="eos-icons">enhancement</i>
-						<br>
-						enhancement
-					</div>
-				
 					<div class="icons__item" data-name="file_system">
 					  <i class="eos-icons">file_system</i>
 						<br>
@@ -297,12 +239,6 @@
 					  <i class="eos-icons">miscellaneous</i>
 						<br>
 						miscellaneous
-					</div>
-				
-					<div class="icons__item" data-name="modified_date">
-					  <i class="eos-icons">modified_date</i>
-						<br>
-						modified_date
 					</div>
 				
 					<div class="icons__item" data-name="multistate">
@@ -323,28 +259,10 @@
 						organization
 					</div>
 				
-					<div class="icons__item" data-name="package_upgrade">
-					  <i class="eos-icons">package_upgrade</i>
-						<br>
-						package_upgrade
-					</div>
-				
-					<div class="icons__item" data-name="package">
-					  <i class="eos-icons">package</i>
-						<br>
-						package
-					</div>
-				
 					<div class="icons__item" data-name="packages">
 					  <i class="eos-icons">packages</i>
 						<br>
 						packages
-					</div>
-				
-					<div class="icons__item" data-name="pin">
-					  <i class="eos-icons">pin</i>
-						<br>
-						pin
 					</div>
 				
 					<div class="icons__item" data-name="primitive">
@@ -371,52 +289,16 @@
 						products
 					</div>
 				
-					<div class="icons__item" data-name="proxy">
-					  <i class="eos-icons">proxy</i>
-						<br>
-						proxy
-					</div>
-				
-					<div class="icons__item" data-name="ptf">
-					  <i class="eos-icons">ptf</i>
-						<br>
-						ptf
-					</div>
-				
 					<div class="icons__item" data-name="repositories">
 					  <i class="eos-icons">repositories</i>
 						<br>
 						repositories
 					</div>
 				
-					<div class="icons__item" data-name="route">
-					  <i class="eos-icons">route</i>
+					<div class="icons__item" data-name="resource">
+					  <i class="eos-icons">resource</i>
 						<br>
-						route
-					</div>
-				
-					<div class="icons__item" data-name="sandbox">
-					  <i class="eos-icons">sandbox</i>
-						<br>
-						sandbox
-					</div>
-				
-					<div class="icons__item" data-name="service_instance">
-					  <i class="eos-icons">service_instance</i>
-						<br>
-						service_instance
-					</div>
-				
-					<div class="icons__item" data-name="service_plan">
-					  <i class="eos-icons">service_plan</i>
-						<br>
-						service_plan
-					</div>
-				
-					<div class="icons__item" data-name="service">
-					  <i class="eos-icons">service</i>
-						<br>
-						service
+						resource
 					</div>
 				
 					<div class="icons__item" data-name="smt">
@@ -437,66 +319,18 @@
 						software
 					</div>
 				
-					<div class="icons__item" data-name="state">
-					  <i class="eos-icons">state</i>
-						<br>
-						state
-					</div>
-				
-					<div class="icons__item" data-name="subscriptions_created">
-					  <i class="eos-icons">subscriptions_created</i>
-						<br>
-						subscriptions_created
-					</div>
-				
-					<div class="icons__item" data-name="symlink">
-					  <i class="eos-icons">symlink</i>
-						<br>
-						symlink
-					</div>
-				
-					<div class="icons__item" data-name="system_group">
-					  <i class="eos-icons">system_group</i>
-						<br>
-						system_group
-					</div>
-				
-					<div class="icons__item" data-name="system_re_registered">
-					  <i class="eos-icons">system_re_registered</i>
-						<br>
-						system_re_registered
-					</div>
-				
 					<div class="icons__item" data-name="troubleshooting">
 					  <i class="eos-icons">troubleshooting</i>
+=======
+				<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) {
+					var glyph = glyphs[glyphIdx] %>
+					<div class="icons__item" data-name="<%= glyph %>">
+					  <i class="<%= baseClass %>"><%= glyph %></i>
+>>>>>>> 72458d38313b8e6c113bc21980149cef11c21989:templates/index-template-extended.html
 						<br>
-						troubleshooting
+						<%= glyph %>
 					</div>
-				
-					<div class="icons__item" data-name="trusted_organization">
-					  <i class="eos-icons">trusted_organization</i>
-						<br>
-						trusted_organization
-					</div>
-				
-					<div class="icons__item" data-name="unpached">
-					  <i class="eos-icons">unpached</i>
-						<br>
-						unpached
-					</div>
-				
-					<div class="icons__item" data-name="virtual_guest">
-					  <i class="eos-icons">virtual_guest</i>
-						<br>
-						virtual_guest
-					</div>
-				
-					<div class="icons__item" data-name="virtual_host_manager">
-					  <i class="eos-icons">virtual_host_manager</i>
-						<br>
-						virtual_host_manager
-					</div>
-				
+				<% } %>
 			</div>
 			<div id="icons-animated">
 
@@ -523,9 +357,9 @@
 				</h2>
 
 
-				
-				<pre><code>&lt;i class=&quot;eos-icons&quot;&gt;<span id="name2">icon_name</span>&lt;/i&gt;</code></pre>
-				
+				<% if (addLigatures) { %>
+				<pre><code>&lt;i class=&quot;<%= baseClass %>&quot;&gt;<span id="name2">icon_name</span>&lt;/i&gt;</code></pre>
+				<% } %>
 			</div>
 		</div>
 
