@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   const sass = require('node-sass');
 
   grunt.initConfig({
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
         }
       },
       iconsExtended: {
-        src: [ 'svg/*.svg', 'svg/extended/*.svg'],
+        src: ['svg/*.svg', 'svg/extended/*.svg'],
         dest: 'dist/extended/fonts',
         destCss: 'dist/extended/css',
         destScss: 'dist/extended/scss',
@@ -70,6 +70,20 @@ module.exports = function(grunt) {
           { src: 'templates/logo.png', dest: 'dist/images/' },
           { src: 'templates/logo.png', dest: 'dist/extended/images/' }
         ]
+      },
+      material: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: 'node_modules/material-design-icons',
+          dest: 'svg/extended/',
+          filter: 'isFile',
+          flatten: true,
+          src: '{,*/}*/svg/production/*{,*/}_24px.svg',
+          rename: function (dest, src) {
+            return dest + src.replace('_24px', '').replace('ic_', '');
+          }
+        }]
       }
     },
     sass: {
@@ -97,17 +111,17 @@ module.exports = function(grunt) {
           to: "<metadata>Created by EOS Design System</metadata>"
         }]
       }
-    }
+    },
   });
 
-   /**
-   * Add animated icons objects in the exported collection
-   *
-   * Since we only have 2 animated icons, we will manually add the animated icons
-   * to the glyph list json
-   *
-   * This will allow us to consume them in EOS
-   */
+  /**
+  * Add animated icons objects in the exported collection
+  *
+  * Since we only have 2 animated icons, we will manually add the animated icons
+  * to the glyph list json
+  *
+  * This will allow us to consume them in EOS
+  */
 
   grunt.registerTask('addanimated', function (key, value) {
     var projectFile = "./dist/js/glyph-list.json";
@@ -119,8 +133,7 @@ module.exports = function(grunt) {
     project.animatedIcons = animatedIconsArray;
 
     //serialize it back to file
-    grunt.file.write(projectFile, JSON.stringify(project, null,2));
-
+    grunt.file.write(projectFile, JSON.stringify(project, null, 2));
   });
 
   grunt.loadNpmTasks('grunt-webfont');
@@ -129,6 +142,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-text-replace');
 
-  grunt.registerTask('default', ['sass','concat', 'webfont','copy','replace']);
+  grunt.registerTask('default', ['copy:material', 'sass', 'concat', 'webfont', 'copy:logo', 'replace']);
 
 };
