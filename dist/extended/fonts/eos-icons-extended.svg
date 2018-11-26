@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Fri Nov 23 15:08:02 2018
- By Sorin Curescu
+Created by FontForge 20180321 at Mon Nov 26 13:11:49 2018
+ By admin
 </metadata>
 <defs>
 <font id="eos-icons-extended" horiz-adv-x="512" >
@@ -158,9 +158,8 @@ q-17 0 -29.5 12.5t-12.5 29.5v43l42 299q0 17 12.5 29.5t30.5 12.5h256q10 0 19 -5t1
     <glyph glyph-name="service_instance" unicode="service_instance" 
 d="M428 405h1q17 0 29.5 -12.5t12.5 -29.5v-344q0 -17 -12.5 -29.5t-29.5 -12.5h-344q-17 0 -29.5 12.5t-12.5 29.5v344q0 17 12.5 29.5t29.5 12.5h343zM256 138q22 1 37.5 16.5t16.5 37.5q0 22 -16 38t-38 16t-38 -16t-16 -38t16 -38t38 -16z" />
     <glyph glyph-name="service_plan" unicode="service_plan" 
-d="M128 107q18 0 30.5 -12.5t12.5 -30.5t-12.5 -30.5t-30.5 -12.5t-30.5 12.5t-12.5 30.5t12.5 30.5t30.5 12.5zM128 43q9 0 15 6t6 15t-6 15t-15 6t-15 -6t-6 -15t6 -15t15 -6zM86 170v192h85v-192h-85zM469 427q9 0 15.5 -6.5t6.5 -15.5v-426q0 -9 -6.5 -15.5t-15.5 -6.5
-h-426q-9 0 -15.5 6.5t-6.5 15.5v426q0 9 6.5 15.5t15.5 6.5h426zM192 21v342q0 8 -6.5 14.5t-14.5 6.5h-86q-8 0 -14.5 -6.5t-6.5 -14.5v-342q0 -8 6.5 -14.5t14.5 -6.5h86q8 0 14.5 6.5t6.5 14.5zM405 21v43h-170v-43h170zM448 128v43h-213v-43h213zM448 235v42h-213v-42
-h213zM448 341v43h-213v-43h213z" />
+d="M149 405q9 0 15.5 -6t6.5 -15v-384q0 -9 -6.5 -15t-15.5 -6h-85q-9 0 -15 6t-6 15v384q0 9 6 15t15 6h85zM106.5 0q17.5 0 30 12.5t12.5 30t-12.5 30t-29.5 12.5q-12 0 -22 -5.5t-15.5 -15.5t-5.5 -21q0 -18 12.5 -30.5t30 -12.5zM149 192v192h-85v-192h85zM86 42.5
+q0 8.5 6 15t15 6.5t15 -6.5t6 -15t-6 -15t-15 -6.5t-15 6.5t-6 15zM299 362v43h170v-43h-170zM213 362v43h43v-43h-43zM299 277v43h170v-43h-170zM213 277v43h43v-43h-43zM299 192v43h170v-43h-170zM213 192v43h43v-43h-43z" />
     <glyph glyph-name="service" unicode="service" 
 d="M42 364q0 31 5.5 36.5t36.5 5.5h344q31 0 36.5 -5.5t5.5 -36.5v-344q0 -31 -5.5 -36.5t-36.5 -5.5h-344q-31 0 -36.5 5.5t-5.5 36.5v344z" />
     <glyph glyph-name="smt" unicode="smt" 
