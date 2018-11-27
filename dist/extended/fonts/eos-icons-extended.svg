@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Tue Nov 27 14:06:41 2018
+Created by FontForge 20180321 at Tue Nov 27 14:16:15 2018
  By cynthia sanchez
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20180321 at Tue Nov 27 14:06:41 2018
     bbox="0 -64 512 448.379"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+0030-F4F8"
+    unicode-range="U+0030-F4F9"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -184,6 +184,10 @@ h299z" />
     <glyph glyph-name="system_re_registered" unicode="system_re_registered" 
 d="M448 405q18 0 30.5 -12.5t12.5 -29.5v-256q0 -12 -6 -22t-15.5 -15.5t-21.5 -5.5h-149v-43h42v-42h-170v42h42v43h-149q-12 0 -21.5 5.5t-15.5 15.5t-6 22v256q0 17 12.5 29.5t30.5 12.5h384zM448 256v107h-384v-107h107v64l85 -85l-85 -86v64h-107v-106h384v106h-149v43
 h149z" />
+    <glyph glyph-name="timeout" unicode="timeout" 
+d="M223 171l-112 111q11 17 24 31l100 -100v-42l106 -64l36 -36q-14 -14 -31 -24zM407 41l27 -27l-27 -28l-30 30q16 11 30 25zM78 370l27 -27q-14 -14 -25 -30l-30 30zM341 107l-106 64v42v86h32v-112l96 -57l-16 -27zM407 41q-14 -14 -30 -25q-23 -15 -58 -26t-63 -11
+q-88 0 -150.5 62.5t-62.5 150.5q0 14 3 30.5t8 32.5t12 31.5t14 26.5q11 16 25 30l30 -30q-13 -14 -23 -31q-11 -17 -18.5 -43t-7.5 -46q0 -71 50 -121t121 -50q20 0 46 7.5t43 17.5q17 11 31 24zM256 363q-20 0 -46.5 -8t-43.5 -18l-31 31q22 15 57.5 26t62.5 11h1
+q88 0 150.5 -62.5t62.5 -150.5q0 -27 -11 -62.5t-26 -58.5l-31 31q10 17 17.5 43.5t7.5 46.5q0 71 -49.5 121t-120.5 50z" />
     <glyph glyph-name="troubleshooting" unicode="troubleshooting" 
 d="M491 213h21v-42h-43q-7 -73 -62.5 -129t-128.5 -63v-43h-42v42q-73 7 -129 63t-63 129h-44v42h44q7 72 63 128.5t128 63.5v44h42v-44q73 -7 129 -63t63 -128h22zM293 213h51q-6 22 -25.5 41.5t-41.5 25.5v-51q10 -6 16 -16zM344 171h-51q-6 -10 -16 -16v-51
 q22 6 41.5 25.5t25.5 41.5zM235 361q-55 -7 -98 -50t-50 -98h48q7 35 36 64t64 36v48zM219 213q6 10 16 16v51q-22 -6 -41.5 -25.5t-25.5 -41.5h51zM235 155q-10 6 -16 16h-51q6 -22 25.5 -41.5t41.5 -25.5v51zM87 171q4 -36 25.5 -68.5t54 -54t68.5 -25.5v48q-35 7 -64 36
