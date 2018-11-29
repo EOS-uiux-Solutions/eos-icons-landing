@@ -38,13 +38,15 @@ For example:
 <i class="eos-icons eos-icon-loading"></i>
 ```
 
-See the other animated icons classes in our (demo page)[https://suse-uiux.gitlab.io/eos-icons/]. Click on the icon you want to use to see the code snippet.
+See the other animated icons classes in our [demo page](https://suse-uiux.gitlab.io/eos-icons/). Click on the icon you want to use to see the code snippet.
 
 # EOS extended version with Material Design
 
-Since EOS icons are designed following the (Material Design guidelines)[https://material.io/design/iconography/system-icons.html] and made to work together with Material Icons, we decided to include an extended version of EOS icons for easy implementation.
+Since EOS icons are designed following the [Material Design guidelines](https://material.io/design/iconography/system-icons.html) and made to work together with Material Icons, we decided to include an extended version of EOS icons for easy implementation.
 
 With the extended version you only need to use 1 class for all icons (EOS and Material Design). To implement it, you need to grab the `css/` and `font/` folders available at `dist/extended`, then add the `eos-icons-extended.css` under the `<head>` of your project accordingly.
+
+For more information about Material Design Icons, please refer to the [original MD icons repository](https://github.com/google/material-design-icons) where you can find the corresponding licensing and documentation.
 
 #### Example of usage of the EOS extended
 
