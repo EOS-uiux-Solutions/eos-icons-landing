@@ -28,6 +28,37 @@ Just like in any other iconic font, you need to add the Fonts and CSS files in y
 
 Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our online tool to see the icon's name: https://suse-uiux.gitlab.io/eos-icons/, or simply run `open dist/index.html` to see it locally.
 
+# Using animated icons
+
+The animated EOS icons are built using CSS animations. To implement them you don't need ligatures but classes instead.
+
+For example:
+
+```
+<i class="eos-icons eos-icon-loading"></i>
+```
+
+See the other animated icons classes in our [demo page](https://suse-uiux.gitlab.io/eos-icons/). Click on the icon you want to use to see the code snippet.
+
+# EOS extended version with Material Design
+
+Since EOS icons are designed following the [Material Design guidelines](https://material.io/design/iconography/system-icons.html) and made to work together with Material Icons, we decided to include an extended version of EOS icons for easy implementation.
+
+With the extended version you only need to use 1 class for all icons (EOS and Material Design). To implement it, you need to grab the `css/` and `font/` folders available at `dist/extended`, then add the `eos-icons-extended.css` under the `<head>` of your project accordingly.
+
+For more information about Material Design Icons, please refer to the [original MD icons repository](https://github.com/google/material-design-icons) where you can find the corresponding licensing and documentation.
+
+#### Example of usage of the EOS extended
+
+```
+<!-- This is an EOS icon -->
+<i class="eos-icons">action_chains</i>
+
+<!-- This is a Material Design icon -->
+<i class="eos-icons">bluetooth_disabled</i>
+
+```
+
 # Adding your icons to the iconic font
 
 If you want to create your own icons and add them to this library, follow the next steps:

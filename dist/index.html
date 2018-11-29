@@ -127,6 +127,20 @@
 			.version {
 				font-size: 12px;
 			}
+
+			.extended-version-wrap {
+				margin-bottom: 10px;
+				display: flex;
+    		margin: 0 0 30px 60px;
+			}
+			.extended-version-wrap a {
+				padding: 10px 14px;
+				background: #e6e6e6;
+				border-radius: 5px;
+				color: #1f1f1f;
+				text-decoration: none;
+				border: 1px solid #d0d0d0;
+				}
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/eos-icons.css">
 	</head>
@@ -147,6 +161,9 @@
 			</div>
 		</header>
 		<div class='container icons-container'>
+				<div class="extended-version-wrap">
+						<a href="../dist/extended/index.html">Extended version</a>
+				</div>
 			<div id="icons">
 				
 					<div class="icons__item" data-name="action_chains">
@@ -167,6 +184,30 @@
 						admin
 					</div>
 				
+					<div class="icons__item" data-name="application_incomplete">
+					  <i class="eos-icons">application_incomplete</i>
+						<br>
+						application_incomplete
+					</div>
+				
+					<div class="icons__item" data-name="application_instance">
+					  <i class="eos-icons">application_instance</i>
+						<br>
+						application_instance
+					</div>
+				
+					<div class="icons__item" data-name="application">
+					  <i class="eos-icons">application</i>
+						<br>
+						application
+					</div>
+				
+					<div class="icons__item" data-name="autoinstallation">
+					  <i class="eos-icons">autoinstallation</i>
+						<br>
+						autoinstallation
+					</div>
+				
 					<div class="icons__item" data-name="background_tasks">
 					  <i class="eos-icons">background_tasks</i>
 						<br>
@@ -179,16 +220,76 @@
 						bootstrapping
 					</div>
 				
+					<div class="icons__item" data-name="cleanup">
+					  <i class="eos-icons">cleanup</i>
+						<br>
+						cleanup
+					</div>
+				
+					<div class="icons__item" data-name="cloud_foundry_space">
+					  <i class="eos-icons">cloud_foundry_space</i>
+						<br>
+						cloud_foundry_space
+					</div>
+				
 					<div class="icons__item" data-name="collocation">
 					  <i class="eos-icons">collocation</i>
 						<br>
 						collocation
 					</div>
 				
+					<div class="icons__item" data-name="configuration_file">
+					  <i class="eos-icons">configuration_file</i>
+						<br>
+						configuration_file
+					</div>
+				
 					<div class="icons__item" data-name="constraint">
 					  <i class="eos-icons">constraint</i>
 						<br>
 						constraint
+					</div>
+				
+					<div class="icons__item" data-name="counting">
+					  <i class="eos-icons">counting</i>
+						<br>
+						counting
+					</div>
+				
+					<div class="icons__item" data-name="critical_bug">
+					  <i class="eos-icons">critical_bug</i>
+						<br>
+						critical_bug
+					</div>
+				
+					<div class="icons__item" data-name="csv_file">
+					  <i class="eos-icons">csv_file</i>
+						<br>
+						csv_file
+					</div>
+				
+					<div class="icons__item" data-name="endpoints_connected">
+					  <i class="eos-icons">endpoints_connected</i>
+						<br>
+						endpoints_connected
+					</div>
+				
+					<div class="icons__item" data-name="endpoints_disconnected">
+					  <i class="eos-icons">endpoints_disconnected</i>
+						<br>
+						endpoints_disconnected
+					</div>
+				
+					<div class="icons__item" data-name="endpoints">
+					  <i class="eos-icons">endpoints</i>
+						<br>
+						endpoints
+					</div>
+				
+					<div class="icons__item" data-name="enhancement">
+					  <i class="eos-icons">enhancement</i>
+						<br>
+						enhancement
 					</div>
 				
 					<div class="icons__item" data-name="file_system">
@@ -209,6 +310,18 @@
 						miscellaneous
 					</div>
 				
+					<div class="icons__item" data-name="modified_date">
+					  <i class="eos-icons">modified_date</i>
+						<br>
+						modified_date
+					</div>
+				
+					<div class="icons__item" data-name="move">
+					  <i class="eos-icons">move</i>
+						<br>
+						move
+					</div>
+				
 					<div class="icons__item" data-name="multistate">
 					  <i class="eos-icons">multistate</i>
 						<br>
@@ -227,10 +340,28 @@
 						organization
 					</div>
 				
+					<div class="icons__item" data-name="package_upgrade">
+					  <i class="eos-icons">package_upgrade</i>
+						<br>
+						package_upgrade
+					</div>
+				
+					<div class="icons__item" data-name="package">
+					  <i class="eos-icons">package</i>
+						<br>
+						package
+					</div>
+				
 					<div class="icons__item" data-name="packages">
 					  <i class="eos-icons">packages</i>
 						<br>
 						packages
+					</div>
+				
+					<div class="icons__item" data-name="pin">
+					  <i class="eos-icons">pin</i>
+						<br>
+						pin
 					</div>
 				
 					<div class="icons__item" data-name="primitive">
@@ -239,16 +370,16 @@
 						primitive
 					</div>
 				
+					<div class="icons__item" data-name="product_classes">
+					  <i class="eos-icons">product_classes</i>
+						<br>
+						product_classes
+					</div>
+				
 					<div class="icons__item" data-name="product_subscriptions">
 					  <i class="eos-icons">product_subscriptions</i>
 						<br>
 						product_subscriptions
-					</div>
-				
-					<div class="icons__item" data-name="products_classes">
-					  <i class="eos-icons">products_classes</i>
-						<br>
-						products_classes
 					</div>
 				
 					<div class="icons__item" data-name="products">
@@ -257,22 +388,52 @@
 						products
 					</div>
 				
+					<div class="icons__item" data-name="proxy">
+					  <i class="eos-icons">proxy</i>
+						<br>
+						proxy
+					</div>
+				
+					<div class="icons__item" data-name="ptf">
+					  <i class="eos-icons">ptf</i>
+						<br>
+						ptf
+					</div>
+				
 					<div class="icons__item" data-name="repositories">
 					  <i class="eos-icons">repositories</i>
 						<br>
 						repositories
 					</div>
 				
-					<div class="icons__item" data-name="resource">
-					  <i class="eos-icons">resource</i>
+					<div class="icons__item" data-name="route">
+					  <i class="eos-icons">route</i>
 						<br>
-						resource
+						route
 					</div>
 				
-					<div class="icons__item" data-name="sap">
-					  <i class="eos-icons">sap</i>
+					<div class="icons__item" data-name="sandbox">
+					  <i class="eos-icons">sandbox</i>
 						<br>
-						sap
+						sandbox
+					</div>
+				
+					<div class="icons__item" data-name="service_instance">
+					  <i class="eos-icons">service_instance</i>
+						<br>
+						service_instance
+					</div>
+				
+					<div class="icons__item" data-name="service_plan">
+					  <i class="eos-icons">service_plan</i>
+						<br>
+						service_plan
+					</div>
+				
+					<div class="icons__item" data-name="service">
+					  <i class="eos-icons">service</i>
+						<br>
+						service
 					</div>
 				
 					<div class="icons__item" data-name="smt">
@@ -281,16 +442,82 @@
 						smt
 					</div>
 				
+					<div class="icons__item" data-name="snapshot_rollback">
+					  <i class="eos-icons">snapshot_rollback</i>
+						<br>
+						snapshot_rollback
+					</div>
+				
 					<div class="icons__item" data-name="software">
 					  <i class="eos-icons">software</i>
 						<br>
 						software
 					</div>
 				
+					<div class="icons__item" data-name="state">
+					  <i class="eos-icons">state</i>
+						<br>
+						state
+					</div>
+				
+					<div class="icons__item" data-name="subscriptions_created">
+					  <i class="eos-icons">subscriptions_created</i>
+						<br>
+						subscriptions_created
+					</div>
+				
+					<div class="icons__item" data-name="symlink">
+					  <i class="eos-icons">symlink</i>
+						<br>
+						symlink
+					</div>
+				
+					<div class="icons__item" data-name="system_group">
+					  <i class="eos-icons">system_group</i>
+						<br>
+						system_group
+					</div>
+				
+					<div class="icons__item" data-name="system_re_registered">
+					  <i class="eos-icons">system_re_registered</i>
+						<br>
+						system_re_registered
+					</div>
+				
+					<div class="icons__item" data-name="timeout">
+					  <i class="eos-icons">timeout</i>
+						<br>
+						timeout
+					</div>
+				
 					<div class="icons__item" data-name="troubleshooting">
 					  <i class="eos-icons">troubleshooting</i>
 						<br>
 						troubleshooting
+					</div>
+				
+					<div class="icons__item" data-name="trusted_organization">
+					  <i class="eos-icons">trusted_organization</i>
+						<br>
+						trusted_organization
+					</div>
+				
+					<div class="icons__item" data-name="unpatched">
+					  <i class="eos-icons">unpatched</i>
+						<br>
+						unpatched
+					</div>
+				
+					<div class="icons__item" data-name="virtual_guest">
+					  <i class="eos-icons">virtual_guest</i>
+						<br>
+						virtual_guest
+					</div>
+				
+					<div class="icons__item" data-name="virtual_host_manager">
+					  <i class="eos-icons">virtual_host_manager</i>
+						<br>
+						virtual_host_manager
 					</div>
 				
 			</div>

@@ -1,0 +1,289 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><%= fontFamilyName %> demo page</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+		<style>
+			body {
+				background: #fff;
+				color: #5f5f5f;
+				font-size: 16px;
+				font-family: 'Lato', sans-serif;
+				font-weight: 400;
+				margin: 0;
+			}
+
+			.container {
+				padding: 16px;
+			}
+
+			header {
+				background: #fe673a;
+        margin-bottom: 2em;
+				position: fixed;
+				top: 0px;
+				width: 100%;
+			}
+
+			.icons-container {
+				margin-top: 120px;
+			}
+
+			h1,
+			footer {
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+			}
+
+			h1 {
+				font-size: 32px;
+				margin: 0px;
+				color: white;
+			}
+
+			h2 small {
+				font-size: 0.5em;
+			}
+
+			h3 {
+				text-align: center;
+			}
+
+			.two-columns {
+				-webkit-column-count: 2;
+				   -moz-column-count: 2;
+				        column-count: 2;
+			}
+
+			.icons__item,
+			.icons__item i {
+				cursor: pointer;
+				text-align: center;
+			}
+
+			.icons__item:hover {
+				color: #fe673a;
+			}
+
+			.icons__item {
+				display: inline-block;
+				margin-bottom: 3em;
+				width: 200px;
+			}
+
+			.icons__item i {
+				font-size: 48px;
+			}
+
+			.how-to-use,
+			.how-to-use-animated {
+				background: #333;
+				bottom: 44px;
+				position: fixed;
+				width: 100%;
+			}
+
+			footer {
+				background: #ededed;
+				bottom: 0px;
+				color: #999;
+				font-size: 14px;
+				position: fixed;
+				width: 100%;
+			}
+
+			.text-white {
+				color: white
+			}
+
+			pre {
+				background: #dedede;
+				padding: 16px;
+			}
+
+			.pull-right {
+				float: right;
+			}
+
+			#close-code-snippet,
+			#close-code-snippet-animated {
+				cursor: pointer;
+			}
+
+			.eos-logo-color-gradients {
+			  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff890a+0,ff420a+50,bc0289+100 */
+			  background: #ff890a;
+			  background: -moz-linear-gradient(-45deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+			  background: -webkit-linear-gradient(-45deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+			  background: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+			  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff890a', endColorstr='#bc0289', GradientType=1 );
+			}
+
+			.toolbar {
+				padding: 10px;
+			}
+
+			.version {
+				font-size: 12px;
+			}
+			.extended-version-wrap {
+				margin-bottom: 10px;
+				display: flex;
+    		margin: 0 0 30px 60px;
+			}
+			.extended-version-wrap a {
+				padding: 10px 14px;
+				background: #e6e6e6;
+				border-radius: 5px;
+				color: #1f1f1f;
+				text-decoration: none;
+				border: 1px solid #d0d0d0;
+				}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/eos-icons-extended.css">
+	</head>
+	<body>
+		<header class='eos-logo-color-gradients'>
+		  <div class='container two-columns'>
+		    <h1>
+				  <img src='images/templates/logo.png'/>
+				  <% if (version) { %><small class='version'>version <%= version %></small><% } %>
+				</h1>
+				<div class='pull-right toolbar'>
+				  <span class='text-white'>Try different sizes: </span>
+				  <button class='change-size' data-size='18'>18px</button>
+					<button class='change-size' data-size='24'>24px</button>
+					<button class='change-size' data-size='36'>36px</button>
+					<button class='change-size' data-size='48'>48px</button>
+				</div>
+			</div>
+		</header>
+		<div class='container icons-container'>
+			<div class="extended-version-wrap">
+				<a href="../index.html">EOS set</a>
+			</div>
+			<div id="icons">
+				<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) {
+					var glyph = glyphs[glyphIdx] %>
+					<div class="icons__item" data-name="<%= glyph %>">
+					  <i class="<%= baseClass %>"><%= glyph %></i>
+						<br>
+						<%= glyph %>
+					</div>
+				<% } %>
+			</div>
+			<div id="icons-animated">
+
+				<h3>Animated icons</h3>
+				<div class="icons__item" data-name="loading">
+					<i class="eos-icons eos-icon-loading"></i>
+					<br/>
+					loading
+				</div>
+
+				<div class="icons__item" data-name="installing">
+					<i class="eos-icons eos-icon-installing md-48" id="eos-icon-installing"></i>
+					<br>
+					installing
+				</div>
+			</div>
+    </div>
+
+		<div id="how-to-use" class='how-to-use'>
+		  <div class='container'>
+				<h2 class='text-white'>
+					How to use it:
+					<small id='close-code-snippet' class='pull-right'>X Close</small>
+				</h2>
+
+
+				<% if (addLigatures) { %>
+				<pre><code>&lt;i class=&quot;<%= baseClass %>&quot;&gt;<span id="name2">icon_name</span>&lt;/i&gt;</code></pre>
+				<% } %>
+			</div>
+		</div>
+
+		<div id="how-to-use" class='how-to-use-animated'>
+		  <div class='container'>
+				<h2 class='text-white'>
+					How to use it:
+					<small id='close-code-snippet-animated' class='pull-right'>X Close</small>
+				</h2>
+
+				<div id='animatedIconDemo'></div>
+			</div>
+		</div>
+		<footer>
+			<div class='container'>
+			  Download from gitlab at <a href="https://gitlab.com/SUSE-UIUX/eos-icons/tree/master/dist/extended/">EOS icons extended</a> .
+			  Thanks to <a href="https://github.com/sapegin/grunt-webfont">grunt-webfont</a>.
+			</div>
+		</footer>
+
+		<script>
+		(function() {
+			var showCodeSnippet = false
+			var iconName
+
+			//hide code snippet by default
+			document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
+			document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+
+			document.getElementById('icons').onclick = function(e) {
+				e = e || window.event;
+				iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
+				document.getElementById('name2').innerHTML = iconName;
+
+				if (iconName) {
+					showCodeSnippet = true
+					console.log('something selected')
+					document.getElementsByClassName('how-to-use')[0].style.visibility = 'visible'
+					document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+				}
+			}
+
+			document.getElementById('icons-animated').onclick = function(e) {
+				e = e || window.event;
+				iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
+				iconDemo = '<pre><code>&lt;i class=&quoteos-icons eos-icon-' + iconName + '&quot;&gt;' + '&lt;/i&gt;</code></pre>';
+				document.getElementById('animatedIconDemo').innerHTML = iconDemo;
+				if (iconName) {
+					showCodeSnippet = true
+					console.log(iconName)
+					document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'visible'
+				}
+			}
+
+			document.getElementById('close-code-snippet').onclick = function(e) {
+				showCodeSnippet = false
+				iconName = ''
+				document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
+				document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+			}
+
+			document.getElementById('close-code-snippet-animated').onclick = function(e) {
+				showCodeSnippet = false
+				iconName = ''
+				document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+				document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
+			}
+
+			var buttonsSizes = document.getElementsByClassName('change-size')
+			for (i = 0; i < buttonsSizes.length; i++) {
+		    buttonsSizes[i].onclick = function(e) {
+					e = e || window.event;
+					iconSize = e.target.getAttribute('data-size')
+					iconClass = 'md-' + iconSize
+	        for (i = 0; i < document.getElementsByClassName('eos-icons').length; i++) {
+					  document.getElementsByClassName('eos-icons')[i].style.fontSize = iconSize + 'px';
+						document.getElementById('eos-icon-installing').className = 'eos-icons eos-icon-installing ' + iconClass;
+					}
+		    };
+			}
+
+		})();
+		</script>
+	</body>
+</html>
