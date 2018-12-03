@@ -104,7 +104,7 @@ module.exports = function (grunt) {
     },
     replace: {
       replace_metadata: {
-        src: ['dist/fonts/eos-icons.svg'],
+        src: ['dist/fonts/eos-icons.svg', 'dist/extended/fonts/eos-icons-extended.svg'],
         overwrite: true,
         replacements: [{
           from: /<metadata>(.|\n)*?<\/metadata>/,
@@ -142,6 +142,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-text-replace');
 
-  grunt.registerTask('default', ['copy:material', 'sass', 'concat', 'webfont', 'copy:logo', 'replace']);
+  grunt.registerTask('default', ['copy:material', 'sass', 'concat', 'webfont', 'copy:logo', 'replace', 'addanimated']);
 
 };
