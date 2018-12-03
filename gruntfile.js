@@ -104,7 +104,7 @@ module.exports = function (grunt) {
     },
     replace: {
       replace_metadata: {
-        src: ['dist/fonts/eos-icons.svg'],
+        src: ['dist/fonts/eos-icons.svg', 'dist/extended/fonts/eos-icons-extended.svg'],
         overwrite: true,
         replacements: [{
           from: /<metadata>(.|\n)*?<\/metadata>/,
