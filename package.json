@@ -1,6 +1,6 @@
 {
   "name": "eos-icons",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The iconic font made for EOS Design System to work together with Material Icons. Extends the library for SUSE and open SUSE product specific usage.",
   "devDependencies": {
     "@semantic-release/git": "^5.0.0",
