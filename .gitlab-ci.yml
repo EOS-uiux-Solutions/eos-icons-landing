@@ -20,7 +20,7 @@ pages:
   stage: deploy
   script:
     - mkdir .public
-    - cp -r dist/css dist/index.html dist/fonts dist/images/ .public
+    - cp -r dist/ .public
     - mv .public public
   environment:
     name: production
