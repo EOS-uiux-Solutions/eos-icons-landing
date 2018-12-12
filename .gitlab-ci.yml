@@ -22,7 +22,7 @@ pages:
   stage: deploy
   script:
     - mkdir .public
-    - cp -r dist/ .public
+    - cp -r dist/* .public
     - mv .public public
   environment:
     name: production
