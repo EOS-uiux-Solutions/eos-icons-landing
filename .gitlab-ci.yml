@@ -2,6 +2,8 @@ stages:
   - deploy
   - publish
 
+image: node:8.4.0
+
 deploy_wip:
   stage: deploy
   image: ruby:latest
@@ -13,12 +15,14 @@ deploy_wip:
     - apt-get install -y ruby-dev
     - gem install dpl
     - dpl --provider=heroku --app=eos-icons --api-key=$HEROKU_DEMO_PAGE_KEY
+  only:
+    - new_branch_name_here
 
 pages:
   stage: deploy
   script:
     - mkdir .public
-    - cp -r dist/ .public
+    - cp -r dist/* .public
     - mv .public public
   environment:
     name: production
@@ -29,7 +33,6 @@ pages:
     - master
 
 npm-publish:
-  image: node:8
   stage: publish
   script:
     - npm install
