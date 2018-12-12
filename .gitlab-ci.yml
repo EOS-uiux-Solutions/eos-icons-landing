@@ -2,6 +2,8 @@ stages:
   - deploy
   - publish
 
+image: node:8.4.0
+
 deploy_wip:
   stage: deploy
   image: ruby:latest
@@ -29,7 +31,6 @@ pages:
     - master
 
 npm-publish:
-  image: node:8
   stage: publish
   script:
     - npm install
