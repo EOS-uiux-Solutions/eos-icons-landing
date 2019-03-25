@@ -141,8 +141,9 @@
 				text-decoration: none;
 				border: 1px solid #d0d0d0;
 				}
-			#searchbar{
+			.searchbar{
 				margin-left: auto;
+				padding-left: 8px;
 
 			}
 
@@ -179,7 +180,7 @@
 		<div class='container icons-container'>
 				<div class="extended-version-wrap">
 						<a href="extended/index.html">Extended version</a>
-						<input id="searchbar" onkeyup="search_icon()" type="text" name="search" placeholder="Search Icons..">
+						<input class="searchbar" onkeyup="searchIcon()" type="text" name="search" placeholder="Search Icons...">
 				</div>
 			<div id="icons">
 				
@@ -648,7 +649,7 @@
 			}
 
 		})();
-		function search_icon(){
+		function searchIcon(){
 			input=document.getElementById('searchbar').value;
 			var x=document.getElementsByClassName('icons__item');
 			for (i = 0; i < x.length; i++) { 
