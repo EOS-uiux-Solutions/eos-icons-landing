@@ -141,6 +141,22 @@
 				text-decoration: none;
 				border: 1px solid #d0d0d0;
 				}
+			#searchbar{
+				margin-left: auto;
+
+			}
+
+			input[type=text] {
+			width: 130px;
+			-webkit-transition: width 0.15s ease-in-out;
+			transition: width 0.15s ease-in-out;
+			}
+
+			/* When the input field gets focus, change its width to 100% */
+			input[type=text]:focus {
+			width: 200px;
+			max-width: 200px;
+}
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/eos-icons.css">
 	</head>
@@ -163,6 +179,7 @@
 		<div class='container icons-container'>
 				<div class="extended-version-wrap">
 						<a href="extended/index.html">Extended version</a>
+						<input id="searchbar" onkeyup="search_icon()" type="text" name="search" placeholder="Search Icons..">
 				</div>
 			<div id="icons">
 				
@@ -631,6 +648,22 @@
 			}
 
 		})();
+		function search_icon(){
+			input=document.getElementById('searchbar').value;
+			var x=document.getElementsByClassName('icons__item');
+			for (i = 0; i < x.length; i++) { 
+ 			 if (!(x[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) {
+ 			 	x[i].style.display="none";
+
+ 			 }
+			
+ 			 else{
+				x[i].style.display="inline-block"; 			 	
+ 			 }
+
+				}
+
+		}
 		</script>
 	</body>
 </html>
