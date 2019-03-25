@@ -303,7 +303,7 @@
 
 		})();
 		function searchIcon(){
-			input=document.getElementById('searchbar').value;
+			input=document.getElementsByClassName('searchbar')[0].value;
 			var x=document.getElementsByClassName('icons__item');
 			for (i = 0; i < x.length; i++) { 
  			 if (!(x[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) {
