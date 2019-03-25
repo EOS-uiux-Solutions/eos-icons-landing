@@ -9,14 +9,14 @@ deploy_wip:
   image: ruby:latest
   environment:
     name: development
-    url: https://eos-icons.herokuapp.com/
+    url: https://$HEROKU_DEVELOPMENT_NAME.herokuapp.com/
   script:
     - apt-get update -qy
     - apt-get install -y ruby-dev
     - gem install dpl
-    - dpl --provider=heroku --app=eos-icons --api-key=$HEROKU_DEMO_PAGE_KEY
+    - dpl --provider=heroku --app=$HEROKU_DEVELOPMENT_NAME --api-key=$HEROKU_DEMO_PAGE_KEY
   only:
-    - new_branch_name_here
+    - master
 
 pages:
   stage: deploy
@@ -37,5 +37,6 @@ npm-publish:
   script:
     - npm install
     - npx semantic-release
+  when: manual
   only:
     - master
