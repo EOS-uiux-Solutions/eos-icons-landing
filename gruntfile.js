@@ -71,6 +71,12 @@ module.exports = function (grunt) {
           { src: 'templates/logo.png', dest: 'dist/extended/images/' }
         ]
       },
+      css: {
+        files: [
+          { src: 'templates/index.css', dest: 'dist/css/' },
+          { src: 'templates/index.css', dest: 'dist/extended/css/' }
+        ]
+      },
       material: {
         files: [{
           expand: true,
