@@ -67,8 +67,14 @@ module.exports = function (grunt) {
     copy: {
       logo: {
         files: [
-          { src: 'templates/logo.png', dest: 'dist/images/' },
-          { src: 'templates/logo.png', dest: 'dist/extended/images/' }
+          { src: 'templates/logo.png', dest: 'dist/images/', flatten: true, expand:true },
+          { src: 'templates/logo.png', dest: 'dist/extended/images/', flatten: true, expand:true }
+        ]
+      },
+      css: {
+        files: [
+          { src: 'templates/index.css', dest: 'dist/css/', flatten: true, expand:true },
+          { src: 'templates/index.css', dest: 'dist/extended/css/', flatten: true, expand:true }
         ]
       },
       material: {
@@ -142,6 +148,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-text-replace');
 
-  grunt.registerTask('default', ['copy:material', 'sass', 'concat', 'webfont', 'copy:logo', 'replace', 'addanimated']);
+  grunt.registerTask('default', ['copy:material', 'sass', 'concat', 'webfont', 'copy:logo', 'copy:css', 'replace', 'addanimated']);
 
 };
