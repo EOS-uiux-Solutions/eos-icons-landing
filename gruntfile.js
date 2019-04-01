@@ -1,6 +1,12 @@
 module.exports = function (grunt) {
   const sass = require('node-sass');
 
+  //Append path to your svg below
+  //EOS-set svg path
+  const src_eos_set=['svg/*.svg'];
+  //Extended set svg path
+  const src_extended_set=['svg/*.svg', 'svg/extended/*.svg'];
+
   grunt.initConfig({
     webfont: {
       icons: {
