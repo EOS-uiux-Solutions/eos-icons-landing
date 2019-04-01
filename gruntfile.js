@@ -4,11 +4,9 @@ module.exports = function (grunt) {
   grunt.initConfig({
     webfont: {
       icons: {
-        src: 'svg/*.svg',
+        src: src_eos_set,
         dest: 'dist/fonts',
         destCss: 'dist/css',
-        destScss: 'dist/scss',
-        destLess: 'dist/less',
         options: {
           font: 'eos-icons',
           syntax: 'bootstrap',
@@ -34,11 +32,9 @@ module.exports = function (grunt) {
         }
       },
       iconsExtended: {
-        src: ['svg/*.svg', 'svg/extended/*.svg'],
+        src: src_extended_set,
         dest: 'dist/extended/fonts',
         destCss: 'dist/extended/css',
-        destScss: 'dist/extended/scss',
-        destLess: 'dist/extended/less',
         options: {
           font: 'eos-icons-extended',
           syntax: 'bootstrap',
