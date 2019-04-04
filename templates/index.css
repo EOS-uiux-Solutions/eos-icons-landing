@@ -78,7 +78,26 @@ h3 {
 	position: fixed;
 	width: 100%;
 }
-
+.bottom_container {
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.bottom_container p {
+	padding: 10px;
+	display: inline-block;
+	margin: 0px;
+}
+.btn {
+	padding: 10px;
+	background: #e6e6e6;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #1f1f1f;
+	border: 1px solid #d0d0d0;
+	display: inline-block;
+}
 footer {
 	background: #ededed;
 	bottom: 0px;
