@@ -81,22 +81,22 @@ h3 {
 .bottom_container {
 	padding-bottom: 10px;
 	display: flex;
-	margin-bottom: 50px;
 	justify-content: center;
+	margin-bottom: 50px;
 }
-.para {
+.bottom_container p {
 	padding: 10px;
+	display: inline-block;
+	margin: 0px;
 }
 .btn {
 	padding: 10px;
-	margin-right: 10px;
 	background: #e6e6e6;
 	border-radius: 5px;
-	position: relative;
-	top: 25px;
 	text-decoration: none;
 	color: #1f1f1f;
 	border: 1px solid #d0d0d0;
+	display: inline-block;
 }
 footer {
 	background: #ededed;
