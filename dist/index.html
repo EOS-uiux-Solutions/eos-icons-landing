@@ -411,7 +411,7 @@
 
 
 				
-				<pre><code>&lt;i class=&quot;eos-icons&quot;&gt;<span id="name2">icon_name</span>&lt;/i&gt;</code></pre>
+				<pre><code>&lt;i class=&quot;eos-icons&quot;&gt;<span id="eos-icon-name">icon_name</span>&lt;/i&gt;</code></pre>
 				
 			</div>
 		</div>
@@ -449,11 +449,10 @@
 			document.getElementById('icons').onclick = function(e) {
 				e = e || window.event;
 				iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
-				document.getElementById('name2').innerHTML = iconName;
-
+				
 				if (iconName) {
 					showCodeSnippet = true
-					console.log('something selected')
+					document.getElementById('eos-icon-name').innerHTML = iconName;
 					document.getElementsByClassName('how-to-use')[0].style.visibility = 'visible'
 					document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
 				}
@@ -462,11 +461,10 @@
 			document.getElementById('icons-animated').onclick = function(e) {
 				e = e || window.event;
 				iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
-				iconDemo = '<pre><code>&lt;i class=&quoteos-icons eos-icon-' + iconName + '&quot;&gt;' + '&lt;/i&gt;</code></pre>';
-				document.getElementById('animatedIconDemo').innerHTML = iconDemo;
 				if (iconName) {
 					showCodeSnippet = true
-					console.log(iconName)
+					iconDemo = '<pre><code>&lt;i class=&quoteos-icons eos-icon-' + iconName + '&quot;&gt;' + '&lt;/i&gt;</code></pre>';
+					document.getElementById('animatedIconDemo').innerHTML = iconDemo;
 					document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'visible'
 				}
 			}
