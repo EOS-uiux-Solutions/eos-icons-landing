@@ -1,8 +1,24 @@
 stages:
+  - test
   - deploy
   - publish
 
 image: node:8.4.0
+
+# Start the jobs
+test_lints_sass:
+  stage: test
+  before_script:
+    - npm install
+  script:
+    - npx grunt sasslint
+
+test_lints_js:
+  stage: test
+  before_script:
+    - npm install
+  script:
+    - npx grunt eslint
 
 deploy_wip:
   stage: deploy
