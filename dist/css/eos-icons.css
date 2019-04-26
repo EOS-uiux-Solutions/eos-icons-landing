@@ -8,12 +8,12 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 
 @font-face {
   font-family: "eos-icons";
-  src: url("../fonts/eos-icons.eot?dceb6936a488e95d84d11c6a49b3dad5");
-  src: url("../fonts/eos-icons.eot?dceb6936a488e95d84d11c6a49b3dad5#iefix") format("embedded-opentype"),
-		url("../fonts/eos-icons.woff2?dceb6936a488e95d84d11c6a49b3dad5") format("woff2"),
-		url("../fonts/eos-icons.woff?dceb6936a488e95d84d11c6a49b3dad5") format("woff"),
-		url("../fonts/eos-icons.ttf?dceb6936a488e95d84d11c6a49b3dad5") format("truetype"),
-		url("../fonts/eos-icons.svg?dceb6936a488e95d84d11c6a49b3dad5#eos-icons") format("svg");
+  src: url("../fonts/eos-icons.eot?e390e9f08881eb9d49673f522c453d2c");
+  src: url("../fonts/eos-icons.eot?e390e9f08881eb9d49673f522c453d2c#iefix") format("embedded-opentype"),
+		url("../fonts/eos-icons.woff2?e390e9f08881eb9d49673f522c453d2c") format("woff2"),
+		url("../fonts/eos-icons.woff?e390e9f08881eb9d49673f522c453d2c") format("woff"),
+		url("../fonts/eos-icons.ttf?e390e9f08881eb9d49673f522c453d2c") format("truetype"),
+		url("../fonts/eos-icons.svg?e390e9f08881eb9d49673f522c453d2c#eos-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -44,6 +44,173 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
   font-feature-settings: 'liga';
 }
 
+/* Misc variables
+   ========================================================================== */
+/* Titles
+   ========================================================================== */
+h1,
+footer {
+  font-family: "Lato", sans-serif;
+  font-weight: 300; }
+
+h1 {
+  color: #fff;
+  font-size: 32px;
+  margin: 0; }
+
+h2 small {
+  font-size: 0.5em; }
+
+h3 {
+  text-align: center; }
+
+/* Inputs
+   ========================================================================== */
+input[type=text] {
+  transition: width 0.15s ease-in-out;
+  width: 130px; }
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  max-width: 200px;
+  width: 200px; }
+
+/* Misc
+   ========================================================================== */
+/**
+*  Helpers & modifier rules go here
+*/
+.text-white {
+  color: #fff; }
+
+pre {
+  background: #dedede;
+  padding: 16px; }
+
+.pull-right {
+  float: right; }
+
+/* Template styles
+   ========================================================================== */
+body {
+  background: #fff;
+  color: #5f5f5f;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+.container {
+  padding: 16px; }
+
+.icons-container {
+  margin-top: 120px; }
+
+.two-columns {
+  column-count: 2; }
+
+/* Header
+   ========================================================================== */
+header {
+  background: #fe673a;
+  margin-bottom: 2em;
+  position: fixed;
+  top: 0px;
+  width: 100%; }
+
+.eos-logo-color-gradients {
+  background-image: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%); }
+
+.version {
+  font-size: 12px; }
+
+.toolbar {
+  padding: 10px; }
+
+/* Footer
+   ========================================================================== */
+footer {
+  background: #ededed;
+  bottom: 0px;
+  color: #999;
+  font-size: 14px;
+  position: fixed;
+  width: 100%; }
+
+/* Buttons
+   ========================================================================== */
+.btn {
+  background: #e6e6e6;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  color: #1f1f1f;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none; }
+
+.extended-version-wrap {
+  display: flex;
+  margin: 0 0 30px 60px; }
+  .extended-version-wrap a {
+    background: #e6e6e6;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    color: #1f1f1f;
+    padding: 10px 14px;
+    text-decoration: none; }
+
+/* How to use
+   ========================================================================== */
+.how-to-use,
+.how-to-use-animated {
+  background: #333;
+  bottom: 44px;
+  position: fixed;
+  width: 100%; }
+
+.close-code-snippet {
+  cursor: pointer; }
+
+/* Icons item
+   ========================================================================== */
+.icons-item,
+.icons-item i {
+  cursor: pointer;
+  text-align: center; }
+
+.icons-item {
+  display: inline-block;
+  margin-bottom: 3em;
+  width: 200px; }
+  .icons-item:hover {
+    color: #fe673a; }
+  .icons-item i {
+    font-size: 48px; }
+
+/* Bottom container
+   ========================================================================== */
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-bottom: 10px; }
+  .bottom-container p {
+    display: inline-block;
+    margin: 0;
+    padding: 10px; }
+
+/* Searchbar
+   ========================================================================== */
+.searchbar {
+  margin-left: auto;
+  padding-left: 8px; }
+
+/* Loading animated icon variables
+   ========================================================================== */
+/* Installing animated icon variables
+   ========================================================================== */
 /* Loading icon
    ========================================================================== */
 /**
@@ -51,16 +218,13 @@ Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
 * <div class='icon-loading md-18'></div>
 * add md-18, md-24, md-36 or md-48 class for sizes
 */
-/* Variables */
 .eos-icon-loading {
   animation: icon-loading-animate 1s infinite linear;
   border: 3px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   border-top-color: #686565;
-  display: inline-block;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  display: inline-block;
   height: 1em;
   margin: 0 auto;
   width: 1em; }

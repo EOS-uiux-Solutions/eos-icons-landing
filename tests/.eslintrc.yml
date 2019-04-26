@@ -1,0 +1,15 @@
+extends: standard
+env:
+  jquery: true
+  es6: true
+root: true
+plugins:
+  - import
+  - promise
+  - standard
+rules:
+  arrow-spacing: "error"
+  no-const-assign: "error"
+  no-var: "error"
+  prefer-const: "error"
+  prefer-template: "error"

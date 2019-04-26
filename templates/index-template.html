@@ -31,7 +31,7 @@
 			<div id="icons">
 				<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) {
 					var glyph = glyphs[glyphIdx] %>
-					<div class="icons__item" data-name="<%= glyph %>">
+					<div class="icons-item" data-name="<%= glyph %>">
 					  <i class="<%= baseClass %>"><%= glyph %></i>
 						<br>
 						<%= glyph %>
@@ -41,13 +41,13 @@
 			<div id="icons-animated">
 
 				<h3>Animated icons</h3>
-				<div class="icons__item" data-name="loading">
+				<div class="icons-item" data-name="loading">
 					<i class="eos-icons eos-icon-loading"></i>
 					<br/>
 					loading
 				</div>
 
-				<div class="icons__item" data-name="installing">
+				<div class="icons-item" data-name="installing">
 					<i class="eos-icons eos-icon-installing md-48" id="eos-icon-installing"></i>
 					<br>
 					installing
@@ -59,7 +59,7 @@
 		  <div class='container'>
 				<h2 class='text-white'>
 					How to use it:
-					<small id='close-code-snippet' class='pull-right'>X Close</small>
+					<small id='close-code-snippet' class='close-code-snippet pull-right'>X Close</small>
 				</h2>
 
 
@@ -73,13 +73,13 @@
 		  <div class='container'>
 				<h2 class='text-white'>
 					How to use it:
-					<small id='close-code-snippet-animated' class='pull-right'>X Close</small>
+					<small id='close-code-snippet-animated' class='close-code-snippet pull-right'>X Close</small>
 				</h2>
 
 				<div id='animatedIconDemo'></div>
 			</div>
 		</div>
-		<div class="bottom_container">
+		<div class="bottom-container">
 				<p> Didn't find what you were looking for?</p>
 			<div><a class="btn" href="https://gitlab.com/SUSE-UIUX/eos-icons/issues/" target="_blank">Request new icon</a></div>
 		</div>
@@ -90,82 +90,6 @@
 			</div>
 		</footer>
 
-		<script>
-		(function() {
-			var showCodeSnippet = false
-			var iconName
-
-			//hide code snippet by default
-			document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
-			document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
-
-			document.getElementById('icons').onclick = function(e) {
-				e = e || window.event;
-				iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
-				
-				if (iconName) {
-					showCodeSnippet = true
-					document.getElementById('eos-icon-name').innerHTML = iconName;
-					document.getElementsByClassName('how-to-use')[0].style.visibility = 'visible'
-					document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
-				}
-			}
-
-			document.getElementById('icons-animated').onclick = function(e) {
-				e = e || window.event;
-				iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
-				if (iconName) {
-					showCodeSnippet = true
-					iconDemo = '<pre><code>&lt;i class=&quoteos-icons eos-icon-' + iconName + '&quot;&gt;' + '&lt;/i&gt;</code></pre>';
-					document.getElementById('animatedIconDemo').innerHTML = iconDemo;
-					document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'visible'
-				}
-			}
-
-			document.getElementById('close-code-snippet').onclick = function(e) {
-				showCodeSnippet = false
-				iconName = ''
-				document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
-				document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
-			}
-
-			document.getElementById('close-code-snippet-animated').onclick = function(e) {
-				showCodeSnippet = false
-				iconName = ''
-				document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
-				document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
-			}
-
-			var buttonsSizes = document.getElementsByClassName('change-size')
-			for (i = 0; i < buttonsSizes.length; i++) {
-		    buttonsSizes[i].onclick = function(e) {
-					e = e || window.event;
-					iconSize = e.target.getAttribute('data-size')
-					iconClass = 'md-' + iconSize
-	        for (i = 0; i < document.getElementsByClassName('eos-icons').length; i++) {
-					  document.getElementsByClassName('eos-icons')[i].style.fontSize = iconSize + 'px';
-						document.getElementById('eos-icon-installing').className = 'eos-icons eos-icon-installing ' + iconClass;
-					}
-		    };
-			}
-
-		})();
-		function searchIcon(){
-			input=document.getElementsByClassName('searchbar')[0].value;
-			var x=document.getElementsByClassName('icons__item');
-			for (i = 0; i < x.length; i++) { 
- 			 if (!(x[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) {
- 			 	x[i].style.display="none";
-
- 			 }
-			
- 			 else{
-				x[i].style.display="inline-block"; 			 	
- 			 }
-
-				}
-
-		}
-		</script>
+		<script src="js/app.js"></script>
 	</body>
 </html>

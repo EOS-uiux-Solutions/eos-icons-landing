@@ -79,6 +79,12 @@ module.exports = function (grunt) {
           { src: 'templates/index.css', dest: 'dist/extended/css/', flatten: true, expand:true }
         ]
       },
+      js: {
+        files: [
+          { src: 'js/app.js', dest: 'dist/js/', flatten: true, expand:true },
+          { src: 'js/app.js', dest: 'dist/extended/js/', flatten: true, expand:true }
+        ]
+      },
       material: {
         files: [{
           expand: true,
@@ -94,19 +100,31 @@ module.exports = function (grunt) {
         }]
       }
     },
+    sasslint: {
+      options: {
+        configFile: 'tests/.sass-lint.yml',
+      },
+      target: ['scss/**/*.scss']
+    },
     sass: {
       options: {
         implementation: sass
       },
       dist: {
         files: {
-          'templates/css-animated.css': 'animated/scss/index.scss'
+          'templates/sass-compiled.css': 'scss/index.scss'
         }
       }
     },
+    eslint: {
+      options: {
+        configFile: 'tests/.eslintrc.yml',
+      },
+      target: ['js/app.js']
+    },
     concat: {
       dist: {
-        src: ['templates/css-webfont.css', 'templates/css-animated.css'],
+        src: ['templates/css-webfont.css', 'templates/sass-compiled.css'],
         dest: 'templates/css-template.css',
       },
     },
@@ -149,7 +167,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-sass-lint');
+  grunt.loadNpmTasks('grunt-eslint');
 
-  grunt.registerTask('default', ['copy:material', 'sass', 'concat', 'webfont', 'copy:logo', 'copy:css', 'replace', 'addanimated']);
+  grunt.registerTask('default', ['copy:material', 'sasslint', 'sass', 'eslint', 'concat', 'webfont', 'copy:logo', 'copy:css', 'copy:js', 'replace', 'addanimated']);
 
 };
