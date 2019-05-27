@@ -47,12 +47,3 @@ pages:
       - public
   only:
     - master
-
-npm-publish:
-  stage: publish
-  script:
-    - npm install
-    - npx semantic-release
-  when: manual
-  only:
-    - master

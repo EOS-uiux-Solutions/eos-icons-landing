@@ -1,5 +1,5 @@
 {
-  "name": "eos-icons",
+  "name": "eos-icons-landing",
   "version": "2.0.3",
   "description": "The iconic font made for EOS Design System to work together with Material Icons. Extends the library for SUSE and open SUSE product specific usage.",
   "devDependencies": {
@@ -72,6 +72,7 @@
   },
   "homepage": "https://gitlab.com/SUSE-UIUX/eos-icons#README",
   "dependencies": {
+    "eos-icons": "^2.0.3",
     "grunt-text-replace": "^0.4.0",
     "material-design-icons": "^3.0.1"
   }
