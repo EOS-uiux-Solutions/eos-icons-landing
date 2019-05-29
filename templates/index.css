@@ -183,3 +183,27 @@ input[type=text]:focus {
 width: 200px;
 max-width: 200px;
 }
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+
+.bottom-container p {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+
+.btn {
+    background: #e6e6e6;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    color: #1f1f1f;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+}
+

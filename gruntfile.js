@@ -15,10 +15,18 @@ module.exports = function (grunt) {
           { src: 'templates/index.css', dest: 'dist/extended/css/', flatten: true, expand:true }
         ]
       },
+      html: {
+        files: [
+          { src: 'templates/index-template.html', dest: 'dist/', flatten: true, expand:true },
+          { src: 'templates/index-template-extended.html', dest: 'dist/extended/', flatten: true, expand:true }
+        ]
+      },
       js: {
         files: [
           { src: 'js/app.js', dest: 'dist/js/', flatten: true, expand:true },
+          { src: 'js/get-icons.service.js', dest: 'dist/js/', flatten: true, expand:true },
           { src: 'js/app.js', dest: 'dist/extended/js/', flatten: true, expand:true },
+          { src: 'js/get-icons-extended.service.js', dest: 'dist/extended/js/', flatten: true, expand:true },
           { src: 'node_modules/jquery/dist/jquery.min.js', dest: 'dist/vendors/js/', flatten: true, expand:true },
           { src: 'node_modules/eos-icons/dist/js/glyph-list.json', dest: 'dist/js/', flatten: true, expand:true },
           { src: 'node_modules/eos-icons/dist/extended/js/glyph-list.json', dest: 'dist/extended/js/', flatten: true, expand:true }
@@ -35,8 +43,8 @@ module.exports = function (grunt) {
     rename: {
       main: {
         files: [
-          { src: 'templates/index-template.html', dest: 'dist/index.html' },
-          { src: 'templates/index-template-extended.html', dest: 'dist/extended/index.html' }
+          { src: 'dist/index-template.html', dest: 'dist/index.html' },
+          { src: 'dist/extended/index-template-extended.html', dest: 'dist/extended/index.html' }
         ]
       }
     },
@@ -71,6 +79,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-contrib-rename');
 
-  grunt.registerTask('default', ['sasslint', 'sass', 'eslint', 'rename:main', 'copy:dist', 'copy:logo', 'copy:css', 'copy:js']);
+  grunt.registerTask('default', ['sasslint', 'sass', 'eslint', 'copy:html', 'rename:main', 'copy:dist', 'copy:logo', 'copy:css', 'copy:js']);
 
 };
