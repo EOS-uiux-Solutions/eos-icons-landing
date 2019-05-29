@@ -1,12 +1,6 @@
 module.exports = function (grunt) {
   const sass = require('node-sass');
 
-  //Append path to your svg below
-  //EOS-set svg path
-  const src_eos_set=['svg/*.svg'];
-  //Extended set svg path
-  const src_extended_set=['svg/*.svg', 'svg/extended/*.svg'];
-
   grunt.initConfig({
     copy: {
       logo: {
@@ -24,9 +18,27 @@ module.exports = function (grunt) {
       js: {
         files: [
           { src: 'js/app.js', dest: 'dist/js/', flatten: true, expand:true },
-          { src: 'js/app.js', dest: 'dist/extended/js/', flatten: true, expand:true }
+          { src: 'js/app.js', dest: 'dist/extended/js/', flatten: true, expand:true },
+          { src: 'node_modules/jquery/dist/jquery.min.js', dest: 'dist/vendors/js/', flatten: true, expand:true },
+          { src: 'node_modules/eos-icons/dist/js/glyph-list.json', dest: 'dist/js/', flatten: true, expand:true },
+          { src: 'node_modules/eos-icons/dist/extended/js/glyph-list.json', dest: 'dist/extended/js/', flatten: true, expand:true }
         ]
       },
+      dist: {
+        files: [
+        { expand: true, cwd: 'node_modules/eos-icons/dist',
+          src: '**', 
+          dest: 'dist/vendors/dist'
+          }]
+      },
+    },
+    rename: {
+      main: {
+        files: [
+          { src: 'templates/index-template.html', dest: 'dist/index.html' },
+          { src: 'templates/index-template-extended.html', dest: 'dist/extended/index.html' }
+        ]
+      }
     },
     sasslint: {
       options: {
@@ -52,13 +64,13 @@ module.exports = function (grunt) {
     }
   });
 
-
   grunt.loadNpmTasks('grunt-webfont');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-sass-lint');
   grunt.loadNpmTasks('grunt-eslint');
+  grunt.loadNpmTasks('grunt-contrib-rename');
 
-  grunt.registerTask('default', ['sasslint', 'sass', 'eslint', 'copy:logo', 'copy:css', 'copy:js']);
+  grunt.registerTask('default', ['sasslint', 'sass', 'eslint', 'rename:main', 'copy:dist', 'copy:logo', 'copy:css', 'copy:js']);
 
 };

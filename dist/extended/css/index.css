@@ -51,6 +51,17 @@ h3 {
 	        column-count: 2;
 }
 
+.icons-item {
+    display: inline-block;
+    margin-bottom: 3em;
+    width: 200px;
+    text-align: center;
+}
+
+.icons-item i {
+    font-size: 48px;
+}
+
 .icons__item,
 .icons__item i {
 	cursor: pointer;

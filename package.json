@@ -73,7 +73,9 @@
   "homepage": "https://gitlab.com/SUSE-UIUX/eos-icons#README",
   "dependencies": {
     "eos-icons": "^2.0.3",
+    "grunt-contrib-rename": "^0.2.0",
     "grunt-text-replace": "^0.4.0",
+    "jquery": "^3.4.1",
     "material-design-icons": "^3.0.1"
   }
 }
