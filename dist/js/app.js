@@ -10,12 +10,10 @@
   document.getElementById('icons').onclick = function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
-    console.log("iconName")
     document.getElementById('eos-icon-name').innerHTML = iconName
 
     if (iconName) {
       showCodeSnippet = true
-      console.log('something selected')
       document.getElementsByClassName('how-to-use')[0].style.visibility = 'visible'
       document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
     }
