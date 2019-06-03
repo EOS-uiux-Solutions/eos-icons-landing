@@ -60,7 +60,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'templates/sass-compiled.css': 'scss/index.scss'
+          'templates/index.css': 'scss/index.scss'
         }
       }
     },
