@@ -60,13 +60,13 @@
 
 const searchIcon = () => { // eslint-disable-line no-unused-vars
   const input = document.getElementsByClassName('searchbar')[0].value
-  const x = document.getElementsByClassName('icons-item')
+  const icons = document.getElementsByClassName('icons-item')
 
-  for (let i = 0; i < x.length; i++) {
-    if (!(x[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) {
-      x[i].style.display = 'none'
+  for (let i = 0; i < icons.length; i++) {
+    if (!(icons[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) {
+      icons[i].style.display = 'none'
     } else {
-      x[i].style.display = 'inline-block'
+      icons[i].style.display = 'inline-block'
     }
   }
 }
