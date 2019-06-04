@@ -1,10 +1,8 @@
-/* Misc variables
-   ========================================================================== */
+/* Gradient */
 /* Titles
    ========================================================================== */
 h1,
 footer {
-  font-family: "Lato", sans-serif;
   font-weight: 300; }
 
 h1 {
@@ -17,17 +15,6 @@ h2 small {
 
 h3 {
   text-align: center; }
-
-/* Inputs
-   ========================================================================== */
-input[type=text] {
-  transition: width 0.15s ease-in-out;
-  width: 130px; }
-
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-  max-width: 200px;
-  width: 200px; }
 
 /* Misc
    ========================================================================== */
@@ -43,6 +30,10 @@ pre {
 
 .pull-right {
   float: right; }
+
+html,
+body {
+  font-family: "Lato", sans-serif; }
 
 /* Template styles
    ========================================================================== */
@@ -86,9 +77,9 @@ header {
 /* Footer
    ========================================================================== */
 footer {
-  background: #ededed;
+  background: #dedede;
   bottom: 0px;
-  color: #999;
+  color: #5f5f5f;
   font-size: 14px;
   position: fixed;
   width: 100%; }
@@ -96,10 +87,10 @@ footer {
 /* Buttons
    ========================================================================== */
 .btn {
-  background: #e6e6e6;
+  background: #dedede;
   border: 1px solid #d0d0d0;
   border-radius: 5px;
-  color: #1f1f1f;
+  color: #333;
   display: inline-block;
   padding: 10px;
   text-decoration: none; }
@@ -108,10 +99,10 @@ footer {
   display: flex;
   margin: 0 0 30px 60px; }
   .extended-version-wrap a {
-    background: #e6e6e6;
+    background: #dedede;
     border: 1px solid #d0d0d0;
     border-radius: 5px;
-    color: #1f1f1f;
+    color: #333;
     padding: 10px 14px;
     text-decoration: none; }
 
@@ -159,7 +150,12 @@ footer {
    ========================================================================== */
 .searchbar {
   margin-left: auto;
-  padding-left: 8px; }
+  padding-left: 8px;
+  transition: width .15s ease-in-out;
+  width: 130px; }
+  .searchbar:focus {
+    max-width: 200px;
+    width: 200px; }
 
 /* Loading animated icon variables
    ========================================================================== */
