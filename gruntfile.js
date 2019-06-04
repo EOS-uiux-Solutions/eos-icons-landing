@@ -26,7 +26,7 @@ module.exports = function (grunt) {
           { src: 'js/app.js', dest: 'dist/js/', flatten: true, expand:true },
           { src: 'js/get-icons.service.js', dest: 'dist/js/', flatten: true, expand:true },
           { src: 'js/app.js', dest: 'dist/extended/js/', flatten: true, expand:true },
-          { src: 'js/get-icons-extended.service.js', dest: 'dist/extended/js/', flatten: true, expand:true },
+          { src: 'js/get-icons.service.js', dest: 'dist/extended/js/', flatten: true, expand:true },
           { src: 'node_modules/jquery/dist/jquery.min.js', dest: 'dist/vendors/js/', flatten: true, expand:true },
           { src: 'node_modules/eos-icons/dist/js/glyph-list.json', dest: 'dist/js/', flatten: true, expand:true },
           { src: 'node_modules/eos-icons/dist/extended/js/glyph-list.json', dest: 'dist/extended/js/', flatten: true, expand:true }
