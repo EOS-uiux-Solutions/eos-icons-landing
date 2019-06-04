@@ -1,6 +1,6 @@
 const getIconsList = (callback) => { 
   $.ajax({
-    url: '/extended/js/glyph-list.json',
+    url: 'extended/js/glyph-list.json',
     method: 'get',
     dataType: `json`,
     error: function (xhr, status, error) {
