@@ -5,20 +5,20 @@ module.exports = function (grunt) {
     copy: {
       logo: {
         files: [
-          { src: 'templates/logo.png', dest: 'dist/images/', flatten: true, expand:true },
-          { src: 'templates/logo.png', dest: 'dist/extended/images/', flatten: true, expand:true }
+          { src: 'views/logo.png', dest: 'dist/images/', flatten: true, expand:true },
+          { src: 'views/logo.png', dest: 'dist/extended/images/', flatten: true, expand:true }
         ]
       },
       css: {
         files: [
-          { src: 'templates/index.css', dest: 'dist/css/', flatten: true, expand:true },
-          { src: 'templates/index.css', dest: 'dist/extended/css/', flatten: true, expand:true }
+          { src: 'views/index.css', dest: 'dist/css/', flatten: true, expand:true },
+          { src: 'views/index.css', dest: 'dist/extended/css/', flatten: true, expand:true }
         ]
       },
       html: {
         files: [
-          { src: 'templates/index-template.html', dest: 'dist/', flatten: true, expand:true },
-          { src: 'templates/index-template-extended.html', dest: 'dist/extended/', flatten: true, expand:true }
+          { src: 'views/index.html', dest: 'dist/', flatten: true, expand:true },
+          { src: 'views/extended.html', dest: 'dist/extended/', flatten: true, expand:true }
         ]
       },
       js: {
@@ -43,8 +43,7 @@ module.exports = function (grunt) {
     rename: {
       main: {
         files: [
-          { src: 'dist/index-template.html', dest: 'dist/index.html' },
-          { src: 'dist/extended/index-template-extended.html', dest: 'dist/extended/index.html' }
+          { src: 'dist/extended/extended.html', dest: 'dist/extended/index.html' }
         ]
       }
     },
@@ -60,7 +59,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'templates/index.css': 'scss/index.scss'
+          'views/index.css': 'scss/index.scss'
         }
       }
     },
