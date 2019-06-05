@@ -35,7 +35,7 @@ module.exports = function (grunt) {
       dist: {
         files: [
         { expand: true, cwd: 'node_modules/eos-icons/dist',
-          src: '**', 
+          src: '**',
           dest: 'dist/vendors/dist'
           }]
       },
@@ -69,6 +69,11 @@ module.exports = function (grunt) {
         configFile: 'tests/.eslintrc.yml',
       },
       target: ['js/app.js']
+    },
+    htmlvalidate: {
+      default: {
+        src: ['templates/*.html'],
+      }
     }
   });
 
@@ -78,7 +83,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass-lint');
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-contrib-rename');
+  grunt.loadNpmTasks('grunt-html-validate');
 
-  grunt.registerTask('default', ['sasslint', 'sass', 'eslint', 'copy:html', 'rename:main', 'copy:dist', 'copy:logo', 'copy:css', 'copy:js']);
+  grunt.registerTask('default', ['htmlvalidate', 'sasslint', 'sass', 'eslint', 'copy:html', 'rename:main', 'copy:dist', 'copy:logo', 'copy:css', 'copy:js']);
 
 };
