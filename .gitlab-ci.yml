@@ -9,16 +9,26 @@ image: node:8.4.0
 test_lints_sass:
   stage: test
   before_script:
+    - npm i -g grunt
     - npm install
   script:
-    - npx grunt sasslint
+    - grunt sasslint
 
 test_lints_js:
   stage: test
   before_script:
+    - npm i -g grunt
     - npm install
   script:
-    - npx grunt eslint
+    - grunt eslint
+
+test_lints_html:
+  stage: test
+  before_script:
+    - npm i -g grunt
+    - npm install
+  script:
+    - grunt htmlvalidate
 
 pages:
   stage: deploy
