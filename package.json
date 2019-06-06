@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/SUSE-UIUX/eos-icons.git"
+    "url": "git+ssh://git@gitlab.com/SUSE-UIUX/eos-icons-landing.git"
   },
   "keywords": [
     "iconic",
@@ -36,41 +36,11 @@
     "icons"
   ],
   "author": "SUSE UX/UI team",
-  "contributors": [
-    {
-      "name": "Cynthia Sanchez",
-      "web": "https://de.linkedin.com/in/cyntsanchez"
-    },
-    {
-      "name": "Jesus Herman",
-      "web": "https://www.linkedin.com/in/jesushermanmarina/"
-    },
-    {
-      "name": "Zvezdana Marjanovic",
-      "web": "https://www.linkedin.com/in/zvezdana-marjanovic-5375b251"
-    },
-    {
-      "name": "Manuele Carlini",
-      "web": "https://www.linkedin.com/in/manuelecarlini"
-    },
-    {
-      "name": "Kenneth Wimer",
-      "web": "https://www.linkedin.com/in/kennethwimer"
-    },
-    {
-      "name": "Richa Bishts",
-      "web": "https://www.linkedin.com/in/richabisht"
-    },
-    {
-      "name": "Sorin Curescu",
-      "web": "https://www.linkedin.com/in/en3sis"
-    }
-  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/SUSE-UIUX/eos-icons/issues"
+    "url": "https://gitlab.com/SUSE-UIUX/eos-icons-landing/issues"
   },
-  "homepage": "https://gitlab.com/SUSE-UIUX/eos-icons#README",
+  "homepage": "https://gitlab.com/SUSE-UIUX/eos-icons-landing#README",
   "dependencies": {
     "eos-icons": "^2.0.3",
     "grunt-contrib-rename": "^0.2.0",
