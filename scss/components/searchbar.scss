@@ -1,0 +1,14 @@
+/* Searchbar
+   ========================================================================== */
+.searchbar {
+  margin-left: auto;
+  padding-left: 8px;
+  transition: width .15s ease-in-out;
+  width: 130px;
+
+  &:focus {
+    max-width: 200px;
+    width: 200px;
+  }
+
+}
