@@ -1,0 +1,22 @@
+/* Misc
+   ========================================================================== */
+/**
+*  Helpers & modifier rules go here
+*/
+.text-white {
+  color: $light-color;
+}
+
+pre {
+  background: $light-gray;
+  padding: 16px;
+}
+
+.pull-right {
+  float: right;
+}
+
+html,
+body {
+  font-family: $font-family;
+}
