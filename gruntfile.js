@@ -71,7 +71,7 @@ module.exports = function (grunt) {
     },
     htmlvalidate: {
       default: {
-        src: ['templates/*.html'],
+        src: ['views/*.html'],
       }
     }
   });
