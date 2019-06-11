@@ -25,6 +25,8 @@ Running the `grunt` command will initiate the default Grunt task, generating a `
 
 You can now open the landing page here `dist/index.html` or simply run `open dist/index.html`.
 
+Alternatively, you can open the extended version of the EOS iconic font, which includes the Material Design icon font by opening it from here `dist/index-extended.html`.
+
 # Developing the page
 
 1- You will find the html, js, scss files under the `views`, `js` & `scss` folders. We strongly recommend that you have a look at our guideline on developing for the [EOS Design System](https://gitlab.com/SUSE-UIUX/eos/wikis/home#developing-the-eos-project).
