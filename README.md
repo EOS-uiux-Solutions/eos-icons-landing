@@ -3,7 +3,7 @@
 ![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)
 
 
-Demo: http://suse-uiux.gitlab.io/eos-icons-landing/
+Demo: https://eos-icons.eosdesignsystem.com/
 
 This is the landing page for the EOS Design System iconic font. It showcases all the icons included in it.
 
