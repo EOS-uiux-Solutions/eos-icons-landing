@@ -1,146 +1,39 @@
-# EOS iconic font
+# EOS iconic font landing page
 
-Demo: https://suse-uiux.gitlab.io/eos-icons/
+Demo:
+
+This is the landing page for the EOS Design System iconic font. It showcases all the icons included in it.
 
 This is the iconic font used in the EOS Design System. The official SUSE Linux Design System, and for all open source projects to use and re-use.
 
-To view the EOS Design System project check gitlab https://gitlab.com/SUSE-UIUX/eos
+To view the EOS Design System iconic font project, check its repository: https://gitlab.com/SUSE-UIUX/eos-icons
 
-# Installing with npm
+To view the EOS Design System project, check https://gitlab.com/SUSE-UIUX/eos
 
-`npm install eos-icons --save`
+# Installing dependencies
 
-# Using EOS icons in your projects
+`npm i`
+
+# Generate the page
 
 Just like in any other iconic font, you need to add the Fonts and CSS files in your project:
 
-1- Add the `eos-icons.css` file available under the `dist/css` folder into your projects `<head>`:
+Running the `grunt` command will initiate the default Grunt task, generating a `dist` folder.
 
-`<link rel="stylesheet" href="assets/eos-icons.css">`
+You can now open the landing page here `dist/index.html` or simply run `open dist/index.html`.
 
-2- Make sure the font files available in the `dist/fonts` folder are placed under your `assets/fonts` folder so the .css file can read them correctly.
+# Developing the page
 
-3- Use the icons in your html as follows:
+1- You will find the html, js, scss files under the `views`, `js` & `scss` folders. We strongly recommend that you have a look at our guideline on developing for the [EOS Design System](https://gitlab.com/SUSE-UIUX/eos/wikis/home#developing-the-eos-project).
 
-```
-<i class="eos-icons"> LIGATURE_OF_THE_ICON</i>
-```
+2- Once you've implemented your changes you need to generate the `dist` folder again by running the `grunt` command.
 
-Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our online tool to see the icon's name: https://suse-uiux.gitlab.io/eos-icons/, or simply run `open dist/index.html` to see it locally.
+This task will also lint your html, js and css files and will return an error in the console.
 
-# Using animated icons
+3- If you want to run a specific linter, you can also do it by only running its grunt task (found in `grunfile.js`):
 
-The animated EOS icons are built using CSS animations. To implement them you don't need ligatures but classes instead.
-
-For example:
-
-```
-<i class="eos-icons eos-icon-loading"></i>
-```
-
-See the other animated icons classes in our [demo page](https://suse-uiux.gitlab.io/eos-icons/). Click on the icon you want to use to see the code snippet.
-
-# EOS extended version with Material Design
-
-Since EOS icons are designed following the [Material Design guidelines](https://material.io/design/iconography/system-icons.html) and made to work together with Material Icons, we decided to include an extended version of EOS icons for easy implementation.
-
-With the extended version you only need to use 1 class for all icons (EOS and Material Design). To implement it, you need to grab the `css/` and `font/` folders available at `dist/extended`, then add the `eos-icons-extended.css` under the `<head>` of your project accordingly.
-
-For more information about Material Design Icons, please refer to the [original MD icons repository](https://github.com/google/material-design-icons) where you can find the corresponding licensing and documentation.
-
-#### Example of usage of the EOS extended
-
-```
-<!-- This is an EOS icon -->
-<i class="eos-icons">action_chains</i>
-
-<!-- This is a Material Design icon -->
-<i class="eos-icons">bluetooth_disabled</i>
-
-```
-
-# Adding your icons to the iconic font
-
-If you want to create your own icons and add them to this library, follow the next steps:
-
-### What do you need to build the fonts locally?
-
-This project uses Webfont for Grunt to build. More info about the project: https://www.npmjs.com/package/grunt-webfont
-
-We use Fontforge to render our icons since the quality is better than using plain node, and it supports Ligatures.
-Our icons follow Google Material Icons guidelines one-to-one. This is the main reason for us to use ligatures as well. We made a perfectly compatible icon font for those already using MD icons.
-If you want to know more about all the standards we follow for the EOS, visit our public wiki, which is our main internal guideline: https://gitlab.com/SUSE-UIUX/eos/wikis/home
-
-### Installing dependencies
-
-- Clone this repository and go to the folder:
-
-```
-git clone git@gitlab.com:SUSE-UIUX/eos-icons.git
-cd eos-icons
-```
-
-- Make sure you have NODE.js installed, if not:
-
-```
-brew install node
-```
-
-- Install Grunt globally:
-
-```
-npm install -g grunt-cli
-```
-
-- Install npm dependencies:
-
-```
-npm install
-```
-
-Install the dependencies:
-
-- OSX
-
-```
-brew install ttfautohint fontforge --with-python
-```
-
-You will need to have Xcode installed. First install the command line tool:
-
-```
-xcode-select --install
-```
-
-And then download the latest version from:
-
-https://developer.apple.com/xcode/
-
-- Linux
-
-```
-sudo apt-get install fontforge ttfautohint
-```
-
-### Design and add your SVG icons
-
-Add your icons into the `svg/` folder. All our icons have been designed with Illustrator, but designing with any tool like Inkscape will work just fine, just make sure the exported SVG code is as clean as possible.
-
-SVG file names with more than one word in it should not have a minus character separating the words (e.g.: some-name.svg), instead, use an underscore (e.g.: some_name.svg). The use of spaces in the filename also creates conflicts in the resulting iconic font.
-
-Then all you need to do, is run
-
-```
-grunt
-```
-This will build the assets under the `dist/` folder.
-
-Open the `index.html` in your browser to easily navigate the iconic font and check the look of the icons in different sizes.
-
-```
-open dist/index.html
-```
-
-We added the recommended sizes MD icons use: 18, 24, 36, and 48 pixels, plus 16px which is our minimum allowed size at EOS Design System.
+- For html: `grunt htmlvalidate`
+- For js: `grunt eslint`
+- For scss: `grunt sasslint`
 
 **That's it!!.. easy as pie**
