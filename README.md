@@ -1,6 +1,9 @@
 # EOS iconic font landing page
+![Open Source Love png2](https://badges.frapsoft.com/os/v2/open-source.png?v=103)
+![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-Demo:
+
+Demo: http://suse-uiux.gitlab.io/eos-icons-landing/
 
 This is the landing page for the EOS Design System iconic font. It showcases all the icons included in it.
 
@@ -36,4 +39,15 @@ This task will also lint your html, js and css files and will return an error in
 - For js: `grunt eslint`
 - For scss: `grunt sasslint`
 
-**That's it!!.. easy as pie**
+# Our "thank you" section
+
+### Tested for every browser in every device
+
+Thanks to [browserstack](https://www.browserstack.com) and their continuous contribution to open source projects, we continuously test the EOS to make sure all our features and components work perfectly fine in all browsers.
+Browserstack helps us make sure our Design System also delivers a peace of mind to all developers and designers making use of our components and layout in their products.
+
+
+### Projects using EOS
+
+- [openSUSE](https://www.opensuse.org/)
+- [HAWK](https://hawk-ui.github.io/)
