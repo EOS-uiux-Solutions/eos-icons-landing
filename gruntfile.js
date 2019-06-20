@@ -6,7 +6,8 @@ module.exports = function (grunt) {
       logo: {
         files: [
           { src: 'views/logo.png', dest: 'dist/images/', flatten: true, expand:true },
-          { src: 'views/logo.png', dest: 'dist/extended/images/', flatten: true, expand:true }
+          { src: 'views/logo.png', dest: 'dist/extended/images/', flatten: true, expand:true },
+          { src: 'views/eos-bunny.png', dest: 'dist/extended/images/', flatten: true, expand:true }
         ]
       },
       css: {
@@ -19,7 +20,8 @@ module.exports = function (grunt) {
         files: [
           { src: 'views/index.html', dest: 'dist/', flatten: true, expand:true },
           { src: 'views/extended.html', dest: 'dist/extended/', flatten: true, expand:true },
-          { src: 'views/icons-picker.html', dest: 'dist/extended/', flatten: true, expand:true }
+          { src: 'views/icons-picker.html', dest: 'dist/extended/', flatten: true, expand:true },
+          { src: 'views/thankyouPage.html', dest: 'dist/extended/', flatten: true, expand:true }
         ]
       },
       js: {

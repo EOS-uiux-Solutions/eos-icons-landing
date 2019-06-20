@@ -172,6 +172,15 @@ footer {
 .upload-config-span {
   color: #d60015; }
 
+.thankyou-page-container {
+  margin-bottom: auto;
+  margin-top: 100px;
+  padding: 16px;
+  text-align: center; }
+
+.thankyou-page-container img {
+  width: 170px; }
+
 /* Loading animated icon variables
    ========================================================================== */
 /* Installing animated icon variables

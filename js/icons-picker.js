@@ -69,3 +69,7 @@ const addSelection = (obj) => { // eslint-disable-line no-unused-vars
     obj.classList.add('icons-item-selected');
   }
 }
+
+const generate = () => { // eslint-disable-line no-unused-vars
+  location.href = "thankyouPage.html"
+}
