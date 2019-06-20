@@ -13,21 +13,23 @@ To view the EOS Design System iconic font project, check its repository: https:/
 
 To view the EOS Design System project, check https://gitlab.com/SUSE-UIUX/eos
 
-# Installing dependencies
+## Development guide
 
-`npm i`
+### Install the dependencies
 
-# Generate the page
+- Run `npm i` to install all the npm dependencies.
 
-Just like in any other iconic font, you need to add the Fonts and CSS files in your project:
+- Run `npm i -g grunt` to install Grunt globally in your machine. This will allow you to run `grunt`. If you don't want to install it globally, you can skip this step and run grunt with `npx grunt`. For that, you need to install `npm i -g npx`. More information about npx https://www.npmjs.com/package/npx
 
-Running the `grunt` command will initiate the default Grunt task, generating a `dist` folder.
+### Build the site
 
-You can now open the landing page here `dist/index.html` or simply run `open dist/index.html`.
+- Run the `grunt` command to initiate the default Grunt task, this will generate a `dist` folder which will contain the compiled site.
 
-Alternatively, you can open the extended version of the EOS iconic font, which includes the Material Design icon font by opening it from here `dist/index-extended.html`.
+- To view the site in your browser locally, you need to start a small server first. Go into the newly created `dist` folder with `cd dist`, and then run `python -m SimpleHTTPServer`.
 
-# Developing the page
+- You can now go to http://localhost:8000
+
+### File structure for development
 
 1- You will find the html, js, scss files under the `views`, `js` & `scss` folders. We strongly recommend that you have a look at our guideline on developing for the [EOS Design System](https://gitlab.com/SUSE-UIUX/eos/wikis/home#developing-the-eos-project).
 
@@ -47,9 +49,3 @@ This task will also lint your html, js and css files and will return an error in
 
 Thanks to [browserstack](https://www.browserstack.com) and their continuous contribution to open source projects, we continuously test the EOS to make sure all our features and components work perfectly fine in all browsers.
 Browserstack helps us make sure our Design System also delivers a peace of mind to all developers and designers making use of our components and layout in their products.
-
-
-### Projects using EOS
-
-- [openSUSE](https://www.opensuse.org/)
-- [HAWK](https://hawk-ui.github.io/)
