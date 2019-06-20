@@ -125,14 +125,18 @@ footer {
 .icons-item {
   display: inline-block;
   margin-bottom: 3em;
+  user-select: none;
   width: 200px; }
   .icons-item:hover {
     color: #fe673a; }
   .icons-item i {
-    font-size: 48px; }
+    font-size: 48px;
+    padding: 10px 10px; }
 
-.icons-item-selected {
-  color: #fe673a; }
+.icons-item-selected i {
+  background-image: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+  border-radius: 10px;
+  color: white; }
 
 /* Bottom container
    ========================================================================== */

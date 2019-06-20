@@ -9,6 +9,7 @@
 .icons-item {
   display: inline-block;
   margin-bottom: 3em;
+  user-select: none;
   width: 200px;
 
   &:hover {
@@ -17,10 +18,13 @@
 
   i {
     font-size: $icons-item-font-size;
+    padding: $icons-item-padding $icons-item-padding;
   }
 }
 
-.icons-item-selected {
-  color: $icons-item-hover-color;
+.icons-item-selected i {
+  background-image: linear-gradient(135deg, $header-gradient-initial 0%, $header-gradient-middle 50%, $header-gradient-final 100%);
+  border-radius: $icons-item-selected-border-radius;
+  color: $icons-item-selected-color;
 }
 
