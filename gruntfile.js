@@ -18,7 +18,8 @@ module.exports = function (grunt) {
       html: {
         files: [
           { src: 'views/index.html', dest: 'dist/', flatten: true, expand:true },
-          { src: 'views/extended.html', dest: 'dist/extended/', flatten: true, expand:true }
+          { src: 'views/extended.html', dest: 'dist/extended/', flatten: true, expand:true },
+          { src: 'views/icons-picker.html', dest: 'dist/extended/', flatten: true, expand:true }
         ]
       },
       js: {
@@ -29,7 +30,8 @@ module.exports = function (grunt) {
           { src: 'js/get-icons.service.js', dest: 'dist/extended/js/', flatten: true, expand:true },
           { src: 'node_modules/jquery/dist/jquery.min.js', dest: 'dist/vendors/js/', flatten: true, expand:true },
           { src: 'node_modules/eos-icons/dist/js/glyph-list.json', dest: 'dist/js/', flatten: true, expand:true },
-          { src: 'node_modules/eos-icons/dist/extended/js/glyph-list.json', dest: 'dist/extended/js/', flatten: true, expand:true }
+          { src: 'node_modules/eos-icons/dist/extended/js/glyph-list.json', dest: 'dist/extended/js/', flatten: true, expand:true },
+          { src: 'js/icons-picker.js', dest: 'dist/extended/js/', flatten: true, expand:true }
         ]
       },
       dist: {

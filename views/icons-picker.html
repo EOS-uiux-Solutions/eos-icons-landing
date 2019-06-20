@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EOS Icons Picker</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="../vendors/dist/extended/css/eos-icons-extended.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header class="eos-logo-color-gradients">
+      <div class="container two-columns">
+        <h1>
+          <img alt="EOS icons" src="images/logo.png">
+          <small class="version">version 1.0.0</small>
+        </h1>
+        <div class="pull-right toolbar">
+          <span class="text-white">Try different sizes: </span>
+          <button type="button" class="change-size" data-size="18">18px</button>
+          <button type="button" class="change-size" data-size="24">24px</button>
+          <button type="button" class="change-size" data-size="36">36px</button>
+          <button type="button" class="change-size" data-size="48">48px</button>
+        </div>
+      </div>
+    </header>
+    <div class="container icons-container">
+      <h3>Click on Icons to select them</h3>
+        <div class="extended-version-wrap">
+            <a href="../index.html">EOS set</a>
+            <input class="searchbar" onkeyup="searchIcon()" type="text" name="search" placeholder="Search Icons...">
+        </div>
+      <div id="icons" class="js-icons-list">
+        <div class="icons-item js-icons-item" onclick="addSelection(this)" data-name="action_chains">
+            <i class="eos-icons js-eos-icons"></i>
+            <br>
+            <div class="js-eos-icon-name"></div>
+        </div>
+      </div>
+      <div id="icons-animated">
+
+        <h3>Animated icons</h3>
+        <div class="icons-item" data-name="loading">
+          <i class="eos-icons eos-icon-loading"></i>
+          <br>
+          loading
+        </div>
+
+        <div class="icons-item" data-name="installing">
+          <i class="eos-icons eos-icon-installing md-48" id="eos-icon-installing"></i>
+          <br>
+          installing
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bottom-container">
+        <p> Didn"t find what you were looking for?</p>
+      <div><a class="btn" href="https://gitlab.com/SUSE-UIUX/eos-icons/issues/" target="_blank">Request new icon</a></div>
+    </div>
+<footer>
+      <div class="container">
+       <p class="icons-picker-footer-para">To continue building a previous font, click </p>
+       <a data-toggle="modal" data-target="#myModal" class="icons-picker-footer-link">here.</a>
+
+         <button class="generate-btn-icons-picker" type="submit" onclick="generate()">Generate font</button>
+
+      </div>
+    </footer>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Upload config File</h4>
+        </div>
+        <div class="modal-body">
+          <p>Upload the <span class="upload-config-span"><i>icons_config.json</i></span> file here.</p>
+          <input type="file" id="configFile" >
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="prev_selection()" data-dismiss="modal">Proceed</button>
+        </div>
+      </div>
+    </div>
+ </div>
+
+
+    <script src="../vendors/js/jquery.min.js"></script>
+     <script src="js/get-icons.service.js"></script>
+    <script src="js/icons-picker.js"></script>
+
+  </body>
+</html>

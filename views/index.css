@@ -131,6 +131,9 @@ footer {
   .icons-item i {
     font-size: 48px; }
 
+.icons-item-selected {
+  color: #fe673a; }
+
 /* Bottom container
    ========================================================================== */
 .bottom-container {
@@ -153,6 +156,21 @@ footer {
   .searchbar:focus {
     max-width: 200px;
     width: 200px; }
+
+.icons-picker-footer-para {
+  color: #333;
+  display: inline; }
+
+.icons-picker-footer-link {
+  cursor: pointer; }
+
+.generate-btn-icons-picker {
+  color: #333;
+  margin-left: 90%;
+  padding: 10px 10px; }
+
+.upload-config-span {
+  color: #d60015; }
 
 /* Loading animated icon variables
    ========================================================================== */
