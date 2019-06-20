@@ -169,9 +169,7 @@ footer {
   cursor: pointer; }
 
 .generate-btn-icons-picker {
-  color: #333;
-  margin-left: 90%;
-  padding: 10px 10px; }
+  float: right; }
 
 .upload-config-span {
   color: #d60015; }
