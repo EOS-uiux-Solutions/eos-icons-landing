@@ -68,6 +68,8 @@ const addSelection = (obj) => { // eslint-disable-line no-unused-vars
   else{
     obj.classList.add('icons-item-selected');
   }
+  count=document.getElementsByClassName('icons-item-selected').length
+  $('.icons-count').html(count + ' icons selected.')
 }
 
 const generate = () => { // eslint-disable-line no-unused-vars

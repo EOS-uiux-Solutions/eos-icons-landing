@@ -168,11 +168,14 @@ footer {
 .icons-picker-footer-link {
   cursor: pointer; }
 
-.generate-btn-icons-picker {
+.icons-picker-footer-generate-button {
   float: right; }
 
 .upload-config-span {
   color: #d60015; }
+
+.icons-count {
+  display: inline; }
 
 .thankyou-page-container {
   margin-bottom: auto;
