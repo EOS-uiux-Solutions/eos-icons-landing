@@ -52,15 +52,6 @@ const searchIcon = () => { // eslint-disable-line no-unused-vars
   }
 }
 
-/*$('.js-icons-item').click(function(){
-  if($(this).attr('class').includes('icons-item-selected')){
-    $(this).removeClass('icons-item-selected');
-  }
-  else{
-    $(this).addClass('icons-item-selected');
-  }
-});
-*/
 const addSelection = (obj) => { // eslint-disable-line no-unused-vars
   if(obj.className.includes('icons-item-selected')){
     obj.classList.remove('icons-item-selected');
