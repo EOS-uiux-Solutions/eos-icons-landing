@@ -1,21 +1,14 @@
-.icons-picker-footer-para {
-  color: $dark-black;
-  display: inline;
-	}
+.icons-picker-footer {
+  p {
+    color: $dark-black;
+    display: inline;
+  }
 
-.icons-picker-footer-link {
-  cursor: pointer;
-}
+  .link {
+    cursor: pointer;
+  }
 
-.icons-picker-footer-generate-button {
-  float: right;
-}
-
-.upload-config-span {
-  color: $dark-red;
-}
-
-.icons-count {
-  display: inline;
-
+  .generate {
+    float: right;
+  }
 }

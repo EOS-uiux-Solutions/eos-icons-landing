@@ -161,30 +161,23 @@ footer {
     max-width: 200px;
     width: 200px; }
 
-.icons-picker-footer-para {
+.icons-picker-footer p {
   color: #333;
   display: inline; }
 
-.icons-picker-footer-link {
+.icons-picker-footer .link {
   cursor: pointer; }
 
-.icons-picker-footer-generate-button {
+.icons-picker-footer .generate {
   float: right; }
-
-.upload-config-span {
-  color: #d60015; }
-
-.icons-count {
-  display: inline; }
 
 .thankyou-page-container {
   margin-bottom: auto;
   margin-top: 100px;
   padding: 16px;
   text-align: center; }
-
-.thankyou-page-container img {
-  width: 170px; }
+  .thankyou-page-container img {
+    width: 170px; }
 
 /* Loading animated icon variables
    ========================================================================== */

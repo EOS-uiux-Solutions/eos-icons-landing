@@ -21,7 +21,7 @@ module.exports = function (grunt) {
           { src: 'views/index.html', dest: 'dist/', flatten: true, expand:true },
           { src: 'views/extended.html', dest: 'dist/extended/', flatten: true, expand:true },
           { src: 'views/icons-picker.html', dest: 'dist/extended/', flatten: true, expand:true },
-          { src: 'views/thankyouPage.html', dest: 'dist/extended/', flatten: true, expand:true }
+          { src: 'views/thankyou-page.html', dest: 'dist/extended/', flatten: true, expand:true }
         ]
       },
       js: {
