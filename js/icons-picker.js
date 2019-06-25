@@ -65,7 +65,7 @@ const addSelection = (obj) => { // eslint-disable-line no-unused-vars
 
 const generate = () => { // eslint-disable-line no-unused-vars
   if ($('.icons-item-selected').length > 0) {
-    location.href = "thankyouPage.html";  
+    location.href = "thankyou-page.html";  
   }
   else
     alert("Please select atleast one icon to generate font");
