@@ -125,11 +125,18 @@ footer {
 .icons-item {
   display: inline-block;
   margin-bottom: 3em;
+  user-select: none;
   width: 200px; }
   .icons-item:hover {
     color: #fe673a; }
   .icons-item i {
-    font-size: 48px; }
+    font-size: 48px;
+    padding: 10px 10px; }
+
+.icons-item-selected i {
+  background-image: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+  border-radius: 10px;
+  color: white; }
 
 /* Bottom container
    ========================================================================== */
@@ -153,6 +160,24 @@ footer {
   .searchbar:focus {
     max-width: 200px;
     width: 200px; }
+
+.icons-picker-footer p {
+  color: #333;
+  display: inline; }
+
+.icons-picker-footer .link {
+  cursor: pointer; }
+
+.icons-picker-footer .generate {
+  float: right; }
+
+.thankyou-page-container {
+  margin-bottom: auto;
+  margin-top: 100px;
+  padding: 16px;
+  text-align: center; }
+  .thankyou-page-container img {
+    width: 170px; }
 
 /* Loading animated icon variables
    ========================================================================== */
