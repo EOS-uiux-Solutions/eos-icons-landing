@@ -1,0 +1,2 @@
+mkdir -p dist/assets/js
+npx babel assets/javascripts/application-landing --out-file dist/assets/js/application-landing.min.js

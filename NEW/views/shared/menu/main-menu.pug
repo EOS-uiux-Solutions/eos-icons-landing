@@ -1,0 +1,95 @@
+h6.menu-headers
+  | Tools and guides
+ul.no-list-style
+  li(data-placement='right', title='Dashboard')
+    a.js-select-current-parent.js-feature-flag(href='/dashboard', data-feature-flag= docEnabled['/dashboard'])
+      i.material-icons
+        | dashboard
+      span
+        | Dashboard
+  li(data-placement='right', title='Colors')
+    a.js-select-current-parent.js-feature-flag(href='/colors', data-feature-flag= docEnabled['/colors'])
+      i.material-icons
+        | color_lens
+      span
+        | Colors
+  li(data-placement='right', title='Icons')
+    a.js-select-current-parent.js-feature-flag(href='/icons', data-feature-flag= docEnabled['/icons'])
+      i.eos-icons
+        | miscellaneous
+      span
+        | Icons
+  li(data-placement='right', title='Writing guides')
+    a.js-select-current-parent.js-feature-flag(href='/writing', data-feature-flag= docEnabled['/writing'])
+      i.material-icons
+        | spellcheck
+      span
+        | Writing guides
+  li(data-placement='right', title='Buttons')
+    a.js-select-current-parent.js-feature-flag(href='/buttons', data-feature-flag= docEnabled['/buttons'])
+      i.material-icons
+        | crop_16_9
+      span
+        | Buttons
+  li(data-placement='right', title='Typography')
+    a.js-select-current-parent.js-feature-flag(href='/typography', data-feature-flag= docEnabled['/typography'])
+      i.material-icons
+        | text_fields
+      span
+        | Typography
+  li(data-placement='right', title='Alerts')
+    a.js-select-current-parent.js-feature-flag(href='/alerts', data-feature-flag= docEnabled['/alerts'])
+      i.material-icons
+        | notifications
+      span
+        | Alerts
+
+//- Show only on development
+- if ( process.env.NODE_ENV != 'staging' && process.env.NODE_ENV != 'production') {
+  hr
+  h6.menu-headers
+    | Internal tools
+  ul.no-list-style
+    li(data-placement='right', title='Icons report')
+      a.js-select-current(href='/internal/icons-report')
+        i.eos-icons
+          | miscellaneous
+        span
+          | Icons report
+    li(data-placement='right', title='Special icons list')
+      a.js-select-current(href='/internal/special-icons')
+        i.eos-icons
+          | miscellaneous
+        span
+          | Special icons list
+    li(data-placement='right', title='Spacewalk icons in SUMA')
+      a.js-select-current(href='/internal/spacewalk-icons-suma')
+        i.eos-icons
+          | miscellaneous
+        span
+          | Spacewalk icons in SUMA
+    li(data-placement='right', title='Spacewalk icons in SCC')
+      a.js-select-current(href='/internal/spacewalk-icons-scc')
+        i.eos-icons
+          | miscellaneous
+        span
+          | Spacewalk icons in SCC
+    li(data-placement='right', title='Stratos icons list')
+      a.js-select-current(href='/internal/stratos-icons')
+        i.eos-icons
+          | miscellaneous
+        span
+          | Stratos icons list
+    li(data-placement='right', title='Design specs')
+      a.js-select-current(href='/internal/design-specs')
+        i.eos-icons
+          | image
+        span
+          | Design specs
+    li(data-placement='right', title='Mocked menu')
+      a.js-select-current(href='/internal/mocked-menu')
+        i.eos-icons
+          | miscellaneous
+        span
+          | Mocked menu
+- }

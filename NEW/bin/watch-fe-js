@@ -1,0 +1,1 @@
+nodemon -e js -w ./assets/javascripts/** --ignore './assets/javascripts/application-landing.min.js' -x "npm run build:js" --on-change-only

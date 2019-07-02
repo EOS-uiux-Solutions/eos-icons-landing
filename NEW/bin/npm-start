@@ -1,0 +1,1 @@
+npm run build:all-assets && open dist/index.html && npm run watch:all

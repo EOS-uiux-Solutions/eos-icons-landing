@@ -1,0 +1,1 @@
+nodemon -e pug -x "npx gulp pugToHtml" --on-change-only

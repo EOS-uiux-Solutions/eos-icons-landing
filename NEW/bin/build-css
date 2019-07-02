@@ -1,0 +1,2 @@
+mkdir -p dist/assets/css
+node-sass --source-map true --source-map-contents assets/stylesheets/landing-page/application.scss -o dist/assets/css

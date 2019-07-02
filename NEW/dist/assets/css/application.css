@@ -1,0 +1,189 @@
+/* Gradient */
+/* Titles
+   ========================================================================== */
+h1,
+footer {
+  font-weight: 300; }
+
+h1 {
+  color: #fff;
+  font-size: 32px;
+  margin: 0; }
+
+h2 small {
+  font-size: 0.5em; }
+
+h3 {
+  text-align: center; }
+
+/* Misc
+   ========================================================================== */
+/**
+*  Helpers & modifier rules go here
+*/
+.text-white {
+  color: #fff; }
+
+pre {
+  background: #dedede;
+  padding: 16px; }
+
+.pull-right {
+  float: right; }
+
+html,
+body {
+  font-family: "Lato", sans-serif; }
+
+/* Template styles
+   ========================================================================== */
+body {
+  color: #5f5f5f;
+  font-weight: 400;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+.container {
+  padding: 16px; }
+
+.icons-container {
+  margin-top: 120px; }
+
+.two-columns {
+  column-count: 2; }
+
+/* Header
+   ========================================================================== */
+header {
+  background: #fe673a;
+  margin-bottom: 2em;
+  position: fixed;
+  top: 0px;
+  width: 100%; }
+
+.eos-logo-color-gradients {
+  background-image: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%); }
+
+.version {
+  font-size: 12px; }
+
+.toolbar {
+  padding: 10px; }
+
+/* Footer
+   ========================================================================== */
+footer {
+  background: #dedede;
+  bottom: 0px;
+  color: #5f5f5f;
+  font-size: 14px;
+  position: fixed;
+  width: 100%; }
+
+/* Buttons
+   ========================================================================== */
+.btn {
+  background: #dedede;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  color: #333;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none; }
+
+.extended-version-wrap {
+  display: flex;
+  margin: 0 0 30px 60px; }
+  .extended-version-wrap a {
+    background: #dedede;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    color: #333;
+    padding: 10px 14px;
+    text-decoration: none; }
+
+/* How to use
+   ========================================================================== */
+.how-to-use,
+.how-to-use-animated {
+  background: #333;
+  bottom: 44px;
+  position: fixed;
+  width: 100%; }
+
+.close-code-snippet {
+  cursor: pointer; }
+
+/* Icons item
+   ========================================================================== */
+.icons-item,
+.icons-item i {
+  cursor: pointer;
+  text-align: center; }
+
+.icons-item {
+  display: inline-block;
+  margin-bottom: 3em;
+  user-select: none;
+  width: 200px; }
+  .icons-item:hover {
+    color: #fe673a; }
+  .icons-item i {
+    font-size: 48px;
+    padding: 10px 10px; }
+
+.icons-item-selected i {
+  background-image: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+  border-radius: 10px;
+  color: white; }
+
+/* Bottom container
+   ========================================================================== */
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-bottom: 10px; }
+  .bottom-container p {
+    display: inline-block;
+    margin: 0;
+    padding: 10px; }
+
+/* Searchbar
+   ========================================================================== */
+.searchbar {
+  margin-left: auto;
+  padding-left: 8px;
+  transition: width .15s ease-in-out;
+  width: 130px; }
+  .searchbar:focus {
+    max-width: 200px;
+    width: 200px; }
+
+.icons-picker-footer-para {
+  color: #333;
+  display: inline; }
+
+.icons-picker-footer-link {
+  cursor: pointer; }
+
+.icons-picker-footer-generate-button {
+  float: right; }
+
+.upload-config-span {
+  color: #d60015; }
+
+.icons-count {
+  display: inline; }
+
+.thankyou-page-container {
+  margin-bottom: auto;
+  margin-top: 100px;
+  padding: 16px;
+  text-align: center; }
+
+.thankyou-page-container img {
+  width: 170px; }
+
+/*# sourceMappingURL=application.css.map */
