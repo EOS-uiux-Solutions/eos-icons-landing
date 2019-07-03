@@ -1,1 +1,1 @@
-npm run build:all-assets && npm run watch:all & python -m SimpleHTTPServer
+npm run build:all-assets && npm run watch:all
