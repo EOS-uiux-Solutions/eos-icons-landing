@@ -80,7 +80,7 @@ const extractVendorJson = () => {
 
 /* Converte pug to HTML */
 const pugToHtml = () => {
-  return gulp.src('./views/landing-page/*.pug')
+  return gulp.src('./views/pages/*.pug')
   .pipe(pug({
     doctype: 'html',
     pretty: false
