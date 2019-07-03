@@ -26,6 +26,7 @@ const landingOrigin = 'vendors-landing/'
 /* Set the filters */
 const jsFilter = filter('**/*.js'),
   cssFilter = filter('**/*.css'),
+  jsonFilter = filter('**/*.json'),
   /* we need to filter out MD fonts as it will have its own filter */
   fontFilter = filter(['**/*.{otf,eot,svg,ttf,woff,woff2}', '!**/MaterialIcons-Regular.{otf,eot,svg,ttf,woff,woff2}'], { restore: true }),
   mdIconsFilter = filter('**/MaterialIcons-Regular.{otf,eot,svg,ttf,woff,woff2}')
@@ -70,6 +71,13 @@ const extractLandingFonts = () => {
     .pipe(gulp.dest(`${destinationVendors}css`)) // Material icons .css file is configured to have the css and fonts in the same folder
 }
 
+/* Extract all css files declared in the mainfiles object */
+const extractVendorJson = () => {
+  return gulp.src(gulpMain(landingOrigin), { allowEmpty: true })
+    .pipe(jsonFilter)
+    .pipe(gulp.dest(`${destinationVendors}js`))
+}
+
 /* Converte pug to HTML */
 const pugToHtml = () => {
   return gulp.src('./views/landing-page/*.pug')
@@ -88,12 +96,16 @@ const moveMultimedia = () => {
 
 /* Configure the default gulp task and one for the landing page
    ========================================================================== */
+/** Tasks exported for individual use **/
 
-// Tasks exported for individual use
+// cleanup the Vendor folder before building it
 exports.cleanVendors = cleanVendors
+// extract vendor files defined under vendors/package.json {mainfiles}
 exports.extractLandingVendorsCss = extractLandingVendorsCss
 exports.extractLandingVendorsJs = extractLandingVendorsJs
 exports.extractLandingFonts = extractLandingFonts
+exports.extractVendorJson = extractVendorJson
+// build the static html and move media
 exports.pugToHtml = pugToHtml
 exports.moveMultimedia = moveMultimedia
 
@@ -102,5 +114,6 @@ exports.buildVendors =
     parallel(
       extractLandingVendorsCss,
       extractLandingVendorsJs,
-      extractLandingFonts
+      extractLandingFonts,
+      extractVendorJson
     ))

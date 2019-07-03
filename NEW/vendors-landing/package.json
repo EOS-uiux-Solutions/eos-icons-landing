@@ -19,7 +19,8 @@
       "/dist/fonts/eos-icons.svg",
       "/dist/fonts/eos-icons.ttf",
       "/dist/fonts/eos-icons.woff",
-      "/dist/fonts/eos-icons.woff2"
+      "/dist/fonts/eos-icons.woff2",
+      "/dist/js/glyph-list.json"
     ],
     "material-design-icons": [
       "/iconfont/MaterialIcons-Regular.eot",

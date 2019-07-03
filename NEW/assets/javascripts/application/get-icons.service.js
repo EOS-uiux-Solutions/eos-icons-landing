@@ -1,6 +1,6 @@
-const getIconsList = (callback) => { 
+const getIconsList = (callback) => {
   $.ajax({
-    url: 'js/glyph-list.json',
+    url: 'vendors/js/glyph-list.json',
     method: 'get',
     dataType: `json`,
     error: function (xhr, status, error) {
