@@ -1,1 +1,6 @@
-python -m SimpleHTTPServer
+cd dist/
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  python -m http.server
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  python -m SimpleHTTPServer
+fi
