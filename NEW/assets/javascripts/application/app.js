@@ -25,7 +25,7 @@ $(document).on('ready', function () {
 
     if (iconName) {
       showCodeSnippet = true
-      iconDemo = `<pre><code>&lt;i class=&quoteos-icons eos-icon-${iconName} ${iconName} "> &lt;/i&gt; </code></pre>`
+      iconDemo = `<pre><code>&lt;i class=&quoteos-icons eos-icon-${iconName}"> &lt;/i&gt; </code></pre>`
       document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'visible'
     }
     document.getElementById('animatedIconDemo').innerHTML = iconDemo
