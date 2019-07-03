@@ -1,1 +1,1 @@
-npm run build:all-assets && npm run watch:all & python -m SimpleHTTPServer & open http://localhost:8000/dist/
+npm run build:all-assets && npm run watch:all & python -m SimpleHTTPServer
