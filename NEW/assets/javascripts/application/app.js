@@ -81,16 +81,3 @@
 
   iconsListData()
 })()
-
-const searchIcon = () => { // eslint-disable-line no-unused-vars
-  input = document.getElementsByClassName('searchbar')[0].value // eslint-disable-line
-  const x = document.getElementsByClassName('icons-item')
-  for (i = 0; i < x.length; i++) { // eslint-disable-line no-undef
-    if (!(x[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) { // eslint-disable-line no-undef
-      x[i].style.display = 'none' // eslint-disable-line no-undef
-    } // eslint-disable-line brace-style
-    else {
-      x[i].style.display = 'inline-block' // eslint-disable-line no-undef
-    }
-  }
-}
