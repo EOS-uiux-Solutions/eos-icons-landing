@@ -1,0 +1,57 @@
+section.submenu.js-submenu-section
+  //- Colors
+  nav.main-submenu.js-submenu-make-visible(data-parent-menu='colors')
+    a.submenu-item.js-select-current.js-feature-flag(href='/colors/how-to', data-feature-flag= docEnabled['/colors/how-to'])
+      | How to use
+    a.submenu-item.js-select-current.js-feature-flag(href='/colors/gradients', data-feature-flag= docEnabled['/colors/gradients'])
+      | Gradients
+
+  //- Icons
+  nav.main-submenu.js-submenu-make-visible(data-parent-menu='icons')
+    a.submenu-item.js-select-current.js-feature-flag(href='/icons/eos-icons-set', data-feature-flag= docEnabled['/icons/eos-icons-set'])
+      | EOS icons set
+    a.submenu-item.js-select-current.js-feature-flag(href='/icons/logo-icons-set', data-feature-flag= docEnabled['/icons/logo-icons-set'])
+      | Logo icons set
+    a.submenu-item.js-select-current.js-feature-flag(href='/icons/icon-ux', data-feature-flag= docEnabled['/icons/icon-ux'])
+      | Icon UX
+    a.submenu-item.js-select-current.js-feature-flag(href='/icons/when-to-use-them', data-feature-flag= docEnabled['/icons/when-to-use-them'])
+      | Do's and don'ts
+
+  //- Writing guides
+  nav.main-submenu.js-submenu-make-visible(data-parent-menu='writing')
+    a.submenu-item.js-select-current.js-feature-flag(href='/writing/brand-voice', data-feature-flag= docEnabled['/writing/brand-voice'])
+      | Brand voice
+    a.submenu-item.js-select-current.js-feature-flag(href='/writing/brand-tone', data-feature-flag= docEnabled['/writing/brand-tone'])
+      | Brand tone
+    a.submenu-item.js-select-current.js-feature-flag(href='/writing/ux-writing', data-feature-flag= docEnabled['/writing/ux-writing'])
+      | UX writing
+    a.submenu-item.js-select-current.js-feature-flag(href='/writing/conventions-and-rules', data-feature-flag= docEnabled['/writing/conventions-and-rules'])
+      | Conventions and rules
+    a.submenu-item.js-select-current.js-feature-flag(href='/writing/acronyms', data-feature-flag= docEnabled['/writing/acronyms'])
+      | Acronyms
+
+  //- Buttons
+  nav.main-submenu.js-submenu-make-visible(data-parent-menu='buttons')
+    a.submenu-item.js-select-current.js-feature-flag(href='/buttons/icon-buttons', data-route= '/buttons/icon-buttons', data-feature-flag= docEnabled['/buttons/icon-buttons'])
+      | Icon buttons
+    a.submenu-item.js-select-current.js-feature-flag(href='/buttons/sizing', data-route= '/buttons/sizing', data-feature-flag= docEnabled['/buttons/sizing'])
+      | Sizing
+
+  //- Alerts
+  nav.main-submenu.js-submenu-make-visible(data-parent-menu='alerts')
+    a.submenu-item.js-select-current.js-feature-flag(href='/alerts/global', data-feature-flag= docEnabled['/alerts/global'])
+      | Global
+    a.submenu-item.js-select-current.js-feature-flag(href='/alerts/section', data-feature-flag= docEnabled['/alerts/section'])
+      | Section
+    a.submenu-item.js-select-current.js-feature-flag(href='/alerts/inline', data-feature-flag= docEnabled['/alerts/inline'])
+      | Inline
+
+  //- Responsive nav
+  .dropdown.dropdown-more.js-submenu-more
+    a.submenu-item.dropdown-toggle(data-toggle='dropdown')
+      i.material-icons.md-24
+        | more_horiz
+    ul.dropdown-menu.dropdown-menu-left.js-submenu-content
+      li
+        span More
+      li.js-submenu-more-list

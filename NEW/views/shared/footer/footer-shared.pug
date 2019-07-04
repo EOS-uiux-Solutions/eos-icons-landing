@@ -1,0 +1,12 @@
+ul.footer-list
+  li.footer-list-item
+    a.footer-link(href='/cookies-policy')
+      | Cookie policy
+  - if (locals.config.showChangelog) {
+    li.footer-list-item
+      a.footer-link(href='/changelog')
+        | Changelog
+  - }
+  li.footer-list-item
+    a.footer-link(href='https://gitlab.com/SUSE-UIUX/eos/tags', target='_blank')
+      img.js-tooltip(src='/images/icons/gitlab_color.svg', data-toggle='tooltip', data-html='true', title='View our repository')

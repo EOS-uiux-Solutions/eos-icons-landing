@@ -1,0 +1,11 @@
+aside.main-menu.js-main-menu
+  .mm-navigation-container
+    header
+      a.hide-collapsed(href='/')
+        img(src='/images/eos-logo.png')
+      .mm-navigation-close.js-sidebar-toggle
+        i.material-icons.js-sidebar-tooltip.js-tooltip(data-placement='bottom', title='')
+          | menu
+    include main-menu.pug
+
+  include ../footer/footer-side-menu.pug
