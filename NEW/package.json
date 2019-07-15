@@ -12,11 +12,9 @@
   },
   "scripts": {
     "postinstall": "npm run build:vendors",
-    "prestart": "npm run check:engine-versions",
     "start": "./bin/npm-start",
     "serve-macos": "./bin/serve-macos",
     "serve-linux": "./bin/serve-linux",
-    "check:engine-versions": "node ./modules/version-check.js",
     "build:all-assets": "npm run build:css & npm run build:js & npx gulp pugToHtml & npx gulp moveMultimedia",
     "build:vendors": "./bin/build-vendors",
     "build:css": "./bin/build-css",
