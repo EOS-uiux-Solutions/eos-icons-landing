@@ -90,6 +90,5 @@
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/SUSE-UIUX/eos-icons-landing.git"
-  },
-  "license": "MIT"
+  }
 }
