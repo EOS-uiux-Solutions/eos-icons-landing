@@ -1,9 +1,9 @@
 {
-  "name": "EOS-landing-page",
-  "version": "1.0.0",
+  "name": "EOS-icons-landing",
+  "version": "2.0.3",
+  "description": "The iconic font made for EOS Design System to work together with Material Icons. Extends the library for SUSE and open SUSE product specific usage.",
   "eslintIgnore": [
-    "/vendors-landing/*",
-    "app.js"
+    "/vendors-landing/*"
   ],
   "sasslintConfig": "tests/.sass-lint.yml",
   "engines": {
@@ -77,9 +77,21 @@
     "sinon": "^7.2.2",
     "sinon-chai": "^3.3.0"
   },
+  "keywords": [
+    "iconic",
+    "font",
+    "eos",
+    "icons"
+  ],
+  "author": "SUSE UX/UI team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/SUSE-UIUX/eos-icons-landing/issues"
+  },
+  "homepage": "https://gitlab.com/SUSE-UIUX/eos-icons-landing#README",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:SUSE-UIUX/eos-landing.git"
+    "url": "git+ssh://git@gitlab.com/SUSE-UIUX/eos-icons-landing.git"
   },
   "license": "MIT"
 }

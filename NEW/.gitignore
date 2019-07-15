@@ -1,0 +1,6 @@
+.DS_store
+node_modules
+npm-debug.log
+material-design-icons
+TODO
+dist
