@@ -20,7 +20,14 @@
       "/dist/fonts/eos-icons.ttf",
       "/dist/fonts/eos-icons.woff",
       "/dist/fonts/eos-icons.woff2",
-      "/dist/js/glyph-list.json"
+      "/dist/js/glyph-list.json",
+      "/dist/extended/css/eos-icons.css",
+      "/dist/extended/fonts/eos-icons.eot",
+      "/dist/extended/fonts/eos-icons.svg",
+      "/dist/extended/fonts/eos-icons.ttf",
+      "/dist/extended/fonts/eos-icons.woff",
+      "/dist/extended/fonts/eos-icons.woff2",
+      "/dist/extended/js/glyph-list-ext.json"
     ],
     "material-design-icons": [
       "/iconfont/MaterialIcons-Regular.eot",
