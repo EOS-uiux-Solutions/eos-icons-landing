@@ -1,0 +1,129 @@
+/* Navbar
+   ========================================================================== */
+.navbar-brand
+{
+  font-size: 2rem;
+}
+
+.nav-item {
+	font-size: 1.3rem;
+}
+
+/* Header
+   ========================================================================== */
+.header {
+	background: url(../images/landing/header.png),linear-gradient(90deg, #FBB369, #FF814A);
+	width: 100%;
+	height: 547px;
+	background-size: cover;
+}
+.top-gradient {
+	background: linear-gradient(90deg, #FBB369, #FF814A);
+}
+
+
+/* Misc
+   ========================================================================== */
+/**
+*  Helpers & modifier rules go here
+*/
+.text-white {
+	color: white;
+}
+#content {
+	text-align: center;
+	padding-top: 13%;
+	text-shadow: 0px 4px 3px #FF814A,
+				 0px 8px 13px #FF814A,
+				 0px 18px 23px #FF814A;
+
+}
+.pull-right {
+  float: right;
+}
+div.fixed-rectangle {
+     width: 4px;
+     height: 222px;
+     background-color: #ffffff;
+}
+div.fixed-rectangle-inverse {
+	 width: 5px;
+     height: 219px;
+     background-color: #000000;
+}
+.bg-jumbotron {
+	background-color: #F6F9FC;
+}
+.bg-cheatsheet {
+	background-color: #4AC6C5;
+}
+.bg-request {
+	background-color: #C776EF;
+}
+.wide-border {
+	border-right: 5rem;
+}
+.plane-img {
+    max-width:100%;
+    height:300px;
+}
+
+/* Template styles and buttons
+   ========================================================================== */
+body {
+	font-family: Lato;
+}
+
+.btn {
+	 border-radius: 30px 30px 30px 30px;
+	 border-width: 1.39px;
+}
+
+/* Footer
+   ========================================================================== */
+.footer {
+	background: url(../images/landing/footer.png),linear-gradient(90deg, #66667A, #2F2F3B);
+	width: 100%;
+	height: 440px;
+	background-size: cover;
+}
+.panel-footer {
+	margin: 1;
+}
+
+.bg-bottom {
+	background: none;
+}
+
+/* Icons item
+   ========================================================================== */
+.icons-item,
+.icons-item i {
+  cursor: pointer;
+  text-align: center; }
+
+.icons-item {
+  display: inline-block;
+  margin-bottom: 3em;
+  user-select: none;
+  width: 200px; }
+  .icons-item:hover {
+    color: #fe673a; }
+  .icons-item i {
+    font-size: 48px; }
+
+.icons-item-selected i {
+  background-image: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
+  border-radius: 10px;
+  color: white; }
+
+.animated-image {
+	position: relative;
+	top: 0;
+	left: 0;
+	}
+.animated-icons {
+	position: absolute;
+	top: 60px;
+	left: 80px;
+	}
