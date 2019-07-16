@@ -1,11 +1,6 @@
 extends ../layouts/default
 
 block content
-  header.eos-logo-color-gradients
-    .container.two-columns
-      h1
-        img(alt='EOS icons', src='assets/images/logo.png')
-        small.version version 1.0.0
   .container.icons-container
     h3 Click on Icons to select them
     .extended-version-wrap
@@ -21,22 +16,21 @@ block content
       .icons-item(data-name='loading')
         i.eos-icons.eos-icon-loading
         br
-        |           loading
+        | loading
       .icons-item(data-name='installing')
         i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
         br
-        |           installing
+        | installing
   .bottom-container
     p  Didn"t find what you were looking for?
     div
       a.btn(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Request new icon
-  footer
-    .container.icons-picker-footer
-      p.icons-picker-footer-para To continue building a previous font, click 
-      a.link(data-toggle='modal', data-target='#myModal') here.
-      .generate
-        p.icons-count 0 icons selected.
-        button.btn.btn-default(type='submit', onclick='generate()') Generate font
+  .container.icons-picker-footer
+    p.icons-picker-footer-para To continue building a previous font, click 
+    a.link(data-toggle='modal', data-target='#myModal') here.
+    .generate
+      p.icons-count 0 icons selected.
+      button.btn.btn-default(type='submit', onclick='generate()') Generate font
   #myModal.modal.fade(role='dialog')
     .modal-dialog
       // Modal content
