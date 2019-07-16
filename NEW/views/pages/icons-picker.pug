@@ -1,0 +1,55 @@
+extends ../layouts/default
+
+block content
+  header.eos-logo-color-gradients
+    .container.two-columns
+      h1
+        img(alt='EOS icons', src='assets/images/logo.png')
+        small.version version 1.0.0
+  .container.icons-container
+    h3 Click on Icons to select them
+    .extended-version-wrap
+      a(href='../index.html') EOS set
+      input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
+    #icons.js-icons-list
+      .icons-item.js-icons-item(onclick='addSelection(this)', data-name='action_chains')
+        i.eos-icons.js-eos-icons
+        br
+        .js-eos-icon-name
+    #icons-animated
+      h3 Animated icons
+      .icons-item(data-name='loading')
+        i.eos-icons.eos-icon-loading
+        br
+        |           loading
+      .icons-item(data-name='installing')
+        i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
+        br
+        |           installing
+  .bottom-container
+    p  Didn"t find what you were looking for?
+    div
+      a.btn(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Request new icon
+  footer
+    .container.icons-picker-footer
+      p.icons-picker-footer-para To continue building a previous font, click 
+      a.link(data-toggle='modal', data-target='#myModal') here.
+      .generate
+        p.icons-count 0 icons selected.
+        button.btn.btn-default(type='submit', onclick='generate()') Generate font
+  #myModal.modal.fade(role='dialog')
+    .modal-dialog
+      // Modal content
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal') ×
+          h4.modal-title Upload config File
+        .modal-body
+          p
+            | Upload the 
+            span.upload-config-span
+              i icons_config.json
+            |  file here.
+          input#configFile(type='file')
+        .modal-footer
+          button.btn.btn-default(type='button', onclick='prev_selection()', data-dismiss='modal') Proceed

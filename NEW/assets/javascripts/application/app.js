@@ -4,48 +4,48 @@ $(document).on('ready', function () {
   let iconName, iconSize, iconDemo, iconClass
 
   // hide code snippet by default
-  document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
-  document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+  $('.how-to-use').css('visibility', 'hidden')
+  $('.how-to-use-animated').css('visibility', 'hidden')
 
-  document.getElementById('icons').onclick = function (e) {
+  $('#icons').on('click', function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
-    document.getElementById('eos-icon-name').innerHTML = iconName
+    $('#eos-icon-name').html(iconName)
 
     if (iconName) {
       showCodeSnippet = true
-      document.getElementsByClassName('how-to-use')[0].style.visibility = 'visible'
-      document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
+      $('.how-to-use').css('visibility', 'visible')
+      $('.how-to-use-animated').css('visibility', 'hidden')
     }
-  }
+  })
 
-  document.getElementById('icons-animated').onclick = function (e) {
+  $('#icons-animated').on('click', function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
 
     if (iconName) {
       showCodeSnippet = true
       iconDemo = `<pre><code>&lt;i class=&quoteos-icons eos-icon-${iconName}"> &lt;/i&gt; </code></pre>`
-      document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'visible'
+      $('.how-to-use-animated').css('visibility', 'visible')
     }
-    document.getElementById('animatedIconDemo').innerHTML = iconDemo
-  }
+    $('#animatedIconDemo').html(iconDemo)
+  })
 
-  document.getElementById('close-code-snippet').onclick = function (e) {
+  $('#close-code-snippet').on('click', function (e) {
     showCodeSnippet = false
     iconName = ''
-    document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
-    document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
-  }
+    $('.how-to-use').css('visibility', 'hidden')
+    $('.how-to-use-animated').css('visibility', 'hidden')
+  })
 
-  document.getElementById('close-code-snippet-animated').onclick = function (e) {
+  $('#close-code-snippet-animated').on('click', function (e) {
     showCodeSnippet = false
     iconName = ''
-    document.getElementsByClassName('how-to-use-animated')[0].style.visibility = 'hidden'
-    document.getElementsByClassName('how-to-use')[0].style.visibility = 'hidden'
-  }
+    $('.how-to-use').css('visibility', 'hidden')
+    $('.how-to-use-animated').css('visibility', 'hidden')
+  })
 
-  const buttonsSizes = document.getElementsByClassName('change-size')
+  const buttonsSizes = $('.change-size')
   for (let i = 0; i < buttonsSizes.length; i++) {
     buttonsSizes[i].onclick = function (e) {
       e = e || window.event
