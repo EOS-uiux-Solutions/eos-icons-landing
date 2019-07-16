@@ -16,11 +16,11 @@ Demo: https://eos-icons.eosdesignsystem.com
 5. Run the server in a new terminal with either:
 
     ```
-      npm run serve-macos
+      npm run serve:macos
     ```
   or
     ```
-      npm run serve-linux      
+      npm run serve:linux      
     ```
   It will build your assets and serve in `localhost:8000`
 
