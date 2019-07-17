@@ -1,10 +1,12 @@
 extends: standard
 env:
+  node: true
   jquery: true
   es6: true
 root: true
 plugins:
   - import
+  - node
   - promise
   - standard
 rules:
@@ -13,3 +15,5 @@ rules:
   no-var: "error"
   prefer-const: "error"
   prefer-template: "error"
+  prefer-destructuring: ["error", {"object": true, "array": false}]
+  object-curly-spacing: [2, "always"]

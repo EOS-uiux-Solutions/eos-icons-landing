@@ -1,0 +1,43 @@
+extends ../layouts/default
+
+block content
+  .container.icons-container
+    .extended-version-wrap
+      a(href='extended.html') Extended version
+      input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
+    #icons.js-icons-list
+      .icons-item.js-icons-item(data-name='action_chains')
+        i.eos-icons.js-eos-icons
+        br
+        .js-eos-icon-name
+    #icons-animated
+      h3 Animated icons
+      .icons-item(data-name='loading')
+        i.eos-icons.eos-icon-loading
+        br
+        | loading
+      .icons-item(data-name='installing')
+        i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
+        br
+        | installing
+  .how-to-use
+    .container
+      h2.text-white
+        | How to use it:
+        small#close-code-snippet.close-code-snippet.pull-right X Close
+      pre
+        code
+          | &lt;i class=&quot;eos-icons&quot;&gt;
+          span#eos-icon-name
+            | icon_name
+          | &lt;/i&gt;
+  .how-to-use-animated
+    .container
+      h2.text-white
+        | How to use it:
+        small#close-code-snippet-animated.close-code-snippet.pull-right X Close
+      #animatedIconDemo
+  .bottom-container
+    p  Didn't find what you were looking for?
+    div
+      a.btn(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Request new icon

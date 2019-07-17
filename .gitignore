@@ -1,6 +1,11 @@
 .DS_store
 node_modules
 npm-debug.log
-material-design-icons
+.vscode/
 TODO
-dist
+vendors/build-landing
+# static
+assets/javascripts/application-landing.min.js
+assets/stylesheets/application-landing.css
+assets/stylesheets/application-landing.css.map
+dist/

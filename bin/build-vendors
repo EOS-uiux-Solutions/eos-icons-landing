@@ -1,0 +1,3 @@
+cd vendors/
+npm install
+npx gulp buildVendors

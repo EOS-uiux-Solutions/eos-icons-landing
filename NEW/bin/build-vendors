@@ -1,3 +1,0 @@
-cd vendors-landing/
-npm install
-npx gulp buildVendors
