@@ -3,7 +3,7 @@ node_modules
 npm-debug.log
 .vscode/
 TODO
-vendors-landing/build-landing
+vendors/build-landing
 # static
 assets/javascripts/application-landing.min.js
 assets/stylesheets/application-landing.css

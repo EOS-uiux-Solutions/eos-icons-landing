@@ -21,7 +21,7 @@ const gulp = require('gulp'),
 
 const distFolder = 'dist/'
 const destinationVendors = `${distFolder}vendors/`
-const landingOrigin = 'vendors-landing/'
+const landingOrigin = 'vendors/'
 
 /* Set the filters */
 const jsFilter = filter('**/*.js'),
