@@ -4,8 +4,17 @@ stages:
   - publish
 
 image: node:8.4.0
+# Common script to all jobs
+before_script:
+  - npm install
 
-# Start the jobs
+# Lets cache the npm install per stages in the current branch
+cache:
+  key: "$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG"
+  paths:
+  - node_modules/
+  - dist/vendors/
+
 # Start the jobs
 test_lints_sass:
   stage: test
