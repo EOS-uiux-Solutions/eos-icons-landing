@@ -1,5 +1,5 @@
 (function () {
-  let iconName, iconSize, iconDemo, iconClass
+  let iconSize, iconClass
 
   const buttonsSizes = document.getElementsByClassName('change-size')
   for (let i = 0; i < buttonsSizes.length; i++) {
@@ -40,42 +40,45 @@
 })()
 
 const searchIcon = () => { // eslint-disable-line no-unused-vars
-  input = document.getElementsByClassName('searchbar')[0].value // eslint-disable-line
+  const input = document.getElementsByClassName('searchbar')[0].value
   const x = document.getElementsByClassName('icons-item')
-  for (i = 0; i < x.length; i++) { // eslint-disable-line no-undef
-    if (!(x[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) { // eslint-disable-line no-undef
-      x[i].style.display = 'none' // eslint-disable-line no-undef
+  for (let i = 0; i < x.length; i++) {
+    if (!(x[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) {
+      x[i].style.display = 'none'
     } // eslint-disable-line brace-style
     else {
-      x[i].style.display = 'inline-block' // eslint-disable-line no-undef
+      x[i].style.display = 'inline-block'
     }
   }
 }
 
-/*$('.js-icons-item').click(function(){
-  if($(this).attr('class').includes('icons-item-selected')){
-    $(this).removeClass('icons-item-selected');
-  }
-  else{
-    $(this).addClass('icons-item-selected');
-  }
-});
+/*
+  $('.js-icons-item').click(function(){
+    if($(this).attr('class').includes('icons-item-selected')){
+      $(this).removeClass('icons-item-selected');
+    }
+    else{
+      $(this).addClass('icons-item-selected');
+    }
+    });
 */
+
 const addSelection = (obj) => { // eslint-disable-line no-unused-vars
-  if(obj.className.includes('icons-item-selected')){
-    obj.classList.remove('icons-item-selected');
+  if (obj.className.includes('icons-item-selected')) {
+    obj.classList.remove('icons-item-selected')
+  } else {
+    obj.classList.add('icons-item-selected')
   }
-  else{
-    obj.classList.add('icons-item-selected');
-  }
-  count=document.getElementsByClassName('icons-item-selected').length
-  $('.icons-count').html(count + ' icons selected.')
+
+  const count = document.getElementsByClassName('icons-item-selected').length
+
+  $('.icons-count').html(`${count} icons selected.`)
 }
 
 const generate = () => { // eslint-disable-line no-unused-vars
   if ($('.icons-item-selected').length > 0) {
-    location.href = "thankyouPage.html";  
+    window.location.href = `thankyouPage.html`
+  } else {
+    window.alert(`Please select atleast one icon to generate font`)
   }
-  else
-    alert("Please select atleast one icon to generate font");
 }

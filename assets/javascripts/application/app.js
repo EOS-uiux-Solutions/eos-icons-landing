@@ -1,5 +1,4 @@
 $(document).on('ready', function () {
-
   let showCodeSnippet = false // eslint-disable-line no-unused-vars
   let iconName, iconSize, iconDemo, iconClass
 

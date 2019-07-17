@@ -1,4 +1,4 @@
-const getIconsList = (callback) => {
+const getIconsList = (callback) => { // eslint-disable-line no-unused-vars
   $.ajax({
     url: 'vendors/js/glyph-list.json',
     method: 'get',
@@ -6,8 +6,7 @@ const getIconsList = (callback) => {
     error: function (xhr, status, error) {
       console.log(`there was an error retrieving the icons collection`)
     }
-  })
-  .then(function (dataGlyph) {
+  }).then(function (dataGlyph) {
     callback(dataGlyph)
   })
 }

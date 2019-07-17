@@ -25,7 +25,7 @@
     "watch:pug": "./bin/watch-pug",
     "test:all": "npm run test:sass && npm run test:pug && npm run test:js && npm run test:unit",
     "test:sass": "sass-lint -v -q",
-    "test:pug": "pug-lint -c tests/.pug-lintrc.json **/*.pug .",
+    "test:pug": "pug-lint -c tests/.pug-lintrc.json views/**/*.pug .",
     "test:js": "eslint -c tests/.eslintrc.yml --ignore-pattern *.min.js assets/ routes/ views/",
     "test:unit": "mocha-headless-chrome -f tests/mocha/run-unit-tests.html -a no-sandbox"
   },

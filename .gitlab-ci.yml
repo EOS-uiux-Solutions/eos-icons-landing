@@ -6,29 +6,21 @@ stages:
 image: node:8.4.0
 
 # Start the jobs
+# Start the jobs
 test_lints_sass:
   stage: test
-  before_script:
-    - npm i -g grunt
-    - npm install
   script:
-    - grunt sasslint
+    - npm run test:sass
 
 test_lints_js:
   stage: test
-  before_script:
-    - npm i -g grunt
-    - npm install
   script:
-    - grunt eslint
+    - npm run test:js
 
-test_lints_html:
+test_lints_pug:
   stage: test
-  before_script:
-    - npm i -g grunt
-    - npm install
   script:
-    - grunt htmlvalidate
+    - npm run test:pug
 
 pages:
   stage: deploy
