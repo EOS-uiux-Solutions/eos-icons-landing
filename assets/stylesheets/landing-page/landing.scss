@@ -1,24 +1,23 @@
 /* Navbar
    ========================================================================== */
-.navbar-brand
-{
-  font-size: 2rem;
-}
+.navbar-brand	{
+  font-size: $nav-font-size;
 
-.nav-item {
-	font-size: 1.3rem;
+  .nav-item {
+    font-size: $nav-item-font-size;
+  }
 }
 
 /* Header
    ========================================================================== */
 .header {
-	background: url(../images/landing/header.png),linear-gradient(90deg, #FBB369, #FF814A);
-	width: 100%;
-	height: 547px;
-	background-size: cover;
+  background: $header-background;
+  height: 547px;
+  width: 100%;
 }
+
 .top-gradient {
-	background: linear-gradient(90deg, #FBB369, #FF814A);
+  background: $nav-top-gradient;
 }
 
 
@@ -27,72 +26,76 @@
 /**
 *  Helpers & modifier rules go here
 */
-.text-white {
-	color: white;
-}
-#content {
-	text-align: center;
-	padding-top: 13%;
-	text-shadow: 0px 4px 3px #FF814A,
-				 0px 8px 13px #FF814A,
-				 0px 18px 23px #FF814A;
+
+.content {
+  padding-top: 13%;
+  text-align: center;
+  text-shadow: 0px 4px 3px #FF814A, 0px 8px 13px #FF814A, 0px 18px 23px #FF814A;
 
 }
+
 .pull-right {
   float: right;
 }
+
 div.fixed-rectangle {
-     width: 4px;
-     height: 222px;
-     background-color: #ffffff;
+  background-color: #ffffff;
+  height: 222px;
+  width: 4px;
 }
+
 div.fixed-rectangle-inverse {
-	 width: 5px;
-     height: 219px;
-     background-color: #000000;
+  background-color: #000000;
+  height: 219px;
+  width: 5px;
 }
+
 .bg-jumbotron {
-	background-color: #F6F9FC;
+  background-color: #F6F9FC;
 }
+
 .bg-cheatsheet {
-	background-color: #4AC6C5;
+  background-color: #4AC6C5;
 }
+
 .bg-request {
-	background-color: #C776EF;
+  background-color: #C776EF;
 }
+
 .wide-border {
-	border-right: 5rem;
+  border-right: 5rem;
 }
+
 .plane-img {
-    max-width:100%;
-    height:300px;
+  height: 300px;
+  max-width: 100%;
 }
 
 /* Template styles and buttons
    ========================================================================== */
-body {
-	font-family: Lato;
-}
+// body {
+//   font-family: Lato;
+// }
 
 .btn {
-	 border-radius: 30px 30px 30px 30px;
-	 border-width: 1.39px;
+  border-radius: 30px 30px 30px 30px;
+  border-width: 1.39px;
 }
 
 /* Footer
    ========================================================================== */
 .footer {
-	background: url(../images/landing/footer.png),linear-gradient(90deg, #66667A, #2F2F3B);
-	width: 100%;
-	height: 440px;
-	background-size: cover;
+  background: $footer-background;
+  height: 440px;
+  width: 100%;
 }
+
 .panel-footer {
-	margin: 1;
+  margin: 1;
 }
 
 .bg-bottom {
-	background: none;
+  background: none;
 }
 
 /* Icons item
@@ -100,30 +103,38 @@ body {
 .icons-item,
 .icons-item i {
   cursor: pointer;
-  text-align: center; }
+  text-align: center;
+}
 
 .icons-item {
   display: inline-block;
   margin-bottom: 3em;
   user-select: none;
-  width: 200px; }
-  .icons-item:hover {
-    color: #fe673a; }
-  .icons-item i {
-    font-size: 48px; }
+  width: 200px;
+}
+
+.icons-item:hover {
+  color: $icon-item-hover-color;
+}
+
+.icons-item i {
+  font-size: $icon-item-font-size;
+}
 
 .icons-item-selected i {
   background-image: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
   border-radius: 10px;
-  color: white; }
+  color: $light-color;
+}
 
 .animated-image {
-	position: relative;
-	top: 0;
-	left: 0;
-	}
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
 .animated-icons {
-	position: absolute;
-	top: 60px;
-	left: 80px;
-	}
+  left: 80px;
+  position: absolute;
+  top: 60px;
+}
