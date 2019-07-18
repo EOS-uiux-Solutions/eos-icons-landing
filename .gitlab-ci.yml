@@ -1,9 +1,11 @@
 stages:
   - test
+  - build
   - deploy
-  - publish
+  - release
 
-image: node:8.4.0
+image: node:10.15.0
+
 # Common script to all jobs
 before_script:
   - npm install
@@ -31,12 +33,25 @@ test_lints_pug:
   script:
     - npm run test:pug
 
+build_vendors:
+  stage: build
+  script:
+    - npm run build:vendors
+
+build_assets:
+  stage: build
+  script:
+    - npm run build:all-assets
+
 pages:
   stage: deploy
   script:
+    - npm run build:vendors
+    - npm run build:all-assets
+    - npm run build:js
     - mkdir .public
     - cp -r dist/* .public
-    - mv .public public
+    - mv .public public/
   environment:
     name: production
   artifacts:
@@ -44,3 +59,4 @@ pages:
       - public
   only:
     - master
+  when: manual
