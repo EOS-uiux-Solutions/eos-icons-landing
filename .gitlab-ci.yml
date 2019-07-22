@@ -13,7 +13,7 @@ cache:
   key: "$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG"
   paths:
   - node_modules/
-  - dist/vendors/
+  - vendors/node_modules/
 
 # Start the jobs
 test_lints_sass:
