@@ -12,7 +12,7 @@
   },
   "scripts": {
     "postinstall": "npm run build:vendors",
-    "start": "./bin/npm-start",
+    "start": "./bin/npm-start && npm run move:json",
     "serve:macos": "./bin/serve-macos",
     "serve:linux": "./bin/serve-linux",
     "build:all-assets": "npm run build:css & npm run build:js & npx gulp pugToHtml & npx gulp moveMultimedia",
@@ -27,7 +27,8 @@
     "test:sass": "sass-lint -v -q",
     "test:pug": "pug-lint -c tests/.pug-lintrc.json views/**/*.pug .",
     "test:js": "eslint -c tests/.eslintrc.yml --ignore-pattern *.min.js assets/ routes/ views/",
-    "test:unit": "mocha-headless-chrome -f tests/mocha/run-unit-tests.html -a no-sandbox"
+    "test:unit": "mocha-headless-chrome -f tests/mocha/run-unit-tests.html -a no-sandbox",
+    "move:json": "gulp moveJson"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",

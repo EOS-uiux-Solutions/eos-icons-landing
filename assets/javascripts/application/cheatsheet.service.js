@@ -21,7 +21,7 @@ const getIconsList = (callback) => { // eslint-disable-line no-unused-vars
 
 const getExtendedIconsList = (callback) => { // eslint-disable-line no-unused-vars
   $.ajax({
-    url: 'glyph-list-extended.json',
+    url: 'vendors/js/glyph-list-extended.json',
     method: 'get',
     dataType: `json`,
     error: function (xhr, status, error) {

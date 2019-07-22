@@ -27,7 +27,7 @@
       "/dist/extended/fonts/eos-icons.ttf",
       "/dist/extended/fonts/eos-icons.woff",
       "/dist/extended/fonts/eos-icons.woff2",
-      "/dist/extended/js/glyph-list-ext.json"
+      "/dist/extended/js/glyph-list-extended.json"
     ],
     "material-design-icons": [
       "/iconfont/MaterialIcons-Regular.eot",
