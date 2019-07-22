@@ -2,8 +2,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "eos-icons": "^2.0.1",
-    "jquery": "^2.0.0",
-    "material-design-icons": "^3.0.1"
+    "jquery": "^2.0.0"
   },
   "mainfiles": {
     "jquery": [
@@ -14,29 +13,14 @@
       "/dist/js/bootstrap.min.js"
     ],
     "eos-icons": [
-      "/dist/css/eos-icons.css",
-      "/dist/fonts/eos-icons.eot",
-      "/dist/fonts/eos-icons.svg",
-      "/dist/fonts/eos-icons.ttf",
-      "/dist/fonts/eos-icons.woff",
-      "/dist/fonts/eos-icons.woff2",
       "/dist/js/glyph-list.json",
-      "/dist/extended/css/eos-icons.css",
-      "/dist/extended/fonts/eos-icons.eot",
-      "/dist/extended/fonts/eos-icons.svg",
-      "/dist/extended/fonts/eos-icons.ttf",
-      "/dist/extended/fonts/eos-icons.woff",
-      "/dist/extended/fonts/eos-icons.woff2",
+      "/dist/extended/css/eos-icons-extended.css",
+      "/dist/extended/fonts/eos-icons-extended.eot",
+      "/dist/extended/fonts/eos-icons-extended.svg",
+      "/dist/extended/fonts/eos-icons-extended.ttf",
+      "/dist/extended/fonts/eos-icons-extended.woff",
+      "/dist/extended/fonts/eos-icons-extended.woff2",
       "/dist/extended/js/glyph-list-extended.json"
-    ],
-    "material-design-icons": [
-      "/iconfont/MaterialIcons-Regular.eot",
-      "/iconfont/MaterialIcons-Regular.ijmap",
-      "/iconfont/MaterialIcons-Regular.svg",
-      "/iconfont/MaterialIcons-Regular.ttf",
-      "/iconfont/MaterialIcons-Regular.woff",
-      "/iconfont/MaterialIcons-Regular.woff2",
-      "/iconfont/material-icons.css"
     ]
   }
 }

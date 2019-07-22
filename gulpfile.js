@@ -65,7 +65,7 @@ const extractLandingVendorsJs = () => {
 const extractLandingFonts = () => {
   return gulp.src(gulpMain(landingOrigin), { allowEmpty: true })
     .pipe(fontFilter)
-    .pipe(gulp.dest(`${destinationVendors}fonts`)) // move all fonts, except for MD icons to the /fonts folder as per fontawesome and eos-icons default configuration
+    .pipe(gulp.dest(`${destinationVendors}fonts`)) // move all fonts, except for MD icons to the /fonts folder as required by the default configuration
     .pipe(fontFilter.restore)
     .pipe(mdIconsFilter)
     .pipe(gulp.dest(`${destinationVendors}css`)) // Material icons .css file is configured to have the css and fonts in the same folder
@@ -125,5 +125,6 @@ exports.buildVendors =
       extractLandingVendorsCss,
       extractLandingVendorsJs,
       extractLandingFonts,
-      extractVendorJson
+      extractVendorJson,
+      moveJson
     ))
