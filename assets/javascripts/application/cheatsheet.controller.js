@@ -4,7 +4,6 @@ $(document).on('ready', function () {
 })
 
 const iconsListData = () => {
-
   const $iconsContainer = $('.js-icons-list')
   const $iconDisplayTemplate = $('.js-icons-item').clone(true)
   $('.js-icons-item').remove()
@@ -27,7 +26,6 @@ const iconsListData = () => {
 }
 
 const extendedIconsListData = () => {
-
   const $iconsContainer = $('.js-extended-icons-list')
   const $iconDisplayTemplate = $('.js-extended-icons-item').clone(true)
   $('.js-extended-icons-item').remove()
