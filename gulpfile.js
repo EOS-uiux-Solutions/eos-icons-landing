@@ -125,6 +125,5 @@ exports.buildVendors =
       extractLandingVendorsCss,
       extractLandingVendorsJs,
       extractLandingFonts,
-      extractVendorJson,
-      moveJson
+      extractVendorJson
     ))
