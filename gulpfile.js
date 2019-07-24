@@ -65,13 +65,13 @@ const extractLandingVendorsJs = () => {
 const extractLandingFonts = () => {
   return gulp.src(gulpMain(landingOrigin), { allowEmpty: true })
     .pipe(fontFilter)
-    .pipe(gulp.dest(`${destinationVendors}fonts`)) // move all fonts, except for MD icons to the /fonts folder as per fontawesome and eos-icons default configuration
+    .pipe(gulp.dest(`${destinationVendors}fonts`)) // move all fonts, except for MD icons to the /fonts folder as required by the default configuration
     .pipe(fontFilter.restore)
     .pipe(mdIconsFilter)
     .pipe(gulp.dest(`${destinationVendors}css`)) // Material icons .css file is configured to have the css and fonts in the same folder
 }
 
-/* Extract all css files declared in the mainfiles object */
+/* Extract all Json files declared in the mainfiles object */
 const extractVendorJson = () => {
   return gulp.src(gulpMain(landingOrigin), { allowEmpty: true })
     .pipe(jsonFilter)
@@ -94,6 +94,15 @@ const moveMultimedia = () => {
   .pipe(gulp.dest(`${distFolder}assets/images/`));
 }
 
+/* Move Json files from assets/js to static folder */
+// TODO: this is a workaround until eos-icons delivers the extended glyph list
+// with a different name
+const moveJson = () => {
+  return gulp.src('./assets/javascripts/application/*')
+  .pipe(jsonFilter)
+  .pipe(gulp.dest(`${destinationVendors}js/`));
+}
+
 /* Configure the default gulp task and one for the landing page
    ========================================================================== */
 /** Tasks exported for individual use **/
@@ -108,6 +117,7 @@ exports.extractVendorJson = extractVendorJson
 // build the static html and move media
 exports.pugToHtml = pugToHtml
 exports.moveMultimedia = moveMultimedia
+exports.moveJson = moveJson
 
 exports.buildVendors =
   series(cleanVendors,
@@ -115,5 +125,6 @@ exports.buildVendors =
       extractLandingVendorsCss,
       extractLandingVendorsJs,
       extractLandingFonts,
-      extractVendorJson
+      extractVendorJson,
+      moveJson
     ))
