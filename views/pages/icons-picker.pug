@@ -24,8 +24,10 @@ block content
         | installing
   footer
     .container.icons-picker-footer
-      .generate
-        p.icons-count 0 icons selected.  
+      h6.select-all-icons Select all #[i.eos-icons select_all]
+      h6.deselect-all-icons Deselect all #[i.eos-icons clear]
+      .generate-div
+        h6 0 icons selected.
         button.btn.btn-default(type='submit', onclick='generate()') Generate font
   #myModal.modal.fade(role='dialog')
     .modal-dialog
