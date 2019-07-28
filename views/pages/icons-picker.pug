@@ -4,7 +4,7 @@ block content
   .container.icons-container
     h3 Click on Icons to select them
     p To continue building an old font, upload #[i icons-config.json] file 
-      a.upload-file-hyperlink.link(data-toggle='modal', data-target='#myModal')  here.
+      a#upload-file-hyperlink.link(data-toggle='modal', data-target='#myModal')  here.
     .extended-version-wrap
       input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
     #icons.js-icons-list
@@ -29,19 +29,19 @@ block content
       .generate-div
         h6 0 icons selected.
         button.btn.btn-default(type='submit', onclick='generate()') Generate font
-  #myModal.modal.fade(role='dialog')
+  #myModal.config-file-modal.modal.fade(role='dialog')
     .modal-dialog
       // Modal content
       .modal-content
         .modal-header
-          button.close(type='button', data-dismiss='modal') ×
-          h4.modal-title Upload config File
+          button.close(type='button', data-dismiss='modal') &times
         .modal-body
           p
-            | Upload the 
+            | You can find the 
             span.upload-config-span
               i icons_config.json
-            |  file here.
+            |  in the folder of your previous custom EOS font.
           input#configFile(type='file')
-        .modal-footer
-          button.btn.btn-default(type='button', onclick='prev_selection()', data-dismiss='modal') Proceed
+          button.btn.upload-btn(type='button', onclick='prev_selection()', data-dismiss='modal') Upload File
+        
+          
