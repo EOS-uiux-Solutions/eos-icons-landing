@@ -1,10 +1,11 @@
-extends ../layouts/default
+extends ../layouts/icons-picker-layout
 
 block content
   .container.icons-container
     h3 Click on Icons to select them
+    p To continue building an old font, upload #[i icons-config.json] file 
+      a.upload-file-hyperlink.link(data-toggle='modal', data-target='#myModal')  here.
     .extended-version-wrap
-      a(href='../index.html') EOS set
       input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
     #icons.js-icons-list
       .icons-item.js-icons-item(onclick='addSelection(this)', data-name='action_chains')
@@ -21,16 +22,11 @@ block content
         i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
         br
         | installing
-  .bottom-container
-    p  Didn"t find what you were looking for?
-    div
-      a.btn(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Request new icon
-  .container.icons-picker-footer
-    p.icons-picker-footer-para To continue building a previous font, click 
-    a.link(data-toggle='modal', data-target='#myModal') here.
-    .generate
-      p.icons-count 0 icons selected.
-      button.btn.btn-default(type='submit', onclick='generate()') Generate font
+  footer
+    .container.icons-picker-footer
+      .generate
+        p.icons-count 0 icons selected.  
+        button.btn.btn-default(type='submit', onclick='generate()') Generate font
   #myModal.modal.fade(role='dialog')
     .modal-dialog
       // Modal content
