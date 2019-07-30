@@ -13,16 +13,26 @@ Demo: https://eos-icons.eosdesignsystem.com
     npm install
   ```
 4. If you are developing this site, run the watchers with `npm start`
-5. Run the server in a new terminal with either:
+5. In MacOS, run the server in a new terminal with:
 
     ```
       npm run serve:macos
     ```
-  or
+    It will build your assets and serve in `localhost:8000`
+
+6. In linux, access the dist folder with `cd dist` and start a server:
+
     ```
-      npm run serve:linux      
+      python3 -m http.server
     ```
-  It will build your assets and serve in `localhost:8000`
+
+    or
+
+    ```
+      python2 -m SimpleHTTPServer
+    ```
+
+    Depending on the version of Python available in your system
 
 ### Running lints:
 
