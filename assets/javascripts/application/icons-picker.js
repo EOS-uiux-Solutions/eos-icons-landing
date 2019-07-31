@@ -52,7 +52,6 @@ const searchIcon = () => { // eslint-disable-line no-unused-vars
   }
 }
 
-
 const addSelection = (obj) => { // eslint-disable-line no-unused-vars
   if (obj.className.includes('icons-item-selected')) {
     obj.classList.remove('icons-item-selected')
@@ -67,65 +66,61 @@ const addSelection = (obj) => { // eslint-disable-line no-unused-vars
 
 const generate = () => { // eslint-disable-line no-unused-vars
   if ($('.icons-item-selected').length > 0) {
-  eos_icons=[];
-  extended_icons=[];
-  selected=document.getElementsByClassName('icons-item-selected');
-  for (i = 0; i < selected.length; i++) { 
-    extended_icons.push(selected[i].getElementsByClassName('eos-icons')[0].innerHTML);
+    const eosIcons = []
+    const extendedIcons = []
+    const selected = document.getElementsByClassName('icons-item-selected')
+    for (let i = 0; i < selected.length; i++) {
+      extendedIcons.push(selected[i].getElementsByClassName('eos-icons')[0].innerHTML)
     }
-  json = {  "eos_icons": eos_icons,
-            "extended_icons": extended_icons
-        };
-  var post_req_url = 'https://eos-icons-picker-api.herokuapp.com/iconsapi'
-  $.post(post_req_url, { icons_config: json }, function(data, status){
-    window.location.href = `thankyou-page.html?ts=${data}`
-  });
-  
-  }
-  
-  else {
-    window.alert(`Please select atleast one icon to generate font`);
+    const json = { 'eos_icons': eosIcons,
+      'extended_icons': extendedIcons
+    }
+    console.log(json)
+    const postReqUrl = 'https://eos-icons-picker-api.herokuapp.com/iconsapi'
+    $.post(postReqUrl, { icons_config: json }, function (data, status) {
+      window.location.href = `thankyou-page.html?ts=${data}`
+    })
+  } else {
+    window.alert(`Please select atleast one icon to generate font`)
   }
 }
 
-const prevSelection = () => {
-
-  var fileToLoad = document.getElementById("configFile").files[0];
-
-  var fileReader = new FileReader();
+const prevSelection = () => { // eslint-disable-line no-unused-vars
+  const fileToLoad = document.getElementById('configFile').files[0]
+  const fileReader = new window.FileReader() // eslint-disable-line-no-undef
   fileReader.onload = function (fileLoadedEvent) {
-    var textFromFileLoaded = fileLoadedEvent.target.result;
-    prev_icons = JSON.parse(textFromFileLoaded);
-    prev_eos_icons = prev_icons.eos_icons;
-    var all_icons = document.getElementsByClassName('icons-item');
-
-    for (var i = 0; i < all_icons.length; i++) {
-      for (j = 0; j < prev_eos_icons.length; j++) {
-        if (all_icons[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(prev_eos_icons[j])) {
-          all_icons[i].classList.add('icons-item-selected');
+    const textFromFileLoaded = fileLoadedEvent.target.result
+    const prevIcons = JSON.parse(textFromFileLoaded)
+    const prevEosIcons = prevIcons.eos_icons
+    const allIcons = document.getElementsByClassName('icons-item')
+    for (let i = 0; i < allIcons.length; i++) {
+      for (let j = 0; j < prevEosIcons.length; j++) {
+        if (allIcons[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(prevEosIcons[j])) {
+          allIcons[i].classList.add('icons-item-selected')
         }
       }
     }
-  };
-
-  fileReader.readAsText(fileToLoad, "UTF-8");
+  }
+  fileReader.readAsText(fileToLoad, 'UTF-8')
 }
 
-const selectAll = () => {
-  var all_icons = document.getElementsByClassName('js-icons-item');
-  for (i = 0; i < all_icons.length; i++) {
-    all_icons[i].classList.add('icons-item-selected');
+const selectAll = () => { // eslint-disable-line no-unused-vars
+  const allIcons = document.getElementsByClassName('js-icons-item')
+  for (let i = 0; i < allIcons.length; i++) {
+    allIcons[i].classList.add('icons-item-selected')
   }
 }
 
-const deselectAll = () => {
-  var all_icons = document.getElementsByClassName('js-icons-item');
-  for (i = 0; i < all_icons.length; i++) {
-    all_icons[i].classList.remove('icons-item-selected');
+const deselectAll = () => { // eslint-disable-line no-unused-vars
+  const allIcons = document.getElementsByClassName('js-icons-item')
+  for (let i = 0; i < allIcons.length; i++) {
+    allIcons[i].classList.remove('icons-item-selected')
   }
 }
 
-const downloadFont = () => {
-  var url = 'https://eos-icons-picker-api.herokuapp.com/download?' + window.location.href.split('?')[1];
-  window.open(url, '_blank');
+const downloadFont = () => { // eslint-disable-line no-unused-vars
+  const downloadEndPoints = 'https://eos-icons-picker-api.herokuapp.com/download?'
+  const downloadTimeStamp = window.location.href.split('?')[1]
+  const downloadUrl = downloadEndPoints + downloadTimeStamp
+  window.open(downloadUrl, '_blank')
 }
