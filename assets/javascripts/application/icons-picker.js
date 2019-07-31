@@ -58,10 +58,7 @@ const addSelection = (obj) => { // eslint-disable-line no-unused-vars
   } else {
     obj.classList.add('icons-item-selected')
   }
-
-  const count = document.getElementsByClassName('icons-item-selected').length
-
-  $('.icons-count').html(`${count} icons selected.`)
+  iconsCount()
 }
 
 const generate = () => { // eslint-disable-line no-unused-vars
@@ -100,6 +97,7 @@ const prevSelection = () => { // eslint-disable-line no-unused-vars
         }
       }
     }
+    iconsCount()
   }
   fileReader.readAsText(fileToLoad, 'UTF-8')
 }
@@ -109,6 +107,7 @@ const selectAll = () => { // eslint-disable-line no-unused-vars
   for (let i = 0; i < allIcons.length; i++) {
     allIcons[i].classList.add('icons-item-selected')
   }
+  iconsCount()
 }
 
 const deselectAll = () => { // eslint-disable-line no-unused-vars
@@ -116,6 +115,7 @@ const deselectAll = () => { // eslint-disable-line no-unused-vars
   for (let i = 0; i < allIcons.length; i++) {
     allIcons[i].classList.remove('icons-item-selected')
   }
+  iconsCount()
 }
 
 const downloadFont = () => { // eslint-disable-line no-unused-vars
@@ -123,4 +123,9 @@ const downloadFont = () => { // eslint-disable-line no-unused-vars
   const downloadTimeStamp = window.location.href.split('?')[1]
   const downloadUrl = downloadEndPoints + downloadTimeStamp
   window.open(downloadUrl, '_blank')
+}
+
+const iconsCount = () => {
+  const count = document.getElementsByClassName('icons-item-selected').length
+  $('.js-icons-count').html(`${count} icons selected.`)
 }

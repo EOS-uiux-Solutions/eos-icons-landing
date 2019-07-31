@@ -27,7 +27,7 @@ block content
       h6.select-all-icons(onclick='selectAll()') Select all #[i.eos-icons select_all]
       h6.deselect-all-icons(onclick='deselectAll()') Deselect all #[i.eos-icons clear]
       .generate-div
-        h6 0 icons selected.
+        h6.js-icons-count 0 icons selected.
         button.btn.btn-default(type='submit', onclick='generate()') Generate font
   #myModal.config-file-modal.modal.fade(role='dialog')
     .modal-dialog
