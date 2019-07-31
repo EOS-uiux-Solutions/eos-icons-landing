@@ -84,7 +84,7 @@ const generate = () => { // eslint-disable-line no-unused-vars
   }
   
   else {
-    window.alert(`Please select atleast one icon to generate font`)
+    window.alert(`Please select atleast one icon to generate font`);
   }
 }
 
@@ -126,5 +126,6 @@ const deselectAll = () => {
 }
 
 const downloadFont = () => {
-  
+  var url = 'https://eos-icons-picker-api.herokuapp.com/download?' + window.location.href.split('?')[1];
+  window.open(url, '_blank');
 }
