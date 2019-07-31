@@ -4,11 +4,11 @@ block content
   .container.icons-container
     h3 Click on Icons to select them
     p To continue building an old font, upload #[i icons-config.json] file 
-      a#upload-file-hyperlink.link(data-toggle='modal', data-target='#myModal')  here.
+      a.upload-file-hyperlink.link(data-toggle='modal', data-target='#myModal')  here.
     .extended-version-wrap
       input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
-    #icons.js-icons-list
-      .icons-item.js-icons-item(onclick='addSelection(this)', data-name='action_chains')
+    .icons-picker-icons-container.js-icons-list
+      .icons-item.icons-item-static-icons.js-icons-item(onclick='addSelection(this)', data-name='action_chains')
         i.eos-icons.js-eos-icons
         br
         .js-eos-icon-name
@@ -25,7 +25,7 @@ block content
   footer
     .container.icons-picker-footer
       h6.select-all-icons Select all #[i.eos-icons select_all]
-      h6.deselect-all-icons Deselect all #[i.eos-icons clear]
+      h6.deselect-all-icons(onclick='select_all') Deselect all #[i.eos-icons clear]
       .generate-div
         h6 0 icons selected.
         button.btn.btn-default(type='submit', onclick='generate()') Generate font

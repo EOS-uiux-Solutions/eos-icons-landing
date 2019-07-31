@@ -1,38 +1,36 @@
 /* Icons item
-   ========================================================================== */
+  ========================================================================== */
 
 .icons-item,
 .icons-item i {
-    cursor: pointer;
-    text-align: center;
+  cursor: pointer;
+  text-align: center;
 }
 
-#icons {
-    .icons-item {
-        i {
-            padding: $icons-item-padding $icons-item-padding;
-            border-radius: $icons-item-border-radius;
-            margin-bottom: $icons-item-margin-bottom;
-        }
-        &:hover {
-            i {
-                box-shadow: $icons-item-box-shadow;
-            }
-        }
+.icons-item-static-icons {
+  i {
+    border-radius: $icons-item-border-radius;
+    margin-bottom: $icons-item-margin-bottom;
+    padding: $icons-item-padding $icons-item-padding;
+
+    &:hover {
+      box-shadow: $icons-item-box-shadow;
     }
+  }
 }
 
 .icons-item {
-    display: inline-block;
-    margin-bottom: 3em;
-    user-select: none;
-    width: 200px;
-    i {
-        font-size: $icons-item-font-size;
-    }
+  display: inline-block;
+  margin-bottom: 3em;
+  user-select: none;
+  width: 200px;
+
+  i {
+    font-size: $icons-item-font-size;
+  }
 }
 
 .icons-item-selected i {
-    background-color: $dark-gray;
-    color: $icons-item-selected-color;
+  background-color: $dark-gray;
+  color: $icons-item-selected-color;
 }

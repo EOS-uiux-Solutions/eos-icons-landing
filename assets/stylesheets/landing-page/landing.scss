@@ -1,121 +1,122 @@
 /* Navbar
-   ========================================================================== */
+  ========================================================================== */
 
 .navbar-brand {
-    font-size: $nav-font-size;
-    .nav-item {
-        font-size: $nav-item-font-size;
-    }
+  font-size: $nav-font-size;
+
+  .nav-item {
+    font-size: $nav-item-font-size;
+  }
 }
 
 
 /* Header
-   ========================================================================== */
+  ========================================================================== */
 
 .header {
-    background: $header-background;
-    height: 547px;
-    width: 100%;
+  background: $header-background;
+  height: 547px;
+  width: 100%;
 }
 
 .top-gradient {
-    background: $nav-top-gradient;
+  background: $nav-top-gradient;
 }
 
 
 /* Misc
-   ========================================================================== */
+  ========================================================================== */
 
 
 /**
-*  Helpers & modifier rules go here
+* Helpers & modifier rules go here
 */
 
 .content {
-    padding-top: 13%;
-    text-align: center;
-    text-shadow: 0px 4px 3px #FF814A, 0px 8px 13px #FF814A, 0px 18px 23px #FF814A;
+  padding-top: 13%;
+  text-align: center;
+  text-shadow: 0px 4px 3px #FF814A, 0px 8px 13px #FF814A, 0px 18px 23px #FF814A;
 }
 
 .pull-right {
-    float: right;
+  float: right;
 }
 
 div.fixed-rectangle {
-    background-color: #ffffff;
-    height: 222px;
-    width: 4px;
+  background-color: #ffffff;
+  height: 222px;
+  width: 4px;
 }
 
 div.fixed-rectangle-inverse {
-    background-color: #000000;
-    height: 219px;
-    width: 5px;
+  background-color: #000000;
+  height: 219px;
+  width: 5px;
 }
 
 .bg-jumbotron {
-    background-color: #F6F9FC;
+  background-color: #F6F9FC;
 }
 
 .bg-cheatsheet {
-    background-color: #4AC6C5;
+  background-color: #4AC6C5;
 }
 
 .bg-request {
-    background-color: #C776EF;
+  background-color: #C776EF;
 }
 
 .wide-border {
-    border-right: 5rem;
+  border-right: 5rem;
 }
 
 .plane-img {
-    height: 300px;
-    max-width: 100%;
+  height: 300px;
+  max-width: 100%;
 }
 
 
 /* Template styles and buttons
-   ========================================================================== */
+  ========================================================================== */
 
 // body {
-//   font-family: Lato;
+//  font-family: Lato;
 // }
 .btn {
-    border-radius: 30px 30px 30px 30px;
-    border-width: 1.39px;
+  border-radius: 30px 30px 30px 30px;
+  border-width: 1.39px;
 }
 
 
 /* Footer
-   ========================================================================== */
+  ========================================================================== */
 
 .footer {
-    background: $footer-background;
-    height: 440px;
-    width: 100%;
+  background: $footer-background;
+  height: 440px;
+  width: 100%;
 }
 
 .panel-footer {
-    margin: 1;
+  margin: 1;
 }
 
 .bg-bottom {
-    background: none;
+  background: none;
 }
 
 
 /* Icons item
-   ========================================================================== */
+  ========================================================================== */
 
 .animated-image {
-    left: 0;
-    position: relative;
-    top: 0;
+  left: 0;
+  position: relative;
+  top: 0;
 }
 
 .animated-icons {
-    left: 80px;
-    position: absolute;
-    top: 60px;
+  left: 80px;
+  position: absolute;
+  top: 60px;
 }

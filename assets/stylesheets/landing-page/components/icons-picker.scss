@@ -1,75 +1,86 @@
-    .icons-container {
-        p {
-            text-align: center;
-        }
-        #upload-file-hyperlink {
-            cursor: pointer;
-            color: $hyper-link-color;
-            &:hover {
-                color: $hyper-link-hover-color;
-            }
-        }
+.icons-container {
+  p {
+    text-align: center;
+  }
+
+  .upload-file-hyperlink {
+    color: $hyper-link-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $hyper-link-hover-color;
     }
-    
-    .default-btn {
-        display: inline;
-        border-color: $dark-gray;
-        padding: $icons-picker-generate-button-padding;
-        border-radius: $icons-picker-generate-button-border-radius;
-        margin: auto;
-        &:hover {
-            background-color: $dark-gray;
-            color: $light-color;
-        }
+  }
+}
+
+.default-btn {
+  border-color: $dark-gray;
+  border-radius: $icons-picker-generate-button-border-radius;
+  display: inline;
+  margin: auto;
+  padding: $icons-picker-generate-button-padding;
+
+  &:hover {
+    background-color: $dark-gray;
+    color: $light-color;
+  }
+}
+
+.icons-picker-footer {
+  .select-all-icons {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    margin: $icons-picker-select-margin;
+
+    i {
+      padding-left: $icons-picker-select-icon-padding;
+      vertical-align: sub;
     }
-    
-    .icons-picker-footer {
-        .select-all-icons {
-            float: left;
-            display: inline;
-            cursor: pointer;
-            margin: $icons-picker-select-margin;
-            i {
-                vertical-align: sub;
-                padding-left: $icons-picker-select-icon-padding;
-            }
-            &:hover {
-                color: $dark-color
-            }
-        }
-        .deselect-all-icons {
-            float: left;
-            display: inline;
-            cursor: pointer;
-            margin: $icons-picker-select-margin;
-            i {
-                vertical-align: sub;
-                padding-left: $icons-picker-deselect-icon-padding;
-            }
-            &:hover {
-                color: $dark-color
-            }
-        }
-        .generate-div {
-            display: inline;
-            float: right;
-            padding-bottom: $icons-picker-footer-padding-bottom;
-            ;
-            h6 {
-                display: inline;
-                border-color: $dark-gray;
-                margin: auto;
-                padding: $icons-picker-icons-count-padding;
-            }
-            button {
-                @extend .default-btn;
-            }
-        }
+
+    &:hover {
+      color: $dark-color;
     }
-    
-    .config-file-modal {
-        .upload-btn {
-            @extend .default-btn;
-            float: right;
-        }
+  }
+
+  .deselect-all-icons {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    margin: $icons-picker-select-margin;
+
+    i {
+      padding-left: $icons-picker-deselect-icon-padding;
+      vertical-align: sub;
     }
+
+    &:hover {
+      color: $dark-color;
+    }
+  }
+
+  .generate-div {
+    display: inline;
+    float: right;
+    padding-bottom: $icons-picker-footer-padding-bottom;
+    ;
+
+    h6 {
+      border-color: $dark-gray;
+      display: inline;
+      margin: auto;
+      padding: $icons-picker-icons-count-padding;
+    }
+
+    button {
+      @extend .default-btn;
+    }
+  }
+}
+
+.config-file-modal {
+  .upload-btn {
+    @extend .default-btn;
+    float: right;
+  }
+}
