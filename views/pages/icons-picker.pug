@@ -24,8 +24,8 @@ block content
         | installing
   footer
     .container.icons-picker-footer
-      h6.select-all-icons Select all #[i.eos-icons select_all]
-      h6.deselect-all-icons(onclick='select_all') Deselect all #[i.eos-icons clear]
+      h6.select-all-icons(onclick='selectAll()') Select all #[i.eos-icons select_all]
+      h6.deselect-all-icons(onclick='deselectAll()') Deselect all #[i.eos-icons clear]
       .generate-div
         h6 0 icons selected.
         button.btn.btn-default(type='submit', onclick='generate()') Generate font
@@ -42,6 +42,6 @@ block content
               i icons_config.json
             |  in the folder of your previous custom EOS font.
           input#configFile(type='file')
-          button.btn.upload-btn(type='button', onclick='prev_selection()', data-dismiss='modal') Upload File
+          button.btn.upload-btn(type='button', onclick='prevSelection()', data-dismiss='modal') Upload File
         
           

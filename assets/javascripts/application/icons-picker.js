@@ -52,16 +52,6 @@ const searchIcon = () => { // eslint-disable-line no-unused-vars
   }
 }
 
-/*
-  $('.js-icons-item').click(function(){
-    if($(this).attr('class').includes('icons-item-selected')){
-      $(this).removeClass('icons-item-selected');
-    }
-    else{
-      $(this).addClass('icons-item-selected');
-    }
-    });
-*/
 
 const addSelection = (obj) => { // eslint-disable-line no-unused-vars
   if (obj.className.includes('icons-item-selected')) {
@@ -77,8 +67,64 @@ const addSelection = (obj) => { // eslint-disable-line no-unused-vars
 
 const generate = () => { // eslint-disable-line no-unused-vars
   if ($('.icons-item-selected').length > 0) {
-    window.location.href = `thankyouPage.html`
-  } else {
+  eos_icons=[];
+  extended_icons=[];
+  selected=document.getElementsByClassName('icons-item-selected');
+  for (i = 0; i < selected.length; i++) { 
+    extended_icons.push(selected[i].getElementsByClassName('eos-icons')[0].innerHTML);
+    }
+  json = {  "eos_icons": eos_icons,
+            "extended_icons": extended_icons
+        };
+  var post_req_url = 'https://eos-icons-picker-api.herokuapp.com/iconsapi'
+  $.post(post_req_url, { icons_config: json }, function(data, status){
+    window.location.href = `thankyou-page.html?ts=${data}`
+  });
+  
+  }
+  
+  else {
     window.alert(`Please select atleast one icon to generate font`)
   }
+}
+
+const prevSelection = () => {
+
+  var fileToLoad = document.getElementById("configFile").files[0];
+
+  var fileReader = new FileReader();
+  fileReader.onload = function (fileLoadedEvent) {
+    var textFromFileLoaded = fileLoadedEvent.target.result;
+    prev_icons = JSON.parse(textFromFileLoaded);
+    prev_eos_icons = prev_icons.eos_icons;
+    var all_icons = document.getElementsByClassName('icons-item');
+
+    for (var i = 0; i < all_icons.length; i++) {
+      for (j = 0; j < prev_eos_icons.length; j++) {
+        if (all_icons[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(prev_eos_icons[j])) {
+          all_icons[i].classList.add('icons-item-selected');
+        }
+      }
+    }
+  };
+
+  fileReader.readAsText(fileToLoad, "UTF-8");
+}
+
+const selectAll = () => {
+  var all_icons = document.getElementsByClassName('js-icons-item');
+  for (i = 0; i < all_icons.length; i++) {
+    all_icons[i].classList.add('icons-item-selected');
+  }
+}
+
+const deselectAll = () => {
+  var all_icons = document.getElementsByClassName('js-icons-item');
+  for (i = 0; i < all_icons.length; i++) {
+    all_icons[i].classList.remove('icons-item-selected');
+  }
+}
+
+const downloadFont = () => {
+  
 }
