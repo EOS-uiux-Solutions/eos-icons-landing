@@ -1,0 +1,12 @@
+/* Media query variables
+   ========================================================================== */
+/**
+* Media query variables for mobile and tablets
+*
+* $sd-min for Small Devices (mobile) and $md-min for Medium Devices (tablets)
+*/
+$sd-min: 360px;
+$sd-max: 768px;
+$md-min: 770px;
+$md-max: 1336px;
+$custom-tablet: 999px;
