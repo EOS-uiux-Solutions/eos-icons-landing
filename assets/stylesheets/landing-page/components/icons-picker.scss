@@ -1,21 +1,86 @@
-.icons-picker-footer-para {
-  color: $dark-black;
+.icons-container {
+  p {
+    text-align: center;
+  }
+
+  .upload-file-hyperlink {
+    color: $hyper-link-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $hyper-link-hover-color;
+    }
+  }
+}
+
+.default-btn {
+  border-color: $dark-gray;
+  border-radius: $icons-picker-generate-button-border-radius;
   display: inline;
-	}
+  margin: auto;
+  padding: $icons-picker-generate-button-padding;
 
-.icons-picker-footer-link {
-  cursor: pointer;
+  &:hover {
+    background-color: $dark-gray;
+    color: $light-color;
+  }
 }
 
-.icons-picker-footer-generate-button {
-  float: right;
+.icons-picker-footer {
+  .select-all-icons {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    margin: $icons-picker-select-margin;
+
+    i {
+      padding-left: $icons-picker-select-icon-padding;
+      vertical-align: sub;
+    }
+
+    &:hover {
+      color: $dark-color;
+    }
+  }
+
+  .deselect-all-icons {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    margin: $icons-picker-select-margin;
+
+    i {
+      padding-left: $icons-picker-deselect-icon-padding;
+      vertical-align: sub;
+    }
+
+    &:hover {
+      color: $dark-color;
+    }
+  }
+
+  .generate-div {
+    display: inline;
+    float: right;
+    padding-bottom: $icons-picker-footer-padding-bottom;
+    ;
+
+    h6 {
+      border-color: $dark-gray;
+      display: inline;
+      margin: auto;
+      padding: $icons-picker-icons-count-padding;
+    }
+
+    button {
+      @extend .default-btn;
+    }
+  }
 }
 
-.upload-config-span {
-  color: $dark-red;
-}
-
-.icons-count {
-  display: inline;
-
+.config-file-modal {
+  .upload-btn {
+    @extend .default-btn;
+    float: right;
+  }
 }

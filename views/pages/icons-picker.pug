@@ -1,13 +1,14 @@
-extends ../layouts/default
+extends ../layouts/icons-picker-layout
 
 block content
   .container.icons-container
     h3 Click on Icons to select them
+    p To continue building an old font, upload #[i icons-config.json] file 
+      a.upload-file-hyperlink.link(data-toggle='modal', data-target='#myModal')  here.
     .extended-version-wrap
-      a(href='../index.html') EOS set
       input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
-    #icons.js-icons-list
-      .icons-item.js-icons-item(onclick='addSelection(this)', data-name='action_chains')
+    .icons-picker-icons-container.js-icons-list
+      .icons-item.icons-item-static-icons.js-icons-item(onclick='addSelection(this)', data-name='action_chains')
         i.eos-icons.js-eos-icons
         br
         .js-eos-icon-name
@@ -21,29 +22,24 @@ block content
         i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
         br
         | installing
-  .bottom-container
-    p  Didn"t find what you were looking for?
-    div
-      a.btn(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Request new icon
-  .container.icons-picker-footer
-    p.icons-picker-footer-para To continue building a previous font, click 
-    a.link(data-toggle='modal', data-target='#myModal') here.
-    .generate
-      p.icons-count 0 icons selected.
-      button.btn.btn-default(type='submit', onclick='generate()') Generate font
-  #myModal.modal.fade(role='dialog')
+  footer
+    .container.icons-picker-footer
+      h6.select-all-icons(onclick='selectAll()') Select all #[i.eos-icons select_all]
+      h6.deselect-all-icons(onclick='deselectAll()') Deselect all #[i.eos-icons clear]
+      .generate-div
+        h6.js-icons-count 0 icons selected.
+        button.btn.btn-default(type='submit', onclick='generate()') Generate font
+  #myModal.config-file-modal.modal.fade(role='dialog')
     .modal-dialog
       // Modal content
       .modal-content
         .modal-header
-          button.close(type='button', data-dismiss='modal') ×
-          h4.modal-title Upload config File
+          button.close(type='button', data-dismiss='modal') &times
         .modal-body
           p
-            | Upload the 
+            | You can find the 
             span.upload-config-span
               i icons_config.json
-            |  file here.
+            |  in the folder of your previous custom EOS font.
           input#configFile(type='file')
-        .modal-footer
-          button.btn.btn-default(type='button', onclick='prev_selection()', data-dismiss='modal') Proceed
+          button.btn.upload-btn(type='button', onclick='prevSelection()', data-dismiss='modal') Upload File

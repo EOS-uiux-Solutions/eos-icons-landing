@@ -1,6 +1,7 @@
 /* Navbar
-   ========================================================================== */
-.navbar-brand	{
+  ========================================================================== */
+
+.navbar-brand {
   font-size: $nav-font-size;
 
   .nav-item {
@@ -8,8 +9,10 @@
   }
 }
 
+
 /* Header
-   ========================================================================== */
+  ========================================================================== */
+
 .header {
   background: $header-background;
   height: 547px;
@@ -22,16 +25,17 @@
 
 
 /* Misc
-   ========================================================================== */
+  ========================================================================== */
+
+
 /**
-*  Helpers & modifier rules go here
+* Helpers & modifier rules go here
 */
 
 .content {
   padding-top: 13%;
   text-align: center;
   text-shadow: 0px 4px 3px #FF814A, 0px 8px 13px #FF814A, 0px 18px 23px #FF814A;
-
 }
 
 .pull-right {
@@ -71,19 +75,22 @@ div.fixed-rectangle-inverse {
   max-width: 100%;
 }
 
-/* Template styles and buttons
-   ========================================================================== */
-// body {
-//   font-family: Lato;
-// }
 
+/* Template styles and buttons
+  ========================================================================== */
+
+// body {
+//  font-family: Lato;
+// }
 .btn {
   border-radius: 30px 30px 30px 30px;
   border-width: 1.39px;
 }
 
+
 /* Footer
-   ========================================================================== */
+  ========================================================================== */
+
 .footer {
   background: $footer-background;
   height: 440px;
@@ -98,34 +105,9 @@ div.fixed-rectangle-inverse {
   background: none;
 }
 
+
 /* Icons item
-   ========================================================================== */
-.icons-item,
-.icons-item i {
-  cursor: pointer;
-  text-align: center;
-}
-
-.icons-item {
-  display: inline-block;
-  margin-bottom: 3em;
-  user-select: none;
-  width: 200px;
-}
-
-.icons-item:hover {
-  color: $icon-item-hover-color;
-}
-
-.icons-item i {
-  font-size: $icon-item-font-size;
-}
-
-.icons-item-selected i {
-  background-image: linear-gradient(135deg, #ff890a 0%, #ff420a 50%, #bc0289 100%);
-  border-radius: 10px;
-  color: $light-color;
-}
+  ========================================================================== */
 
 .animated-image {
   left: 0;
