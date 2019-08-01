@@ -1,0 +1,60 @@
+/* Variables file: assets/stylesheets/landing-page/components/bottom-links.variables.scss */
+h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+items {
+  margin: $l 0 $m 0;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: $l;
+
+    .btn {
+      align-self: center;
+      margin-top: auto;
+    }
+
+  }
+}
+
+p {
+  min-height: 70px;
+
+  @media screen and (max-width: $md-max) {
+    min-height: 30px;
+  }
+}
+
+// icons
+icon {
+  height: 18px;
+  margin-right: $s;
+}
+
+.btn-group-footer {
+  display: flex;
+  justify-content: space-between;
+}
+// =================================
+//   Mobile version
+// =================================
+@media screen and (max-width: $sd-max) {
+  .col-md-4 {
+    margin: $xxl 0;
+    padding: 0 $xxl;
+  }
+
+  .btn-group-footer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: $md-max) {
+  .btn-group-footer {
+    justify-content: space-around;
+  }
+}
