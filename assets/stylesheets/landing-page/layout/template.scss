@@ -1,7 +1,6 @@
 /* Template styles
    ========================================================================== */
 body {
-  color: $body-text-color;
   font-weight: 400;
   margin: 0;
   max-width: 100%;
@@ -13,6 +12,7 @@ body {
 }
 
 .icons-container {
+  margin-bottom: 100px;
   margin-top: 120px;
 }
 

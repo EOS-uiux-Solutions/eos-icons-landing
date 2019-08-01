@@ -3,7 +3,7 @@ extends ../layouts/default
 block content
   // header ----------------------------------------------------------------------------------------
   .header.mb-lg-2
-    .content.container.text-white.img-fluid(alt='Responsive image')
+    .content.container.text-white.img-fluid(alt='img-responsive')
       h2
         | Free. Open source. Vector and pixel-perfect icons. The iconic font your product needs.
   // Open source DNA -------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ block content
       h1.text-center.pb-lg-5.pt-lg-5.display-4 CSS Animated Icons
       .card-block.pt-lg-5
         .position-relative.d-inline-block
-          img.animated-image.img-fluid(src='assets/images/landing/monitor.png', alt='Responsive image')
+          img.animated-image.img-fluid(src='assets/images/landing/monitor.png', alt='img-responsive')
           .animated-icons.mt-lg-5.pt-lg-5.ml-lg-4
             .icons-item(data-name='loading')
               i.eos-icons.eos-icon-loading
@@ -82,7 +82,7 @@ block content
           |         5. Counter stroke
           br
           |         6. Bounding area
-      img.d-inline-block.pb-lg-5.mb-lg-5.align-top.mx-auto(src='assets/images/landing/material-icons.png', alt='')
+      img.d-inline-block.pb-lg-5.mb-lg-5.align-top.mx-auto(src='assets/images/landing/material-icons.png', alt='img-responsive')
       .d-inline-block
         h4.d-inline-block.text-left.pl-lg-1.pt-lg-5
           | EOS icons were made to coexist with material icons. We
@@ -100,13 +100,13 @@ block content
           |         foundations that address design from both a broad
           br
           |         and detailed perspective.
-        button.btn.btn-dark.btn-lg.d-flex.mx-auto.mt-lg-4(type='button') Check out Extended EOS Icons
+        button.btn.btn-dark.btn-lg.d-flex.mx-auto.mt-lg-4.mb-lg-3.mb-sm-3(type='button') Check out Extended EOS Icons
     // Cheatsheet and new icons request ---------------------------------------------------------------
     .card-group
-      .card.bg-cheatsheet
-        .card-body
+      .card.bg-cheatsheet.bottom-group
+        .card-body.bottom-group
           .d-inline-block.align-top.pt-lg-5.pr-lg-3
-            img.d-inline.pl-lg-5(src='assets/images/landing/rocket1.png', alt='')
+            img.d-inline.pl-lg-5(src='assets/images/landing/rocket1.png', alt='img-responsive')
           .fixed-rectangle.rounded.d-inline-block
           .d-inline-block.align-top.mx-auto.pt-lg-5
             h4.text-white.pl-lg-5
@@ -116,10 +116,10 @@ block content
               br
               |                advices for you.
             button.btn.btn-outline-light.btn-lg.ml-lg-5.mt-lg-1(type='button') Check out Cheatsheet
-      .card.bg-request
-        .card-body
+      .card.bg-request.bottom-group
+        .card-body.bottom-group
           .d-inline-block.align-top.pt-lg-5.pr-lg-3
-            img.d-inline.pl-lg-5(src='assets/images/landing/rocket2.png', alt='')
+            img.d-inline.pl-lg-5(src='assets/images/landing/rocket2.png', alt='img-responsive')
           .fixed-rectangle.rounded.d-inline-block
           .d-inline-block.align-top.mx-auto.pt-lg-5
             h4.text-white.pl-lg-5
@@ -130,57 +130,69 @@ block content
               |                and include them in EOS icons.
             button.btn.btn-outline-light.btn-lg.ml-lg-5.mt-lg-1(type='button') Request new icons
     // Checkout EOS DS --------------------------------------------------------------------------------
-    .container-fluid.top-gradient.text-white.text-center
-      .d-inline-block.text-left.ml-lg-5.pl-lg-5
+    .container-fluid.top-gradient.text-white.text-center.plane-container
+      .d-inline-block.text-left.ml-lg-5.pl-lg-5.mt-sm-4
         h1 Try EOS Icons with EOS DS
         h4 We are a part of EOS Design system and together we work like a charm
       .d-inline-block.text-center
         button.btn.btn-outline-light.btn-lg.ml-lg-5.mb-lg-5(type='button') Check out EOS DS
       .col.d-inline.ml-lg-5
-        img.d-inline-block.plane-img(src='assets/images/landing/plane.png', alt='Responsive image')
+        img.d-inline-block.plane-img(src='assets/images/landing/plane.png', alt='img-responsive')
     // Contributors section ---------------------------------------------------------------------------
     .jumbotron.jumbotron-fluid.bg-jumbotron.mb-lg-0.pt-lg-5
-      h2.mb-lg-5.ml-lg-5 Special thanks to all the superheroes that made it happen :
-      .container
-        span(href='https://twitter.com/cyntss', title='Cynthia Sanchez on twitter', target='_blank')
-          img.d-inline.pl-lg-5(src='assets/images/landing/image1.png', alt='')
-        span(href='https://twitter.com/en3sis', title='Sorin Curescu on twitter', target='_blank')
-          img.d-inline.pl-lg-5(src='assets/images/landing/image2.png', alt='')
-        span(href='https://twitter.com/manuelecarlini', title='Manuele Carlini on twitter', target='_blank')
-          img.d-inline.pl-lg-5(src='assets/images/landing/image3.png', alt='')
-        span(href='https://twitter.com/hesusjerman', title='hesus jerman on twitter', target='_blank')
-          img.d-inline.pl-lg-5(src='assets/images/landing/image4.png', alt='')
-      .container.mt-lg-2
-        h4.d-inline.ml-lg-5 Cynthia Sanchez
-        h4.d-inline.ml-lg-5 Sorin Curescu
-        h4.d-inline.ml-lg-5 Manuele Carlini
-        h4.d-inline.ml-lg-5.pl-lg-2 hesus jerman
+      h3.mb-lg-5.ml-lg-5 Special thanks to all the superheroes that made it happen :
+      .container.text-center
+        span.d-inline-block(href='https://twitter.com/cyntss', title='Cynthia Sanchez on twitter', target='_blank')
+          img(src='assets/images/landing/image1.png', alt='img-responsive')
+          p Cynthia Sanchez
+        span.d-inline-block.pl-lg-5(href='https://twitter.com/en3sis', title='Sorin Curescu on twitter', target='_blank')
+          img(src='assets/images/landing/image2.png', alt='img-responsive')
+          p.ml-lg-3 Sorin Curescu
+        span.d-inline-block.pl-lg-5(href='https://twitter.com/manuelecarlini', title='Manuele Carlini on twitter', target='_blank')
+          img(src='assets/images/landing/image3.png', alt='img-responsive')
+          p.ml-lg-3 Manuele Carlini
+        span.d-inline-block.pl-lg-5(href='https://twitter.com/hesusjerman', title='hesus jerman on twitter', target='_blank')
+          img(src='assets/images/landing/image4.png', alt='img-responsive')
+          p.ml-lg-3 Hesus jerman
     // Footer section ---------------------------------------------------------------------------------
-    .footer
-      .container.text-white.text-center.pt-lg-5
-        h1 GET IN TOUCH WITH US
-      .jumbotron.bg-bottom.text-white.text-center.pt-lg-5
-        .row
-          .col
-            h2 Feedback
-            h5 Got some ideas or something nice to say to us?
-            button.btn.btn-outline-light.btn-lg.ml-lg-5.mr-lg-5.mt-lg-5(type='button') Send us feedback
-          .col
-            h2 Mailing list
-            h5 Join our mailing list to receive more information.
-            button.btn.btn-outline-light.btn-lg.ml-lg-5.mr-lg-5.mt-lg-5(type='button') Subscribe
-          .col
-            h2 Repository
-            h5 Do you want to fork EOS icons, contribute, or report an issue?
-            .panel-footer.row
-              .col-xs-6.text-left
-                .previous
-                  button.btn.btn-outline-light.btn-lg.ml-lg-5.mr-lg-5.mt-lg-4(type='button') Repository
-              .col-xs-6.text-right
-                .next
-                  button.btn.btn-outline-light.btn-lg.ml-lg-5.mr-lg-5.mt-lg-4(type='button') Report Issue
-          .col
-            h2 Twitter
-            h5 Get the latest news, meet the team, and more
-            button.btn.btn-outline-light.btn-lg.ml-lg-5.mr-lg-5.mt-lg-5(type='button') EOS on twitter
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
+  section#js-contact.bottom-links.text-center.text-white
+    article.container-fluid.footer
+      h3
+        | GET IN TOUCH WITH US
+      .bottom-links-items.row
+        .col-sm-6.col-lg-3
+          h4
+            img.bottom-links-icon(src='./assets/images/landing/feedback_icon.svg')
+            | Feedback
+          p
+            | Got some ideas or something nice to say to us?
+          a.btn.btn-outline-light(href='mailto:eos-design-system@googlegroups.com')
+            | Send us feedback
+        .col-sm-6.col-lg-3
+          h4
+            img.bottom-links-icon(src='./assets/images/landing/forum.svg')
+            | Mailing list
+          p
+            | Join our mailing list to receive more information.
+          a.btn.btn-outline-light(href='https://groups.google.com/forum/#!forum/eos-design-system', target='_blank')
+            | Subscribe
+        .col-sm-6.col-lg-3
+          h4
+            img.bottom-links-icon(src='./assets/images/landing/gitlab-min.svg')
+            | Repository
+          p
+            | Do you want to fork EOS-Icons, contribute, or report an issue?
+          .btn-group-footer
+            a.btn.btn-outline-light(href='https://gitlab.com/SUSE-UIUX/eos-icons-landing', target='_blank')
+              | Repository
+            a.btn.btn-outline-light(href='https://gitlab.com/SUSE-UIUX/eos-icons-landing/issues', target='_blank')
+              | Issues
+        .col-sm-6.col-lg-3
+          h4
+            img.bottom-links-icon(src='./assets/images/landing/twitter.svg')
+            | Twitter
+          p
+            | Get the latest news, meet the team, and more.
+          a.btn.btn-outline-light(href='https://twitter.com/eosdesignsystem', target='_blank')
+            | EOS in Twitter
+          script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')

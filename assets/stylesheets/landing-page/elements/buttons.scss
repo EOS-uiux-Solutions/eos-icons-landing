@@ -1,6 +1,6 @@
 /* Buttons
    ========================================================================== */
-.btn {
+.button {
   background: $button-bg;
   border: 1px solid $button-border;
   border-radius: 5px;
@@ -8,7 +8,7 @@
   display: inline-block;
   padding: 10px;
   text-decoration: none;
-}
+ }
 
 .extended-version-wrap {
   display: flex;
