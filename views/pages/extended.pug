@@ -1,6 +1,12 @@
 extends ../layouts/default
 
 block content
+   // header ----------------------------------------------------------------------------------------
+  .header.mb-lg-2
+    .content.container.text-white.img-fluid(alt='img-responsive')
+      h2
+        | Free. Open source. Vector and pixel-perfect icons. The iconic font your product needs.
+
   .container.icons-container
     .extended-version-wrap
       a(href='index.html') EOS set
@@ -44,3 +50,44 @@ block content
       |         Thanks to
       a(href='https://github.com/sapegin/grunt-webfont') grunt-webfont
       | .
+ // Footer section ---------------------------------------------------------------------------------
+  section#js-contact.bottom-links.text-center.text-white
+    article.container-fluid.footer
+      h3
+        | GET IN TOUCH WITH US
+      .bottom-links-items.row
+        .col-sm-6.col-lg-3
+          h4
+            img.bottom-links-icon(src='./assets/images/landing/feedback_icon.svg')
+            | Feedback
+          p
+            | Got some ideas or something nice to say to us?
+          a.btn.btn-outline-light(href='mailto:eos-design-system@googlegroups.com')
+            | Send us feedback
+        .col-sm-6.col-lg-3
+          h4
+            img.bottom-links-icon(src='./assets/images/landing/forum.svg')
+            | Mailing list
+          p
+            | Join our mailing list to receive more information.
+          a.btn.btn-outline-light(href='https://groups.google.com/forum/#!forum/eos-design-system', target='_blank')
+            | Subscribe
+        .col-sm-6.col-lg-3
+          h4
+            img.bottom-links-icon(src='./assets/images/landing/gitlab-min.svg')
+            | Repository
+          p
+            | Do you want to fork EOS-Icons, contribute, or report an issue?
+          .btn-group-footer
+            a.btn.btn-outline-light(href='https://gitlab.com/SUSE-UIUX/eos-icons-landing', target='_blank')
+              | Repository
+            a.btn.btn-outline-light(href='https://gitlab.com/SUSE-UIUX/eos-icons-landing/issues', target='_blank')
+              | Issues
+        .col-sm-6.col-lg-3
+          h4
+            img.bottom-links-icon(src='./assets/images/landing/twitter.svg')
+            | Twitter
+          p
+            | Get the latest news, meet the team, and more.
+          a.btn.btn-outline-light(href='https://twitter.com/eosdesignsystem', target='_blank')
+            | EOS in Twitter

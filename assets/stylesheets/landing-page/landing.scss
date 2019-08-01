@@ -7,6 +7,10 @@
     font-size: $nav-item-font-size;
   }
 }
+.current:active {
+ border-bottom: 3px;
+ color: blue;
+ }
 
 
 /* Header
