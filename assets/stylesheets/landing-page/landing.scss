@@ -69,16 +69,15 @@ div.fixed-rectangle-inverse {
 }
 
 .plane-img {
+  -webkit-transform: rotate(2deg);
   display: inline;
   height: auto;
   opacity: .55;
-  top: -120px;
   right: 65px;
-  position: absolute;
-  z-index: 0;
-  font-size: 45rem;
-  -webkit-transform: rotate(2deg);
+  top: -120px;
   transform: rotate(2deg);
+  z-index: 0;
+  position: absolute;
 }
 
 .plane-container {
@@ -99,6 +98,7 @@ div.fixed-rectangle-inverse {
 .forward-index {
   z-index: 10;
 }
+
 /* Template styles and buttons
    ========================================================================== */
 body {
@@ -180,27 +180,27 @@ body {
   ========================================================================== */
 button.responsive-text,
 h4.responsive-text {
-  font-size: 1.3em;
+  font-size: $h4-font-size;
 }
 
 @media screen and (max-width: 1480px) {
   button.responsive-text,
   h4.responsive-text {
-    font-size: 1.1em;
+    font-size: $h4-font-size-mid;
   }
 }
 
 @media screen and (max-width: 1310px) {
   button.responsive-text,
   h4.responsive-text {
-    font-size: 1.0em;
+    font-size: $h4-font-size-small;
   }
 }
 
 @media screen and (max-width: 1000px) {
   button.responsive-text,
   h4.responsive-text {
-    font-size: 1.2em;
+    font-size: $h4-font-size-large;
   }
 }
 
