@@ -7,11 +7,6 @@
     font-size: $nav-item-font-size;
   }
 }
-.current:active {
- border-bottom: 3px;
- color: blue;
- }
-
 
 /* Header
   ========================================================================== */
@@ -76,10 +71,34 @@ div.fixed-rectangle-inverse {
 .plane-img {
   display: inline;
   height: auto;
-  max-height: 300px;
+  opacity: .55;
+  top: -120px;
+  right: 65px;
+  position: absolute;
+  z-index: 0;
+  font-size: 45rem;
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
 }
 
+.plane-container {
+  position: relative;
+  overflow: hidden;
+  height: 12em;
+}
 
+.left-padding {
+  padding-left: 20%;
+}
+
+.plane-index {
+  position: relative;
+  z-index: 1;
+}
+
+.forward-index {
+  z-index: 10;
+}
 /* Template styles and buttons
    ========================================================================== */
 body {
@@ -149,20 +168,6 @@ body {
     }
   }
 
-@media screen and (max-width: 768px) {
-  .bottom-group {
-    display: inline-block;
-    width: 100%;
-    }
-  }
-
-@media screen and (max-width: 1336px) {
-  .bottom-group {
-    display: inline-block;
-    width: 100%;
-    }
-  }
-
 .panel-footer {
   margin: 1;
 }
@@ -171,6 +176,59 @@ body {
   background: none;
 }
 
+/* Responsive text and image
+  ========================================================================== */
+button.responsive-text,
+h4.responsive-text {
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 1480px) {
+  button.responsive-text,
+  h4.responsive-text {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  button.responsive-text,
+  h4.responsive-text {
+    font-size: 1.0em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  button.responsive-text,
+  h4.responsive-text {
+    font-size: 1.2em;
+  }
+}
+
+img.responsive-image {
+  height: 10em;
+  padding-left: 48px;
+}
+
+@media screen and (max-width: 1480px) {
+  img.responsive-image {
+    height: 8em;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  img.responsive-image {
+    height: 6em;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  img.responsive-image {
+    height: 8em;
+    padding-left: 32px;
+  }
+}
 
 /* Icons item
   ========================================================================== */
