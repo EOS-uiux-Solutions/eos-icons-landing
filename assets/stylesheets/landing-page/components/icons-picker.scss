@@ -84,3 +84,30 @@
     float: right;
   }
 }
+
+.icons-picker-loading {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  height: 100%;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  z-index: 2000;
+
+  img {
+    display: block;
+    margin: auto;
+    margin-left: auto;
+    padding-top: 200px;
+    width: 12%;
+  }
+
+  p {
+    color: $light-color;
+    margin-top: 25px;
+  }
+}

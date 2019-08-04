@@ -1,6 +1,9 @@
 extends ../layouts/icons-picker-layout
 
 block content
+  .icons-picker-loading
+    img(src='assets/images/loading.svg', alt='loading')
+    p Generating font files...
   .container.icons-container
     h3 Click on Icons to select them
     p To continue building an old font, upload #[i icons-config.json] file 

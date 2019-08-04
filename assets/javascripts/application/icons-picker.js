@@ -63,6 +63,7 @@ const addSelection = (obj) => { // eslint-disable-line no-unused-vars
 
 const generate = () => { // eslint-disable-line no-unused-vars
   if ($('.icons-item-selected').length > 0) {
+    document.getElementsByClassName('icons-picker-loading')[0].style.display = 'block'
     const eosIcons = []
     const extendedIcons = []
     const selected = document.getElementsByClassName('icons-item-selected')
