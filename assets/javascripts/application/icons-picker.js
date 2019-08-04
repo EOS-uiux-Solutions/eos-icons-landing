@@ -125,6 +125,20 @@ const downloadFont = () => { // eslint-disable-line no-unused-vars
   window.open(downloadUrl, '_blank')
 }
 
+const autoDownloadFont = () => { // eslint-disable-line no-unused-vars
+  let timerCount = 0
+  const maxTimer = 5
+  const timerInterval = setInterval(function () {
+    if (timerCount <= maxTimer) {
+      $('.js-download-timer').html(`Download will begin in ${maxTimer - timerCount} seconds or click below to start downloading`)
+      timerCount++
+    } else {
+      clearInterval(timerInterval)
+      downloadFont()
+    }
+  }, 1000)
+}
+
 const iconsCount = () => {
   const count = document.getElementsByClassName('icons-item-selected').length
   $('.js-icons-count').html(`${count} icons selected.`)
