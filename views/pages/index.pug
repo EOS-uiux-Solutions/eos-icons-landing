@@ -2,51 +2,92 @@ extends ../layouts/default
 
 block content
   // header ----------------------------------------------------------------------------------------
-  .header.mb-lg-2
+  .header
     .content.container.text-white.img-fluid(alt='img-responsive')
       h2
         | Free. Open source. Vector and pixel-perfect icons. The iconic font your product needs.
-
-  .container.icons-container
-    .extended-version-wrap
-      a(href='extended.html') Extended version
-      input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
-    #icons.js-icons-list
-      .icons-item.js-icons-item(data-name='action_chains')
-        i.eos-icons.js-eos-icons
-        br
-        .js-eos-icon-name
-    #icons-animated
-      h3 Animated icons
-      .icons-item(data-name='loading')
-        i.eos-icons.eos-icon-loading
-        br
-        | loading
-      .icons-item(data-name='installing')
-        i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
-        br
-        | installing
-  .how-to-use
-    .container
-      h2.text-white
-        | How to use it:
-        small#close-code-snippet.close-code-snippet.pull-right X Close
-      pre
-        code
-          | &lt;i class=&quot;eos-icons&quot;&gt;
-          span#eos-icon-name
-            | icon_name
-          | &lt;/i&gt;
-  .how-to-use-animated
-    .container
-      h2.text-white
-        | How to use it:
-        small#close-code-snippet-animated.close-code-snippet.pull-right X Close
-      #animatedIconDemo
-  .bottom-container
+  // -----------------------------------------------------------------------------------------------
+  ul#myTab.nav.nav-tabs.bg-jumbotron.pl-3.pr-3.pt-3.pb-2(role='tablist')
+    li.nav-item
+      a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') EOS Icons Set
+    li.nav-item
+      a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Extended EOS Icons Set
+    li.nav-item.dropdown
+      a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Icon Size
+      .dropdown-menu
+        a.dropdown-item.change-size(data-size='18') 18px
+        a.dropdown-item.change-size(data-size='24') 24px
+        a.dropdown-item.change-size(data-size='36') 36px
+        a.dropdown-item.change-size(data-size='48') 48px
+    input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
+  #myTabContent.tab-content
+    #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+      #icons.js-icons-list.pl-4.pr-4.pt-5
+        .icons-item.js-icons-item(data-name='action_chains')
+          i.eos-icons.js-eos-icons
+          br
+          .js-eos-icon-name
+      #icons-animated.pl-4.pr-4
+        h3.pl-5.pr-4.pb-4.pt-3 Animated icons
+        .icons-item(data-name='loading')
+          i.eos-icons.eos-icon-loading
+          br
+          | loading
+        .icons-item(data-name='installing')
+          i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
+          br
+          | installing
+    .how-to-use
+      .container.forward-index
+        h2.text-white
+          | How to use it:
+          small#close-code-snippet.close-code-snippet.pull-right X Close
+        pre
+          code
+            | &lt;i class=&quot;eos-icons&quot;&gt;
+            span#eos-icon-name
+              | icon_name
+            | &lt;/i&gt;
+    .how-to-use-animated
+      .container.forward-index
+        h2.text-white
+          | How to use it:
+          small#close-code-snippet-animated.close-code-snippet.pull-right X Close
+        #animatedIconDemo
+    #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+      .container-fluid.icons-conatiner
+        #extended-icons.js-extended-icons-list.pl-4.pr-4.pt-5
+          .icons-item.js-extended-icons-item
+            i.eos-icons.js-eos-icons
+            br
+            .js-eos-icon-name
+        #icons-animated.pl-4.pr-4
+          h3.pl-5.pr-4.pb-4.pt-3 Animated icons
+          .icons-item(data-name='loading')
+            i.eos-icons.eos-icon-loading
+            br
+            | loading
+          .icons-item(data-name='installing')
+            i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
+            br
+            | installing
+      .how-to-use
+        .container
+          h2.text-white
+            | How to use it:
+            small#close-code-snippet.close-code-snippet.pull-right X Close
+          pre.
+      .how-to-use-animated
+        .container
+          h2.text-white
+            | How to use it:
+            small#close-code-snippet-animated.close-code-snippet.pull-right X Close
+          #animatedIconDemo
+  // Icons Request ------------------------------------------------------------------------------------------------
+  .bottom-container.bg-jumbotron
     p  Didn't find what you were looking for?
     div
-      a.button(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Request new icon
+      a.btn.btn-dark(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Request new icon
   // Footer section ---------------------------------------------------------------------------------
   section#js-contact.bottom-links.text-center.text-white
     article.container-fluid.footer

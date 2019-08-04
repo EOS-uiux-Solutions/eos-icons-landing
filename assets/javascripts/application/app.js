@@ -18,6 +18,18 @@ $(document).on('ready', function () {
     }
   })
 
+  $('#extended-icons').on('click', function (e) {
+    e = e || window.event
+    iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
+    $('#eos-icon-name').html(iconName)
+
+    if (iconName) {
+      showCodeSnippet = true
+      $('.how-to-use').css('visibility', 'visible')
+      $('.how-to-use-animated').css('visibility', 'hidden')
+    }
+  })
+
   $('#icons-animated').on('click', function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
