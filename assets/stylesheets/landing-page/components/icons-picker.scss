@@ -86,7 +86,7 @@
 }
 
 .icons-picker-loading {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: $icons-picker-loading-background-color;
   display: none;
   height: 100%;
   left: 0px;
@@ -96,18 +96,17 @@
   text-align: center;
   top: 0px;
   width: 100%;
-  z-index: 2000;
+  z-index: $icons-picker-loading-zindex;
 
-  img {
-    display: block;
-    margin: auto;
-    margin-left: auto;
-    padding-top: 200px;
-    width: 12%;
+  i {
+    border-color: $dark-gray;
+    border-top-color: $light-color;
+    font-size: $icons-picker-loading-icon-font-size;
+    margin-top: $icons-picker-loading-icon-margin-top;
   }
 
   p {
     color: $light-color;
-    margin-top: 25px;
+    margin-top: $icons-picker-loading-text-margin-top;
   }
 }

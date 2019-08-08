@@ -63,7 +63,7 @@ const addSelection = (obj) => { // eslint-disable-line no-unused-vars
 
 const generate = () => { // eslint-disable-line no-unused-vars
   if ($('.icons-item-selected').length > 0) {
-    document.getElementsByClassName('icons-picker-loading')[0].style.display = 'block'
+    $('.icons-picker-loading').css({ display: 'block' })
     const eosIcons = []
     const extendedIcons = []
     const selected = document.getElementsByClassName('icons-item-selected')
@@ -141,6 +141,6 @@ const autoDownloadFont = () => { // eslint-disable-line no-unused-vars
 }
 
 const iconsCount = () => {
-  const count = document.getElementsByClassName('icons-item-selected').length
+  const count = $('.icons-item-selected').length
   $('.js-icons-count').html(`${count} icons selected.`)
 }
