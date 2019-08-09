@@ -19,113 +19,62 @@ block content
         a.dropdown-item.change-size(data-size='24') 24px
         a.dropdown-item.change-size(data-size='36') 36px
         a.dropdown-item.change-size(data-size='48') 48px
-    input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
+    input.searchbar.curved(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
   #myTabContent.tab-content
     #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+      a.download-EOS-Icons-button(href='http://slack.eosdesignsystem.com', target='_blank')
+        img.download-icons-logo(src='./assets/images/landing/download-icons.png')
+        strong
+          small.download-icons-text
+            | download-EOS-icons-set
       #icons.js-icons-list.pl-4.pr-4.pt-5
         .icons-item.js-icons-item(data-name='action_chains')
           i.eos-icons.js-eos-icons
           br
           .js-eos-icon-name
-      #icons-animated.pl-4.pr-4
-        h3.pl-5.pr-4.pb-4.pt-3 Animated icons
-        .icons-item(data-name='loading')
-          i.eos-icons.eos-icon-loading
-          br
-          | loading
-        .icons-item(data-name='installing')
-          i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
-          br
-          | installing
-    .how-to-use
-      .container.forward-index
-        h2.text-white
-          | How to use it:
-          small#close-code-snippet.close-code-snippet.pull-right X Close
-        pre
-          code
-            | &lt;i class=&quot;eos-icons&quot;&gt;
-            span#eos-icon-name
-              | icon_name
-            | &lt;/i&gt;
-    .how-to-use-animated
-      .container.forward-index
-        h2.text-white
-          | How to use it:
-          small#close-code-snippet-animated.close-code-snippet.pull-right X Close
-        #animatedIconDemo
     #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
-      .container-fluid.icons-conatiner
-        #extended-icons.js-extended-icons-list.pl-4.pr-4.pt-5
-          .icons-item.js-extended-icons-item
-            i.eos-icons.js-eos-icons
-            br
-            .js-eos-icon-name
-        #icons-animated.pl-4.pr-4
-          h3.pl-5.pr-4.pb-4.pt-3 Animated icons
-          .icons-item(data-name='loading')
-            i.eos-icons.eos-icon-loading
-            br
-            | loading
-          .icons-item(data-name='installing')
-            i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
-            br
-            | installing
-      .how-to-use
-        .container
-          h2.text-white
-            | How to use it:
-            small#close-code-snippet.close-code-snippet.pull-right X Close
-          pre.
-      .how-to-use-animated
-        .container
-          h2.text-white
-            | How to use it:
-            small#close-code-snippet-animated.close-code-snippet.pull-right X Close
-          #animatedIconDemo
+      a.download-Extended-Icons-button(href='http://slack.eosdesignsystem.com', target='_blank')
+        img.download-icons-logo(src='./assets/images/landing/download-icons.png')
+        strong
+          small.download-icons-text
+            | download-Extended-icons-set
+      #extended-icons.js-extended-icons-list.pl-4.pr-4.pt-5
+        .icons-item.js-extended-icons-item
+          i.eos-icons.js-eos-icons
+          br
+          .js-eos-icon-name
+    #icons-animated.pl-4.pr-4
+      h3.pl-5.pr-4.pb-4.pt-3 Animated icons
+      .icons-item(data-name='loading')
+        i.eos-icons.eos-icon-loading
+        br
+        | loading
+      .icons-item(data-name='installing')
+        i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
+        br
+        | installing
+  .how-to-use.bg-jumbotron.forward-index
+    .container
+      h2.ml-3
+        | How to use it:
+        small#close-code-snippet.close-code-snippet.pull-right.mr-5 X Close
+      .row
+        .col-10
+          input#copy3.curved.p-2
+        .col-2
+          a.btn.btn-lg.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2#copy1 Copy
+  .how-to-use-animated.bg-jumbotron.forward-index
+    .container
+      h2.ml-3
+        | How to use it:
+        small#close-code-snippet-animated.close-code-snippet.pull-right.mr-5 X Close
+      .row
+        .col-10
+          input#copy4.curved.p-2
+        .col-2
+          a.btn.btn-lg.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2#copy2 Copy
   // Icons Request ------------------------------------------------------------------------------------------------
   .bottom-container.bg-jumbotron
     p  Didn't find what you were looking for?
     div
       a.btn.btn-dark(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Request new icon
-  // Footer section ---------------------------------------------------------------------------------
-  section#js-contact.bottom-links.text-center.text-white
-    article.container-fluid.footer
-      h3
-        | GET IN TOUCH WITH US
-      .bottom-links-items.row
-        .col-sm-6.col-lg-3
-          h4
-            img.bottom-links-icon(src='./assets/images/landing/feedback_icon.svg')
-            | Feedback
-          p
-            | Got some ideas or something nice to say to us?
-          a.btn.btn-outline-light(href='mailto:eos-design-system@googlegroups.com')
-            | Send us feedback
-        .col-sm-6.col-lg-3
-          h4
-            img.bottom-links-icon(src='./assets/images/landing/forum.svg')
-            | Mailing list
-          p
-            | Join our mailing list to receive more information.
-          a.btn.btn-outline-light(href='https://groups.google.com/forum/#!forum/eos-design-system', target='_blank')
-            | Subscribe
-        .col-sm-6.col-lg-3
-          h4
-            img.bottom-links-icon(src='./assets/images/landing/gitlab-min.svg')
-            | Repository
-          p
-            | Do you want to fork EOS-Icons, contribute, or report an issue?
-          .btn-group-footer
-            a.btn.btn-outline-light(href='https://gitlab.com/SUSE-UIUX/eos-icons-landing', target='_blank')
-              | Repository
-            a.btn.btn-outline-light(href='https://gitlab.com/SUSE-UIUX/eos-icons-landing/issues', target='_blank')
-              | Issues
-        .col-sm-6.col-lg-3
-          h4
-            img.bottom-links-icon(src='./assets/images/landing/twitter.svg')
-            | Twitter
-          p
-            | Get the latest news, meet the team, and more.
-          a.btn.btn-outline-light(href='https://twitter.com/eosdesignsystem', target='_blank')
-            | EOS in Twitter
