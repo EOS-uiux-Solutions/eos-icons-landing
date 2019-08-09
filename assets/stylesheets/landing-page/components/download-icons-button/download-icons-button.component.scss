@@ -1,7 +1,7 @@
 /* Landing page components: download-icons-button
    ========================================================================== */
 /* Variables file: assets/stylesheets/landing-page/components/download-icons-button/download-icons-button.variables.scss */
-.download-EOS-Icons-button {
+.download-eos-icons-button {
   align-items: center;
   background: $download-icons-button-bg;
   border: 2px solid white;
@@ -14,21 +14,21 @@
   position: fixed;
   right: -188px;
   top: 70%;
-  z-index: 15;
   transition: all 0.5s;
+  z-index: 15;
 
   &:hover {
     background: $download-icons-button-bg-hover;
     color: $download-icons-button-text-color;
-    text-decoration: none;
     right: 0;
+    text-decoration: none;
   }
 
   .download-icons-logo {
+    color: $light-color;
     margin-left: $download-icons-button-logo-margin;
     margin-right: $download-icons-button-logo-margin;
     width: 40px;
-    color: white;
   }
 
   .download-icons-text {
@@ -36,7 +36,7 @@
   }
 }
 
-.download-Extended-Icons-button {
+.download-extended-icons-button {
   align-items: center;
   background: $download-icons-button-bg;
   border: 2px solid white;
@@ -49,21 +49,21 @@
   position: fixed;
   right: -225px;
   top: 70%;
-  z-index: 15;
   transition: all 0.5s;
+  z-index: 15;
 
   &:hover {
     background: $download-icons-button-bg-hover;
     color: $download-icons-button-text-color;
-    text-decoration: none;
     right: 0;
+    text-decoration: none;
   }
 
   .download-icons-logo {
+    color: $light-color;
     margin-left: $download-icons-button-logo-margin;
     margin-right: $download-icons-button-logo-margin;
     width: 40px;
-    color: white;
   }
 
   .download-icons-text {
