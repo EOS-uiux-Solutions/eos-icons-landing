@@ -2,99 +2,166 @@ extends ../layouts/default
 
 block content
   // header ----------------------------------------------------------------------------------------
-  .header
+  .header.mb-lg-2
     .content.container.text-white.img-fluid(alt='img-responsive')
       h2
         | Free. Open source. Vector and pixel-perfect icons. The iconic font your product needs.
-  // -----------------------------------------------------------------------------------------------
-  ul#myTab.nav.nav-tabs.bg-jumbotron.pl-3.pr-3.pt-3.pb-2(role='tablist')
-    li.nav-item
-      a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') EOS Icons Set
-    li.nav-item
-      a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Extended EOS Icons Set
-    li.nav-item.dropdown
-      a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Icon Size
-      .dropdown-menu
-        a.dropdown-item.change-size(data-size='18') 18px
-        a.dropdown-item.change-size(data-size='24') 24px
-        a.dropdown-item.change-size(data-size='36') 36px
-        a.dropdown-item.change-size(data-size='48') 48px
-    input.searchbar.curved(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
-  #myTabContent.tab-content
-    #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
-      a.download-eos-icons-button(href='http://slack.eosdesignsystem.com', target='_blank')
-        img.download-icons-logo(src='./assets/images/landing/download-icons.png')
-        strong
-          small.download-icons-text
-            | download-EOS-icons-set
-      #icons.js-icons-list.pl-4.pr-4.pt-5
-        .icons-item.js-icons-item(data-name='action_chains')
-          i.eos-icons.js-eos-icons
-          br
-          .js-eos-icon-name
-    #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
-      a.download-extended-icons-button(href='http://slack.eosdesignsystem.com', target='_blank')
-        img.download-icons-logo(src='./assets/images/landing/download-icons.png')
-        strong
-          small.download-icons-text
-            | download-Extended-icons-set
-      #extended-icons.js-extended-icons-list.pl-4.pr-4.pt-5
-        .icons-item.js-extended-icons-item
-          i.eos-icons.js-eos-icons
-          br
-          .js-eos-icon-name
-    #icons-animated.pl-4.pr-4
-      h3.pl-5.pr-4.pb-4.pt-3 Animated icons
-      .icons-item(data-name='loading')
-        i.eos-icons.eos-icon-loading
+  // Open source DNA -------------------------------------------------------------------------------
+  .container.text-centre
+    .row.mx-auto
+      h1.display-4.d-inline-block.pr-lg-5.pt-lg-5.pb-lg-5.pl-lg-5
+        | OPEN
         br
-        | loading
-      .icons-item(data-name='installing')
-        i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
+        | SOURCE
         br
-        | installing
-  .how-to-use.bg-jumbotron.forward-index
+        | DNA
+      .fixed-rectangle-inverse.rounded.mt-lg-5.ml-lg-5.mr-lg-5
+      .col.py-3.px-lg-5.pt-lg-5
+        h4
+          | EOS icons offers an easily customizable icons for any
+          br
+          |         company or project to use. We created guides that are
+          br
+          |         adjutable and applicable in any open source project.
+          br
+          |         We appreciate your contribution to EOS icons and look
+          br
+          |         forward to hearing more about how it helps your
+          br
+          |         products and projects
+        button.btn.btn-dark.btn-lg.ml-lg-5.mt-lg-1(type='button') Contribute to EOS Icons
+  // Lot of icons to choose from -------------------------------------------------------------------
+  .jumbotron.jumbotron-fluid.mb-lg-0.bg-jumbotron.pb-lg-0
     .container
-      h2.ml-3
-        | How to use it:
-        small#close-code-snippet.close-code-snippet.pull-right.mr-5 X Close
-      .row
-        .col-10
-          input#copy3.how-to-use-code.curved.p-2
-        .col-2
-          a#copy1.btn.btn-lg.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2 Copy
-  .how-to-use-animated.bg-jumbotron.forward-index
-    .container
-      h2.ml-3
-        | How to use it:
-        small#close-code-snippet-animated.close-code-snippet.pull-right.mr-5 X Close
-      .row
-        .col-10
-          input#copy4.how-to-use-code.curved.p-2
-        .col-2
-          a#copy2.btn.btn-lg.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2 Copy
-  // Icons Request ------------------------------------------------------------------------------------------------
-  .bottom-container.bg-jumbotron
-    p  Didn't find what you were looking for?
-    div
-      button.btn.btn-dark(data-toggle='modal', data-target='#exampleModalCenter') Request new icon
-  // Modal
-  #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered(role='document')
-      .modal-content
-        .modal-header
-          h5#exampleModalLongTitle.modal-title Before you send a request, keep following in mind:
-          button.close(type='button', data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') x
-        .modal-body
-          ul
-            li EOS-Icons works with Material icons.
-            li
-              | EOS-Icons is made for products in cloud computing, software infrastructure,
-              | provisioning, server management, etc.
-            li
-              | We won't accept icons other than technical fields like for a restaurant or
-              | a dating app, it's not our market.
-        .modal-footer
-          button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-          a.btn.btn-dark(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Send Request
+      h1.text-center.pb-lg-5.display-4 Lot of Icons to choose from
+      img.d-inline-block.pb-lg-5.img-fluid(src='assets/images/landing/icons.png', alt='img-responsive')
+  // CSS animated Icons ----------------------------------------------------------------------------
+  .text-center.bg-jumbotron
+    h1.text-center.pb-lg-5.pt-lg-5.display-4 CSS Animated Icons
+    .card-block.pt-lg-5
+      .position-relative.d-inline-block
+        img.animated-image.img-fluid(src='assets/images/landing/monitor.png', alt='img-responsive')
+        .animated-icons.mt-lg-5.pt-lg-5.ml-lg-4
+          .icons-item(data-name='loading')
+            i.eos-icons.eos-icon-loading
+            br
+            |           loading
+          .icons-item(data-name='in')
+            i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
+            br
+            |           installing
+      h4.d-inline-block.text-left.pl-lg-5
+        | EOS icons offers an easily customizable animated icons. These
+        br
+        |         Icons use only CSS animations and nothing more which make
+        br
+        |         things a lot easier when using these icons in your own projects.
+        br
+        |         Also they run on the GPU so the frame rate is much higher
+        br
+        |         than that of Javascript animations. When it comes to CSS
+        br
+        |         animations they also have the advantage of not causing
+        br
+        |         reflows and redraws unlike modifying elements via
+        br
+        |         Javascript would.
+  // A pixel perfect design process -----------------------------------------------------------------
+  .text-center.bg-jumbotron
+    h1.text-center.pb-lg-5.pt-lg-5.display-4 A pixel perfect design process
+    .text-block.text-left.d-inline-block.position-absolute.mt-lg-5.pt-lg-5.pl-lg-4
+      h5
+        | 1. Stroke terminal
+        br
+        |         2. Corner
+        br
+        |         3. Counter area
+        br
+        |         4. Stroke
+        br
+        |         5. Counter stroke
+        br
+        |         6. Bounding area
+    img.d-inline-block.pb-lg-5.mb-lg-5.align-top.mx-auto(src='assets/images/landing/material-icons.png', alt='img-responsive')
+    .d-inline-block
+      h4.d-inline-block.text-left.pl-lg-1.pt-lg-5
+        | EOS icons were made to coexist with material icons. We
+        br
+        |         carefully follow material design guidelines which makes
+        br
+        |         EOS icons indistinguishable from material Icons.
+        br
+        |         Material Design defines the qualities that can be
+        br
+        |         expressed by UI regions, surfaces, and components.
+        br
+        |         Design and strategize how your app is built using
+        br
+        |         foundations that address design from both a broad
+        br
+        |         and detailed perspective.
+      button.btn.btn-dark.btn-lg.d-flex.mx-auto.mt-lg-4.mb-3(type='button') Check out Extended EOS Icons
+  // Cheatsheet and new icons request ---------------------------------------------------------------
+  .container-fluid
+    .row
+      .col-lg-6.bg-cheatsheet
+        .d-inline-block.align-top.pt-5.pr-3
+          img.d-inline.responsive-image(src='assets/images/landing/rocket1.png', alt='img-responsive')
+        .fixed-rectangle.rounded.d-inline-block.mt-3.mb-3
+        .d-inline-block.align-top.mx-auto.pt-5
+          h4.text-white.pl-5.responsive-text
+            | Do you already know how to put these icons
+            br
+            |                better into practice. We might have some
+            br
+            |                advices for you.
+          button.btn.btn-outline-light.btn-lg.ml-5.mt-1.mb-1.responsive-text(type='button') Check out Cheatsheet
+      .col-lg-6.bg-request
+        .d-inline-block.align-top.pt-5.pr-3
+          img.d-inline.responsive-image(src='assets/images/landing/rocket2.png', alt='img-responsive')
+        .fixed-rectangle.rounded.d-inline-block.mt-3
+        .d-inline-block.align-top.mx-auto.pt-5
+          h4.text-white.pl-5.responsive-text
+            | Are you working on an open source project and
+            br
+            |                need some icons? We can design them for you
+            br
+            |                and include them in EOS icons.
+          button.btn.btn-outline-light.btn-lg.ml-5.mt-1.responsive-text(type='button') Request new icons
+  // Checkout EOS DS --------------------------------------------------------------------------------
+  .container-fluid.top-gradient.text-white.plane-container
+    .d-inline-block.text-left.mt-sm-4.pt-3.left-padding.plane-index
+      h1 Try EOS Icons with EOS Design System
+      h4.responsive-text We are a part of EOS Design system and together we work like a charm
+    .d-inline-block.text-center.plane-index
+      button.btn.btn-outline-light.btn-lg.ml-lg-5.mb-lg-5.mt-sm-3.responsive-text(type='button') Check out EOS DS
+    .d-inline-block.ml-5
+      img.d-inline-block.plane-img(src='assets/images/landing/plane.png', alt='img-responsive')
+  // Contributors section ---------------------------------------------------------------------------
+  .jumbotron.jumbotron-fluid.bg-jumbotron.mb-0.pt-5.pb-2
+    h3.mb-5.ml-5 Special thanks to all the superheroes that made it happen :
+    .container-fluid.text-center
+      a.d-inline-block(title='Cynthia Sanchez on twitter', href='https://twitter.com/cyntss', target='_blank')
+        img(src='assets/images/landing/image1.png', alt='img-responsive')
+        p.text-decoration-none.text-dark Cynthia Sanchez
+      a.d-inline-block.pl-5(title='Sorin Curescu on twitter', href='https://twitter.com/en3sis', target='_blank')
+        img(src='assets/images/landing/image2.png', alt='img-responsive')
+        p.text-decoration-none.text-dark.ml-3 Sorin Curescu
+      a.d-inline-block.pl-5(title='Manuele Carlini on twitter', href='https://twitter.com/manuelecarlini', target='_blank')
+        img(src='assets/images/landing/image3.png', alt='img-responsive')
+        p.text-decoration-none.text-dark.ml-3 Manuele Carlini
+      a.d-inline-block.pl-5(title='hesus jerman on twitter', href='https://twitter.com/hesusjerman', target='_blank')
+        img(src='assets/images/landing/image4.png', alt='img-responsive')
+        p.text-decoration-none.text-dark.ml-3 Hesus jerman
+      a.d-inline-block.pl-5(title='Abhinandan Sharma on Linked-In', href='https://www.linkedin.com/in/abhinandan-sharma-672299150/', target='_blank')
+        img(src='assets/images/landing/image5.png', alt='img-responsive')
+        p.text-decoration-none.text-dark.ml-3 Abhinandan Sharma
+      a.d-inline-block.pl-5(title='Richa Bhist on Linked-In', href='https://www.linkedin.com/in/richabisht/', target='_blank')
+        img(src='assets/images/landing/image6.png', alt='img-responsive')
+        p.text-decoration-none.text-dark.ml-3 Richa Bhist
+      a.d-inline-block.pl-5(title='Kartikay Bhutani on twitter', href='https://twitter.com/kbhutani0001', target='_blank')
+        img(src='assets/images/landing/image7.png', alt='img-responsive')
+        p.text-decoration-none.text-dark.ml-3 Kartikay Bhutani
+      a.d-inline-block.pl-5(title='Zvezdana on Linked-In', href='https://www.linkedin.com/in/zvezdanam', target='_blank')
+        img(src='assets/images/landing/image8.png', alt='img-responsive')
+        p.text-decoration-none.text-dark.ml-3 Zvezdana
