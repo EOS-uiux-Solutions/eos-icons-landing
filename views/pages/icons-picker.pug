@@ -1,14 +1,17 @@
 extends ../layouts/icons-picker-layout
 
 block content
+  .icons-picker-loading
+    i.eos-icons.eos-icon-loading
+    p Generating font files...
   .container.icons-container
     h3 Click on Icons to select them
     p To continue building an old font, upload #[i icons-config.json] file 
       a.upload-file-hyperlink.link(data-toggle='modal', data-target='#myModal')  here.
     .extended-version-wrap
       input.searchbar(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
-    .icons-picker-icons-container.js-icons-list
-      .icons-item.icons-item-static-icons.js-icons-item(onclick='addSelection(this)', data-name='action_chains')
+    .icons-picker-icons-container.js-extended-icons-list
+      .icons-item.icons-item-static-icons.js-extended-icons-item(onclick='addSelection(this)', data-name='action_chains')
         i.eos-icons.js-eos-icons
         br
         .js-eos-icon-name
