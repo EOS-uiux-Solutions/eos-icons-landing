@@ -8,7 +8,6 @@
   }
 }
 
-
 /* Header
   ========================================================================== */
 
@@ -70,11 +69,35 @@ div.fixed-rectangle-inverse {
 }
 
 .plane-img {
+  -webkit-transform: rotate(2deg);
   display: inline;
   height: auto;
-  max-height: 300px;
+  opacity: .55;
+  position: absolute;
+  right: 65px;
+  top: -120px;
+  transform: rotate(2deg);
+  z-index: 0;
 }
 
+.plane-container {
+  height: 12em;
+  overflow: hidden;
+  position: relative;
+}
+
+.left-padding {
+  padding-left: 20%;
+}
+
+.plane-index {
+  position: relative;
+  z-index: 1;
+}
+
+.forward-index {
+  z-index: 10;
+}
 
 /* Template styles and buttons
    ========================================================================== */
@@ -145,20 +168,6 @@ body {
     }
   }
 
-@media screen and (max-width: 768px) {
-  .bottom-group {
-    display: inline-block;
-    width: 100%;
-    }
-  }
-
-@media screen and (max-width: 1336px) {
-  .bottom-group {
-    display: inline-block;
-    width: 100%;
-    }
-  }
-
 .panel-footer {
   margin: 1;
 }
@@ -167,6 +176,59 @@ body {
   background: none;
 }
 
+/* Responsive text and image
+  ========================================================================== */
+button.responsive-text,
+h4.responsive-text {
+  font-size: $h4-font-size;
+}
+
+@media screen and (max-width: 1480px) {
+  button.responsive-text,
+  h4.responsive-text {
+    font-size: $h4-font-size-mid;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  button.responsive-text,
+  h4.responsive-text {
+    font-size: $h4-font-size-small;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  button.responsive-text,
+  h4.responsive-text {
+    font-size: $h4-font-size-large;
+  }
+}
+
+img.responsive-image {
+  height: 10em;
+  padding-left: 48px;
+}
+
+@media screen and (max-width: 1480px) {
+  img.responsive-image {
+    height: 8em;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  img.responsive-image {
+    height: 6em;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  img.responsive-image {
+    height: 8em;
+    padding-left: 32px;
+  }
+}
 
 /* Icons item
   ========================================================================== */

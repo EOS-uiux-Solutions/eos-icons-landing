@@ -1,6 +1,23 @@
 $(document).on('ready', function () {
   let showCodeSnippet = false // eslint-disable-line no-unused-vars
-  let iconName, iconSize, iconDemo, iconClass
+  let iconName, iconSize, iconDemo, iconClass, value, copy
+
+  function changeValueIcons () {
+    copy = $('#copy3')
+    value = `<i class="eos-icons"> ${iconName}</i>`
+    copy.val(value)
+  }
+
+  function changeValueAnimated () {
+    copy = $('#copy4')
+    value = `<i class="eos-icons eos-icon- ${iconName}></i>`
+    copy.val(value)
+  }
+
+  $('#copy1, #copy2').on('click', function () {
+    copy.select()
+    document.execCommand('copy')
+  })
 
   // hide code snippet by default
   $('.how-to-use').css('visibility', 'hidden')
@@ -10,9 +27,22 @@ $(document).on('ready', function () {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
     $('#eos-icon-name').html(iconName)
+    if (iconName) {
+      showCodeSnippet = true
+      changeValueIcons()
+      $('.how-to-use').css('visibility', 'visible')
+      $('.how-to-use-animated').css('visibility', 'hidden')
+    }
+  })
+
+  $('#extended-icons').on('click', function (e) {
+    e = e || window.event
+    iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
+    $('#eos-icon-name').html(iconName)
 
     if (iconName) {
       showCodeSnippet = true
+      changeValueIcons()
       $('.how-to-use').css('visibility', 'visible')
       $('.how-to-use-animated').css('visibility', 'hidden')
     }
@@ -24,6 +54,7 @@ $(document).on('ready', function () {
 
     if (iconName) {
       showCodeSnippet = true
+      changeValueAnimated()
       iconDemo = `<pre><code>&lt;i class=&quoteos-icons eos-icon-${iconName}"> &lt;/i&gt; </code></pre>`
       $('.how-to-use-animated').css('visibility', 'visible')
     }

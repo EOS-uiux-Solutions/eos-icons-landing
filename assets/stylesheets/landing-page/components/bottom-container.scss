@@ -2,9 +2,10 @@
    ========================================================================== */
 .bottom-container {
   display: flex;
+  height: 80px;
   justify-content: center;
-  margin-bottom: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  padding-top: 20px;
 
   p {
     display: inline-block;

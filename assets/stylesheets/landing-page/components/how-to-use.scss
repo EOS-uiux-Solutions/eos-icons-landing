@@ -2,12 +2,22 @@
    ========================================================================== */
 .how-to-use,
 .how-to-use-animated {
-  background: $how-to-use-bg;
-  bottom: 44px;
+  border: 1px solid black;
+  bottom: 53px;
   position: fixed;
   width: 100%;
 }
 
 .close-code-snippet {
   cursor: pointer;
+}
+
+.curved {
+  border-radius: 30px 30px 30px 30px;
+  border-width: 1.39px;
+}
+
+.how-to-use-code {
+  background-color: $lightest-gray;
+  width: 100%;
 }
