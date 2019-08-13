@@ -12,13 +12,6 @@ block content
       a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') EOS Icons Set
     li.nav-item
       a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Extended EOS Icons Set
-    li.nav-item.dropdown
-      a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Icon Size
-      .dropdown-menu
-        a.dropdown-item.change-size(data-size='18') 18px
-        a.dropdown-item.change-size(data-size='24') 24px
-        a.dropdown-item.change-size(data-size='36') 36px
-        a.dropdown-item.change-size(data-size='48') 48px
     input.searchbar.curved(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
   #myTabContent.tab-content
     #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
