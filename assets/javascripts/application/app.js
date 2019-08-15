@@ -19,6 +19,18 @@ $(document).on('ready', function () {
     document.execCommand('copy')
   })
 
+  const currentLink = window.location.pathname.split('/')
+  const currentPage = currentLink[currentLink.length - 1]
+  const page = {
+    '': 0,
+    'index.html': 0,
+    'cheatsheet.html': 1,
+    'icons-picker.html': 2
+  }
+  const navLink = $('.current')
+  navLink.removeClass('active')
+  navLink[page[currentPage]].classList.add('active')
+
   // hide code snippet by default
   $('.how-to-use').css('visibility', 'hidden')
   $('.how-to-use-animated').css('visibility', 'hidden')
