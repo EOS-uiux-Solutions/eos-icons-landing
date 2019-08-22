@@ -253,16 +253,33 @@ img.responsive-image {
   ========================================================================== */
 
 .command {
-    padding: 2px 4px;
-    color: #c0341d;
-    background-color: #fbe5e1;
-    border-radius: 4px;
-    display: inline;
+  background-color: #fbe5e1;
+  border-radius: 4px;
+  color: $command;
+  display: inline;
+  padding: 2px 4px;
 }
+
 .codes {
   border: 1px solid rgba(200, 200, 200, 1);
   border-radius: 2px;
-  padding: 10px;
-  color: rgba(80, 80, 80, 1);
+  color: $codes;
   display: block;
+  padding: 10px;
+}
+
+i.md-18 {
+  font-size: 18px;
+}
+
+i.md-24 {
+  font-size: 24px;
+}
+
+i.md-36 {
+  font-size: 36px;
+}
+
+i.md-48 {
+  font-size: 48px;
 }
