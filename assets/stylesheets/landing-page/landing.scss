@@ -123,7 +123,6 @@ body {
   background: $footer-background;
   background-size: cover;
   height: auto;
-  margin-bottom: 53px;
   max-width: 100%;
   padding-top: 20px;
 }
@@ -136,7 +135,7 @@ body {
    ========================================================================== */
 /* Variables file: assets/stylesheets/landing-page/components/bottom-links/bottom-links.variables.scss */
 .bottom-links-items {
-  margin: 24px 0 16px 0;
+  margin: 24px 0 0 0;
   }
 
 .bottom-links-items > div {
@@ -248,4 +247,22 @@ img.responsive-image {
   left: 80px;
   position: absolute;
   top: 60px;
+}
+
+/* Docs
+  ========================================================================== */
+
+.command {
+    padding: 2px 4px;
+    color: #c0341d;
+    background-color: #fbe5e1;
+    border-radius: 4px;
+    display: inline;
+}
+.codes {
+  border: 1px solid rgba(200, 200, 200, 1);
+  border-radius: 2px;
+  padding: 10px;
+  color: rgba(80, 80, 80, 1);
+  display: block;
 }
