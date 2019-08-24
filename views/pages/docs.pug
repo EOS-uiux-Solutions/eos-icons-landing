@@ -9,78 +9,96 @@ block content
   .container
     h1.font-weight-bold.mb-3.mt-3.border-bottom EOS iconic font
     |
-    p.mb-4
+    p
       | Demo:
       a(href='https://eos-icons.eosdesignsystem.com/', target='_blank')  https://eos-icons.eosdesignsystem.com/
     |
-    p.mb-4
+    p
       | This is the iconic font used in the EOS Design System. The official SUSE Linux Design System, and for all open source projects to use and re-use.
     |
-    p.mb-4
+    p
       | To view the EOS Design System project check gitlab
       a(href=' https://gitlab.com/SUSE-UIUX/eos', target='_blank')  https://gitlab.com/SUSE-UIUX/eos
     |
     h1.font-weight-bold.mb-3.border-bottom Installing with npm
     |
-    p.mb-4.command npm install eos-icons --save
+    p.command npm install eos-icons --save
     |
+    h1.font-weight-bold.mb-3.mt-3.border-bottom With our CDN
+    |
+    p
+      | For EOS set:
+      a(href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css', target='_blank')  https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css
+    p
+      | For Extended EOS set:
+      a(href='https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css', target='_blank')  https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css
+    p.d-inline  import them in your
+    p.command &lt;head&gt;
+    |  tag as
+    p.command link:css
+    |  and paste the link.
+    p
+    p
+      | To download the zip file of /dist floder click
+      a(href='https://gitlab.com/SUSE-UIUX/eos-icons/-/archive/master/eos-icons-master.zip?path=dist', target='_blank')  here
+
     h1.font-weight-bold.mb-3.mt-3.border-bottom Using EOS icons in your projects
     |
-    p.mb-4
+    p
       | Just like in any other iconic font, you need to add the Fonts and CSS files in your project:
     |
-    p.mb-4.d-inline 1- Add the
-    p.mb-4.command eos-icons.css
+    p.d-inline 1- Add the
+    p.command eos-icons.css
     |  file available under the dist/css folder into your projects
-    p.mb-4.command &lt;head&gt;
+    p.command &lt;head&gt;
     |  :
-    p.mb-4
-    p.mb-4
-    p.mb-4.command &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/eos-icons.css&quot;&gt;
-    p.mb-4
-    p.mb-4.d-inline 2- Make sure the font files available in the
-    p.mb-4.command dist/fonts
+    p
+    p
+    p.command &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/eos-icons.css&quot;&gt;
+    p
+    p.d-inline 2- Make sure the font files available in the
+    p.command dist/fonts
     |  folder are placed under your
-    p.mb-4.command assets/fonts
+    p.command assets/fonts
     |  folder so the .css file can read them correctly.
-    p.mb-4
-    p.mb-4
+    p
+    p
       | 3- Use the icons in your html as follows:
     code.mb-3.codes &lt;i class=&quot;eos-icons&quot;&gt;LIGATURE_OF_THE_ICON&lt;/i&gt;
-    p.mb-4
+    p
       | Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our online tool to see the icon&apos;s name:
       a(href='https://eos-icons.eosdesignsystem.com/', target='_blank')  https://eos-icons.eosdesignsystem.com/
       | .
     h1.font-weight-bold.mb-3.border-bottom Using animated icons
-    p.mb-4
+    p
       | The animated EOS icons are built using CSS animations. To implement them you don&apos;t need ligatures but classes instead.
-    p.mb-4
+    p
       | For example:
     code.mb-3.codes
       | &lt;i class=&quot;eos-icons eos-icon-loading&quot;&gt;&lt;/i&gt;
-    p.mb-4
+    p
       | See the other animated icons classes in our
       a(href='https://eos-icons.eosdesignsystem.com/', target='_blank')  demo page
       | . Click on the icon you want to use to see the code snippet.
     h1.font-weight-bold.mb-3.border-bottom EOS extended version with Material Design
-    p.mb-4
+    p
       | Since EOS icons are designed following the
       a(href='https://material.io/design/iconography/system-icons.html', target='_blank')  Material Design guidelines
       |  and made to work together with Material Icons, we decided to include an extended version of EOS icons for easy implementation.
-    p.mb-4.mb-4.mb-4.d-inline
+    p.mb-4.mb-4.d-inline
       | With the extended version you only need to use 1 class for all icons (EOS and Material Design). To implement it, you need to grab the
-    p.mb-4.mb-4.command css/
+    p.mb-4.command css/
     |  and
-    p.mb-4.command font/
+    p.command font/
     |  folders available at
-    p.mb-4.command dist/
+    p.command dist/
     | extended, then add the
-    p.mb-4.command eos-icons-extended.css
+    p.command eos-icons-extended.css
     | under the
-    p.mb-4.command &lt;head&gt;
+    p.command &lt;head&gt;
     |  of your project accordingly.
-    p.mb-4
-    p.mb-4
+    p
+    p
       | For more information about Material Design Icons, please refer to the
       a(href='https://github.com/google/material-design-icons', target='_blank')  original MD icons repository
       |  where you can find the corresponding licensing and documentation.
@@ -95,9 +113,9 @@ block content
       br
       | &lt;i class=&quot;eos-icons&quot;&gt;bluetooth_disabled&lt;/i&gt;
     h1.font-weight-bold.mb-3.border-bottom Our recommended sizes
-    p.mb-4
+    p
       | Both MD icons and EOS icons have been designed to work and look perfect at: 18px, 24px, 36px, and 48px. These are the recommended sizes for icons in all SUSE - DEVELOPMENT UIs.
-    p.mb-4
+    p
       | In order to be compliant, follow MD icons class names to size both MD icons and EOS icons:
     h4.font-weight-bold Implementation examples
     ul
@@ -156,13 +174,13 @@ block content
         br
         |	.md-48 { font-size: $eos-md-48; }
     h1.font-weight-bold.mb-3.border-bottom Adding your icons to the iconic font
-    p.mb-4
+    p
       | If you want to create your own icons and add them to this library, follow the next steps:
     h4.font-weight-bold What do you need to build the fonts locally?
-    p.mb-4
+    p
       | This project uses Webfont for Grunt to build. More info about the project:
       a(href='https://www.npmjs.com/package/grunt-webfont', target='_blank')  https://www.npmjs.com/package/grunt-webfont
-    p.mb-4
+    p
       | We use Fontforge to render our icons since the quality is better than using plain node, and it supports Ligatures.
       | Our icons follow Google Material Icons guidelines one-to-one. This is the main reason for us to use ligatures as well. We made a perfectly compatible icon font for those already using MD icons.
       | If you want to know more about all the standards we follow for the EOS, visit our public wiki, which is our main internal guideline:
@@ -191,18 +209,18 @@ block content
       li.mb-3.mt-3 Linux
       code.mb-3.codes sudo apt-get install fontforge ttfautohint
     h4.font-weight-bold Design and add your SVG icons
-    p.mb-4.d-inline Add your icons into the
-    p.mb-4.command svg/
+    p.d-inline Add your icons into the
+    p.command svg/
     |  folder. All our icons have been designed with Illustrator, but designing with any tool like Inkscape will work just fine, just make sure the exported SVG code is as clean as possible.
-    p.mb-4
-    p.mb-4
+    p
+    p
       | SVG file names with more than one word in it should not have a minus character separating the words (e.g.: some-name.svg), instead, use an underscore (e.g.: some_name.svg). The use of spaces in the filename also creates conflicts in the resulting iconic font.
-    p.mb-4 Then all you need to do, is run
+    p Then all you need to do, is run
     code.mb-3.codes grunt
-    p.mb-4.d-inline This will build the assets under the
-    p.mb-4.command dist/
+    p.d-inline This will build the assets under the
+    p.command dist/
     |  folder.
-    p.mb-4
-    p.mb-4
+    p
+    p
       | We recommended sizes MD icons use: 18, 24, 36, and 48 pixels, plus 16px which is our minimum allowed size at EOS Design System.
     strong.mb-4 That&apos;s it!!.. easy as pie
