@@ -108,7 +108,7 @@ a.mx-custom {
    ========================================================================== */
 body {
   font-family: $font-family;
- }
+}
 
 .btn {
   border-radius: 30px 30px 30px 30px;
@@ -136,41 +136,41 @@ body {
 /* Variables file: assets/stylesheets/landing-page/components/bottom-links/bottom-links.variables.scss */
 .bottom-links-items {
   margin: 24px 0 0 0;
-  }
+}
 
-.bottom-links-items > div {
+.bottom-links-items>div {
   display: flex;
   flex-direction: column;
   padding-bottom: 24px;
-  }
+}
 
-.bottom-links-items > div .btn {
+.bottom-links-items>div .btn {
   align-self: center;
   margin-top: auto;
-  }
+}
 
 .bottom-links-icon {
   height: 18px;
   margin-right: 8px;
-  }
+}
 
 .btn-group-footer {
   display: flex;
   justify-content: space-between;
-  }
+}
 
 @media screen and (max-width: 768px) {
   .btn-group-footer {
     display: flex;
     justify-content: center;
-    }
   }
+}
 
 @media screen and (max-width: 1336px) {
   .btn-group-footer {
     justify-content: space-around;
-    }
   }
+}
 
 .panel-footer {
   margin: 1;
@@ -188,6 +188,7 @@ h4.responsive-text {
 }
 
 @media screen and (max-width: 1480px) {
+
   button.responsive-text,
   h4.responsive-text {
     font-size: $h4-font-size-mid;
@@ -195,6 +196,7 @@ h4.responsive-text {
 }
 
 @media screen and (max-width: 1310px) {
+
   button.responsive-text,
   h4.responsive-text {
     font-size: $h4-font-size-small;
@@ -202,6 +204,7 @@ h4.responsive-text {
 }
 
 @media screen and (max-width: 1000px) {
+
   button.responsive-text,
   h4.responsive-text {
     font-size: $h4-font-size-large;
