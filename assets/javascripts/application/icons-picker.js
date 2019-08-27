@@ -104,7 +104,7 @@ const prevSelection = () => { // eslint-disable-line no-unused-vars
 }
 
 const selectAll = () => { // eslint-disable-line no-unused-vars
-  const allIcons = document.getElementsByClassName('js-icons-item')
+  const allIcons = document.getElementsByClassName('js-extended-icons-item')
   for (let i = 0; i < allIcons.length; i++) {
     allIcons[i].classList.add('icons-item-selected')
   }
@@ -112,7 +112,7 @@ const selectAll = () => { // eslint-disable-line no-unused-vars
 }
 
 const deselectAll = () => { // eslint-disable-line no-unused-vars
-  const allIcons = document.getElementsByClassName('js-icons-item')
+  const allIcons = document.getElementsByClassName('js-extended-icons-item')
   for (let i = 0; i < allIcons.length; i++) {
     allIcons[i].classList.remove('icons-item-selected')
   }
