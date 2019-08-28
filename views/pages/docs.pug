@@ -67,9 +67,10 @@ block content
         | 3- Use the icons in your html as follows:
       code.mb-3.codes &lt;i class=&quot;eos-icons&quot;&gt;LIGATURE_OF_THE_ICON&lt;/i&gt;
       p
-        | Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our online tool to see the icon&apos;s name:
-        a(href='https://eos-icons.eosdesignsystem.com/', target='_blank')  https://eos-icons.eosdesignsystem.com/
-        | .
+        | Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our
+        a(href='https://eos-icons.eosdesignsystem.com/cheatsheet.html', target='_blank')  cheatsheet
+        p
+          | to see the icon's name.
     section.mb-5.pb-2
       h2.font-weight-bold.mb-3.border-bottom Using animated icons
       p
@@ -80,7 +81,7 @@ block content
         | &lt;i class=&quot;eos-icons eos-icon-loading&quot;&gt;&lt;/i&gt;
       p
         | See the other animated icons classes in our
-        a(href='https://eos-icons.eosdesignsystem.com/', target='_blank')  demo page
+        a(href='https://eos-icons.eosdesignsystem.com/cheatsheet.html', target='_blank')  demo page
         | . Click on the icon you want to use to see the code snippet.
     section.mb-5.pb-2
       h2.font-weight-bold.mb-3.border-bottom EOS extended version with Material Design
@@ -135,15 +136,15 @@ block content
         i.eos-icons.md-48 face
         |
         code.mb-3.codes.mt-3
-          | &lt;i class=&apos;material-icons md-18&apos;&gt;face&lt;/i&gt;
+          | &lt;i class=&apos;eos-icons md-18&apos;&gt;face&lt;/i&gt;
           br
-          | &lt;i class=&apos;material-icons md-24&apos;&gt;face&lt;/i&gt;
+          | &lt;i class=&apos;eos-icons md-24&apos;&gt;face&lt;/i&gt;
           |
           br
-          | &lt;i class=&apos;material-icons md-36&apos;&gt;face&lt;/i&gt;
+          | &lt;i class=&apos;eos-icons md-36&apos;&gt;face&lt;/i&gt;
           |
           br
-          | &lt;i class=&apos;material-icons md-48&apos;&gt;face&lt;/i&gt;
+          | &lt;i class=&apos;eos-icons md-48&apos;&gt;face&lt;/i&gt;
         |
         li
           h5.mb-3 Implementation example with EOS icon
@@ -168,17 +169,6 @@ block content
           | &lt;i class=&apos;eos-icons md-48&apos;&gt;miscellaneous&lt;/i&gt;
         h5 SCSS code snippet
         code.mb-3.codes
-          |	/* Rules for sizing the icon. */
-          br
-          |	.md-18 { font-size: $eos-md-18; }
-          br
-          |	.md-24 { font-size: $eos-md-24; }
-          br
-          |	.md-36 { font-size: $eos-md-36; }
-          br
-          |	.md-48 { font-size: $eos-md-48; }
-          br
-          br
           | /* size variables */
           br
           | $eos-md-18: 18px;
@@ -188,6 +178,18 @@ block content
           | $eos-md-36: 36px;
           br
           | $eos-md-48: 48px;
+          br
+          br
+          | /* Rules for sizing the icon. */
+          br
+          | .md-18 { font-size: $eos-md-18; }
+          br
+          | .md-24 { font-size: $eos-md-24; }
+          br
+          | .md-36 { font-size: $eos-md-36; }
+          br
+          | .md-48 { font-size: $eos-md-48; }
+          br
     section.mb-5.pb-2
       p.mb-3 EOS icons is open source. Go to our Gitlab repository to find out more :
-        a(href='https://eos-icons.eosdesignsystem.com', target='_blank')  https://eos-icons.eosdesignsystem.com
+        a(href='https://gitlab.com/SUSE-UIUX/eos-icons', target='_blank')  https://gitlab.com/SUSE-UIUX/eos-icons
