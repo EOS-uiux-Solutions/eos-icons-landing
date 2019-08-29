@@ -19,7 +19,7 @@ items {
   }
 }
 
-p {
+p.min-height {
   min-height: 70px;
 
   @media screen and (max-width: $md-max) {

@@ -25,7 +25,8 @@ $(document).on('ready', function () {
     '': 0,
     'index.html': 0,
     'cheatsheet.html': 1,
-    'icons-picker.html': 2
+    'icons-picker.html': 2,
+    'docs.html': 3
   }
   const navLink = $('.current')
   navLink.removeClass('active')
