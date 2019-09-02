@@ -89,11 +89,11 @@ const prevSelection = () => { // eslint-disable-line no-unused-vars
   fileReader.onload = function (fileLoadedEvent) {
     const textFromFileLoaded = fileLoadedEvent.target.result
     const prevIcons = JSON.parse(textFromFileLoaded)
-    const prevEosIcons = prevIcons.eos_icons
+    const prevExtendedIcons = prevIcons.extended_icons
     const allIcons = document.getElementsByClassName('icons-item')
     for (let i = 0; i < allIcons.length; i++) {
-      for (let j = 0; j < prevEosIcons.length; j++) {
-        if (allIcons[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(prevEosIcons[j])) {
+      for (let j = 0; j < prevExtendedIcons.length; j++) {
+        if (allIcons[i].getElementsByClassName('eos-icons')[0].innerHTML === prevExtendedIcons[j]) {
           allIcons[i].classList.add('icons-item-selected')
         }
       }
