@@ -9,15 +9,6 @@
     text-align: center;
   }
 
-  .upload-file-hyperlink {
-    color: $hyper-link-color;
-    cursor: pointer;
-
-    &:hover {
-      color: $hyper-link-hover-color;
-    }
-
-  }
 }
 
 .default-btn {

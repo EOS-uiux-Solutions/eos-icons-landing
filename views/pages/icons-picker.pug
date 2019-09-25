@@ -12,7 +12,7 @@ block content
       h2
         | Click on Icons to select them
       p To continue building an old font, upload #[i icons-config.json] 
-      i.upload-file-hyperlink.link(data-toggle='modal', data-target='#myModal')  file here.
+        button.btn.btn-outline-light.link(data-toggle='modal', data-target='#myModal')  file here.
   // -----------------------------------------------------------------------------------------------
   ul#myTab.nav.nav-tabs.bg-jumbotron.pl-3.pr-3.pt-3.pb-2(role='tablist')
     li.nav-item
@@ -40,6 +40,7 @@ block content
       // Modal content
       .modal-content
         .modal-header
+          h5 Upload Config File
           button.close(type='button', data-dismiss='modal') &times
         .modal-body
           p
