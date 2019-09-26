@@ -316,6 +316,16 @@ p {
   width: 700px;
 }
 
+$eos-icons-gray-bg: #f7f9fc;
+
 .gray-bg {
-  background: #f7f9fc;
+  background: $eos-icons-gray-bg;
+}
+
+.padding-vertical-lg {
+  padding: 80px 0px;
+}
+
+.padding-top-md {
+  padding-top: 50px;
 }
