@@ -21,9 +21,10 @@
 
 .icons-item {
   display: inline-block;
+  flex-grow: 1;
+  font-size: $font-size-xs;
   margin-bottom: 3em;
-  user-select: none;
-  width: 200px;
+  width: 130px;
 
   i {
     font-size: $icons-item-font-size;

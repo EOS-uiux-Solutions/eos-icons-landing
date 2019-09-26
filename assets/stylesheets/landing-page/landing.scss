@@ -296,8 +296,6 @@ p {
   width: 80px;
 }
 
-$landing-contributors-font-size: 13px;
-
 .container-flex-row {
   align-items: center;
   display: flex;
@@ -305,6 +303,12 @@ $landing-contributors-font-size: 13px;
   justify-content: space-around;
 
   p {
-    font-size: $landing-contributors-font-size;
+    font-size: $font-size-xs;
   }
+}
+
+.landing-icons-demo {
+  display: block;
+  margin: auto;
+  width: 700px;
 }
