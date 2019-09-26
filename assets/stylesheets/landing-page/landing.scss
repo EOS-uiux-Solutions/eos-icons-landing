@@ -112,7 +112,6 @@ body {
 
 .btn {
   border-radius: 30px 30px 30px 30px;
-  border-width: 1.39px;
 }
 
 
@@ -249,7 +248,11 @@ img.responsive-image {
 .animated-icons {
   left: 80px;
   position: absolute;
-  top: 60px;
+  top: 25px;
+
+  @media screen and (max-width: 1000px) {
+    top: 55px;
+  }
 }
 
 /* Docs
@@ -309,6 +312,6 @@ p {
 
 .landing-icons-demo {
   display: block;
-  margin: auto;
+  margin: 20px auto 40px;
   width: 700px;
 }

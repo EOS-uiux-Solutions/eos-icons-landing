@@ -17,90 +17,77 @@ block content
         | DNA
       .fixed-rectangle-inverse.rounded.mt-lg-5.ml-lg-5.mr-lg-5
       .col.py-3.px-lg-5.pt-lg-5
-        h4
-          | EOS icons offers an easily customizable icons for any
-          br
-          |         company or project to use. We've created guides that are
-          br
-          |         adjustable and applicable to any open source project.
-          br
-          |         We appreciate your contribution to EOS icons and look
-          br
-          |         forward to hearing more about how it helps your
-          br
-          |         products and projects
-        a.btn.btn-dark.btn-lg.ml-lg-5.mt-lg-1(href='https://gitlab.com/SUSE-UIUX/eos-icons', target='_blank') Contribute to EOS Icons
+        p
+          | EOS icons offers an easily customizable icons for any company or 
+          | project to use. We've created guides that are adjustable and applicable to any open source project.
+          | We appreciate your contribution to EOS icons and look
+          | forward to hearing more about how it helps your
+          | products and projects
+        a.btn.btn-dark(href='https://gitlab.com/SUSE-UIUX/eos-icons', target='_blank') Contribute to EOS Icons
   // Lot of icons to choose from -------------------------------------------------------------------
   .jumbotron.jumbotron-fluid.mb-lg-0.bg-jumbotron.pb-lg-0
     .container
       h1.text-center.pb-lg-5.display-4 Lots of Icons to choose from
       img.img-fluid.landing-icons-demo(src='assets/images/landing/icons.png')
   // CSS animated Icons ----------------------------------------------------------------------------
-  .text-center.bg-jumbotron
+  .text-center.container
     h1.text-center.pb-lg-5.pt-lg-5.display-4 CSS Animated Icons
-    .card-block.pt-lg-5
-      .position-relative.d-inline-block
+    .row
+      .col-lg-6
         img.animated-image.img-fluid(src='assets/images/landing/monitor.png')
         .animated-icons.mt-lg-5.pt-lg-5.ml-lg-4
           .icons-item(data-name='loading')
             i.eos-icons.eos-icon-loading
             br
-            |           loading
+            | loading
           .icons-item(data-name='in')
             i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
             br
-            |           installing
-      h4.d-inline-block.text-left.pl-lg-5
-        | EOS icons offers easily customisable animated icons. These
-        br
-        |         icons use only CSS animations and nothing more, which make
-        br
-        |         things a lot easier when using these icons in your own projects.
-        br
-        |         Also, they run on the GPU so the frame rate is much higher
-        br
-        |         than that of Javascript animations. When it comes to CSS
-        br
-        |         animations they also have the advantage of not causing
-        br
-        |         reflows and redraws unlike modifying elements via
-        br
-        |         Javascript would.
+            | installing
+      .col-lg-6.text-left
+        p
+          | EOS icons offers easily customisable animated icons. These
+          | icons use only CSS animations and nothing more, which make
+          | things a lot easier when using these icons in your own projects.
+          | Also, they run on the GPU so the frame rate is much higher
+          | than that of Javascript animations. When it comes to CSS
+          | animations they also have the advantage of not causing
+          | reflows and redraws unlike modifying elements via
+          | Javascript would.
   // A pixel perfect design process -----------------------------------------------------------------
-  .text-center.bg-jumbotron
+  .container
     h1.text-center.pb-lg-5.pt-lg-5.display-4 A pixel-perfect design process
-    .text-block.text-left.d-inline-block.position-absolute.mt-lg-5.pt-lg-5.pl-lg-4
-      h5
-        | 1. Stroke terminal
+    .row
+      .col-lg-6
+        .row
+          .col-4
+            ol.text-left.pull-right
+              li
+                | Stroke terminal
+              li
+                | Corner
+              li
+                | Counter area
+              li
+                | Stroke
+              li
+                | Counter stroke
+              li
+                | Bounding area
+          .col-8
+            img(src='assets/images/landing/material-icons.png')
+      .col-lg-6
+        p.d-inline-block.text-left
+          | EOS icons were made to coexist with material icons. We
+          | carefully follow material design guidelines which makes
+          | EOS icons indistinguishable from material Icons.
+          | Material Design defines the qualities that can be
+          | expressed by UI regions, surfaces, and components.
+          | Design and strategize how your app is built using
+          | foundations that address design from both a broad
+          | and detailed perspective.
         br
-        |         2. Corner
-        br
-        |         3. Counter area
-        br
-        |         4. Stroke
-        br
-        |         5. Counter stroke
-        br
-        |         6. Bounding area
-    img.d-inline-block.pb-lg-5.mb-lg-5.align-top.mx-auto(src='assets/images/landing/material-icons.png')
-    .d-inline-block
-      h4.d-inline-block.text-left.pl-lg-1.pt-lg-5
-        | EOS icons were made to coexist with material icons. We
-        br
-        |         carefully follow material design guidelines which makes
-        br
-        |         EOS icons indistinguishable from material Icons.
-        br
-        |         Material Design defines the qualities that can be
-        br
-        |         expressed by UI regions, surfaces, and components.
-        br
-        |         Design and strategize how your app is built using
-        br
-        |         foundations that address design from both a broad
-        br
-        |         and detailed perspective.
-      a.btn.btn-dark.btn-lg.d-flex.mt-lg-4.mb-3.mx-custom(href='/cheatsheet.html') Check out Extended EOS Icons
+        a.btn.btn-dark(href='/cheatsheet.html') Check out Extended EOS Icons
   // Cheatsheet and new icons request ---------------------------------------------------------------
   .container-fluid
     .row
@@ -115,7 +102,7 @@ block content
             |                better into practice? We might have some
             br
             |                advices for you.
-          a.btn.btn-outline-light.btn-lg.ml-5.mt-1.mb-1.responsive-text(href='/cheatsheet.html') Check out Cheatsheet
+          a.btn.btn-outline-light.ml-5.mt-1.mb-1.responsive-text(href='/cheatsheet.html') Check out Cheatsheet
       .col-lg-6.bg-request
         .d-inline-block.align-top.pt-5.pr-3
           img.d-inline.responsive-image(src='assets/images/landing/rocket2.png')
@@ -127,14 +114,14 @@ block content
             |                need some icons? We can design them for you
             br
             |                and include them in EOS icons.
-          a.btn.btn-outline-light.btn-lg.ml-5.mt-1.responsive-text.text-white(data-toggle='modal', data-target='#exampleModalCenter') Request new icons
+          a.btn.btn-outline-light.ml-5.mt-1.responsive-text.text-white(data-toggle='modal', data-target='#exampleModalCenter') Request new icons
   // Checkout EOS DS --------------------------------------------------------------------------------
   .container-fluid.top-gradient.text-white.plane-container
     .d-inline-block.text-left.mt-sm-4.pt-3.left-padding.plane-index
       h1 Try EOS Icons with EOS Design System
       h4.responsive-text We are a part of EOS Design system and together we work like a charm
     .d-inline-block.text-center.plane-index
-      a.btn.btn-outline-light.btn-lg.ml-lg-5.mb-lg-5.mt-sm-3.responsive-text(href='https://www.eosdesignsystem.com/', target='_blank') Check out EOS DS
+      a.btn.btn-outline-light.ml-lg-5.mb-lg-5.mt-sm-3.responsive-text(href='https://www.eosdesignsystem.com/', target='_blank') Check out EOS DS
     .d-inline-block.ml-5
       img.d-inline-block.plane-img(src='assets/images/landing/plane.png')
   // Contributors section ---------------------------------------------------------------------------
