@@ -34,13 +34,13 @@ block content
   .jumbotron.jumbotron-fluid.mb-lg-0.bg-jumbotron.pb-lg-0
     .container
       h1.text-center.pb-lg-5.display-4 Lots of Icons to choose from
-      img.d-inline-block.pb-lg-5.img-fluid(src='assets/images/landing/icons.png', alt='img-responsive')
+      img.d-inline-block.pb-lg-5.img-fluid(src='assets/images/landing/icons.png')
   // CSS animated Icons ----------------------------------------------------------------------------
   .text-center.bg-jumbotron
     h1.text-center.pb-lg-5.pt-lg-5.display-4 CSS Animated Icons
     .card-block.pt-lg-5
       .position-relative.d-inline-block
-        img.animated-image.img-fluid(src='assets/images/landing/monitor.png', alt='img-responsive')
+        img.animated-image.img-fluid(src='assets/images/landing/monitor.png')
         .animated-icons.mt-lg-5.pt-lg-5.ml-lg-4
           .icons-item(data-name='loading')
             i.eos-icons.eos-icon-loading
@@ -82,7 +82,7 @@ block content
         |         5. Counter stroke
         br
         |         6. Bounding area
-    img.d-inline-block.pb-lg-5.mb-lg-5.align-top.mx-auto(src='assets/images/landing/material-icons.png', alt='img-responsive')
+    img.d-inline-block.pb-lg-5.mb-lg-5.align-top.mx-auto(src='assets/images/landing/material-icons.png')
     .d-inline-block
       h4.d-inline-block.text-left.pl-lg-1.pt-lg-5
         | EOS icons were made to coexist with material icons. We
@@ -106,7 +106,7 @@ block content
     .row
       .col-lg-6.bg-cheatsheet
         .d-inline-block.align-top.pt-5.pr-3
-          img.d-inline.responsive-image(src='assets/images/landing/rocket1.png', alt='img-responsive')
+          img.d-inline.responsive-image(src='assets/images/landing/rocket1.png')
         .fixed-rectangle.rounded.d-inline-block.mt-3.mb-3
         .d-inline-block.align-top.mx-auto.pt-5
           h4.text-white.pl-5.responsive-text
@@ -118,7 +118,7 @@ block content
           a.btn.btn-outline-light.btn-lg.ml-5.mt-1.mb-1.responsive-text(href='/cheatsheet.html') Check out Cheatsheet
       .col-lg-6.bg-request
         .d-inline-block.align-top.pt-5.pr-3
-          img.d-inline.responsive-image(src='assets/images/landing/rocket2.png', alt='img-responsive')
+          img.d-inline.responsive-image(src='assets/images/landing/rocket2.png')
         .fixed-rectangle.rounded.d-inline-block.mt-3
         .d-inline-block.align-top.mx-auto.pt-5
           h4.text-white.pl-5.responsive-text
@@ -136,35 +136,36 @@ block content
     .d-inline-block.text-center.plane-index
       a.btn.btn-outline-light.btn-lg.ml-lg-5.mb-lg-5.mt-sm-3.responsive-text(href='https://www.eosdesignsystem.com/', target='_blank') Check out EOS DS
     .d-inline-block.ml-5
-      img.d-inline-block.plane-img(src='assets/images/landing/plane.png', alt='img-responsive')
+      img.d-inline-block.plane-img(src='assets/images/landing/plane.png')
   // Contributors section ---------------------------------------------------------------------------
   .jumbotron.jumbotron-fluid.bg-jumbotron.mb-0.pt-5.pb-2
     h3.mb-5.ml-5 Special thanks to all the superheroes that made it happen :
-    .container-fluid.text-center
-      a.d-inline-block(title='Cynthia Sanchez on twitter', href='https://twitter.com/cyntss', target='_blank')
-        img(src='assets/images/landing/image1.png', alt='img-responsive')
+    .container-flex-row.text-center
+      a(title='Cynthia Sanchez on twitter', href='https://twitter.com/cyntss', target='_blank')
+        img.contributor-img(src='assets/images/landing/image1.png')
         p.text-decoration-none.text-dark Cynthia Sanchez
-      a.d-inline-block.pl-5(title='Sorin Curescu on twitter', href='https://twitter.com/en3sis', target='_blank')
-        img(src='assets/images/landing/image2.png', alt='img-responsive')
-        p.text-decoration-none.text-dark.ml-3 Sorin Curescu
-      a.d-inline-block.pl-5(title='Manuele Carlini on twitter', href='https://twitter.com/manuelecarlini', target='_blank')
-        img(src='assets/images/landing/image3.png', alt='img-responsive')
-        p.text-decoration-none.text-dark.ml-3 Manuele Carlini
-      a.d-inline-block.pl-5(title='Jesus Herman on twitter', href='https://twitter.com/hesusjerman', target='_blank')
-        img(src='assets/images/landing/image4.png', alt='img-responsive')
-        p.text-decoration-none.text-dark.ml-2 Jesus Herman
-      a.d-inline-block.pl-5(title='Abhinandan Sharma on Linked-In', href='https://www.linkedin.com/in/abhinandan-sharma-672299150/', target='_blank')
-        img(src='assets/images/landing/image5.png', alt='img-responsive')
-        p.text-decoration-none.text-dark.ml-3 Abhinandan Sharma
-      a.d-inline-block.pl-5(title='Richa Bhist on Linked-In', href='https://www.linkedin.com/in/richabisht/', target='_blank')
-        img(src='assets/images/landing/image6.png', alt='img-responsive')
-        p.text-decoration-none.text-dark.ml-3 Richa Bhist
-      a.d-inline-block.pl-5(title='Kartikay Bhutani on twitter', href='https://twitter.com/kbhutani0001', target='_blank')
-        img(src='assets/images/landing/image7.png', alt='img-responsive')
-        p.text-decoration-none.text-dark.ml-3 Kartikay Bhutani
-      a.d-inline-block.pl-5(title='Zvezdana Marjanovic on Linked-In', href='https://www.linkedin.com/in/zvezdanam', target='_blank')
-        img(src='assets/images/landing/image8.png', alt='img-responsive')
-        p.text-decoration-none.text-dark.ml-3 Zvezdana Marjanovic
+      a(title='Zvezdana Marjanovic on Linked-In', href='https://www.linkedin.com/in/zvezdanam', target='_blank')
+        img.contributor-img(src='assets/images/landing/image8.png')
+        p.text-decoration-none.text-dark Zvezdana Marjanovic
+      a(title='Manuele Carlini on twitter', href='https://twitter.com/manuelecarlini', target='_blank')
+        img.contributor-img(src='assets/images/landing/image3.png')
+        p.text-decoration-none.text-dark Manuele Carlini
+      a(title='Richa Bhist on Linked-In', href='https://www.linkedin.com/in/richabisht/', target='_blank')
+        img.contributor-img(src='assets/images/landing/image6.png')
+        p.text-decoration-none.text-dark Richa Bhist
+      a(title='Jesus Herman on twitter', href='https://twitter.com/hesusjerman', target='_blank')
+        img.contributor-img(src='assets/images/landing/image4.png')
+        p.text-decoration-none.text-dark Jesus Herman
+      a(title='Sorin Curescu on twitter', href='https://twitter.com/en3sis', target='_blank')
+        img.contributor-img(src='assets/images/landing/image2.png')
+        p.text-decoration-none.text-dark Sorin Curescu
+      a(title='Abhinandan Sharma on Linked-In', href='https://www.linkedin.com/in/abhinandan-sharma-672299150/', target='_blank')
+        img.contributor-img(src='assets/images/landing/image5.png')
+        p.text-decoration-none.text-dark Abhinandan Sharma
+      a(title='Kartikay Bhutani on twitter', href='https://twitter.com/kbhutani0001', target='_blank')
+        img.contributor-img(src='assets/images/landing/image7.png')
+        p.text-decoration-none.text-dark Kartikay Bhutani
+      
   // Modal
   #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')

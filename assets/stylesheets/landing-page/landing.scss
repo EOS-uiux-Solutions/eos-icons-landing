@@ -290,3 +290,21 @@ i.md-48 {
 p {
   margin-bottom: 1.5rem;
 }
+
+.contributor-img {
+  border-radius: 100%;
+  width: 80px;
+}
+
+$landing-contributors-font-size: 13px;
+
+.container-flex-row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  p {
+    font-size: $landing-contributors-font-size;
+  }
+}
