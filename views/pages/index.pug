@@ -3,7 +3,7 @@ extends ../layouts/default
 block content
   // header ----------------------------------------------------------------------------------------
   .header.mb-lg-2
-    .content.container.text-white.img-fluid(alt='img-responsive')
+    .content.container.text-white.img-fluid
       h2
         | Free. Open source. Vector and pixel-perfect icons. The iconic font your product needs.
   .landing-page
@@ -92,64 +92,63 @@ block content
       // Cheatsheet and new icons request ---------------------------------------------------------------
       .container-fluid
         .row
-          .col-lg-6.bg-cheatsheet.d-flex.flex-row.align-items-center
-            .d-inline-block.align-top
-              img.d-inline.responsive-image(src='assets/images/landing/rocket1.png')
-            .fixed-rectangle.rounded.m-3
+          .col-lg-6.bg-cheatsheet.d-flex.flex-row.align-items-center.p-3
+            img.img-fluid(src='assets/images/landing/rocket1.png')
             .d-inline-block.align-top.mx-auto
-              h4.text-white.pl-5.responsive-text
+              p.text-white.pl-5
                 | Do you already know how to put these icons
                 | better into practice? We might have some
                 | advices for you.
               a.btn.btn-outline-light.ml-5.mt-1.mb-1(href='/cheatsheet.html') Check out Cheatsheet
-          .col-lg-6.bg-request.d-flex.flex-row.align-items-center
-            .d-inline-block.align-top
-              img.d-inline.responsive-image(src='assets/images/landing/rocket2.png')
-            .fixed-rectangle.rounded.m-3
+          .col-lg-6.bg-request.d-flex.flex-row.align-items-center.p-3
+            img.img-fluid(src='assets/images/landing/rocket2.png')
             .d-inline-block.align-top.mx-auto
-              p.text-white.pl-5.responsive-text
+              p.text-white.pl-5
                 | Are you working on an open source project and
                 | need some icons? We can design them for you
                 | and include them in EOS icons.
               button.btn.btn-outline-light.ml-5.mt-1(data-toggle='modal', data-target='#exampleModalCenter') Request new icons
       // Checkout EOS DS --------------------------------------------------------------------------------
       .container-fluid.top-gradient.text-white.plane-container
-        .d-inline-block.text-left.mt-sm-4.pt-3.left-padding.plane-index
+        .d-inline-block.text-left.mt-sm-4.pt-3.left-padding
           h1 Try EOS Icons with EOS Design System
-          h4.responsive-text We are a part of EOS Design system and together we work like a charm
-        .d-inline-block.text-center.plane-index
-          a.btn.btn-outline-light.ml-lg-5.mb-lg-5.mt-sm-3.responsive-text(href='https://www.eosdesignsystem.com/', target='_blank') Check out EOS DS
+          p We are a part of EOS Design system and together we work like a charm
+        .d-inline-block.text-center
+          a.btn.btn-outline-light.ml-lg-5.mb-lg-5.mt-sm-3(href='https://www.eosdesignsystem.com/', target='_blank') Check out EOS DS
         .d-inline-block.ml-5
           img.d-inline-block.plane-img(src='assets/images/landing/plane.png')
       // Contributors section ---------------------------------------------------------------------------
       .container.padding-vertical-lg
         h3.text-center
           | Special thanks to all the superheroes that made it happen
-        .container-flex-row.text-center.padding-top-md
+        .contributors.text-center.padding-top-md
           a(title='Cynthia Sanchez on twitter', href='https://twitter.com/cyntss', target='_blank')
-            img.contributor-img(src='assets/images/landing/image1.png')
+            img.contributors-img(src='assets/images/landing/image1.png')
             p.text-decoration-none.text-dark Cynthia Sanchez
           a(title='Zvezdana Marjanovic on Linked-In', href='https://www.linkedin.com/in/zvezdanam', target='_blank')
-            img.contributor-img(src='assets/images/landing/image8.png')
+            img.contributors-img(src='assets/images/landing/image8.png')
             p.text-decoration-none.text-dark Zvezdana Marjanovic
           a(title='Manuele Carlini on twitter', href='https://twitter.com/manuelecarlini', target='_blank')
-            img.contributor-img(src='assets/images/landing/image3.png')
+            img.contributors-img(src='assets/images/landing/image3.png')
             p.text-decoration-none.text-dark Manuele Carlini
           a(title='Richa Bhist on Linked-In', href='https://www.linkedin.com/in/richabisht/', target='_blank')
-            img.contributor-img(src='assets/images/landing/image6.png')
+            img.contributors-img(src='assets/images/landing/image6.png')
             p.text-decoration-none.text-dark Richa Bhist
           a(title='Jesus Herman on twitter', href='https://twitter.com/hesusjerman', target='_blank')
-            img.contributor-img(src='assets/images/landing/image4.png')
+            img.contributors-img(src='assets/images/landing/image4.png')
             p.text-decoration-none.text-dark Jesus Herman
           a(title='Sorin Curescu on twitter', href='https://twitter.com/en3sis', target='_blank')
-            img.contributor-img(src='assets/images/landing/image2.png')
+            img.contributors-img(src='assets/images/landing/image2.png')
             p.text-decoration-none.text-dark Sorin Curescu
           a(title='Abhinandan Sharma on Linked-In', href='https://www.linkedin.com/in/abhinandan-sharma-672299150/', target='_blank')
-            img.contributor-img(src='assets/images/landing/image5.png')
+            img.contributors-img(src='assets/images/landing/image5.png')
             p.text-decoration-none.text-dark Abhinandan Sharma
           a(title='Kartikay Bhutani on twitter', href='https://twitter.com/kbhutani0001', target='_blank')
-            img.contributor-img(src='assets/images/landing/image7.png')
+            img.contributors-img(src='assets/images/landing/image7.png')
             p.text-decoration-none.text-dark Kartikay Bhutani
+          a(title='Carla Moratillo on Dribbble', href='https://dribbble.com/Carla_Isela', target='_blank')
+            img.contributors-img(src='assets/images/landing/carla.jpg')
+            p.text-decoration-none.text-dark Carla Moratillo
           
   // Modal
   #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenter', aria-hidden='true')

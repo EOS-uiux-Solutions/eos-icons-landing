@@ -95,11 +95,6 @@ div.fixed-rectangle-inverse {
   padding-left: 20%;
 }
 
-.plane-index {
-  position: relative;
-  z-index: 1;
-}
-
 .forward-index {
   z-index: 10;
 }
@@ -299,19 +294,21 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.contributor-img {
-  border-radius: 100%;
-  width: 80px;
-}
-
-.container-flex-row {
+.contributors {
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
 
   p {
     font-size: $font-size-xs;
+  }
+
+  &-img {
+    border-radius: 100%;
+    margin: 0 20px;
+    width: 80px;
   }
 }
 
@@ -322,6 +319,7 @@ p {
 }
 
 $eos-icons-gray-bg: #f7f9fc;
+$landing-font-size: 20px;
 
 .gray-bg {
   background: $eos-icons-gray-bg;
@@ -336,5 +334,5 @@ $eos-icons-gray-bg: #f7f9fc;
 }
 
 .landing-page {
-  font-size: 20px;
+  font-size: $landing-font-size;
 }

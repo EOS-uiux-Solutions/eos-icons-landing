@@ -1,8 +1,8 @@
 /* Template styles
    ========================================================================== */
 body {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: $body-font-size;
+  font-weight: 300;
   margin: 0;
   max-width: 100%;
   overflow-x: hidden;
