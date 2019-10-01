@@ -43,7 +43,7 @@
 div.fixed-rectangle {
   background-color: #ffffff;
   height: 222px;
-  width: 4px;
+  width: 1px;
 }
 
 div.fixed-rectangle-inverse {
@@ -81,9 +81,14 @@ div.fixed-rectangle-inverse {
 }
 
 .plane-container {
-  height: 12em;
   overflow: hidden;
   position: relative;
+
+  @media screen and (max-width: 1200px) {
+    .left-padding {
+      padding-left: 0px;
+    }
+  }
 }
 
 .left-padding {
@@ -328,4 +333,8 @@ $eos-icons-gray-bg: #f7f9fc;
 
 .padding-top-md {
   padding-top: 50px;
+}
+
+.landing-page {
+  font-size: 20px;
 }
