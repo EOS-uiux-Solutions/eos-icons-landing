@@ -95,6 +95,11 @@ div.fixed-rectangle-inverse {
   padding-left: 20%;
 }
 
+.plane-index {
+  position: relative;
+  z-index: 1;
+}
+
 .forward-index {
   z-index: 10;
 }

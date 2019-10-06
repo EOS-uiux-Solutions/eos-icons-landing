@@ -7,12 +7,12 @@ block content
       h2
         | Free. Open source. Vector and pixel-perfect icons. The iconic font your product needs.
   // -----------------------------------------------------------------------------------------------
-  ul#myTab.nav.nav-tabs.bg-jumbotron.pl-3.pr-3.pt-3.pb-2(role='tablist')
+  ul#myTab.nav.nav-tabs.bg-jumbotron.pl-3.pr-3(role='tablist')
     li.nav-item
-      a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') EOS Icons Set
+      a#home-tab.nav-link.active.mt-4(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') EOS Icons Set
     li.nav-item
-      a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Extended EOS Icons Set
-    input.searchbar.curved(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
+      a#profile-tab.nav-link.mt-4(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Extended EOS Icons Set
+    input.searchbar.curved.mt-3.mb-2(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
   #myTabContent.tab-content
     #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
       a.download-eos-icons-button(href='https://www.npmjs.com/package/eos-icons', target='_blank')
