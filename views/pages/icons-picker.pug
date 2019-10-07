@@ -14,10 +14,10 @@ block content
       p To continue building an old font, upload #[i icons-config.json] 
         button.btn.btn-outline-light.link(data-toggle='modal', data-target='#myModal')  file here.
   // -----------------------------------------------------------------------------------------------
-  ul#myTab.nav.nav-tabs.bg-jumbotron.pl-3.pr-3.pt-3.pb-2(role='tablist')
+  ul#myTab.nav.nav-tabs.bg-jumbotron.pl-3.pr-3(role='tablist')
     li.nav-item
-      a#profile-tab.nav-link.active(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Extended EOS Icons Set
-    input.searchbar.curved(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
+      a#profile-tab.nav-link.active.mt-4(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Extended EOS Icons Set
+    input.searchbar.curved.mt-3.mb-2(onkeyup='searchIcon()', type='text', name='search', placeholder='Search Icons...')
   #myTabContent.tab-content
     #profile.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='profile-tab')
       #extended-icons.js-extended-icons-list.pl-4.pr-4.pt-5
