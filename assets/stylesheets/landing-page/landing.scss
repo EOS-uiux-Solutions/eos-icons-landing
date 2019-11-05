@@ -310,6 +310,10 @@ p {
     font-size: $font-size-xs;
   }
 
+  a {
+    padding: 0 10px;
+  }
+
   &-img {
     border-radius: 100%;
     margin: 0 20px;
