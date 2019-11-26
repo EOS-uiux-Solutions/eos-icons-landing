@@ -1,2 +1,2 @@
 mkdir -p dist/assets/js
-npx babel assets/javascripts/application --out-file dist/assets/js/application.min.js
+npx babel --plugins @babel/plugin-transform-async-to-generator assets/javascripts/application --out-file dist/assets/js/application.min.js

@@ -18,25 +18,30 @@
   const $iconDisplayTemplate = $('.js-icons-item').clone(true)
   $('.js-icons-item').remove()
 
-  const iconsListData = () => {
-    getIconsList(function (data) { // eslint-disable-line
-      const iconsList = data.glyphs
-
-      for (let i = 0; i < iconsList.length; i++) {
-        const newIconDisplay = $iconDisplayTemplate.clone(true)
-        const iconName = iconsList[i]
-
-        // Add icon name
-        $(newIconDisplay).attr('data-name', iconName)
-        $(newIconDisplay).find('.js-eos-icons').text(iconName).addClass(`eos-icon-${iconName}`)
-        $(newIconDisplay).find('.js-eos-icon-name').text(iconName)
-
-        $($iconsContainer).append(newIconDisplay)
-      }
-    })
+  const xiconsListData =  async () => {
+   try {
+    const icons = await getIconsList()
+    return icons
+   } catch (error) {
+    console.log(error)
+   }
   }
 
-  iconsListData()
+  xiconsListData().then(data => {
+    const { glyphs } = data
+
+    for (let i = 0; i < glyphs.length; i++) {
+      const newIconDisplay = $iconDisplayTemplate.clone(true)
+      const iconName = glyphs[i]
+
+      // Add icon name
+      $(newIconDisplay).attr('data-name', iconName)
+      $(newIconDisplay).find('.js-eos-icons').text(iconName).addClass(`eos-icon-${iconName}`)
+      $(newIconDisplay).find('.js-eos-icon-name').text(iconName)
+
+      $($iconsContainer).append(newIconDisplay)
+    }
+  })
 })()
 
 const searchIcon = () => { // eslint-disable-line no-unused-vars
@@ -52,7 +57,7 @@ const searchIcon = () => { // eslint-disable-line no-unused-vars
   }
 }
 
-const addSelection = (obj) => { // eslint-disable-line no-unused-vars
+const addSelection = obj => { // eslint-disable-line no-unused-vars
   if (obj.className.includes('icons-item-selected')) {
     obj.classList.remove('icons-item-selected')
   } else {

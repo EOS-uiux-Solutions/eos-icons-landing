@@ -11,6 +11,7 @@ const iconsListData = () => {
   getIconsList(function (data) { // eslint-disable-line no-undef
     const iconsList = data.glyphs
 
+    console.log(data)
     for (let i = 0; i < iconsList.length; i++) {
       const newIconDisplay = $iconDisplayTemplate.clone(true)
       const iconName = iconsList[i]
