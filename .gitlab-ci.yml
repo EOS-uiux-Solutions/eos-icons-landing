@@ -2,7 +2,6 @@ stages:
   - test
   - build
   - deploy
-  - release
 
 image: node:10.15.0
 

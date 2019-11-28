@@ -16,6 +16,7 @@ const gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   { series, parallel } = require('gulp'),
   pug = require('gulp-pug')
+  remoteSrc = require('gulp-remote-src')
 
 /* Landing page destination */
 
@@ -103,6 +104,12 @@ const moveJson = () => {
   .pipe(gulp.dest(`${destinationVendors}js/`));
 }
 
+const getIconsTagsFromEos = () => {
+  return remoteSrc(`eos-set.json`, {
+    base: 'https://suse.eosdesignsystem.com/javascripts/application/models/'})
+    .pipe(gulp.dest(`${destinationVendors}js/`));
+}
+
 /* Configure the default gulp task and one for the landing page
    ========================================================================== */
 /** Tasks exported for individual use **/
@@ -125,5 +132,6 @@ exports.buildVendors =
       extractLandingVendorsCss,
       extractLandingVendorsJs,
       extractLandingFonts,
-      extractVendorJson
+      extractVendorJson,
+      getIconsTagsFromEos
     ))

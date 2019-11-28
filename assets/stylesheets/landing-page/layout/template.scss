@@ -19,3 +19,8 @@ body {
 .two-columns {
   column-count: 2;
 }
+
+.tags,
+.badge {
+  margin: $tags-badge-margin;
+}

@@ -13,46 +13,9 @@
       }
     }
   }
-
-  const $iconsContainer = $('.js-icons-list')
-  const $iconDisplayTemplate = $('.js-icons-item').clone(true)
-  $('.js-icons-item').remove()
-
-  const iconsListData = () => {
-    getIconsList(function (data) { // eslint-disable-line
-      const iconsList = data.glyphs
-
-      for (let i = 0; i < iconsList.length; i++) {
-        const newIconDisplay = $iconDisplayTemplate.clone(true)
-        const iconName = iconsList[i]
-
-        // Add icon name
-        $(newIconDisplay).attr('data-name', iconName)
-        $(newIconDisplay).find('.js-eos-icons').text(iconName).addClass(`eos-icon-${iconName}`)
-        $(newIconDisplay).find('.js-eos-icon-name').text(iconName)
-
-        $($iconsContainer).append(newIconDisplay)
-      }
-    })
-  }
-
-  iconsListData()
 })()
 
-const searchIcon = () => { // eslint-disable-line no-unused-vars
-  const input = document.getElementsByClassName('searchbar')[0].value
-  const x = document.getElementsByClassName('icons-item')
-  for (let i = 0; i < x.length; i++) {
-    if (!(x[i].getElementsByClassName('eos-icons')[0].innerHTML.includes(input))) {
-      x[i].style.display = 'none'
-    } // eslint-disable-line brace-style
-    else {
-      x[i].style.display = 'inline-block'
-    }
-  }
-}
-
-const addSelection = (obj) => { // eslint-disable-line no-unused-vars
+const addSelection = obj => { // eslint-disable-line no-unused-vars
   if (obj.className.includes('icons-item-selected')) {
     obj.classList.remove('icons-item-selected')
   } else {
