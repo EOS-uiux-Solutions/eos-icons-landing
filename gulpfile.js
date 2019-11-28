@@ -105,7 +105,6 @@ const moveJson = () => {
 }
 
 const getIconsTagsFromEos = () => {
-  
   return remoteSrc(`eos-set.json`, {
     base: 'https://suse.eosdesignsystem.com/javascripts/application/models/'})
     .pipe(gulp.dest(`${destinationVendors}js/`));
