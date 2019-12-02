@@ -1,6 +1,6 @@
 $(document).on('ready', function () {
   /* Only run the functions when we need to display / filter the icons. */
-  if($('.js-icons-list').length > 0) {
+  if n($('.js-icons-list').length > 0) {
     eosIconsDisplay()
     extendedIconsListData()
     searchIcon()
