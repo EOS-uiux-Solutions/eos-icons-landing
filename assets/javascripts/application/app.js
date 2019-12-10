@@ -6,11 +6,14 @@ $(document).on('ready', function () {
     $('.tags').text('')
 
     const iconTags = $(`.eos-icon-${iconName}`).data('tags')
-
     copy = $('#copy3')
     value = `<i class="eos-icons"> ${iconName}</i>`
     copy.val(value)
-    $('.tags').html(iconTags.split(',').map(ele => `<span class='badge badge-secondary'> ${ele} </span>`))
+
+    /* Only render the tags if exists */
+    if (iconTags !== undefined) {
+      $('.tags').html(iconTags.split(',').map(ele => `<span class='badge badge-secondary'> ${ele} </span>`))
+    }
   }
 
   function changeValueAnimated () {
