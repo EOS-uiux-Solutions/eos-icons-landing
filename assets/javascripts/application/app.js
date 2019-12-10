@@ -11,7 +11,7 @@ $(document).on('ready', function () {
     copy.val(value)
 
     /* Only render the tags if exists */
-    if(iconTags !== undefined) {
+    if (iconTags !== undefined) {
       $('.tags').html(iconTags.split(',').map(ele => `<span class='badge badge-secondary'> ${ele} </span>`))
     }
   }
