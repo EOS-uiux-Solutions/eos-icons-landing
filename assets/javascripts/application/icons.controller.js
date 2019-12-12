@@ -33,7 +33,7 @@ const eosIconsDisplay = async () => {
       const newIconDisplay = $iconDisplayTemplate.clone(true)
       const iconName = glyphs[i]
 
-      if(reduceTags[iconName] !== undefined) {
+      if (reduceTags[iconName] !== undefined) {
         // Add icon name
         $(newIconDisplay).find('.js-eos-icons').attr('data-tags', reduceTags[iconName].tags)
       }
