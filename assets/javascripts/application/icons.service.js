@@ -9,7 +9,7 @@ const getIconsList = async () => { // eslint-disable-line no-unused-vars
 
 const getIconsTagsFromEos = async () => { // eslint-disable-line no-unused-vars
   try {
-    const icons = await window.fetch('vendors/js/eos-set.json')
+    const icons = await window.fetch('vendors/js/eos-icons.json')
     return await icons.json()
   } catch (error) {
     console.log(error)

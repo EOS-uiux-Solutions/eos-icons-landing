@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "eos-icons": "^2.0.1",
+    "eos-icons": "^3.1.0",
     "jquery": "^2.0.0"
   },
   "mainfiles": {

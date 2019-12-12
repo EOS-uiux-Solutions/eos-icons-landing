@@ -105,9 +105,8 @@ const moveJson = () => {
 }
 
 const getIconsTagsFromEos = () => {
-  return remoteSrc(`eos-set.json`, {
-    base: 'https://suse.eosdesignsystem.com/javascripts/application/models/'})
-    .pipe(gulp.dest(`${destinationVendors}js/`));
+  return gulp.src('./vendors/node_modules/eos-icons/dist/js/eos-icons.json')
+  .pipe(gulp.dest(`${destinationVendors}js/`));
 }
 
 /* Configure the default gulp task and one for the landing page
