@@ -37,8 +37,7 @@ const generate = () => { // eslint-disable-line no-unused-vars
       'extended_icons': extendedIcons
     }
     console.log(json)
-    // const postReqUrl = 'https://eos-icons-picker-api.herokuapp.com/iconsapi'
-    const postReqUrl = 'http://localhost:3000/iconsapi'//'https://eos-icons-picker-api.herokuapp.com/iconsapi'
+    const postReqUrl = 'https://eos-icons-picker-api.herokuapp.com/iconsapi'
 
     $.post(postReqUrl, { icons_config: json }, function (data, status) {
       window.location.href = `thankyou-page.html?ts=${data}`
@@ -85,8 +84,7 @@ const deselectAll = () => { // eslint-disable-line no-unused-vars
 }
 
 const downloadFont = () => { // eslint-disable-line no-unused-vars
-  // const downloadEndPoints = 'https://eos-icons-picker-api.herokuapp.com/download?'
-  const downloadEndPoints = 'http://localhost:3000/download?'
+  const downloadEndPoints = 'https://eos-icons-picker-api.herokuapp.com/download?'
   const downloadTimeStamp = window.location.href.split('?')[1]
   const downloadUrl = downloadEndPoints + downloadTimeStamp
   window.open(downloadUrl, '_blank')
