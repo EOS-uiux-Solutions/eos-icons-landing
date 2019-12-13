@@ -15,7 +15,7 @@
     "start": "./bin/npm-start",
     "serve:macos": "./bin/serve-macos",
     "serve:linux": "./bin/serve-linux",
-    "build:all-assets": "npm run build:css & npm run build:js & npx gulp pugToHtml & npx gulp moveMultimedia & npx gulp moveJson",
+    "build:all-assets": "npm run build:css & npm run build:js & npx gulp pugToHtml & npx gulp moveMultimedia & npx gulp moveAnimated & npx gulp moveJson",
     "build:vendors": "./bin/build-vendors",
     "build:css": "./bin/build-css",
     "build:js": "./bin/build-js",

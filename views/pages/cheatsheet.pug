@@ -39,13 +39,14 @@ block content
     #icons-animated.pl-4.pr-4
       h3.pl-5.pr-4.pb-4.pt-3 Animated icons
       .icons-item(data-name='loading')
-        i.eos-icons.eos-icon-loading
-        br
-        | loading
+        img(src="./vendors/images/animated-svg/loading.svg")
+        .eos-icons(data-tags='loading, animated')
+          | loading
       .icons-item(data-name='installing')
-        i#eos-icon-installing.eos-icons.eos-icon-installing.md-48
-        br
-        | installing
+        img(src="./vendors/images/animated-svg/installing.svg")
+        .eos-icons(data-tags='installing, animated')
+          .js-eos-icon-name
+            | installing
   .how-to-use.bg-jumbotron.forward-index
     .container
       h2.ml-3

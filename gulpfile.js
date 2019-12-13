@@ -95,6 +95,12 @@ const moveMultimedia = () => {
   .pipe(gulp.dest(`${distFolder}assets/images/`));
 }
 
+/* Move assets from assets to static folder */
+const moveAnimated = () => {
+  return gulp.src('./vendors/node_modules/eos-icons/animated-svg/**')
+  .pipe(gulp.dest(`${distFolder}vendors/images/animated-svg/`));
+}
+
 /* Move Json files from assets/js to static folder */
 // TODO: this is a workaround until eos-icons delivers the extended glyph list
 // with a different name
@@ -123,6 +129,7 @@ exports.extractVendorJson = extractVendorJson
 // build the static html and move media
 exports.pugToHtml = pugToHtml
 exports.moveMultimedia = moveMultimedia
+exports.moveAnimated = moveAnimated
 exports.moveJson = moveJson
 
 exports.buildVendors =
