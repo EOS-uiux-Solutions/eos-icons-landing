@@ -38,6 +38,7 @@ const generate = () => { // eslint-disable-line no-unused-vars
     }
     console.log(json)
     const postReqUrl = 'https://eos-icons-picker-api.herokuapp.com/iconsapi'
+
     $.post(postReqUrl, { icons_config: json }, function (data, status) {
       window.location.href = `thankyou-page.html?ts=${data}`
     })

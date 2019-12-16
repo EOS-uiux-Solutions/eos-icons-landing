@@ -95,6 +95,12 @@ const moveMultimedia = () => {
   .pipe(gulp.dest(`${distFolder}assets/images/`));
 }
 
+/* Move assets from assets to static folder */
+const moveAnimated = () => {
+  return gulp.src('./vendors/node_modules/eos-icons/animated-svg/**')
+  .pipe(gulp.dest(`${distFolder}vendors/images/animated-svg/`));
+}
+
 /* Move Json files from assets/js to static folder */
 // TODO: this is a workaround until eos-icons delivers the extended glyph list
 // with a different name
@@ -105,9 +111,8 @@ const moveJson = () => {
 }
 
 const getIconsTagsFromEos = () => {
-  return remoteSrc(`eos-set.json`, {
-    base: 'https://suse.eosdesignsystem.com/javascripts/application/models/'})
-    .pipe(gulp.dest(`${destinationVendors}js/`));
+  return gulp.src('./vendors/node_modules/eos-icons/dist/js/eos-icons.json')
+  .pipe(gulp.dest(`${destinationVendors}js/`));
 }
 
 /* Configure the default gulp task and one for the landing page
@@ -124,6 +129,7 @@ exports.extractVendorJson = extractVendorJson
 // build the static html and move media
 exports.pugToHtml = pugToHtml
 exports.moveMultimedia = moveMultimedia
+exports.moveAnimated = moveAnimated
 exports.moveJson = moveJson
 
 exports.buildVendors =
