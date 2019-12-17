@@ -36,17 +36,16 @@ block content
           i.eos-icons.js-eos-icons
           br
           .js-eos-icon-name
-    #icons-animated.pl-4.pr-4
+    .pl-4.pr-4
       h3.pl-5.pr-4.pb-4.pt-3 Animated icons
-      .icons-item(data-name='loading')
-        img(src='./vendors/images/animated-svg/loading.svg')
-        .eos-icons(data-tags='loading, animated')
-          | loading
-      .icons-item(data-name='installing')
-        img(src='./vendors/images/animated-svg/installing.svg')
-        .eos-icons(data-tags='installing, animated')
-          .js-eos-icon-name
-            | installing
+      .icons-item.js-animated-icon-info(data-name='loading')
+        img(src='./vendors/images/animated-svg/loading.svg', data-tags='loading, animated')
+        br
+        | loading
+      .icons-item.js-animated-icon-info(data-name='installing')
+        img(src='./vendors/images/animated-svg/installing.svg', data-tags='installing, animated')
+        br
+        | installing
   .how-to-use.bg-jumbotron.forward-index
     .container
       h2.ml-3
@@ -56,7 +55,7 @@ block content
         .col-10
           input#copy3.how-to-use-code.curved.p-2(readonly='readonly')
         .col-2
-          a#copy1.btn.btn-lg.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2 Copy
+          #copy1.btn.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2 Copy
       .row
         b.ml-3
           | Tags:
@@ -70,7 +69,7 @@ block content
         .col-10
           input#copy4.how-to-use-code.curved.p-2(readonly='readonly')
         .col-2
-          a#copy2.btn.btn-lg.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2 Copy
+          #copy2.btn.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2 Copy
   // Icons Request ------------------------------------------------------------------------------------------------
   .bottom-container.bg-jumbotron
     p  Didn't find what you were looking for?
