@@ -6,7 +6,7 @@ $(document).on('ready', function () {
 
     const iconTags = $(`.eos-icon-${iconName}`).data('tags')
     copy = $('#copy3')
-    value = `<i class="eos-icons"> ${iconName}</i>`
+    value = `<i class='eos-icons'> ${iconName}</i>`
     copy.val(value)
 
     /* Only render the tags if exists */
@@ -17,9 +17,9 @@ $(document).on('ready', function () {
 
   function changeValueAnimated () {
     copy = $('#copy4')
-    value = `<img src="${iconName}.svg" />`
-    let downloadURL = `https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`
-    $('.js-download-animated-icon').attr("href", downloadURL)
+    value = `<img src='${iconName}.svg' />`
+    const downloadURL = `https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`
+    $('.js-download-animated-icon').attr('href', downloadURL)
     copy.val(value)
   }
 
