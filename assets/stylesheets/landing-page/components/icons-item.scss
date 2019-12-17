@@ -33,11 +33,15 @@
   }
 }
 
-.icons-item-selected i {
-  background-color: $dark-gray;
-  color: $icons-item-selected-color;
+.icons-item-selected {
+
+  i {
+    background-color: $dark-gray;
+    color: $icons-item-selected-color;
+  }
 
   > img {
-    fill: white;
+    border: 1px solid gray;
+    border-radius: $icons-item-border-radius;
   }
 }
