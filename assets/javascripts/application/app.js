@@ -48,7 +48,9 @@ $(document).on('ready', function () {
   $('.js-icons-item').on('click', function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
-    $('#eos-icon-name').html(iconName)
+    $('.js-icons-item').removeClass('icons-item-selected')
+    $(this).addClass('icons-item-selected')
+
     if (iconName) {
       changeValueIcons()
       $('.how-to-use').css('visibility', 'visible')
@@ -59,7 +61,6 @@ $(document).on('ready', function () {
   $('#extended-icons').on('click', function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
-    $('#eos-icon-name').html(iconName)
 
     if (iconName) {
       changeValueIcons()
@@ -71,6 +72,8 @@ $(document).on('ready', function () {
   $('.js-animated-icon-info').on('click', function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
+    $('.js-animated-icon-info').removeClass('icons-item-selected')
+    $(this).addClass('icons-item-selected')
 
     if (iconName) {
       changeValueAnimated()

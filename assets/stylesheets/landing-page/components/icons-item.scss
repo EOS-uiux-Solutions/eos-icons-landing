@@ -36,4 +36,8 @@
 .icons-item-selected i {
   background-color: $dark-gray;
   color: $icons-item-selected-color;
+
+  > img {
+    fill: white;
+  }
 }
