@@ -45,7 +45,7 @@ $(document).on('ready', function () {
   $('.how-to-use').css('visibility', 'hidden')
   $('.how-to-use-animated').css('visibility', 'hidden')
 
-  $('#icons').on('click', function (e) {
+  $('.js-icons-item').on('click', function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
     $('#eos-icon-name').html(iconName)
