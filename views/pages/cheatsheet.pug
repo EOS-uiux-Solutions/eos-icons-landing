@@ -38,14 +38,12 @@ block content
           .js-eos-icon-name
     .pl-4.pr-4
       h3.pl-5.pr-4.pb-4.pt-3 Animated icons
-      .icons-item.js-animated-icon-info(data-name='loading')
+      .icons-item.js-animated-icon-info(data-name='loading', data-download-url='https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/loading.svg?inline=false')
         img(src='./vendors/images/animated-svg/loading.svg', data-tags='loading, animated')
-          //- https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/loading.svg?inline=false
         br
         | loading
-      .icons-item.js-animated-icon-info(data-name='installing')
+      .icons-item.js-animated-icon-info(data-name='installing', data-download-url='')
         img(src='./vendors/images/animated-svg/installing.svg', data-tags='installing, animated')
-        //- https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/installing.svg?inline=false
         br
         | installing
   .how-to-use.bg-jumbotron.forward-index
@@ -58,7 +56,7 @@ block content
       .input-group.mb-3
         input#copy3.form-control.curved(readonly='readonly')
         .input-group-append
-          button#copy1.btn.btn-dark.text-white.btn-outline-secondary(type='button')
+          button#copy1.btn.btn-dark.text-white(type='button')
             i.eos-icons.md-18
               | content_copy
             |  Copy
@@ -76,7 +74,7 @@ block content
       .input-group.mb-3
         input#copy4.form-control.curved(readonly='readonly')
         .input-group-append
-          button.btn.btn-dark.text-white.btn-outline-secondary(type='button')
+          a.js-download-animated-icon.btn.btn-dark.text-white(type='button', href='')
             i.eos-icons.md-18
               | file_download
             |  Download icon

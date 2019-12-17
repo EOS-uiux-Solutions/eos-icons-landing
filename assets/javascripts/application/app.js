@@ -18,6 +18,8 @@ $(document).on('ready', function () {
   function changeValueAnimated () {
     copy = $('#copy4')
     value = `<img src="${iconName}.svg" />`
+    let downloadURL = `https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`
+    $('.js-download-animated-icon').attr("href", downloadURL)
     copy.val(value)
   }
 
