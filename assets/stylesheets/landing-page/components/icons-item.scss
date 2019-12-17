@@ -10,8 +10,9 @@
 .icons-item-static-icons {
   i {
     border-radius: $icons-item-border-radius;
+    height: 48px;
     margin-bottom: $icons-item-margin-bottom;
-    padding: $icons-item-padding $icons-item-padding;
+    width: 48px;
 
     &:hover {
       box-shadow: $icons-item-box-shadow;
