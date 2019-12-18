@@ -21,7 +21,7 @@ block content
           small.download-icons-text
             | download-EOS-icons-set
       #icons.js-icons-list.pl-4.pr-4.pt-5
-        .icons-item.js-icons-item(data-name='action_chains')
+        .icons-item.js-icons-item.icons-item-static-icons(data-name='action_chains')
           i.eos-icons.js-eos-icons
           br
           .js-eos-icon-name
@@ -36,27 +36,30 @@ block content
           i.eos-icons.js-eos-icons
           br
           .js-eos-icon-name
-    #icons-animated.pl-4.pr-4
+    .pl-4.pr-4
       h3.pl-5.pr-4.pb-4.pt-3 Animated icons
-      .icons-item(data-name='loading')
-        img(src='./vendors/images/animated-svg/loading.svg')
-        .eos-icons(data-tags='loading, animated')
-          | loading
-      .icons-item(data-name='installing')
-        img(src='./vendors/images/animated-svg/installing.svg')
-        .eos-icons(data-tags='installing, animated')
-          .js-eos-icon-name
-            | installing
+      .icons-item.js-animated-icon-info(data-name='loading', data-download-url='https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/loading.svg?inline=false')
+        img(src='./vendors/images/animated-svg/loading.svg', data-tags='loading, animated')
+        br
+        | loading
+      .icons-item.js-animated-icon-info(data-name='installing', data-download-url='')
+        img(src='./vendors/images/animated-svg/installing.svg', data-tags='installing, animated')
+        br
+        | installing
   .how-to-use.bg-jumbotron.forward-index
     .container
       h2.ml-3
         | How to use it:
-        small#close-code-snippet.close-code-snippet.pull-right.mr-5 X Close
-      .row
-        .col-10
-          input#copy3.how-to-use-code.curved.p-2(readonly='readonly')
-        .col-2
-          a#copy1.btn.btn-lg.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2 Copy
+        small#close-code-snippet.close-code-snippet.pull-right
+          i.eos-icons.md-18
+            | close
+      .input-group.mb-3
+        input#copy3.form-control.curved(readonly='readonly')
+        .input-group-append
+          button#copy1.btn.btn-dark.text-white(type='button')
+            i.eos-icons.md-18
+              | content_copy
+            |  Copy
       .row
         b.ml-3
           | Tags:
@@ -65,12 +68,16 @@ block content
     .container
       h2.ml-3
         | How to use it:
-        small#close-code-snippet-animated.close-code-snippet.pull-right.mr-5 X Close
-      .row
-        .col-10
-          input#copy4.how-to-use-code.curved.p-2(readonly='readonly')
-        .col-2
-          a#copy2.btn.btn-lg.btn-dark.text-white.ml-5.pl-4.pr-4.pt-2.pb-2 Copy
+        small#close-code-snippet-animated.close-code-snippet.pull-right
+          i.eos-icons.md-18
+            | close
+      .input-group.mb-3
+        input#copy4.form-control.curved(readonly='readonly')
+        .input-group-append
+          a.js-download-animated-icon.btn.btn-dark.text-white(type='button', href='')
+            i.eos-icons.md-18
+              | file_download
+            |  Download icon
   // Icons Request ------------------------------------------------------------------------------------------------
   .bottom-container.bg-jumbotron
     p  Didn't find what you were looking for?
