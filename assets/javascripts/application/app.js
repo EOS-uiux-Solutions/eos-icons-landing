@@ -102,7 +102,7 @@ $(document).on('ready', function () {
     $('.how-to-use-animated').css('visibility', 'hidden')
     $('.js-animated-icon-info').removeClass('icons-item-selected')
   })
-  
+
   const buttonsSizes = $('.change-size')
   for (let i = 0; i < buttonsSizes.length; i++) {
     buttonsSizes[i].onclick = function (e) {
