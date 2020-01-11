@@ -49,6 +49,7 @@ $(document).on('ready', function () {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
     $('.js-icons-item').removeClass('icons-item-selected')
+    $('.js-animated-icon-info').removeClass('icons-item-selected')
     $(this).addClass('icons-item-selected')
 
     if (iconName) {
@@ -58,9 +59,12 @@ $(document).on('ready', function () {
     }
   })
 
-  $('#extended-icons').on('click', function (e) {
+  $('.js-extended-icons-item').on('click', function (e) {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
+    $('.js-extended-icons-item').removeClass('icons-item-selected')
+    $('.js-animated-icon-info').removeClass('icons-item-selected')
+    $(this).addClass('icons-item-selected')
 
     if (iconName) {
       changeValueIcons()
@@ -73,6 +77,8 @@ $(document).on('ready', function () {
     e = e || window.event
     iconName = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name')
     $('.js-animated-icon-info').removeClass('icons-item-selected')
+    $('.js-extended-icons-item').removeClass('icons-item-selected')
+    $('.js-icons-item').removeClass('icons-item-selected')
     $(this).addClass('icons-item-selected')
 
     if (iconName) {
@@ -82,18 +88,21 @@ $(document).on('ready', function () {
     }
   })
 
-  $('#close-code-snippet').on('click', function (e) {
+  $('#close-code-snippet, #home-tab, #profile-tab').on('click', function () {
     iconName = ''
     $('.how-to-use').css('visibility', 'hidden')
     $('.how-to-use-animated').css('visibility', 'hidden')
+    $('.js-icons-item').removeClass('icons-item-selected')
+    $('.js-extended-icons-item').removeClass('icons-item-selected')
   })
 
-  $('#close-code-snippet-animated').on('click', function (e) {
+  $('#close-code-snippet-animated, #home-tab, #profile-tab').on('click', function () {
     iconName = ''
     $('.how-to-use').css('visibility', 'hidden')
     $('.how-to-use-animated').css('visibility', 'hidden')
+    $('.js-animated-icon-info').removeClass('icons-item-selected')
   })
-
+  
   const buttonsSizes = $('.change-size')
   for (let i = 0; i < buttonsSizes.length; i++) {
     buttonsSizes[i].onclick = function (e) {
