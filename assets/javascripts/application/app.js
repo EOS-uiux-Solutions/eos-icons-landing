@@ -1,6 +1,12 @@
 $(document).on('ready', function () {
   let iconName, iconSize, iconClass, value, copy
 
+  const { hash } = window.location
+
+  if (hash !== '') {
+    $('#profile-tab').tab('show')
+  }
+
   function changeValueIcons () {
     $('.tags').text('')
 
