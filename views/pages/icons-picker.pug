@@ -3,8 +3,9 @@ extends ../layouts/icons-picker-layout
 block content
   // loading animation
   .icons-picker-loading
-    i.eos-icons.eos-icon-loading
-    p Generating font files...
+    .loading-icon
+      img(src='./vendors/images/animated-svg/loading.svg')
+      p Generating font files...
 
   // header ----------------------------------------------------------------------------------------
   .header

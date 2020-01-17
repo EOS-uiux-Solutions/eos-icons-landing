@@ -96,6 +96,13 @@
   width: 100%;
   z-index: $icons-picker-loading-zindex;
 
+  .loading-icon {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   i {
     border-color: $dark-gray;
     border-top-color: $light-color;
