@@ -8,13 +8,26 @@
   }
 }
 
+nav.nav-border {
+  border-color: $nav-border-color;
+  border-style: solid;
+  border-width: $nav-border-width;
+}
+
 /* Header
   ========================================================================== */
 
 .header {
   background: $header-background;
   background-size: cover;
-  height: 500px;
+  height: $header-height;
+  width: 100%;
+}
+
+.small-header {
+  background: $small-header-background;
+  background-size: cover;
+  height: $small-header-height;
   width: 100%;
 }
 
@@ -32,7 +45,12 @@
 */
 
 .content {
-  padding-top: 15rem;
+  padding-top: $content-padding;
+  text-align: center;
+}
+
+.small-content {
+  padding-top: $small-content-padding;
   text-align: center;
 }
 
