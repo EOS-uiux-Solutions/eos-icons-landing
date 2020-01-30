@@ -1,0 +1,131 @@
+/* ==========================================================================
+  Cookie configuration panel.
+========================================================================== */
+.cookies-preference-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .cookie-preference-item {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: $eos-cookies-preference-margin;
+
+    .cookie-preference-switch {
+      padding: $eos-cookies-preference-switch-margin;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  /* The switch - the box around the slider */
+  .cookie-switch {
+    display: inline-block;
+    height: $eos-cookies-preference-switch-height;
+    position: relative;
+    width: $eos-cookies-preference-switch-width;
+  }
+
+  /* Hide default HTML checkbox */
+  .cookie-switch input {
+    display: none;
+  }
+
+  /* The slider */
+  .slider {
+    background-color: $eos-slider-background;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+
+    &:before {
+      background-color: $eos-slider-before-color;
+      bottom: $eos-slider-before-bottom-left;
+      content: '';
+      height: $eos-slider-before-height-width;
+      left: $eos-slider-before-bottom-left;
+      position: absolute;
+      transition: .4s;
+      width: $eos-slider-before-height-width;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: $eos-slider-input-checked-color;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px $eos-slider-input-checked-color;
+  }
+
+  input:checked[disabled] {
+    background-color: $eos-slider-input-disabled-color;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: $eos-slider-input-border-radius;
+
+    &:before {
+      border-radius: 50%;
+    }
+
+    &.disabled {
+      background-color: $eos-slider-input-disabled-color;
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* ==========================================================================
+  Cookie table
+========================================================================== */
+.cookies-table {
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    background: $eos-cookies-table-title-background;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $eos-cookies-table-padding;
+
+    span {
+      width: $eos-cookies-table-grid-size;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $eos-cookies-table-padding 0;
+
+    div {
+      width: $eos-cookies-table-grid-size;
+    }
+
+    div:last-of-type {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 $eos-cookies-table-padding;
+    }
+
+    div:last-of-type span {
+      display: flex;
+      padding: $eos-cookies-table-padding-span;
+    }
+  }
+}
