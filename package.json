@@ -49,6 +49,7 @@
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "js-cookie": "^2.2.1",
     "serve-favicon": "^2.5.0",
     "uglify-js": "3.1.10"
   },
