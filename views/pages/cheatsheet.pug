@@ -82,7 +82,7 @@ block content
   .bottom-container.bg-jumbotron
     p  Didn't find what you were looking for?
     div
-      button.btn.btn-dark(data-toggle='modal', data-target='#exampleModalCenter') Request new icon
+      button.btn.btn-dark(data-toggle='modal', data-target='#exampleModalCenter', data-event-category='Internal link', data-event-action='Request new icon btn', data-event-label='Cheatsheet page') Request new icon
   // Modal
   #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
@@ -102,4 +102,4 @@ block content
               | a dating app, it's not our market.
         .modal-footer
           button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-          a.btn.btn-dark(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', target='_blank') Send Request
+          a.btn.btn-dark(href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/', data-event-category='External link', data-event-action='Link to Gitlab issue from modal', data-event-label='Cheatsheet page', target='_blank') Send Request
