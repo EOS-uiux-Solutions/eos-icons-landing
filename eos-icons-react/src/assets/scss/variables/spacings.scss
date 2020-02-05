@@ -1,0 +1,21 @@
+/* Spacing variables
+   ========================================================================== */
+/**
+* Spacing variables used for margins and paddings
+*
+* $space-base: base size from which the rest of the sizes are calculated
+*/
+$font-size-body: 14px;
+$space-base: 16px;
+$eos-md-18: 18px;
+$eos-md-24: 24px;
+$eos-md-36: 36px;
+$eos-md-48: 48px;
+
+$m: $space-base; // this is the regular size = 16px
+$xs: $m / 4; // = 4px
+$s: $m / 2; // = 8px
+$l: $m + ($m / 2); // = 24px
+$xl: $m * 2; // = 32px
+$xxl: $m * 3; // = 48px
+$xxxl: $m * 4; // = 64px

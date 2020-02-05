@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Link } from "@reach/router"
-import './App.css';
+import './assets/scss/index.scss'
 
 /* Pages */
 import Home from './pages/Home'
