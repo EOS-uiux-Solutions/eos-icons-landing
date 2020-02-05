@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "@reach/router"
+import eosIcon from '../assets/images/logo.png'
 
 const NavLink = props => (
   <Link
@@ -16,6 +17,7 @@ const Navigation = params => {
   return (
     <header>
       <div className="brand">
+        <img className="logo" src={eosIcon} alt=""/>
         Icons
       </div>
       <nav>

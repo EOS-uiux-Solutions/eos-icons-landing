@@ -1,8 +1,20 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: $m;
+  color: #fff;
   background: linear-gradient(90deg, #FBB369, #FF814A);
+
+  .brand {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      width: 86px;
+      margin-right: $m;
+    }
+  }
 
   nav {
     font-size: 16px;
