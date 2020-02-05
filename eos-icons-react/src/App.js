@@ -9,18 +9,14 @@ import Customize from './pages/Customize'
 import Docs from './pages/Docs'
 
 /* Componets */
+import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
 function App() {
   return(
     <div className="App">
       <div>
-        <nav>
-          <Link to="/">Home</Link> |{" "}
-          <Link to="/cheatsheet">Cheatsheet |{" "}</Link>
-          <Link to="/customize">Customize |{" "}</Link>
-          <Link to="/docs">Docs </Link>
-        </nav>
+        <Navigation />
       </div>
       <Router>
         <Home path="/" />
