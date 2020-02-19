@@ -1,23 +1,33 @@
 import React from 'react'
+import Link from './Link'
+/* Footer links */
+const footerLinks = [
+  {
+    name: 'Join us on Slack',
+    href: 'https://slack.eosdesignsystem.com/'
+  },
+  {
+    name: 'Repository',
+    href: 'https://gitlab.com/SUSE-UIUX/eos-icons'
+  },
+  {
+    name: 'Report a issue',
+    href: 'https://gitlab.com/SUSE-UIUX/eos-icons/issues'
+  },
+  {
+    name: 'EOS on Twitter',
+    href: 'https://twitter.com/eosdesignsystem'
+  },
+  {
+    name: 'Cookie policy',
+    href: 'https://eos-icons.eosdesignsystem.com/cookies-policy.html'
+  }
+]
 
 const Footer = () => {
   return (
     <footer>
-      <a href='' target='_blank' className=''>
-        Join us on Slack
-      </a>
-      <a href='' target='_blank' className=''>
-        Repository
-      </a>
-      <a href='' target='_blank' className=''>
-        Report a issue
-      </a>
-      <a href='' target='_blank' className=''>
-        EOS on Twitter
-      </a>
-      <a href='' target='_blank' className=''>
-        Cookie Policy
-      </a>
+      {footerLinks.map((ele, index) => <Link key={index} {...ele} />)}
     </footer>
   )
 }

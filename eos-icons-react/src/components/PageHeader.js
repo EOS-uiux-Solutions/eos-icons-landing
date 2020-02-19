@@ -1,7 +1,7 @@
 import React from 'react';
 
-const PageHeader = params => {
-  const { children } = params;
+const PageHeader = props => {
+  const { children } = props;
 
   return (
     <div className="page-header">

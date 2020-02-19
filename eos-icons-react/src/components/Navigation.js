@@ -13,11 +13,11 @@ const NavLink = props => (
   />
 );
 
-const Navigation = params => {
+const Navigation = () => {
   return (
     <header>
       <div className="brand">
-        <img className="logo" src={eosIcon} alt=""/>
+        <img className="logo" src={eosIcon} alt="" />
         Icons
       </div>
       <nav>
