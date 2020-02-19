@@ -1,5 +1,5 @@
-import React from 'react';
-import { Router, Link } from "@reach/router"
+import React from 'react'
+import { Router } from '@reach/router'
 import './assets/scss/index.scss'
 
 /* Pages */
@@ -12,22 +12,21 @@ import Docs from './pages/Docs'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
-function App() {
-  return(
-    <div className="App">
+function App () {
+  return (
+    <div className='App'>
       <div>
         <Navigation />
       </div>
       <Router>
-        <Home path="/" />
-        <Cheatsheet path="/cheatsheet" />
-        <Customize path="/customize" />
-        <Docs path="/docs" />
+        <Home path='/' />
+        <Cheatsheet path='/cheatsheet' />
+        <Customize path='/customize' />
+        <Docs path='/docs' />
       </Router>
-
       <Footer />
     </div>
   )
 }
 
-export default App;
+export default App
