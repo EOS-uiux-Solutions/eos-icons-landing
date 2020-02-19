@@ -1,8 +1,12 @@
 import React from 'react';
+import PageHeader from '../components/PageHeader'
 
-function Cheatsheet () {
+const Cheatsheet = params => {
+
   return (
-    <h1>Cheatsheet</h1>
+    <PageHeader>
+      Cheatsheet: find the ligature of the icon you are looking for, plus, get an overview of all the available icons.
+    </PageHeader>
   );
 }
 

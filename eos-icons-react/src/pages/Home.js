@@ -1,8 +1,11 @@
 import React from 'react';
+import PageHeader from '../components/PageHeader'
 
 function Home () {
   return (
-   <h1>Homasasae</h1>
+    <PageHeader>
+      Free. Open source. Vector and pixel-perfect icons. The iconic font your product needs.
+    </PageHeader>
   );
 }
 
