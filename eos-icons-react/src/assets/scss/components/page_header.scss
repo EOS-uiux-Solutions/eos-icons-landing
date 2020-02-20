@@ -1,4 +1,30 @@
 .page-header {
   padding: $xxxl;
-  background-color: #f8f8f8;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 300;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &-small {
+    height: 10vh;
+  }
+
+  &-medium {
+    height: 30vh;
+  }
+
+  &-orange {
+    background: url('../../images/header.png') center, linear-gradient(90deg, #FBB369, #FF814A);
+  }
+
+  &-purple {
+    background: url('../../images/header.png'), linear-gradient(90deg, #694966, #5C415D);
+  }
 }
