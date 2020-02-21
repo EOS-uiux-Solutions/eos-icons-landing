@@ -1,8 +1,6 @@
 .btn {
   border-radius: 30px;
   display: inline-block;
-  text-align: center;
-  font-weight: 400;
   vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -11,16 +9,29 @@
   border: 1px solid transparent;
   padding: .375rem .75rem;
   line-height: 1.5;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &-default {
-    color: #212529;
-    border-color: #212529;
+    color: white;
+    border-color: white;
+
+    &:hover {
+      background-color: white;
+      color: #343a40;
+    }
   }
 
   &-primary {
     color: white;
     border-color: #343a40;
     background-color: #343a40;
+
+    &:hover {
+      background-color: black;
+    }
   }
 }
