@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 
-const Tabs = ({ children }) => {
+const Tabs = props => {
+  const { children } = props
   const [activeTab, setActiveTab] = useState(children[0].props.label)
+
   return (
     <div className='tabs'>
       <ol className='tab-list'>
@@ -22,6 +24,7 @@ const Tabs = ({ children }) => {
           )
         })}
       </ol>
+
       <div className='tab-content'>
         {children.map(child => {
           if (child.props.label !== activeTab) return undefined

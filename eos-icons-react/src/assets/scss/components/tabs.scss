@@ -1,13 +1,13 @@
 .tab-list {
-  border-bottom: 1px solid #ccc;
-  padding-left: 15px;
+  border-bottom: 1px solid $lighter-gray;
+  padding-left: $m;
   &:hover {
     cursor: pointer;
   }
 }
 
 .tab-list-item {
-  color: #0056b3;
+  color: $hyper-link-color;
   display: inline-block;
   list-style: none;
   margin-bottom: -1px;
@@ -15,9 +15,9 @@
 }
 
 .tab-list-active {
-  color: #495057;
-  background-color: white;
-  border: solid #ccc;
+  color: $dark-color;
+  background-color: $light-color;
+  border: solid $lighter-gray;
   border-width: 1px 1px 0 1px;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
