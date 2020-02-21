@@ -10,12 +10,14 @@
   padding: .375rem .75rem;
   line-height: 1.5;
   transition: color .15s ease-in-out,background-color .15s ease-in-out;
+  text-decoration: none;
 
   &:hover {
     cursor: pointer;
   }
 
   &-default {
+    background-color: transparent;
     color: white;
     border-color: white;
 

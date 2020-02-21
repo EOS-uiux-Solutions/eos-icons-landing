@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Button = props => {
-  const { children, primary } = props
+  const { children, primary, action } = props
   const btnClass = primary ? 'btn-primary' : 'btn-default'
   return (
-    <div className={`btn ${btnClass}`} >
+    <button className={`btn ${btnClass}`} action={action} >
       {children}
-    </div >
+    </button >
   )
 }
 
