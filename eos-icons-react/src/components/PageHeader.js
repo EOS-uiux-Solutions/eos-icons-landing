@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PageHeader = props => {
-  /* We destructuring the props pased to the component */
+  /* We destructure the props pased to the component */
   const { children, size: height, theme: color } = props;
 
   /* Create a config object with the classes neded as the size and theme */
@@ -16,7 +16,6 @@ const PageHeader = props => {
     }
   }
 
-  /* Destructuring of the  */
   const { size, theme } = config;
 
   return (
