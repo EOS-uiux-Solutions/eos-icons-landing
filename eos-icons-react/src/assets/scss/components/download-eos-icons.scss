@@ -1,0 +1,45 @@
+.download-eos-icons-button {
+  align-items: center;
+  background: $grad-init;
+  border-radius: 27px 0 0 27px;
+  color: $light-color;
+  display: flex;
+  flex-direction: row;
+  height: $eos-md-48;
+  padding-right: $s;
+  position: fixed;
+  right: -188px;
+  top: 70%;
+  transition: all 0.5s;
+  z-index: 15;
+
+  &:hover {
+    background: $grad-init;
+    color: $light-color;
+    right: 0;
+    text-decoration: none;
+  }
+
+  .download-icons-logo {
+    color: $light-color;
+    margin-left: $s;
+    margin-right: $s;
+    width: 40px;
+  }
+
+  .download-icons-text {
+    font-size: $h4-font-size-mid;
+    font-family: $font-family;
+  }
+}
+
+a {
+  color: $hyper-link-color;
+  text-decoration: none;
+  background-color: transparent;
+
+  &:hover {
+    color: $hyper-link-hover-color;
+    text-decoration: underline;
+  }
+}
