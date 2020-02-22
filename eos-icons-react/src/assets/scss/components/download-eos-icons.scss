@@ -2,6 +2,7 @@
   align-items: center;
   background: $grad-init;
   border-radius: 27px 0 0 27px;
+  text-decoration: none;
   color: $light-color;
   display: flex;
   flex-direction: row;
@@ -30,16 +31,5 @@
   .download-icons-text {
     font-size: $h4-font-size-mid;
     font-family: $font-family;
-  }
-}
-
-a {
-  color: $hyper-link-color;
-  text-decoration: none;
-  background-color: transparent;
-
-  &:hover {
-    color: $hyper-link-hover-color;
-    text-decoration: underline;
   }
 }
