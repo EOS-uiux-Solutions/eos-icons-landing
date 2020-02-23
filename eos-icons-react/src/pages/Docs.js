@@ -1,9 +1,13 @@
-import React from 'react';
+import React from 'react'
+import ThankYou from '../components/ThankYou'
 
 function Docs () {
   return (
-    <h1>Docs</h1>
-  );
+    <div>
+      <h1>Docs</h1>
+      <ThankYou />
+    </div>
+  )
 }
 
-export default Docs;
+export default Docs
