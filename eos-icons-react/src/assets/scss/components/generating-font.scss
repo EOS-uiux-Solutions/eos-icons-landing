@@ -1,0 +1,18 @@
+.icons-picker-loading {
+  background-color: $icons-picker-loading-background-color;
+  display: flex;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  z-index: $icons-picker-loading-zindex;
+
+  .loading-icon {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+  }
+}
