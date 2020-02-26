@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PageHeader from '../components/PageHeader'
 import GeneratingFont from '../components/GeneratingFont'
 import Modal from '../components/Modal'
+import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
 
 function Customize () {
   const [modal, showModal] = useState(false)
@@ -15,6 +16,7 @@ function Customize () {
           <button> file here </button>
         </p>
       </PageHeader>
+      <CustomizeIconsPanel />
       {modal ? (
         <Modal>
           <GeneratingFont />
