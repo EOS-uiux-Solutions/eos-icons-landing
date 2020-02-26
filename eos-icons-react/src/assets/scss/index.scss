@@ -1,3 +1,10 @@
 @import './variables/index';
 @import './layout/index';
-@import './components/index'
+
+/* Components
+  ========================================================================== */
+@import './components/navigation';
+@import './components/footer';
+@import './components/page_header';
+@import './components/tabs.scss';
+@import './components/index';
