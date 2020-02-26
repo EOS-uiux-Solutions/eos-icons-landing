@@ -5,7 +5,7 @@ import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
 import Icon from './IconDisplay'
 import Tabs from './Tabs'
 
-const IconsSet = params => {
+const IconsSet = () => {
   const value = useContext(EosIconStore)
 
   const [state, dispatch] = useReducer(iconsReducer, value)

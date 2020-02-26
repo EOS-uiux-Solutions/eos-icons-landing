@@ -4,7 +4,6 @@ import eosIcons from '../../node_modules/eos-icons/dist/js/eos-icons.json'
 const singleIcon = []
 const multipleIcons = []
 
-
 export const eosIconsState = {
   icons: eosIcons,
   singleIcon,
