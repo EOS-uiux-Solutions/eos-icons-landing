@@ -1,34 +1,57 @@
-import React, { useContext, useReducer, useState } from 'react';
+import React, { useContext, useReducer } from 'react';
 import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
+
+/* Components */
+import Icon from './IconDisplay'
 
 const IconsSet = params => {
   const value = useContext(EosIconStore)
 
   const [state, dispatch] = useReducer(iconsReducer, value)
-  /* Check if we're looking for icons information or customize */
-  const [customize, setCustomize] = useState(false)
-  console.log('state: ', state);
+  console.log('APP STATE', state)
 
+  const dispatchAction = e => {
+    e.preventDefault()
+    return dispatch({ type: state.customize ? 'ADD_ICONS' : 'ADD_ICON', selection: e.target.outerText })
+  }
+
+  /* Toggle customizable functionality */
+  const toggleCustomize = e => dispatch({ type: 'TOGGLE_CUSTOMIZE' })
 
   return (
     <>
-      Customize: <input type="checkbox" onClick={(e) => {
-        customize ? setCustomize(false) : setCustomize(true)
-      }} name="customize" id="customize" />
+      <div className="icons-actions">
+        Customize <input type="checkbox" onClick={toggleCustomize} name="customize" />
 
-      {value.singleIcon.map((ele, i) => <pre key={i}><b>Icon</b>: {ele}</pre>)}
+        <input className='search-box-demo' type="text" placeholder="Search ... " />
+      </div>
 
-      <pre><b>Details</b>: {state.icons.map(ele => ele.name === state.singleIcon[0] ? JSON.stringify(ele, null, 2) : '')}</pre>
+      {/* ========== ONLY FOR DEMO ========== */}
+      {!state.customize
+        ? state.singleIcon.length
+          ?
+          <div className="icon-info-demo">
+            {value.singleIcon.map((ele, i) => <pre key={i}><b>Name</b>: {ele}</pre>)}
 
-      <div style={{ display: 'flex', margin: 10, flexWrap: 'wrap' }}>
+            <pre>
+              <b>Details</b>:
+                {state.icons.map(ele => ele.name === state.singleIcon[0]
+                ? JSON.stringify(ele, null, 2)
+                : '')
+              }
+            </pre>
+          </div>
+          : ''
+        : <pre>Icons selected: {state.multipleIcons.length}</pre>}
+      {/* ========== END ONLY FOR DEMO ========== */}
+
+
+      <div className="icons-list">
         {
           state.icons.map((ele, index) => {
             return (ele.name === 'installing' || ele.name === 'loading')
               ? ''
-              : <i className={`eos-icons ${state.singleIcon[0] === ele.name ? 'active' : ''}`} key={index} onClick={e => {
-                e.preventDefault()
-                return customize ? dispatch({ type: 'ADD_ICONS', selection: e.target.outerText }) : dispatch({ type: 'ADD_ICON', selection: e.target.outerText })
-              }}> {ele.name} </i>
+              : <Icon key={index} name={ele.name} action={dispatchAction} />
           })
         }
       </div>
