@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import Tabs from '../components/Tabs'
 import PageHeader from '../components/PageHeader'
 import GeneratingFont from '../components/GeneratingFont'
 import Modal from '../components/Modal'
 import Button from '../components/Button'
 
-function Customize () {
+const Customize = () => {
   const [modal, showModal] = useState(false)
 
   return (
@@ -18,9 +19,14 @@ function Customize () {
       </PageHeader>
       {modal ? (
         <Modal>
-          <GeneratingFont />
+          <GeneratingFont redirect='/thankyou' />
         </Modal>
       ) : null}
+
+      <Tabs>
+        <div label='Regular Icons'>These are regular icons.</div>
+        <div label='Animated Icons'>These are animated icons.</div>
+      </Tabs>
     </div>
   )
 }

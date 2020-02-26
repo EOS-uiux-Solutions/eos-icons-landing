@@ -11,7 +11,6 @@ import Docs from './pages/Docs'
 /* Componets */
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import ThankYou from './components/ThankYou'
 
 function App () {
   return (
@@ -24,7 +23,6 @@ function App () {
         <Cheatsheet path='/cheatsheet' />
         <Customize path='/customize' />
         <Docs path='/docs' />
-        <ThankYou path='/thankyou' />
       </Router>
       <Footer />
     </div>
