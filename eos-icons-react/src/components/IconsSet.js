@@ -16,7 +16,7 @@ const IconsSet = params => {
   }
 
   /* Toggle customizable functionality */
-  const toggleCustomize = e => dispatch({ type: 'TOGGLE_CUSTOMIZE' })
+  const toggleCustomize = () => dispatch({ type: 'TOGGLE_CUSTOMIZE' })
 
   return (
     <>
@@ -42,9 +42,11 @@ const IconsSet = params => {
             </pre>
           </div>
           : ''
-        : <pre>Icons selected: {state.multipleIcons.length}</pre>}
+        : <div className="icon-info-demo">
+          <p>Icons selected: {state.multipleIcons.length}</p>
+        </div>
+      }
       {/* ========== END ONLY FOR DEMO ========== */}
-
 
       <div className="icons-list">
         {

@@ -1,4 +1,3 @@
-// https://yduman.github.io/blog/useContext-usage/
 import { createContext } from 'react';
 import eosIcons from '../../node_modules/eos-icons/dist/js/eos-icons.json'
 
@@ -11,15 +10,15 @@ export const eosIconsState = {
   singleIcon,
   multipleIcons,
   customize: false,
-  setSingleIcon: str => {
+  setSingleIcon: iconName => {
     singleIcon.shift()
-    singleIcon.push(str)
+    singleIcon.push(iconName)
     return singleIcon
   },
-  setMultipleIcons: function (str) {
-    !multipleIcons.includes(str)
-      ? multipleIcons.push(str)
-      : multipleIcons.splice(multipleIcons.findIndex(ele => ele === str), 1)
+  setMultipleIcons: function (iconName) {
+    !multipleIcons.includes(iconName)
+      ? multipleIcons.push(iconName)
+      : multipleIcons.splice(multipleIcons.findIndex(ele => ele === iconName), 1)
     return multipleIcons
   },
   toggleCustomize: function () {
