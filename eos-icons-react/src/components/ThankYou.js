@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import bunny from '../assets/images/eos-bunny.png'
+import Button from './Button'
 
 const ThankYou = () => {
   let [timer, setTimer] = useState(5)
@@ -31,13 +32,9 @@ const ThankYou = () => {
         Download will begin in {timer} seconds or click below to start
         downloading
       </p>
-      <button
-        className='btn btn-outline-secondary'
-        type='submit'
-        onClick={downloadFont}
-      >
+      <Button primary type='submit' onClick={downloadFont}>
         EOS-custom-font.zip
-      </button>
+      </Button>
     </div>
   )
 }
