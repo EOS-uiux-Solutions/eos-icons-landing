@@ -7,4 +7,3 @@ function Docs () {
 }
 
 export default Docs;
-
