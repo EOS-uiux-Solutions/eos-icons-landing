@@ -3,6 +3,7 @@ import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
 
 /* Components */
 import Icon from './IconDisplay'
+import Tabs from './Tabs'
 
 const IconsSet = params => {
   const value = useContext(EosIconStore)
@@ -25,38 +26,42 @@ const IconsSet = params => {
 
         <input className='search-box-demo' type="text" placeholder="Search ... " />
       </div>
+      <Tabs>
+        <div label='Regular Icons'>
+          {/* ========== ONLY FOR DEMO ========== */}
+          {!state.customize
+            ? state.singleIcon.length
+              ?
+              <div className="icon-info-demo">
+                {value.singleIcon.map((ele, i) => <pre key={i}><b>Name</b>: {ele}</pre>)}
 
-      {/* ========== ONLY FOR DEMO ========== */}
-      {!state.customize
-        ? state.singleIcon.length
-          ?
-          <div className="icon-info-demo">
-            {value.singleIcon.map((ele, i) => <pre key={i}><b>Name</b>: {ele}</pre>)}
-
-            <pre>
-              <b>Details</b>:
+                <pre>
+                  <b>Details</b>:
                 {state.icons.map(ele => ele.name === state.singleIcon[0]
-                ? JSON.stringify(ele, null, 2)
-                : '')
-              }
-            </pre>
-          </div>
-          : ''
-        : <div className="icon-info-demo">
-          <p>Icons selected: {state.multipleIcons.length}</p>
-        </div>
-      }
-      {/* ========== END ONLY FOR DEMO ========== */}
+                    ? JSON.stringify(ele, null, 2)
+                    : '')
+                  }
+                </pre>
+              </div>
+              : ''
+            : <div className="icon-info-demo">
+              <p>Icons selected: {state.multipleIcons.length}</p>
+            </div>
+          }
+          {/* ========== END ONLY FOR DEMO ========== */}
 
-      <div className="icons-list">
-        {
-          state.icons.map((ele, index) => {
-            return (ele.name === 'installing' || ele.name === 'loading')
-              ? ''
-              : <Icon key={index} name={ele.name} action={dispatchAction} />
-          })
-        }
-      </div>
+          <div className="icons-list">
+            {
+              state.icons.map((ele, index) => {
+                return (ele.name === 'installing' || ele.name === 'loading')
+                  ? ''
+                  : <Icon key={index} name={ele.name} action={dispatchAction} />
+              })
+            }
+          </div>
+        </div>
+        <div label='Animated Icons'>These are animated icons.</div>
+      </Tabs>
     </>
   )
 }

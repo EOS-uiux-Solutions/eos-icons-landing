@@ -1,7 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import IconsSet from '../components/IconsSet'
-import Tabs from '../components/Tabs'
+
 
 const Cheatsheet = props => {
   return (
@@ -12,12 +12,7 @@ const Cheatsheet = props => {
           get an overview of all the available icons.
         </h2>
       </PageHeader>
-      <Tabs>
-        <div label='Regular Icons'>
-          <IconsSet />
-        </div>
-        <div label='Animated Icons'>These are animated icons.</div>
-      </Tabs>
+      <IconsSet />
     </>
   )
 }
