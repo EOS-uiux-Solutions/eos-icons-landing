@@ -1,0 +1,24 @@
+.tab-list {
+  border-bottom: 1px solid $lighter-gray;
+  padding-left: $m;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tab-list-item {
+  color: $hyper-link-color;
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  color: $dark-color;
+  background-color: $light-color;
+  border: solid $lighter-gray;
+  border-width: 1px 1px 0 1px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}

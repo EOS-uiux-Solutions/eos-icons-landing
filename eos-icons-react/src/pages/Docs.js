@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 function Docs () {
   return (
-    <div>
-      <h1>Docs</h1>
-    </div>
-  )
+    <h1>Docs</h1>
+  );
 }
 
-export default Docs
+export default Docs;
+
