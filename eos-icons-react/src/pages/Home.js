@@ -1,8 +1,10 @@
 import React from 'react'
+import Link from '../components/Link'
+import Button from '../components/Button'
 import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
 
-function Home () {
+const Home = () => {
   return (
     <div>
       <PageHeader size='medium' theme='orange'>
@@ -11,6 +13,14 @@ function Home () {
           your product needs.
         </h2>
       </PageHeader>
+      Testing buttons
+      <br />
+      <Button>default btn</Button>
+      <Button primary>primary btn</Button>
+      <br />
+      Teting Links with btn class
+      <Link name='This is a default' href='test' external button />
+      <Link name='This is a primary' href='test' external button='primary' />
       <DownloadEosIcons />
     </div>
   )
