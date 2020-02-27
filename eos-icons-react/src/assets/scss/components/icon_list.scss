@@ -1,0 +1,70 @@
+.icons-actions {
+  align-items: center;
+  background-color: $lighter-gray;
+  display: flex;
+  padding: $m;
+  justify-content: flex-end;
+
+  input {
+    margin: 0 $s;
+    padding: $s;
+  }
+
+  .search-box-demo {
+    margin-left: $xxl;
+  }
+}
+
+.icons-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+
+  i {
+    font-size: 32px !important;
+    height: 32px !important;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 32px !important;
+    border: 1px solid transparent;
+
+     &:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.091);
+      cursor: pointer;
+      border: 1px solid #f4f4f4;
+    }
+  }
+
+  .active {
+    background-color: $grad-init;
+    border-radius: 5px;
+    color: #fff !important;
+  }
+
+  .icon-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: 13px;
+    font-weight: 300;
+    padding: $m;
+    width: 130px;
+  }
+}
+
+
+/* DEMO, REMOVE WHEN THE SPECIFIC COMPONENT IS READY */
+.icon-info-demo {
+  width: 100%;
+  position: fixed;
+  bottom: 50px;
+  background: #f8f8f8;
+  left: 0;
+  height: auto;
+  padding: 20px;
+}
