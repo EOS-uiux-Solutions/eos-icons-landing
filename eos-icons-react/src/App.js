@@ -19,9 +19,7 @@ function App () {
   return (
     <EosIconStore.Provider value={eosIconsState} >
       <div className='App' >
-        <div>
-          <Navigation />
-        </div>
+        <Navigation />
         <Router>
           <Home path='/' />
           <Cheatsheet path='/cheatsheet' />
