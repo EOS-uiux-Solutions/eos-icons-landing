@@ -13,7 +13,7 @@ const IconsSet = () => {
 
   const dispatchAction = e => {
     e.preventDefault()
-    return dispatch({ type: state.customize ? 'ADD_ICONS' : 'ADD_ICON', selection: e.target.outerText })
+    return dispatch({ type: state.customize ? 'ADD_MULTIPLE_ICONS' : 'ADD_SINGLE_ICON', selection: e.target.outerText })
   }
 
   /* Toggle customizable functionality */

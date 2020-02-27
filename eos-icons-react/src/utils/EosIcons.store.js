@@ -4,6 +4,7 @@ import eosIcons from '../../node_modules/eos-icons/dist/js/eos-icons.json'
 const singleIcon = []
 const multipleIcons = []
 
+/* EOS Icons state */
 export const eosIconsState = {
   icons: eosIcons,
   singleIcon,
@@ -31,9 +32,9 @@ export const eosIconsState = {
 
 export const iconsReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_ICON':
+    case 'ADD_SINGLE_ICON':
       return { ...state, singleIcon: eosIconsState.setSingleIcon(action.selection) }
-    case 'ADD_ICONS':
+    case 'ADD_MULTIPLE_ICONS':
       return { ...state, multipleIcons: eosIconsState.setMultipleIcons(action.selection) }
     case 'TOGGLE_CUSTOMIZE':
       return { ...state, customize: eosIconsState.toggleCustomize(action.value) }
