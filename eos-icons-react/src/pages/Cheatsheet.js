@@ -1,8 +1,9 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
+import IconsSet from '../components/IconsSet'
 
-const Cheatsheet = () => {
+const Cheatsheet = props => {
   return (
     <div>
       <PageHeader theme='purple'>
@@ -12,6 +13,7 @@ const Cheatsheet = () => {
         </h2>
       </PageHeader>
       <DownloadEosIcons />
+      <IconsSet />
     </div>
   )
 }
