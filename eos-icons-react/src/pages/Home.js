@@ -1,6 +1,5 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader'
-import Link from '../components/Link'
 import SUSEimg from '../assets/images/logos/suse.svg'
 import Kubernetesimg from '../assets/images/logos/kubernetes.svg'
 import openSUSEimg from '../assets/images/logos/opensuse.svg'
@@ -20,17 +19,17 @@ function Home () {
           <div className='flex-content'>
             <h3>Open source</h3>
             <p>Commercial, non-commercial, use them as you please. EOS icons coms with an MIT license, has an open source community, and welcomes your collaboration too.</p>
-            <Link href='https://gitlab.com/SUSE-UIUX/eos-icons' name='View the git repository' external />
+            <a href='https://gitlab.com/SUSE-UIUX/eos-icons' target='_blank' rel="noopener noreferrer">View the git repository</a>
           </div>
           <div className='flex-content'>
             <h3>Pixel perfect</h3>
             <p>Professionaly designed following the state-of-the-art design specifications that created the same Material Design Icons.</p>
-            <Link href='https://material.io/design/iconography/system-icons.html#grid-keyline-shapes' name='Creating system icons' external />
+            <a href='https://material.io/design/iconography/system-icons.html#grid-keyline-shapes' target='_blank' rel="noopener noreferrer">Creating system icons</a>
           </div>
           <div className='flex-content'>
             <h3>Hi-tech driven</h3>
             <p>Made to fit specific niches in software development such as: virtualization, cloud computing, software for infrastructure, etc.</p>
-            <Link href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=' name='Request icons for your project' external />
+            <a href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=' target='_blank' rel="noopener noreferrer">Request icons for your project</a>
           </div>
         </div>
       </div>
@@ -46,7 +45,7 @@ function Home () {
           </div>
           <p className='text-center'>
             Your open source project needs icons?
-            <Link href='https://slack.eosdesignsystem.com/' external name=' Get in touch with us!' />
+            <a href='https://slack.eosdesignsystem.com/' rel="noopener noreferrer" target='_blank'> Get in touch with us!</a>
           </p>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from './Link'
 /* Footer links */
 const footerLinks = [
   {
@@ -27,8 +26,9 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer>
-      {footerLinks.map((ele, index) => <Link key={index} {...ele} external />)}
-    </footer>
+      {footerLinks.map((ele, index) => <a key={index} href={ele.href} rel="noopener noreferrer" target='_blank'>{ele.name}</a>)
+      }
+    </footer >
   )
 }
 
