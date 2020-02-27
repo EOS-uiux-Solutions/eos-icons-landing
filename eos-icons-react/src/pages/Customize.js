@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import Tabs from '../components/Tabs'
 import PageHeader from '../components/PageHeader'
 import GeneratingFont from '../components/GeneratingFont'
 import Modal from '../components/Modal'
 import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
+import Button from '../components/Button'
 
-function Customize () {
+const Customize = () => {
   const [modal, showModal] = useState(false)
 
   return (
@@ -13,15 +15,20 @@ function Customize () {
         <h2>Click on Icons to select them</h2>
         <p>
           To continue building an old font, upload icons-config.json
-          <button> file here </button>
+          <Button> file here </Button>
         </p>
       </PageHeader>
       <CustomizeIconsPanel />
       {modal ? (
         <Modal>
-          <GeneratingFont />
+          <GeneratingFont redirect='/thankyou' />
         </Modal>
       ) : null}
+
+      <Tabs>
+        <div label='Regular Icons'>These are regular icons.</div>
+        <div label='Animated Icons'>These are animated icons.</div>
+      </Tabs>
     </div>
   )
 }
