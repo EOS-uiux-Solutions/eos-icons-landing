@@ -1,7 +1,18 @@
-import React from 'react'
+import React from 'react';
 
 const SearchIcon = () => {
-  return (<input className="searchBar" type="text" name="search" placeholder="Search Icons..."></input>)
-}
+  const [search, setSearch] = React.useState('');
+  console.log('search', search);
 
-export default SearchIcon
+  return (
+    <input
+      className="searchBar"
+      type="text"
+      name="search"
+      placeholder="Search Icons..."
+      onChange={event => setSearch(event.target.value)}
+    />
+  );
+};
+
+export default SearchIcon;
