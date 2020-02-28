@@ -20,12 +20,14 @@ function App () {
     <EosIconStore.Provider value={eosIconsState} >
       <div className='App' >
         <Navigation />
-        <Router>
-          <Home path='/' />
-          <Cheatsheet path='/cheatsheet' />
-          <Customize path='/customize' />
-          <Docs path='/docs' />
-        </Router>
+        <div className='app-container'>
+          <Router>
+            <Home path='/' />
+            <Cheatsheet path='/cheatsheet' />
+            <Customize path='/customize' />
+            <Docs path='/docs' />
+          </Router>
+        </div>
         <Footer />
       </div>
     </EosIconStore.Provider>
