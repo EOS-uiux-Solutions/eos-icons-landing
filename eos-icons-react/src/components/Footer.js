@@ -42,7 +42,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer>
-      {footerLinks.map((ele, index) => <Link key={index} {...ele} />)}
+      {footerLinks.map((ele, index) => <Link key={index} {...ele} external />)}
     </footer>
   )
 }

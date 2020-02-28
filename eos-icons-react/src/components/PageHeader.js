@@ -1,5 +1,12 @@
 import React from 'react';
 
+/**
+ * @name PageHeader
+ * @param {string} size takes a size value between small or medium
+ * @param {string} theme taks a string color from orange or purple theme.
+ * @example
+ * <PageHeader theme="purple" size="small>
+ */
 const PageHeader = props => {
   /* We destructure the props pased to the component */
   const { children, size: height, theme: color } = props;
