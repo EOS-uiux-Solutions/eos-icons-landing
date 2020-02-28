@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 /* Footer links */
 const footerLinks = [
   {
@@ -36,15 +36,23 @@ const footerLinks = [
     action: '',
     label: 'Footer'
   }
-]
+];
 
 const Footer = () => {
   return (
     <footer>
-      {footerLinks.map((ele, index) => <a key={index} href={ele.href} rel="noopener noreferrer" target='_blank'>{ele.name}</a>)
-      }
-    </footer >
-  )
-}
+      {footerLinks.map((ele, index) => (
+        <a
+          key={index}
+          href={ele.href}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {ele.name}
+        </a>
+      ))}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

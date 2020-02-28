@@ -3,7 +3,7 @@ import { EosIconStore, iconsReducer } from '../utils/EosIcons.store';
 /* Components */
 import Icon from './IconDisplay';
 import Tabs from './Tabs';
-// import SearchIcon from './SearchIcon';
+import SearchIcon from './SearchIcon';
 
 const IconsSet = () => {
   const [search, setSearch] = React.useState('');
@@ -32,14 +32,13 @@ const IconsSet = () => {
       <div className="icons-actions">
         Customize{' '}
         <input type="checkbox" onClick={toggleCustomize} name="customize" />
-        {/* <input type="checkbox" onClick={toggleSearch} name="search" /> */}
-        <input
+        {/* <input
           className="search-box-demo"
           type="text"
           placeholder="Search ... "
           onChange={event => setSearch(event.target.value)}
-        />
-        {/* <SearchIcon /> */}
+        /> */}
+        <SearchIcon onChange={setSearch} />
       </div>
       <Tabs>
         <div label="Regular Icons">
