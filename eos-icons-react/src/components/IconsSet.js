@@ -16,7 +16,7 @@ const IconsSet = () => {
     e.preventDefault()
     return dispatch({
       type: state.customize ? 'ADD_MULTIPLE_ICONS' : 'ADD_SINGLE_ICON',
-      selection: e.target.outerText
+      selection: e.target.textContent
     })
   }
 

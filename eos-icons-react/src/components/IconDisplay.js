@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { EosIconStore } from '../utils/EosIcons.store'
+import React, { useContext, useReducer } from 'react'
+import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
 const Icon = props => {
   const { name, size, color, action } = props
   const value = useContext(EosIconStore)
-
+  const [state, dispatch] = useReducer(iconsReducer, value)
   /* Possible icon sizes */
   const sizes = {
     small: 16,
@@ -11,7 +11,7 @@ const Icon = props => {
     medium: 32,
     large: 48
   }
-
+  console.log(state.selectAll)
   const isActive = () =>
     value.singleIcon[0] === name
       ? 'active'
@@ -22,7 +22,13 @@ const Icon = props => {
   return (
     <div className='icon-container'>
       <i
-        className={`eos-icons ${isActive()}`}
+        className={
+          state.selectAll
+            ? 'eos-icons active'
+            : state.deselectAll
+            ? 'eos-icons'
+            : `eos-icons ${isActive()}`
+        }
         style={{
           color: color ?? 'black',
           fontSize: sizes[size] ?? sizes.normal
