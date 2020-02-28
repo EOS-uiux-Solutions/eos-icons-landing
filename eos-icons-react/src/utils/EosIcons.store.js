@@ -3,6 +3,7 @@ import eosIcons from '../../node_modules/eos-icons/dist/js/eos-icons.json'
 console.log(eosIcons)
 const singleIcon = []
 const multipleIcons = []
+const iconNames = eosIcons.map(icon => icon.name)
 
 /* EOS Icons state */
 export const eosIconsState = {
@@ -33,7 +34,7 @@ export const eosIconsState = {
   },
   selectAllIcons () {
     multipleIcons.splice(0, multipleIcons.length)
-    multipleIcons.push(...this.icons.map(icon => icon.name))
+    multipleIcons.push(...this.iconNames)
   }
 }
 
