@@ -16,7 +16,7 @@ const gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   { series, parallel } = require('gulp'),
   pug = require('gulp-pug')
-  remoteSrc = require('gulp-remote-src')
+remoteSrc = require('gulp-remote-src')
 
 /* Landing page destination */
 
@@ -36,8 +36,8 @@ const jsFilter = filter('**/*.js'),
 /* Extract files for landing vendors.
   ========================================================================== */
 /* Clean the built folder to start a fresh building */
-const cleanVendors =  () => {
-  return gulp.src(destinationVendors, { read: false, allowEmpty: true } )
+const cleanVendors = () => {
+  return gulp.src(destinationVendors, { read: false, allowEmpty: true })
     .pipe(clean())
 }
 
@@ -47,7 +47,7 @@ const extractLandingVendorsCss = () => {
     .pipe(cssFilter)
     .pipe(concat('vendors.css'))
     .pipe(cleanCSS())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(`${destinationVendors}css`))
 }
 
@@ -56,9 +56,11 @@ const extractLandingVendorsJs = () => {
   return gulp.src(gulpMain(landingOrigin), { allowEmpty: true })
     .pipe(jsFilter)
     .pipe(concat('vendors.js'))
-    .pipe(minify({ext:{
-        min:'.min.js'
-      }}))
+    .pipe(minify({
+      ext: {
+        min: '.min.js'
+      }
+    }))
     .pipe(gulp.dest(`${destinationVendors}js`))
 }
 
@@ -82,23 +84,23 @@ const extractVendorJson = () => {
 /* Converte pug to HTML */
 const pugToHtml = () => {
   return gulp.src('./views/pages/*.pug')
-  .pipe(pug({
-    doctype: 'html',
-    pretty: false
-  }))
-  .pipe(gulp.dest(`${distFolder}`));
+    .pipe(pug({
+      doctype: 'html',
+      pretty: false
+    }))
+    .pipe(gulp.dest(`${distFolder}`));
 }
 
 /* Move assets from assets to static folder */
 const moveMultimedia = () => {
   return gulp.src('./assets/images/**/*')
-  .pipe(gulp.dest(`${distFolder}assets/images/`));
+    .pipe(gulp.dest(`${distFolder}assets/images/`));
 }
 
 /* Move assets from assets to static folder */
 const moveAnimated = () => {
   return gulp.src('./vendors/node_modules/eos-icons/animated-svg/**')
-  .pipe(gulp.dest(`${distFolder}vendors/images/animated-svg/`));
+    .pipe(gulp.dest(`${distFolder}vendors/images/animated-svg/`));
 }
 
 /* Move Json files from assets/js to static folder */
@@ -106,13 +108,19 @@ const moveAnimated = () => {
 // with a different name
 const moveJson = () => {
   return gulp.src('./assets/javascripts/application/*')
-  .pipe(jsonFilter)
-  .pipe(gulp.dest(`${destinationVendors}js/`));
+    .pipe(jsonFilter)
+    .pipe(gulp.dest(`${destinationVendors}js/`));
 }
 
 const getIconsTagsFromEos = () => {
   return gulp.src('./vendors/node_modules/eos-icons/dist/js/eos-icons.json')
-  .pipe(gulp.dest(`${destinationVendors}js/`));
+    .pipe(gulp.dest(`${destinationVendors}js/`));
+}
+
+/* Move assets from assets to static folder */
+const moveSitemap = () => {
+  return gulp.src('./sitemap.xml')
+    .pipe(gulp.dest(`${distFolder}`));
 }
 
 /* Configure the default gulp task and one for the landing page
@@ -131,6 +139,14 @@ exports.pugToHtml = pugToHtml
 exports.moveMultimedia = moveMultimedia
 exports.moveAnimated = moveAnimated
 exports.moveJson = moveJson
+exports.moveSitemap = moveSitemap
+
+exports.buildStatics =
+  series(pugToHtml,
+    moveMultimedia,
+    moveAnimated,
+    moveJson,
+    moveSitemap)
 
 exports.buildVendors =
   series(cleanVendors,
