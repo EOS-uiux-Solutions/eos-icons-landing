@@ -45,6 +45,9 @@ const Footer = () => {
         <a
           key={index}
           href={ele.href}
+          data-types-category={ele.category}
+          data-types-label={ele.label}
+          data-types-action={ele.action}
           rel="noopener noreferrer"
           target="_blank"
         >
