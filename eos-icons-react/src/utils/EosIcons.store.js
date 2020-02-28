@@ -32,7 +32,9 @@ export const eosIconsState = {
     return (this.customize = !this.customize);
   },
   setSearchList: function(value) {
-    return this.icons.filter(icon => icon.name.includes(value) && icon);
+    return this.icons.filter(
+      icon => icon.name.includes(value.toLowerCase()) && icon
+    );
   }
 };
 
