@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import eosIcons from '../../node_modules/eos-icons/dist/js/eos-icons.json'
+import eosIcons from 'eos-icons/dist/js/eos-icons.json'
 
 const singleIcon = []
 const multipleIcons = []
