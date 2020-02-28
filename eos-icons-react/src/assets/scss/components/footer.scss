@@ -1,17 +1,11 @@
 footer {
-  position: fixed;
+  position: sticky;
   align-items: center;
   bottom: 0;
   padding: $m;
   background: $lightest-gray;
-  width:100%;
 
   a {
     margin: $m;
-  }
-
-  a, a:visited, a:hover, a:active {
-    text-decoration: none;
-    color: $hyper-link-color
   }
 }

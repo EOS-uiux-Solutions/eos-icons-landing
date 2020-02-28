@@ -1,6 +1,11 @@
 @import './variables/index';
+@import './base/index';
 @import './layout/index';
 
 /* Components
   ========================================================================== */
-@import './components/index'
+@import './components/index';
+
+/* Pages
+  ========================================================================== */
+@import './pages/index';
