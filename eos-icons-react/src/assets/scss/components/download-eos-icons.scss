@@ -3,7 +3,7 @@
   background: $grad-init;
   border-radius: 27px 0 0 27px;
   text-decoration: none;
-  color: $light-color;
+  color: $light-color !important;
   display: flex;
   flex-direction: row;
   height: $eos-md-48;
@@ -29,7 +29,7 @@
   }
 
   .download-icons-text {
-    font-size: $h4-font-size-mid;
+    font-size: 1.1em;
     font-family: $font-family;
   }
 }
