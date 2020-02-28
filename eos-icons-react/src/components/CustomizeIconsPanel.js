@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Button from './Button'
 const CustomizeIconsPanel = () => {
   const [count, setCount] = useState(0)
 
@@ -12,10 +12,10 @@ const CustomizeIconsPanel = () => {
         Deselect all <i className='eos-icons'>clear</i>
       </h6>
       <div className='generate-div'>
-        <h6>{count} icons selected.</h6>
-        <button type='submit' onClick={''}>
+        <h6>{count} icons selected</h6>
+        <Button primary type='submit' onClick={''}>
           Generate font
-        </button>
+        </Button>
       </div>
     </div>
   )

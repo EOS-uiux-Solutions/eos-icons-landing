@@ -3,7 +3,6 @@ import Tabs from '../components/Tabs'
 import PageHeader from '../components/PageHeader'
 import GeneratingFont from '../components/GeneratingFont'
 import Modal from '../components/Modal'
-import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
 import Button from '../components/Button'
 
 const Customize = () => {
@@ -18,13 +17,11 @@ const Customize = () => {
           <Button> file here </Button>
         </p>
       </PageHeader>
-      <CustomizeIconsPanel />
       {modal ? (
         <Modal>
           <GeneratingFont redirect='/thankyou' />
         </Modal>
       ) : null}
-
       <Tabs>
         <div label='Regular Icons'>These are regular icons.</div>
         <div label='Animated Icons'>These are animated icons.</div>

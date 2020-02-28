@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext } from 'react'
 import eosIcons from '../../node_modules/eos-icons/dist/js/eos-icons.json'
 
 const singleIcon = []
@@ -18,7 +18,10 @@ export const eosIconsState = {
   setMultipleIcons: function (iconName) {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
-      : multipleIcons.splice(multipleIcons.findIndex(ele => ele === iconName), 1)
+      : multipleIcons.splice(
+          multipleIcons.findIndex(ele => ele === iconName),
+          1
+        )
     return multipleIcons
   },
   toggleCustomize: function () {
@@ -26,18 +29,27 @@ export const eosIconsState = {
     singleIcon.splice(0, singleIcon.length)
     multipleIcons.splice(0, multipleIcons.length)
 
-    return this.customize = !this.customize
+    return (this.customize = !this.customize)
   }
 }
 
 export const iconsReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_SINGLE_ICON':
-      return { ...state, singleIcon: eosIconsState.setSingleIcon(action.selection) }
+      return {
+        ...state,
+        singleIcon: eosIconsState.setSingleIcon(action.selection)
+      }
     case 'ADD_MULTIPLE_ICONS':
-      return { ...state, multipleIcons: eosIconsState.setMultipleIcons(action.selection) }
+      return {
+        ...state,
+        multipleIcons: eosIconsState.setMultipleIcons(action.selection)
+      }
     case 'TOGGLE_CUSTOMIZE':
-      return { ...state, customize: eosIconsState.toggleCustomize(action.value) }
+      return {
+        ...state,
+        customize: eosIconsState.toggleCustomize(action.value)
+      }
     default:
       return { ...state }
   }

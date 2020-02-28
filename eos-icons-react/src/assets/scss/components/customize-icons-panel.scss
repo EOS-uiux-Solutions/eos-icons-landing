@@ -1,13 +1,21 @@
+.container {
+  padding: 16px;
+  width: 100%;
+  color: #5f5f5f;
+  font-size: 25px;
+  font-weight: 500;
+}
+
 .icons-picker-footer {
   .select-all-icons {
     cursor: pointer;
-    display: inline;
-    margin: 10px 25px;
+    display: block;
+    float: left;
+    margin: 15px 25px;
     i {
       padding-left: 6px;
       vertical-align: sub;
     }
-
     &:hover {
       color: $dark-color;
     }
@@ -15,40 +23,28 @@
 
   .deselect-all-icons {
     cursor: pointer;
-    display: inline;
-    margin: 10px 25px;
-
+    display: block;
+    float: left;
+    margin: 15px 25px;
     i {
       padding-left: 3px;
       vertical-align: sub;
     }
-
     &:hover {
       color: $dark-color;
     }
   }
 
   .generate-div {
-    display: inline;
+    display: block;
+    float: right;
+    margin-right: 110px;
     padding-bottom: 15px;
     h6 {
       border-color: $dark-gray;
       display: inline;
       margin: auto;
       padding: 10px;
-    }
-
-    button {
-      border-color: $dark-gray;
-      border-radius: 20px;
-      display: inline;
-      margin: auto;
-      padding: 8px;
-
-      &:hover {
-        background-color: $dark-gray;
-        color: $light-color;
-      }
     }
   }
 }
