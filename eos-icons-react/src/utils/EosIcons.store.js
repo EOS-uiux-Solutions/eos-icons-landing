@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 import eosIcons from '../../node_modules/eos-icons/dist/js/eos-icons.json'
-
+console.log(eosIcons)
 const singleIcon = []
 const multipleIcons = []
 
@@ -30,6 +30,10 @@ export const eosIconsState = {
     multipleIcons.splice(0, multipleIcons.length)
 
     return (this.customize = !this.customize)
+  },
+  selectAllIcons () {
+    multipleIcons.splice(0, multipleIcons.length)
+    multipleIcons.push(...this.icons.map(icon => icon.name))
   }
 }
 
@@ -48,7 +52,12 @@ export const iconsReducer = (state, action) => {
     case 'TOGGLE_CUSTOMIZE':
       return {
         ...state,
-        customize: eosIconsState.toggleCustomize(action.value)
+        customize: eosIconsState.toggleCustomize()
+      }
+    case 'ADD_ALL_ICONS':
+      return {
+        ...state,
+        multipleIcons: eosIconsState.selectAllIcons()
       }
     default:
       return { ...state }
