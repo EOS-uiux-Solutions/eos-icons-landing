@@ -1,0 +1,22 @@
+.modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  background-color: $modal-background-color;
+  z-index: $modal-zindex;
+}
+
+.modal-content {
+  // width: 40%;
+  // height: auto;
+  min-width: 300px;
+  max-width: 450px;
+  border-radius: 7px;
+  background-color: white;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
