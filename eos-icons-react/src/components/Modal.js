@@ -53,3 +53,27 @@ export const ModalComponent = props => {
     </Modal>
   );
 };
+
+/* Used as follows */
+
+// const handleCancel = () => {
+//   showModal(!modal);
+// };
+
+// const handleOk = () => {
+//   console.log('onOk called');
+// };
+
+// {
+//   modal ? (
+//     <ModalComponent
+//       showButton={true}
+//       onOk={handleOk}
+//       onCancel={handleCancel}
+//       cancelText="Nope"
+//       okText="Yup"
+//     >
+//       <p>Are you sure you want to delete this element?</p>
+//     </ModalComponent>
+//   ) : null;
+// }
