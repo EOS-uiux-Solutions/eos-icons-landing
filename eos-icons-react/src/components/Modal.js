@@ -22,47 +22,34 @@ const Modal = props => {
 export default Modal;
 
 export const ModalComponent = props => {
-  const { children, cancelText, okText, onCancel, onOk } = props;
+  const { children, cancelText, okText, onCancel, onOk, showButton } = props;
 
   return (
-    // <Modal>
-    <div className="modal">
-      <div className="modal-content">
-        <div className="flex flex-row" style={{ padding: '20px' }}>
-          {children}
-        </div>
-        <div className="flex flex-row">
-          <div
-            className="flex-content"
-            align="center"
-            style={{
-              backgroundColor: '#B8BECE',
-              borderRadius: '0px 0px 0px 7px',
-              padding: '16px',
-              color: 'white',
-              fontWeight: 'bold'
-            }}
-            onClick={onCancel}
-          >
-            {cancelText ? cancelText : 'Cancel'}
-          </div>
-          <div
-            className="flex-content"
-            align="center"
-            style={{
-              backgroundColor: '#EB796F',
-              borderRadius: '0px 0px 7px 0px',
-              padding: '16px',
-              color: 'white',
-              fontWeight: 'bold'
-            }}
-            onClick={onOk}
-          >
-            {okText ? okText : 'Accept'}
-          </div>
+    <Modal>
+      <div className="modal">
+        <div className="modal-card">
+          <div className="close" onClick={onCancel} />
+          <div className="flex flex-row modal-content">{children}</div>
+          {showButton && (
+            <div className="flex flex-row">
+              <div
+                className="flex-content modal-btn modal-btn-cancel"
+                align="center"
+                onClick={onCancel}
+              >
+                {cancelText ? cancelText : 'Cancel'}
+              </div>
+              <div
+                className="flex-content modal-btn modal-btn-accept"
+                align="center"
+                onClick={onOk}
+              >
+                {okText ? okText : 'Accept'}
+              </div>
+            </div>
+          )}
         </div>
       </div>
-    </div>
-    // </Modal>
+    </Modal>
   );
 };
