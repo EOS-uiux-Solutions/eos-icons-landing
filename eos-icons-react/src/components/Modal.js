@@ -22,7 +22,7 @@ const Modal = props => {
 export default Modal;
 
 export const ModalComponent = props => {
-  const { children, cancelText, okText, onCancel, onOk, showButton } = props;
+  const { children, cancelText, okText, onCancel, onOk, showButtons } = props;
 
   return (
     <Modal>
@@ -30,7 +30,7 @@ export const ModalComponent = props => {
         <div className="modal-card">
           <div className="close" onClick={onCancel} />
           <div className="flex flex-row modal-content">{children}</div>
-          {showButton && (
+          {showButtons && (
             <div className="flex flex-row">
               <div
                 className="flex-content modal-btn modal-btn-cancel"
@@ -67,7 +67,7 @@ export const ModalComponent = props => {
 // {
 //   modal ? (
 //     <ModalComponent
-//       showButton={true}
+//       showButtons={true}
 //       onOk={handleOk}
 //       onCancel={handleCancel}
 //       cancelText="Nope"
