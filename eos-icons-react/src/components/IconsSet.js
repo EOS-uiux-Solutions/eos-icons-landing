@@ -1,5 +1,7 @@
 import React, { useContext, useReducer } from 'react'
 import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
+import selectIconContext from '../utils/selectIconContext'
+import deSelectIconContext from '../utils/deSelectIconContext'
 
 /* Components */
 import Icon from './IconDisplay'
@@ -8,12 +10,17 @@ import CustomizeIconsPanel from './CustomizeIconsPanel'
 
 const IconsSet = () => {
   const value = useContext(EosIconStore)
-
+  // eslint-disable-next-line
+  const [allSelect, setAllSelect] = useContext(selectIconContext)
+  // eslint-disable-next-line
+  const [allDeSelect, setAllDeSelect] = useContext(deSelectIconContext)
   const [state, dispatch] = useReducer(iconsReducer, value)
   console.log('APP STATE', state)
 
   const dispatchAction = e => {
     e.preventDefault()
+    setAllSelect(false)
+    setAllDeSelect(false)
     return dispatch({
       type: state.customize ? 'ADD_MULTIPLE_ICONS' : 'ADD_SINGLE_ICON',
       selection: e.target.textContent

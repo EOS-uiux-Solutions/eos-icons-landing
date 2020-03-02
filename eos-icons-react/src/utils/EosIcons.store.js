@@ -11,8 +11,6 @@ export const eosIconsState = {
   singleIcon,
   multipleIcons,
   customize: false,
-  selectAll: false,
-  deselectAll: false,
   setSingleIcon (iconName) {
     singleIcon.shift()
     singleIcon.push(iconName)
@@ -33,12 +31,6 @@ export const eosIconsState = {
     multipleIcons.splice(0, multipleIcons.length)
 
     return (this.customize = !this.customize)
-  },
-  toggleSelectAll () {
-    return (this.selectAll = !this.selectAll)
-  },
-  toggleDeselectAll () {
-    return (this.deselectAll = !this.deselectAll)
   },
   selectAllIcons () {
     multipleIcons.splice(0, multipleIcons.length)
@@ -71,13 +63,11 @@ export const iconsReducer = (state, action) => {
     case 'ADD_ALL_ICONS':
       return {
         ...state,
-        selectAll: eosIconsState.toggleSelectAll(),
         multipleIcons: eosIconsState.selectAllIcons()
       }
     case 'REMOVE_ALL_ICONS':
       return {
         ...state,
-        deselectAll: eosIconsState.toggleDeselectAll(),
         multipleIcons: eosIconsState.deselectAllIcons()
       }
     default:

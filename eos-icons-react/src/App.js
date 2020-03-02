@@ -12,13 +12,12 @@ import Docs from './pages/Docs'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import '../node_modules/eos-icons/dist/extended/css/eos-icons-extended.css'
-/* Store */
-import { EosIconStore, eosIconsState } from './utils/EosIcons.store'
+import AppContext from './components/AppContext'
 
-function App () {
+const App = () => {
   return (
-    <EosIconStore.Provider value={eosIconsState} >
-      <div className='App' >
+    <AppContext>
+      <div className='App'>
         <Navigation />
         <div className='app-container'>
           <Router>
@@ -30,7 +29,7 @@ function App () {
         </div>
         <Footer />
       </div>
-    </EosIconStore.Provider>
+    </AppContext>
   )
 }
 
