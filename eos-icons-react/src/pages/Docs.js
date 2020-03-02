@@ -1,9 +1,13 @@
-import React from 'react';
+import React from 'react'
+import DownloadEosIcons from '../components/DownloadEosIcons'
 
 function Docs () {
   return (
-    <h1>Docs</h1>
-  );
+    <div>
+      <h1>Docs</h1>
+      <DownloadEosIcons />
+    </div>
+  )
 }
 
-export default Docs;
+export default Docs
