@@ -5,7 +5,6 @@ import './assets/scss/index.scss'
 /* Pages */
 import Home from './pages/Home'
 import Cheatsheet from './pages/Cheatsheet'
-import Customize from './pages/Customize'
 import Docs from './pages/Docs'
 
 /* Componets */
@@ -17,14 +16,13 @@ import { EosIconStore, eosIconsState } from './utils/EosIcons.store'
 
 function App () {
   return (
-    <EosIconStore.Provider value={eosIconsState} >
-      <div className='App' >
+    <EosIconStore.Provider value={eosIconsState}>
+      <div className='App'>
         <Navigation />
         <div className='app-container'>
           <Router>
             <Home path='/' />
             <Cheatsheet path='/cheatsheet' />
-            <Customize path='/customize' />
             <Docs path='/docs' />
           </Router>
         </div>
