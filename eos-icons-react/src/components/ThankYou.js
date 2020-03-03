@@ -25,9 +25,9 @@ const ThankYou = () => {
   }
 
   return (
-    <div className='container thankyou-page-container'>
+    <div className='container text-center'>
       <h2>Thank you for using EOS!</h2>
-      <img src={bunny} alt='EOS Bunny' onLoad={timing} />
+      <img src={bunny} alt='EOS Bunny' onLoad={timing} style={{ width: 170 }} />
       <p>
         Download will begin in {timer} seconds or click below to start
         downloading
