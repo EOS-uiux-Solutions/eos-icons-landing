@@ -1,8 +1,8 @@
 import { createContext } from 'react';
-import eosIcons from 'eos-icons/dist/js/eos-icons.json'
+import eosIcons from 'eos-icons/dist/js/eos-icons.json';
 
-const singleIcon = []
-const multipleIcons = []
+const singleIcon = [];
+const multipleIcons = [];
 
 /* EOS Icons state */
 export const eosIconsState = {
@@ -11,36 +11,59 @@ export const eosIconsState = {
   multipleIcons,
   customize: false,
   setSingleIcon: iconName => {
-    singleIcon.shift()
-    singleIcon.push(iconName)
-    return singleIcon
+    singleIcon.shift();
+    singleIcon.push(iconName);
+    return singleIcon;
   },
-  setMultipleIcons: function (iconName) {
+  setMultipleIcons: function(iconName) {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
-      : multipleIcons.splice(multipleIcons.findIndex(ele => ele === iconName), 1)
-    return multipleIcons
+      : multipleIcons.splice(
+          multipleIcons.findIndex(ele => ele === iconName),
+          1
+        );
+    return multipleIcons;
   },
-  toggleCustomize: function () {
+  toggleCustomize: function() {
     /* Clear arrays when switching between customize */
-    singleIcon.splice(0, singleIcon.length)
-    multipleIcons.splice(0, multipleIcons.length)
+    singleIcon.splice(0, singleIcon.length);
+    multipleIcons.splice(0, multipleIcons.length);
 
-    return this.customize = !this.customize
+    return (this.customize = !this.customize);
+  },
+  setSearchList: function(value) {
+    return this.icons.filter(
+      icon => icon.name.includes(value.toLowerCase()) && icon
+    );
   }
-}
+};
 
 export const iconsReducer = (state, action) => {
+  console.log('state', state, 'action', action);
   switch (action.type) {
     case 'ADD_SINGLE_ICON':
-      return { ...state, singleIcon: eosIconsState.setSingleIcon(action.selection) }
+      return {
+        ...state,
+        singleIcon: eosIconsState.setSingleIcon(action.selection)
+      };
     case 'ADD_MULTIPLE_ICONS':
-      return { ...state, multipleIcons: eosIconsState.setMultipleIcons(action.selection) }
+      return {
+        ...state,
+        multipleIcons: eosIconsState.setMultipleIcons(action.selection)
+      };
     case 'TOGGLE_CUSTOMIZE':
-      return { ...state, customize: eosIconsState.toggleCustomize(action.value) }
+      return {
+        ...state,
+        customize: eosIconsState.toggleCustomize(action.value)
+      };
+    case 'TOGGLE_SEARCH':
+      return {
+        ...state,
+        icons: eosIconsState.setSearchList(action.search)
+      };
     default:
-      return { ...state }
+      return { ...state };
   }
-}
+};
 
-export const EosIconStore = createContext(null)
+export const EosIconStore = createContext(null);

@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-const SearchIcon = () => {
-  return (<input className="searchBar" type="text" name="search" placeholder="Search Icons..."></input>)
-}
+const SearchIcon = ({ onChange }) => {
+  return (
+    <input
+      className="searchBar"
+      type="text"
+      name="search"
+      placeholder="Search Icons..."
+      onChange={event => onChange(event.target.value)}
+    />
+  );
+};
 
-export default SearchIcon
+export default SearchIcon;
