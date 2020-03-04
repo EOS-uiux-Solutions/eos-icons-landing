@@ -2,6 +2,7 @@ import React from 'react'
 import loading from '../assets/images/loading.svg'
 
 const GeneratingFont = props => {
+  // eslint-disable-next-line
   const { redirect } = props
 
   return (

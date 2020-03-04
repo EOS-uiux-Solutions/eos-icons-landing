@@ -32,7 +32,7 @@
     width: 32px !important;
     border: 1px solid transparent;
 
-     &:hover {
+    &:hover {
       box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.091);
       cursor: pointer;
       border: 1px solid #f4f4f4;
@@ -56,7 +56,6 @@
     width: 130px;
   }
 }
-
 
 /* DEMO, REMOVE WHEN THE SPECIFIC COMPONENT IS READY */
 .icon-info-demo {
