@@ -1,0 +1,23 @@
+.contributors {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contributor {
+  padding: 0 10px;
+  .contributors-img {
+    border-radius: 100%;
+    margin: 0 20px;
+    width: 80px;
+  }
+  .text-dark {
+    color: $dark-black;
+  }
+  &:hover {
+    color: $hyper-link-color;
+    text-decoration: underline;
+  }
+}

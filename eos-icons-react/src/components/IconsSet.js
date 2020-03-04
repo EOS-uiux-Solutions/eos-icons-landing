@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from 'react'
+import React, { useContext, useReducer, useEffect } from 'react'
 import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
 import selectIconContext from '../utils/selectIconContext'
 import deSelectIconContext from '../utils/deSelectIconContext'
@@ -6,6 +6,7 @@ import deSelectIconContext from '../utils/deSelectIconContext'
 /* Components */
 import Icon from './IconDisplay'
 import Tabs from './Tabs'
+import SearchIcon from './SearchIcon'
 import CustomizeIconsPanel from './CustomizeIconsPanel'
 
 const IconsSet = () => {
@@ -14,6 +15,12 @@ const IconsSet = () => {
   const [allSelect, setAllSelect] = useContext(selectIconContext)
   // eslint-disable-next-line
   const [allDeSelect, setAllDeSelect] = useContext(deSelectIconContext)
+
+  const [search, setSearch] = React.useState('')
+  useEffect(() => {
+    dispatch({ type: 'TOGGLE_SEARCH', search: search })
+  }, [search])
+
   const [state, dispatch] = useReducer(iconsReducer, value)
   console.log('APP STATE', state)
 
@@ -35,11 +42,7 @@ const IconsSet = () => {
       <div className='icons-actions'>
         Customize
         <input type='checkbox' onClick={toggleCustomize} name='customize' />
-        <input
-          className='search-box-demo'
-          type='text'
-          placeholder='Search ... '
-        />
+        <SearchIcon onChange={setSearch} />
       </div>
       <Tabs>
         <div label='Regular Icons'>

@@ -40,10 +40,16 @@ export const eosIconsState = {
   deselectAllIcons () {
     multipleIcons.splice(0, multipleIcons.length)
     return multipleIcons
+  },
+  setSearchList: function (value) {
+    return this.icons.filter(
+      icon => icon.name.includes(value.toLowerCase()) && icon
+    )
   }
 }
 
 export const iconsReducer = (state, action) => {
+  console.log('state', state, 'action', action)
   switch (action.type) {
     case 'ADD_SINGLE_ICON':
       return {
@@ -69,6 +75,11 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         multipleIcons: eosIconsState.deselectAllIcons()
+      }
+    case 'TOGGLE_SEARCH':
+      return {
+        ...state,
+        icons: eosIconsState.setSearchList(action.search)
       }
     default:
       return { ...state }
