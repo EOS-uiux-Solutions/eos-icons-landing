@@ -1,6 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import Contributor from '../components/Contributor'
+import DownloadEosIcons from '../components/DownloadEosIcons'
 import SUSEimg from '../assets/images/logos/suse.svg'
 import Kubernetesimg from '../assets/images/logos/kubernetes.svg'
 import openSUSEimg from '../assets/images/logos/opensuse.svg'
@@ -10,7 +11,7 @@ import contributors from '../utils/Contributors.store'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <PageHeader size='medium' theme='orange'>
         <h2>
           Free. Open source. Vector and pixel-perfect icons. The iconic font
@@ -63,47 +64,52 @@ const Home = () => {
             </a>
           </div>
         </div>
-      </div>
-      <div className='gray-bg'>
+        <div className='gray-bg'>
+          <div className='container'>
+            <h2 className='text-center'>
+              Handmade to fit top open source players
+            </h2>
+            <div className='flex flex-row'>
+              <img className='brands' src={SUSEimg} alt='SUSE logo' />
+              <img
+                className='brands'
+                src={Kubernetesimg}
+                alt='Kubernetes logo'
+              />
+              <img className='brands' src={openSUSEimg} alt='openSUSE logo' />
+              <img
+                className='brands'
+                src={OBSimg}
+                alt='open build service logo'
+              />
+              <img className='brands' src={CFimg} alt='cloud foundry logo' />
+            </div>
+            <p className='text-center'>
+              Your open source project needs icons?
+              <a
+                href='https://slack.eosdesignsystem.com/'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+                {' '}
+                Get in touch with us!
+              </a>
+            </p>
+          </div>
+          <DownloadEosIcons />
+        </div>
         <div className='container'>
           <h2 className='text-center'>
-            Handmade to fit top open source players
+            Special thanks to all the superheroes that made it happen
           </h2>
-          <div className='flex flex-row'>
-            <img className='brands' src={SUSEimg} alt='SUSE logo' />
-            <img className='brands' src={Kubernetesimg} alt='Kubernetes logo' />
-            <img className='brands' src={openSUSEimg} alt='openSUSE logo' />
-            <img
-              className='brands'
-              src={OBSimg}
-              alt='open build service logo'
-            />
-            <img className='brands' src={CFimg} alt='cloud foundry logo' />
+          <div className='contributors text-center padding-top-md'>
+            {contributors.map((ele, i) => (
+              <Contributor key={i} {...ele} />
+            ))}
           </div>
-          <p className='text-center'>
-            Your open source project needs icons?
-            <a
-              href='https://slack.eosdesignsystem.com/'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              {' '}
-              Get in touch with us!
-            </a>
-          </p>
         </div>
       </div>
-      <div className='container'>
-        <h2 className='text-center'>
-          Special thanks to all the superheroes that made it happen
-        </h2>
-        <div className='contributors text-center padding-top-md'>
-          {contributors.map((ele, i) => (
-            <Contributor key={i} {...ele} />
-          ))}
-        </div>
-      </div>
-    </div>
+    </>
   )
 }
 
