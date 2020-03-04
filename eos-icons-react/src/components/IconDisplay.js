@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { EosIconStore } from '../utils/EosIcons.store'
+import React, { useContext } from 'react';
+import { EosIconStore } from '../utils/EosIcons.store';
 const Icon = props => {
-  const { name, size, color, action } = props
-  const value = useContext(EosIconStore)
+  const { name, size, color, action } = props;
+  const value = useContext(EosIconStore);
 
   /* Possible icon sizes */
   const sizes = {
@@ -12,14 +12,19 @@ const Icon = props => {
     large: 48
   };
 
-  const isActive = () => (value.singleIcon[0] === name ? 'active' : value.multipleIcons.includes(name) ? 'active' : '')
+  const isActive = () =>
+    value.singleIcon[0] === name
+      ? 'active'
+      : value.multipleIcons.includes(name)
+      ? 'active'
+      : '';
 
   return (
     <div className="icon-container">
       <i
         className={`eos-icons ${isActive()}`}
         style={{
-          color: color ?? "black",
+          color: color ?? 'black',
           fontSize: sizes[size] ?? sizes.normal
         }}
         onClick={action}
@@ -27,7 +32,6 @@ const Icon = props => {
         {name}
       </i>
       {name}
-
     </div>
   );
 };

@@ -13,6 +13,7 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import ThankYou from './components/ThankYou'
 import '../node_modules/eos-icons/dist/extended/css/eos-icons-extended.css'
+import 'eos-icons/dist/extended/css/eos-icons-extended.css'
 
 /* Store */
 import { EosIconStore, eosIconsState } from './utils/EosIcons.store'
