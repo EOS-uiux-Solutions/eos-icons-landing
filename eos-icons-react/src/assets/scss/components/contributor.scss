@@ -1,3 +1,11 @@
+.contributors {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .contributor {
   padding: 0 10px;
   .contributors-img {
