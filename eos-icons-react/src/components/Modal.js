@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
 const Modal = props => {
-  const { children } = props;
+  // const { children } = props;
+  const { children, cancelText, okText, onCancel, onOk, showButtons } = props;
   const elRef = useRef(null);
   if (!elRef.current) {
     const div = document.createElement('div');
@@ -16,43 +17,36 @@ const Modal = props => {
     return () => modalRoot.removeChild(elRef.current);
   }, []);
 
-  return createPortal(<div>{children}</div>, elRef.current);
+  return createPortal(
+    <div className="modal">
+      <div className="modal-card">
+        <div className="close" onClick={onCancel} />
+        <div className="flex flex-row modal-content">{children}</div>
+        {showButtons && (
+          <div className="flex flex-row">
+            <div
+              className="flex-content modal-btn modal-btn-cancel"
+              align="center"
+              onClick={onCancel}
+            >
+              {cancelText ? cancelText : 'Cancel'}
+            </div>
+            <div
+              className="flex-content modal-btn modal-btn-accept"
+              align="center"
+              onClick={onOk}
+            >
+              {okText ? okText : 'Accept'}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>,
+    elRef.current
+  );
 };
 
 export default Modal;
-
-export const ModalComponent = props => {
-  const { children, cancelText, okText, onCancel, onOk, showButtons } = props;
-
-  return (
-    <Modal>
-      <div className="modal">
-        <div className="modal-card">
-          <div className="close" onClick={onCancel} />
-          <div className="flex flex-row modal-content">{children}</div>
-          {showButtons && (
-            <div className="flex flex-row">
-              <div
-                className="flex-content modal-btn modal-btn-cancel"
-                align="center"
-                onClick={onCancel}
-              >
-                {cancelText ? cancelText : 'Cancel'}
-              </div>
-              <div
-                className="flex-content modal-btn modal-btn-accept"
-                align="center"
-                onClick={onOk}
-              >
-                {okText ? okText : 'Accept'}
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </Modal>
-  );
-};
 
 /* Used as follows */
 
@@ -66,7 +60,7 @@ export const ModalComponent = props => {
 
 // {
 //   modal ? (
-//     <ModalComponent
+//     <Modal
 //       showButtons={true}
 //       onOk={handleOk}
 //       onCancel={handleCancel}
@@ -74,6 +68,6 @@ export const ModalComponent = props => {
 //       okText="Yup"
 //     >
 //       <p>Are you sure you want to delete this element?</p>
-//     </ModalComponent>
+//     </Modal>
 //   ) : null;
 // }
