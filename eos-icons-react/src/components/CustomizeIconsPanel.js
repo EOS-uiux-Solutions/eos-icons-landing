@@ -46,21 +46,23 @@ const CustomizeIconsPanel = () => {
         .post(postReqUrl, { icons_config: json })
         .then(data => console.log(data))
     } else {
-      window.alert(`Please select at least one icon to generate font`)
+      window.alert(
+        `Please select at least one icon to generate a custom icon font`
+      )
     }
   }
 
   return (
-    <div>
+    <>
       <div className='icons-picker-footer'>
-        <h6 className='select-all-icons' onClick={selectAll}>
+        <div className='select-all-icons' onClick={selectAll}>
           Select all <i className='eos-icons'>select_all</i>
-        </h6>
-        <h6 className='deselect-all-icons' onClick={deselectAll}>
+        </div>
+        <div className='deselect-all-icons' onClick={deselectAll}>
           Deselect all <i className='eos-icons'>clear</i>
-        </h6>
+        </div>
         <div className='generate-div'>
-          <h6>{state.multipleIcons.length} icons selected</h6>
+          <span>{state.multipleIcons.length} icons selected</span>
           <Button primary type='submit' onClick={generateFont}>
             Generate font
           </Button>
@@ -71,7 +73,7 @@ const CustomizeIconsPanel = () => {
           <GeneratingFont redirect='/thankyou' />
         </Modal>
       ) : null}
-    </div>
+    </>
   )
 }
 

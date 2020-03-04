@@ -33,7 +33,7 @@ const IconsSet = () => {
   return (
     <>
       <div className='icons-actions'>
-        Customize{' '}
+        Customize
         <input type='checkbox' onClick={toggleCustomize} name='customize' />
         <input
           className='search-box-demo'
