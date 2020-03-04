@@ -3,9 +3,9 @@ import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
 import IconsSet from '../components/IconsSet'
 
-const Cheatsheet = props => {
+const Cheatsheet = () => {
   return (
-    <div>
+    <>
       <PageHeader theme='purple'>
         <h2>
           Cheatsheet: find the ligature of the icon you are looking for, plus,
@@ -14,7 +14,7 @@ const Cheatsheet = props => {
       </PageHeader>
       <DownloadEosIcons />
       <IconsSet />
-    </div>
+    </>
   )
 }
 
