@@ -93,13 +93,13 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className='container padding-vertical-lg'>
-        <h3 className='text-center'>
+      <div className='container'>
+        <h2 className='text-center'>
           Special thanks to all the superheroes that made it happen
-        </h3>
+        </h2>
         <div className='contributors text-center padding-top-md'>
-          {contributors.map(ele => (
-            <Contributor {...ele} />
+          {contributors.map((ele, i) => (
+            <Contributor key={i} {...ele} />
           ))}
         </div>
       </div>

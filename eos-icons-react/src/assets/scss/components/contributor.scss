@@ -1,27 +1,15 @@
-a {
+.contributor {
   padding: 0 10px;
-
+  .contributors-img {
+    border-radius: 100%;
+    margin: 0 20px;
+    width: 80px;
+  }
+  .text-dark {
+    color: $dark-gray;
+  }
   &:hover {
-    color: #0056b3;
+    color: $hyper-link-color;
     text-decoration: underline;
   }
-}
-
-.contributors-img {
-  border-radius: 100%;
-  margin: 0 20px;
-  width: 80px;
-}
-
-img {
-  vertical-align: middle;
-  border-style: none;
-}
-
-.text-decoration-none {
-  text-decoration: none !important;
-}
-
-.text-dark {
-  color: #343a40 !important;
 }
