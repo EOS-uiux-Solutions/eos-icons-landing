@@ -12,7 +12,7 @@
   cursor: pointer;
   width: 59px;
   height: 32px;
-  background: grey;
+  background: $dark-gray;
   border-radius: 100px;
   position: relative;
   transition: background-color 0.2s;
@@ -27,7 +27,7 @@
   height: 30px;
   border-radius: 45px;
   transition: 0.2s;
-  background: #fff;
+  background: $light-color;
   box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 }
 
