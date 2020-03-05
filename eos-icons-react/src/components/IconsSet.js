@@ -1,19 +1,34 @@
-import React, { useContext, useReducer } from 'react'
+import React, { useContext, useReducer, useEffect } from 'react'
 import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
+import selectIconContext from '../utils/selectIconContext'
+import deSelectIconContext from '../utils/deSelectIconContext'
 
 /* Components */
 import Icon from './IconDisplay'
 import Tabs from './Tabs'
 import Switch from './Switch'
+import SearchIcon from './SearchIcon'
+import CustomizeIconsPanel from './CustomizeIconsPanel'
 
 const IconsSet = props => {
   const value = useContext(EosIconStore)
+  // eslint-disable-next-line
+  const [allSelect, setAllSelect] = useContext(selectIconContext)
+  // eslint-disable-next-line
+  const [allDeSelect, setAllDeSelect] = useContext(deSelectIconContext)
+
+  const [search, setSearch] = React.useState('')
+  useEffect(() => {
+    dispatch({ type: 'TOGGLE_SEARCH', search: search })
+  }, [search])
 
   const [state, dispatch] = useReducer(iconsReducer, value)
   console.log('APP STATE', state)
 
   const dispatchAction = e => {
     e.preventDefault()
+    setAllSelect(false)
+    setAllDeSelect(false)
     return dispatch({
       type: state.customize ? 'ADD_MULTIPLE_ICONS' : 'ADD_SINGLE_ICON',
       selection: e.target.textContent
@@ -30,11 +45,7 @@ const IconsSet = props => {
     <>
       <div className='icons-actions'>
         Customize <Switch onClick={toggleCustomize} />
-        <input
-          className='search-box-demo'
-          type='text'
-          placeholder='Search ... '
-        />
+        <SearchIcon onChange={setSearch} />
       </div>
       <Tabs>
         <div label='Regular Icons'>
@@ -62,7 +73,7 @@ const IconsSet = props => {
             )
           ) : (
             <div className='icon-info-demo'>
-              <p>Icons selected: {state.multipleIcons.length}</p>
+              <CustomizeIconsPanel />
             </div>
           )}
           {/* ========== END ONLY FOR DEMO ========== */}
