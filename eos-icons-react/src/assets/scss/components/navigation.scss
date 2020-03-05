@@ -3,13 +3,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: $m;
-  color: #fff;
-  background: linear-gradient(90deg, #FBB369, #FF814A);
+  color: $light-color;
+  background: linear-gradient(90deg, #fbb369, #ff814a);
 
   .brand {
     display: flex;
     align-items: center;
     font-size: 2rem;
+    color: $light-color;
 
     .logo {
       width: 86px;
@@ -20,14 +21,18 @@ header {
   nav {
     font-size: 16px;
     /* Reset links decoration */
-    a, a:hover, a:focus, a:active , a:visited {
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    a:visited {
       text-decoration: none;
-      color: rgba(255,255,255,.5);
+      color: rgba(255, 255, 255, 0.5);
       padding: 0 8px;
     }
 
     .active {
-      color: #fff;
+      color: $light-color;
     }
   }
 }

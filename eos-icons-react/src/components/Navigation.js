@@ -16,10 +16,12 @@ const NavLink = props => (
 const Navigation = () => {
   return (
     <header>
-      <div className='brand'>
-        <img className='logo' src={eosIcon} alt='' />
-        Icons
-      </div>
+      <Link to='/'>
+        <div className='brand'>
+          <img className='logo' src={eosIcon} alt='' />
+          Icons
+        </div>
+      </Link>
       <nav>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/cheatsheet'>Cheatsheet </NavLink>
