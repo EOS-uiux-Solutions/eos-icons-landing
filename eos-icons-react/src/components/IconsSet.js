@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useEffect } from 'react'
+import React, { useContext, useReducer, useEffect, useState } from 'react'
 import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
 import selectIconContext from '../utils/selectIconContext'
 import deSelectIconContext from '../utils/deSelectIconContext'
@@ -9,6 +9,7 @@ import Tabs from './Tabs'
 import Switch from './Switch'
 import SearchIcon from './SearchIcon'
 import CustomizeIconsPanel from './CustomizeIconsPanel'
+import HowToPanel from './HowToPanel'
 
 const IconsSet = props => {
   const value = useContext(EosIconStore)
@@ -17,7 +18,9 @@ const IconsSet = props => {
   // eslint-disable-next-line
   const [allDeSelect, setAllDeSelect] = useContext(deSelectIconContext)
 
-  const [search, setSearch] = React.useState('')
+  const [showPanel, setShowPanel] = useState(false)
+
+  const [search, setSearch] = useState('')
   useEffect(() => {
     dispatch({ type: 'TOGGLE_SEARCH', search: search })
   }, [search])
@@ -27,6 +30,7 @@ const IconsSet = props => {
 
   const dispatchAction = e => {
     e.preventDefault()
+    setShowPanel(true)
     setAllSelect(false)
     setAllDeSelect(false)
     return dispatch({
@@ -49,24 +53,14 @@ const IconsSet = props => {
       </div>
       <Tabs>
         <div label='Regular Icons'>
-          {/* ========== ONLY FOR DEMO ========== */}
           {!state.customize ? (
             state.singleIcon.length ? (
-              <div className='icon-info-demo'>
-                {value.singleIcon.map((ele, i) => (
-                  <pre key={i}>
-                    <b>Name</b>: {ele}
-                  </pre>
-                ))}
-
-                <pre>
-                  <b>Details</b>:
-                  {state.icons.map(ele =>
-                    ele.name === state.singleIcon[0]
-                      ? JSON.stringify(ele, null, 2)
-                      : ''
-                  )}
-                </pre>
+              <div className='how-to-use-block'>
+                {showPanel ? (
+                  <HowToPanel state={state} onClick={setShowPanel} />
+                ) : (
+                  ''
+                )}
               </div>
             ) : (
               ''
@@ -76,8 +70,6 @@ const IconsSet = props => {
               <CustomizeIconsPanel />
             </div>
           )}
-          {/* ========== END ONLY FOR DEMO ========== */}
-
           <div className='icons-list'>
             {state.icons.map((ele, index) => {
               return ele.name === 'installing' || ele.name === 'loading' ? (
