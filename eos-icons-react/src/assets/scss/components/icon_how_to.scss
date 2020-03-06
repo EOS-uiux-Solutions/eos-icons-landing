@@ -1,26 +1,27 @@
-.how-to-use-block{
+.how-to-use-block {
   color: #212529;
   font-size: 16px;
   font-weight: 300;
   z-index: 10;
-  background-color: #F6F9FC;
-  border: 1px solid black;
-  bottom: 0px;
+  background-color: #f8f8f8;
+  bottom: 55px;
   position: fixed;
+  height: auto;
+  left: 0;
   width: 100%;
 
-  .how-to-use-container{
+  .how-to-use-container {
     width: 100%;
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .h2-how-to-use{
+  .h2-how-to-use {
     margin-left: 1rem;
     font-weight: 300;
     font-size: 2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     line-height: 1.2;
 
     margin-block-start: 0.83em;
@@ -30,7 +31,7 @@
     display: block;
   }
 
-  .right-pulled-small{
+  .right-pulled-small {
     float: right;
     cursor: pointer;
     font-size: 0.5em;
@@ -38,7 +39,7 @@
     line-height: 1.2;
   }
 
-  .how-to-use-input-group{
+  .how-to-use-input-group {
     margin-bottom: 1rem;
     position: relative;
     display: flex;
@@ -47,26 +48,26 @@
     width: 100%;
   }
 
-  #copy3{
+  #copy3 {
     border-radius: 30px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .how-to-use-curved-control{
+  .how-to-use-curved-control {
     position: relative;
     flex: 1 1 auto;
     margin-bottom: 0;
-    padding: .375rem .75rem;
+    padding: 0.375rem 0.75rem;
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     cursor: text;
   }
 
-  .how-to-use-input-group-append{
+  .how-to-use-input-group-append {
     margin-left: -1px;
     display: flex;
     line-height: 1.5;
@@ -74,40 +75,40 @@
     text-align: left;
   }
 
-  #copy1{
+  #copy1 {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  .how-to-use-copy-button{
+  .how-to-use-copy-button {
     color: #fff;
     z-index: 2;
     cursor: pointer;
     border-radius: 30px;
     background-color: #343a40;
     border-color: #343a40;
-    padding: .375rem .75rem;
+    padding: 0.375rem 0.75rem;
   }
 
-  .md-18{
+  .md-18 {
     font-size: 18px;
   }
 
-  .how-to-use-row{
+  .how-to-use-row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     padding-bottom: 10px;
   }
 
-  .how-to-use-badge{
+  .how-to-use-badge {
     margin: 0 4px;
     color: #fff;
     background-color: #6c757d;
     display: inline-block;
-    padding: .5em .4em;
+    padding: 0.5em 0.4em;
     font-size: $s + 4;
     line-height: 1;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
   }
 }

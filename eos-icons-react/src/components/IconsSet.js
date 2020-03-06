@@ -66,7 +66,7 @@ const IconsSet = props => {
               ''
             )
           ) : (
-            <div className='icon-info-demo'>
+            <div className='how-to-use-block'>
               <CustomizeIconsPanel />
             </div>
           )}
