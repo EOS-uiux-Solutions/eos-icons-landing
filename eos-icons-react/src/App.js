@@ -5,7 +5,6 @@ import './assets/scss/index.scss'
 /* Pages */
 import Home from './pages/Home'
 import Cheatsheet from './pages/Cheatsheet'
-import Customize from './pages/Customize'
 import Docs from './pages/Docs'
 
 /* Componets */
@@ -24,7 +23,6 @@ const App = () => {
           <Router>
             <Home path='/' />
             <Cheatsheet path='/cheatsheet' />
-            <Customize path='/customize' />
             <Docs path='/docs' />
             <ThankYou path='/thankyou' />
           </Router>

@@ -13,10 +13,10 @@ const Icon = props => {
     medium: 32,
     large: 48
   }
-  // eslint-disable-next-line
-  const [allSelect, setAllSelect] = useContext(selectIconContext)
-  // eslint-disable-next-line
-  const [allDeSelect, setAllDeSelect] = useContext(deSelectIconContext)
+
+  const [allSelect] = useContext(selectIconContext)
+
+  const [allDeSelect] = useContext(deSelectIconContext)
 
   const isActive = () =>
     value.singleIcon[0] === name

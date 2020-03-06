@@ -45,6 +45,10 @@ export const eosIconsState = {
     return this.icons.filter(
       icon => icon.name.includes(value.toLowerCase()) && icon
     )
+  },
+  removeSingleIcon () {
+    singleIcon.splice(0, singleIcon.length)
+    return singleIcon
   }
 }
 
@@ -80,6 +84,11 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         icons: eosIconsState.setSearchList(action.search)
+      }
+    case 'REMOVE_SINGLE_ICON':
+      return {
+        ...state,
+        singleIcon: eosIconsState.removeSingleIcon()
       }
     default:
       return { ...state }
