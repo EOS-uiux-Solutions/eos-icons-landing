@@ -11,10 +11,10 @@ const CustomizeIconsPanel = () => {
   const value = useContext(EosIconStore)
 
   const [state, dispatch] = useReducer(iconsReducer, value)
-  // eslint-disable-next-line
-  const [allSelect, setAllSelect] = useContext(selectIconContext)
-  // eslint-disable-next-line
-  const [allDeSelect, setAllDeSelect] = useContext(deSelectIconContext)
+
+  const [, setAllSelect] = useContext(selectIconContext)
+
+  const [, setAllDeSelect] = useContext(deSelectIconContext)
 
   const [modal, showModal] = useState(false)
 
