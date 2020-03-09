@@ -1,19 +1,20 @@
 import React from 'react'
 import DownloadEosIcons from '../components/DownloadEosIcons'
-import DocsHeading from '../components/DocsHeading'
-import DocsSubHeading from '../components/DocsSubHeading'
-import DocsCode from '../components/DocsCode'
+import Code from '../components/Code'
 
 function Docs () {
   return (
     <div>
-      <div className="docs">
-        <DocsHeading heading="Installing EOS icons">
+      <div className="container">
+        <div>
+          <h1>Installing EOS icons</h1>
           <p>There are several options for you to use EOS icons in your product:</p>
-          <DocsSubHeading heading="Installing with npm">  
-            <DocsCode codes={["npm install eos-icons --save"]}/>
-          </DocsSubHeading>
-          <DocsSubHeading heading="With our CDN">
+          <div> 
+            <h3> Installing with npm </h3>  
+            <Code codes={["npm install eos-icons --save"]}/>
+          </div>
+          <div>
+            <h3>With our CDN</h3>
             <p>For EOS set: 
               <a href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css" 
                 data-event-category="External link" 
@@ -23,7 +24,7 @@ function Docs () {
                 rel="noopener noreferrer"> https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css
                 </a>
             </p>
-            <DocsCode codes={["<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css'>"]} />
+            <Code codes={["<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css'>"]} />
             <p>For Extended EOS set:
               <a href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css" 
                 data-event-category="External link" 
@@ -33,14 +34,15 @@ function Docs () {
                 rel="noopener noreferrer"> https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css
               </a>
             </p>
-            <DocsCode codes={["<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css'>"]} />
+            <Code codes={["<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css'>"]} />
             <p className="inline-p">
-              Import them in your <p className="command-p"> &lt;head&gt;</p> tag as <p className="command-p"> link:css </p>.
+              Import them in your <p className="command"> &lt;head&gt;</p> tag as <p className="command"> link:css </p>.
             </p>
-          </DocsSubHeading>
-          <DocsSubHeading heading="or Download EOS as a zip file">  
+          </div>
+          <div>
+            <h3>or Download EOS as a zip file</h3>  
             <p className="inline-p">
-              To download the zip file of <p className="command-p"> /dist</p> folder click 
+              To download the zip file of <p className="command"> /dist</p> folder click 
               <a href="https://gitlab.com/SUSE-UIUX/eos-icons/-/archive/master/eos-icons-master.zip?path=dist" 
                 data-event-category="External link" 
                 data-event-action="Link to EOS Icons zip file" 
@@ -49,21 +51,22 @@ function Docs () {
                 rel="noopener noreferrer"> here
               </a>
             </p>
-          </DocsSubHeading>
-        </DocsHeading>
-        <DocsHeading heading="Using EOS icons in your projects">
+          </div>
+        </div>
+        <div>
+          <h1>Using EOS icons in your projects</h1>
           <p>Just like in any other iconic font, you need to add the Fonts and CSS files in your project:</p>
           <p className="inline-p">
-            1- Add the <p className="command-p">eos-icons.css</p> file available under the dist/css folder into your project's <p className="command-p"> &lt;head&gt;</p>:
+            1- Add the <p className="command">eos-icons.css</p> file available under the dist/css folder into your project's <p className="command"> &lt;head&gt;</p>:
           </p>
-          <DocsCode codes={["<link rel='stylesheet' href=''assets/eos-icons.css>"]} />
+          <Code codes={["<link rel='stylesheet' href=''assets/eos-icons.css>"]} />
           <p>
-            2- Make sure the font files available in <p className="command-p">thedist/fonts</p> folder are placed under your <p className="command-p">assets/fonts</p> folder so the .css file can read them correctly.
+            2- Make sure the font files available in <p className="command">thedist/fonts</p> folder are placed under your <p className="command">assets/fonts</p> folder so the .css file can read them correctly.
           </p>
           <p>
             3- Use the icons in your html as follows:
           </p>
-          <DocsCode codes={["<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"]} />
+          <Code codes={["<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"]} />
           <p>
             Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our &nbsp;
             <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html" 
@@ -75,12 +78,13 @@ function Docs () {
             </a>
             &nbsp; to see the icon's name.
           </p>
-        </DocsHeading>
-        <DocsHeading heading="Using Animated icons">
+        </div>
+        <div>
+          <h1>Using Animated icons</h1>
           <p>
             The animated EOS icons are built using CSS animations. To implement them you don't need ligatures but classes instead. For example:
           </p>
-          <DocsCode codes={["<i class='eos-icons eos-icon-loading'></i>"]} />
+          <Code codes={["<i class='eos-icons eos-icon-loading'></i>"]} />
           <p>
             See the other animated icons classes in our
             <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html" 
@@ -92,8 +96,9 @@ function Docs () {
             </a>
             . Click on the icon you want to use to see the codes snippet.
           </p>
-        </DocsHeading>
-        <DocsHeading heading="EOS extended version with Material Design">
+        </div>
+        <div>
+          <h1>EOS extended version with Material Design</h1>
           <p>
             Since EOS icons are designed following the&nbsp;
             <a href="https://material.io/design/iconography/system-icons.html" 
@@ -107,8 +112,8 @@ function Docs () {
           </p>
           <p className="inline-p">
             With the extended version you only need to use 1 class for all icons (EOS and Material Design).
-            To implement it, you need to grab the <p className="command-p"> css/ </p> and<p className="command-p"> font/ </p> folders available atdist/extended, 
-            then add theeos-icons-extended.cssunder the <p className="command-p"> &lt;head&gt;</p> of your project accordingly.
+            To implement it, you need to grab the <p className="command"> css/ </p> and<p className="command"> font/ </p> folders available atdist/extended, 
+            then add theeos-icons-extended.cssunder the <p className="command"> &lt;head&gt;</p> of your project accordingly.
           </p>
           <p>
             For more information about Material Design Icons, please refer to the &nbsp;
@@ -121,18 +126,20 @@ function Docs () {
             </a> 
             &nbsp;where you can find the corresponding licensing and documentation. Example:
           </p>
-          <DocsCode codes={[
+          <Code codes={[
             "<!-- This is an EOS icon --> \n",
             "<i class='eos-icons'>action_chains</i> \n",
             "\n",
             "<!-- This is a Material Design icon --> \n",
             "<i class='eos-icons'>bluetooth_disabled</i>",
           ]}/>
-        </DocsHeading>
-        <DocsHeading heading="Our recommended sizes">
+        </div>
+        <div>
+          <h1>Our recommended sizes</h1>
           <p>Both MD icons and EOS icons have been designed to work and look perfect at: 18px, 24px, 36px, and 48px.</p>
           <p>In order to be compliant, follow MD icons class names to size both MD icons and EOS icons:</p>
-          <DocsSubHeading heading="Implementation Examples">
+          <div>
+            <h3>Implementation Examples</h3>
             <ul>
               <li>
                 <h4>Implementation example with MD icon</h4>
@@ -141,7 +148,7 @@ function Docs () {
               <i className="eos-icons md-24 mr-3">face</i>
               <i className="eos-icons md-36 mr-3">face</i>
               <i className="eos-icons md-48">face</i>
-              <DocsCode codes={[
+              <Code codes={[
                 "<i class='eos-icons md-18'>face</i> \n",
                 "<i class='eos-icons md-24'>face</i> \n",
                 "<i class='eos-icons md-36'>face</i> \n",
@@ -154,14 +161,14 @@ function Docs () {
               <i className="eos-icons md-24 mr-3">miscellaneous</i>
               <i className="eos-icons md-36 mr-3">miscellaneous</i>
               <i className="eos-icons md-48">miscellaneous</i>
-              <DocsCode codes={[
+              <Code codes={[
                 "<i class='eos-icons md-18'>miscellaneous</i> \n",
                 "<i class='eos-icons md-24'>miscellaneous</i> \n",
                 "<i class='eos-icons md-36'>miscellaneous</i> \n",
                 "<i class='eos-icons md-48'>miscellaneous</i> \n",
               ]} />
               <h4>SCSS code snippet</h4>
-              <DocsCode codes={[
+              <Code codes={[
                 "/* size variables */ \n",
                 "$eos-md-18: 18px; \n",
                 "$eos-md-24: 24px; \n",
@@ -175,7 +182,7 @@ function Docs () {
                 ".md-48 { font-size: $eos-md-48; } \n",
               ]} />
             </ul>
-          </DocsSubHeading>
+          </div>
           <p>
             EOS icons is open source. 
             Go to our Gitlab repository to find out more :
@@ -187,7 +194,7 @@ function Docs () {
               rel="noopener noreferrer"> https://gitlab.com/SUSE-UIUX/eos-icons
             </a>
           </p>
-        </DocsHeading>
+        </div>
       </div>
       <DownloadEosIcons />
     </div>

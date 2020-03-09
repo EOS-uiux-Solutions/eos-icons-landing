@@ -1,16 +1,4 @@
-.docs{
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-bottom: 3rem!important;
-  margin-top: 3rem!important;
-}
-
-.docs-heading h1,h3{
-  font-weight: 700!important;
-  border-bottom: 1px solid #dee2e6!important;
-}
-
-.docs-code{
+.code{
   border: 1px solid #c8c8c8;
   border-radius: 2px;
   color: #505050;
@@ -23,22 +11,10 @@
   display: inline!important;
 }
 
-.command-p{
+.command{
   background-color: #fbe5e1;
   border-radius: 4px;
   color: #c0341d;
   display: inline;
   padding: 2px 4px;
 }
-
-/* size variables */
-$eos-md-18: 18px;
-$eos-md-24: 24px;
-$eos-md-36: 36px;
-$eos-md-48: 48px;
-
-/* Rules for sizing the icon. */
-.md-18 { font-size: $eos-md-18; }
-.md-24 { font-size: $eos-md-24; }
-.md-36 { font-size: $eos-md-36; }
-.md-48 { font-size: $eos-md-48; }

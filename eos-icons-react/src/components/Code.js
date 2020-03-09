@@ -1,9 +1,9 @@
 import React from 'react'
 
-const DocsCode = (props) => {
+const Code = (props) => {
   const {codes} = props;
   return (
-    <code classnam="docs-code">
+    <code className="code">
       {codes.map((code) => {
         return code;
       })}
@@ -11,4 +11,4 @@ const DocsCode = (props) => {
   )
 }
 
-export default DocsCode
+export default Code
