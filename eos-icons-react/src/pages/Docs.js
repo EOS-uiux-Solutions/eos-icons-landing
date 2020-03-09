@@ -10,11 +10,11 @@ function Docs () {
           <h1>Installing EOS icons</h1>
           <p>There are several options for you to use EOS icons in your product:</p>
           <div> 
-            <h3> Installing with npm </h3>  
+            <h2> Installing with npm </h2>  
             <Code codes={["npm install eos-icons --save"]}/>
           </div>
           <div>
-            <h3>With our CDN</h3>
+            <h2>With our CDN</h2>
             <p>For EOS set: 
               <a href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css" 
                 data-event-category="External link" 
@@ -40,7 +40,7 @@ function Docs () {
             </p>
           </div>
           <div>
-            <h3>or Download EOS as a zip file</h3>  
+            <h2>or Download EOS as a zip file</h2>  
             <p className="inline-p">
               To download the zip file of <p className="command"> /dist</p> folder click 
               <a href="https://gitlab.com/SUSE-UIUX/eos-icons/-/archive/master/eos-icons-master.zip?path=dist" 
@@ -139,7 +139,7 @@ function Docs () {
           <p>Both MD icons and EOS icons have been designed to work and look perfect at: 18px, 24px, 36px, and 48px.</p>
           <p>In order to be compliant, follow MD icons class names to size both MD icons and EOS icons:</p>
           <div>
-            <h3>Implementation Examples</h3>
+            <h2>Implementation Examples</h2>
             <ul>
               <li>
                 <h4>Implementation example with MD icon</h4>
