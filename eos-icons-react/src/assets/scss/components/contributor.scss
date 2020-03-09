@@ -1,23 +1,24 @@
-.contributors {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .contributor {
   padding: 0 10px;
+  color: $dark-black;
+  font-size: .8em;
+
   .contributors-img {
     border-radius: 100%;
     margin: 0 20px;
     width: 80px;
   }
-  .text-dark {
-    color: $dark-black;
+
+  p {
+    margin: 0 0 1.5em;
   }
+
   &:hover {
     color: $hyper-link-color;
     text-decoration: underline;
+  }
+
+  &:visited {
+    color: $dark-black;
   }
 }

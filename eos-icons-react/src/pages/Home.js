@@ -18,7 +18,7 @@ const Home = () => {
           your product needs.
         </h2>
       </PageHeader>
-      <div className='container flex flex-row'>
+      <div className='container flex'>
         <div className='flex-content'>
           <h3>Open source</h3>
           <p>
@@ -101,7 +101,7 @@ const Home = () => {
         <h2 className='text-center'>
           Special thanks to all the superheroes that made it happen
           </h2>
-        <div className='contributors text-center padding-top-md'>
+        <div className='flex flex-wrap text-center padding-top-md'>
           {contributors.map((ele, i) => (
             <Contributor key={i} {...ele} />
           ))}

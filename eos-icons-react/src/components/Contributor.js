@@ -12,7 +12,7 @@ const Contributor = props => {
       rel='noopener noreferrer'
     >
       <img className='contributors-img' src={image} alt='Contributor' />
-      <p className='text-dark'>{name}</p>
+      <p>{name}</p>
     </a>
   )
 }

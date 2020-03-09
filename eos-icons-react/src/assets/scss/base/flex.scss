@@ -4,10 +4,6 @@
   align-items: stretch;
   align-content: stretch;
 
-  &-row {
-    flex-direction: row;
-  }
-
   .flex-content {
     flex: 1 1 0;
     padding: $m $xl;
@@ -19,5 +15,9 @@
     &:last-of-type {
       padding-right: 0;
     }
+  }
+
+  &.flex-wrap {
+    flex-wrap: wrap;
   }
 }
