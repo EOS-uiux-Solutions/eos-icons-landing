@@ -3,7 +3,7 @@ import React from 'react'
 const DocsCode = (props) => {
   const {codes} = props;
   return (
-    <code className="docs-code">
+    <code classnam="docs-code">
       {codes.map((code) => {
         return code;
       })}
