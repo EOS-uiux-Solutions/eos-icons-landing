@@ -35,13 +35,13 @@ function Docs () {
               </a>
             </p>
             <Code codes={["<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css'>"]} />
-            <p className="inline-p">
+            <span>
               Import them in your <p className="command"> &lt;head&gt;</p> tag as <p className="command"> link:css </p>.
-            </p>
+            </span>
           </div>
           <div>
             <h2>or Download EOS as a zip file</h2>  
-            <p className="inline-p">
+            <span>
               To download the zip file of <p className="command"> /dist</p> folder click 
               <a href="https://gitlab.com/SUSE-UIUX/eos-icons/-/archive/master/eos-icons-master.zip?path=dist" 
                 data-event-category="External link" 
@@ -50,19 +50,19 @@ function Docs () {
                 target="_blank"
                 rel="noopener noreferrer"> here
               </a>
-            </p>
+            </span>
           </div>
         </div>
         <div>
           <h1>Using EOS icons in your projects</h1>
           <p>Just like in any other iconic font, you need to add the Fonts and CSS files in your project:</p>
-          <p className="inline-p">
+          <span>
             1- Add the <p className="command">eos-icons.css</p> file available under the dist/css folder into your project's <p className="command"> &lt;head&gt;</p>:
-          </p>
+          </span>
           <Code codes={["<link rel='stylesheet' href=''assets/eos-icons.css>"]} />
-          <p>
+          <span>
             2- Make sure the font files available in <p className="command">thedist/fonts</p> folder are placed under your <p className="command">assets/fonts</p> folder so the .css file can read them correctly.
-          </p>
+          </span>
           <p>
             3- Use the icons in your html as follows:
           </p>
@@ -110,11 +110,11 @@ function Docs () {
             </a>
             &nbsp;and made to work together with Material Icons, we decided to include an extended version of EOS icons for easy implementation.
           </p>
-          <p className="inline-p">
+          <span>
             With the extended version you only need to use 1 class for all icons (EOS and Material Design).
             To implement it, you need to grab the <p className="command"> css/ </p> and<p className="command"> font/ </p> folders available atdist/extended, 
             then add theeos-icons-extended.cssunder the <p className="command"> &lt;head&gt;</p> of your project accordingly.
-          </p>
+          </span>
           <p>
             For more information about Material Design Icons, please refer to the &nbsp;
             <a href="https://github.com/google/material-design-icons" 
