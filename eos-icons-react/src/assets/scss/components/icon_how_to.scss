@@ -10,70 +10,9 @@
     padding: 0;
   }
 
-  .float-right {
-    cursor: pointer;
-    float: right;
-  }
-
-  .how-to-use-input-group {
-    display: flex;
-    margin-bottom: $s;
-  }
-
-  #copy3 {
+  #copy-code {
     border-bottom-right-radius: 0;
     border-radius: 30px;
     border-top-right-radius: 0;
-  }
-
-  .how-to-use-curved-control {
-    background-clip: padding-box;
-    background-color: #fff;
-    border-radius: 0.25rem;
-    border: 1px solid #ced4da;
-    color: #495057;
-    cursor: text;
-    flex: 1 1 auto;
-    margin-bottom: 0;
-    padding: 0.375rem 0.75rem;
-    position: relative;
-  }
-
-  .how-to-use-input-group-append {
-    color: #212529;
-    display: flex;
-    line-height: 1.5;
-    margin-left: -1px;
-    text-align: left;
-  }
-
-  #copy1 {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-  }
-
-  .how-to-use-copy-button {
-    background-color: #343a40;
-    border-color: #343a40;
-    border-radius: 30px;
-    color: #fff;
-    cursor: pointer;
-    padding: 0.375rem 0.75rem;
-    z-index: 2;
-  }
-
-  .how-to-use-row {
-    display: flex;
-  }
-
-  .how-to-use-badge {
-    background-color: #6c757d;
-    border-radius: 0.25rem;
-    color: #fff;
-    display: inline-block;
-    font-size: $s + 4;
-    line-height: 1;
-    margin: 0 4px;
-    padding: 0.5em 0.4em;
   }
 }

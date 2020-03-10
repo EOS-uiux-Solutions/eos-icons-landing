@@ -25,26 +25,22 @@ const HowToPanel = props => {
               </i>
             </small>
           </h2>
-          <div className='how-to-use-input-group'>
+          <div className='input-group'>
             <input
               className='how-to-use-curved-control'
-              id='copy3'
+              id='copy-code'
               readOnly='readOnly'
               value={`<i className='eos-icons'> ${state.singleIcon[0]} </i>`}
             />
-            <div className='how-to-use-input-group-append'>
-              <button
-                className='how-to-use-copy-button'
-                id='copy1'
-                type='button'
-                onClick={() => {
-                  document.getElementById('copy3').select()
-                  document.execCommand('copy')
-                }}
-              >
-                <i className='eos-icons md-18'>content_copy</i> Copy
-              </button>
-            </div>
+            <button
+              type='button'
+              onClick={() => {
+                document.getElementById('copy-code').select()
+                document.execCommand('copy')
+              }}
+            >
+              <i className='eos-icons md-18'>content_copy</i> Copy
+            </button>
           </div>
           <div className='how-to-use-row'>
             <b className='ml-3'>Tags:</b>
@@ -53,7 +49,7 @@ const HowToPanel = props => {
                 return icon.name === state.singleIcon[0]
                   ? icon.tags.map((tag, key) => {
                     return (
-                      <span key={key} className='how-to-use-badge'>
+                      <span key={key} className='badge'>
                         {' '}
                         {tag}{' '}
                       </span>
