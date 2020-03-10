@@ -16,10 +16,10 @@ const HowToPanel = props => {
   return (
     <>
       {
-        <div className='how-to-use-container'>
-          <h2 className='h2-how-to-use'>
+        <div className='container'>
+          <h2>
             How to use it:
-            <small className='right-pulled-small' id='close-code-snippet'>
+            <small className='float-right'>
               <i onClick={handleClick} className='eos-icons md-18'>
                 close
               </i>
@@ -52,13 +52,13 @@ const HowToPanel = props => {
               {state.icons.map(icon => {
                 return icon.name === state.singleIcon[0]
                   ? icon.tags.map((tag, key) => {
-                      return (
-                        <span key={key} className='how-to-use-badge'>
-                          {' '}
-                          {tag}{' '}
-                        </span>
-                      )
-                    })
+                    return (
+                      <span key={key} className='how-to-use-badge'>
+                        {' '}
+                        {tag}{' '}
+                      </span>
+                    )
+                  })
                   : ''
               })}
             </div>
