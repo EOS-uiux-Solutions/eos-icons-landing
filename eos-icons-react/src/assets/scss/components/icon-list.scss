@@ -1,6 +1,5 @@
 .icons-list {
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   i {
     border: 1px solid transparent;
@@ -28,7 +27,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    // flex-grow: 1;
     font-size: 13px;
     font-weight: 300;
     padding: $m;
