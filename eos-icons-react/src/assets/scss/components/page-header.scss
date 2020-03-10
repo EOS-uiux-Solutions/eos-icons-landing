@@ -1,6 +1,6 @@
 .page-header {
   align-items: center;
-  color: #fff;
+  color: $light-color;
   display: flex;
   flex-direction: column;
   font-weight: 300;
@@ -26,6 +26,6 @@
   }
 
   &-purple {
-    background: url('../../images/header.png'), linear-gradient(90deg, #694966, #5C415D);
+    background: url('../../images/header.png') center, linear-gradient(90deg, #694966, #5C415D);
   }
 }
