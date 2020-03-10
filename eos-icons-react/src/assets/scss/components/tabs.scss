@@ -16,9 +16,9 @@
   }
 
   .tab-list-active {
-    color: $dark-color;
     background-color: $light-color;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
+    color: $dark-color;
   }
 }

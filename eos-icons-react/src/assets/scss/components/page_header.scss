@@ -1,16 +1,16 @@
 .page-header {
-  padding: $xxxl;
+  align-items: center;
   color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   font-weight: 300;
+  justify-content: center;
+  padding: $xxxl;
 
   h2 {
     font-size: 2rem;
-    text-align: center;
     font-weight: 300;
+    text-align: center;
   }
 
   &-small {

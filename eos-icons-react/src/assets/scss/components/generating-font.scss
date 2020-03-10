@@ -9,11 +9,11 @@
   z-index: $icons-picker-loading-zindex;
 
   .loading-icon {
+    font-size: 2.5rem;
     left: 50%;
     position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem;
   }
 
   img {

@@ -2,7 +2,6 @@
   align-items: center;
   background: $grad-init;
   border-radius: 27px 0 0 27px;
-  text-decoration: none;
   color: $light-color !important;
   display: flex;
   flex-direction: row;
@@ -10,6 +9,7 @@
   padding-right: $s;
   position: fixed;
   right: -188px;
+  text-decoration: none;
   top: 70%;
   transition: all 0.5s;
   z-index: 15;

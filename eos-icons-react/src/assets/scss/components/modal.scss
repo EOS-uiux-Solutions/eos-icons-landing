@@ -1,21 +1,21 @@
 .modal {
-  height: 100%;
-  width: 100%;
+  background-color: $modal-background-color;
   display: flex;
+  height: 100%;
   position: fixed;
   top: 0px;
-  background-color: $modal-background-color;
+  width: 100%;
   z-index: $modal-zindex;
 }
 
 .modal-card {
-  min-width: 300px;
-  max-width: 450px;
-  border-radius: 7px;
   background-color: white;
+  border-radius: 7px;
+  left: 50%;
+  max-width: 450px;
+  min-width: 300px;
   position: fixed;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -24,9 +24,9 @@
 }
 
 .modal-btn {
-  padding: 16px !important;
   color: white;
   font-weight: bold;
+  padding: 16px !important;
 
   &:hover {
     cursor: pointer;
@@ -45,28 +45,30 @@
 }
 
 .close {
+  opacity: 0.3;
   position: absolute;
   right: 32px;
   top: 6px;
-  opacity: 0.3;
 
   &:hover {
     opacity: 1;
   }
+
   &:before,
   &:after {
-    position: absolute;
-    left: 15px;
+    background-color: #333;
     content: ' ';
     height: 15px;
+    left: 15px;
+    position: absolute;
     width: 3px;
-    background-color: #333;
   }
+
   &:before {
     transform: rotate(45deg);
   }
+
   &:after {
     transform: rotate(-45deg);
   }
 }
-

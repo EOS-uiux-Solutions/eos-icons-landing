@@ -7,18 +7,18 @@
   width: 100%;
 
   i {
+    border: 1px solid transparent;
     font-size: 32px !important;
     height: 32px !important;
     margin: 10px;
     padding: 10px;
     text-align: center;
     width: 32px !important;
-    border: 1px solid transparent;
 
     &:hover {
+      border: 1px solid #f4f4f4;
       box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.091);
       cursor: pointer;
-      border: 1px solid #f4f4f4;
     }
   }
 
