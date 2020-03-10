@@ -1,10 +1,10 @@
 .how-to-use-block {
   background-color: #ececec;
+  bottom: 0;
+  padding-bottom: $m;
   position: fixed;
   width: 100%;
-  bottom: 0;
-  z-index: 10;
-  padding-bottom: $z-index-10;
+  z-index: $z-index-10;
 
   .container {
     padding: 0;
