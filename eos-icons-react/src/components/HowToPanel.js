@@ -31,7 +31,7 @@ const HowToPanel = props => {
               id='copy-code'
               className='input-group-element input-grow'
               readOnly='readOnly'
-              value={`<i className='eos-icons'> ${state.singleIcon[0]} </i>`}
+              value={`<i class='eos-icons'>${state.singleIcon[0]}</i>`}
             />
             <Button primary
               type='button'
