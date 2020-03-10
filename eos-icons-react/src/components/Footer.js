@@ -40,20 +40,22 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className='text-center'>
-      {footerLinks.map((ele, index) => (
-        <a
-          key={index}
-          href={ele.href}
-          data-types-category={ele.category}
-          data-types-label={ele.label}
-          data-types-action={ele.action}
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          {ele.name}
-        </a>
-      ))}
+    <footer>
+      <div className='container'>
+        {footerLinks.map((ele, index) => (
+          <a
+            key={index}
+            href={ele.href}
+            data-types-category={ele.category}
+            data-types-label={ele.label}
+            data-types-action={ele.action}
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            {ele.name}
+          </a>
+        ))}
+      </div>
     </footer>
   )
 }
