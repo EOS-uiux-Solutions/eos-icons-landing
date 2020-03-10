@@ -1,11 +1,10 @@
-.searchBar {
-  border: 1px solid $dark-gray;
+.search-input {
+  border: 0;
   border-radius: 20px;
-  min-height: 40px;
   outline: none;
-  padding-left: 8px;
+  padding: $s;
   transition: width .15s ease-in-out;
-  width: 130px;
+  width: 160px;
 
   &:focus {
     max-width: 200px;

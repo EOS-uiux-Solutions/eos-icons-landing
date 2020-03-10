@@ -3,7 +3,7 @@ import React from 'react';
 const SearchIcon = ({ onChange }) => {
   return (
     <input
-      className="searchBar"
+      className="search-input"
       type="text"
       name="search"
       placeholder="Search Icons..."
