@@ -43,23 +43,18 @@ const HowToPanel = props => {
               <i className='eos-icons md-18'>content_copy</i> Copy
             </Button>
           </div>
-          <div className='how-to-use-row'>
-            <b className='ml-3'>Tags:</b>
-            <div className='tags'>
-              {state.icons.map(icon => {
-                return icon.name === state.singleIcon[0]
-                  ? icon.tags.map((tag, key) => {
-                    return (
-                      <span key={key} className='badge'>
-                        {' '}
-                        {tag}{' '}
-                      </span>
-                    )
-                  })
-                  : ''
-              })}
-            </div>
-          </div>
+          <strong>Tags:</strong>
+          {state.icons.map(icon => {
+            return icon.name === state.singleIcon[0]
+              ? icon.tags.map((tag, key) => {
+                return (
+                  <span key={key} className='badge'>
+                    <small>{tag}</small>
+                  </span>
+                )
+              })
+              : ''
+          })}
         </div>
       }
     </>
