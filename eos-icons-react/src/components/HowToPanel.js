@@ -1,5 +1,6 @@
 import React, { useReducer, useContext } from 'react'
 import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
+import Button from './Button'
 
 const HowToPanel = props => {
   const { onClick } = props
@@ -27,12 +28,12 @@ const HowToPanel = props => {
           </h2>
           <div className='input-group'>
             <input
-              className='how-to-use-curved-control'
               id='copy-code'
+              className='input-group-element input-grow'
               readOnly='readOnly'
               value={`<i className='eos-icons'> ${state.singleIcon[0]} </i>`}
             />
-            <button
+            <Button primary
               type='button'
               onClick={() => {
                 document.getElementById('copy-code').select()
@@ -40,7 +41,7 @@ const HowToPanel = props => {
               }}
             >
               <i className='eos-icons md-18'>content_copy</i> Copy
-            </button>
+            </Button>
           </div>
           <div className='how-to-use-row'>
             <b className='ml-3'>Tags:</b>
