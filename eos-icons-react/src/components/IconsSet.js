@@ -70,7 +70,7 @@ const IconsSet = props => {
                 <CustomizeIconsPanel />
               </div>
             )}
-          <div className='icons-list'>
+          <div className='icons-list flex flex-wrap'>
             {state.icons.map((ele, index) => {
               return ele.name === 'installing' || ele.name === 'loading' ? (
                 ''

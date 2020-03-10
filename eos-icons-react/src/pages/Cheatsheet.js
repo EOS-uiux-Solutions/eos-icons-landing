@@ -3,7 +3,6 @@ import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
 import IconsSet from '../components/IconsSet'
 import Button from '../components/Button'
-import Modal from '../components/Modal'
 
 const Cheatsheet = () => {
   const [header, setHeader] = useState(true)
@@ -24,7 +23,6 @@ const Cheatsheet = () => {
       ) : (
           <PageHeader theme='purple'>
             <div>
-              <Modal />
               <h2>Click on Icons to select them</h2>
               <p>
                 To continue building an old font, upload icons-config.json
