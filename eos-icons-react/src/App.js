@@ -20,7 +20,7 @@ const App = () => {
       <div className='App'>
         <Navigation />
         <div className='app-container'>
-          <Router>
+          <Router primary={false}>
             <Home path='/' />
             <Cheatsheet path='/cheatsheet' />
             <Docs path='/docs' />
