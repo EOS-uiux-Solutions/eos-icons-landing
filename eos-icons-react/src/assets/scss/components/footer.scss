@@ -1,7 +1,11 @@
 footer {
-  position: sticky;
   bottom: 0;
   background: $lightest-gray;
+
+  .container {
+    padding-top: $m;
+    padding-bottom: $m;
+  }
 
   a {
     margin: $s;

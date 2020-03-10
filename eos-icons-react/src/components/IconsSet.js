@@ -6,7 +6,7 @@ import deSelectIconContext from '../utils/deSelectIconContext'
 /* Components */
 import Icon from './IconDisplay'
 import Tabs from './Tabs'
-import Switch from './Switch'
+import Toogle from './Toggle'
 import SearchIcon from './SearchIcon'
 import CustomizeIconsPanel from './CustomizeIconsPanel'
 import HowToPanel from './HowToPanel'
@@ -47,8 +47,8 @@ const IconsSet = props => {
 
   return (
     <>
-      <div className='icons-actions'>
-        Customize <Switch onClick={toggleCustomize} />
+      <div className='toolbar'>
+        <Toogle name='Icon picker' onClick={toggleCustomize} />
         <SearchIcon onChange={setSearch} />
       </div>
       <Tabs>
@@ -59,24 +59,24 @@ const IconsSet = props => {
                 {showPanel ? (
                   <HowToPanel state={state} onClick={setShowPanel} />
                 ) : (
-                  ''
-                )}
+                    ''
+                  )}
               </div>
             ) : (
-              ''
-            )
+                ''
+              )
           ) : (
-            <div className='how-to-use-block'>
-              <CustomizeIconsPanel />
-            </div>
-          )}
+              <div className='how-to-use-block'>
+                <CustomizeIconsPanel />
+              </div>
+            )}
           <div className='icons-list'>
             {state.icons.map((ele, index) => {
               return ele.name === 'installing' || ele.name === 'loading' ? (
                 ''
               ) : (
-                <Icon key={index} name={ele.name} action={dispatchAction} />
-              )
+                  <Icon key={index} name={ele.name} action={dispatchAction} />
+                )
             })}
           </div>
         </div>

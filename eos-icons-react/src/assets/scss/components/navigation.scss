@@ -4,6 +4,8 @@ header {
   align-items: center;
   padding: $m;
   color: $light-color;
+  position: sticky;
+  top: 0;
   background: linear-gradient(90deg, #fbb369, #ff814a);
 
   .brand {

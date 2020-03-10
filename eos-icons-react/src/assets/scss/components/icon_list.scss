@@ -1,18 +1,9 @@
-.icons-actions {
+.toolbar {
   align-items: center;
   background-color: $lighter-gray;
   display: flex;
-  padding: $m;
+  padding: $xs;
   justify-content: flex-end;
-
-  input {
-    margin: 0 $s;
-    padding: $s;
-  }
-
-  .search-box-demo {
-    margin-left: $xxl;
-  }
 }
 
 .icons-list {
