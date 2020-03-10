@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
 import IconsSet from '../components/IconsSet'
 import Button from '../components/Button'
+import Modal from '../components/Modal'
 
 const Cheatsheet = () => {
   const [header, setHeader] = useState(true)
@@ -21,16 +22,17 @@ const Cheatsheet = () => {
           </h2>
         </PageHeader>
       ) : (
-        <PageHeader theme='purple'>
-          <div>
-            <h2>Click on Icons to select them</h2>
-            <p>
-              To continue building an old font, upload icons-config.json
+          <PageHeader theme='purple'>
+            <div>
+              <Modal />
+              <h2>Click on Icons to select them</h2>
+              <p>
+                To continue building an old font, upload icons-config.json
               <Button> file here </Button>
-            </p>
-          </div>
-        </PageHeader>
-      )}
+              </p>
+            </div>
+          </PageHeader>
+        )}
       <DownloadEosIcons />
       <IconsSet action={manageHeader} />
     </div>
