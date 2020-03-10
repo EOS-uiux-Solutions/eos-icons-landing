@@ -8,7 +8,7 @@
 
   &-card {
     background-color: white;
-    border-radius: 7px;
+    border-radius: $s;
     left: 50%;
     max-width: 450px;
     position: fixed;
@@ -17,7 +17,7 @@
   }
 
   .modal-content {
-    padding: 20px;
+    padding: $l;
   }
 
   .modal-btn {
@@ -44,8 +44,8 @@
   .close {
     opacity: 0.3;
     position: absolute;
-    right: 32px;
-    top: 6px;
+    right: $xl;
+    top: $s;
 
     &:hover {
       opacity: 1;
@@ -56,10 +56,10 @@
     &:after {
       background-color: #333;
       content: ' ';
-      height: 15px;
-      left: 15px;
+      height: $m;
+      left: $m;
       position: absolute;
-      width: 3px;
+      width: $xs;
     }
 
     &:before {
