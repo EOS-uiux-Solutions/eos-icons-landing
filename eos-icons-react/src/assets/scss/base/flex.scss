@@ -1,8 +1,8 @@
 .flex {
+  align-content: stretch;
+  align-items: stretch;
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
 
   .flex-content {
     flex: 1 1 0;
