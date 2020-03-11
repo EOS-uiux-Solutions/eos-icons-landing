@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import Button from './Button'
+import React from 'react'
 
 const HowToPanel = props => {
-  const { show } = props
+  const { show, close, icon } = props
 
   return (
     (show ?
@@ -10,10 +9,10 @@ const HowToPanel = props => {
         <div className='container'>
           <h2>
             How to use it:
-        <small className='float-right'>
-              <i className='eos-icons md-18'>
+            <small className='float-right'>
+              <i className='eos-icons md-18' onClick={() => { close() }}>
                 close
-          </i>
+              </i>
             </small>
           </h2>
           <div className='input-group'>
@@ -21,24 +20,19 @@ const HowToPanel = props => {
               id='copy-code'
               className='input-group-element input-grow'
               readOnly='readOnly'
-              value={`<img src/>`}
+              value={`<img src='${icon}'/>`}
             />
-            <Button primary
-              type='button'
-              onClick={() => {
-                document.getElementById('copy-code').select()
-                document.execCommand('copy')
-              }}
-            >
-              <i className='eos-icons md-18'>content_copy</i> Copy
-        </Button>
+            <a className='btn btn-primary' target='_blank' rel="noopener noreferrer" href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${icon}.svg?inline=false`}>
+              <i className="eos-icons md-18">file_download</i>
+              Download icon
+            </a>
           </div>
           <strong>Tags:</strong>
           <span key='' className='badge'>
             <small>test</small>
           </span>
         </div>
-      </div>
+      </div >
       : ''
     )
   )

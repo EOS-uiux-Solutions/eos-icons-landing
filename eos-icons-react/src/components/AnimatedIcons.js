@@ -11,6 +11,11 @@ const AnimatedIcons = () => {
     setShowPanel(true)
   }
 
+  const closeHowTo = () => {
+    setShowPanel(false)
+    setIconSelected('')
+  }
+
   return (
     <>
       {
@@ -28,7 +33,7 @@ const AnimatedIcons = () => {
           </div>
         ))
       }
-      <HowTo show={showPanel} type='animated' />
+      <HowTo show={showPanel} icon={iconSelected} type='animated' close={closeHowTo} />
     </>
   )
 }
