@@ -10,6 +10,7 @@ import Toogle from './Toggle'
 import SearchIcon from './SearchIcon'
 import CustomizeIconsPanel from './CustomizeIconsPanel'
 import HowToPanel from './HowToPanel'
+import AnimatedIcons from './AnimatedIcons'
 
 const IconsSet = props => {
   const value = useContext(EosIconStore)
@@ -26,7 +27,6 @@ const IconsSet = props => {
   }, [search])
 
   const [state, dispatch] = useReducer(iconsReducer, value)
-  console.log('APP STATE', state)
 
   const dispatchAction = e => {
     e.preventDefault()
@@ -70,8 +70,9 @@ const IconsSet = props => {
                 <CustomizeIconsPanel />
               </div>
             )}
-          <div className='icons-list flex flex-wrap'>
+          <div className='icons-list'>
             {state.icons.map((ele, index) => {
+              // skip animated icons from the object
               return ele.name === 'installing' || ele.name === 'loading' ? (
                 ''
               ) : (
@@ -80,7 +81,11 @@ const IconsSet = props => {
             })}
           </div>
         </div>
-        <div label='Animated Icons'>These are animated icons.</div>
+        <div label='Animated Icons'>
+          <div className='icons-list'>
+            <AnimatedIcons />
+          </div>
+        </div>
       </Tabs>
     </>
   )

@@ -1,8 +1,10 @@
 .icons-list {
+  @extend .flex;
+  @extend .flex-wrap;
   justify-content: flex-start;
   margin-bottom: $xxxl;
 
-  i {
+  i, img {
     border: 1px solid transparent;
     font-size: 32px !important;
     height: 32px !important;
@@ -28,7 +30,6 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    // flex-grow: 1;
     font-size: 13px;
     font-weight: 300;
     padding: $m;
