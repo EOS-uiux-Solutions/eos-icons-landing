@@ -27,10 +27,12 @@ const HowToPanel = props => {
               Download icon
             </a>
           </div>
-          <strong>Tags:</strong>
-          <span key='' className='badge'>
+
+          {/* NEEDS TO BE INCLUDED ONCE WE RELEASE THE NEW VERSION OF EOS-ICONS THAT INCLUDES THIS INFO FOR ANIMATED ICONS
+            <strong>Tags:</strong>
+            <span key='' className='badge'>
             <small>test</small>
-          </span>
+          </span> */}
         </div>
       </div >
       : ''
