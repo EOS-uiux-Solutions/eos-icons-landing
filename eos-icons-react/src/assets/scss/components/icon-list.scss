@@ -4,14 +4,14 @@
   justify-content: flex-start;
   margin-bottom: $xxxl;
 
-  i, img {
+  i,
+  img {
     border: 1px solid transparent;
-    font-size: 32px !important;
-    height: 32px !important;
+    height: 32px;
     margin: 10px;
     padding: 10px;
     text-align: center;
-    width: 32px !important;
+    width: 32px;
 
     &:hover {
       border: 1px solid #f4f4f4;
@@ -23,7 +23,7 @@
   .active {
     background-color: $grad-init;
     border-radius: 5px;
-    color: #fff !important;
+    color: #fff;
   }
 
   .icon-container {

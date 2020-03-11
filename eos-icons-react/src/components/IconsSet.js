@@ -76,7 +76,7 @@ const IconsSet = props => {
               return ele.name === 'installing' || ele.name === 'loading' ? (
                 ''
               ) : (
-                  <Icon key={index} name={ele.name} action={dispatchAction} />
+                  <Icon size={32} key={index} name={ele.name} action={dispatchAction} />
                 )
             })}
           </div>

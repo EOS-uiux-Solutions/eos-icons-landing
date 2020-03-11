@@ -4,14 +4,14 @@ import selectIconContext from '../utils/selectIconContext'
 import deSelectIconContext from '../utils/deSelectIconContext'
 
 const Icon = props => {
-  const { name, size, color, action } = props
+  const { name, size, action } = props
   const value = useContext(EosIconStore)
   /* Possible icon sizes */
   const sizes = {
-    small: 16,
-    normal: 18,
-    medium: 32,
-    large: 48
+    18: 'md-18',
+    24: 'md-24',
+    32: 'md-32',
+    48: 'md-48'
   }
 
   const [allSelect] = useContext(selectIconContext)
@@ -22,29 +22,29 @@ const Icon = props => {
     value.singleIcon[0] === name
       ? 'active'
       : value.multipleIcons.includes(name)
-      ? 'active'
-      : ''
+        ? 'active'
+        : ''
+
+  const iconClass = () => {
+    const eosClass = 'eos-icons'
+    const activeClass = allSelect ? `active` : allDeSelect ? `` : ` ${isActive()}`
+    const sizeClass = sizes[size] ?? sizes.medium
+    const finalClass = `${eosClass} ${activeClass} ${sizeClass}`
+
+    return finalClass
+  }
+
 
   return (
     <div className='icon-container'>
       <i
-        className={
-          allSelect
-            ? `eos-icons active`
-            : allDeSelect
-            ? `eos-icons`
-            : `eos-icons ${isActive()}`
-        }
-        style={{
-          color: color ?? 'black',
-          fontSize: sizes[size] ?? sizes.normal
-        }}
+        className={iconClass()}
         onClick={action}
       >
         {name}
       </i>
       {name}
-    </div>
+    </div >
   )
 }
 
