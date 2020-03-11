@@ -13,10 +13,10 @@ const Home = () => {
   return (
     <>
       <PageHeader size='medium' theme='orange'>
-        <h2>
+        <h1>
           Free. Open source. Vector and pixel-perfect icons. The iconic font
           your product needs.
-        </h2>
+        </h1>
       </PageHeader>
       <div className='container flex'>
         <div className='flex-content'>
