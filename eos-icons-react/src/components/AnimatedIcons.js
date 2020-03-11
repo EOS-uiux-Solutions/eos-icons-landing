@@ -4,9 +4,11 @@ import HowTo from '../components/HowToNew'
 
 const AnimatedIcons = () => {
   const [iconSelected, setIconSelected] = useState('')
+  const [showPanel, setShowPanel] = useState(false)
 
   const selectAndShowInfo = iconName => {
     setIconSelected(iconName)
+    setShowPanel(true)
   }
 
   return (
@@ -26,7 +28,7 @@ const AnimatedIcons = () => {
           </div>
         ))
       }
-      < HowTo show={false} type='static' />
+      <HowTo show={showPanel} type='animated' />
     </>
   )
 }

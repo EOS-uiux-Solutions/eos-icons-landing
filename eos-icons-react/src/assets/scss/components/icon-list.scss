@@ -4,22 +4,6 @@
   justify-content: flex-start;
   margin-bottom: $xxxl;
 
-  i,
-  img {
-    border: 1px solid transparent;
-    height: 32px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    width: 32px;
-
-    &:hover {
-      border: 1px solid #f4f4f4;
-      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.091);
-      cursor: pointer;
-    }
-  }
-
   .active {
     background-color: $grad-init;
     border-radius: 5px;
@@ -34,5 +18,21 @@
     font-weight: 300;
     padding: $m;
     width: 130px;
+
+    .eos-icons,
+    img {
+      border: 1px solid transparent;
+      height: 32px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 32px;
+
+      &:hover {
+        border: 1px solid #f4f4f4;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.091);
+        cursor: pointer;
+      }
+    }
   }
 }
