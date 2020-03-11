@@ -22,7 +22,7 @@ const AnimatedIcons = () => {
         (AnimatedIconsList.map((icon, index) =>
           <div className='icon-container' key={index}>
             <img
-              src={require(`../../node_modules/eos-icons/animated-svg/${icon}.svg`)}
+              src={require(`eos-icons/animated-svg/${icon}.svg`)}
               alt={icon}
               className={icon === iconSelected ? 'active' : ''}
               onClick={() => {
