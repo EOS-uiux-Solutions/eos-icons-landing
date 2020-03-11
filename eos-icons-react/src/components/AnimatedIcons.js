@@ -16,7 +16,6 @@ const AnimatedIcons = () => {
     setIconSelected('')
   }
 
-
   return (
     <>
       {
@@ -34,7 +33,7 @@ const AnimatedIcons = () => {
           </div>
         ))
       }
-      <HowTo show={showPanel} icon={iconSelected} type='animated' close={closeHowTo} />
+      <HowTo show={showPanel} iconName={iconSelected} iconTags='' type='animated' close={closeHowTo} />
     </>
   )
 }

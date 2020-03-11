@@ -1,33 +1,18 @@
-import React, { useContext } from 'react'
-import { EosIconStore } from '../utils/EosIcons.store'
-import selectIconContext from '../utils/selectIconContext'
-import deSelectIconContext from '../utils/deSelectIconContext'
+import React from 'react'
 
 const Icon = props => {
-  const { name, size, action } = props
-  const value = useContext(EosIconStore)
+  const { name, size, action, active } = props
   /* Possible icon sizes */
   const sizes = {
     18: 'md-18',
     24: 'md-24',
-    32: 'md-32',
+    36: 'md-36',
     48: 'md-48'
   }
 
-  const [allSelect] = useContext(selectIconContext)
-
-  const [allDeSelect] = useContext(deSelectIconContext)
-
-  const isActive = () =>
-    value.singleIcon[0] === name
-      ? 'active'
-      : value.multipleIcons.includes(name)
-        ? 'active'
-        : ''
-
   const iconClass = () => {
     const eosClass = 'eos-icons'
-    const activeClass = allSelect ? `active` : allDeSelect ? `` : ` ${isActive()}`
+    const activeClass = active ? `active` : ''
     const sizeClass = sizes[size] ?? sizes.medium
     const finalClass = `${eosClass} ${activeClass} ${sizeClass}`
 

@@ -1,7 +1,8 @@
 import React from 'react'
+import Button from './Button'
 
 const HowToPanel = props => {
-  const { show, close, icon } = props
+  const { show, close, iconName, type, iconTags } = props
 
   return (
     (show ?
@@ -15,24 +16,46 @@ const HowToPanel = props => {
               </i>
             </small>
           </h2>
-          <div className='input-group'>
-            <input
-              id='copy-code'
-              className='input-group-element input-grow'
-              readOnly='readOnly'
-              value={`<img src='${icon}'/>`}
-            />
-            <a className='btn btn-primary' target='_blank' rel="noopener noreferrer" href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${icon}.svg?inline=false`}>
-              <i className="eos-icons md-18">file_download</i>
-              Download icon
+          {type === 'animated' ? (
+            <div className='input-group'>
+              <input
+                className='input-group-element input-grow'
+                readOnly='readOnly'
+                value={`<img src='${iconName}'/>`}
+              />
+              <a className='btn btn-primary' target='_blank' rel="noopener noreferrer" href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}>
+                <i className="eos-icons md-18">file_download</i>
+                Download icon
             </a>
-          </div>
-
-          {/* NEEDS TO BE INCLUDED ONCE WE RELEASE THE NEW VERSION OF EOS-ICONS THAT INCLUDES THIS INFO FOR ANIMATED ICONS
-            <strong>Tags:</strong>
-            <span key='' className='badge'>
-            <small>test</small>
-          </span> */}
+            </div>
+          ) : (
+              <>
+                <div className='input-group'>
+                  <input
+                    id='copy-code'
+                    className='input-group-element input-grow'
+                    readOnly='readOnly'
+                    value={`<i class='eos-icons'>${iconName}</i>`}
+                  />
+                  <Button primary
+                    type='button'
+                    onClick={() => {
+                      document.getElementById('copy-code').select()
+                      document.execCommand('copy')
+                    }}
+                  >
+                    <i className='eos-icons md-18'>content_copy</i> Copy
+                  </Button>
+                </div>
+                <strong>Tags:</strong>
+                {iconTags.map(tag =>
+                  <span key='' className='badge'>
+                    <small>{tag}</small>
+                  </span>
+                )}
+              </>
+            )
+          }
         </div>
       </div >
       : ''

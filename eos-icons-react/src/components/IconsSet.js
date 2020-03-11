@@ -9,8 +9,9 @@ import Tabs from './Tabs'
 import Toogle from './Toggle'
 import SearchIcon from './SearchIcon'
 import CustomizeIconsPanel from './CustomizeIconsPanel'
-import HowToPanel from './HowToPanel'
+// import HowToPanel from './HowToPanel'
 import AnimatedIcons from './AnimatedIcons'
+import HowTo from '../components/HowToNew'
 
 const IconsSet = props => {
   const value = useContext(EosIconStore)
@@ -19,8 +20,6 @@ const IconsSet = props => {
 
   const [, setAllDeSelect] = useContext(deSelectIconContext)
 
-  const [showPanel, setShowPanel] = useState(false)
-
   const [search, setSearch] = useState('')
   useEffect(() => {
     dispatch({ type: 'TOGGLE_SEARCH', search: search })
@@ -28,14 +27,14 @@ const IconsSet = props => {
 
   const [state, dispatch] = useReducer(iconsReducer, value)
 
-  const dispatchAction = e => {
-    e.preventDefault()
+  const dispatchAction = icon => {
     setShowPanel(true)
+    setIconSelected(icon)
     setAllSelect(false)
     setAllDeSelect(false)
     return dispatch({
       type: state.customize ? 'ADD_MULTIPLE_ICONS' : 'ADD_SINGLE_ICON',
-      selection: e.target.textContent
+      selection: icon.textContent
     })
   }
 
@@ -43,6 +42,15 @@ const IconsSet = props => {
   const toggleCustomize = () => {
     props.action()
     return dispatch({ type: 'TOGGLE_CUSTOMIZE' })
+  }
+
+  // show HowTo panel
+  const [iconSelected, setIconSelected] = useState('')
+  const [showPanel, setShowPanel] = useState(false)
+
+  const closeHowTo = () => {
+    setShowPanel(false)
+    setIconSelected('')
   }
 
   return (
@@ -53,14 +61,15 @@ const IconsSet = props => {
       </div>
       <Tabs>
         <div label='Regular Icons'>
+          <div className='icons-list'>
+            {state.icons.map((ele, index) => {
+              return <Icon size={36} active={ele.name === iconSelected.name ? true : false} key={index} name={ele.name} action={() => dispatchAction(ele)} />
+            })}
+          </div>
           {!state.customize ? (
             state.singleIcon.length ? (
               <div className='how-to-use-block'>
-                {showPanel ? (
-                  <HowToPanel state={state} onClick={setShowPanel} />
-                ) : (
-                    ''
-                  )}
+                <HowTo show={showPanel} iconName={iconSelected.name} iconTags={iconSelected.tags} type='static' close={closeHowTo} />
               </div>
             ) : (
                 ''
@@ -70,16 +79,6 @@ const IconsSet = props => {
                 <CustomizeIconsPanel />
               </div>
             )}
-          <div className='icons-list'>
-            {state.icons.map((ele, index) => {
-              // skip animated icons from the object
-              return ele.name === 'installing' || ele.name === 'loading' ? (
-                ''
-              ) : (
-                  <Icon size={32} key={index} name={ele.name} action={dispatchAction} />
-                )
-            })}
-          </div>
         </div>
         <div label='Animated Icons'>
           <div className='icons-list'>
