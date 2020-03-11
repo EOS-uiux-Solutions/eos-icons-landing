@@ -1,9 +1,10 @@
-import React, { useContext, useReducer, useState } from 'react'
+import React, { useContext, useReducer, useState, useEffect } from 'react'
 import Button from './Button'
 import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
 import selectIconContext from '../utils/selectIconContext'
 import deSelectIconContext from '../utils/deSelectIconContext'
 import GeneratingFont from './GeneratingFont'
+// import Modal from './Modal'
 import Modal from './Modal'
 import axios from 'axios'
 
@@ -12,11 +13,17 @@ const CustomizeIconsPanel = () => {
 
   const [state, dispatch] = useReducer(iconsReducer, value)
 
+  /* Modal  */
+  const [modal, setModal] = useState(false);
+
+  const modalToggle = () => {
+    setModal(!modal)
+  }
+
+
   const [, setAllSelect] = useContext(selectIconContext)
 
   const [, setAllDeSelect] = useContext(deSelectIconContext)
-
-  const [modal, showModal] = useState(false)
 
   const selectAll = e => {
     e.preventDefault()
@@ -37,8 +44,10 @@ const CustomizeIconsPanel = () => {
 
   const generateFont = e => {
     e.preventDefault()
+
+    modalToggle()
+
     if (state.multipleIcons.length > 0) {
-      showModal(true)
       const eosIcons = []
       const json = { eos_icons: eosIcons, extended_icons: state.multipleIcons }
       const postReqUrl = 'https://eos-icons-picker-api.herokuapp.com/iconsapi'
@@ -68,11 +77,12 @@ const CustomizeIconsPanel = () => {
           </Button>
         </div>
       </div>
-      {modal ? (
-        <Modal>
+
+      {modal
+        ? <Modal isActive={modal} show={modalToggle}>
           <GeneratingFont redirect='/thankyou' />
-        </Modal>
-      ) : null}
+        </Modal> :
+        ''}
     </>
   )
 }

@@ -1,26 +1,12 @@
-import React, { useEffect, useRef } from 'react';
-import { createPortal } from 'react-dom';
+import React from 'react';
 
 const Modal = props => {
-  // const { children } = props;
-  const { children, cancelText, okText, onCancel, onOk, showButtons } = props;
-  const elRef = useRef(null);
-  if (!elRef.current) {
-    const div = document.createElement('div');
-    elRef.current = div;
-  }
+  const { isActive, show, children, cancelText, okText, onCancel, onOk, showButtons } = props;
 
-  useEffect(() => {
-    const modalRoot = document.getElementById('modal');
-    modalRoot.appendChild(elRef.current);
-
-    return () => modalRoot.removeChild(elRef.current);
-  }, []);
-
-  return createPortal(
-    <div className="modal">
+  return (
+    isActive ? <div className="modal">
       <div className="modal-card">
-        <div className="close" onClick={onCancel} />
+        <div className="close" onClick={show} />
         <div className="flex flex-row modal-content">{children}</div>
         {showButtons && (
           <div className="flex flex-row">
@@ -41,33 +27,9 @@ const Modal = props => {
           </div>
         )}
       </div>
-    </div>,
-    elRef.current
-  );
-};
+    </div>
+      : ''
+  )
+}
 
-export default Modal;
-
-/* Used as follows */
-
-// const handleCancel = () => {
-//   showModal(!modal);
-// };
-
-// const handleOk = () => {
-//   console.log('onOk called');
-// };
-
-// {
-//   modal ? (
-//     <Modal
-//       showButtons={true}
-//       onOk={handleOk}
-//       onCancel={handleCancel}
-//       cancelText="Nope"
-//       okText="Yup"
-//     >
-//       <p>Are you sure you want to delete this element?</p>
-//     </Modal>
-//   ) : null;
-// }
+export default Modal

@@ -4,18 +4,18 @@ input {
 }
 
 .input-group {
-    display: flex;
-    margin-bottom: $s;
+  display: flex;
+  margin-bottom: $s;
 
-    .input-group-element:first-child {
-      border-radius: 25px 0 0 25px;
-    }
+  .input-group-element:first-child {
+    border-radius: 25px 0 0 25px;
+  }
 
-    button:last-child {
-      border-radius: 0 25px 25px 0;
-    }
+  button:last-child {
+    border-radius: 0 25px 25px 0;
+  }
 
-    .input-grow {
-      flex-grow: 1;
-    }
+  .input-grow {
+    flex-grow: 1;
+  }
   }

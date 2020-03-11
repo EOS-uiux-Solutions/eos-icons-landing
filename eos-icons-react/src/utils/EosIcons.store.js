@@ -20,9 +20,9 @@ export const eosIconsState = {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
       : multipleIcons.splice(
-          multipleIcons.findIndex(ele => ele === iconName),
-          1
-        )
+        multipleIcons.findIndex(ele => ele === iconName),
+        1
+      )
     return multipleIcons
   },
   toggleCustomize () {
@@ -53,7 +53,6 @@ export const eosIconsState = {
 }
 
 export const iconsReducer = (state, action) => {
-  console.log('state', state, 'action', action)
   switch (action.type) {
     case 'ADD_SINGLE_ICON':
       return {
