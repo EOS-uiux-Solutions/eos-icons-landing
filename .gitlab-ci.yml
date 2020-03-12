@@ -1,5 +1,4 @@
 stages:
-  - test
   - deploy
 
 image: node:10.15.0
@@ -13,13 +12,6 @@ cache:
   key: "$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG"
   paths:
   - node_modules/
-
-# Start the jobs
-tests:
-  stage: test
-  script:
-    - npm run build
-    - npm run test
 
 pages:
   stage: deploy
