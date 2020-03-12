@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import DownloadEosIcons from '../components/DownloadEosIcons'
-import Code from '../components/Code'
+import Prism from 'prismjs';
 
-function Docs () {
+const Docs = () => {
+
+  useEffect(() => {
+    Prism.highlightAll();
+  })
+
   return (
     <div>
       <div className="container">
@@ -11,7 +16,12 @@ function Docs () {
           <p>There are several options for you to use EOS icons in your product:</p>
           <div>
             <h2> Installing with npm </h2>
-            <Code codes={["npm install eos-icons --save"]} />
+
+            <pre className="code language-shell">
+              <code>
+                npm install eos-icons --save
+              </code>
+            </pre>
           </div>
           <div>
             <h2>With our CDN</h2>
@@ -24,7 +34,12 @@ function Docs () {
                 rel="noopener noreferrer"> https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css
                 </a>
             </p>
-            <Code codes={["<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css'>"]} />
+
+            <pre className="code language-html">
+              <code>
+                {`<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css' />`}
+              </code>
+            </pre>
             <p>For Extended EOS set:
               <a href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css"
                 data-event-category="External link"
@@ -34,7 +49,12 @@ function Docs () {
                 rel="noopener noreferrer"> https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css
               </a>
             </p>
-            <Code codes={["<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css'>"]} />
+
+            <pre className="code language-html">
+              <code>
+                {`<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css' />`}
+              </code>
+            </pre>
             <p>
               Import them in your <span className="command"> &lt;head&gt;</span> tag as <span className="command"> link:css </span>.
             </p>
@@ -59,14 +79,24 @@ function Docs () {
           <p>
             1- Add the <span className="command">eos-icons.css</span> file available under the dist/css folder into your project's <span className="command"> &lt;head&gt;</span>:
           </p>
-          <Code codes={["<link rel='stylesheet' href=''assets/eos-icons.css>"]} />
+
+          <pre className="code language-html">
+            <code>
+              {`<link rel='stylesheet' href='assets/eos-icons.css'/>`}
+            </code>
+          </pre>
           <p>
             2- Make sure the font files available in <span className="command">thedist/fonts</span> folder are placed under your <span className="command">assets/fonts</span> folder so the .css file can read them correctly.
           </p>
           <p>
             3- Use the icons in your html as follows:
           </p>
-          <Code codes={["<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"]} />
+
+          <pre className="code language-html">
+            <code>
+              {`<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>`}
+            </code>
+          </pre>
           <p>
             Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our &nbsp;
             <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html"
@@ -84,7 +114,12 @@ function Docs () {
           <p>
             The animated EOS icons are built using CSS animations. To implement them you don't need ligatures but classes instead. For example:
           </p>
-          <Code codes={["<i class='eos-icons eos-icon-loading'></i>"]} />
+
+          <pre className="code language-html">
+            <code>
+              {`<i class='eos-icons eos-icon-loading'>loading</i>`}
+            </code>
+          </pre>
           <p>
             See the other animated icons classes in our
             <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html"
@@ -126,13 +161,18 @@ function Docs () {
             </a>
             &nbsp;where you can find the corresponding licensing and documentation. Example:
           </p>
-          <Code codes={[
-            "<!-- This is an EOS icon --> \n",
-            "<i class='eos-icons'>action_chains</i> \n",
-            "\n",
-            "<!-- This is a Material Design icon --> \n",
-            "<i class='eos-icons'>bluetooth_disabled</i>",
-          ]} />
+
+          <pre className="code language-html">
+            <code>
+              {`
+  <!-- This is an EOS icon -->
+  <i class='eos-icons'>action_chains</i>
+
+    <!-- This is a Material Design icon -->
+  <i class='eos-icons'>bluetooth_disabled</i>
+  `}
+            </code>
+          </pre>
         </div>
         <div>
           <h1>Our recommended sizes</h1>
@@ -148,12 +188,16 @@ function Docs () {
               <i className="eos-icons md-24 mr-3">face</i>
               <i className="eos-icons md-36 mr-3">face</i>
               <i className="eos-icons md-48">face</i>
-              <Code codes={[
-                "<i class='eos-icons md-18'>face</i> \n",
-                "<i class='eos-icons md-24'>face</i> \n",
-                "<i class='eos-icons md-36'>face</i> \n",
-                "<i class='eos-icons md-48'>face</i> \n",
-              ]} />
+
+
+              <pre className="code language-html">
+                <code>
+                  {`<i class='eos-icons md-18'>face</i>
+<i class='eos-icons md-24'>face</i>
+<i class='eos-icons md-36'>face</i>
+<i class='eos-icons md-48'>face</i>`}
+                </code>
+              </pre>
               <li>
                 <h4>Implementation example with EOS icon</h4>
               </li>
@@ -161,26 +205,32 @@ function Docs () {
               <i className="eos-icons md-24 mr-3">miscellaneous</i>
               <i className="eos-icons md-36 mr-3">miscellaneous</i>
               <i className="eos-icons md-48">miscellaneous</i>
-              <Code codes={[
-                "<i class='eos-icons md-18'>miscellaneous</i> \n",
-                "<i class='eos-icons md-24'>miscellaneous</i> \n",
-                "<i class='eos-icons md-36'>miscellaneous</i> \n",
-                "<i class='eos-icons md-48'>miscellaneous</i> \n",
-              ]} />
+              <pre className="code language-html">
+                <code>
+                  {`<i class='eos-icons md-18'>miscellaneous</i>
+<i class='eos-icons md-24'>miscellaneous</i>
+<i class='eos-icons md-36'>miscellaneous</i>
+<i class='eos-icons md-48'>miscellaneous</i> `}
+                </code>
+              </pre>
               <h4>SCSS code snippet</h4>
-              <Code codes={[
-                "/* size variables */ \n",
-                "$eos-md-18: 18px; \n",
-                "$eos-md-24: 24px; \n",
-                "$eos-md-36: 36px; \n",
-                "$eos-md-48: 48px; \n",
-                "\n",
-                "/* Rules for sizing the icon. */ \n",
-                ".md-18 { font-size: $eos-md-18; } \n",
-                ".md-24 { font-size: $eos-md-24; } \n",
-                ".md-36 { font-size: $eos-md-36; } \n",
-                ".md-48 { font-size: $eos-md-48; } \n",
-              ]} />
+
+
+              <pre className="code language-css">
+                <code>
+                  {`/* size variables */
+$eos-md-18: 18px;
+$eos-md-24: 24px;
+$eos-md-36: 36px;
+$eos-md-48: 48px;
+
+/* Rules for sizing the icon. */
+.md-18 { font-size: $eos-md-18; }
+.md-24 { font-size: $eos-md-24; }
+.md-36 { font-size: $eos-md-36; }
+.md-48 { font-size: $eos-md-48; }  `}
+                </code>
+              </pre>
             </ul>
           </div>
           <p>

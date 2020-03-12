@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
 
 const Code = (props) => {
-  const { codes } = props
-
+  const { codes, type } = props
+  console.log('codes: ', codes);
+  useEffect(() => {
+    Prism.highlightAll();
+  })
   return (
-    <code className="code">
-      {codes.map((code) => {
-        return code;
-      })}
-    </code>
+    <pre className={`code ${type}`}>
+      <code>
+        {codes.map((code) => {
+          return code
+        })}
+      </code>
+    </pre>
   )
 }
 
