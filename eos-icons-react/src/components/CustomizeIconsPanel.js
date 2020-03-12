@@ -33,7 +33,7 @@ const CustomizeIconsPanel = () => {
   const [state, dispatch] = useReducer(iconsReducer, value)
   const [modal, setModal] = useState(false);
   const [serverResponse, setServerResponse] = useState(null);
-  console.log('serverResponse: ', serverResponse);
+
 
   const modalToggle = () => {
     setModal(!modal)
