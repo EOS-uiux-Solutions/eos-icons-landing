@@ -4,7 +4,6 @@ import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
 import selectIconContext from '../utils/selectIconContext'
 import deSelectIconContext from '../utils/deSelectIconContext'
 import GeneratingFont from './GeneratingFont'
-// import Modal from './Modal'
 import Modal from './Modal'
 import ThankYou from './ThankYou'
 import axios from 'axios'
@@ -18,6 +17,7 @@ const sendData = async params => {
       extended_icons: payload
     }
   })
+
   return response.data
 }
 

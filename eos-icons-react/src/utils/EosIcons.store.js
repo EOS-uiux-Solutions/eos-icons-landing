@@ -11,7 +11,7 @@ export const eosIconsState = {
   icons: eosIcons,
   singleIcon,
   multipleIcons,
-  customize: true,
+  customize: false,
   setSingleIcon (iconName) {
     singleIcon.shift()
     singleIcon.push(iconName)
