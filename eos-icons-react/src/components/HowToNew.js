@@ -48,8 +48,8 @@ const HowToPanel = props => {
                   </Button>
                 </div>
                 <strong>Tags:</strong>
-                {iconTags.map(tag =>
-                  <span key='' className='badge'>
+                {iconTags.map((tag, key) =>
+                  <span key={key} className='badge'>
                     <small>{tag}</small>
                   </span>
                 )}
