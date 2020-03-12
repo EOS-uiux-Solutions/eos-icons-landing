@@ -19,6 +19,7 @@ const IconsSet = props => {
   const [, setAllDeSelect] = useContext(deSelectIconContext)
 
   const [search, setSearch] = useState('')
+
   useEffect(() => {
     dispatch({ type: 'TOGGLE_SEARCH', search: search })
   }, [search])
@@ -31,7 +32,7 @@ const IconsSet = props => {
     setAllSelect(false)
     setAllDeSelect(false)
     return dispatch({
-      type: state.customize ? 'ADD_MULTIPLE_ICONS' : 'ADD_SINGLE_ICON',
+      type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
       selection: icon.name
     })
   }
@@ -77,13 +78,9 @@ const IconsSet = props => {
             )}
           </div>
           {!state.customize ? (
-            state.singleIcon.length ? (
-              <div className='how-to-use-block'>
-                <HowTo show={showPanel} iconName={iconSelected.name} iconTags={iconSelected.tags} type='static' close={closeHowTo} />
-              </div>
-            ) : (
-                ''
-              )
+            <div className='how-to-use-block'>
+              <HowTo show={showPanel} iconName={iconSelected.name} iconTags={iconSelected.tags} type='static' close={closeHowTo} />
+            </div>
           ) : (
               <div className='how-to-use-block'>
                 <CustomizeIconsPanel />

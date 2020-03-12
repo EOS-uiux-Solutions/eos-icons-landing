@@ -1,5 +1,5 @@
 import { createContext } from 'react'
 
-const selectIconContext = createContext(['false', () => {}])
+const selectIconContext = createContext()
 
 export default selectIconContext

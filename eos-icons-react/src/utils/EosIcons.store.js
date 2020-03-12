@@ -1,7 +1,7 @@
 import { createContext } from 'react'
 import eosIcons from 'eos-icons/dist/js/eos-icons.json'
 import animatedIcons from './AnimatedIcons.store.js'
-const singleIcon = []
+
 const multipleIcons = []
 const allIconsByName = eosIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
 const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
@@ -10,14 +10,8 @@ const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0
 /* EOS Icons state */
 export const eosIconsState = {
   icons: staticIconsOnly,
-  singleIcon,
   multipleIcons,
   customize: false,
-  setSingleIcon (iconName) {
-    singleIcon.shift()
-    singleIcon.push(iconName)
-    return singleIcon
-  },
   setMultipleIcons (iconName) {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
@@ -29,7 +23,6 @@ export const eosIconsState = {
   },
   toggleCustomize () {
     /* Clear arrays when switching between customize */
-    singleIcon.splice(0, singleIcon.length)
     multipleIcons.splice(0, multipleIcons.length)
 
     return (this.customize = !this.customize)
@@ -47,20 +40,11 @@ export const eosIconsState = {
     return this.icons.filter(
       icon => icon.name.includes(value.toLowerCase()) && icon
     )
-  },
-  removeSingleIcon () {
-    singleIcon.splice(0, singleIcon.length)
-    return singleIcon
   }
 }
 
 export const iconsReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_SINGLE_ICON':
-      return {
-        ...state,
-        singleIcon: eosIconsState.setSingleIcon(action.selection)
-      }
     case 'ADD_MULTIPLE_ICONS':
       return {
         ...state,
@@ -85,11 +69,6 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         icons: eosIconsState.setSearchList(action.search)
-      }
-    case 'REMOVE_SINGLE_ICON':
-      return {
-        ...state,
-        singleIcon: eosIconsState.removeSingleIcon()
       }
     default:
       return { ...state }
