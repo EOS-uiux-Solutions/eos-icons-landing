@@ -1,5 +1,5 @@
 import React, { useContext, useReducer, useEffect, useState } from 'react'
-import { EosIconStore, iconsReducer, eosIconsState } from '../utils/EosIcons.store'
+import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
 import selectIconContext from '../utils/selectIconContext'
 import deSelectIconContext from '../utils/deSelectIconContext'
 
@@ -9,7 +9,6 @@ import Tabs from './Tabs'
 import Toogle from './Toggle'
 import SearchIcon from './SearchIcon'
 import CustomizeIconsPanel from './CustomizeIconsPanel'
-// import HowToPanel from './HowToPanel'
 import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToNew'
 
