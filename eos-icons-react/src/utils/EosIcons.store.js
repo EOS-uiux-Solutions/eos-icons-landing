@@ -1,7 +1,6 @@
 import { createContext } from 'react'
 import eosIcons from 'eos-icons/dist/js/eos-icons.json'
 import animatedIcons from './AnimatedIcons.store.js'
-
 const singleIcon = []
 const multipleIcons = []
 const iconNames = eosIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)

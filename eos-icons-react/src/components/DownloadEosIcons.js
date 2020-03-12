@@ -13,7 +13,7 @@ const DownloadEosIcons = () => {
         alt='download icons'
       />
       <strong>
-        <small className='download-icons-text'>download-EOS-icons-set</small>
+        <small className='download-icons-text'>Get our icons set from NPM</small>
       </strong>
     </a>
   )

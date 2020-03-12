@@ -8,17 +8,17 @@
   height: $eos-md-48;
   padding-right: $s;
   position: fixed;
-  right: -188px;
+  right: -240px;
   text-decoration: none;
   top: 70%;
   transition: all 0.5s;
-  z-index: 15;
+  width: 280px;
+  z-index: $z-index-10;
 
   &:hover {
     background: $grad-init;
     color: $light-color;
     right: 0;
-    text-decoration: none;
   }
 
   .download-icons-logo {
@@ -29,7 +29,7 @@
   }
 
   .download-icons-text {
-    font-size: 1.1em;
     font-family: $font-family;
+    font-size: 1.1em;
   }
 }
