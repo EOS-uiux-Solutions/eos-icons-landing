@@ -3,7 +3,8 @@ import loading from '../assets/images/loading.svg'
 
 const GeneratingFont = props => {
   // eslint-disable-next-line
-  const { redirect } = props
+  const { serverResponse } = props
+  console.log('serverResponse: ', serverResponse);
 
   return (
     <div className='icons-picker-loading'>

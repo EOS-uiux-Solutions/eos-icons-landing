@@ -9,27 +9,27 @@ function Docs () {
         <div>
           <h1>Installing EOS icons</h1>
           <p>There are several options for you to use EOS icons in your product:</p>
-          <div> 
-            <h2> Installing with npm </h2>  
-            <Code codes={["npm install eos-icons --save"]}/>
+          <div>
+            <h2> Installing with npm </h2>
+            <Code codes={["npm install eos-icons --save"]} />
           </div>
           <div>
             <h2>With our CDN</h2>
-            <p>For EOS set: 
-              <a href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css" 
-                data-event-category="External link" 
-                data-event-action="Link to EOS Icons CDN" 
-                data-event-label="Docs page" 
+            <p>For EOS set:
+              <a href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css"
+                data-event-category="External link"
+                data-event-action="Link to EOS Icons CDN"
+                data-event-label="Docs page"
                 target="_blank"
                 rel="noopener noreferrer"> https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css
                 </a>
             </p>
             <Code codes={["<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css'>"]} />
             <p>For Extended EOS set:
-              <a href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css" 
-                data-event-category="External link" 
-                data-event-action="Link to EOS Icons Extended CDN" 
-                data-event-label="Docs page" 
+              <a href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css"
+                data-event-category="External link"
+                data-event-action="Link to EOS Icons Extended CDN"
+                data-event-label="Docs page"
                 target="_blank"
                 rel="noopener noreferrer"> https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css
               </a>
@@ -40,13 +40,13 @@ function Docs () {
             </p>
           </div>
           <div>
-            <h2>or Download EOS as a zip file</h2>  
+            <h2>or Download EOS as a zip file</h2>
             <p>
-              To download the zip file of <span className="command"> /dist</span> folder click 
-              <a href="https://gitlab.com/SUSE-UIUX/eos-icons/-/archive/master/es-icons-master.zip?path=dist" 
-                data-event-category="External link" 
-                data-event-action="Link to EOS Icons zip file" 
-                data-event-label="Docs page" 
+              To download the zip file of <span className="command"> /dist</span> folder click
+              <a href="https://gitlab.com/SUSE-UIUX/eos-icons/-/archive/master/es-icons-master.zip?path=dist"
+                data-event-category="External link"
+                data-event-action="Link to EOS Icons zip file"
+                data-event-label="Docs page"
                 target="_blank"
                 rel="noopener noreferrer"> here
               </a>
@@ -69,12 +69,12 @@ function Docs () {
           <Code codes={["<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"]} />
           <p>
             Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our &nbsp;
-            <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html" 
-              data-event-category="Internal link" 
-              data-event-action="Link to cheatsheet" 
-              data-event-label="Docs page" 
+            <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html"
+              data-event-category="Internal link"
+              data-event-action="Link to cheatsheet"
+              data-event-label="Docs page"
               target="_blank"
-              rel="noopener noreferrer"> cheatsheet 
+              rel="noopener noreferrer"> cheatsheet
             </a>
             &nbsp; to see the icon's name.
           </p>
@@ -87,10 +87,10 @@ function Docs () {
           <Code codes={["<i class='eos-icons eos-icon-loading'></i>"]} />
           <p>
             See the other animated icons classes in our
-            <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html" 
-              data-event-category="Internal link" 
-              data-event-action="Link to cheatsheet (animated)" 
-              data-event-label="Docs page" 
+            <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html"
+              data-event-category="Internal link"
+              data-event-action="Link to cheatsheet (animated)"
+              data-event-label="Docs page"
               target="_blank"
               rel="noopener noreferrer"> demo page
             </a>
@@ -101,10 +101,10 @@ function Docs () {
           <h1>EOS extended version with Material Design</h1>
           <p>
             Since EOS icons are designed following the&nbsp;
-            <a href="https://material.io/design/iconography/system-icons.html" 
-              data-event-category="External link" 
-              data-event-action="Link to MD icons design principles" 
-              data-event-label="Docs page" 
+            <a href="https://material.io/design/iconography/system-icons.html"
+              data-event-category="External link"
+              data-event-action="Link to MD icons design principles"
+              data-event-label="Docs page"
               target="_blank"
               rel="noopener noreferrer"> Material Design guidelines
             </a>
@@ -112,18 +112,18 @@ function Docs () {
           </p>
           <p>
             With the extended version you only need to use 1 class for all icons (EOS and Material Design).
-            To implement it, you need to grab the <span className="command"> css/ </span> and<span className="command"> font/ </span> folders available atdist/extended, 
+            To implement it, you need to grab the <span className="command"> css/ </span> and<span className="command"> font/ </span> folders available atdist/extended,
             then add theeos-icons-extended.cssunder the <span className="command"> &lt;head&gt;</span> of your project accordingly.
           </p>
           <p>
             For more information about Material Design Icons, please refer to the &nbsp;
-            <a href="https://github.com/google/material-design-icons" 
-              data-event-category="External link" 
-              data-event-action="Link to MD icons main page" 
-              data-event-label="Docs page" 
+            <a href="https://github.com/google/material-design-icons"
+              data-event-category="External link"
+              data-event-action="Link to MD icons main page"
+              data-event-label="Docs page"
               target="_blank"
               rel="noopener noreferrer">original MD icons repository
-            </a> 
+            </a>
             &nbsp;where you can find the corresponding licensing and documentation. Example:
           </p>
           <Code codes={[
@@ -132,7 +132,7 @@ function Docs () {
             "\n",
             "<!-- This is a Material Design icon --> \n",
             "<i class='eos-icons'>bluetooth_disabled</i>",
-          ]}/>
+          ]} />
         </div>
         <div>
           <h1>Our recommended sizes</h1>
@@ -184,12 +184,12 @@ function Docs () {
             </ul>
           </div>
           <p>
-            EOS icons is open source. 
+            EOS icons is open source.
             Go to our Gitlab repository to find out more :
-            <a href="https://gitlab.com/SUSE-UIUX/eos-icons" 
-              data-event-category="External link" 
-              data-event-action="Link to Gitlab repository" 
-              data-event-label="Docs page" 
+            <a href="https://gitlab.com/SUSE-UIUX/eos-icons"
+              data-event-category="External link"
+              data-event-action="Link to Gitlab repository"
+              data-event-label="Docs page"
               target="_blank"
               rel="noopener noreferrer"> https://gitlab.com/SUSE-UIUX/eos-icons
             </a>

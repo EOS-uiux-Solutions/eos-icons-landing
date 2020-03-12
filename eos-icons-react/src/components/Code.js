@@ -1,7 +1,8 @@
 import React from 'react'
 
 const Code = (props) => {
-  const { codes } = props;
+  const { codes } = props
+
   return (
     <code className="code">
       {codes.map((code) => {

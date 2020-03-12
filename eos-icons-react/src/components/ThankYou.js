@@ -2,15 +2,14 @@ import React, { useState } from 'react'
 import bunny from '../assets/images/eos-bunny.png'
 import Button from './Button'
 
-const ThankYou = () => {
+const ThankYou = props => {
+  const { timestamp } = props
+
   let [timer, setTimer] = useState(5)
 
   const downloadFont = () => {
-    const downloadEndPoints =
-      'https://eos-icons-picker-api.herokuapp.com/download?'
-    const downloadTimeStamp = window.location.href.split('?')[1]
-    const downloadUrl = downloadEndPoints + downloadTimeStamp
-    window.open(downloadUrl, '_blank')
+    const downloadEndPoints = `https://eos-icons-picker-api.herokuapp.com/download?ts=${timestamp}`
+    return window.open(downloadEndPoints, '_blank')
   }
 
   const timing = () => {
