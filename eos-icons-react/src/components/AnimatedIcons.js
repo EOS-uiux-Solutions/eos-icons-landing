@@ -1,26 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AnimatedIconsList from '../utils/AnimatedIcons.store'
-// import HowToPanel from './HowToPanel'
-
+import HowTo from '../components/HowToNew'
 
 const AnimatedIcons = () => {
   const [iconSelected, setIconSelected] = useState('')
+  const [showPanel, setShowPanel] = useState(false)
 
   const selectAndShowInfo = iconName => {
     setIconSelected(iconName)
+    setShowPanel(true)
+  }
+
+  const closeHowTo = () => {
+    setShowPanel(false)
+    setIconSelected('')
   }
 
   return (
-    (AnimatedIconsList.map((icon, index) =>
-      <div className='icon-container' key={index}>
-        <img
-          src={require(`../../node_modules/eos-icons/animated-svg/${icon}.svg`)}
-          alt={icon}
-          className={icon === iconSelected ? 'active' : ''}
-          onClick={selectAndShowInfo(icon)} />
-        {icon}
-      </div>
-    ))
+    <>
+      {
+        (AnimatedIconsList.map((icon, index) =>
+          <div className='icon-container' key={index}>
+            <img
+              src={require(`eos-icons/animated-svg/${icon}.svg`)}
+              alt={icon}
+              className={icon === iconSelected ? 'active' : ''}
+              onClick={() => {
+                selectAndShowInfo(icon)
+              }}
+            />
+            {icon}
+          </div>
+        ))
+      }
+      <HowTo show={showPanel} iconName={iconSelected} iconTags='' type='animated' close={closeHowTo} />
+    </>
   )
 }
 
