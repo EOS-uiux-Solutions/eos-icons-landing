@@ -1,11 +1,11 @@
 .contributor {
   color: $dark-black;
   font-size: .8em;
-  padding: 0 10px;
+  padding: 0 $m;
 
   .contributors-img {
     border-radius: 100%;
-    margin: 0 20px;
+    margin: 0 $l;
     width: 80px;
   }
 
