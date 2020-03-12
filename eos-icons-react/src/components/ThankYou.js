@@ -1,16 +1,11 @@
 import React, { useState } from 'react'
 import bunny from '../assets/images/eos-bunny.png'
-import Button from './Button'
+
 
 const ThankYou = props => {
-  const { timestamp } = props
+  const { fn, timestamp } = props
 
   let [timer, setTimer] = useState(5)
-
-  const downloadFont = () => {
-    const downloadEndPoints = `https://eos-icons-picker-api.herokuapp.com/download?ts=${timestamp}`
-    return window.open(downloadEndPoints, '_blank')
-  }
 
   const timing = () => {
     const timerInterval = setInterval(() => {
@@ -18,7 +13,7 @@ const ThankYou = props => {
         setTimer(timer--)
       } else {
         clearInterval(timerInterval)
-        downloadFont()
+        fn({ timestamp })
       }
     }, 1000)
   }
@@ -31,9 +26,6 @@ const ThankYou = props => {
         Download will begin in {timer} seconds or click below to start
         downloading
       </p>
-      <Button primary type='submit' onClick={downloadFont}>
-        EOS-custom-font.zip
-      </Button>
     </div>
   )
 }
