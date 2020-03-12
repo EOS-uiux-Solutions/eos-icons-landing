@@ -3,11 +3,13 @@ import eosIcons from 'eos-icons/dist/js/eos-icons.json'
 import animatedIcons from './AnimatedIcons.store.js'
 const singleIcon = []
 const multipleIcons = []
-const iconNames = eosIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
+const allIconsByName = eosIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
+const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
+
 
 /* EOS Icons state */
 export const eosIconsState = {
-  icons: eosIcons,
+  icons: staticIconsOnly,
   singleIcon,
   multipleIcons,
   customize: false,
@@ -34,7 +36,7 @@ export const eosIconsState = {
   },
   selectAllIcons () {
     multipleIcons.splice(0, multipleIcons.length)
-    multipleIcons.push(...iconNames)
+    multipleIcons.push(...allIconsByName)
     return multipleIcons
   },
   deselectAllIcons () {

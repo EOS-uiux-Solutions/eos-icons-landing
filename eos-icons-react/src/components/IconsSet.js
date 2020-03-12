@@ -1,5 +1,5 @@
 import React, { useContext, useReducer, useEffect, useState } from 'react'
-import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
+import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
 import selectIconContext from '../utils/selectIconContext'
 import deSelectIconContext from '../utils/deSelectIconContext'
 
@@ -9,12 +9,10 @@ import Tabs from './Tabs'
 import Toogle from './Toggle'
 import SearchIcon from './SearchIcon'
 import CustomizeIconsPanel from './CustomizeIconsPanel'
-// import HowToPanel from './HowToPanel'
 import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToNew'
 
 const IconsSet = props => {
-  const value = useContext(EosIconStore)
 
   const [, setAllSelect] = useContext(selectIconContext)
 
@@ -25,7 +23,9 @@ const IconsSet = props => {
     dispatch({ type: 'TOGGLE_SEARCH', search: search })
   }, [search])
 
-  const [state, dispatch] = useReducer(iconsReducer, value)
+  const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
+  console.log(state);
+
 
   const dispatchAction = icon => {
     setShowPanel(true)
