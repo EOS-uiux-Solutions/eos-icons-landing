@@ -24,8 +24,6 @@ const IconsSet = props => {
   }, [search])
 
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
-  console.log(state);
-
 
   const dispatchAction = icon => {
     setShowPanel(true)
@@ -34,7 +32,7 @@ const IconsSet = props => {
     setAllDeSelect(false)
     return dispatch({
       type: state.customize ? 'ADD_MULTIPLE_ICONS' : 'ADD_SINGLE_ICON',
-      selection: icon.textContent
+      selection: icon.name
     })
   }
 
@@ -53,6 +51,16 @@ const IconsSet = props => {
     setIconSelected('')
   }
 
+  // Mark icon as active
+  const isActive = (current) => {
+    if (state.customize) {
+      return state.multipleIcons.indexOf(current) < 0 ? false : true
+    }
+    else {
+      return current === iconSelected.name ? true : false
+    }
+  }
+
   return (
     <>
       <div className='toolbar'>
@@ -63,8 +71,10 @@ const IconsSet = props => {
         <div label='Regular Icons'>
           <div className='icons-list'>
             {state.icons.map((ele, index) => {
-              return <Icon size={36} active={ele.name === iconSelected.name ? true : false} key={index} name={ele.name} action={() => dispatchAction(ele)} />
-            })}
+
+              return <Icon size={36} active={isActive(ele.name)} key={index} name={ele.name} action={() => dispatchAction(ele)} />
+            }
+            )}
           </div>
           {!state.customize ? (
             state.singleIcon.length ? (

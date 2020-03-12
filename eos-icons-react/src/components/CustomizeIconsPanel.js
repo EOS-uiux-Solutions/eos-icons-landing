@@ -9,7 +9,7 @@ import ThankYou from './ThankYou'
 import axios from 'axios'
 
 const sendData = async params => {
-  const { url, payload } = params
+  const { url } = params
 
   const response = await axios.post(url, {
     icons_config: {
