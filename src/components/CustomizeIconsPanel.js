@@ -9,12 +9,12 @@ import ThankYou from './ThankYou'
 import axios from 'axios'
 
 const sendData = async params => {
-  const { url } = params
+  const { url, payload } = params
 
   const response = await axios.post(url, {
     icons_config: {
       eos_icons: [],
-      extended_icons: ['admin']
+      extended_icons: payload
     }
   })
 
@@ -23,7 +23,7 @@ const sendData = async params => {
 
 const downloadFont = props => {
   const { timestamp } = props
-  const downloadEndPoints = `https://eos-icons-picker-api.herokuapp.com/download?ts=${timestamp}`
+  const downloadEndPoints = `https://localhost:3131/download?ts=${timestamp}`
   return window.open(downloadEndPoints, '_blank')
 }
 
