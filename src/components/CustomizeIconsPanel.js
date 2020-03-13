@@ -64,7 +64,7 @@ const CustomizeIconsPanel = () => {
     e.preventDefault()
     modalToggle()
     sendData({
-      url: 'http://localhost:3131/iconsapi',
+      url: 'https://eos-icons-picker-api.herokuapp.com/iconsapi',
       payload: state.multipleIcons
     }).then(setServerResponse)
   }
