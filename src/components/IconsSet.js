@@ -1,7 +1,5 @@
-import React, { useContext, useReducer, useEffect, useState } from 'react'
+import React, { useReducer, useEffect, useState } from 'react'
 import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
-import selectIconContext from '../utils/selectIconContext'
-import deSelectIconContext from '../utils/deSelectIconContext'
 
 /* Components */
 import Icon from './IconDisplay'
@@ -14,10 +12,6 @@ import HowTo from '../components/HowToPanel'
 
 const IconsSet = props => {
 
-  const [, setAllSelect] = useContext(selectIconContext)
-
-  const [, setAllDeSelect] = useContext(deSelectIconContext)
-
   const [search, setSearch] = useState('')
 
   useEffect(() => {
@@ -29,8 +23,6 @@ const IconsSet = props => {
   const dispatchAction = icon => {
     setShowPanel(true)
     setIconSelected(icon)
-    setAllSelect(false)
-    setAllDeSelect(false)
     return dispatch({
       type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
       selection: icon.name

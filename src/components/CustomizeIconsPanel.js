@@ -1,8 +1,6 @@
 import React, { useContext, useReducer, useState } from 'react'
 import Button from './Button'
 import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
-import selectIconContext from '../utils/selectIconContext'
-import deSelectIconContext from '../utils/deSelectIconContext'
 import GeneratingFont from './GeneratingFont'
 import Modal from './Modal'
 import ThankYou from './ThankYou'
@@ -27,37 +25,17 @@ const downloadFont = props => {
   return window.open(downloadEndPoints, '_blank')
 }
 
-const CustomizeIconsPanel = () => {
+const CustomizeIconsPanel = props => {
+  const { selectAll, deselectAll } = props
   const value = useContext(EosIconStore)
 
-  const [state, dispatch] = useReducer(iconsReducer, value)
+  const [state] = useReducer(iconsReducer, value)
   const [modal, setModal] = useState(false);
   const [serverResponse, setServerResponse] = useState(null);
 
 
   const modalToggle = () => {
     setModal(!modal)
-  }
-
-  const [, setAllSelect] = useContext(selectIconContext)
-
-  const [, setAllDeSelect] = useContext(deSelectIconContext)
-
-  const selectAll = e => {
-    e.preventDefault()
-    setAllSelect(true)
-    return dispatch({
-      type: 'ADD_ALL_ICONS'
-    })
-  }
-
-  const deselectAll = e => {
-    e.preventDefault()
-    setAllSelect(false)
-    setAllDeSelect(true)
-    return dispatch({
-      type: 'REMOVE_ALL_ICONS'
-    })
   }
 
   const generateFont = e => {
