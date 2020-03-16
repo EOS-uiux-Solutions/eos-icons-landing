@@ -15,7 +15,7 @@ import CookiesPage from './pages/Cookies'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import ThankYou from './components/ThankYou'
-import AppContext from './components/AppContext'
+import AppContext from './utils/AppContext'
 import CookiesBanner from './components/CookiesBanner'
 
 const App = () => {
