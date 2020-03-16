@@ -4,10 +4,10 @@ import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
 
 /* Temportal solution for extended version */
-const extendedSet = extendedIcons.glyphs.reduce((acc, cre) => {
+const extendedSet = extendedIcons.glyphs.reduce((acc, iconName) => {
 
   acc.push({
-    name: cre,
+    name: iconName,
     do: '',
     dont: '',
     tags: []
