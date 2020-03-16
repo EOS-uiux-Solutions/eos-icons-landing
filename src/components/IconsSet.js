@@ -10,7 +10,7 @@ import Toogle from './Toggle'
 import SearchIcon from './SearchIcon'
 import CustomizeIconsPanel from './CustomizeIconsPanel'
 import AnimatedIcons from './AnimatedIcons'
-import HowTo from '../components/HowToNew'
+import HowTo from '../components/HowToPanel'
 
 const IconsSet = props => {
 
