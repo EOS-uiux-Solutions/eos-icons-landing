@@ -3,9 +3,15 @@ import eosIcons from 'eos-icons/dist/js/eos-icons.json'
 import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
 
-/* Temportal solution for extended version */
-const extendedSet = extendedIcons.glyphs.reduce((acc, iconName) => {
+const multipleIcons = []
+const allIconsByName = eosIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
+const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
 
+
+/* ==========================================================================
+  TEMPORAL SOLUTION WHILE WE'RE WORKING ON THE NEW RELEASE
+  ========================================================================== */
+const extendedSet = extendedIcons.glyphs.reduce((acc, iconName) => {
   acc.push({
     name: iconName,
     do: '',
@@ -16,11 +22,13 @@ const extendedSet = extendedIcons.glyphs.reduce((acc, iconName) => {
   return acc
 }, [])
 
-const multipleIcons = []
-const allIconsByName = eosIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
-const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
+/* Filter out eos icons names */
+const eos = eosIcons.reduce((acc, iconName) => {
+  acc.push(iconName.name)
+  return acc
+}, [])
 
-const mixIcons = [...staticIconsOnly, ...extendedSet]
+const mixIcons = [...staticIconsOnly, ...extendedSet.filter(ele => !eos.includes(ele.name))]
 
 /* EOS Icons state */
 export const eosIconsState = {
