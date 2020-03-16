@@ -3,6 +3,7 @@ import eosIcons from 'eos-icons/dist/js/eos-icons.json'
 import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
 
+/* Temportal solution for extended version */
 const extendedSet = extendedIcons.glyphs.reduce((acc, cre) => {
 
   acc.push({
@@ -20,7 +21,7 @@ const allIconsByName = eosIcons.map(icon => icon.name).filter(el => animatedIcon
 const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
 
 const mixIcons = [...staticIconsOnly, ...extendedSet]
-console.log('mixIcons: ', mixIcons);
+
 /* EOS Icons state */
 export const eosIconsState = {
   icons: mixIcons,
