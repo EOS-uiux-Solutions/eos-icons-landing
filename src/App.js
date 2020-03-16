@@ -14,8 +14,11 @@ import PageNotFound from './pages/PageNotFound'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import ThankYou from './components/ThankYou'
+<<<<<<< HEAD
 import ScrollToTopBtn from './components/ScrollToTop'
 import AppContext from './utils/AppContext'
+import CookiesBanner from './components/CookiesBanner'
+
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
@@ -35,6 +38,7 @@ const App = () => {
           </Router>
           <ScrollToTopBtn />
         </div>
+        <CookiesBanner />
         <Footer />
       </div>
     </AppContext.Provider>
