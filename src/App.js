@@ -14,7 +14,8 @@ import PageNotFound from './pages/PageNotFound'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import ThankYou from './components/ThankYou'
-import AppContext from './utils/AppContext'
+import AppContext from './components/AppContext'
+import CookiesBanner from './components/CookiesBanner'
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
@@ -33,6 +34,7 @@ const App = () => {
             <PageNotFound path='*' />
           </Router>
         </div>
+        <CookiesBanner />
         <Footer />
       </div>
     </AppContext.Provider>
