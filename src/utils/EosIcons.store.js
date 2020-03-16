@@ -1,5 +1,6 @@
 import { createContext } from 'react'
 import eosIcons from 'eos-icons/dist/js/eos-icons.json'
+import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
 
 const multipleIcons = []
@@ -7,9 +8,31 @@ const allIconsByName = eosIcons.map(icon => icon.name).filter(el => animatedIcon
 const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
 
 
+/* ==========================================================================
+  TEMPORAL SOLUTION WHILE WE'RE WORKING ON THE NEW RELEASE
+  ========================================================================== */
+const extendedSet = extendedIcons.glyphs.reduce((acc, iconName) => {
+  acc.push({
+    name: iconName,
+    do: '',
+    dont: '',
+    tags: []
+  })
+
+  return acc
+}, [])
+
+/* Filter out eos icons names */
+const eos = eosIcons.reduce((acc, iconName) => {
+  acc.push(iconName.name)
+  return acc
+}, [])
+
+const eosAndMdIcons = [...staticIconsOnly, ...extendedSet.filter(ele => !eos.includes(ele.name))]
+
 /* EOS Icons state */
 export const eosIconsState = {
-  icons: staticIconsOnly,
+  icons: eosAndMdIcons,
   multipleIcons,
   customize: false,
   setMultipleIcons (iconName) {

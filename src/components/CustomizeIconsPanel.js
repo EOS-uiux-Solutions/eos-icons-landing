@@ -23,7 +23,7 @@ const sendData = async params => {
 
 const downloadFont = props => {
   const { timestamp } = props
-  const downloadEndPoints = `https://localhost:3131/download?ts=${timestamp}`
+  const downloadEndPoints = `https://eos-icons-picker-api.herokuapp.com/download?ts=${timestamp}`
   return window.open(downloadEndPoints, '_blank')
 }
 
