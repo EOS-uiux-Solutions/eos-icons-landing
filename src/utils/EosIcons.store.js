@@ -28,11 +28,11 @@ const eos = eosIcons.reduce((acc, iconName) => {
   return acc
 }, [])
 
-const mixIcons = [...staticIconsOnly, ...extendedSet.filter(ele => !eos.includes(ele.name))]
+const eosAndMdIcons = [...staticIconsOnly, ...extendedSet.filter(ele => !eos.includes(ele.name))]
 
 /* EOS Icons state */
 export const eosIconsState = {
-  icons: mixIcons,
+  icons: eosAndMdIcons,
   multipleIcons,
   customize: false,
   setMultipleIcons (iconName) {
