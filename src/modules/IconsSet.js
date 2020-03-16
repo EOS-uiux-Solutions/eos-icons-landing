@@ -2,11 +2,11 @@ import React, { useReducer, useEffect, useState } from 'react'
 import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
 
 /* Components */
-import Icon from './IconDisplay'
-import Tabs from './Tabs'
-import Toogle from './Toggle'
-import SearchIcon from './SearchIcon'
-import CustomizeIconsPanel from './CustomizeIconsPanel'
+import Icon from '../components/IconDisplay'
+import Tabs from '../components/Tabs'
+import Toogle from '../components/Toggle'
+import SearchIcon from '../components/SearchIcon'
+import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
 import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToPanel'
 
@@ -20,7 +20,7 @@ const IconsSet = props => {
 
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
 
-  const dispatchAction = icon => {
+  const selectIcon = icon => {
     setShowPanel(true)
     setIconSelected(icon)
     return dispatch({
@@ -31,7 +31,6 @@ const IconsSet = props => {
 
   /* Toggle customizable functionality */
   const toggleCustomize = () => {
-    props.action()
     return dispatch({ type: 'TOGGLE_CUSTOMIZE' })
   }
 
@@ -54,6 +53,14 @@ const IconsSet = props => {
     }
   }
 
+  const selectAll = () => {
+    return dispatch({ type: 'ADD_ALL_ICONS' })
+  }
+
+  const deselectAll = () => {
+    return dispatch({ type: 'REMOVE_ALL_ICONS' })
+  }
+
   return (
     <>
       <div className='toolbar'>
@@ -65,7 +72,7 @@ const IconsSet = props => {
           <div className='icons-list'>
             {state.icons.map((ele, index) => {
 
-              return <Icon size={36} active={isActive(ele.name)} key={index} name={ele.name} action={() => dispatchAction(ele)} />
+              return <Icon size={36} active={isActive(ele.name)} key={index} name={ele.name} action={() => selectIcon(ele)} />
             }
             )}
           </div>
@@ -75,7 +82,7 @@ const IconsSet = props => {
             </div>
           ) : (
               <div className='how-to-use-block'>
-                <CustomizeIconsPanel />
+                <CustomizeIconsPanel selectAll={selectAll} deselectAll={deselectAll} />
               </div>
             )}
         </div>

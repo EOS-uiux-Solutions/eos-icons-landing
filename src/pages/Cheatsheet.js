@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
-import IconsSet from '../components/IconsSet'
+import IconsSet from '../modules/IconsSet'
 import Button from '../components/Button'
 
 const Cheatsheet = () => {
