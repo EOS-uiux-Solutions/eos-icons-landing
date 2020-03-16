@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 
 const Code = (props) => {
   const { codes, type } = props
-  console.log('codes: ', codes);
   useEffect(() => {
     Prism.highlightAll();
   })
