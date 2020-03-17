@@ -1,22 +1,16 @@
-import React, { useContext, useReducer, useEffect, useState } from 'react'
+import React, { useReducer, useEffect, useState } from 'react'
 import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
-import selectIconContext from '../utils/selectIconContext'
-import deSelectIconContext from '../utils/deSelectIconContext'
 
 /* Components */
-import Icon from './IconDisplay'
-import Tabs from './Tabs'
-import Toogle from './Toggle'
-import SearchIcon from './SearchIcon'
-import CustomizeIconsPanel from './CustomizeIconsPanel'
+import Icon from '../components/IconDisplay'
+import Tabs from '../components/Tabs'
+import Toogle from '../components/Toggle'
+import SearchIcon from '../components/SearchIcon'
+import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
 import AnimatedIcons from './AnimatedIcons'
-import HowTo from '../components/HowToNew'
+import HowTo from '../components/HowToPanel'
 
 const IconsSet = props => {
-
-  const [, setAllSelect] = useContext(selectIconContext)
-
-  const [, setAllDeSelect] = useContext(deSelectIconContext)
 
   const [search, setSearch] = useState('')
 
@@ -26,11 +20,9 @@ const IconsSet = props => {
 
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
 
-  const dispatchAction = icon => {
+  const selectIcon = icon => {
     setShowPanel(true)
     setIconSelected(icon)
-    setAllSelect(false)
-    setAllDeSelect(false)
     return dispatch({
       type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
       selection: icon.name
@@ -62,6 +54,14 @@ const IconsSet = props => {
     }
   }
 
+  const selectAll = () => {
+    return dispatch({ type: 'ADD_ALL_ICONS' })
+  }
+
+  const deselectAll = () => {
+    return dispatch({ type: 'REMOVE_ALL_ICONS' })
+  }
+
   return (
     <>
       <div className='toolbar'>
@@ -73,7 +73,7 @@ const IconsSet = props => {
           <div className='icons-list'>
             {state.icons.map((ele, index) => {
 
-              return <Icon size={36} active={isActive(ele.name)} key={index} name={ele.name} action={() => dispatchAction(ele)} />
+              return <Icon size={36} active={isActive(ele.name)} key={index} name={ele.name} action={() => selectIcon(ele)} />
             }
             )}
           </div>
@@ -83,7 +83,7 @@ const IconsSet = props => {
             </div>
           ) : (
               <div className='how-to-use-block'>
-                <CustomizeIconsPanel />
+                <CustomizeIconsPanel selectAll={selectAll} deselectAll={deselectAll} />
               </div>
             )}
         </div>

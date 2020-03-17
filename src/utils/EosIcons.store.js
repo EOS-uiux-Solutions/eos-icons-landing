@@ -4,7 +4,6 @@ import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
 
 const multipleIcons = []
-const allIconsByName = eosIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
 const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
 
 
@@ -29,6 +28,10 @@ const eos = eosIcons.reduce((acc, iconName) => {
 }, [])
 
 const eosAndMdIcons = [...staticIconsOnly, ...extendedSet.filter(ele => !eos.includes(ele.name))]
+/* ==========================================================================
+  END TEMPORAL SOLUTION
+========================================================================== */
+const allIconsByName = eosAndMdIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
 
 /* EOS Icons state */
 export const eosIconsState = {

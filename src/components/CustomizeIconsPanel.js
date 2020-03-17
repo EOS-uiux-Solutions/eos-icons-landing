@@ -1,8 +1,6 @@
-import React, { useContext, useReducer, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Button from './Button'
-import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
-import selectIconContext from '../utils/selectIconContext'
-import deSelectIconContext from '../utils/deSelectIconContext'
+import { EosIconStore } from '../utils/EosIcons.store'
 import GeneratingFont from './GeneratingFont'
 import Modal from './Modal'
 import ThankYou from './ThankYou'
@@ -27,37 +25,15 @@ const downloadFont = props => {
   return window.open(downloadEndPoints, '_blank')
 }
 
-const CustomizeIconsPanel = () => {
+const CustomizeIconsPanel = props => {
+  const { selectAll, deselectAll } = props
   const value = useContext(EosIconStore)
 
-  const [state, dispatch] = useReducer(iconsReducer, value)
   const [modal, setModal] = useState(false);
   const [serverResponse, setServerResponse] = useState(null);
 
-
   const modalToggle = () => {
     setModal(!modal)
-  }
-
-  const [, setAllSelect] = useContext(selectIconContext)
-
-  const [, setAllDeSelect] = useContext(deSelectIconContext)
-
-  const selectAll = e => {
-    e.preventDefault()
-    setAllSelect(true)
-    return dispatch({
-      type: 'ADD_ALL_ICONS'
-    })
-  }
-
-  const deselectAll = e => {
-    e.preventDefault()
-    setAllSelect(false)
-    setAllDeSelect(true)
-    return dispatch({
-      type: 'REMOVE_ALL_ICONS'
-    })
   }
 
   const generateFont = e => {
@@ -65,7 +41,7 @@ const CustomizeIconsPanel = () => {
     modalToggle()
     sendData({
       url: 'https://eos-icons-picker-api.herokuapp.com/iconsapi',
-      payload: state.multipleIcons
+      payload: value.multipleIcons
     }).then(setServerResponse)
   }
 
@@ -79,7 +55,7 @@ const CustomizeIconsPanel = () => {
           Deselect all <i className='eos-icons'>clear</i>
         </div>
         <div className='generate-div'>
-          <span>{state.multipleIcons.length} icons selected</span>
+          <span>{value.multipleIcons.length} icons selected</span>
           <Button primary type='submit' onClick={generateFont}>
             Generate font
           </Button>

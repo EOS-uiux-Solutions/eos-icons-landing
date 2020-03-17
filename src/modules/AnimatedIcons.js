@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AnimatedIconsList from '../utils/AnimatedIcons.store'
-import HowTo from '../components/HowToNew'
+import HowTo from '../components/HowToPanel'
 
 const AnimatedIcons = () => {
   const [iconSelected, setIconSelected] = useState('')
