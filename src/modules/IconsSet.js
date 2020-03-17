@@ -31,6 +31,7 @@ const IconsSet = props => {
 
   /* Toggle customizable functionality */
   const toggleCustomize = () => {
+    props.action()
     return dispatch({ type: 'TOGGLE_CUSTOMIZE' })
   }
 
