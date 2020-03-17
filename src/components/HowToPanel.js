@@ -11,7 +11,7 @@ const HowToPanel = props => {
           <h2>
             How to use it:
             <small className='float-right'>
-              <i className='eos-icons md-18' onClick={() => { close() }}>
+              <i className='eos-icons md-18' onClick={() => close()}>
                 close
               </i>
             </small>

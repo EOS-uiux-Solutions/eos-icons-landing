@@ -1,6 +1,6 @@
-import React, { useContext, useReducer, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Button from './Button'
-import { EosIconStore, iconsReducer } from '../utils/EosIcons.store'
+import { EosIconStore } from '../utils/EosIcons.store'
 import GeneratingFont from './GeneratingFont'
 import Modal from './Modal'
 import ThankYou from './ThankYou'
@@ -29,10 +29,8 @@ const CustomizeIconsPanel = props => {
   const { selectAll, deselectAll } = props
   const value = useContext(EosIconStore)
 
-  const [state] = useReducer(iconsReducer, value)
   const [modal, setModal] = useState(false);
   const [serverResponse, setServerResponse] = useState(null);
-
 
   const modalToggle = () => {
     setModal(!modal)
@@ -43,7 +41,7 @@ const CustomizeIconsPanel = props => {
     modalToggle()
     sendData({
       url: 'https://eos-icons-picker-api.herokuapp.com/iconsapi',
-      payload: state.multipleIcons
+      payload: value.multipleIcons
     }).then(setServerResponse)
   }
 
@@ -57,7 +55,7 @@ const CustomizeIconsPanel = props => {
           Deselect all <i className='eos-icons'>clear</i>
         </div>
         <div className='generate-div'>
-          <span>{state.multipleIcons.length} icons selected</span>
+          <span>{value.multipleIcons.length} icons selected</span>
           <Button primary type='submit' onClick={generateFont}>
             Generate font
           </Button>
