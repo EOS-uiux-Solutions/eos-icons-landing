@@ -2,6 +2,9 @@
   margin-top: -67px;
 
   .tab-list {
+    position: sticky;
+    top: 77px;
+
     &:hover {
       cursor: pointer;
     }
