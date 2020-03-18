@@ -26,8 +26,8 @@ const Cheatsheet = () => {
               <h2>Click on Icons to select them</h2>
               <p>
                 To continue building an old font, upload icons-config.json
-              <Button> file here </Button>
               </p>
+              <Button> <i class='eos-icons md-18'>cloud_upload</i> Upload JSON </Button>
             </div>
           </PageHeader>
         )}
