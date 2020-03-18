@@ -26,11 +26,11 @@ const CookiesBanner = () => {
         <p>
           The EOS icons uses cookies to help us learn more about how we can improve the design system.
           <br />
-          <a href='/cookies-policy.html'>Learn more about our cookie policy</a>
+          <a href='/cookies-policy'>Learn more about our cookie policy</a>
         </p>
       </div>
       <div className='cookies-alert-buttons'>
-        <Button primary='primary' onClick={event =>  window.location.href='/cookies-policy.html'}>
+        <Button primary='primary' onClick={event =>  window.location.href='/cookies-policy'}>
           Edit preferences
         </Button >
         <Button onClick={acceptCookies}>
