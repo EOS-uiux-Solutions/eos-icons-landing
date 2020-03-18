@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Button from './Button'
-import { EosIconStore } from '../utils/EosIcons.store'
+import { eosIconsState } from '../utils/EosIcons.store'
 import GeneratingFont from './GeneratingFont'
 import Modal from './Modal'
 import ThankYou from './ThankYou'
@@ -27,7 +27,7 @@ const downloadFont = props => {
 
 const CustomizeIconsPanel = props => {
   const { selectAll, deselectAll } = props
-  const value = useContext(EosIconStore)
+  const value = eosIconsState
 
   const [modal, setModal] = useState(false);
   const [serverResponse, setServerResponse] = useState(null);

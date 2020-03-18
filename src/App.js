@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import { Router } from '@reach/router'
+import { iconsReducer, eosIconsState } from './utils/EosIcons.store'
 import '../node_modules/eos-icons/dist/extended/css/eos-icons-extended.css'
 import './assets/scss/index.scss'
 
@@ -16,8 +17,11 @@ import ThankYou from './components/ThankYou'
 import AppContext from './utils/AppContext'
 
 const App = () => {
+  const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
+  console.log('MAIN_BIG_STATE: ', state);
+
   return (
-    <AppContext>
+    <AppContext.Provider value={{ state, dispatch }}>
       <div className='App'>
         <Navigation />
         <div className='app-container'>
@@ -30,7 +34,7 @@ const App = () => {
         </div>
         <Footer />
       </div>
-    </AppContext>
+    </AppContext.Provider>
   )
 }
 
