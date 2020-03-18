@@ -14,23 +14,6 @@ const Cheatsheet = () => {
     setHeader(!header)
   }
 
-
-
-  // const onChangeHandler = event => {
-  //   const fileToLoad = event.target.files[0]
-  //   const fileReader = new window.FileReader() // eslint-disable-line-no-undef
-  //   fileReader.onload = function (fileLoadedEvent) {
-  //     const textFromFileLoaded = fileLoadedEvent.target.result
-  //     const prevIcons = JSON.parse(textFromFileLoaded)
-  //     const prevExtendedIcons = prevIcons.extended_icons
-  //     return dispatch({
-  //       type: 'UPLOAD_PREVIOUS_SELECTION',
-  //       data: prevExtendedIcons
-  //     })
-  //   }
-  //   fileReader.readAsText(fileToLoad)
-  // }
-
   return (
     <AppContext.Consumer>
       {
@@ -50,20 +33,20 @@ const Cheatsheet = () => {
                     <p>
                       To continue building an old font, upload icons-config.json
               </p>
-                    <Button> <i class='eos-icons md-18'>cloud_upload</i> Upload JSON </Button>
+                    <Button> <i className='eos-icons md-18'>cloud_upload</i> Upload JSON </Button>
                     <input type="file" name="file" onChange={event => {
-                      const fileToLoad = event.target.files[0]
-                      const fileReader = new window.FileReader() // eslint-disable-line-no-undef
-                      fileReader.onload = function (fileLoadedEvent) {
-                        const textFromFileLoaded = fileLoadedEvent.target.result
-                        const prevIcons = JSON.parse(textFromFileLoaded)
-                        const prevExtendedIcons = prevIcons.extended_icons
+                      const fileReader = new window.FileReader()
+
+                      fileReader.onload = function (fileData) {
+                        const iconsArray = JSON.parse(fileData.target.result)
+
                         return dispatch({
                           type: 'UPLOAD_PREVIOUS_SELECTION',
-                          data: prevExtendedIcons
+                          data: iconsArray.extended_icons
                         })
                       }
-                      fileReader.readAsText(fileToLoad)
+
+                      return fileReader.readAsText(event.target.files[0])
                     }} />
                   </div>
                 </PageHeader>

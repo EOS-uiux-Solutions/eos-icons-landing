@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import Button from './Button'
 import { eosIconsState } from '../utils/EosIcons.store'
 import GeneratingFont from './GeneratingFont'
