@@ -12,9 +12,9 @@ const Cheatsheet = () => {
   const manageHeader = () => {
     setHeader(!header)
   }
-
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
   console.log(state)
+
   const onChangeHandler = event => {
     const fileToLoad = event.target.files[0]
     const fileReader = new window.FileReader() // eslint-disable-line-no-undef
@@ -22,12 +22,12 @@ const Cheatsheet = () => {
       const textFromFileLoaded = fileLoadedEvent.target.result
       const prevIcons = JSON.parse(textFromFileLoaded)
       const prevExtendedIcons = prevIcons.extended_icons
-
       return dispatch({
         type: 'UPLOAD_PREVIOUS_SELECTION',
         data: prevExtendedIcons
       })
     }
+    fileReader.readAsText(fileToLoad)
   }
 
   return (
