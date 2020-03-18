@@ -7,6 +7,7 @@ import './assets/scss/index.scss'
 import Home from './pages/Home'
 import Cheatsheet from './pages/Cheatsheet'
 import Docs from './pages/Docs'
+import Cookies from './pages/Cookies'
 
 /* Componets */
 import Navigation from './components/Navigation'
@@ -25,6 +26,7 @@ const App = () => {
             <Home path='/' />
             <Cheatsheet path='/cheatsheet' />
             <Docs path='/docs' />
+            <Cookies path='/cookies-policy' />
             <ThankYou path='/thankyou' />
           </Router>
         </div>
