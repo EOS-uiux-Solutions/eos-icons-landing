@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useReducer } from 'react'
+import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
+
 import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
 import IconsSet from '../modules/IconsSet'
@@ -9,6 +11,23 @@ const Cheatsheet = () => {
 
   const manageHeader = () => {
     setHeader(!header)
+  }
+
+  const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
+  console.log(state)
+  const onChangeHandler = event => {
+    const fileToLoad = event.target.files[0]
+    const fileReader = new window.FileReader() // eslint-disable-line-no-undef
+    fileReader.onload = function (fileLoadedEvent) {
+      const textFromFileLoaded = fileLoadedEvent.target.result
+      const prevIcons = JSON.parse(textFromFileLoaded)
+      const prevExtendedIcons = prevIcons.extended_icons
+
+      return dispatch({
+        type: 'UPLOAD_PREVIOUS_SELECTION',
+        data: prevExtendedIcons
+      })
+    }
   }
 
   return (
@@ -28,6 +47,7 @@ const Cheatsheet = () => {
                 To continue building an old font, upload icons-config.json
               </p>
               <Button> <i class='eos-icons md-18'>cloud_upload</i> Upload JSON </Button>
+               <input type="file" name="file" onChange={onChangeHandler}/>
             </div>
           </PageHeader>
         )}
