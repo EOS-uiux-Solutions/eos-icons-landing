@@ -8,6 +8,7 @@ import './assets/scss/index.scss'
 import Home from './pages/Home'
 import Cheatsheet from './pages/Cheatsheet'
 import Docs from './pages/Docs'
+import PageNotFound from './pages/PageNotFound'
 
 /* Componets */
 import Navigation from './components/Navigation'
@@ -26,6 +27,7 @@ const App = () => {
             <Cheatsheet path='/cheatsheet' />
             <Docs path='/docs' />
             <ThankYou path='/thankyou' />
+            <PageNotFound path="*"/>
           </Router>
         </div>
         <Footer />
