@@ -66,6 +66,13 @@ export const eosIconsState = {
     return this.icons.filter(
       icon => icon.name.includes(value.toLowerCase()) && icon
     )
+  },
+  uploadPreviousSelection: function (value) {
+    value.forEach(value => {
+      return !multipleIcons.includes(value) ?
+        multipleIcons.push(value) : ''
+    })
+    return multipleIcons
   }
 }
 
@@ -95,6 +102,11 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         icons: eosIconsState.setSearchList(action.search)
+      }
+    case 'UPLOAD_PREVIOUS_SELECTION':
+      return {
+        ...state,
+        multipleIcons: eosIconsState.uploadPreviousSelection(action.data)
       }
     default:
       return { ...state }
