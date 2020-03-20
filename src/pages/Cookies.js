@@ -22,8 +22,7 @@ const CookiesPage = () => {
                 <h1>Cookie policy</h1>
                 <p className="subheadline">We reserve the right to change this policy when necessary. Any changes 
                 to this policy will be posted here. Your continued use of our websites after changes have been 
-                posted will constitute your agreement to any such changes.</p>
-                
+                posted will constitute your agreement to any such changes.</p>     
                 <hr/>
                 <h4>Cookie preferences</h4>
                 <p>Some essential features on our sites just won’t work without cookies. And having other 
