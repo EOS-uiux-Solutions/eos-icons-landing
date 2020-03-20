@@ -68,7 +68,10 @@ export const eosIconsState = {
     )
   },
   uploadPreviousSelection: function (value) {
-    value.forEach(value => { multipleIcons.push(value) })
+    value.forEach(value => {
+      return !multipleIcons.includes(value) ?
+        multipleIcons.push(value) : ''
+    })
     return multipleIcons
   }
 }

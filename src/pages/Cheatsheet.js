@@ -33,8 +33,13 @@ const Cheatsheet = () => {
                     <p>
                       To continue building an old font, upload icons-config.json
               </p>
-                    <Button> <i className='eos-icons md-18'>cloud_upload</i> Upload JSON </Button>
-                    <input type="file" name="file" onChange={event => {
+                    <label className='btn btn-default upload' htmlFor='upload-file'>
+                      <i className='eos-icons md-18'>
+                        cloud_upload
+                      </i>
+                      Upload JSON
+                    </label>
+                    <input type="file" id='upload-file' hidden name="file" onChange={event => {
                       const fileReader = new window.FileReader()
 
                       fileReader.onload = function (fileData) {
