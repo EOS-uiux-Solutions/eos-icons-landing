@@ -12,17 +12,12 @@ import HowTo from '../components/HowToPanel'
 
 const IconsSet = props => {
 
-  const [search, setSearch] = useState('')
-
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
 
-  const selectIcon = icon => {
+  const selectIcon = (icon, callback) => {
     setShowPanel(true)
     setIconSelected(icon)
-    return dispatch({
-      type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-      selection: icon.name
-    })
+    return callback
   }
 
   /* Toggle customizable functionality */
@@ -41,9 +36,9 @@ const IconsSet = props => {
   }
 
   // Mark icon as active
-  const isActive = (current) => {
-    if (state.customize) {
-      return state.multipleIcons.indexOf(current) < 0 ? false : true
+  const isActive = (current, appState) => {
+    if (appState.customize) {
+      return appState.multipleIcons.indexOf(current) < 0 ? false : true
     }
     else {
       return current === iconSelected.name ? true : false
@@ -78,7 +73,10 @@ const IconsSet = props => {
                 <div className='icons-list'>
                   {state.icons.map((ele, index) => {
 
-                    return <Icon size={36} active={isActive(ele.name)} key={index} name={ele.name} action={() => selectIcon(ele)} />
+                    return <Icon size={36} active={isActive(ele.name, state)} key={index} name={ele.name} action={() => selectIcon(ele, dispatch({
+                      type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                      selection: ele.name
+                    }))} />
                   }
                   )}
                 </div>
