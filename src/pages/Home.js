@@ -22,7 +22,7 @@ const Home = () => {
         <div className='flex-content'>
           <h3>Open source</h3>
           <p>
-            Commercial, non-commercial, use them as you please. EOS icons coms
+            Commercial, non-commercial, use them as you please. EOS icons comes
             with an MIT license, has an open source community, and welcomes
             your collaboration too.
             </p>
@@ -37,7 +37,7 @@ const Home = () => {
         <div className='flex-content'>
           <h3>Pixel perfect</h3>
           <p>
-            Professionaly designed following the state-of-the-art design
+            Professionally designed following the state-of-the-art design
             specifications that created the same Material Design Icons.
             </p>
           <a
