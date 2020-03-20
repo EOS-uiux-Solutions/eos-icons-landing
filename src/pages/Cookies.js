@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Toogle from '../components/Toggle'
 
 const Cookies = () => {
 
@@ -23,10 +24,7 @@ const Cookies = () => {
           <div class="cookies-preference-wrap">
             <div class="cookie-preference-item">
               <div class="cookie-preference-switch">
-                <label class="cookie-switch">
-                  <input type="checkbox" disabled="" checked="" />
-                <span class="slider round disabled"></span>
-                </label>
+                <Toogle />
               </div>
               <div class="cookie-preference-descrition">
                 <b>Strictly necessary cookies</b>
@@ -37,10 +35,7 @@ const Cookies = () => {
             </div>
             <div class="cookie-preference-item">
               <div class="cookie-preference-switch">
-                <label class="cookie-switch">
-                  <input class="js-analytics-tracking" type="checkbox" />
-                <span class="slider round"></span>
-                </label>
+                <Toogle />
               </div>
               <div class="cookie-preference-descrition">
                 <b>Analytics / Performance</b>
