@@ -1,5 +1,4 @@
-import React, { useReducer, useEffect, useState } from 'react'
-import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
+import React, { useState } from 'react'
 import AppContext from '../utils/AppContext'
 
 /* Components */
@@ -11,8 +10,6 @@ import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToPanel'
 
 const IconsSet = props => {
-
-  const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
 
   const selectIcon = (icon, callback) => {
     setShowPanel(true)
@@ -43,14 +40,6 @@ const IconsSet = props => {
     else {
       return current === iconSelected.name ? true : false
     }
-  }
-
-  const selectAll = () => {
-    return dispatch({ type: 'ADD_ALL_ICONS' })
-  }
-
-  const deselectAll = () => {
-    return dispatch({ type: 'REMOVE_ALL_ICONS' })
   }
 
   return (
@@ -86,7 +75,7 @@ const IconsSet = props => {
                   </div>
                 ) : (
                     <div className='how-to-use-block'>
-                      <CustomizeIconsPanel selectAll={selectAll} deselectAll={deselectAll} />
+                      <CustomizeIconsPanel selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })} deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })} />
                     </div>
                   )}
               </div>
