@@ -1,18 +1,24 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useReducer} from 'react'
+import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
 import Button from '../components/Button'
 import Cookies from 'js-cookie'
 
 const CookiesBanner = () => {
   const [cookiesBanner, setCookiesBanner] = useState(false)
-  
-  const acceptCookies = () => {
-    // Track when the user accept this cookie.
-    Cookies.set('acceptance', 'true', { expires: 60 })
+  const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
+
+  const [cookiesAcceptance, setCookiesAcceptance] = useState(false)
+
+  /* Toggle customizable functionality */
+  const toggleCustomize = (callback) => {
     setCookiesBanner(true)
+    return callback
   }
 
   useEffect(() => {
-    const acceptanceStatus = Cookies.get('acceptance')
+    const acceptanceStatus = Cookies.get('acceptance-remainder')
+    setCookiesAcceptance(Cookies.get('acceptance'))
+
     if (acceptanceStatus) {
       setCookiesBanner(true)
     }
@@ -33,7 +39,7 @@ const CookiesBanner = () => {
         <Button primary='primary' onClick={event =>  window.location.href='/cookies-policy'}>
           Edit preferences
         </Button >
-        <Button onClick={acceptCookies}>
+        <Button onClick={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES', cookiesAcceptance:cookiesAcceptance }))}>
           Accept
         </Button >
       </div>

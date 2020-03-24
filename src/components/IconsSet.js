@@ -65,7 +65,7 @@ const IconsSet = props => {
   return (
     <>
       <div className='toolbar'>
-        <Toogle name='Icon picker' onClick={toggleCustomize} />
+        <Toogle name='Icon picker' id='js-toggle-picker' onClick={toggleCustomize} />
         <SearchIcon onChange={setSearch} />
       </div>
       <Tabs>
