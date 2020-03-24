@@ -11,7 +11,6 @@ import Docs from './pages/Docs'
 import PageNotFound from './pages/PageNotFound'
 import CookiesPage from './pages/Cookies'
 
-
 /* Componets */
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
