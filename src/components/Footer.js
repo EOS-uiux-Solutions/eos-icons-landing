@@ -16,7 +16,7 @@ const footerLinks = [
     label: 'Footer'
   },
   {
-    name: 'Report a issue',
+    name: 'Report an issue',
     href: 'https://gitlab.com/SUSE-UIUX/eos-icons/issues',
     category: 'External link',
     action: 'Link to Gitlab issues',

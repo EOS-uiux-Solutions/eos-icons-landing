@@ -98,7 +98,7 @@ const Docs = () => {
             </code>
           </pre>
           <p>
-            Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our &nbsp;
+            Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our&nbsp;
             <a href="https://eos-icons.eosdesignsystem.com/cheatsheet.html"
               data-event-category="Internal link"
               data-event-action="Link to cheatsheet"
@@ -147,8 +147,8 @@ const Docs = () => {
           </p>
           <p>
             With the extended version you only need to use 1 class for all icons (EOS and Material Design).
-            To implement it, you need to grab the <span className="command"> css/ </span> and<span className="command"> font/ </span> folders available atdist/extended,
-            then add theeos-icons-extended.cssunder the <span className="command"> &lt;head&gt;</span> of your project accordingly.
+            To implement it, you need to grab the <span className="command">css/</span> and <span className="command">font/</span> folders available at dist/extended,
+            then add the eos-icons-extended.css under the <span className="command"> &lt;head&gt;</span> of your project accordingly.
           </p>
           <p>
             For more information about Material Design Icons, please refer to the &nbsp;
