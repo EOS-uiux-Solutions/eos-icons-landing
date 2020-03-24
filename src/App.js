@@ -9,7 +9,7 @@ import Home from './pages/Home'
 import Cheatsheet from './pages/Cheatsheet'
 import Docs from './pages/Docs'
 import PageNotFound from './pages/PageNotFound'
-import Cookies from './pages/Cookies'
+import CookiesPage from './pages/Cookies'
 
 
 /* Componets */
@@ -34,7 +34,7 @@ const App = () => {
             <Home path='/' />
             <Cheatsheet path='/cheatsheet' />
             <Docs path='/docs' />
-            <Cookies path='/cookies-policy' />
+            <CookiesPage path='/cookies-policy' />
             <ThankYou path='/thankyou' />
             <PageNotFound path='*' />
           </Router>

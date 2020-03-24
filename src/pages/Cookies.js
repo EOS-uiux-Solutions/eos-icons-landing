@@ -1,19 +1,36 @@
-import React, { useEffect } from 'react'
+import React, { useReducer, useEffect, useState } from 'react'
+import { iconsReducer, eosIconsState } from '../utils/EosIcons.store'
 import Toogle from '../components/Toggle'
+import Cookies from 'js-cookie'
 
-const Cookies = () => {
+const CookiesPage = () => {
+  const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
+  const [cookiesAcceptance, setCookiesAcceptance] = useState(false)
+  
+  /* Toggle customizable functionality */
+  const toggleCustomize = (callback) => {
+    return callback
+  }
+
+  useEffect(() => {
+    const acceptanceStatus = Cookies.get('acceptance')
+
+    if (acceptanceStatus) {
+      setCookiesAcceptance(true)
+      state.cookiesPreference = true
+    }
+  }, [state.cookiesPreference])
 
   return (
     <div>
       <div className="container">
         <div>
           <h1>Cookie policy</h1>
-          <p class="subheadline">We reserve the right to change this policy when necessary. Any changes 
+          <p className="subheadline">We reserve the right to change this policy when necessary. Any changes 
           to this policy will be posted here. Your continued use of our websites after changes have been 
           posted will constitute your agreement to any such changes.</p>
           
           <hr/>
-          
           <h4>Cookie preferences</h4>
           <p>Some essential features on our sites just won’t work without cookies. And having other 
           cookies switched off can seriously affect the way you’ll be able to enjoy our services.</p>
@@ -21,23 +38,23 @@ const Cookies = () => {
           <p>“Strictly necessary” cookies can’t be turned off. But "Analytics / Performance" cookies 
           can be turned on or off below. You can learn more about cookies and what they do in 
           the link below.</p>
-          <div class="cookies-preference-wrap">
-            <div class="cookie-preference-item">
-              <div class="cookie-preference-switch">
-                <Toogle />
+          <div className="cookies-preference-wrap">
+            <div className="cookie-preference-item">
+              <div className="cookie-preference-switch">
+                <Toogle id='js-cookie-preferenc' />
               </div>
-              <div class="cookie-preference-descrition">
+              <div className="cookie-preference-descrition">
                 <b>Strictly necessary cookies</b>
                 <p>These cookies are essential so that you can move around the website and use its features. 
                 Without these cookies services you have asked for cannot be provided.
                 </p>
               </div>
             </div>
-            <div class="cookie-preference-item">
-              <div class="cookie-preference-switch">
-                <Toogle />
+            <div className="cookie-preference-item">
+              <div className="cookie-preference-switch">
+                <Toogle checkedStatus={state.cookiesPreference} id='js-cookie-preference' onClick={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES', cookiesAcceptance:cookiesAcceptance }))} />
               </div>
-              <div class="cookie-preference-descrition">
+              <div className="cookie-preference-descrition">
                 <b>Analytics / Performance</b>
                 <p>These cookies allow us to collect data which helps us to better understand how the site 
                 its being used.</p>
@@ -58,13 +75,13 @@ const Cookies = () => {
           'analytics cookies' which monitor how visitors use our websites and give us a better understanding of
            what content visitors are spending most time reading so we can continue improving the user experience. 
            The types of cookies used on our website are as follows:</p>
-           <div class="cookies-table">
-            <div class="cookies-table-title">
+           <div className="cookies-table">
+            <div className="cookies-table-title">
               <span>Cookie type</span>
               <span>Purpose</span>
               <span>Name</span>
             </div>
-            <div class="cookies-table-content">
+            <div className="cookies-table-content">
               <div>
                 <p>Analytics / Performance</p>
               </div>
@@ -107,4 +124,4 @@ const Cookies = () => {
   )
 }
 
-export default Cookies
+export default CookiesPage
