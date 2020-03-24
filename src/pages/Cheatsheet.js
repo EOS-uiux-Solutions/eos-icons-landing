@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import AppContext from '../utils/AppContext'
 
-
 import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
 import IconsSet from '../modules/IconsSet'
-import Button from '../components/Button'
 
 const Cheatsheet = () => {
   const [header, setHeader] = useState(true)
