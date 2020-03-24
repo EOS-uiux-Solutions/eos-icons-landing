@@ -12,6 +12,22 @@ const Cheatsheet = () => {
     setHeader(!header)
   }
 
+
+  const search = (file, dispatch) => {
+    const fileReader = new window.FileReader()
+
+    fileReader.onload = function (fileData) {
+      const iconsArray = JSON.parse(fileData.target.result)
+
+      return dispatch({
+        type: 'UPLOAD_PREVIOUS_SELECTION',
+        data: iconsArray.extended_icons
+      })
+    }
+
+    return fileReader.readAsText(file)
+  }
+
   return (
     <AppContext.Consumer>
       {
@@ -37,20 +53,7 @@ const Cheatsheet = () => {
                       </i>
                       Upload JSON
                     </label>
-                    <input type="file" id='upload-file' hidden name="file" onChange={event => {
-                      const fileReader = new window.FileReader()
-
-                      fileReader.onload = function (fileData) {
-                        const iconsArray = JSON.parse(fileData.target.result)
-
-                        return dispatch({
-                          type: 'UPLOAD_PREVIOUS_SELECTION',
-                          data: iconsArray.extended_icons
-                        })
-                      }
-
-                      return fileReader.readAsText(event.target.files[0])
-                    }} />
+                    <input type="file" id='upload-file' hidden name="file" onChange={(event) => search(event.target.files[0], dispatch)} />
                   </div>
                 </PageHeader>
               )}
