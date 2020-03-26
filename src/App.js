@@ -23,7 +23,6 @@ import CookiesBanner from './components/CookiesBanner'
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
-  console.log('MAIN_BIG_STATE: ', state)
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
