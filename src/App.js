@@ -22,7 +22,6 @@ import CookiesBanner from './components/CookiesBanner'
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
-
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className='App'>
