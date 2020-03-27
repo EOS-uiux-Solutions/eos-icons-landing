@@ -2,8 +2,8 @@ options:
   formatter: stylish
 files:
   include: "src/assets/scss/**/*.s+(a|c)ss"
-  ignore: "src/assets/scss/layout/reset.scss",
-  "src/assets/scss/base/prism-theme.scss"
+  ignore: ["src/assets/scss/layout/reset.scss",
+  "src/assets/scss/base/prism-theme.scss"]
 rules:
   # Extends
   extends-before-mixins: 2
