@@ -16,6 +16,12 @@ const IconsSet = props => {
     return callback
   }
 
+  const deSelectIcon = (icon, callback) => {
+    setShowPanel(false)
+    setIconSelected('')
+    return callback; 
+  }
+
   /* Toggle customizable functionality */
   const toggleCustomize = callback => {
     props.action()
@@ -42,47 +48,50 @@ const IconsSet = props => {
 
   return (
     <AppContext.Consumer>
-      {({ state, dispatch }) => (
-        <>
-          <div className='toolbar'>
-            <Toogle
-              name='Icon picker'
-              onClick={() =>
-                toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
-              }
-            />
-            <input
-              className='search-input'
-              type='text'
-              name='search'
-              placeholder='Search Icons...'
-              onChange={event =>
-                dispatch({ type: 'TOGGLE_SEARCH', search: event.target.value })
-              }
-            />
-          </div>
-          <Tabs>
-            <div label='Regular Icons'>
-              <div className='icons-list'>
-                {state.icons.map((ele, index) => {
-                  return (
-                    <Icon
-                      size={36}
-                      active={isActive(ele.name, state)}
-                      key={index}
-                      name={ele.name}
-                      action={() =>
-                        selectIcon(
-                          ele,
-                          dispatch({
-                            type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                            selection: ele.name
-                          })
-                        )
-                      }
-                    />
-                  )
-                })}
+      {
+        ({ state, dispatch }) => (
+          <>
+            <div className='toolbar'>
+              <Toogle name='Icon picker' onClick={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))} />
+              <input
+                className='search-input'
+                type='text'
+                name='search'
+                placeholder='Search Icons...'
+                onChange={event => (dispatch({ type: 'TOGGLE_SEARCH', search: event.target.value }))}
+              />
+            </div>
+            <Tabs>
+              <div label='Regular Icons'>
+                <div className='icons-list'>
+                  {state.icons.map((ele, index) => {
+
+                    return <Icon size={36} 
+                              active={isActive(ele.name, state)} 
+                              key={index} 
+                              name={ele.name} 
+                              action={isActive(ele.name, state) ? () => {state.customize ? dispatch({
+                                type: 'REMOVE_SELECTED_ICON',
+                                selection: ele.name
+                              }): deSelectIcon(ele, dispatch({
+                                type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                                selection: ''
+                              }))} :() => selectIcon(ele, dispatch({
+                                type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                                selection: ele.name
+                              }))} />
+                  }
+                  )}
+                </div>
+                {!state.customize ? (
+                  <div className='how-to-use-block'>
+                    <HowTo show={showPanel} iconName={iconSelected.name} iconTags={iconSelected.tags} type='static' close={closeHowTo} />
+                  </div>
+                ) : (
+                    <div className='how-to-use-block'>
+                      <CustomizeIconsPanel selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })} deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })} />
+                    </div>
+                  )}
               </div>
               {!state.customize ? (
                 <div className='how-to-use-block'>
