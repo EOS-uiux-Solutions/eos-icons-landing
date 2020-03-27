@@ -1,6 +1,4 @@
 stages:
-  - test
-  - build
   - deploy
 
 image: node:10.15.0
@@ -14,47 +12,16 @@ cache:
   key: "$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG"
   paths:
   - node_modules/
-  - vendors/node_modules/
-
-# Start the jobs
-test_lints_sass:
-  stage: test
-  script:
-    - npm run test:sass
-
-test_lints_js:
-  stage: test
-  script:
-    - npm run test:js
-
-test_lints_pug:
-  stage: test
-  script:
-    - npm run test:pug
-
-build_vendors:
-  stage: build
-  script:
-    - npm run build:vendors
-
-build_assets:
-  stage: build
-  script:
-    - npm run build:all-assets
 
 pages:
   stage: deploy
   script:
-    - npm run build:vendors
-    - npm run build:all-assets
-    - npm run build:js
-    - mkdir .public
-    - cp -r dist/* .public
-    - mv .public public/
-  environment:
-    name: production
+  - npm run build
+  - rm -rf public
+  - mv build public
+  - cp public/index.html public/404.html
   artifacts:
     paths:
-      - public
+    - public # mandatory, other folder won't work
   only:
-    - master
+  - master # or dev, the branch you want to publish

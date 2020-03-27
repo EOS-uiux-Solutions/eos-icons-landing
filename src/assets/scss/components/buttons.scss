@@ -1,0 +1,40 @@
+.btn {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  display: inline-block;
+  line-height: 1.5;
+  padding: .375rem .75rem;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-default {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: #343a40;
+    }
+  }
+
+  &-primary {
+    background-color: #343a40;
+    border-color: #343a40;
+    color: white;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}

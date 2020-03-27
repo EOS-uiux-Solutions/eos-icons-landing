@@ -1,0 +1,16 @@
+.how-to-use-block {
+  background-color: $lightest-gray;
+  bottom: 0;
+  padding-bottom: $m;
+  position: fixed;
+  width: 100%;
+  z-index: $z-index-10;
+
+  .container {
+    padding: 0;
+
+    h2 {
+      line-height: 0.4em;
+    }
+  }
+}

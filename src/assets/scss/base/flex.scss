@@ -1,0 +1,23 @@
+.flex {
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+
+  .flex-content {
+    flex: 1 1 0;
+    padding: $m $xl;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+}

@@ -1,55 +1,68 @@
-# EOS project landing page
-![Open Source Love png2](https://badges.frapsoft.com/os/v2/open-source.png?v=103)
-![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Demo: https://eos-icons.eosdesignsystem.com
+## Available Scripts
 
-### Installation
+In the project directory, you can run:
 
-1. `git clone git@gitlab.com:SUSE-UIUX/eos-icons-landing.git`
-2. `cd eos-icons-landing`
-3. Install all dependencies. This will also install the FE vendors in a followup script:
-  ```
-    npm install
-  ```
-4. If you are developing this site, run the watchers with `npm start`
-5. In MacOS, run the server in a new terminal with:
+### `npm start`
 
-    ```
-      npm run serve:macos
-    ```
-    It will build your assets and serve in `localhost:8000`
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-6. In linux, access the dist folder with `cd dist` and start a server:
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-    ```
-      python3 -m http.server
-    ```
+### `npm test`
 
-    or
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-    ```
-      python2 -m SimpleHTTPServer
-    ```
+### `npm run build`
 
-    Depending on the version of Python available in your system
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Running lints:
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-Test all:
-`npm run test:all`
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Sass:
-`npm run test:sass`
+### `npm run eject`
 
-JS:
-`npm run test:js`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Pug:
-`npm run test:pug`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Unit testing:
-`npm run test:unit`
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Generate vendors folder:
-`npm run build:vendors`
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

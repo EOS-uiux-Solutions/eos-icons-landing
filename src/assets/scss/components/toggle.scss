@@ -1,0 +1,50 @@
+.toggle {
+  display: flex;
+  margin: 0 $m;
+
+  .label-name {
+    margin-right: $s;
+  }
+
+  &-label {
+    background: $dark-gray;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    height: 27px;
+    position: relative;
+    transition: background-color 0.2s;
+    width: 50px;
+  }
+
+  &-button {
+    background: $light-color;
+    border-radius: 45px;
+    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+    content: '';
+    height: 25px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    transition: 0.2s;
+    width: 25px;
+  }
+
+  &-checkbox {
+    display: none;
+
+    &:checked + label {
+      background: #ff890a;
+    }
+  }
+
+  &-checkbox:checked + &-label &-button {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+  }
+
+  &-label:active &-button {
+    width: 60px;
+  }
+
+}

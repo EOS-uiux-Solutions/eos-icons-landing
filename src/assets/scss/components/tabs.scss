@@ -1,0 +1,28 @@
+.tabs {
+  margin-top: -67px;
+
+  .tab-list {
+    display: inline-block;
+    position: sticky;
+    top: 77px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .tab-list-item {
+    color: $hyper-link-color;
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 16px;
+  }
+
+  .tab-list-active {
+    background-color: $light-color;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    color: $dark-color;
+  }
+}

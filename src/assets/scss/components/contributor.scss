@@ -1,0 +1,24 @@
+.contributor {
+  color: $dark-black;
+  font-size: .8em;
+  padding: 0 $m;
+
+  .contributors-img {
+    border-radius: 100%;
+    margin: 0 $l;
+    width: 80px;
+  }
+
+  p {
+    margin: 0 0 1.5em;
+  }
+
+  &:hover {
+    color: $hyper-link-color;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $dark-black;
+  }
+}

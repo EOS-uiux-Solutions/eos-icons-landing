@@ -1,1 +1,0 @@
-nodemon -e js -w ./assets/javascripts/** -x "npm run build:js" --on-change-only

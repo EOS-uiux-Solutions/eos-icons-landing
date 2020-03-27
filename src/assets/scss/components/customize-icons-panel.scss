@@ -1,0 +1,51 @@
+.icons-picker-footer {
+  color: #5f5f5f;
+  font-weight: 500;
+  padding: 16px;
+  width: 100%;
+
+  .select-all-icons {
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 15px 25px;
+
+    i {
+      padding-left: 6px;
+      vertical-align: auto;
+    }
+
+    &:hover {
+      color: $dark-color;
+    }
+  }
+
+  .deselect-all-icons {
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 15px 25px;
+
+    i {
+      padding-left: 3px;
+      vertical-align: auto;
+    }
+
+    &:hover {
+      color: $dark-color;
+    }
+  }
+
+  .generate-div {
+    display: block;
+    float: right;
+    margin-right: 110px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+
+    span {
+      display: inline;
+      padding: 10px;
+    }
+  }
+}

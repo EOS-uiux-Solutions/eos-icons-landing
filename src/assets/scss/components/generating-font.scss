@@ -1,0 +1,21 @@
+.icons-picker-loading {
+  display: flex;
+  height: 100%;
+  padding: $m;
+  text-align: center;
+  width: 100%;
+
+  .loading-icon {
+    font-size: 2.0rem;
+    left: 50%;
+    top: 50%;
+
+    img {
+      width: 25%;
+    }
+
+    p {
+      font-size: $m;
+    }
+  }
+}

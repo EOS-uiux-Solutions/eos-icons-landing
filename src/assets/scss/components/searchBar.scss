@@ -1,0 +1,13 @@
+.search-input {
+  border-radius: 20px;
+  border: 0;
+  outline: none;
+  padding: $s;
+  transition: width .15s ease-in-out;
+  width: 160px;
+
+  &:focus {
+    max-width: 200px;
+    width: 200px;
+  }
+}

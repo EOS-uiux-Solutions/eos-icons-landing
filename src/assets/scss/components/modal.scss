@@ -1,0 +1,74 @@
+.modal {
+  background-color: $modal-background-color;
+  display: flex;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: $z-index-100;
+  top: 0;
+
+  &-card {
+    background-color: white;
+    border-radius: $s;
+    left: 50%;
+    max-width: 450px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-content {
+    padding: $l;
+  }
+
+  .modal-btn {
+    color: white;
+    font-weight: bold;
+    padding: 16px !important;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    &-cancel{
+      background-color: #B8BECE;
+      border-radius: 0px 0px 0px 7px;
+    }
+
+    &-accept {
+      background-color: #EB796F;
+      border-radius: 0px 0px 7px 0px;
+    }
+  }
+
+  .close {
+    opacity: 0.3;
+    position: absolute;
+    right: $xl;
+    top: $s;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:before,
+    &:after {
+      background-color: #333;
+      content: ' ';
+      height: $m;
+      left: $m;
+      position: absolute;
+      width: $xs;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}

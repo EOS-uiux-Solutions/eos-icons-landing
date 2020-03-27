@@ -1,0 +1,13 @@
+footer {
+  background: $lightest-gray;
+  bottom: 0;
+
+  .container {
+    padding-bottom: $m;
+    padding-top: $m;
+  }
+
+  a {
+    margin: $s;
+  }
+}

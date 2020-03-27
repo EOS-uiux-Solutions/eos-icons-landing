@@ -1,6 +1,0 @@
-{
-  "strapiURL": "https://eos-strapi.herokuapp.com",
-  "colors": {
-    "stylesheetURL": "https://gitlab.com/SUSE-UIUX/eos/blob/master/assets/stylesheets/base/variables/branding.scss"
-  }
-}
