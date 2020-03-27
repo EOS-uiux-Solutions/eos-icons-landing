@@ -3,9 +3,9 @@
   display: flex;
   height: 100%;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: $z-index-100;
-  top: 0;
 
   &-card {
     background-color: white;
@@ -31,13 +31,13 @@
       opacity: 1;
     }
 
-    &-cancel{
-      background-color: #B8BECE;
+    &-cancel {
+      background-color: #b8bece;
       border-radius: 0px 0px 0px 7px;
     }
 
     &-accept {
-      background-color: #EB796F;
+      background-color: #eb796f;
       border-radius: 0px 0px 7px 0px;
     }
   }
@@ -49,8 +49,8 @@
     top: $s;
 
     &:hover {
-      opacity: 1;
       cursor: pointer;
+      opacity: 1;
     }
 
     &:before,
