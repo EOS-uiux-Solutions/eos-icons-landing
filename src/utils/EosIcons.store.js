@@ -4,8 +4,9 @@ import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
 
 const multipleIcons = []
-const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
-
+const staticIconsOnly = eosIcons.filter(
+  el => animatedIcons.indexOf(el.name) < 0
+)
 
 /* ==========================================================================
   TEMPORAL SOLUTION WHILE WE'RE WORKING ON THE NEW RELEASE
@@ -27,50 +28,60 @@ const eos = eosIcons.reduce((acc, iconName) => {
   return acc
 }, [])
 
-const eosAndMdIcons = [...staticIconsOnly, ...extendedSet.filter(ele => !eos.includes(ele.name))]
+const eosAndMdIcons = [
+  ...staticIconsOnly,
+  ...extendedSet.filter(ele => !eos.includes(ele.name))
+]
 /* ==========================================================================
   END TEMPORAL SOLUTION
 ========================================================================== */
-const allIconsByName = eosAndMdIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
+const allIconsByName = eosAndMdIcons
+  .map(icon => icon.name)
+  .filter(el => animatedIcons.indexOf(el) < 0)
 
 /* EOS Icons state */
 export const eosIconsState = {
   icons: eosAndMdIcons,
+  animatedIcons: animatedIcons,
   multipleIcons,
   customize: false,
-  setMultipleIcons (iconName) {
+  setMultipleIcons(iconName) {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
       : multipleIcons.splice(
-        multipleIcons.findIndex(ele => ele === iconName),
-        1
-      )
+          multipleIcons.findIndex(ele => ele === iconName),
+          1
+        )
     return multipleIcons
   },
-  toggleCustomize () {
+  toggleCustomize() {
     /* Clear arrays when switching between customize */
     multipleIcons.splice(0, multipleIcons.length)
 
     return (this.customize = !this.customize)
   },
-  selectAllIcons () {
+  selectAllIcons() {
     multipleIcons.splice(0, multipleIcons.length)
     multipleIcons.push(...allIconsByName)
     return multipleIcons
   },
-  deselectAllIcons () {
+  deselectAllIcons() {
     multipleIcons.splice(0, multipleIcons.length)
     return multipleIcons
   },
-  setSearchList: function (value) {
+  setSearchRegularList: function(value) {
     return this.icons.filter(
       icon => icon.name.includes(value.toLowerCase()) && icon
     )
   },
-  uploadPreviousSelection: function (value) {
+  setSearchAnimatedList: function(value) {
+    return this.animatedIcons.filter(
+      animatedIcon => animatedIcon.includes(value.toLowerCase()) && animatedIcon
+    )
+  },
+  uploadPreviousSelection: function(value) {
     value.forEach(value => {
-      return !multipleIcons.includes(value) ?
-        multipleIcons.push(value) : ''
+      return !multipleIcons.includes(value) ? multipleIcons.push(value) : ''
     })
     return multipleIcons
   }
@@ -98,10 +109,15 @@ export const iconsReducer = (state, action) => {
         ...state,
         multipleIcons: eosIconsState.deselectAllIcons()
       }
-    case 'TOGGLE_SEARCH':
+    case 'TOGGLE_SEARCH_REGULAR_ICONS':
       return {
         ...state,
-        icons: eosIconsState.setSearchList(action.search)
+        icons: eosIconsState.setSearchRegularList(action.search)
+      }
+    case 'TOGGLE_SEARCH_ANIMATED_ICONS':
+      return {
+        ...state,
+        animatedIcons: eosIconsState.setSearchAnimatedList(action.search)
       }
     case 'UPLOAD_PREVIOUS_SELECTION':
       return {
