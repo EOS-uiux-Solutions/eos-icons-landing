@@ -15,6 +15,7 @@ import PageNotFound from './pages/PageNotFound'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import ThankYou from './components/ThankYou'
+import ScrollToTopBtn from './components/ScrollToTop'
 import AppContext from './utils/AppContext'
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
             <ThankYou path='/thankyou' />
             <PageNotFound path="*"/>
           </Router>
+          < ScrollToTopBtn />
         </div>
         <Footer />
       </div>

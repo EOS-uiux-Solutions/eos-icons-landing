@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import AppContext from '../utils/AppContext'
 
 import PageHeader from '../components/PageHeader'
-import ScrollToTopBtn from '../components/ScrollToTop'
 import DownloadEosIcons from '../components/DownloadEosIcons'
 import IconsSet from '../modules/IconsSet'
 
@@ -59,7 +58,6 @@ const Cheatsheet = () => {
                 </PageHeader>
               )}
             <DownloadEosIcons />
-            < ScrollToTopBtn />
             <IconsSet action={manageHeader} />
           </div>
         )}
