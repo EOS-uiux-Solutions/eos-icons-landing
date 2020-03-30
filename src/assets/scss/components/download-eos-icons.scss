@@ -2,7 +2,7 @@
   align-items: center;
   background: $grad-init;
   border-radius: 27px 0 0 27px;
-  color: $light-color !important;
+  color: $light-color;
   display: flex;
   flex-direction: row;
   height: $eos-md-48;
@@ -30,6 +30,6 @@
 
   .download-icons-text {
     font-family: $font-family;
-    font-size: 1.1em;
+    font-size: $font-size;
   }
 }

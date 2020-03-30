@@ -1,3 +1,6 @@
+$orange-theme: url('../../images/header.png') center, $nav-gradient;
+$purple-theme: url('../../images/header.png') center, $header-gradient;
+
 .page-header {
   align-items: center;
   color: $light-color;
@@ -15,10 +18,10 @@
   }
 
   &-orange {
-    background: url('../../images/header.png') center, linear-gradient(90deg, #FBB369, #FF814A);
+    background: $orange-theme;
   }
 
   &-purple {
-    background: url('../../images/header.png') center, linear-gradient(90deg, #694966, #5C415D);
+    background: $purple-theme;
   }
 }

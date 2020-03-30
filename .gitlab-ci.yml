@@ -1,17 +1,25 @@
 stages:
+  - test
   - deploy
 
 image: node:10.15.0
 
 # Common script to all jobs
-before_script:
-  - npm install
+default:
+  before_script:
+    - npm install
 
 # Lets cache the npm install per stages in the current branch
 cache:
   key: "$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG"
   paths:
   - node_modules/
+
+# Start the jobs
+test_lints_sass:
+  stage: test
+  script:
+    - npm run test:sass
 
 pages:
   stage: deploy
