@@ -1,8 +1,8 @@
 .icons-list {
   @extend .flex;
   @extend .flex-wrap;
-  justify-content: flex-start;
   margin-bottom: $xxxl;
+  width: fit-content;
 
   .active {
     background-color: $grad-init;
