@@ -50,10 +50,10 @@ const IconsSet = props => {
             <div className='toolbar'>
               <Toogle name='Icon picker' onClick={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))} />
               <input
-                className="search-input"
-                type="text"
-                name="search"
-                placeholder="Search Icons..."
+                className='search-input'
+                type='text'
+                name='search'
+                placeholder='Search Icons...'
                 onChange={event => (dispatch({ type: 'TOGGLE_SEARCH', search: event.target.value }))}
               />
             </div>

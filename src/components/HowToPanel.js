@@ -23,10 +23,9 @@ const HowToPanel = props => {
                 readOnly='readOnly'
                 value={`<img src='${iconName}'/>`}
               />
-              <a className='btn btn-primary' target='_blank' rel="noopener noreferrer" href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}>
-                <i className="eos-icons md-18">file_download</i>
-                Download icon
-            </a>
+              <a className='btn btn-primary' target='_blank' rel='noopener noreferrer' href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}>
+                <i className='eos-icons md-18'>file_download</i> Download icon
+              </a>
             </div>
           ) : (
               <>

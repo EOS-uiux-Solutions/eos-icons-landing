@@ -68,7 +68,7 @@ const Home = () => {
           <h2 className='text-center'>
             Handmade to fit top open source players
           </h2>
-          <div className='flex flex-row'>
+          <div className='flex flex-wrap'>
             <img className='brands' src={SUSEimg} alt='SUSE logo' />
             <img
               className='brands'
