@@ -22,9 +22,9 @@
   }
 
   .modal-btn {
-    color: white;
+    color: $light-color;
     font-weight: bold;
-    padding: 16px !important;
+    padding: 16px;
 
     &:hover {
       cursor: pointer;
