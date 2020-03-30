@@ -68,7 +68,7 @@ const CustomizeIconsPanel = props => {
             ? true
             : false
           }
-          okText="Download"
+          okText='Download'
           onOk={() =>
             downloadFont({ timestamp: serverResponse })}
           onCancel={modalToggle}
