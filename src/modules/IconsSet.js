@@ -11,15 +11,9 @@ import HowTo from '../components/HowToPanel'
 
 const IconsSet = props => {
   const selectIcon = (icon, callback) => {
-    setShowPanel(true)
-    setIconSelected(icon)
+    setShowPanel(icon === iconSelected ? false: true)
+    setIconSelected(icon === iconSelected ? '': icon)
     return callback
-  }
-
-  const deSelectIcon = (icon, callback) => {
-    setShowPanel(false)
-    setIconSelected('')
-    return callback; 
   }
 
   /* Toggle customizable functionality */
@@ -65,21 +59,14 @@ const IconsSet = props => {
               <div label='Regular Icons'>
                 <div className='icons-list'>
                   {state.icons.map((ele, index) => {
-
                     return <Icon size={36} 
                               active={isActive(ele.name, state)} 
                               key={index} 
                               name={ele.name} 
-                              action={isActive(ele.name, state) ? () => {state.customize ? dispatch({
-                                type: 'REMOVE_SELECTED_ICON',
-                                selection: ele.name
-                              }): deSelectIcon(ele, dispatch({
-                                type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                                selection: ''
-                              }))} :() => selectIcon(ele, dispatch({
-                                type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                                selection: ele.name
-                              }))} />
+                              action={() => selectIcon(ele, dispatch({
+                                      type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                                      selection: ele.name
+                                    }))} />
                   }
                   )}
                 </div>

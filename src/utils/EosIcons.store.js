@@ -78,10 +78,6 @@ export const eosIconsState = {
       return !multipleIcons.includes(value) ? multipleIcons.push(value) : ''
     })
     return multipleIcons
-  },
-  removeSelectedIcon: function(value) {
-    multipleIcons.splice(multipleIcons.indexOf(value), 1)
-    return multipleIcons;
   }
 }
 
@@ -116,11 +112,6 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         multipleIcons: eosIconsState.uploadPreviousSelection(action.data)
-      }
-    case 'REMOVE_SELECTED_ICON':
-      return {
-        ...state,
-        multipleIcons: eosIconsState.removeSelectedIcon(action.selection)
       }
     default:
       return { ...state }
