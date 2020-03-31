@@ -12,7 +12,7 @@ import HowTo from '../components/HowToPanel'
 const IconsSet = props => {
   const selectIcon = (icon, callback) => {
     setShowPanel(icon !== iconSelected)
-    setIconSelected(icon === iconSelected ? '': icon)
+    setIconSelected(icon === iconSelected ? '' : icon)
     return callback
   }
 
@@ -42,51 +42,47 @@ const IconsSet = props => {
 
   return (
     <AppContext.Consumer>
-      {
-        ({ state, dispatch }) => (
-          <>
-            <div className='toolbar'>
-              <Toogle name='Icon picker' onClick={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))} />
-              <input
-                className='search-input'
-                type='text'
-                name='search'
-                placeholder='Search Icons...'
-                onChange={event => (dispatch({ type: 'TOGGLE_SEARCH', search: event.target.value }))}
-              />
-            </div>
-            <Tabs>
-              <div label='Regular Icons'>
-                <div className='icons-list'>
-                  {state.icons.map((ele, index) => {
-                    return (
-                      <Icon 
-                        size={36} 
-                        active={isActive(ele.name, state)} 
-                        key={index} 
-                        name={ele.name} 
-                        action={() => 
-                          selectIcon(
-                            ele, 
-                            dispatch({
-                              type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                              selection: ele.name
-                                      })
-                          )
-                        } 
-                      />
-                    )
-                  })}
-                </div>
-                {!state.customize ? (
-                  <div className='how-to-use-block'>
-                    <HowTo show={showPanel} iconName={iconSelected.name} iconTags={iconSelected.tags} type='static' close={closeHowTo} />
-                  </div>
-                ) : (
-                    <div className='how-to-use-block'>
-                      <CustomizeIconsPanel selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })} deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })} />
-                    </div>
-                  )}
+      {({ state, dispatch }) => (
+        <>
+          <div className='toolbar'>
+            <Toogle
+              name='Icon picker'
+              onClick={() =>
+                toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
+              }
+            />
+            <input
+              className='search-input'
+              type='text'
+              name='search'
+              placeholder='Search Icons...'
+              onChange={event =>
+                dispatch({ type: 'TOGGLE_SEARCH', search: event.target.value })
+              }
+            />
+          </div>
+          <Tabs>
+            <div label='Regular Icons'>
+              <div className='icons-list'>
+                {state.icons.map((ele, index) => {
+                  return (
+                    <Icon
+                      size={36}
+                      active={isActive(ele.name, state)}
+                      key={index}
+                      name={ele.name}
+                      action={() =>
+                        selectIcon(
+                          ele,
+                          dispatch({
+                            type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                            selection: ele.name
+                          })
+                        )
+                      }
+                    />
+                  )
+                })}
               </div>
               {!state.customize ? (
                 <div className='how-to-use-block'>
@@ -106,6 +102,25 @@ const IconsSet = props => {
                   />
                 </div>
               )}
+            </div>
+            {!state.customize ? (
+              <div className='how-to-use-block'>
+                <HowTo
+                  show={showPanel}
+                  iconName={iconSelected.name}
+                  iconTags={iconSelected.tags}
+                  type='static'
+                  close={closeHowTo}
+                />
+              </div>
+            ) : (
+              <div className='how-to-use-block'>
+                <CustomizeIconsPanel
+                  selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
+                  deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
+                />
+              </div>
+            )}
             <div label='Animated Icons'>
               <div className='icons-list'>
                 <AnimatedIcons />
