@@ -45,7 +45,7 @@ export const eosIconsState = {
   animatedIcons: animatedIcons,
   multipleIcons,
   customize: false,
-  setMultipleIcons(iconName) {
+  setMultipleIcons (iconName) {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
       : multipleIcons.splice(
@@ -54,32 +54,32 @@ export const eosIconsState = {
         )
     return multipleIcons
   },
-  toggleCustomize() {
+  toggleCustomize () {
     /* Clear arrays when switching between customize */
     multipleIcons.splice(0, multipleIcons.length)
 
     return (this.customize = !this.customize)
   },
-  selectAllIcons() {
+  selectAllIcons () {
     multipleIcons.splice(0, multipleIcons.length)
     multipleIcons.push(...allIconsByName)
     return multipleIcons
   },
-  deselectAllIcons() {
+  deselectAllIcons () {
     multipleIcons.splice(0, multipleIcons.length)
     return multipleIcons
   },
-  setSearchRegularList: function(value) {
+  setSearchRegularList: function (value) {
     return this.icons.filter(
       icon => icon.name.includes(value.toLowerCase()) && icon
     )
   },
-  setSearchAnimatedList: function(value) {
+  setSearchAnimatedList: function (value) {
     return this.animatedIcons.filter(
       animatedIcon => animatedIcon.includes(value.toLowerCase()) && animatedIcon
     )
   },
-  uploadPreviousSelection: function(value) {
+  uploadPreviousSelection: function (value) {
     value.forEach(value => {
       return !multipleIcons.includes(value) ? multipleIcons.push(value) : ''
     })

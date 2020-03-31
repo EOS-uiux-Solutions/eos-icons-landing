@@ -1,45 +1,45 @@
-import React, { useState } from 'react';
-import AppContext from '../utils/AppContext';
+import React, { useState } from 'react'
+import AppContext from '../utils/AppContext'
 
 /* Components */
-import Icon from '../components/IconDisplay';
-import Tabs from '../components/Tabs';
-import Toogle from '../components/Toggle';
-import CustomizeIconsPanel from '../components/CustomizeIconsPanel';
-import AnimatedIcons from './AnimatedIcons';
-import HowTo from '../components/HowToPanel';
+import Icon from '../components/IconDisplay'
+import Tabs from '../components/Tabs'
+import Toogle from '../components/Toggle'
+import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
+import AnimatedIcons from './AnimatedIcons'
+import HowTo from '../components/HowToPanel'
 
 const IconsSet = props => {
   const selectIcon = (icon, callback) => {
-    setShowPanel(true);
-    setIconSelected(icon);
-    return callback;
-  };
+    setShowPanel(true)
+    setIconSelected(icon)
+    return callback
+  }
 
   /* Toggle customizable functionality */
   const toggleCustomize = callback => {
-    props.action();
-    return callback;
-  };
+    props.action()
+    return callback
+  }
 
   // show HowTo panel
-  const [iconSelected, setIconSelected] = useState('');
-  const [showPanel, setShowPanel] = useState(false);
-  const [tab, setActiveTab] = useState('Regular Icons');
+  const [iconSelected, setIconSelected] = useState('')
+  const [showPanel, setShowPanel] = useState(false)
+  const [tab, setActiveTab] = useState('Regular Icons')
 
   const closeHowTo = () => {
-    setShowPanel(false);
-    setIconSelected('');
-  };
+    setShowPanel(false)
+    setIconSelected('')
+  }
 
   // Mark icon as active
   const isActive = (current, appState) => {
     if (appState.customize) {
-      return appState.multipleIcons.indexOf(current) >= 0;
+      return appState.multipleIcons.indexOf(current) >= 0
     } else {
-      return current === iconSelected.name;
+      return current === iconSelected.name
     }
-  };
+  }
 
   return (
     <AppContext.Consumer>
@@ -93,7 +93,7 @@ const IconsSet = props => {
                         )
                       }
                     />
-                  );
+                  )
                 })}
               </div>
 
@@ -130,7 +130,7 @@ const IconsSet = props => {
         </>
       )}
     </AppContext.Consumer>
-  );
-};
+  )
+}
 
-export default IconsSet;
+export default IconsSet
