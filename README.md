@@ -1,3 +1,7 @@
+![Open Source Love png2](https://badges.frapsoft.com/os/v2/open-source.png?v=103)
+![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -37,32 +41,31 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## How to contribute
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Code contributions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Please [refer to our Wiki](https://gitlab.com/SUSE-UIUX/eos-icons-landing/-/wikis/home) for coding best practices & guidelines. You'll find information on writing code, how to name a branch, how we release etc.
 
-### Code Splitting
+Once you've read the Wiki, you are ready to fork the project and open a Merge Request. We'll review it as soon as possible.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Design contributions
 
-### Analyzing the Bundle Size
+If you'd like to contribute with design changes, you'll have to do as follows:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+1. [Open an issue](https://gitlab.com/SUSE-UIUX/eos-icons-landing/-/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=)
+2. Add all relevant information to the issue. Please be as descriptive as possible. Add links to references, images, videos, etc.
+3. While working on your design, please make sure you follow our [design guidelines](https://gitlab.com/SUSE-UIUX/eos/wikis/Design-process-and-feedback-gathering).
+5. Once the issue is approved by us, it'll be ready to be implemented.
 
-### Making a Progressive Web App
+### Adding new icons
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+If you'd like to add new icons, you'll need to head over to the [icons repository](https://gitlab.com/SUSE-UIUX/eos-icons) where you'll find thorough instructions on how to design & add icons to the iconic font.
 
-### Advanced Configuration
+# Our "thank you" section
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Tested for every browser in every device
 
-### Deployment
+Thanks to [browserstack](https://www.browserstack.com) and their continuous contribution to open source projects, we continuously test the EOS to make sure all our features and components work perfectly fine in all browsers.
+Browserstack helps us make sure our Design System also delivers a peace of mind to all developers and designers making use of our components and layout in their products.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
