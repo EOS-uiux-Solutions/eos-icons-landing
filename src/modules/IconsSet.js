@@ -59,16 +59,24 @@ const IconsSet = props => {
               <div label='Regular Icons'>
                 <div className='icons-list'>
                   {state.icons.map((ele, index) => {
-                    return <Icon size={36} 
-                              active={isActive(ele.name, state)} 
-                              key={index} 
-                              name={ele.name} 
-                              action={() => selectIcon(ele, dispatch({
-                                      type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                                      selection: ele.name
-                                    }))} />
-                  }
-                  )}
+                    return (
+                      <Icon 
+                        size={36} 
+                        active={isActive(ele.name, state)} 
+                        key={index} 
+                        name={ele.name} 
+                        action={() => 
+                          selectIcon(
+                            ele, 
+                            dispatch({
+                              type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                              selection: ele.name
+                                      })
+                          )
+                        } 
+                      />
+                    )
+                  })}
                 </div>
                 {!state.customize ? (
                   <div className='how-to-use-block'>
