@@ -11,7 +11,7 @@ import HowTo from '../components/HowToPanel'
 
 const IconsSet = props => {
   const selectIcon = (icon, callback) => {
-    setShowPanel(icon === iconSelected ? false: true)
+    setShowPanel(icon !== iconSelected)
     setIconSelected(icon === iconSelected ? '': icon)
     return callback
   }
