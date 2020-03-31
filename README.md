@@ -1,7 +1,6 @@
 ![Open Source Love png2](https://badges.frapsoft.com/os/v2/open-source.png?v=103)
 ![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -56,7 +55,7 @@ If you'd like to contribute with design changes, you'll have to do as follows:
 1. [Open an issue](https://gitlab.com/SUSE-UIUX/eos-icons-landing/-/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=)
 2. Add all relevant information to the issue. Please be as descriptive as possible. Add links to references, images, videos, etc.
 3. While working on your design, please make sure you follow our [design guidelines](https://gitlab.com/SUSE-UIUX/eos/wikis/Design-process-and-feedback-gathering).
-5. Once the issue is approved by us, it'll be ready to be implemented.
+4. Once the issue is approved by us, it'll be ready to be implemented.
 
 ### Adding new icons
 
@@ -68,4 +67,3 @@ If you'd like to add new icons, you'll need to head over to the [icons repositor
 
 Thanks to [browserstack](https://www.browserstack.com) and their continuous contribution to open source projects, we continuously test the EOS to make sure all our features and components work perfectly fine in all browsers.
 Browserstack helps us make sure our Design System also delivers a peace of mind to all developers and designers making use of our components and layout in their products.
-

@@ -19,17 +19,13 @@ const Icon = props => {
     return finalClass
   }
 
-
   return (
     <div className='icon-container'>
-      <i
-        className={iconClass()}
-        onClick={action}
-      >
+      <i className={iconClass()} onClick={action}>
         {name}
       </i>
       {name}
-    </div >
+    </div>
   )
 }
 
