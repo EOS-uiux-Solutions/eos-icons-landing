@@ -11,9 +11,9 @@ default:
 
 # Lets cache the npm install per stages in the current branch
 cache:
-  key: "$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG"
+  key: '$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG'
   paths:
-  - node_modules/
+    - node_modules/
 
 # Start the jobs
 test_lints_sass:
@@ -21,15 +21,20 @@ test_lints_sass:
   script:
     - npm run test:sass
 
+test_lints_js:
+  stage: test
+  script:
+    - npm run format
+
 pages:
   stage: deploy
   script:
-  - npm run build
-  - rm -rf public
-  - mv build public
-  - cp public/index.html public/404.html
+    - npm run build
+    - rm -rf public
+    - mv build public
+    - cp public/index.html public/404.html
   artifacts:
     paths:
-    - public # mandatory, other folder won't work
+      - public # mandatory, other folder won't work
   only:
-  - master # or dev, the branch you want to publish
+    - master # or dev, the branch you want to publish

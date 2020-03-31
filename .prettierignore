@@ -1,0 +1,6 @@
+node_modules
+.gitignore
+.gitlab-ci.yml
+.sass-lint.yml
+src/assets
+src/serviceWorker.js

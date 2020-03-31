@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import bunny from '../assets/images/eos-bunny.png'
 
-
 const ThankYou = props => {
   const { fn, timestamp } = props
 

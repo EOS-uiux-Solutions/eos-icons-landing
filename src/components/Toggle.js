@@ -15,7 +15,7 @@ const Toggle = props => {
       <label className='toggle-label' htmlFor='js-toggle-picker'>
         <span className='toggle-button' />
       </label>
-    </div >
+    </div>
   )
 }
 

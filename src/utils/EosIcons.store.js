@@ -4,8 +4,9 @@ import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
 
 const multipleIcons = []
-const staticIconsOnly = eosIcons.filter(el => animatedIcons.indexOf(el.name) < 0)
-
+const staticIconsOnly = eosIcons.filter(
+  el => animatedIcons.indexOf(el.name) < 0
+)
 
 /* ==========================================================================
   TEMPORAL SOLUTION WHILE WE'RE WORKING ON THE NEW RELEASE
@@ -27,11 +28,16 @@ const eos = eosIcons.reduce((acc, iconName) => {
   return acc
 }, [])
 
-const eosAndMdIcons = [...staticIconsOnly, ...extendedSet.filter(ele => !eos.includes(ele.name))]
+const eosAndMdIcons = [
+  ...staticIconsOnly,
+  ...extendedSet.filter(ele => !eos.includes(ele.name))
+]
 /* ==========================================================================
   END TEMPORAL SOLUTION
 ========================================================================== */
-const allIconsByName = eosAndMdIcons.map(icon => icon.name).filter(el => animatedIcons.indexOf(el) < 0)
+const allIconsByName = eosAndMdIcons
+  .map(icon => icon.name)
+  .filter(el => animatedIcons.indexOf(el) < 0)
 
 /* EOS Icons state */
 export const eosIconsState = {
@@ -42,9 +48,9 @@ export const eosIconsState = {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
       : multipleIcons.splice(
-        multipleIcons.findIndex(ele => ele === iconName),
-        1
-      )
+          multipleIcons.findIndex(ele => ele === iconName),
+          1
+        )
     return multipleIcons
   },
   toggleCustomize () {
@@ -69,8 +75,7 @@ export const eosIconsState = {
   },
   uploadPreviousSelection: function (value) {
     value.forEach(value => {
-      return !multipleIcons.includes(value) ?
-        multipleIcons.push(value) : ''
+      return !multipleIcons.includes(value) ? multipleIcons.push(value) : ''
     })
     return multipleIcons
   }
