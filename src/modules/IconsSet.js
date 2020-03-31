@@ -35,9 +35,9 @@ const IconsSet = props => {
   // Mark icon as active
   const isActive = (current, appState) => {
     if (appState.customize) {
-      return appState.multipleIcons.indexOf(current) < 0 ? false : true;
+      return appState.multipleIcons.indexOf(current) >= 0;
     } else {
-      return current === iconSelected.name ? true : false;
+      return current === iconSelected.name;
     }
   };
 

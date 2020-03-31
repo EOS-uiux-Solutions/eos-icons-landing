@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 // import AnimatedIconsList from '../utils/AnimatedIcons.store'
-import HowTo from '../components/HowToPanel'
+import HowTo from '../components/HowToPanel';
 
 const AnimatedIcons = ({ animatedIconsList }) => {
-  const [iconSelected, setIconSelected] = useState('')
-  const [showPanel, setShowPanel] = useState(false)
+  const [iconSelected, setIconSelected] = useState('');
+  const [showPanel, setShowPanel] = useState(false);
 
   const selectAndShowInfo = iconName => {
-    setIconSelected(iconName)
-    setShowPanel(true)
-  }
+    setIconSelected(iconName);
+    setShowPanel(true);
+  };
 
   const closeHowTo = () => {
-    setShowPanel(false)
-    setIconSelected('')
-  }
+    setShowPanel(false);
+    setIconSelected('');
+  };
 
   return (
     <>
@@ -25,7 +25,7 @@ const AnimatedIcons = ({ animatedIconsList }) => {
             alt={icon}
             className={icon === iconSelected ? 'active' : ''}
             onClick={() => {
-              selectAndShowInfo(icon)
+              selectAndShowInfo(icon);
             }}
           />
           {icon}
@@ -39,7 +39,7 @@ const AnimatedIcons = ({ animatedIconsList }) => {
         close={closeHowTo}
       />
     </>
-  )
-}
+  );
+};
 
-export default AnimatedIcons
+export default AnimatedIcons;

@@ -2,13 +2,13 @@
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
-  border-radius: 30px;
   border: 1px solid transparent;
+  border-radius: 30px;
   display: inline-block;
   line-height: 1.5;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   text-decoration: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   user-select: none;
   vertical-align: middle;
 
@@ -18,23 +18,23 @@
 
   &-default {
     background-color: transparent;
-    border-color: white;
-    color: white;
+    border-color: $light-color;
+    color: $light-color;
 
     &:hover {
       background-color: white;
-      color: #343a40;
+      color: $buttons;
     }
   }
 
   &-primary {
     background-color: #343a40;
-    border-color: #343a40;
-    color: white;
+    border-color: $buttons;
+    color: $light-color;
 
     &:hover {
       background-color: black;
-      color: white;
+      color: $light-color;
     }
   }
 }
