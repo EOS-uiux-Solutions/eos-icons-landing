@@ -24,7 +24,7 @@ test_lints_sass:
 test_lints_js:
   stage: test
   script:
-    - npm run format
+    - npm run test:js
 
 pages:
   stage: deploy

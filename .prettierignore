@@ -4,3 +4,5 @@ node_modules
 .sass-lint.yml
 src/assets
 src/serviceWorker.js
+package-lock.json
+package.json

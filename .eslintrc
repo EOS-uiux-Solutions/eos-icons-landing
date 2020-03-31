@@ -1,4 +1,4 @@
-{
+  {
     "rules": {
         "arrow-spacing": "error",
         "no-const-assign": "error",
@@ -8,4 +8,4 @@
         "prefer-destructuring": ["error", {"object": true, "array": false}],
         "object-curly-spacing": [2, "always"]
     }
-}
+  }
