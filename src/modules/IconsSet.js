@@ -111,7 +111,6 @@ const IconsSet = props => {
                   />
                 </div>
               )}
-            </div>
             <div label='Animated Icons'>
               <div className='icons-list'>
                 <AnimatedIcons />
