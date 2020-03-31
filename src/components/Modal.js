@@ -24,14 +24,14 @@ const Modal = props => {
               align='center'
               onClick={onCancel}
             >
-              {!cancelText ? 'Cancel' : cancelText}
+              {cancelText || 'Cancel'}
             </div>
             <div
               className='flex-content modal-btn modal-btn-accept'
               align='center'
               onClick={onOk}
             >
-              {!okText ? 'Accept' : okText}
+              {okText || 'Accept'}
             </div>
           </div>
         )}
