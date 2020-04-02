@@ -1,20 +1,20 @@
 .icons-list {
   @extend .flex;
   @extend .flex-wrap;
-  justify-content: flex-start;
   margin-bottom: $xxxl;
+  width: fit-content;
 
   .active {
     background-color: $grad-init;
     border-radius: 5px;
-    color: #fff;
+    color: $light-color;
   }
 
   .icon-container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 13px;
+    font-size: $font-size-body;
     font-weight: 300;
     padding: $m;
     width: 130px;

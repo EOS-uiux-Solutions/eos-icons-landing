@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import AnimatedIconsList from '../utils/AnimatedIcons.store'
 import HowTo from '../components/HowToPanel'
 
@@ -18,22 +18,26 @@ const AnimatedIcons = () => {
 
   return (
     <>
-      {
-        (AnimatedIconsList.map((icon, index) =>
-          <div className='icon-container' key={index}>
-            <img
-              src={require(`eos-icons/animated-svg/${icon}.svg`)}
-              alt={icon}
-              className={icon === iconSelected ? 'active' : ''}
-              onClick={() => {
-                selectAndShowInfo(icon)
-              }}
-            />
-            {icon}
-          </div>
-        ))
-      }
-      <HowTo show={showPanel} iconName={iconSelected} iconTags='' type='animated' close={closeHowTo} />
+      {AnimatedIconsList.map((icon, index) => (
+        <div className='icon-container' key={index}>
+          <img
+            src={require(`eos-icons/animated-svg/${icon}.svg`)}
+            alt={icon}
+            className={icon === iconSelected ? 'active' : ''}
+            onClick={() => {
+              selectAndShowInfo(icon)
+            }}
+          />
+          {icon}
+        </div>
+      ))}
+      <HowTo
+        show={showPanel}
+        iconName={iconSelected}
+        iconTags=''
+        type='animated'
+        close={closeHowTo}
+      />
     </>
   )
 }

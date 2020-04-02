@@ -26,3 +26,13 @@
     color: $dark-color;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .tabs {
+    margin-top: 0;
+
+    .tab-list-active {
+      background-color: $lightest-gray;
+    }
+  }
+}

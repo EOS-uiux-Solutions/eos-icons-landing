@@ -23,44 +23,44 @@ const Home = () => {
           <h3>Open source</h3>
           <p>
             Commercial, non-commercial, use them as you please. EOS icons comes
-            with an MIT license, has an open source community, and welcomes
-            your collaboration too.
-            </p>
+            with an MIT license, has an open source community, and welcomes your
+            collaboration too.
+          </p>
           <a
             href='https://gitlab.com/SUSE-UIUX/eos-icons'
             target='_blank'
             rel='noopener noreferrer'
           >
             View the git repository
-            </a>
+          </a>
         </div>
         <div className='flex-content'>
           <h3>Pixel perfect</h3>
           <p>
             Professionally designed following the state-of-the-art design
             specifications that created the same Material Design Icons.
-            </p>
+          </p>
           <a
             href='https://material.io/design/iconography/system-icons.html#grid-keyline-shapes'
             target='_blank'
             rel='noopener noreferrer'
           >
             Creating system icons
-            </a>
+          </a>
         </div>
         <div className='flex-content'>
           <h3>Hi-tech driven</h3>
           <p>
             Made to fit specific niches in software development such as:
             virtualization, cloud computing, software for infrastructure, etc.
-            </p>
+          </p>
           <a
             href='https://gitlab.com/SUSE-UIUX/eos-icons/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D='
             target='_blank'
             rel='noopener noreferrer'
           >
             Request icons for your project
-            </a>
+          </a>
         </div>
       </div>
       <div className='gray-bg'>
@@ -68,13 +68,9 @@ const Home = () => {
           <h2 className='text-center'>
             Handmade to fit top open source players
           </h2>
-          <div className='flex flex-row'>
+          <div className='flex flex-wrap'>
             <img className='brands' src={SUSEimg} alt='SUSE logo' />
-            <img
-              className='brands'
-              src={Kubernetesimg}
-              alt='Kubernetes logo'
-            />
+            <img className='brands' src={Kubernetesimg} alt='Kubernetes logo' />
             <img className='brands' src={openSUSEimg} alt='openSUSE logo' />
             <img
               className='brands'
@@ -100,7 +96,7 @@ const Home = () => {
       <div className='container'>
         <h2 className='text-center'>
           Special thanks to all the superheroes that made it happen
-          </h2>
+        </h2>
         <div className='flex flex-wrap text-center padding-top-md'>
           {contributors.map((ele, i) => (
             <Contributor key={i} {...ele} />

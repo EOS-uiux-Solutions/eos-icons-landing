@@ -34,7 +34,7 @@
     display: none;
 
     &:checked + label {
-      background: #ff890a;
+      background: $grad-init;
     }
   }
 
@@ -46,5 +46,4 @@
   &-label:active &-button {
     width: 60px;
   }
-
 }
