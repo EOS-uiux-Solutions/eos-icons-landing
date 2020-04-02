@@ -13,6 +13,7 @@
   transition: background-color .3s;
   width: 50px;
   z-index: $z-index-100;
+
   &:hover {
     background-color: $dark-black;
     color: $light-color;
