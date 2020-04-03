@@ -29,8 +29,8 @@ const CustomizeIconsPanel = props => {
   const { selectAll, deselectAll } = props
   const value = eosIconsState
 
-  const [modal, setModal] = useState(false);
-  const [serverResponse, setServerResponse] = useState(null);
+  const [modal, setModal] = useState(false)
+  const [serverResponse, setServerResponse] = useState(null)
 
   const modalToggle = () => {
     setModal(!modal)
@@ -68,26 +68,24 @@ const CustomizeIconsPanel = props => {
         </div>
       </div>
 
-      {modal
-        ? <Modal
-          showButtons={serverResponse !== null
-            ? true
-            : false
-          }
-          okText="Download"
-          onOk={() =>
-            downloadFont({ timestamp: serverResponse })}
+      {modal ? (
+        <Modal
+          showButtons={serverResponse !== null}
+          okText='Download'
+          onOk={() => downloadFont({ timestamp: serverResponse })}
           onCancel={modalToggle}
           isActive={modal}
-          show={modalToggle}>
-          {
-            serverResponse === null
-              ? <GeneratingFont />
-              : <ThankYou fn={downloadFont} timestamp={serverResponse} />
-          }
+          show={modalToggle}
+        >
+          {serverResponse === null ? (
+            <GeneratingFont />
+          ) : (
+            <ThankYou fn={downloadFont} timestamp={serverResponse} />
+          )}
         </Modal>
-        : ''
-      }
+      ) : (
+        ''
+      )}
     </>
   )
 }

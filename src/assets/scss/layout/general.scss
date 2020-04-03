@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 
 body {
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-size: $font-size;
   color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
   line-height: $line-height;
 }
 
@@ -13,14 +13,14 @@ body {
 }
 
 .container {
-  max-width: 1140px;
   margin: auto;
+  max-width: 1140px;
   padding: $xl;
 }
 
-.command{
+.command {
   background-color: #fbe5e1;
   border-radius: 4px;
-  color: #c0341d;
+  color: $command;
   padding: 2px 4px;
 }

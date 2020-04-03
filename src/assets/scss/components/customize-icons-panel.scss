@@ -1,5 +1,5 @@
 .icons-picker-footer {
-  color: #5f5f5f;
+  color: $dark-gray;
   font-weight: 500;
   padding: 16px;
   width: 100%;
@@ -40,6 +40,7 @@
     display: block;
     float: right;
     margin-right: 110px;
+    margin-top: 10px;
     padding-bottom: 15px;
 
     span {
