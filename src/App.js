@@ -33,7 +33,7 @@ const App = () => {
             <ThankYou path='/thankyou' />
             <PageNotFound path='*' />
           </Router>
-          < ScrollToTopBtn />
+          <ScrollToTopBtn />
         </div>
         <Footer />
       </div>
