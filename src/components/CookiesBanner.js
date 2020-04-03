@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import AppContext from '../utils/AppContext'
 
 import Button from '../components/Button'
@@ -36,9 +36,9 @@ const CookiesBanner = () => {
               </p>
             </div>
             <div className='cookies-alert-buttons'>
-              <Button primary='primary' onClick={event =>  window.location.href='/cookies-policy'}>
+              <a className='btn btn-primary' href='/cookies-policy'>
                 Edit preferences
-              </Button >
+              </a>
               <Button onClick={() => cookiesHandler(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES' }))}>
                 Accept
               </Button >
