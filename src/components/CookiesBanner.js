@@ -8,7 +8,7 @@ const CookiesBanner = () => {
   const [cookiesBanner, setCookiesBanner] = useState(false)
 
   /* Toggle customizable functionality */
-  const cookiesHandler = (callback) => {
+  const cookiesHandler = callback => {
     setCookiesBanner(true)
     return callback
   }
@@ -22,15 +22,15 @@ const CookiesBanner = () => {
 
   return (
     <AppContext.Consumer>
-      {
-        ({ state, dispatch }) => (
-          <>
-          <div className={cookiesBanner
-                        ? 'cookies-alert hide'
-                        : 'cookies-alert'}>
+      {({ state, dispatch }) => (
+        <>
+          <div
+            className={cookiesBanner ? 'cookies-alert hide' : 'cookies-alert'}
+          >
             <div className='cookies-alert-body'>
               <p>
-                The EOS icons uses cookies to help us learn more about how we can improve the design system.
+                The EOS icons uses cookies to help us learn more about how we
+                can improve the design system.
                 <br />
                 <a href='/cookies-policy'>Learn more about our cookie policy</a>
               </p>
@@ -39,14 +39,17 @@ const CookiesBanner = () => {
               <a className='btn btn-primary' href='/cookies-policy'>
                 Edit preferences
               </a>
-              <Button onClick={() => cookiesHandler(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES' }))}>
+              <Button
+                onClick={() =>
+                  cookiesHandler(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES' }))
+                }
+              >
                 Accept
-              </Button >
+              </Button>
             </div>
           </div>
-          </>
-        )
-      }
+        </>
+      )}
     </AppContext.Consumer>
   )
 }

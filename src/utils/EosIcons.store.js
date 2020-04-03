@@ -65,7 +65,7 @@ export const eosIconsState = {
     Cookies.set('acceptance-remainder', 'true')
 
     const acceptanceStatus = Cookies.get('acceptance')
-    if(acceptanceStatus){
+    if (acceptanceStatus) {
       Cookies.remove('cookies-preference')
       Cookies.remove('acceptance')
     } else {

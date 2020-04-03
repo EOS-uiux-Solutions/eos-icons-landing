@@ -63,7 +63,7 @@
   }
 
   input:checked[disabled] {
-    background-color: $light-gray
+    background-color: $light-gray;
   }
 
   input:checked + .slider:before {

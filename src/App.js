@@ -19,7 +19,6 @@ import ScrollToTopBtn from './components/ScrollToTop'
 import AppContext from './utils/AppContext'
 import CookiesBanner from './components/CookiesBanner'
 
-
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
   return (

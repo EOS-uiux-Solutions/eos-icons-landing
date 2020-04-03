@@ -2,21 +2,21 @@
   background: $light-gray;
   bottom: 0;
   display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: $s 0;
   position: fixed;
   right: 0;
   width: 100%;
   z-index: 1030;
-  justify-content: space-between;
 
   .cookies-alert-body {
-    margin: 0 $xxl; 
+    margin: 0 $xxl;
   }
 
   .cookies-alert-buttons {
-    padding: $l 0;
     margin-right: $xxl;
+    padding: $l 0;
 
     a {
       margin-right: $m;

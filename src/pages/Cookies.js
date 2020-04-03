@@ -10,7 +10,7 @@ const CookiesPage = () => {
     return callback
   }
 
-  const isAccepted = () => Cookies.get('acceptance') ? true : false
+  const isAccepted = () => Cookies.get('acceptance') === 'true'
 
   return (
     <AppContext.Consumer>
@@ -34,7 +34,7 @@ const CookiesPage = () => {
                 <div className="cookies-preference-wrap">
                   <div className="cookie-preference-item">
                     <div className="cookie-preference-switch">
-                      <Toogle id='js-cookie-preferenc' checkedStatus={true} disabledStatus={true} />
+                      <Toogle id='js-cookie-preference-switch' checkedStatus disabledStatus />
                     </div>
                     <div className="cookie-preference-descrition">
                       <b>Strictly necessary cookies</b>

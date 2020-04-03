@@ -39,7 +39,7 @@
   }
 
   &-checkbox:checked {
-    &:disabled + label{
+    &:disabled + label {
       background-color: #969494;
       cursor: not-allowed;
     }
