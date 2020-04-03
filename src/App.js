@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import Cheatsheet from './pages/Cheatsheet'
 import Docs from './pages/Docs'
 import PageNotFound from './pages/PageNotFound'
+import CookiesPage from './pages/Cookies'
 
 /* Componets */
 import Navigation from './components/Navigation'
@@ -16,11 +17,10 @@ import Footer from './components/Footer'
 import ThankYou from './components/ThankYou'
 import ScrollToTopBtn from './components/ScrollToTop'
 import AppContext from './utils/AppContext'
+import CookiesBanner from './components/CookiesBanner'
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
-  console.log('MAIN_BIG_STATE: ', state)
-
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className='App'>
@@ -30,11 +30,13 @@ const App = () => {
             <Home path='/' />
             <Cheatsheet path='/cheatsheet' />
             <Docs path='/docs' />
+            <CookiesPage path='/cookies-policy' />
             <ThankYou path='/thankyou' />
             <PageNotFound path='*' />
           </Router>
           <ScrollToTopBtn />
         </div>
+        <CookiesBanner />
         <Footer />
       </div>
     </AppContext.Provider>

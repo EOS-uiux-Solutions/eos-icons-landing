@@ -17,21 +17,24 @@
   }
 
   &-default {
-    background-color: transparent;
-    border-color: $light-color;
+    background-color: $grad-init;
+    border-color: $grad-init;
     color: $light-color;
 
     &:hover {
-      background-color: white;
-      color: $buttons;
+      background-color: $primary-light;
+      border-color: $primary-light;
+      color: $light-color;
     }
   }
 
   &-primary {
-    background-color: #343a40;
+    background-color: $buttons;
     border-color: $buttons;
     color: $light-color;
 
+    &:visited,
+    &:active,
     &:hover {
       background-color: black;
       color: $light-color;
