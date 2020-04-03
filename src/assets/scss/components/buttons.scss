@@ -32,6 +32,8 @@
     border-color: $buttons;
     color: $light-color;
 
+    &:visited,
+    &:active,
     &:hover {
       background-color: black;
       color: $light-color;
