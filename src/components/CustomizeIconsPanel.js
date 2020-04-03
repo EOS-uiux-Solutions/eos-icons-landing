@@ -37,7 +37,7 @@ const CustomizeIconsPanel = props => {
   }
 
   const generateFont = e => {
-    if(value.multipleIcons.length > 0){
+    if (value.multipleIcons.length > 0) {
       e.preventDefault()
       modalToggle()
       sendData({
@@ -45,11 +45,7 @@ const CustomizeIconsPanel = props => {
         payload: value.multipleIcons
       }).then(setServerResponse)
     }
-    else {
-      window.alert(`Please select atleast one icon`)
-    }
   }
-  
 
   return (
     <>
