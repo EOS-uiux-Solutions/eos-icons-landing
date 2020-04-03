@@ -31,7 +31,7 @@ const footerLinks = [
   },
   {
     name: 'Cookie policy',
-    href: 'https://eos-icons.eosdesignsystem.com/cookies-policy.html',
+    href: '/cookies-policy',
     category: 'External link',
     action: '',
     label: 'Footer'

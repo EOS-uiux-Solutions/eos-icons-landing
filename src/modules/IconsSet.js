@@ -47,6 +47,7 @@ const IconsSet = props => {
           <div className='toolbar'>
             <Toogle
               name='Icon picker'
+              id='js-icon-picker'
               onClick={() =>
                 toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
               }
