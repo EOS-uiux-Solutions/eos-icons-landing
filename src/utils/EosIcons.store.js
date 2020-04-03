@@ -2,9 +2,6 @@ import { createContext } from 'react'
 import eosIcons from 'eos-icons/dist/js/eos-icons.json'
 import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
-
-import Cookies from 'js-cookie'
-
 import Cookies from 'js-cookie'
 
 const multipleIcons = []
