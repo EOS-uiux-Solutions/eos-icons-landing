@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import AppContext from '../utils/AppContext'
+
 import Button from '../components/Button'
 import Cookies from 'js-cookie'
 
@@ -6,22 +8,23 @@ const CookiesBanner = () => {
   const [cookiesBanner, setCookiesBanner] = useState(false)
 
   /* Toggle customizable functionality */
-  const cookiesHandler = () => {
-    Cookies.set('acceptance', 'true', { expires: 60 })
-    Cookies.set('cookies-preference', 'true')
-    Cookies.set('acceptance-remainder', 'true')
+  const cookiesHandler = (callback) => {
     setCookiesBanner(true)
+    return callback
   }
 
   useEffect(() => {
     const acceptanceStatus = Cookies.get('acceptance-remainder')
-    console.log()
     if (acceptanceStatus) {
       setCookiesBanner(true)
     }
   }, [cookiesBanner])
 
   return (
+    <AppContext.Consumer>
+      {
+        ({ state, dispatch }) => (
+          <>
           <div className={cookiesBanner
                         ? 'cookies-alert hide'
                         : 'cookies-alert'}>
@@ -36,11 +39,15 @@ const CookiesBanner = () => {
               <Button primary='primary' onClick={event =>  window.location.href='/cookies-policy'}>
                 Edit preferences
               </Button >
-              <Button onClick={cookiesHandler}>
+              <Button onClick={() => cookiesHandler(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES' }))}>
                 Accept
               </Button >
             </div>
           </div>
+          </>
+        )
+      }
+    </AppContext.Consumer>
   )
 }
 

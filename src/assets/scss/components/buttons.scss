@@ -17,13 +17,13 @@
   }
 
   &-default {
-    background-color: transparent;
-    border-color: $light-color;
-    color: $light-color;
+    background-color: #ff890a;
+    border-color: #ff890a;
+    color: white;
 
     &:hover {
-      background-color: white;
-      color: $buttons;
+      background-color: #f87136;
+      color: white;
     }
   }
 

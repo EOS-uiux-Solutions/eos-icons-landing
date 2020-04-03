@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Toggle = props => {
-  const { onClick, name, id, checkedStatus, disabledStatus} = props
+  const { onClick, onChange, name, id, checkedStatus, disabledStatus} = props
 
   return (
     <div className='toggle'>
@@ -12,6 +12,7 @@ const Toggle = props => {
         type='checkbox'
         checked={checkedStatus}
         onClick={onClick}
+        onChange={onChange}
         disabled={disabledStatus}
       />
       <label className='toggle-label' htmlFor={id}>
