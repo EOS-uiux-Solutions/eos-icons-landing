@@ -48,7 +48,7 @@ const IconsSet = props => {
         ({ state, dispatch }) => (
           <>
             <div className='toolbar'>
-              <Toogle name='Icon picker' onClick={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))} />
+              <Toogle name='Icon picker' id='js-icons-set' onClick={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))} />
               <input
                 className="search-input"
                 type="text"

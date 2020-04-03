@@ -7,24 +7,10 @@ const CookiesPage = () => {
   
   /* Toggle customizable functionality */
   const toggleCustomize = (callback) => {
-    const acceptanceStatus = Cookies.get('acceptance')
-    if(acceptanceStatus){
-      Cookies.remove('cookies-preference')
-      Cookies.remove('acceptance')
-      return callback
-    } else {
-      Cookies.set('acceptance', 'true', { expires: 60 })
-      Cookies.set('cookies-preference', 'true')
-      return callback
-    }
+    return callback
   }
 
-  const isAccepted = () => {
-    const acceptanceStatus = Cookies.get('acceptance')
-    if(acceptanceStatus){
-      return true
-    }
-  }
+  const isAccepted = () => Cookies.get('acceptance') ? true : false
 
   return (
     <AppContext.Consumer>
@@ -60,7 +46,7 @@ const CookiesPage = () => {
                   </div>
                   <div className="cookie-preference-item">
                     <div className="cookie-preference-switch">
-                      <Toogle checkedStatus={isAccepted()} id='js-cookie-preference' onClick={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES' }))} />
+                      <Toogle checkedStatus={isAccepted()} id='js-cookie-preference' onChange={() => toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES' }))} />
                     </div>
                     <div className="cookie-preference-descrition">
                       <b>Analytics / Performance</b>
