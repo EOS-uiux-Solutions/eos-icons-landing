@@ -1,26 +1,34 @@
-![Open Source Love png2](https://badges.frapsoft.com/os/v2/open-source.png?v=103)
-![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://icons.eosdesignsystem.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Visit the [EOS icons website](https://icons.eosdesignsystem.com)
 
-## Available Scripts
+# Guideline to develop this site
 
 In the project directory, you can run:
 
-### `npm start`
+### Starting up the project
 
-Runs the app in the development mode.<br />
+After cloning this repository you will need to install all the dependencies: `npm i`
+
+Then run: `npm start` to run the app in the development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+### JS and SCSS quality assurance
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before submitting a PR/MR make sure your code is compliant with our JS rules by running: `npm run test:js`
+You can format it automatically by running: `npm run format`.
 
-### `npm run build`
+To make sure your SCSS is compliant run: `npm run test:scss`
+
+### Build it to ensure it will work on production
+
+`npm run build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -30,23 +38,14 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## How to contribute
+# How to contribute
 
 ### Code contributions
 
-Please [refer to our Wiki](https://gitlab.com/SUSE-UIUX/eos-icons-landing/-/wikis/home) for coding best practices & guidelines. You'll find information on writing code, how to name a branch, how we release etc.
-
-Once you've read the Wiki, you are ready to fork the project and open a Merge Request. We'll review it as soon as possible.
+1. Open a new or pick an open issue from the issue list and claim it in the comments. Make sure that the issue is confirmed so you don't work on something that will not be approved to be merged.
+2. Make sure you follow our best practices: [refer to our Wiki](https://gitlab.com/SUSE-UIUX/eos-icons-landing/-/wikis/home). You'll find information on writing code, how to name a branch, how we release, etc.
+3. Join Slack [optional] to get in touch with the maintainers if you have any doubt: [join slack](http://slack.eosdesignsystem.com/)
+4. Make sure you fork the project, cloning it will not give you the right access to open a PR/MR. [How to open a PR in open source](https://gitlab.com/SUSE-UIUX/eos/-/wikis/Basic-git-instructions-for-beginners)
 
 ### Design contributions
 
