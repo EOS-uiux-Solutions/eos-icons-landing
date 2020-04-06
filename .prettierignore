@@ -6,3 +6,4 @@ src/assets
 src/serviceWorker.js
 package-lock.json
 package.json
+.gitlab/
