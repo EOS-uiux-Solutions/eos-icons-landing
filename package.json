@@ -1,7 +1,8 @@
 {
-  "name": "eos-icons-react",
-  "version": "0.1.0",
-  "private": true,
+  "name": "EOS-icons-landing",
+  "version": "3.0.0",
+  "description": "The open source iconic font made for EOS Design System to work together with Material Icons.",
+  "private": false,
   "homepage": "https://icons.eosdesignsystem.com/",
   "dependencies": {
     "@reach/router": "^1.2.1",
@@ -45,5 +46,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "keywords": [
+    "iconic",
+    "font",
+    "eos",
+    "icons"
+  ],
+  "author": "SUSE UX/UI team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/SUSE-UIUX/eos-icons-landing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/SUSE-UIUX/eos-icons-landing.git"
   }
 }
