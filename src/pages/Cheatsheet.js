@@ -14,7 +14,7 @@ const Cheatsheet = () => {
     return globalHistory.listen(() =>
       state.customize ? dispatch({ type: 'TOGGLE_CUSTOMIZE' }) : ''
     )
-  }, [state.customize, dispatch])
+  })
 
   const manageHeader = () => {
     setHeader(!header)
