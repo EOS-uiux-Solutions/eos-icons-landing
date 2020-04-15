@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import AppContext from '../utils/AppContext'
+import { globalHistory } from '@reach/router'
 
 import PageHeader from '../components/PageHeader'
 import DownloadEosIcons from '../components/DownloadEosIcons'
@@ -7,6 +8,13 @@ import IconsSet from '../modules/IconsSet'
 
 const Cheatsheet = () => {
   const [header, setHeader] = useState(true)
+  const { state, dispatch } = useContext(AppContext)
+
+  useEffect(() => {
+    return globalHistory.listen(() =>
+      state.customize ? dispatch({ type: 'TOGGLE_CUSTOMIZE' }) : ''
+    )
+  })
 
   const manageHeader = () => {
     setHeader(!header)
