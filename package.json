@@ -1,5 +1,5 @@
 {
-  "name": "EOS-icons-landing",
+  "name": "eos-icons-landing",
   "version": "3.0.0",
   "description": "The open source iconic font made for EOS Design System to work together with Material Icons.",
   "private": false,
@@ -10,7 +10,7 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
-    "eos-icons": "^3.1.0",
+    "eos-icons": "^4.0.1",
     "js-cookie": "^2.2.1",
     "node-sass": "^4.13.1",
     "prismjs": "^1.19.0",

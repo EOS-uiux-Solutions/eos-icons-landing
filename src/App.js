@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 import { Router } from '@reach/router'
 import { iconsReducer, eosIconsState } from './utils/EosIcons.store'
-import '../node_modules/eos-icons/dist/extended/css/eos-icons-extended.css'
+import '../node_modules/eos-icons/dist/css/eos-icons.css'
 import './assets/scss/index.scss'
 
 /* Pages */
