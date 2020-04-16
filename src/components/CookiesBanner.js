@@ -29,8 +29,8 @@ const CookiesBanner = () => {
           >
             <div className='cookies-alert-body'>
               <p>
-                The EOS icons uses cookies to help us learn more about how we
-                can improve the design system.
+                EOS Icons uses cookies to help us learn more about how we
+                can improve our product.
                 <br />
                 <a href='/cookies-policy'>Learn more about our cookie policy</a>
               </p>
