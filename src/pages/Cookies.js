@@ -82,7 +82,7 @@ const CookiesPage = () => {
               <hr />
               <h4>Our use of cookies</h4>
               <p>
-                Like many websites, the EOS Icons uses 'cookies'. A cookie is a
+                Like many websites, EOS Icons uses 'cookies'. A cookie is a
                 small file of letters and numbers that is placed on your
                 computer's hard drive when you visit certain websites. We may
                 use cookies to tell us, for example, whether you have visited us
