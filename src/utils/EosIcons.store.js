@@ -6,9 +6,7 @@ import Cookies from 'js-cookie'
 const multipleIcons = []
 const iconsCategory = []
 
-const staticIconsOnly = eosIcons.filter(
-  el => animatedIcons.indexOf(el.name) < 0
-)
+const filterOutAnimated = eosIcons.filter(ele => animatedIcons.indexOf(ele.name) < 0)
 
 const allIconsByName = eosIcons
   .map(icon => icon.name)
@@ -16,7 +14,7 @@ const allIconsByName = eosIcons
 
 /* EOS Icons state */
 export const eosIconsState = {
-  icons: eosIcons,
+  icons: filterOutAnimated,
   iconsCategory,
   multipleIcons,
   customize: false,
