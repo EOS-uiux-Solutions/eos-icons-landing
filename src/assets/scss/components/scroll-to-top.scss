@@ -1,0 +1,25 @@
+.scroll-to-top-btn {
+  background-color: $light-color;
+  border: 0;
+  border-radius: 50%;
+  bottom: 30px;
+  box-shadow: 2px 2px 5px $shadow-color;
+  cursor: pointer;
+  display: none;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  text-align: center;
+  transition: background-color .3s;
+  width: 50px;
+  z-index: $z-index-100;
+
+  &:hover {
+    background-color: $dark-black;
+    color: $light-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

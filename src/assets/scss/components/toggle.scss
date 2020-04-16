@@ -38,6 +38,13 @@
     }
   }
 
+  &-checkbox:checked {
+    &:disabled + label {
+      background-color: #969494;
+      cursor: not-allowed;
+    }
+  }
+
   &-checkbox:checked + &-label &-button {
     left: calc(100% - 1px);
     transform: translateX(-100%);
