@@ -10,3 +10,10 @@
   cursor: pointer;
   float: right;
 }
+
+.padding-top-xs {
+
+  @media (max-width: 342px) {
+    padding-top: $s;
+  }
+}

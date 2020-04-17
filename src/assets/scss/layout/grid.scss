@@ -1,0 +1,20 @@
+.col-md {
+
+  @media (max-width: 663px) {
+    display: inline;
+    text-align: center;
+
+    .flex-content {
+      flex: 1 1 0;
+      padding: $m $xl;
+
+      &:first-of-type {
+        padding-left: inherit;
+      }
+
+      &:last-of-type {
+        padding-right: inherit;
+      }
+    }
+  }
+}

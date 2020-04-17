@@ -15,14 +15,14 @@ const NavLink = props => (
 
 const Navigation = () => {
   return (
-    <header>
+    <header className='flex-wrap-sm'>
       <Link to='/'>
         <div className='brand'>
           <img className='logo' src={eosIcon} alt='' />
-          Icons
+          <span className='brand-text'>Icons</span>
         </div>
       </Link>
-      <nav>
+      <nav className='padding-top-xs'>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/cheatsheet'>Cheatsheet </NavLink>
         <NavLink to='/docs'>Docs </NavLink>

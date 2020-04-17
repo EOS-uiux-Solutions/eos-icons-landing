@@ -18,7 +18,7 @@ const Home = () => {
           your product needs.
         </h1>
       </PageHeader>
-      <div className='container flex'>
+      <div className='container flex col-md'>
         <div className='flex-content'>
           <h3>Open source</h3>
           <p>
