@@ -4,7 +4,6 @@ import animatedIcons from './AnimatedIcons.store.js'
 import Cookies from 'js-cookie'
 
 const multipleIcons = []
-// const iconsCategory = []
 
 const filterOutAnimated = eosIcons.filter(
   ele => animatedIcons.indexOf(ele.name) < 0
