@@ -6,7 +6,9 @@ import Cookies from 'js-cookie'
 const multipleIcons = []
 const iconsCategory = []
 
-const filterOutAnimated = eosIcons.filter(ele => animatedIcons.indexOf(ele.name) < 0)
+const filterOutAnimated = eosIcons.filter(
+  ele => animatedIcons.indexOf(ele.name) < 0
+)
 
 const allIconsByName = eosIcons
   .map(icon => icon.name)
@@ -23,10 +25,10 @@ export const eosIconsState = {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
       : multipleIcons.splice(
-        multipleIcons.findIndex(ele => ele === iconName),
-        1
-      )
-    console.log('eosIcons: ', eosIcons);
+          multipleIcons.findIndex(ele => ele === iconName),
+          1
+        )
+    console.log('eosIcons: ', eosIcons)
     return multipleIcons
   },
   toggleCustomize () {

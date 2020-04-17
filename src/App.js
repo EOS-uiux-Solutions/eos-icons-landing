@@ -21,29 +21,6 @@ import CookiesBanner from './components/CookiesBanner'
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
-  const icons = state.icons;
-
-  /* Create an array with categories */
-  const categories = Array.from(new Set(icons.map(ele => {
-    if (typeof ele.category === 'string') return ele.category
-    if (typeof ele.category === 'object') return ele.category[0]
-  })))
-
-  const filteredByCategories = categories.map(category => {
-    console.log('category: ', category);
-    return icons.map(icon => {
-      if (icon.category === category || icon.category[0] === category) return icon
-    })
-  })
-  console.log('filteredByCategories: ', filteredByCategories);
-
-  const x = filteredByCategories.map(categoryArray => {
-
-    // return {
-    //   category: categoryArray[0].category,
-    //   icons: categoryArray.map(ele => ele)
-    // }
-  })
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
