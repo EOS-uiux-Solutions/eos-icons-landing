@@ -15,17 +15,25 @@ const allIconsByName = eosIcons
   .filter(el => animatedIcons.indexOf(el) < 0)
 
 /* Create an array with categories */
-const categories = Array.from(new Set(filterOutAnimated.map(ele => {
-  if (typeof ele.category === 'string') return ele.category
-  if (typeof ele.category === 'object') return ele.category[0]
+const categories = Array.from(
+  new Set(
+    filterOutAnimated.map(ele => {
+      if (typeof ele.category === 'string') return ele.category
+      if (typeof ele.category === 'object') return ele.category[0]
 
-  return true
-})))
+      return true
+    })
+  )
+)
 
 const iconsCategory = categories.map(category => {
   return {
     category: category,
-    icons: filterOutAnimated.map(ele => (ele.category === category || ele.category[0] === category) ? ele : null).filter(ele => ele !== null)
+    icons: filterOutAnimated
+      .map(ele =>
+        ele.category === category || ele.category[0] === category ? ele : null
+      )
+      .filter(ele => ele !== null)
   }
 })
 
@@ -40,9 +48,9 @@ export const eosIconsState = {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
       : multipleIcons.splice(
-        multipleIcons.findIndex(ele => ele === iconName),
-        1
-      )
+          multipleIcons.findIndex(ele => ele === iconName),
+          1
+        )
     return multipleIcons
   },
   toggleCustomize () {
@@ -77,7 +85,9 @@ export const eosIconsState = {
     return this.iconsCategory.map(ele => {
       return {
         category: ele.category,
-        icons: ele.icons.filter(ele => ele.name.includes(value.toLowerCase()) && ele)
+        icons: ele.icons.filter(
+          ele => ele.name.includes(value.toLowerCase()) && ele
+        )
       }
     })
   },

@@ -66,27 +66,33 @@ const IconsSet = props => {
             <div label='Regular Icons'>
               <div className='icons-list' style={{ flexDirection: 'column' }}>
                 {state.iconsCategory.map((ele, index) => {
-                  return (
-                    ele.icons.length > 0 ? <div className='icons-list-category' key={index} >
+                  return ele.icons.length > 0 ? (
+                    <div className='icons-list-category' key={index}>
                       <h3>{ele.category}</h3>
-                      <div className="icons-list-category-icons">
-                        {ele.icons.map((ele, i) => <Icon
-                          size={36}
-                          active={isActive(ele.name, state)}
-                          key={i}
-                          name={ele.name}
-                          action={() =>
-                            selectIcon(
-                              ele,
-                              dispatch({
-                                type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                                selection: ele.name
-                              })
-                            )
-                          }
-                        />)}
+                      <div className='icons-list-category-icons'>
+                        {ele.icons.map((ele, i) => (
+                          <Icon
+                            size={36}
+                            active={isActive(ele.name, state)}
+                            key={i}
+                            name={ele.name}
+                            action={() =>
+                              selectIcon(
+                                ele,
+                                dispatch({
+                                  type: state.customize
+                                    ? 'ADD_MULTIPLE_ICONS'
+                                    : '',
+                                  selection: ele.name
+                                })
+                              )
+                            }
+                          />
+                        ))}
                       </div>
-                    </div> : ''
+                    </div>
+                  ) : (
+                    ''
                   )
                 })}
               </div>
@@ -101,13 +107,13 @@ const IconsSet = props => {
                   />
                 </div>
               ) : (
-                  <div className='how-to-use-block'>
-                    <CustomizeIconsPanel
-                      selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
-                      deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
-                    />
-                  </div>
-                )}
+                <div className='how-to-use-block'>
+                  <CustomizeIconsPanel
+                    selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
+                    deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
+                  />
+                </div>
+              )}
             </div>
             {!state.customize ? (
               <div className='how-to-use-block'>
@@ -120,13 +126,13 @@ const IconsSet = props => {
                 />
               </div>
             ) : (
-                <div className='how-to-use-block'>
-                  <CustomizeIconsPanel
-                    selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
-                    deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
-                  />
-                </div>
-              )}
+              <div className='how-to-use-block'>
+                <CustomizeIconsPanel
+                  selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
+                  deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
+                />
+              </div>
+            )}
             <div label='Animated Icons'>
               <div className='icons-list'>
                 <AnimatedIcons />
