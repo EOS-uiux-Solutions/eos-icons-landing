@@ -1,11 +1,40 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import Button from './Button'
 
 const HowToPanel = props => {
   const { show, close, iconName, type, iconTags } = props
 
+  const ref = useRef()
+
+  function useOnClickOrEsc (ref, handler) {
+    useEffect(() => {
+      const listenerMousedown = event => {
+        if (!ref.current || ref.current.contains(event.target)) {
+          return
+        }
+        handler(event)
+      }
+
+      const listenerKeydown = event => {
+        if (event.keyCode === 27) {
+          handler(event)
+        }
+      }
+
+      document.addEventListener('mousedown', listenerMousedown)
+      document.addEventListener('keydown', listenerKeydown)
+
+      return () => {
+        document.removeEventListener('mousedown', listenerMousedown)
+        document.removeEventListener('keydown', listenerKeydown)
+      }
+    }, [ref, handler])
+  }
+
+  useOnClickOrEsc(ref, () => close())
+
   return show ? (
-    <div className='how-to-use-block'>
+    <div ref={ref} className='how-to-use-block'>
       <div className='container'>
         <h2>
           How to use it:
