@@ -7,7 +7,7 @@ const Tabs = props => {
   return (
     <div className='tabs'>
       <ol className='tab-list'>
-        {children.map(child => {
+        {children.map((child, idx) => {
           const { label } = child.props
           return (
             <li
@@ -16,7 +16,7 @@ const Tabs = props => {
                   ? 'tab-list-item tab-list-active'
                   : 'tab-list-item'
               }
-              key={label}
+              key={idx}
               onClick={() => setActiveTab(label)}
             >
               {label}

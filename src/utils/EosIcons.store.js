@@ -1,48 +1,45 @@
 import { createContext } from 'react'
 import eosIcons from 'eos-icons/dist/js/eos-icons.json'
-import extendedIcons from 'eos-icons/dist/extended/js/glyph-list.json'
 import animatedIcons from './AnimatedIcons.store.js'
 import Cookies from 'js-cookie'
 
 const multipleIcons = []
-const staticIconsOnly = eosIcons.filter(
-  el => animatedIcons.indexOf(el.name) < 0
+
+const filterOutAnimated = eosIcons.filter(
+  ele => animatedIcons.indexOf(ele.name) < 0
 )
 
-/* ==========================================================================
-  TEMPORAL SOLUTION WHILE WE'RE WORKING ON THE NEW RELEASE
-  ========================================================================== */
-const extendedSet = extendedIcons.glyphs.reduce((acc, iconName) => {
-  acc.push({
-    name: iconName,
-    do: '',
-    dont: '',
-    tags: []
-  })
-
-  return acc
-}, [])
-
-/* Filter out eos icons names */
-const eos = eosIcons.reduce((acc, iconName) => {
-  acc.push(iconName.name)
-  return acc
-}, [])
-
-const eosAndMdIcons = [
-  ...staticIconsOnly,
-  ...extendedSet.filter(ele => !eos.includes(ele.name))
-]
-/* ==========================================================================
-  END TEMPORAL SOLUTION
-========================================================================== */
-const allIconsByName = eosAndMdIcons
+const allIconsByName = eosIcons
   .map(icon => icon.name)
   .filter(el => animatedIcons.indexOf(el) < 0)
 
+/* Create an array with categories */
+const categories = Array.from(
+  new Set(
+    filterOutAnimated.map(ele => {
+      if (typeof ele.category === 'string') return ele.category
+      if (typeof ele.category === 'object') return ele.category[0]
+
+      return true
+    })
+  )
+)
+
+const iconsCategory = categories.map(category => {
+  return {
+    category: category,
+    icons: filterOutAnimated
+      .map(ele =>
+        ele.category === category || ele.category[0] === category ? ele : null
+      )
+      .filter(ele => ele !== null)
+  }
+})
+
 /* EOS Icons state */
 export const eosIconsState = {
-  icons: eosAndMdIcons,
+  icons: filterOutAnimated,
+  iconsCategory,
   multipleIcons,
   customize: false,
   cookiesToggle: false,
@@ -84,9 +81,14 @@ export const eosIconsState = {
     return multipleIcons
   },
   setSearchList: function (value) {
-    return this.icons.filter(
-      icon => icon.name.includes(value.toLowerCase()) && icon
-    )
+    return this.iconsCategory.map(ele => {
+      return {
+        category: ele.category,
+        icons: ele.icons.filter(
+          ele => ele.name.includes(value.toLowerCase()) && ele
+        )
+      }
+    })
   },
   uploadPreviousSelection: function (value) {
     value.forEach(value => {
@@ -121,7 +123,7 @@ export const iconsReducer = (state, action) => {
     case 'TOGGLE_SEARCH':
       return {
         ...state,
-        icons: eosIconsState.setSearchList(action.search)
+        iconsCategory: eosIconsState.setSearchList(action.search)
       }
     case 'UPLOAD_PREVIOUS_SELECTION':
       return {

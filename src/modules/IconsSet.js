@@ -64,24 +64,39 @@ const IconsSet = props => {
           </div>
           <Tabs>
             <div label='Regular Icons'>
-              <div className='icons-list'>
-                {state.icons.map((ele, index) => {
-                  return (
-                    <Icon
-                      size={36}
-                      active={isActive(ele.name, state)}
-                      key={index}
-                      name={ele.name}
-                      action={() =>
-                        selectIcon(
-                          ele,
-                          dispatch({
-                            type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                            selection: ele.name
-                          })
-                        )
-                      }
-                    />
+              <div className='icons-list' style={{ flexDirection: 'column' }}>
+                {state.iconsCategory.map((categoryObject, index) => {
+                  return categoryObject.icons.length > 0 ? (
+                    <div className='icons-list-category' key={index}>
+                      <h3>
+                        {categoryObject.category !== ''
+                          ? categoryObject.category
+                          : 'uncategorized'}
+                      </h3>
+                      <div className='icons-list-category-icons'>
+                        {categoryObject.icons.map((icon, i) => (
+                          <Icon
+                            size={36}
+                            active={isActive(icon.name, state)}
+                            key={i}
+                            name={icon.name}
+                            action={() =>
+                              selectIcon(
+                                icon,
+                                dispatch({
+                                  type: state.customize
+                                    ? 'ADD_MULTIPLE_ICONS'
+                                    : '',
+                                  selection: icon.name
+                                })
+                              )
+                            }
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    ''
                   )
                 })}
               </div>
