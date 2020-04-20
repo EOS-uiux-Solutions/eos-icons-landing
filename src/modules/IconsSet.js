@@ -65,27 +65,29 @@ const IconsSet = props => {
           <Tabs>
             <div label='Regular Icons'>
               <div className='icons-list' style={{ flexDirection: 'column' }}>
-                {state.iconsCategory.map((ele, index) => {
-                  return ele.icons.length > 0 ? (
+                {state.iconsCategory.map((categoryObject, index) => {
+                  return categoryObject.icons.length > 0 ? (
                     <div className='icons-list-category' key={index}>
                       <h3>
-                        {ele.category !== '' ? ele.category : 'uncategorized'}
+                        {categoryObject.category !== ''
+                          ? categoryObject.category
+                          : 'uncategorized'}
                       </h3>
                       <div className='icons-list-category-icons'>
-                        {ele.icons.map((ele, i) => (
+                        {categoryObject.icons.map((icon, i) => (
                           <Icon
                             size={36}
-                            active={isActive(ele.name, state)}
+                            active={isActive(icon.name, state)}
                             key={i}
-                            name={ele.name}
+                            name={icon.name}
                             action={() =>
                               selectIcon(
-                                ele,
+                                icon,
                                 dispatch({
                                   type: state.customize
                                     ? 'ADD_MULTIPLE_ICONS'
                                     : '',
-                                  selection: ele.name
+                                  selection: icon.name
                                 })
                               )
                             }
