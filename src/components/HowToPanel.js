@@ -39,7 +39,7 @@ const HowToPanel = props => {
         <h2>
           How to use it:
           <small className='float-right'>
-            <i className='eos-icons md-18' onClick={() => close()}>
+            <i className='eos-icons eos-18' onClick={() => close()}>
               close
             </i>
           </small>
@@ -57,7 +57,7 @@ const HowToPanel = props => {
               rel='noopener noreferrer'
               href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}
             >
-              <i className='eos-icons md-18'>file_download</i> Download icon
+              <i className='eos-icons eos-18'>file_download</i> Download icon
             </a>
           </div>
         ) : (
@@ -77,7 +77,7 @@ const HowToPanel = props => {
                   document.execCommand('copy')
                 }}
               >
-                <i className='eos-icons md-18'>content_copy</i> Copy
+                <i className='eos-icons eos-18'>content_copy</i> Copy
               </Button>
             </div>
             <strong>Tags:</strong>

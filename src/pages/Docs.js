@@ -136,16 +136,16 @@ const Docs = () => {
               <li>
                 <h4>Implementation example</h4>
               </li>
-              <i className='eos-icons md-18 mr-3'>miscellaneous</i>
-              <i className='eos-icons md-24 mr-3'>miscellaneous</i>
-              <i className='eos-icons md-36 mr-3'>miscellaneous</i>
-              <i className='eos-icons md-48'>miscellaneous</i>
+              <i className='eos-icons eos-18 mr-3'>miscellaneous</i>
+              <i className='eos-icons eos-24 mr-3'>miscellaneous</i>
+              <i className='eos-icons eos-36 mr-3'>miscellaneous</i>
+              <i className='eos-icons eos-48'>miscellaneous</i>
               <pre className='code language-html'>
                 <code>
-                  {`<i class='eos-icons md-18'>miscellaneous</i>
-<i class='eos-icons md-24'>miscellaneous</i>
-<i class='eos-icons md-36'>miscellaneous</i>
-<i class='eos-icons md-48'>miscellaneous</i> `}
+                  {`<i class='eos-icons eos-18'>miscellaneous</i>
+<i class='eos-icons eos-24'>miscellaneous</i>
+<i class='eos-icons eos-36'>miscellaneous</i>
+<i class='eos-icons eos-48'>miscellaneous</i> `}
                 </code>
               </pre>
               <h4>SCSS code snippet</h4>
@@ -153,16 +153,16 @@ const Docs = () => {
               <pre className='code language-css'>
                 <code>
                   {`/* size variables */
-$eos-md-18: 18px;
-$eos-md-24: 24px;
-$eos-md-36: 36px;
-$eos-md-48: 48px;
+$eos-18: 18px;
+$eos-24: 24px;
+$eos-36: 36px;
+$eos-48: 48px;
 
 /* Rules for sizing the icon. */
-.md-18 { font-size: $eos-md-18; }
-.md-24 { font-size: $eos-md-24; }
-.md-36 { font-size: $eos-md-36; }
-.md-48 { font-size: $eos-md-48; }  `}
+.eos-18 { font-size: $eos-18; }
+.eos-24 { font-size: $eos-24; }
+.eos-36 { font-size: $eos-36; }
+.eos-48 { font-size: $eos-48; }  `}
                 </code>
               </pre>
             </ul>

@@ -54,7 +54,7 @@ const Cheatsheet = () => {
                   To continue building an old font, upload icons-config.json
                 </p>
                 <label className='btn btn-default upload' htmlFor='upload-file'>
-                  <i className='eos-icons md-18'>cloud_upload</i>
+                  <i className='eos-icons eos-18'>cloud_upload</i>
                   Upload JSON
                 </label>
                 <input
