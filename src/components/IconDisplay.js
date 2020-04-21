@@ -12,7 +12,7 @@ const Icon = props => {
 
   const iconClass = () => {
     const eosClass = 'eos-icons'
-    const activeClass = active ? `active` : ''
+    const activeClass = active ? 'active' : ''
     const sizeClass = sizes[size] ?? sizes.medium
     const finalClass = `${eosClass} ${activeClass} ${sizeClass}`
 

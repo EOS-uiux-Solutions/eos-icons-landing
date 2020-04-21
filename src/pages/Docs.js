@@ -41,7 +41,9 @@ const Docs = () => {
 
             <pre className='code language-html'>
               <code>
-                {`<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css' />`}
+                {
+                  "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css' />"
+                }
               </code>
             </pre>
 
@@ -65,7 +67,7 @@ const Docs = () => {
 
           <pre className='code language-html'>
             <code>
-              {`<link rel='stylesheet' href='assets/eos-icons.css'/>`}
+              {"<link rel='stylesheet' href='assets/eos-icons.css'/>"}
             </code>
           </pre>
           <p>
@@ -77,7 +79,7 @@ const Docs = () => {
           <p>3- Use the icons in your html as follows:</p>
 
           <pre className='code language-html'>
-            <code>{`<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>`}</code>
+            <code>{"<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"}</code>
           </pre>
           <p>
             Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our
@@ -106,7 +108,7 @@ const Docs = () => {
           </p>
 
           <pre className='code language-html'>
-            <code>{`<img src='loading'/>`}</code>
+            <code>{"<img src='loading'/>"}</code>
           </pre>
           <p>
             Head to the
