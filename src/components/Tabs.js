@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Tabs = props => {
-  const { children } = props
+  const { children, setTab } = props
   const [activeTab, setActiveTab] = useState(children[0].props.label)
 
   return (
@@ -16,8 +16,8 @@ const Tabs = props => {
                   ? 'tab-list-item tab-list-active'
                   : 'tab-list-item'
               }
-              key={idx}
-              onClick={() => setActiveTab(label)}
+              key={label}
+              onClick={() => setActiveTab(label) || (setTab && setTab(label))}
             >
               {label}
             </li>

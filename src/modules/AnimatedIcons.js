@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import AnimatedIconsList from '../utils/AnimatedIcons.store'
 import HowTo from '../components/HowToPanel'
 
-const AnimatedIcons = () => {
+const AnimatedIcons = props => {
+  const { animatedIconsList } = props
   const [iconSelected, setIconSelected] = useState('')
   const [showPanel, setShowPanel] = useState(false)
 
@@ -18,7 +18,7 @@ const AnimatedIcons = () => {
 
   return (
     <>
-      {AnimatedIconsList.map((icon, index) => (
+      {animatedIconsList.map((icon, index) => (
         <div className='icon-container' key={index}>
           <img
             src={require(`eos-icons/animated-svg/${icon}.svg`)}

@@ -38,6 +38,7 @@ const iconsCategory = categories.map(category => {
 
 /* EOS Icons state */
 export const eosIconsState = {
+  animatedIcons: animatedIcons,
   icons: filterOutAnimated,
   iconsCategory,
   multipleIcons,
@@ -80,7 +81,7 @@ export const eosIconsState = {
     multipleIcons.splice(0, multipleIcons.length)
     return multipleIcons
   },
-  setSearchList: function (value) {
+  setSearchRegularList: function (value) {
     return this.iconsCategory.map(ele => {
       return {
         category: ele.category,
@@ -89,6 +90,11 @@ export const eosIconsState = {
         )
       }
     })
+  },
+  setSearchAnimatedList: function (value) {
+    return this.animatedIcons.filter(
+      animatedIcon => animatedIcon.includes(value.toLowerCase()) && animatedIcon
+    )
   },
   uploadPreviousSelection: function (value) {
     value.forEach(value => {
@@ -120,10 +126,15 @@ export const iconsReducer = (state, action) => {
         ...state,
         multipleIcons: eosIconsState.deselectAllIcons()
       }
-    case 'TOGGLE_SEARCH':
+    case 'TOGGLE_SEARCH_REGULAR_ICONS':
       return {
         ...state,
-        iconsCategory: eosIconsState.setSearchList(action.search)
+        iconsCategory: eosIconsState.setSearchRegularList(action.search)
+      }
+    case 'TOGGLE_SEARCH_ANIMATED_ICONS':
+      return {
+        ...state,
+        animatedIcons: eosIconsState.setSearchAnimatedList(action.search)
       }
     case 'UPLOAD_PREVIOUS_SELECTION':
       return {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AppContext from '../utils/AppContext'
-
+import _ from 'lodash'
 /* Components */
 import Icon from '../components/IconDisplay'
 import Tabs from '../components/Tabs'
@@ -25,6 +25,7 @@ const IconsSet = props => {
   // show HowTo panel
   const [iconSelected, setIconSelected] = useState('')
   const [showPanel, setShowPanel] = useState(false)
+  const [tab, setActiveTab] = useState('Regular Icons')
 
   const closeHowTo = () => {
     setShowPanel(false)
@@ -58,12 +59,30 @@ const IconsSet = props => {
               name='search'
               placeholder='Search Icons...'
               onChange={event =>
-                dispatch({ type: 'TOGGLE_SEARCH', search: event.target.value })
+                dispatch({
+                  type:
+                    tab === 'Regular Icons'
+                      ? 'TOGGLE_SEARCH_REGULAR_ICONS'
+                      : 'TOGGLE_SEARCH_ANIMATED_ICONS',
+                  search: event.target.value
+                })
               }
             />
           </div>
-          <Tabs>
+          <Tabs setTab={setActiveTab}>
             <div label='Regular Icons'>
+              <div className='total-icons'>
+                <strong>
+                  <b>
+                    Total icons:{' '}
+                    {_.sum(
+                      state.iconsCategory.map(categoryObject => {
+                        return categoryObject.icons.length
+                      })
+                    )}
+                  </b>
+                </strong>
+              </div>
               <div className='icons-list' style={{ flexDirection: 'column' }}>
                 {state.iconsCategory.map((categoryObject, index) => {
                   return categoryObject.icons.length > 0 ? (
@@ -73,6 +92,11 @@ const IconsSet = props => {
                           ? categoryObject.category
                           : 'uncategorized'}
                       </h3>
+                      <div className='total-icons'>
+                        <strong>
+                          <b>Total icons: {categoryObject.icons.length}</b>
+                        </strong>
+                      </div>
                       <div className='icons-list-category-icons'>
                         {categoryObject.icons.map((icon, i) => (
                           <Icon
@@ -100,6 +124,7 @@ const IconsSet = props => {
                   )
                 })}
               </div>
+
               {!state.customize ? (
                 <div className='how-to-use-block'>
                   <HowTo
@@ -119,27 +144,14 @@ const IconsSet = props => {
                 </div>
               )}
             </div>
-            {!state.customize ? (
-              <div className='how-to-use-block'>
-                <HowTo
-                  show={showPanel}
-                  iconName={iconSelected.name}
-                  iconTags={iconSelected.tags}
-                  type='static'
-                  close={closeHowTo}
-                />
-              </div>
-            ) : (
-              <div className='how-to-use-block'>
-                <CustomizeIconsPanel
-                  selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
-                  deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
-                />
-              </div>
-            )}
             <div label='Animated Icons'>
+              <div className='total-icons'>
+                <strong>
+                  <b>Total icons: {state.animatedIcons.length}</b>
+                </strong>
+              </div>
               <div className='icons-list'>
-                <AnimatedIcons />
+                <AnimatedIcons animatedIconsList={state.animatedIcons} />
               </div>
             </div>
           </Tabs>
