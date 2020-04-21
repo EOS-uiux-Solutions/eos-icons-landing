@@ -129,10 +129,6 @@ const Docs = () => {
             Both MD icons and EOS icons have been designed to work and look
             perfect at: 18px, 24px, 36px, and 48px.
           </p>
-          <p>
-            In order to be compliant, follow MD icons class names to size both
-            MD icons and EOS icons:
-          </p>
           <div>
             <h2>Implementation Examples</h2>
             <ul>
