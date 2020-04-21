@@ -49,7 +49,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run test:js"
+      "pre-commit": "npm run test:sass && npm run test:js"
     }
   },
   "keywords": [
