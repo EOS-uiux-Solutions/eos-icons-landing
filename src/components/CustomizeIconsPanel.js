@@ -37,12 +37,14 @@ const CustomizeIconsPanel = props => {
   }
 
   const generateFont = e => {
-    e.preventDefault()
-    modalToggle()
-    sendData({
-      url: 'https://eos-icons-picker-api.herokuapp.com/iconsapi',
-      payload: value.multipleIcons
-    }).then(setServerResponse)
+    if (value.multipleIcons.length > 0) {
+      e.preventDefault()
+      modalToggle()
+      sendData({
+        url: 'https://eos-icons-picker-api.herokuapp.com/iconsapi',
+        payload: value.multipleIcons
+      }).then(setServerResponse)
+    }
   }
 
   return (
