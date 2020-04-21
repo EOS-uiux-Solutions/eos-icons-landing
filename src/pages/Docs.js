@@ -44,47 +44,10 @@ const Docs = () => {
                 {`<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css' />`}
               </code>
             </pre>
-            <p>
-              For Extended EOS set:
-              <a
-                href='https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css'
-                data-event-category='External link'
-                data-event-action='Link to EOS Icons Extended CDN'
-                data-event-label='Docs page'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                {' '}
-                https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css
-              </a>
-            </p>
 
-            <pre className='code language-html'>
-              <code>
-                {`<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css' />`}
-              </code>
-            </pre>
             <p>
               Import them in your <span className='command'> &lt;head&gt;</span>{' '}
               tag as <span className='command'> link:css </span>.
-            </p>
-          </div>
-          <div>
-            <h2>or Download EOS as a zip file</h2>
-            <p>
-              To download the zip file of{' '}
-              <span className='command'> /dist</span> folder click
-              <a
-                href='https://gitlab.com/SUSE-UIUX/eos-icons/-/archive/master/es-icons-master.zip?path=dist'
-                data-event-category='External link'
-                data-event-action='Link to EOS Icons zip file'
-                data-event-label='Docs page'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                {' '}
-                here
-              </a>
             </p>
           </div>
         </div>
@@ -136,15 +99,15 @@ const Docs = () => {
         <div>
           <h1>Using Animated icons</h1>
           <p>
-            The animated EOS icons are built using CSS animations. To implement
-            them you don't need ligatures but classes instead. For example:
+            The animated EOS icons are built using SMIL SVG animations. To implement
+            them you don't need anything special, just an <code>img</code> tag with the <code>src</code> to the svg. For example:
           </p>
 
           <pre className='code language-html'>
-            <code>{`<i class='eos-icons eos-icon-loading'>loading</i>`}</code>
+            <code>{`<img src='loading'/>`}</code>
           </pre>
           <p>
-            See the other animated icons classes in our
+            Head to the
             <a
               href='https://eos-icons.eosdesignsystem.com/cheatsheet.html'
               data-event-category='Internal link'
@@ -154,67 +117,12 @@ const Docs = () => {
               rel='noopener noreferrer'
             >
               {' '}
-              demo page
+              cheatsheet
             </a>
-            . Click on the icon you want to use to see the codes snippet.
+            {' '} to download animated icons. Click on the icon you want to use to see the code snippet.
           </p>
         </div>
-        <div>
-          <h1>EOS extended version with Material Design</h1>
-          <p>
-            Since EOS icons are designed following the&nbsp;
-            <a
-              href='https://material.io/design/iconography/system-icons.html'
-              data-event-category='External link'
-              data-event-action='Link to MD icons design principles'
-              data-event-label='Docs page'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              {' '}
-              Material Design guidelines
-            </a>
-            &nbsp;and made to work together with Material Icons, we decided to
-            include an extended version of EOS icons for easy implementation.
-          </p>
-          <p>
-            With the extended version you only need to use 1 class for all icons
-            (EOS and Material Design). To implement it, you need to grab the{' '}
-            <span className='command'> css/ </span> and
-            <span className='command'> font/ </span> folders available
-            atdist/extended, then add theeos-icons-extended.cssunder the{' '}
-            <span className='command'> &lt;head&gt;</span> of your project
-            accordingly.
-          </p>
-          <p>
-            For more information about Material Design Icons, please refer to
-            the &nbsp;
-            <a
-              href='https://github.com/google/material-design-icons'
-              data-event-category='External link'
-              data-event-action='Link to MD icons main page'
-              data-event-label='Docs page'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              original MD icons repository
-            </a>
-            &nbsp;where you can find the corresponding licensing and
-            documentation. Example:
-          </p>
 
-          <pre className='code language-html'>
-            <code>
-              {`
-  <!-- This is an EOS icon -->
-  <i class='eos-icons'>action_chains</i>
-
-    <!-- This is a Material Design icon -->
-  <i class='eos-icons'>bluetooth_disabled</i>
-  `}
-            </code>
-          </pre>
-        </div>
         <div>
           <h1>Our recommended sizes</h1>
           <p>
@@ -228,24 +136,9 @@ const Docs = () => {
           <div>
             <h2>Implementation Examples</h2>
             <ul>
-              <li>
-                <h4>Implementation example with MD icon</h4>
-              </li>
-              <i className='eos-icons md-18 mr-3'>face</i>
-              <i className='eos-icons md-24 mr-3'>face</i>
-              <i className='eos-icons md-36 mr-3'>face</i>
-              <i className='eos-icons md-48'>face</i>
 
-              <pre className='code language-html'>
-                <code>
-                  {`<i class='eos-icons md-18'>face</i>
-<i class='eos-icons md-24'>face</i>
-<i class='eos-icons md-36'>face</i>
-<i class='eos-icons md-48'>face</i>`}
-                </code>
-              </pre>
               <li>
-                <h4>Implementation example with EOS icon</h4>
+                <h4>Implementation example</h4>
               </li>
               <i className='eos-icons md-18 mr-3'>miscellaneous</i>
               <i className='eos-icons md-24 mr-3'>miscellaneous</i>
