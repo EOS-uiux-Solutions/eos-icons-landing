@@ -20,6 +20,8 @@
     "react-scripts": "3.3.0"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
     "prettier-standard": "^16.2.1",
     "sass-lint": "^1.12.1"
   },
@@ -30,10 +32,7 @@
     "eject": "react-scripts eject",
     "test:sass": "sass-lint -v -q",
     "format": "prettier-standard --lint --format",
-    "test:js": "prettier-standard --lint --check"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "test:js": "eslint -c .eslintrc.yml --ignore-pattern *.min.js src/"
   },
   "browserslist": {
     "production": [

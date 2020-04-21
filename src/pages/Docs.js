@@ -99,8 +99,10 @@ const Docs = () => {
         <div>
           <h1>Using Animated icons</h1>
           <p>
-            The animated EOS icons are built using SMIL SVG animations. To implement
-            them you don't need anything special, just an <code>img</code> tag with the <code>src</code> to the svg. For example:
+            The animated EOS icons are built using SMIL SVG animations. To
+            implement them you don't need anything special, just an{' '}
+            <code>img</code> tag with the <code>src</code> to the svg. For
+            example:
           </p>
 
           <pre className='code language-html'>
@@ -118,8 +120,9 @@ const Docs = () => {
             >
               {' '}
               cheatsheet
-            </a>
-            {' '} to download animated icons. Click on the icon you want to use to see the code snippet.
+            </a>{' '}
+            to download animated icons. Click on the icon you want to use to see
+            the code snippet.
           </p>
         </div>
 
@@ -132,7 +135,6 @@ const Docs = () => {
           <div>
             <h2>Implementation Examples</h2>
             <ul>
-
               <li>
                 <h4>Implementation example</h4>
               </li>
