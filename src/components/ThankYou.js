@@ -4,12 +4,13 @@ import bunny from '../assets/images/eos-bunny.png'
 const ThankYou = props => {
   const { fn, timestamp } = props
 
-  let [timer, setTimer] = useState(5)
+  const [timer, setTimer] = useState(5)
 
   const timing = () => {
     const timerInterval = setInterval(() => {
       if (timer >= 0) {
-        setTimer(timer--)
+        const timeDown = timer - 1
+        setTimer(timeDown)
       } else {
         clearInterval(timerInterval)
         fn({ timestamp })
