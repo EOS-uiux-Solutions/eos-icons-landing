@@ -48,9 +48,9 @@ export const eosIconsState = {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
       : multipleIcons.splice(
-          multipleIcons.findIndex(ele => ele === iconName),
-          1
-        )
+        multipleIcons.findIndex(ele => ele === iconName),
+        1
+      )
     return multipleIcons
   },
   toggleCustomize () {
