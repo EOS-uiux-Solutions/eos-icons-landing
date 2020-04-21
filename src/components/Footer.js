@@ -41,7 +41,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer>
-      <div className='container'>
+      <div className='container flex flex-wrap'>
         {footerLinks.map((ele, index) => (
           <a
             key={index}

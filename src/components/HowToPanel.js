@@ -1,16 +1,45 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import Button from './Button'
 
 const HowToPanel = props => {
   const { show, close, iconName, type, iconTags } = props
 
+  const ref = useRef()
+
+  function useOnClickOrEsc (ref, handler) {
+    useEffect(() => {
+      const listenerMousedown = event => {
+        if (!ref.current || ref.current.contains(event.target)) {
+          return
+        }
+        handler(event)
+      }
+
+      const listenerKeydown = event => {
+        if (event.keyCode === 27) {
+          handler(event)
+        }
+      }
+
+      document.addEventListener('mousedown', listenerMousedown)
+      document.addEventListener('keydown', listenerKeydown)
+
+      return () => {
+        document.removeEventListener('mousedown', listenerMousedown)
+        document.removeEventListener('keydown', listenerKeydown)
+      }
+    }, [ref, handler])
+  }
+
+  useOnClickOrEsc(ref, () => close())
+
   return show ? (
-    <div className='how-to-use-block'>
+    <div ref={ref} className='how-to-use-block'>
       <div className='container'>
         <h2>
           How to use it:
           <small className='float-right'>
-            <i className='eos-icons md-18' onClick={() => close()}>
+            <i className='eos-icons eos-18' onClick={() => close()}>
               close
             </i>
           </small>
@@ -28,7 +57,7 @@ const HowToPanel = props => {
               rel='noopener noreferrer'
               href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}
             >
-              <i className='eos-icons md-18'>file_download</i> Download icon
+              <i className='eos-icons eos-18'>file_download</i> Download icon
             </a>
           </div>
         ) : (
@@ -48,7 +77,7 @@ const HowToPanel = props => {
                   document.execCommand('copy')
                 }}
               >
-                <i className='eos-icons md-18'>content_copy</i> Copy
+                <i className='eos-icons eos-18'>content_copy</i> Copy
               </Button>
             </div>
             <strong>Tags:</strong>

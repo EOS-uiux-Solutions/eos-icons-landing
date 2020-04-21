@@ -17,7 +17,7 @@ window.onscroll = () => {
 const ScrollToTopBtn = () => {
   return (
     <button className='scroll-to-top-btn' onClick={ScrollToTop}>
-      <i className='eos-icons md-24 '>keyboard_arrow_up</i>
+      <i className='eos-icons eos-24 '>keyboard_arrow_up</i>
     </button>
   )
 }

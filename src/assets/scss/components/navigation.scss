@@ -17,6 +17,14 @@ header {
       margin-right: $m;
       width: 86px;
     }
+
+    .brand-text {
+
+      @media (max-width: 413px) {
+        display: none;
+      }
+    }
+
   }
 
   nav {

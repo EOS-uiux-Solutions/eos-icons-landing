@@ -17,7 +17,7 @@
     font-size: $font-size-body;
     font-weight: 300;
     padding: $m;
-    width: 130px;
+    width: 150px;
 
     .eos-icons,
     img {
@@ -33,6 +33,26 @@
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.091);
         cursor: pointer;
       }
+    }
+  }
+
+  &-category {
+    display: flex;
+    flex-direction: column;
+    margin-top: $xxl;
+
+    h3 {
+      color: $primary-light;
+      font-weight: 400;
+      margin-top: $xxl;
+      padding: 0 $xl;
+      text-transform: capitalize;
+    }
+
+    &-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
   }
 }
