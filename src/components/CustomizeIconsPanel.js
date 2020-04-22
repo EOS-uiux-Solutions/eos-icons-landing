@@ -54,7 +54,7 @@ const CustomizeIconsPanel = props => {
           Select all <i className='eos-icons'>select_all</i>
         </div>
         <div className='deselect-all-icons' onClick={deselectAll}>
-          Deselect all <i className='eos-icons'>clear</i>
+          Deselect all <i className='eos-icons'>clear_all</i>
         </div>
         <div className='generate-div'>
           <span>{value.multipleIcons.length} icons selected</span>
