@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react'
 import { Router } from '@reach/router'
 import { iconsReducer, eosIconsState } from './utils/EosIcons.store'
+import TagManager from 'react-gtm-module'
 import '../node_modules/eos-icons/dist/css/eos-icons.css'
 import './assets/scss/index.scss'
 
@@ -18,6 +19,12 @@ import ThankYou from './components/ThankYou'
 import ScrollToTopBtn from './components/ScrollToTop'
 import AppContext from './utils/AppContext'
 import CookiesBanner from './components/CookiesBanner'
+
+const tagManagerArgs = {
+  gtmId: 'GTM-TZKPV8W'
+}
+
+TagManager.initialize(tagManagerArgs)
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)

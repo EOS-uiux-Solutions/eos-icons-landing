@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import AppContext from '../utils/AppContext'
-import _ from 'lodash'
 /* Components */
 import Icon from '../components/IconDisplay'
 import Tabs from '../components/Tabs'
@@ -72,16 +71,7 @@ const IconsSet = props => {
           <Tabs setTab={setActiveTab}>
             <div label='Regular Icons'>
               <div className='total-icons'>
-                <strong>
-                  <b>
-                    Total icons:{' '}
-                    {_.sum(
-                      state.iconsCategory.map(categoryObject => {
-                        return categoryObject.icons.length
-                      })
-                    )}
-                  </b>
-                </strong>
+                <b>Total set: {state.icons.length}</b>
               </div>
               <div className='icons-list' style={{ flexDirection: 'column' }}>
                 {state.iconsCategory.map((categoryObject, index) => {
@@ -91,12 +81,8 @@ const IconsSet = props => {
                         {categoryObject.category !== ''
                           ? categoryObject.category
                           : 'uncategorized'}
+                        : {categoryObject.icons.length}
                       </h3>
-                      <div className='total-icons'>
-                        <strong>
-                          <b>Total icons: {categoryObject.icons.length}</b>
-                        </strong>
-                      </div>
                       <div className='icons-list-category-icons'>
                         {categoryObject.icons.map((icon, i) => (
                           <Icon
