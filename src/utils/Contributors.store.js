@@ -1,81 +1,75 @@
-import image1 from '../assets/images/contributors/image1.png'
-import image8 from '../assets/images/contributors/image8.png'
-import image3 from '../assets/images/contributors/image3.png'
-import image6 from '../assets/images/contributors/image6.png'
-import image4 from '../assets/images/contributors/image4.png'
-import image2 from '../assets/images/contributors/image2.png'
-import image5 from '../assets/images/contributors/image5.png'
-import image7 from '../assets/images/contributors/image7.png'
-import carla from '../assets/images/contributors/carla.jpg'
-import saurabh from '../assets/images/contributors/saurabh.jpg'
-import kathie from '../assets/images/contributors/kathie.png'
-
 const contributors = [
   {
     title: 'Cynthia Sanchez on twitter',
     href: 'https://twitter.com/cyntss',
-    image: image1,
+    image: 'image1.png',
     name: 'Cynthia Sanchez'
   },
   {
     title: 'Zvezdana Marjanovic on Linked-In',
     href: 'https://www.linkedin.com/in/zvezdanam',
-    image: image8,
+    image: 'image8.png',
     name: 'Zvezdana Marjanovic'
   },
   {
     title: 'Manuele Carlini on twitter',
     href: 'https://twitter.com/manuelecarlini',
-    image: image3,
+    image: 'image3.png',
     name: 'Manuele Carlini'
   },
   {
     title: 'Richa Bhist on Linked-In',
     href: 'https://www.linkedin.com/in/richabisht/',
-    image: image6,
+    image: 'image6.png',
     name: 'Richa Bhist'
   },
   {
     title: 'Jesus Herman on twitter',
     href: 'https://twitter.com/hesusjerman',
-    image: image4,
+    image: 'image4.png',
     name: 'Jesus Herman'
   },
   {
     title: 'Sorin Curescu on twitter',
     href: 'https://twitter.com/en3sis',
-    image: image2,
+    image: 'image2.png',
     name: 'Sorin Curescu'
   },
   {
     title: 'Abhinandan Sharma on Linked-In',
     href: 'https://www.linkedin.com/in/abhinandan-sharma-672299150/',
-    image: image5,
+    image: 'image5.png',
     name: 'Abhinandan Sharma'
   },
   {
     title: 'Kartikay Bhutani on twitter',
     href: 'https://twitter.com/kbhutani0001',
-    image: image7,
+    image: 'image7.png',
     name: 'Kartikay Bhutani'
   },
   {
     title: 'Carla Moratillo on Dribbble',
     href: 'https://dribbble.com/Carla_Isela',
-    image: carla,
+    image: 'carla.jpg',
     name: 'Carla Moratillo'
   },
   {
     title: 'Saurabh Sharma on Twitter',
     href: 'https://twitter.com/SAURABH20944279?s=09',
-    image: saurabh,
+    image: 'saurabh.jpg',
     name: 'Saurabh Sharma'
   },
   {
     title: 'Kateryna Marchak on Twitter',
     href: 'https://twitter.com/ZenZippy',
-    image: kathie,
+    image: 'kathie.png',
     name: 'Kateryna Marchak'
+  },
+  {
+    title: 'Rishabh kohale on LinkedIn',
+    href: 'https://www.linkedin.com/in/r-kohale9/',
+    image: 'rishab.jpg',
+    name: 'Rishabh Kohale'
   }
 ]
 
