@@ -27,3 +27,16 @@
 .hide {
   display: none;
 }
+
+@media only screen and (max-width: 1000px) {
+  /* For tablets and mobile: */
+  .cookies-alert {
+    display: flex;
+    flex-direction: column;
+
+    .cookies-alert-buttons {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
