@@ -70,6 +70,12 @@ const contributors = [
     href: 'https://www.linkedin.com/in/r-kohale9/',
     image: 'rishab.jpg',
     name: 'Rishabh Kohale'
+  },
+  {
+    title: 'Aditya Sharma on LinkedIn',
+    href: 'https://www.linkedin.com/in/aditya-sharma-88541116a/',
+    image: 'aditya.png',
+    name: 'Aditya Sharma'
   }
 ]
 
