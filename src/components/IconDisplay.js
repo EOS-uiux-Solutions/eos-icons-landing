@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Icon = props => {
+const Icon = (props) => {
   const { name, size, action, active } = props
   /* Possible icon sizes */
   const sizes = {

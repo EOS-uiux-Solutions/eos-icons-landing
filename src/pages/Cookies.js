@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 
 const CookiesPage = () => {
   /* Toggle customizable functionality */
-  const toggleCustomize = callback => {
+  const toggleCustomize = (callback) => {
     return callback
   }
 

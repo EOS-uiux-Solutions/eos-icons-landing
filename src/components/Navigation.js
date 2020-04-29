@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from '@reach/router'
 import eosIcon from '../assets/images/logo.png'
 
-const NavLink = props => (
+const NavLink = (props) => (
   <Link
     {...props}
     getProps={({ isCurrent }) => {

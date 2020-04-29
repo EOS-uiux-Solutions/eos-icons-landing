@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Contributor = props => {
+const Contributor = (props) => {
   const { title, href, image, name } = props
 
   return (

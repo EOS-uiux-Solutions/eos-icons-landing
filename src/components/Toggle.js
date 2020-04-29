@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Toggle = props => {
+const Toggle = (props) => {
   const { onClick, onChange, name, id, checkedStatus, disabledStatus } = props
 
   return (

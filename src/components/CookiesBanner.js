@@ -8,7 +8,7 @@ const CookiesBanner = () => {
   const [cookiesBanner, setCookiesBanner] = useState(false)
 
   /* Toggle customizable functionality */
-  const cookiesHandler = callback => {
+  const cookiesHandler = (callback) => {
     setCookiesBanner(true)
     return callback
   }

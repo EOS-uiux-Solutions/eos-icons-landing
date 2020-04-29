@@ -7,7 +7,7 @@ import React from 'react'
  * @example
  * <PageHeader theme="purple" size="small>
  */
-const PageHeader = props => {
+const PageHeader = (props) => {
   /* We destructure the props pased to the component */
   const { children, size: height, theme: color } = props
 
@@ -27,8 +27,9 @@ const PageHeader = props => {
 
   return (
     <div
-      className={`page-header ${size[height] ?? size.small} ${theme[color] ??
-        theme.orange}`}
+      className={`page-header ${size[height] ?? size.small} ${
+        theme[color] ?? theme.orange
+      }`}
     >
       {children}
     </div>
