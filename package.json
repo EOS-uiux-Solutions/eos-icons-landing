@@ -41,8 +41,8 @@
     "eject": "react-scripts eject",
     "test:sass": "sass-lint -v -q",
     "format": "prettier --write .",
-    "js:fix": "eslint --fix",
-    "test:js": "prettier --check . && eslint src/"
+    "js:fix": "eslint src/ --fix",
+    "test:js": "eslint src/"
   },
   "browserslist": {
     "production": [
