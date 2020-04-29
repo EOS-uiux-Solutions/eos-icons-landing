@@ -1,21 +1,21 @@
 import React, { useRef, useEffect } from 'react'
 import Button from './Button'
 
-const HowToPanel = props => {
+const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
 
   const ref = useRef()
 
-  function useOnClickOrEsc (ref, handler) {
+  function useOnClickOrEsc(ref, handler) {
     useEffect(() => {
-      const listenerMousedown = event => {
+      const listenerMousedown = (event) => {
         if (!ref.current || ref.current.contains(event.target)) {
           return
         }
         handler(event)
       }
 
-      const listenerKeydown = event => {
+      const listenerKeydown = (event) => {
         if (event.keyCode === 27) {
           handler(event)
         }

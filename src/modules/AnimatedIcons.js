@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import HowTo from '../components/HowToPanel'
 
-const AnimatedIcons = props => {
+const AnimatedIcons = (props) => {
   const { animatedIconsList } = props
   const [iconSelected, setIconSelected] = useState('')
   const [showPanel, setShowPanel] = useState(false)
 
-  const selectAndShowInfo = iconName => {
+  const selectAndShowInfo = (iconName) => {
     setIconSelected(iconName)
     setShowPanel(true)
   }

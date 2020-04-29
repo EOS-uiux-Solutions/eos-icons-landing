@@ -6,7 +6,7 @@ import Modal from './Modal'
 import ThankYou from './ThankYou'
 import axios from 'axios'
 
-const sendData = async params => {
+const sendData = async (params) => {
   const { url, payload } = params
 
   const response = await axios.post(url, {
@@ -19,13 +19,13 @@ const sendData = async params => {
   return response.data
 }
 
-const downloadFont = props => {
+const downloadFont = (props) => {
   const { timestamp } = props
   const downloadEndPoints = `https://eos-icons-picker-api.herokuapp.com/download?ts=${timestamp}`
   return window.open(downloadEndPoints, '_blank')
 }
 
-const CustomizeIconsPanel = props => {
+const CustomizeIconsPanel = (props) => {
   const { selectAll, deselectAll } = props
   const value = eosIconsState
 
@@ -36,7 +36,7 @@ const CustomizeIconsPanel = props => {
     setModal(!modal)
   }
 
-  const generateFont = e => {
+  const generateFont = (e) => {
     if (value.multipleIcons.length > 0) {
       e.preventDefault()
       modalToggle()

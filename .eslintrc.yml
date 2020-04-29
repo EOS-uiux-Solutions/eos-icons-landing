@@ -1,6 +1,7 @@
 extends:
   - react-app
   - standard
+  - plugin:prettier/recommended
 env:
   es6: true
 root: true

@@ -8,7 +8,7 @@ import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
 import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToPanel'
 
-const IconsSet = props => {
+const IconsSet = (props) => {
   const selectIcon = (icon, callback) => {
     setShowPanel(icon !== iconSelected)
     setIconSelected(icon === iconSelected ? '' : icon)
@@ -16,7 +16,7 @@ const IconsSet = props => {
   }
 
   /* Toggle customizable functionality */
-  const toggleCustomize = callback => {
+  const toggleCustomize = (callback) => {
     props.action()
     return callback
   }
@@ -57,7 +57,7 @@ const IconsSet = props => {
               type='text'
               name='search'
               placeholder='Search Icons...'
-              onChange={event =>
+              onChange={(event) =>
                 dispatch({
                   type:
                     tab === 'Regular Icons'

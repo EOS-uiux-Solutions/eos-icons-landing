@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import bunny from '../assets/images/eos-bunny.png'
 
-const ThankYou = props => {
+const ThankYou = (props) => {
   const { fn, timestamp } = props
 
   const [time, setTime] = useState(5)

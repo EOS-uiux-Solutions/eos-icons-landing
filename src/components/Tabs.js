@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Tabs = props => {
+const Tabs = (props) => {
   const { children, setTab } = props
   const [activeTab, setActiveTab] = useState(children[0].props.label)
 
@@ -26,7 +26,7 @@ const Tabs = props => {
       </ol>
 
       <div className='tab-content'>
-        {children.map(child => {
+        {children.map((child) => {
           if (child.props.label !== activeTab) return undefined
           return child.props.children
         })}

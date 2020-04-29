@@ -6,17 +6,17 @@ import Cookies from 'js-cookie'
 const multipleIcons = []
 
 const filterOutAnimated = eosIcons.filter(
-  ele => animatedIcons.indexOf(ele.name) < 0
+  (ele) => animatedIcons.indexOf(ele.name) < 0
 )
 
 const allIconsByName = eosIcons
-  .map(icon => icon.name)
-  .filter(el => animatedIcons.indexOf(el) < 0)
+  .map((icon) => icon.name)
+  .filter((el) => animatedIcons.indexOf(el) < 0)
 
 /* Create an array with categories */
 const categories = Array.from(
   new Set(
-    filterOutAnimated.map(ele => {
+    filterOutAnimated.map((ele) => {
       if (typeof ele.category === 'string') return ele.category
       if (typeof ele.category === 'object') return ele.category[0]
 
@@ -25,14 +25,14 @@ const categories = Array.from(
   )
 )
 
-const iconsCategory = categories.map(category => {
+const iconsCategory = categories.map((category) => {
   return {
     category: category,
     icons: filterOutAnimated
-      .map(ele =>
+      .map((ele) =>
         ele.category === category || ele.category[0] === category ? ele : null
       )
-      .filter(ele => ele !== null)
+      .filter((ele) => ele !== null)
   }
 })
 
@@ -44,22 +44,22 @@ export const eosIconsState = {
   multipleIcons,
   customize: false,
   cookiesToggle: false,
-  setMultipleIcons (iconName) {
+  setMultipleIcons(iconName) {
     !multipleIcons.includes(iconName)
       ? multipleIcons.push(iconName)
       : multipleIcons.splice(
-        multipleIcons.findIndex(ele => ele === iconName),
-        1
-      )
+          multipleIcons.findIndex((ele) => ele === iconName),
+          1
+        )
     return multipleIcons
   },
-  toggleCustomize () {
+  toggleCustomize() {
     /* Clear arrays when switching between customize */
     multipleIcons.splice(0, multipleIcons.length)
 
     return (this.customize = !this.customize)
   },
-  toggleCookies () {
+  toggleCookies() {
     Cookies.set('acceptance-remainder', 'true')
 
     const acceptanceStatus = Cookies.get('acceptance')
@@ -72,32 +72,33 @@ export const eosIconsState = {
     }
     return (this.cookiesToggle = !this.cookiesToggle)
   },
-  selectAllIcons () {
+  selectAllIcons() {
     multipleIcons.splice(0, multipleIcons.length)
     multipleIcons.push(...allIconsByName)
     return multipleIcons
   },
-  deselectAllIcons () {
+  deselectAllIcons() {
     multipleIcons.splice(0, multipleIcons.length)
     return multipleIcons
   },
   setSearchRegularList: function (value) {
-    return this.iconsCategory.map(ele => {
+    return this.iconsCategory.map((ele) => {
       return {
         category: ele.category,
         icons: ele.icons.filter(
-          ele => ele.name.includes(value.toLowerCase()) && ele
+          (ele) => ele.name.includes(value.toLowerCase()) && ele
         )
       }
     })
   },
   setSearchAnimatedList: function (value) {
     return this.animatedIcons.filter(
-      animatedIcon => animatedIcon.includes(value.toLowerCase()) && animatedIcon
+      (animatedIcon) =>
+        animatedIcon.includes(value.toLowerCase()) && animatedIcon
     )
   },
   uploadPreviousSelection: function (value) {
-    value.forEach(value => {
+    value.forEach((value) => {
       return !multipleIcons.includes(value) ? multipleIcons.push(value) : ''
     })
     return multipleIcons
