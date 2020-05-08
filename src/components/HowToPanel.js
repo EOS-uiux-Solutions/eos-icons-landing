@@ -9,7 +9,7 @@ const HowToPanel = (props) => {
   function useOnClickOrEsc(ref, handler) {
     useEffect(() => {
       const listenerMousedown = (event) => {
-        if (!ref.current || ref.current.contains(event.target)) {
+        if (!ref.current || ref.current.contains(event.target) || event.target.tagName === "I") {
           return
         }
         handler(event)
