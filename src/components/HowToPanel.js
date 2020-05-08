@@ -12,7 +12,7 @@ const HowToPanel = (props) => {
         if (
           !ref.current ||
           ref.current.contains(event.target) ||
-          event.target.tagName === 'I'
+          event.target.innerHTML === iconName
         ) {
           return
         }
