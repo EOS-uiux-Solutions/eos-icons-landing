@@ -60,9 +60,19 @@ If you'd like to contribute with design changes, you'll have to do as follows:
 
 If you'd like to add new icons, you'll need to head over to the [icons repository](https://gitlab.com/SUSE-UIUX/eos-icons) where you'll find thorough instructions on how to design & add icons to the iconic font.
 
+# Learn more about the EOS Design System
+
+* [EOS Design System](https://www.eosdesignsystem.com/)
+
+* [EOS Icons](icons.eosdesignsystem.com/)
+
+* [Follow us on Twitter](https://twitter.com/eosdesignsystem)
+
+* [Join us in Slack](https://eos-community.slack.com/)
+
 # Our "thank you" section
 
 ### Tested for every browser in every device
 
-Thanks to [browserstack](https://www.browserstack.com) and their continuous contribution to open source projects, we continuously test the EOS to make sure all our features and components work perfectly fine in all browsers.
+Thanks to [Browserstack](https://www.browserstack.com) and their continuous contribution to open source projects, we continuously test the EOS to make sure all our features and components work perfectly fine in all browsers.
 Browserstack helps us make sure our Design System also delivers a peace of mind to all developers and designers making use of our components and layout in their products.
