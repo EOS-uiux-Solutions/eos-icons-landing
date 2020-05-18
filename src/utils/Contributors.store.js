@@ -76,6 +76,12 @@ const contributors = [
     href: 'https://www.linkedin.com/in/aditya-sharma-88541116a/',
     image: 'aditya.png',
     name: 'Aditya Sharma'
+  },
+  {
+    title: 'Devesh Vijaywargiya on LinkedIn',
+    href: 'https://www.linkedin.com/in/devesh-vijaywargiya/',
+    image: 'devesh.jpg',
+    name: 'Devesh Vijaywargiya'
   }
 ]
 
