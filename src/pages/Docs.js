@@ -85,7 +85,7 @@ const Docs = () => {
             Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our
             &nbsp;
             <a
-              href='https://eos-icons.eosdesignsystem.com/cheatsheet.html'
+              href='https://eos-icons.eosdesignsystem.com/cheatsheet'
               data-event-category='Internal link'
               data-event-action='Link to cheatsheet'
               data-event-label='Docs page'
@@ -113,7 +113,7 @@ const Docs = () => {
           <p>
             Head to the
             <a
-              href='https://eos-icons.eosdesignsystem.com/cheatsheet.html'
+              href='https://eos-icons.eosdesignsystem.com/cheatsheet'
               data-event-category='Internal link'
               data-event-action='Link to cheatsheet (animated)'
               data-event-label='Docs page'
