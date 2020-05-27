@@ -6,7 +6,7 @@ import SUSEimg from '../assets/images/logos/suse.svg'
 import Kubernetesimg from '../assets/images/logos/kubernetes.svg'
 import openSUSEimg from '../assets/images/logos/opensuse.svg'
 import OBSimg from '../assets/images/logos/obs.svg'
-import CFimg from '../assets/images/logos/cloud_foundry.svg'
+import Stratos from '../assets/images/logos/stratos.png'
 import uyuni from '../assets/images/logos/uyuni.svg'
 import contributors from '../utils/Contributors.store'
 
@@ -79,7 +79,7 @@ const Home = () => {
               src={OBSimg}
               alt='open build service logo'
             />
-            <img className='brands' src={CFimg} alt='cloud foundry logo' />
+            <img className='brands' src={Stratos} alt='Stratos logo' />
           </div>
           <p className='text-center'>
             Your open source project needs icons?
