@@ -68,7 +68,7 @@ If you'd like to add new icons, you'll need to head over to the [icons repositor
 
 * [Follow us on Twitter](https://twitter.com/eosdesignsystem)
 
-* [Join us in Slack](https://eos-community.slack.com/)
+* [Join us in Slack](https://slack.eosdesignsystem.com)
 
 # Our "thank you" section
 
