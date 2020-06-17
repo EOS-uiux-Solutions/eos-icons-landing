@@ -83,6 +83,16 @@ const HowToPanel = (props) => {
               >
                 <i className='eos-icons eos-18'>content_copy</i> Copy
               </Button>
+              <Button
+                primary
+                type='button'
+                // onClick={() => {
+                //   document.getElementById('copy-code').select()
+                //   document.execCommand('copy')
+                // }}
+              >
+                <i className='eos-icons eos-18'>file_download</i> Download SVG
+              </Button>
             </div>
             <strong>Tags:</strong>
             {iconTags.map((tag, key) => (
