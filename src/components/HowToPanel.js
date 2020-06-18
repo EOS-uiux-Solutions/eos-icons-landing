@@ -3,7 +3,7 @@ import Button from './Button'
 
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
-
+  const svgDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/svg/download/${iconName}`
   const ref = useRef()
 
   function useOnClickOrEsc(ref, handler) {
@@ -83,6 +83,10 @@ const HowToPanel = (props) => {
               >
                 <i className='eos-icons eos-18'>content_copy</i> Copy
               </Button>
+              <a
+              href={svgDownloadUrl}
+              rel='noopener noreferrer'
+              target='_blank'>
               <Button
                 primary
                 type='button'
@@ -93,6 +97,7 @@ const HowToPanel = (props) => {
               >
                 <i className='eos-icons eos-18'>file_download</i> Download SVG
               </Button>
+              </a>
             </div>
             <strong>Tags:</strong>
             {iconTags.map((tag, key) => (
