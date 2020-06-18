@@ -82,6 +82,12 @@ const contributors = [
     href: 'https://www.linkedin.com/in/devesh-vijaywargiya/',
     image: 'devesh.jpg',
     name: 'Devesh Vijaywargiya'
+  },
+  {
+    title: 'Shashank Jarial on LinkedIn',
+    href: 'https://www.linkedin.com/in/shashank-jarial-354485152/',
+    image: 'shashank.jpg',
+    name: 'Shashank Jarial'
   }
 ]
 
