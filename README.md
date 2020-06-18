@@ -62,13 +62,13 @@ If you'd like to add new icons, you'll need to head over to the [icons repositor
 
 # Learn more about the EOS Design System
 
-* [EOS Design System](https://www.eosdesignsystem.com/)
+- [EOS Design System](https://www.eosdesignsystem.com/)
 
-* [EOS Icons](icons.eosdesignsystem.com/)
+- [EOS Icons](icons.eosdesignsystem.com/)
 
-* [Follow us on Twitter](https://twitter.com/eosdesignsystem)
+- [Follow us on Twitter](https://twitter.com/eosdesignsystem)
 
-* [Join us in Slack](https://slack.eosdesignsystem.com)
+- [Join us in Slack](https://slack.eosdesignsystem.com)
 
 # Our "thank you" section
 

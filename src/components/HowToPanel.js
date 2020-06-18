@@ -4,6 +4,7 @@ import Button from './Button'
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
   const svgDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/svg/download/${iconName}`
+  const pngDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/png/download/${iconName}/1000`
   const ref = useRef()
 
   function useOnClickOrEsc(ref, handler) {
@@ -84,19 +85,22 @@ const HowToPanel = (props) => {
                 <i className='eos-icons eos-18'>content_copy</i> Copy
               </Button>
               <a
-              href={svgDownloadUrl}
-              rel='noopener noreferrer'
-              target='_blank'>
-              <Button
-                primary
-                type='button'
-                // onClick={() => {
-                //   document.getElementById('copy-code').select()
-                //   document.execCommand('copy')
-                // }}
+                href={svgDownloadUrl}
+                rel='noopener noreferrer'
+                target='_blank'
               >
-                <i className='eos-icons eos-18'>file_download</i> Download SVG
-              </Button>
+                <Button primary type='button'>
+                  <i className='eos-icons eos-18'>file_download</i> Download SVG
+                </Button>
+              </a>
+              <a
+                href={pngDownloadUrl}
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+                <Button primary type='button'>
+                  <i className='eos-icons eos-18'>file_download</i> Download PNG
+                </Button>
               </a>
             </div>
             <strong>Tags:</strong>

@@ -16,10 +16,12 @@ input {
     border-right: $light-color 2px solid;
   }
 
-  button:last-child,
-  .btn:last-child {
-    border-radius: 0 25px 25px 0;
-    border-right: 0px;
+  a:last-child {
+
+    button {
+      border-radius: 0 25px 25px 0;
+      border-right: 0px;
+    }
   }
 
   .input-grow {
