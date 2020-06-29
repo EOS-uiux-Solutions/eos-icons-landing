@@ -102,6 +102,9 @@ const HowToPanel = (props) => {
                   <i className='eos-icons eos-18'>file_download</i> Download PNG
                 </Button>
               </a>
+              <Button primary type='button'>
+                <i className='eos-icons eos-18'>edit</i> Edit Icon
+              </Button>
             </div>
             <strong>Tags:</strong>
             {iconTags.map((tag, key) => (
