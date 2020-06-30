@@ -5,10 +5,11 @@ import Button from './Button'
 const IconEditor = (props) => {
   const { isActive, show, iconName } = props
 
-  const [color, setColor] = useState('#fff')
+  const [color, setColor] = useState('#000000')
 
   const changeColor = (color) => {
     setColor(color.hex)
+    document.getElementsByClassName('icon-preview')[0].style.color = color.hex;
   }
 
   return isActive ? (
@@ -26,9 +27,9 @@ const IconEditor = (props) => {
             />
           </div>
           <div className='icon-div'>
-           <p>Icon Preview</p>
-            <div className='icon'>
-              <i className='eos-icons' style={{ color: `rgb: (${color})` }}>
+            <p>Icon Preview</p>
+            <div className='icon-preview'>
+              <i className='eos-icons'>
                 {iconName}
               </i>
             </div>

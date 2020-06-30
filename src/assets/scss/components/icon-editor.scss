@@ -83,10 +83,10 @@
     right: 20px;
   }
 
-  .icon {
-    box-shadow: 2px 4px 8px rgba($color:$dark-color, $alpha: 0.3);
-    padding: $xl;
+  .icon-preview {
     border-radius: $s;
+    box-shadow: 2px 4px 8px rgba($color: $dark-color, $alpha: 0.3);
+    padding: $xl;
 
     i {
       font-size: $editor-icon-size;
