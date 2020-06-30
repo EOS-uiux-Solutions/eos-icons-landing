@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { SketchPicker } from 'react-color'
 import Button from './Button'
+import axios from 'axios'
 
 const IconEditor = (props) => {
   const { isActive, show, iconName } = props
@@ -10,6 +11,30 @@ const IconEditor = (props) => {
   const changeColor = (color) => {
     setColor(color.hex)
     document.getElementsByClassName('icon-preview')[0].style.color = color.hex;
+  }
+  const [serverResponse, setServerResponse] = useState(null)
+
+  const postDataToApi = async (params) => {
+    const { url, payload } = params
+  
+    const response = await axios.post(url, payload)
+    return response.data
+  }
+  const downloadCustomizedIcon = (props) => {
+    const { timestamp } = props
+    const downloadEndPoints = `https://eos-icons-picker-api.herokuapp.com/download?ts=${timestamp}`
+    return window.open(downloadEndPoints, '_blank')
+  }
+  const generateCustomizedIcon = (e) => {
+    e.preventDefault()
+    postDataToApi({
+      url: 'localhost:3131/icon-customization',
+      payload: {
+        "icons": [iconName],
+        "exportAs": "svg",
+        "customizationConfig": {"colorCode": color}
+      }
+    }).then((setServerResponse))
   }
 
   return isActive ? (
@@ -33,7 +58,10 @@ const IconEditor = (props) => {
                 {iconName}
               </i>
             </div>
-            <Button primary type='button'>
+            <Button
+            primary
+            type='button'
+            onClick={generateCustomizedIcon}>
               <i className='eos-icons eos-18'>file_download</i> Export as SVG
             </Button>
           </div>
