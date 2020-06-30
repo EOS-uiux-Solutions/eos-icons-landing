@@ -15,9 +15,10 @@ const IconEditor = (props) => {
     <div className='icon-editor'>
       <div className='icon-editor-card'>
         <div className='close' onClick={show} />
+        <h2>Customize Icon</h2>
         <div className='flex flex-row icon-editor-content'>
           <div>
-            <h2>Color picker</h2>
+            <p>Color Picker</p>
             <SketchPicker
               className='color-picker'
               color={color}
@@ -25,6 +26,7 @@ const IconEditor = (props) => {
             />
           </div>
           <div className='icon-div'>
+           <p>Icon Preview</p>
             <div className='icon'>
               <i className='eos-icons' style={{ color: `rgb: (${color})` }}>
                 {iconName}

@@ -2,6 +2,7 @@
   background-color: $modal-background-color;
   display: flex;
   height: 100%;
+  left: 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -18,8 +19,12 @@
     transform: translate(-50%, -50%);
   }
 
+  h2 {
+    margin: $l;
+  }
+
   .icon-editor-content {
-    padding: $l;
+    padding: $s $xxl $xxl $xxl;
   }
 
   .icon-editor-btn {
@@ -46,8 +51,8 @@
   .close {
     opacity: 0.3;
     position: absolute;
-    right: $xl;
-    top: $s;
+    right: $xxl;
+    top: $m;
 
     &:hover {
       cursor: pointer;
@@ -74,12 +79,14 @@
   }
 
   .icon-div {
-    margin: 60px 20px 0px 100px;
+    margin-left: 150px;
+    right: 20px;
   }
 
   .icon {
-    box-shadow: 5px 10px 18px rgba($color: #000000, $alpha: 0.5);
-    padding: 20px;
+    box-shadow: 2px 4px 8px rgba($color:$dark-color, $alpha: 0.3);
+    padding: $xl;
+    border-radius: $s;
 
     i {
       font-size: $editor-icon-size;
