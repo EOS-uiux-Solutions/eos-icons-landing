@@ -1,11 +1,18 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Button from './Button'
-
+import IconEditor from './IconEditor'
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
   const svgDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/svg/download/${iconName}`
   const pngDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/png/download/${iconName}/1000`
   const ref = useRef()
+
+  const [iconEditor, setIconEditor] = useState(false)
+
+  const iconEditorToggle = (e) => {
+    e.preventDefault()
+    setIconEditor(!iconEditor)
+  }
 
   function useOnClickOrEsc(ref, handler) {
     useEffect(() => {
@@ -102,6 +109,9 @@ const HowToPanel = (props) => {
                   <i className='eos-icons eos-18'>file_download</i> Download PNG
                 </Button>
               </a>
+              <Button primary type='button' onClick={iconEditorToggle}>
+                <i className='eos-icons eos-18'>edit</i> Edit Icon
+              </Button>
             </div>
             <strong>Tags:</strong>
             {iconTags.map((tag, key) => (
@@ -109,6 +119,15 @@ const HowToPanel = (props) => {
                 <small>{tag}</small>
               </span>
             ))}
+            {iconEditor ? (
+              <IconEditor
+                isActive={iconEditor}
+                show={iconEditorToggle}
+                iconName={iconName}
+              />
+            ) : (
+              ''
+            )}
           </>
         )}
       </div>
