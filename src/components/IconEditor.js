@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { SketchPicker } from 'react-color'
 import Button from './Button'
 import axios from 'axios'
+import loading from '../assets/images/loading-white.svg'
 
 const IconEditor = (props) => {
   const apiBaseUrl = 'https://eos-icons-picker-api.herokuapp.com/'
@@ -9,6 +10,8 @@ const IconEditor = (props) => {
   const { isActive, show, iconName } = props
 
   const [color, setColor] = useState('#000000')
+
+  const [generating, setGenerate] = useState(false)
 
   const changeColor = (color) => {
     setColor(color.hex)
@@ -28,20 +31,24 @@ const IconEditor = (props) => {
     return window.open(downloadEndPoints, '_blank')
   }
   const generateCustomizedIcon = (e) => {
-    e.preventDefault()
-    postDataToApi({
-      url: `${apiBaseUrl}icon-customization`,
-      payload: {
-        icons: [iconName],
-        exportAs: 'svg',
-        customizationConfig: { colorCode: color }
-      }
-    }).then((res) => {
-      // setServerResponse(res)
-      // not using server response for now since the first time state is null on automatic download
-      // will use in upcoming PR
-      downloadCustomizedIcon({ timestamp: res })
-    })
+    if (!generating) {
+      e.preventDefault()
+      setGenerate(true)
+      postDataToApi({
+        url: `${apiBaseUrl}icon-customization`,
+        payload: {
+          icons: [iconName],
+          exportAs: 'svg',
+          customizationConfig: { colorCode: color }
+        }
+      }).then((res) => {
+        // setServerResponse(res)
+        // not using server response for now since the first time state is null on automatic download
+        // will use in upcoming PR
+        setGenerate(false)
+        downloadCustomizedIcon({ timestamp: res })
+      })
+    }
   }
 
   return isActive ? (
@@ -64,7 +71,21 @@ const IconEditor = (props) => {
               <i className='eos-icons'>{iconName}</i>
             </div>
             <Button primary type='button' onClick={generateCustomizedIcon}>
-              <i className='eos-icons eos-18'>file_download</i> Export as SVG
+              {!generating ? (
+                <span>
+                  <i className='eos-icons eos-18'>file_download</i> Export as
+                  SVG
+                </span>
+              ) : (
+                <span>
+                  Exporting Icon{' '}
+                  <img
+                    className='btn-loading-icon'
+                    src={loading}
+                    alt='loading-icon'
+                  />
+                </span>
+              )}
             </Button>
           </div>
         </div>
