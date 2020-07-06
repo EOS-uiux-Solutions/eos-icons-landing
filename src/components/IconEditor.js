@@ -64,29 +64,39 @@ const IconEditor = (props) => {
               color={color}
               onChangeComplete={changeColor}
             />
+            <div className='transform-div'>
+              <p>Transform</p>
+              <div>
+                <p>Rotate</p>
+                <button><i className='eos-icons'>rotate_left</i></button>
+                <button><i className='eos-icons'>rotate_right</i></button>
+              </div>
+            </div>
           </div>
           <div className='icon-div'>
             <p>Icon Preview</p>
             <div className='icon-preview'>
               <i className='eos-icons'>{iconName}</i>
             </div>
-            <Button primary type='button' onClick={generateCustomizedIcon}>
-              {!generating ? (
-                <span>
-                  <i className='eos-icons eos-18'>file_download</i> Export as
-                  SVG
-                </span>
-              ) : (
-                <span>
-                  Exporting Icon{' '}
-                  <img
-                    className='btn-loading-icon'
-                    src={loading}
-                    alt='loading-icon'
-                  />
-                </span>
-              )}
-            </Button>
+            <div className='export-btn'>
+              <Button  primary type='button' onClick={generateCustomizedIcon}>
+                {!generating ? (
+                  <span>
+                    <i className='eos-icons eos-18'>file_download</i> Export as
+                    SVG
+                  </span>
+                ) : (
+                  <span>
+                    Exporting Icon{' '}
+                    <img
+                      className='btn-loading-icon'
+                      src={loading}
+                      alt='loading-icon'
+                    />
+                  </span>
+                )}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

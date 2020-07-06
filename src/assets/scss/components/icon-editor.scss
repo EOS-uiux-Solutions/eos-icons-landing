@@ -94,16 +94,47 @@
 
   }
 
-  button {
-    bottom: 20px;
-    position: fixed;
-    right: 15px;
+  .export-btn {
+    button {
+      bottom: 20px;
+      position: fixed;
+      right: 15px;
+    }
   }
 
   .btn-loading-icon {
     margin-left: $s;
     vertical-align: middle;
     width: $l;
+  }
+
+  .transform-div {
+    div {
+      margin-left: $s;
+    }
+
+    button {
+      background-color: $light-color;
+      border: 0px;
+      border-radius: $xs;
+      box-shadow: 1px $m/8 $xs rgba($color: $dark-color, $alpha: 0.3);
+      color: $dark-gray;
+      margin-left: $m;
+
+      &:hover {
+        background-color: $dark-gray;
+        color: $light-color;
+        transition-duration: 0.2s;
+      }
+      
+      &:focus {
+        outline: none;
+      }
+
+      i {
+        margin: $xs;
+      }
+    }
   }
 }
   
