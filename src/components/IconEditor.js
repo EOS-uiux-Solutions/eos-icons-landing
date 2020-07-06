@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { SketchPicker } from 'react-color'
 import Button from './Button'
 import axios from 'axios'
@@ -16,15 +16,21 @@ const IconEditor = (props) => {
 
   const changeColor = (color) => {
     setColor(color.hex)
-    document.getElementsByClassName('icon-preview')[0].style.color = color.hex
   }
 
   const rotateIcon = (angle) => {
-    angle+=rotateAngle
+    angle += rotateAngle
     setRotateAngle(angle)
-    console.log(rotateAngle)
-    document.getElementsByClassName('icon-preview')[0].getElementsByTagName('i')[0].style.transform = `rotate(${rotateAngle}deg)`
   }
+
+  useEffect(() => {
+    document.getElementsByClassName('icon-preview')[0].style.color = color
+    document
+      .getElementsByClassName('icon-preview')[0]
+      .getElementsByTagName(
+        'i'
+      )[0].style.transform = `rotate(${rotateAngle}deg)`
+  }, [rotateAngle, color])
 
   const postDataToApi = async (params) => {
     const { url, payload } = params
@@ -46,7 +52,7 @@ const IconEditor = (props) => {
         payload: {
           icons: [iconName],
           exportAs: 'svg',
-          customizationConfig: { colorCode: color }
+          customizationConfig: { colorCode: color, rotateAngle: rotateAngle }
         }
       }).then((res) => {
         setGenerate(false)
