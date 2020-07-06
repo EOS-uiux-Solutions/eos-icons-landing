@@ -10,6 +10,7 @@ const IconEditor = (props) => {
   const { isActive, show, iconName } = props
 
   const [color, setColor] = useState('#000000')
+  const [rotateAngle, setRotateAngle] = useState(0)
 
   const [generating, setGenerate] = useState(false)
 
@@ -17,7 +18,13 @@ const IconEditor = (props) => {
     setColor(color.hex)
     document.getElementsByClassName('icon-preview')[0].style.color = color.hex
   }
-  // const [serverResponse, setServerResponse] = useState(null)
+
+  const rotateIcon = (angle) => {
+    angle+=rotateAngle
+    setRotateAngle(angle)
+    console.log(rotateAngle)
+    document.getElementsByClassName('icon-preview')[0].getElementsByTagName('i')[0].style.transform = `rotate(${rotateAngle}deg)`
+  }
 
   const postDataToApi = async (params) => {
     const { url, payload } = params
@@ -42,9 +49,6 @@ const IconEditor = (props) => {
           customizationConfig: { colorCode: color }
         }
       }).then((res) => {
-        // setServerResponse(res)
-        // not using server response for now since the first time state is null on automatic download
-        // will use in upcoming PR
         setGenerate(false)
         downloadCustomizedIcon({ timestamp: res })
       })
@@ -68,8 +72,12 @@ const IconEditor = (props) => {
               <p>Transform</p>
               <div>
                 <p>Rotate</p>
-                <button><i className='eos-icons'>rotate_left</i></button>
-                <button><i className='eos-icons'>rotate_right</i></button>
+                <button onClick={() => rotateIcon(-90)}>
+                  <i className='eos-icons'>rotate_left</i>
+                </button>
+                <button onClick={() => rotateIcon(90)}>
+                  <i className='eos-icons'>rotate_right</i>
+                </button>
               </div>
             </div>
           </div>
@@ -79,7 +87,7 @@ const IconEditor = (props) => {
               <i className='eos-icons'>{iconName}</i>
             </div>
             <div className='export-btn'>
-              <Button  primary type='button' onClick={generateCustomizedIcon}>
+              <Button primary type='button' onClick={generateCustomizedIcon}>
                 {!generating ? (
                   <span>
                     <i className='eos-icons eos-18'>file_download</i> Export as
