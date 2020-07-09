@@ -25,11 +25,13 @@ const IconEditor = (props) => {
     setRotateAngle(angle)
   }
 
-  const flipIconHorizontal = () => {
+  const flipIconHorizontal = (e) => {
+    e.preventDefault()
     setHorizontalFlip(!horizontalFlip)
   }
 
-  const flipIconVertical = () => {
+  const flipIconVertical = (e) => {
+    e.preventDefault()
     setVerticalFlip(!verticalFlip)
   }
 
@@ -37,9 +39,9 @@ const IconEditor = (props) => {
     document.getElementsByClassName('icon-preview')[0].style.color = color
     document
       .getElementsByClassName('icon-preview')[0]
-      .getElementsByTagName(
-        'i'
-      )[0].style.transform = `rotate(${rotateAngle}deg)`
+      .getElementsByTagName('i')[0].style.transform = `scaleX(${
+      horizontalFlip ? -1 : 1
+    }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
   }, [rotateAngle, color, horizontalFlip, verticalFlip])
 
   const postDataToApi = async (params) => {
@@ -62,7 +64,11 @@ const IconEditor = (props) => {
         payload: {
           icons: [iconName],
           exportAs: 'svg',
-          customizationConfig: { colorCode: color, rotateAngle: rotateAngle }
+          customizationConfig: {
+            colorCode: color,
+            rotateAngle: rotateAngle,
+            flip: { horizontal: horizontalFlip, vertical: verticalFlip }
+          }
         }
       }).then((res) => {
         setGenerate(false)
