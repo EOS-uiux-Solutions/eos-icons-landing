@@ -85,6 +85,15 @@ const IconEditor = (props) => {
                   <i className='eos-icons'>rotate_right</i>
                 </button>
               </div>
+              <div>
+                <p>Flip</p>
+                <button>
+                  <i className='eos-icons'>flip</i>
+                </button>
+                <button>
+                  <i className='eos-icons rotate-flip-icon'>flip</i>
+                </button>
+              </div>
             </div>
           </div>
           <div className='icon-div'>
