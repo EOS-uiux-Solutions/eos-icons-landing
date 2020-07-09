@@ -11,6 +11,8 @@ const IconEditor = (props) => {
 
   const [color, setColor] = useState('#000000')
   const [rotateAngle, setRotateAngle] = useState(0)
+  const [horizontalFlip, setHorizontalFlip] = useState(false)
+  const [verticalFlip, setVerticalFlip] = useState(false)
 
   const [generating, setGenerate] = useState(false)
 
@@ -23,6 +25,14 @@ const IconEditor = (props) => {
     setRotateAngle(angle)
   }
 
+  const flipIconHorizontal = () => {
+    setHorizontalFlip(!horizontalFlip)
+  }
+
+  const flipIconVertical = () => {
+    setVerticalFlip(!verticalFlip)
+  }
+
   useEffect(() => {
     document.getElementsByClassName('icon-preview')[0].style.color = color
     document
@@ -30,7 +40,7 @@ const IconEditor = (props) => {
       .getElementsByTagName(
         'i'
       )[0].style.transform = `rotate(${rotateAngle}deg)`
-  }, [rotateAngle, color])
+  }, [rotateAngle, color, horizontalFlip, verticalFlip])
 
   const postDataToApi = async (params) => {
     const { url, payload } = params
@@ -87,10 +97,10 @@ const IconEditor = (props) => {
               </div>
               <div>
                 <p>Flip</p>
-                <button>
+                <button onClick={flipIconHorizontal}>
                   <i className='eos-icons'>flip</i>
                 </button>
-                <button>
+                <button onClick={flipIconVertical}>
                   <i className='eos-icons rotate-flip-icon'>flip</i>
                 </button>
               </div>
