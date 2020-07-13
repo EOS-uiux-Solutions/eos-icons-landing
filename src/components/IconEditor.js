@@ -11,6 +11,8 @@ const IconEditor = (props) => {
 
   const [color, setColor] = useState('#000000')
   const [rotateAngle, setRotateAngle] = useState(0)
+  const [horizontalFlip, setHorizontalFlip] = useState(false)
+  const [verticalFlip, setVerticalFlip] = useState(false)
 
   const [generating, setGenerate] = useState(false)
 
@@ -23,14 +25,24 @@ const IconEditor = (props) => {
     setRotateAngle(angle)
   }
 
+  const flipIconHorizontal = (e) => {
+    e.preventDefault()
+    setHorizontalFlip(!horizontalFlip)
+  }
+
+  const flipIconVertical = (e) => {
+    e.preventDefault()
+    setVerticalFlip(!verticalFlip)
+  }
+
   useEffect(() => {
     document.getElementsByClassName('icon-preview')[0].style.color = color
     document
       .getElementsByClassName('icon-preview')[0]
-      .getElementsByTagName(
-        'i'
-      )[0].style.transform = `rotate(${rotateAngle}deg)`
-  }, [rotateAngle, color])
+      .getElementsByTagName('i')[0].style.transform = `scaleX(${
+      horizontalFlip ? -1 : 1
+    }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
+  }, [rotateAngle, color, horizontalFlip, verticalFlip])
 
   const postDataToApi = async (params) => {
     const { url, payload } = params
@@ -52,7 +64,11 @@ const IconEditor = (props) => {
         payload: {
           icons: [iconName],
           exportAs: 'svg',
-          customizationConfig: { colorCode: color, rotateAngle: rotateAngle }
+          customizationConfig: {
+            colorCode: color,
+            rotateAngle: rotateAngle,
+            flip: { horizontal: horizontalFlip, vertical: verticalFlip }
+          }
         }
       }).then((res) => {
         setGenerate(false)
@@ -83,6 +99,15 @@ const IconEditor = (props) => {
                 </button>
                 <button onClick={() => rotateIcon(90)}>
                   <i className='eos-icons'>rotate_right</i>
+                </button>
+              </div>
+              <div>
+                <p>Flip</p>
+                <button onClick={flipIconHorizontal}>
+                  <i className='eos-icons'>flip</i>
+                </button>
+                <button onClick={flipIconVertical}>
+                  <i className='eos-icons rotate-flip-icon'>flip</i>
                 </button>
               </div>
             </div>

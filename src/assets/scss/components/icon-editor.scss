@@ -110,7 +110,12 @@
 
   .transform-div {
     div {
-      margin-left: $s;
+      display: inline-block;
+      margin-right: $l;
+    }
+
+    .rotate-flip-icon {
+      transform: rotateZ(90deg);
     }
 
     button {
@@ -119,7 +124,7 @@
       border-radius: $xs;
       box-shadow: 1px 2px $xs rgba($color: $dark-color, $alpha: 0.3);
       color: $dark-gray;
-      margin-left: $m;
+      margin-right: $m;
 
       &:hover {
         background-color: $dark-gray;
