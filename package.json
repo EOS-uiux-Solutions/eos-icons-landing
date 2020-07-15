@@ -10,7 +10,7 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
-    "eos-icons": "^4.1.0",
+    "eos-icons": "^4.2.0",
     "js-cookie": "^2.2.1",
     "node-sass": "^4.13.1",
     "prismjs": "^1.19.0",
