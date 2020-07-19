@@ -1,14 +1,15 @@
 .dropdown {
   margin-top: $xs;
+  max-width: $xl * 5;
   overflow: hidden;
   position: relative;
-  width: 100%;
 
   select {
     background: transparent;
+    border: 0;
     cursor: pointer;
     outline: 0;
-    width: 100%;
+    width: 95%;
   }
 }
 
