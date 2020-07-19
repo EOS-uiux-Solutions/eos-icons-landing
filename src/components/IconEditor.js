@@ -117,6 +117,22 @@ const IconEditor = (props) => {
             <div className='icon-preview'>
               <i className='eos-icons'>{iconName}</i>
             </div>
+            <p>Select Image Format</p>
+            <div className='dropdown fill-dropdown'>
+              <select>
+                <option value='SVG'>SVG</option>
+                <option value='PNG'>PNG</option>
+              </select>
+            </div>
+            <p>Select Size</p>
+            <div className='dropdown fill-dropdown'>
+              <select>
+                <option value='24'>24x24</option>
+                <option value='48'>48x48</option>
+                <option value='64'>64x64</option>
+                <option value='128'>128x128</option>
+              </select>
+            </div>
             <div className='export-btn'>
               <Button primary type='button' onClick={generateCustomizedIcon}>
                 {!generating ? (
