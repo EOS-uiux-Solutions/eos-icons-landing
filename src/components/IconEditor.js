@@ -9,7 +9,7 @@ const IconEditor = (props) => {
 
   const { isActive, show, iconName } = props
   const [exportAs, setExportAs] = useState('svg')
-  const [exportSize, setExportSize] = useState('18')
+  const [exportSize, setExportSize] = useState('512')
   const [color, setColor] = useState('#000000')
   const [rotateAngle, setRotateAngle] = useState(0)
   const [horizontalFlip, setHorizontalFlip] = useState(false)
@@ -79,7 +79,8 @@ const IconEditor = (props) => {
         url: `${apiBaseUrl}icon-customization`,
         payload: {
           icons: [iconName],
-          exportAs: 'svg',
+          exportAs: exportAs,
+          exportSize: exportSize,
           customizationConfig: {
             colorCode: color,
             rotateAngle: rotateAngle,
