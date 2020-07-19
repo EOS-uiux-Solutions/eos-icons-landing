@@ -166,8 +166,8 @@ const IconEditor = (props) => {
               <Button primary type='button' onClick={generateCustomizedIcon}>
                 {!generating ? (
                   <span>
-                    <i className='eos-icons eos-18'>file_download</i> Export as
-                    SVG
+                    <i className='eos-icons eos-18'>file_download</i> Export as{' '}
+                    {exportAs.toUpperCase()}
                   </span>
                 ) : (
                   <span>
