@@ -8,14 +8,24 @@ const IconEditor = (props) => {
   const apiBaseUrl = 'https://eos-icons-picker-api.herokuapp.com/'
 
   const { isActive, show, iconName } = props
-
+  const [exportAs, setExportAs] = useState('svg')
+  const [exportSize, setExportSize] = useState('18')
   const [color, setColor] = useState('#000000')
   const [rotateAngle, setRotateAngle] = useState(0)
   const [horizontalFlip, setHorizontalFlip] = useState(false)
   const [verticalFlip, setVerticalFlip] = useState(false)
-
   const [generating, setGenerate] = useState(false)
-
+  const exportSizes = [
+    '18',
+    '24',
+    '32',
+    '48',
+    '64',
+    '128',
+    '256',
+    '512',
+    '1024'
+  ]
   const changeColor = (color) => {
     setColor(color.hex)
   }
@@ -25,6 +35,12 @@ const IconEditor = (props) => {
     setRotateAngle(angle)
   }
 
+  const changeExportType = () => {
+    setExportAs(document.getElementsByClassName('export-type')[0].value)
+  }
+  const changeExportSize = () => {
+    setExportSize(document.getElementsByClassName('export-size')[0].value)
+  }
   const flipIconHorizontal = (e) => {
     e.preventDefault()
     setHorizontalFlip(!horizontalFlip)
@@ -119,20 +135,32 @@ const IconEditor = (props) => {
             </div>
             <p>Select Image Format</p>
             <div className='dropdown fill-dropdown'>
-              <select>
-                <option value='SVG'>SVG</option>
-                <option value='PNG'>PNG</option>
+              <select className='export-type' onChange={changeExportType}>
+                <option value='svg'>SVG</option>
+                <option value='png'>PNG</option>
               </select>
             </div>
-            <p>Select Size</p>
-            <div className='dropdown fill-dropdown'>
-              <select>
-                <option value='24'>24x24</option>
-                <option value='48'>48x48</option>
-                <option value='64'>64x64</option>
-                <option value='128'>128x128</option>
-              </select>
-            </div>
+            {exportAs === 'png' ? (
+              <div>
+                <p>Select Size</p>
+                <div className='dropdown fill-dropdown'>
+                  <select
+                    defaultValue={exportSize}
+                    className='export-size'
+                    onChange={changeExportSize}
+                  >
+                    {exportSizes.map((size, key) => (
+                      <option key={key} value={`${size}`}>
+                        {`${size}`} x {`${size}`} px
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            ) : (
+              ''
+            )}
+
             <div className='export-btn'>
               <Button primary type='button' onClick={generateCustomizedIcon}>
                 {!generating ? (
