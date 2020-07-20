@@ -1,0 +1,32 @@
+.dropdown {
+  margin-top: $xs;
+  max-width: $xl * 5;
+  overflow: hidden;
+  position: relative;
+
+  select {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    width: 95%;
+  }
+}
+
+
+.fill-dropdown {
+  background: $buttons;
+  border-radius: $xl;
+  box-shadow: 0px $s $s -6px rgba(0, 0, 0, 0.25);
+
+  select {
+    color: $light-color;
+    padding: $s;
+  }
+
+  option {
+    background-color: $buttons;
+    border-radius: $m;
+    padding: $s;
+  }
+}
