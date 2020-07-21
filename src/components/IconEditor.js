@@ -5,7 +5,7 @@ import axios from 'axios'
 import loading from '../assets/images/loading-white.svg'
 
 const IconEditor = (props) => {
-  const apiBaseUrl = 'http://localhost:3131/'
+  const apiBaseUrl = 'https://eos-icons-picker-api.herokuapp.com/'
 
   const { isActive, show, iconNames } = props
   const [exportAs, setExportAs] = useState('svg')
