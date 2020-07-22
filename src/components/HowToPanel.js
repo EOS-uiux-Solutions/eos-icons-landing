@@ -123,7 +123,7 @@ const HowToPanel = (props) => {
               <IconEditor
                 isActive={iconEditor}
                 show={iconEditorToggle}
-                iconName={iconName}
+                iconNames={[iconName]}
               />
             ) : (
               ''

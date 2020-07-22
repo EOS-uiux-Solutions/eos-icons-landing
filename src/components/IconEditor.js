@@ -7,7 +7,7 @@ import loading from '../assets/images/loading-white.svg'
 const IconEditor = (props) => {
   const apiBaseUrl = 'https://eos-icons-picker-api.herokuapp.com/'
 
-  const { isActive, show, iconName } = props
+  const { isActive, show, iconNames } = props
   const [exportAs, setExportAs] = useState('svg')
   const [exportSize, setExportSize] = useState('512')
   const [color, setColor] = useState('#000000')
@@ -69,6 +69,12 @@ const IconEditor = (props) => {
   const downloadCustomizedIcon = (props) => {
     const { timestamp } = props
     const downloadEndPoints = `${apiBaseUrl}download?ts=${timestamp}`
+    if (iconNames.length === 1) {
+      return window.open(
+        `${apiBaseUrl}icon-download?ts=${timestamp}&type=${exportAs}&iconName=${iconNames[0]}`,
+        '_blank'
+      )
+    }
     return window.open(downloadEndPoints, '_blank')
   }
   const generateCustomizedIcon = (e) => {
@@ -78,7 +84,7 @@ const IconEditor = (props) => {
       postDataToApi({
         url: `${apiBaseUrl}icon-customization`,
         payload: {
-          icons: [iconName],
+          icons: iconNames,
           exportAs: exportAs,
           exportSize: exportSize,
           customizationConfig: {
@@ -132,7 +138,7 @@ const IconEditor = (props) => {
           <div className='icon-div'>
             <p>Icon Preview</p>
             <div className='icon-preview'>
-              <i className='eos-icons'>{iconName}</i>
+              <i className='eos-icons'>{iconNames[0]}</i>
             </div>
             <p>Select Image Format</p>
             <div className='dropdown fill-dropdown'>
