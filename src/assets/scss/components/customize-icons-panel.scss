@@ -47,5 +47,10 @@
       display: inline;
       padding: 10px;
     }
+
+    button {
+      margin-right: $m;
+      outline: none;
+    }
   }
 }
