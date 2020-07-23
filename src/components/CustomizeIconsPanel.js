@@ -31,7 +31,8 @@ const CustomizeIconsPanel = (props) => {
 
   const iconEditorToggle = (e) => {
     e.preventDefault()
-    setIconEditor(!iconEditor)
+    if (value.multipleIcons.length > 0) setIconEditor(!iconEditor)
+    else window.alert('Please select atleast one icon')
   }
 
   const { selectAll, deselectAll } = props
