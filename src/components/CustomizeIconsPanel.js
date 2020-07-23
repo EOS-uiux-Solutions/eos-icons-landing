@@ -4,6 +4,7 @@ import { eosIconsState } from '../utils/EosIcons.store'
 import GeneratingFont from './GeneratingFont'
 import Modal from './Modal'
 import ThankYou from './ThankYou'
+import IconEditor from './IconEditor'
 import axios from 'axios'
 
 const sendData = async (params) => {
@@ -26,6 +27,13 @@ const downloadFont = (props) => {
 }
 
 const CustomizeIconsPanel = (props) => {
+  const [iconEditor, setIconEditor] = useState(false)
+
+  const iconEditorToggle = (e) => {
+    e.preventDefault()
+    setIconEditor(!iconEditor)
+  }
+
   const { selectAll, deselectAll } = props
   const value = eosIconsState
 
@@ -58,12 +66,24 @@ const CustomizeIconsPanel = (props) => {
         </div>
         <div className='generate-div'>
           <span>{value.multipleIcons.length} icons selected</span>
-          <Button primary type='submit' onClick={generateFont}>
-            Generate font
+          <span>Export as: </span>
+          <Button type='submit' onClick={generateFont}>
+            Font
+          </Button>
+          <Button type='button' onClick={iconEditorToggle}>
+            Images
           </Button>
         </div>
       </div>
-
+      {iconEditor ? (
+        <IconEditor
+          isActive={iconEditor}
+          show={iconEditorToggle}
+          iconNames={value.multipleIcons}
+        />
+      ) : (
+        ''
+      )}
       {modal ? (
         <Modal
           showButtons={serverResponse !== null}
