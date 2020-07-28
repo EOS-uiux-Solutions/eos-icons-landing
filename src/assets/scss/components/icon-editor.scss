@@ -86,10 +86,14 @@
   .icon-preview {
     border-radius: $s;
     box-shadow: 2px 4px 8px rgba($color: $dark-color, $alpha: 0.3);
-    padding: $xl;
+    height: $l * 8;
+    text-align: center;
+    width: $l * 8;
 
     i {
       font-size: $editor-icon-size;
+      position: relative;
+      top: $l;
     }
 
   }

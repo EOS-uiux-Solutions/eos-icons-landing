@@ -20,4 +20,4 @@ $xl: $m * 2; // = 32px
 $xxl: $m * 3; // = 48px
 $xxxl: $m * 4; // = 64px
 
-$editor-icon-size: 10em; //font size for icon preview in Editor window
+$editor-icon-size: $l * 6; //font size for icon preview in Editor window
