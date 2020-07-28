@@ -169,7 +169,7 @@ const IconEditor = (props) => {
             )}
 
             <div className='export-btn'>
-              <Button primary type='button' onClick={generateCustomizedIcon}>
+              <Button type='button' onClick={generateCustomizedIcon}>
                 {!generating ? (
                   <span>
                     <i className='eos-icons eos-18'>file_download</i> Export as{' '}
