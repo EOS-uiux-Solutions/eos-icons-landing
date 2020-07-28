@@ -84,8 +84,10 @@
   }
 
   .icon-preview {
+    background-image: url('../../images/white-grey-checkbox.svg');
+    background-size: $xl * 12;
     border-radius: $s;
-    box-shadow: 2px 4px 8px rgba($color: $dark-color, $alpha: 0.3);
+    box-shadow: 2px 4px 6px rgba($color: $dark-color, $alpha: 0.2);
     height: $l * 8;
     text-align: center;
     width: $l * 8;
@@ -95,7 +97,6 @@
       position: relative;
       top: $l;
     }
-
   }
 
   .export-btn {
