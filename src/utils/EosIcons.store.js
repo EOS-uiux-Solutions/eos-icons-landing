@@ -86,7 +86,9 @@ export const eosIconsState = {
       return {
         category: ele.category,
         icons: ele.icons.filter(
-          (ele) => ele.name.includes(value.toLowerCase()) && ele
+          (ele) =>
+            ele.name.includes(value.toLowerCase()) ||
+            ele.tags.includes(value.toLowerCase())
         )
       }
     })
