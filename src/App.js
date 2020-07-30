@@ -4,6 +4,7 @@ import { iconsReducer, eosIconsState } from './utils/EosIcons.store'
 import TagManager from 'react-gtm-module'
 import '../node_modules/eos-icons/dist/css/eos-icons.css'
 import './assets/scss/index.scss'
+import { GTM } from './config.json'
 
 /* Pages */
 import Home from './pages/Home'
@@ -21,14 +22,13 @@ import AppContext from './utils/AppContext'
 import CookiesBanner from './components/CookiesBanner'
 
 const tagManagerArgs = {
-  gtmId: 'GTM-TZKPV8W'
+  gtmId: GTM
 }
 
 TagManager.initialize(tagManagerArgs)
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
-
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className='App'>
