@@ -136,9 +136,19 @@ const IconEditor = (props) => {
             </div>
           </div>
           <div className='icon-div'>
-            <p>Icon Preview</p>
-            <div className='icon-preview'>
-              <i className='eos-icons'>{iconNames[0]}</i>
+            <p>
+              Icon Preview : {iconNames.length} of {iconNames.length}
+            </p>
+            <div className='icon-preview-box'>
+              <div>
+                <i className='eos-icons nxt-icon-btn'>keyboard_arrow_left</i>
+              </div>
+              <div className='icon-preview'>
+                <i className='eos-icons'>{iconNames[0]}</i>
+              </div>
+              <div>
+                <i className='eos-icons nxt-icon-btn'>keyboard_arrow_right</i>
+              </div>
             </div>
             <p>Select Image Format</p>
             <div className='dropdown fill-dropdown'>
