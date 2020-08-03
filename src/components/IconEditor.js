@@ -8,6 +8,7 @@ const IconEditor = (props) => {
   const apiBaseUrl = 'https://eos-icons-picker-api.herokuapp.com/'
 
   const { isActive, show, iconNames } = props
+  const [currentPosition, setCurrentPosition] = useState(0)
   const [exportAs, setExportAs] = useState('svg')
   const [exportSize, setExportSize] = useState('512')
   const [color, setColor] = useState('#000000')
@@ -51,6 +52,13 @@ const IconEditor = (props) => {
     setVerticalFlip(!verticalFlip)
   }
 
+  const changePosition = (action) => {
+    if (currentPosition === iconNames.length - 1 && action === 1)
+      setCurrentPosition(0)
+    else if (currentPosition === 0 && action === -1)
+      setCurrentPosition(iconNames.length - 1)
+    else setCurrentPosition(currentPosition + action)
+  }
   useEffect(() => {
     document.getElementsByClassName('icon-preview')[0].style.color = color
     document
@@ -136,9 +144,30 @@ const IconEditor = (props) => {
             </div>
           </div>
           <div className='icon-div'>
-            <p>Icon Preview</p>
-            <div className='icon-preview'>
-              <i className='eos-icons'>{iconNames[0]}</i>
+            <p>
+              Icon Preview{' '}
+              {iconNames.length > 1
+                ? `: ${currentPosition + 1} of ${iconNames.length}`
+                : ''}
+            </p>
+            <div className='icon-preview-box'>
+              {iconNames.length > 1 ? (
+                <div onClick={() => changePosition(-1)}>
+                  <i className='eos-icons nxt-icon-btn'>keyboard_arrow_left</i>
+                </div>
+              ) : (
+                ''
+              )}
+              <div className='icon-preview'>
+                <i className='eos-icons'>{iconNames[currentPosition]}</i>
+              </div>
+              {iconNames.length > 1 ? (
+                <div onClick={() => changePosition(1)}>
+                  <i className='eos-icons nxt-icon-btn'>keyboard_arrow_right</i>
+                </div>
+              ) : (
+                ''
+              )}
             </div>
             <p>Select Image Format</p>
             <div className='dropdown fill-dropdown'>

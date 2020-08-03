@@ -83,12 +83,38 @@
     right: 20px;
   }
 
+  .icon-preview-box {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nxt-icon-btn {
+    font-size: $l;
+    height: $l;
+    text-align: center;
+    user-select: none;
+    width: $l;
+
+    &:hover {
+      background-color: $dark-gray;
+      border: 0px;
+      border-radius: $l;
+      color: $light-color;
+      cursor: pointer;
+      height: $l;
+      transition-duration: 0.2s;
+      width: $l;
+    }
+  }
+
   .icon-preview {
     background-image: url('../../images/white-grey-checkbox.svg');
     background-size: $xl * 12;
     border-radius: $s;
     box-shadow: 2px 4px 6px rgba($color: $dark-color, $alpha: 0.2);
     height: $l * 8;
+    margin: $xs;
     text-align: center;
     width: $l * 8;
 
