@@ -11,10 +11,8 @@ const sendData = async (params) => {
   const { url, payload } = params
 
   const response = await axios.post(url, {
-    icons_config: {
-      eos_icons: [],
-      extended_icons: payload
-    }
+    exportAs: 'font',
+    icons: payload
   })
 
   return response.data

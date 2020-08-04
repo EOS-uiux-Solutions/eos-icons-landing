@@ -100,9 +100,13 @@ export const eosIconsState = {
     )
   },
   uploadPreviousSelection: function (value) {
-    value.forEach((value) => {
-      return !multipleIcons.includes(value) ? multipleIcons.push(value) : ''
-    })
+    try {
+      value.forEach((value) => {
+        return !multipleIcons.includes(value) ? multipleIcons.push(value) : ''
+      })
+    } catch (error) {
+      alert("JSON file doesn't seem to be right")
+    }
     return multipleIcons
   }
 }

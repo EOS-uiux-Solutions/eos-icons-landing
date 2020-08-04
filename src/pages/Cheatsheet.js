@@ -25,13 +25,21 @@ const Cheatsheet = () => {
 
     fileReader.onload = function (fileData) {
       const iconsArray = JSON.parse(fileData.target.result)
-
-      return dispatch({
-        type: 'UPLOAD_PREVIOUS_SELECTION',
-        data: iconsArray.extended_icons
-      })
+      let data = []
+      try {
+        // works for both versions for now
+        if (Object.prototype.hasOwnProperty.call(iconsArray, 'icons'))
+          data = iconsArray.icons
+        if (Object.prototype.hasOwnProperty.call(iconsArray, 'extended_icons'))
+          data = iconsArray.extended_icons
+        return dispatch({
+          type: 'UPLOAD_PREVIOUS_SELECTION',
+          data: data
+        })
+      } catch (error) {
+        alert('JSON file seems to be incorrect')
+      }
     }
-
     return fileReader.readAsText(file)
   }
 
