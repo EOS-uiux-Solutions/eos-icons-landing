@@ -119,6 +119,7 @@ const IconEditor = (props) => {
             <SketchPicker
               className='color-picker'
               color={color}
+              disableAlpha={true}
               onChangeComplete={changeColor}
             />
             <div className='transform-div'>
