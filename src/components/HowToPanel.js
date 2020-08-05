@@ -68,9 +68,9 @@ const HowToPanel = (props) => {
               rel='noopener noreferrer'
               href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}
             >
-            <Button primary type='button'>
-              <i className='eos-icons eos-18'>file_download</i> Download icon
-            </Button>
+              <Button primary type='button'>
+                <i className='eos-icons eos-18'>file_download</i> Download icon
+              </Button>
             </a>
             <Button primary type='button'>
               <i className='eos-icons eos-18'>edit</i> Edit Icon
