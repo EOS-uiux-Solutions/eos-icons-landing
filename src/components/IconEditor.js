@@ -69,7 +69,14 @@ const IconEditor = (props) => {
         .getElementsByTagName('i')[0].style.transform = `scaleX(${
         horizontalFlip ? -1 : 1
       }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
-    } catch (error) {}
+    } catch (error) {
+      // animated icons
+      document
+        .getElementsByClassName('icon-preview')[0]
+        .getElementsByTagName('img')[0].style.transform = `scaleX(${
+        horizontalFlip ? -1 : 1
+      }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
+    }
   }, [rotateAngle, color, horizontalFlip, verticalFlip])
 
   const postDataToApi = async (params) => {
