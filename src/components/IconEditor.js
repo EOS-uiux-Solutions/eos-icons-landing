@@ -7,7 +7,7 @@ import loading from '../assets/images/loading-white.svg'
 const IconEditor = (props) => {
   const apiBaseUrl = 'https://eos-icons-picker-api.herokuapp.com/'
 
-  const { isActive, show, iconNames } = props
+  const { isActive, show, iconNames, iconType } = props
   const [currentPosition, setCurrentPosition] = useState(0)
   const [exportAs, setExportAs] = useState('svg')
   const [exportSize, setExportSize] = useState('512')
@@ -27,6 +27,8 @@ const IconEditor = (props) => {
     '512',
     '1024'
   ]
+  const exportTypes = ['svg']
+  if (iconType !== 'animated') exportTypes.push('png')
   const changeColor = (color) => {
     setColor(color.hex)
   }
@@ -61,11 +63,13 @@ const IconEditor = (props) => {
   }
   useEffect(() => {
     document.getElementsByClassName('icon-preview')[0].style.color = color
-    document
-      .getElementsByClassName('icon-preview')[0]
-      .getElementsByTagName('i')[0].style.transform = `scaleX(${
-      horizontalFlip ? -1 : 1
-    }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
+    try {
+      document
+        .getElementsByClassName('icon-preview')[0]
+        .getElementsByTagName('i')[0].style.transform = `scaleX(${
+        horizontalFlip ? -1 : 1
+      }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
+    } catch (error) {}
   }, [rotateAngle, color, horizontalFlip, verticalFlip])
 
   const postDataToApi = async (params) => {
@@ -160,7 +164,14 @@ const IconEditor = (props) => {
                 ''
               )}
               <div className='icon-preview'>
-                <i className='eos-icons'>{iconNames[currentPosition]}</i>
+                {iconType === 'animated' ? (
+                  <img
+                    src={require(`eos-icons/animated-svg/${iconNames[currentPosition]}.svg`)}
+                    alt={iconNames[currentPosition]}
+                  />
+                ) : (
+                  <i className='eos-icons'>{iconNames[currentPosition]}</i>
+                )}
               </div>
               {iconNames.length > 1 ? (
                 <div onClick={() => changePosition(1)}>
@@ -173,8 +184,11 @@ const IconEditor = (props) => {
             <p>Select Image Format</p>
             <div className='dropdown fill-dropdown'>
               <select className='export-type' onChange={changeExportType}>
-                <option value='svg'>SVG</option>
-                <option value='png'>PNG</option>
+                {exportTypes.map((type, key) => (
+                  <option key={key} value={type}>
+                    {type.toUpperCase()}
+                  </option>
+                ))}
               </select>
             </div>
             {exportAs === 'png' ? (

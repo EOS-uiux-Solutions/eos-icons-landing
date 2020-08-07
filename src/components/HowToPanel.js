@@ -8,9 +8,9 @@ const HowToPanel = (props) => {
   const ref = useRef()
 
   const [iconEditor, setIconEditor] = useState(false)
-
-  const iconEditorToggle = (e) => {
-    e.preventDefault()
+  const [iconType, setIconType] = useState('static')
+  const iconEditorToggle = (type) => {
+    setIconType(type)
     setIconEditor(!iconEditor)
   }
 
@@ -72,7 +72,11 @@ const HowToPanel = (props) => {
                 <i className='eos-icons eos-18'>file_download</i> Download icon
               </Button>
             </a>
-            <Button primary type='button'>
+            <Button
+              primary
+              type='button'
+              onClick={() => iconEditorToggle('animated')}
+            >
               <i className='eos-icons eos-18'>edit</i> Edit Icon
             </Button>
           </div>
@@ -113,7 +117,11 @@ const HowToPanel = (props) => {
                   <i className='eos-icons eos-18'>file_download</i> Download PNG
                 </Button>
               </a>
-              <Button primary type='button' onClick={iconEditorToggle}>
+              <Button
+                primary
+                type='button'
+                onClick={() => iconEditorToggle('static')}
+              >
                 <i className='eos-icons eos-18'>edit</i> Edit Icon
               </Button>
             </div>
@@ -123,16 +131,17 @@ const HowToPanel = (props) => {
                 <small>{tag}</small>
               </span>
             ))}
-            {iconEditor ? (
-              <IconEditor
-                isActive={iconEditor}
-                show={iconEditorToggle}
-                iconNames={[iconName]}
-              />
-            ) : (
-              ''
-            )}
           </>
+        )}
+        {iconEditor ? (
+          <IconEditor
+            isActive={iconEditor}
+            show={iconEditorToggle}
+            iconNames={[iconName]}
+            iconType={iconType}
+          />
+        ) : (
+          ''
         )}
       </div>
     </div>
