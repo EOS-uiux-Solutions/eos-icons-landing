@@ -73,11 +73,11 @@ const IconEditor = (props) => {
       }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
     } catch (error) {
       // animated icons
-      // document
-      //   .getElementsByClassName('icon-preview')[0]
-      //   .getElementsByTagName('img')[0].style.transform = `scaleX(${
-      //   horizontalFlip ? -1 : 1
-      //   }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
+      document
+        .getElementsByClassName('icon-preview')[0]
+        .getElementsByTagName('div')[0].style.transform = `scaleX(${
+        horizontalFlip ? -1 : 1
+      }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
     }
   }, [rotateAngle, color, horizontalFlip, verticalFlip])
 
@@ -178,18 +178,9 @@ const IconEditor = (props) => {
                     <ReactSVG
                       src={require(`eos-icons/animated-svg/${iconNames[currentPosition]}.svg`)}
                       beforeInjection={(svg) => {
-                        /* HERE YOU ADD THE COLOR FROM THE COLOR PICKER */
                         svg.setAttribute('fill', color)
-
-                        /* TODO:  For the loading one we need to target some other elements, we need to add some condition for
-                        the fix and aniamted circles */
                       }}
                     />
-                    {/* Old intregration, we might be able to remove it? */}
-                    {/* <img
-                      src={require(`eos-icons/animated-svg/${iconNames[currentPosition]}.svg`)}
-                      alt={iconNames[currentPosition]}
-                    /> */}
                   </>
                 ) : (
                   <i className='eos-icons'>{iconNames[currentPosition]}</i>
