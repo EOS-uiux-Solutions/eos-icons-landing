@@ -4,7 +4,7 @@ import IconEditor from './IconEditor'
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
   const svgDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/svg/download/${iconName}`
-  const pngDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/png/download/${iconName}/1000`
+  const pngDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/png/download/${iconName}/1024`
   const ref = useRef()
 
   const [iconEditor, setIconEditor] = useState(false)
