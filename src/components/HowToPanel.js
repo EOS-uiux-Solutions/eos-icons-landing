@@ -4,13 +4,13 @@ import IconEditor from './IconEditor'
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
   const svgDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/svg/download/${iconName}`
-  const pngDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/png/download/${iconName}/1000`
+  const pngDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/png/download/${iconName}/1024`
   const ref = useRef()
 
   const [iconEditor, setIconEditor] = useState(false)
-
-  const iconEditorToggle = (e) => {
-    e.preventDefault()
+  const [iconType, setIconType] = useState('static')
+  const iconEditorToggle = (type) => {
+    setIconType(type)
     setIconEditor(!iconEditor)
   }
 
@@ -64,13 +64,21 @@ const HowToPanel = (props) => {
               value={`<img src='${iconName}'/>`}
             />
             <a
-              className='btn btn-primary'
               target='_blank'
               rel='noopener noreferrer'
               href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}
             >
-              <i className='eos-icons eos-18'>file_download</i> Download icon
+              <Button primary type='button'>
+                <i className='eos-icons eos-18'>file_download</i> Download icon
+              </Button>
             </a>
+            <Button
+              primary
+              type='button'
+              onClick={() => iconEditorToggle('animated')}
+            >
+              <i className='eos-icons eos-18'>edit</i> Edit Icon
+            </Button>
           </div>
         ) : (
           <>
@@ -109,7 +117,11 @@ const HowToPanel = (props) => {
                   <i className='eos-icons eos-18'>file_download</i> Download PNG
                 </Button>
               </a>
-              <Button primary type='button' onClick={iconEditorToggle}>
+              <Button
+                primary
+                type='button'
+                onClick={() => iconEditorToggle('static')}
+              >
                 <i className='eos-icons eos-18'>edit</i> Edit Icon
               </Button>
             </div>
@@ -119,16 +131,17 @@ const HowToPanel = (props) => {
                 <small>{tag}</small>
               </span>
             ))}
-            {iconEditor ? (
-              <IconEditor
-                isActive={iconEditor}
-                show={iconEditorToggle}
-                iconNames={[iconName]}
-              />
-            ) : (
-              ''
-            )}
           </>
+        )}
+        {iconEditor ? (
+          <IconEditor
+            isActive={iconEditor}
+            show={iconEditorToggle}
+            iconNames={[iconName]}
+            iconType={iconType}
+          />
+        ) : (
+          ''
         )}
       </div>
     </div>
