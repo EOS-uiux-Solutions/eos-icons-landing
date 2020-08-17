@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import AppContext from '../utils/AppContext'
 /* Components */
 import Icon from '../components/IconDisplay'
@@ -7,11 +7,16 @@ import Toogle from '../components/Toggle'
 import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
 import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToPanel'
-
+import { eosIconsState } from '../utils/EosIcons.store'
 const IconsSet = (props) => {
   const selectIcon = (icon, callback) => {
     setShowPanel(icon !== iconSelected)
     setIconSelected(icon === iconSelected ? '' : icon)
+    window.history.replaceState(
+      '',
+      'EOS Icons',
+      `${window.location.pathname}?iconName=${icon.name}`
+    )
     return callback
   }
 
@@ -26,9 +31,26 @@ const IconsSet = (props) => {
   const [showPanel, setShowPanel] = useState(false)
   const [tab, setActiveTab] = useState('Regular Icons')
 
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  const urlIconName = urlParams.get('iconName')
+
+  useEffect(() => {
+    if (urlIconName) {
+      const iconDetails = eosIconsState.icons.filter(
+        (icon) => icon.name === urlIconName
+      )
+      if (iconDetails.length) {
+        setShowPanel(true)
+        setIconSelected({ name: urlIconName, tags: iconDetails[0].tags })
+      }
+    }
+  }, [urlIconName])
+
   const closeHowTo = () => {
     setShowPanel(false)
     setIconSelected('')
+    window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
   }
 
   // Mark icon as active
