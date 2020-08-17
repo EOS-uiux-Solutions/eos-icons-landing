@@ -12,6 +12,11 @@ const IconsSet = (props) => {
   const selectIcon = (icon, callback) => {
     setShowPanel(icon !== iconSelected)
     setIconSelected(icon === iconSelected ? '' : icon)
+    window.history.replaceState(
+      '',
+      'EOS Icons',
+      `${window.location.pathname}?iconName=${icon.name}`
+    )
     return callback
   }
 
@@ -45,6 +50,7 @@ const IconsSet = (props) => {
   const closeHowTo = () => {
     setShowPanel(false)
     setIconSelected('')
+    window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
   }
 
   // Mark icon as active
