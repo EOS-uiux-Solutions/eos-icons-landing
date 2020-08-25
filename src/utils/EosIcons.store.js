@@ -23,7 +23,7 @@ const categories = Array.from(
       return true
     })
   )
-)
+).sort()
 
 const iconsCategory = categories.map((category) => {
   return {
