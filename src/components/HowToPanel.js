@@ -61,7 +61,7 @@ const HowToPanel = (props) => {
             <input
               className='input-group-element input-grow'
               readOnly='readOnly'
-              value={`<img src='${iconName}'/>`}
+              value={`<img src='${iconName}.svg'/>`}
             />
             <a
               target='_blank'
