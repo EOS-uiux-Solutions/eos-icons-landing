@@ -28,16 +28,13 @@ const Docs = () => {
         <Tabs>
           <div label='In your application'>
             <div className='cta-box cta-installing'>
-              <div>
-                <p className='cta-box-title'>
-                  Download EOS icons for your computer
-                </p>
-                <p className='cta-box-text'>
-                  Download he latest copy of our computer-specific files. You’ll
-                  need them to be able to work with your desired design
-                  software.
-                </p>
-              </div>
+              <p className='cta-box-title'>
+                Download EOS icons for your computer
+              </p>
+              <p className='cta-box-text'>
+                Download he latest copy of our computer-specific files. You’ll
+                need them to be able to work with your desired design software.
+              </p>
               <a
                 href='https://registry.npmjs.org/eos-icons/-/eos-icons-4.3.1.tgz'
                 rel='noopener noreferrer'
