@@ -1,0 +1,24 @@
+.cta-box {
+  background-color: #B3E8F6;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px;
+
+  a {
+    align-self: flex-end;
+  }
+
+  .eos-icons {
+    margin-right: 8px;
+  }
+}
+
+.cta-box-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.cta-box-text {
+  font-size: $font-size-body;
+  margin: 8px 0 0;
+}
