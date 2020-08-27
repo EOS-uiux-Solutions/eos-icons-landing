@@ -239,14 +239,15 @@ $eos-48: 48px;
             <p>
               Once you’ve downloaded the EOS Icons package, you’ll need to
               uncompress it. If you’re a Windows user, you’ll need to use a free
-              tool such as
+              tool such as {''}
               <a
                 href='https://www.7-zip.org/'
                 rel='noopener noreferrer'
                 target='_blank'
               >
                 7-Zip
-              </a>
+              </a>{' '}
+              {''}
               to be able to do it. Once uncompressed, you’ll find several
               folders. The ones relevant for designers are the following:
             </p>
@@ -366,7 +367,7 @@ $eos-48: 48px;
               your designs. All you need to do, is select the
               <em>“eos-icons”</em>
               font and use type the ligature for your icon. We have a cheatsheet
-              with all the ligatures which can be found
+              with all the ligatures which can be found &nbsp;
               <Link to='../cheatsheet'>here</Link>.
             </p>
             <img
