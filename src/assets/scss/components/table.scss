@@ -1,0 +1,30 @@
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+  width: 100%;
+
+  code {
+    color: $code-color;
+  }
+
+  tr {
+    text-align: left;
+  }
+
+  th {
+    border-color: $table-border;
+    border-style: solid;
+    border-width: 1px;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  td {
+    border-color: $table-border;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1rem;
+  }
+}
