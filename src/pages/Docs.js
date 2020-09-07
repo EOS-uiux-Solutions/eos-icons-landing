@@ -40,8 +40,11 @@ const Docs = () => {
               </div>
               <a
                 href='https://registry.npmjs.org/eos-icons/-/eos-icons-4.3.1.tgz'
-                rel='noopener noreferrer'
+                data-event-category='External link'
+                data-event-action='Link to latest EOS icons package'
+                data-event-label='Docs page'
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 <Button primary type='button'>
                   <i className='eos-icons eos-18'>file_download</i>
@@ -54,13 +57,39 @@ const Docs = () => {
               There are several options for you to use EOS icons in your
               product:
             </p>
-            <h2> Installing with npm </h2>
 
+            <h2>
+              Installing with npm
+              <a
+                href='https://www.npmjs.com/package/eos-icons'
+                data-event-category='External link'
+                data-event-action='Link to EOS Icons NPM'
+                data-event-label='Docs page'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {' '}
+                <i className='eos-icons eos-18'>open_in_new</i>
+              </a>
+            </h2>
             <pre className='code language-shell'>
               <code>npm install eos-icons --save</code>
             </pre>
 
-            <h2>With our CDN</h2>
+            <h2>
+              With our CDN
+              <a
+                href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css'
+                data-event-category='External link'
+                data-event-action='Link to EOS Icons CDN (title)'
+                data-event-label='Docs page'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {' '}
+                <i className='eos-icons eos-18'>open_in_new</i>
+              </a>
+            </h2>
             <p>
               For EOS set:
               <a
@@ -86,6 +115,30 @@ const Docs = () => {
             <p>
               Import them in your <span className='command'> &lt;head&gt;</span>{' '}
               tag as <span className='command'> link:css </span>.
+            </p>
+
+            <h2>
+              With our Rails gem
+              <a
+                href='https://rubygems.org/gems/eos-icons-font'
+                data-event-category='External link'
+                data-event-action='Link to EOS Icons Gem'
+                data-event-label='Docs page'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {' '}
+                <i className='eos-icons eos-18'>open_in_new</i>
+              </a>
+            </h2>
+
+            <pre className='code language-shell'>
+              <code>gem install eos-icons-font</code>
+            </pre>
+
+            <p>
+              Add the following directive to your application:{' '}
+              <span className='command'>*= require eos-icons-font</span>
             </p>
 
             <h1>Using EOS icons in your projects</h1>
@@ -229,8 +282,11 @@ $eos-48: 48px;
               </div>
               <a
                 href='https://registry.npmjs.org/eos-icons/-/eos-icons-4.3.1.tgz'
-                rel='noopener noreferrer'
+                data-event-category='External link'
+                data-event-action='Link to latest EOS icons package'
+                data-event-label='Docs page (on computer tab)'
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 <Button primary type='button'>
                   <i className='eos-icons eos-18'>file_download</i>
