@@ -30,6 +30,7 @@ test_lints_js:
 pages:
   stage: deploy
   script:
+    - npm update eos-icons
     - npm run build
     - rm -rf public
     - mv build public
