@@ -5,18 +5,14 @@ import Cookies from 'js-cookie'
 
 const multipleIcons = []
 
-const filterOutAnimated = eosIcons.filter(
-  (ele) => animatedIcons.indexOf(ele.name) < 0
-)
+const staticIcons = eosIcons.filter((ele) => ele.type === 'static')
 
-const allIconsByName = eosIcons
-  .map((icon) => icon.name)
-  .filter((el) => animatedIcons.indexOf(el) < 0)
+const allIconsByName = staticIcons.map((icon) => icon.name)
 
 /* Create an array with categories */
 const categories = Array.from(
   new Set(
-    filterOutAnimated.map((ele) => {
+    staticIcons.map((ele) => {
       if (typeof ele.category === 'string') return ele.category
       if (typeof ele.category === 'object') return ele.category[0]
 
@@ -28,7 +24,7 @@ const categories = Array.from(
 const iconsCategory = categories.map((category) => {
   return {
     category: category,
-    icons: filterOutAnimated
+    icons: staticIcons
       .map((ele) =>
         ele.category === category || ele.category[0] === category ? ele : null
       )
@@ -39,7 +35,7 @@ const iconsCategory = categories.map((category) => {
 /* EOS Icons state */
 export const eosIconsState = {
   animatedIcons: animatedIcons,
-  icons: filterOutAnimated,
+  icons: staticIcons,
   iconsCategory,
   multipleIcons,
   customize: false,
