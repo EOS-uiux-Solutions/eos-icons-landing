@@ -6,7 +6,19 @@ import Button from '../components/Button'
 import Prism from 'prismjs'
 import FontbookImg from '../assets/images/docs/fontbook.gif'
 import UsingIconsImg from '../assets/images/docs/using-eos-icons.gif'
+import axios from 'axios'
 import { Link } from '@reach/router'
+
+const getEOSIconsVersion = async () => {
+  const eosIconsPackage = await axios.get(
+    'https://cdn.jsdelivr.net/npm/eos-icons/package.json'
+  )
+
+  window.open(
+    `https://registry.npmjs.org/eos-icons/-/eos-icons-${eosIconsPackage.data.version}.tgz`,
+    '_blank'
+  )
+}
 
 const Docs = () => {
   useEffect(() => {
@@ -38,19 +50,12 @@ const Docs = () => {
                   software.
                 </p>
               </div>
-              <a
-                href='https://registry.npmjs.org/eos-icons/-/eos-icons-4.3.1.tgz'
-                data-event-category='External link'
-                data-event-action='Link to latest EOS icons package'
-                data-event-label='Docs page'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <Button primary type='button'>
+              <div className='download-link'>
+                <Button primary type='button' onClick={getEOSIconsVersion}>
                   <i className='eos-icons eos-18'>file_download</i>
                   Download EOS Icons
                 </Button>
-              </a>
+              </div>
             </div>
             <h1>Installing EOS icons</h1>
             <p>
