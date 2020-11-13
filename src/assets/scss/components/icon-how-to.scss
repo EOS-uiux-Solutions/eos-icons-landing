@@ -1,9 +1,8 @@
 .how-to-use-block {
-  background-color: $lightest-gray;
+  border-top: 1px solid $lightest-gray;
   bottom: 0;
   left: 0;
   padding-bottom: $m;
-  position: fixed;
   width: 100%;
   z-index: $z-index-10;
 

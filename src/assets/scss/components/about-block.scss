@@ -1,0 +1,25 @@
+.about-block {
+  align-items: center;
+  display: flex;
+  padding: $xxl 0;
+
+  &-description {
+    width: 50%;
+
+    h2 {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  &-image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    img {
+      max-width: 340px;
+    }
+  }
+}

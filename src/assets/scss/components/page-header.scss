@@ -1,27 +1,34 @@
-$orange-theme: url('../../images/header.png') center, $nav-gradient;
-$purple-theme: url('../../images/header.png') center, $header-gradient;
+$page-header-illustration: url('../../images/page-header-illustrations.png') center right no-repeat #EEEFF1;
 
 .page-header {
   align-items: center;
-  color: $light-color;
+  background: $page-header-illustration;
+  background-size: fixed;
+  color: $dark-color;
   display: flex;
-  justify-content: center;
-  padding: $xxxl;
-  text-align: center;
+  padding: $xxl 0;
+  position: sticky;
+  top: 55px;
+  width: 100%;
 
   &-small {
-    height: 10vh;
+    min-height: 10vh;
   }
 
   &-medium {
     height: 30vh;
   }
 
-  &-orange {
-    background: $orange-theme;
-  }
+  &-wrapper {
+    background-color: #fff;
+    width: 100%;
 
-  &-purple {
-    background: $purple-theme;
+    .container {
+      padding: 0 24px;
+    }
   }
+}
+
+.page-header-simple {
+  padding: 100px 0;
 }

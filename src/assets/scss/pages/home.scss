@@ -6,3 +6,38 @@
   height: 50px;
   padding: $xl;
 }
+
+.icons-set {
+  padding: 0;
+}
+
+.icons-control {
+  display: flex;
+  padding-bottom: 50px;
+
+  &-search {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 60%;
+
+    i {
+      color: $lightest-gray;
+      position: absolute;
+      top: 5px;
+    }
+
+    input.search-input {
+      border-bottom: 1px solid #000;
+      border-radius: 0;
+      padding-left: 25px;
+      width: 50%;
+    }
+  }
+
+  &-toggle {
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+  }
+}

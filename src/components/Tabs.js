@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Tabs = (props) => {
-  const { children, setTab } = props
-  const [activeTab, setActiveTab] = useState(children[0].props.label)
+  const { children, setTab, customize, showPanel } = props
 
+  const [activeTab, setActiveTab] = useState(children[0].props.label)
+  const [position, setPosition] = useState(0)
+
+  useEffect(() => {
+    setPosition(document.querySelector('.page-header').clientHeight + 55)
+  }, [customize, showPanel])
   return (
     <div className='tabs'>
-      <ol className='tab-list'>
+      <ol className='tab-list' style={{ top: position }}>
         {children.map((child, idx) => {
           const { label } = child.props
           return (

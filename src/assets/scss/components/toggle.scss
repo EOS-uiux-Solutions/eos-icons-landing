@@ -34,7 +34,7 @@
     display: none;
 
     &:checked + label {
-      background: $grad-init;
+      background: $primary;
     }
   }
 
