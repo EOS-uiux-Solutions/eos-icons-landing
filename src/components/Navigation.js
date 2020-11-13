@@ -26,6 +26,7 @@ const Navigation = () => {
           <NavLink to='/'>Icons </NavLink>
           <NavLink to='/about'>About Us</NavLink>
           <NavLink to='/docs'>Docs </NavLink>
+          <NavLink to='/team'>Team </NavLink>
         </nav>
       </div>
     </header>

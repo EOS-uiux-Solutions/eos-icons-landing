@@ -13,6 +13,7 @@ import Docs from './pages/Docs'
 import PageNotFound from './pages/PageNotFound'
 import CookiesPage from './pages/Cookies'
 import AboutPage from './pages/AboutPage'
+import TeamPage from './pages/TeamPage'
 
 /* Componets */
 import Navigation from './components/Navigation'
@@ -43,6 +44,7 @@ const App = () => {
             <ThankYou path='/thankyou' />
             <PageNotFound path='*' />
             <AboutPage path='/about' />
+            <TeamPage path='/team' />
           </Router>
           <ScrollToTopBtn />
         </div>

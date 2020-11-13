@@ -18,7 +18,7 @@ $nav-border-color: #e3864e;
 $icons-picker-loading-background-color: rgba(0, 0, 0, 0.7);
 $modal-background-color: rgba(0, 0, 0, 0.7);
 $shadow-color: rgba(0, 0, 0, 0.5);
-
+$overlay-color: rgba(0, 0, 0, 0.8);
 /* Gradient */
 
 $grad-init: #ff890a;
@@ -26,3 +26,6 @@ $grad-middle: #ff420a;
 $grad-final: #bc0289;
 $nav-gradient: linear-gradient(90deg, #fbb369, #ff814a);
 $header-gradient: linear-gradient(90deg, #694966, #5c415d);
+
+
+$light-overlay-gradient: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(128, 128, 128, 1) 100%);

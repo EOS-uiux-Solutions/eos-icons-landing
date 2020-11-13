@@ -1,0 +1,37 @@
+.team-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &-maintainers {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $xxl 0;
+    width: 100%;
+
+    &-introduction {
+      display: flex;
+      flex-direction: column;
+      height: 310px;
+      justify-content: center;
+      margin-right: $xxl;
+      margin-top: $xxl;
+      position: relative;
+      width: 310px;
+
+      h2,
+      p {
+        margin: 0;
+        margin-left: $xxxl;
+      }
+    }
+  }
+
+  &-contributors {
+    &-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
