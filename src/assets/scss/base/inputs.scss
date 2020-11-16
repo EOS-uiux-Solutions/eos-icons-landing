@@ -26,14 +26,15 @@ input {
     position: relative;
 
     button {
-      background: transparent;
+      background: $light-gray;
       border: 0;
+      border-radius: 10px;
       color: $dark-gray;
       position: absolute;
       right: 0px;
 
       &:hover {
-         color: $dark-gray;
+        color: $dark-gray;
       }
     }
   }

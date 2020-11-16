@@ -14,6 +14,7 @@ import PageNotFound from './pages/PageNotFound'
 import CookiesPage from './pages/Cookies'
 import AboutPage from './pages/AboutPage'
 import TeamPage from './pages/TeamPage'
+import Cheatsheet from './pages/Cheatsheet'
 
 /* Componets */
 import Navigation from './components/Navigation'
@@ -37,7 +38,6 @@ const App = () => {
         <Navigation />
         <div className='app-container'>
           <Router primary={false}>
-            {/* <Home path='/' /> */}
             <Home path='/' />
             <Docs path='/docs' />
             <CookiesPage path='/cookies-policy' />
@@ -45,6 +45,7 @@ const App = () => {
             <PageNotFound path='*' />
             <AboutPage path='/about' />
             <TeamPage path='/team' />
+            <Cheatsheet path='/cheatsheet' />
           </Router>
           <ScrollToTopBtn />
         </div>

@@ -14,8 +14,21 @@ h2 {
 }
 
 h1 {
+  display: inline-block;
   font-weight: bold;
+  position: relative;
   text-transform: uppercase;
+  z-index: 1;
+
+  &:after {
+    border: 13px solid $primary;
+    content: '';
+    margin-left: -40%;
+    margin-top: 15px;
+    position: absolute;
+    width: 45%;
+    z-index: -1;
+}
 }
 
 .text-center {

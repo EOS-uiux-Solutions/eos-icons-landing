@@ -28,7 +28,8 @@ header {
     font-size: $font-size;
 
     a,
-    a:visited {
+    a:visited,
+    a:hover {
       color: $dark-color;
       font-weight: 300;
       margin-left: $l;

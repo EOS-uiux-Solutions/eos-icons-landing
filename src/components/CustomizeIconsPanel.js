@@ -26,7 +26,7 @@ const downloadFont = (props) => {
 }
 
 const CustomizeIconsPanel = (props) => {
-  const { state, dispatch } = useContext(AppContext)
+  const { dispatch } = useContext(AppContext)
   const [iconEditor, setIconEditor] = useState(false)
 
   const iconEditorToggle = (e) => {
