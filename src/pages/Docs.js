@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import DownloadEosIcons from '../components/DownloadEosIcons'
 import PageHeader from '../components/PageHeader'
 import Tabs from '../components/Tabs'
 import Button from '../components/Button'
@@ -142,7 +141,7 @@ const Docs = () => {
             </p>
             <p>
               1- Add the <span className='command'>eos-icons.css</span> file
-              available under the dist/css folder into your project's{' '}
+              available under the dist/css folder into your project's
               <span className='command'> &lt;head&gt;</span>:
             </p>
 
@@ -181,7 +180,7 @@ const Docs = () => {
             <h2>Using Animated icons</h2>
             <p>
               The animated EOS icons are built using SMIL SVG animations. To
-              implement them you don't need anything special, just an{' '}
+              implement them you don't need anything special, just an
               <code>img</code> tag with the <code>src</code> to the svg. For
               example:
             </p>
@@ -430,7 +429,6 @@ $eos-48: 48px;
           </div>
         </Tabs>
       </div>
-      <DownloadEosIcons />
     </div>
   )
 }

@@ -1,94 +1,267 @@
-const contributors = [
+export const maintainers = [
   {
-    title: 'Cynthia Sanchez on twitter',
-    href: 'https://twitter.com/cyntss',
-    image: 'image1.png',
-    name: 'Cynthia Sanchez'
+    name: 'Sorin Curescu',
+    description: 'I do stuff with code like pew pew pew!',
+    role: 'Developer',
+    image: require('../assets/images/contributors/sorin.jpg'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/en3sis'
+      },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/en3sis/'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/en3sis'
+      }
+    ]
   },
   {
-    title: 'Zvezdana Marjanovic on Linked-In',
-    href: 'https://www.linkedin.com/in/zvezdanam',
-    image: 'image8.png',
-    name: 'Zvezdana Marjanovic'
+    name: 'Cynthia Sanchez',
+    description: 'I do stuff with code like pew pew pew!',
+    role: 'Product Owner',
+    image: require('../assets/images/contributors/image1.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/cyntss'
+      }
+      // {
+      //   title: 'linkedin',
+      //   link: '#'
+      // },
+      // {
+      //   title: 'git',
+      //   link: '#'
+      // }
+    ]
   },
   {
-    title: 'Manuele Carlini on twitter',
-    href: 'https://twitter.com/manuelecarlini',
-    image: 'image3.png',
-    name: 'Manuele Carlini'
+    name: 'Zvezdana Majanovic',
+    description: 'I do stuff with code like pew pew pew!',
+    role: 'Graphic Designer',
+    image: require('../assets/images/contributors/image8.png'),
+    social: [
+      // {
+      //   title: 'twitter',
+      //   link: '#'
+      // },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/zvezdanam'
+      }
+      // {
+      //   title: 'git',
+      //   link: '#'
+      // }
+    ]
   },
   {
-    title: 'Richa Bhist on Linked-In',
-    href: 'https://www.linkedin.com/in/richabisht/',
-    image: 'image6.png',
-    name: 'Richa Bhist'
+    name: 'Manuele Carlini',
+    description: 'I do stuff with code like pew pew pew!',
+    role: 'Designer',
+    image: require('../assets/images/contributors/image3.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/manuelecarlini'
+      }
+      // {
+      //   title: 'linkedin',
+      //   link: '#'
+      // },
+      // {
+      //   title: 'git',
+      //   link: '#'
+      // }
+    ]
   },
   {
-    title: 'Jesus Herman on twitter',
-    href: 'https://twitter.com/hesusjerman',
-    image: 'image4.png',
-    name: 'Jesus Herman'
+    name: 'Richa Bhist',
+    description: 'I do stuff with code like pew pew pew!',
+    role: 'Developer',
+    image: require('../assets/images/contributors/image6.png'),
+    social: [
+      // {
+      //   title: 'twitter',
+      //   link: '#'
+      // },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/richabisht/'
+      }
+      // {
+      //   title: 'git',
+      //   link: '#'
+      // }
+    ]
   },
   {
-    title: 'Sorin Curescu on twitter',
-    href: 'https://twitter.com/en3sis',
-    image: 'image2.png',
-    name: 'Sorin Curescu'
-  },
-  {
-    title: 'Abhinandan Sharma on Linked-In',
-    href: 'https://www.linkedin.com/in/abhinandan-sharma-672299150/',
-    image: 'image5.png',
-    name: 'Abhinandan Sharma'
-  },
-  {
-    title: 'Kartikay Bhutani on twitter',
-    href: 'https://twitter.com/kbhutani0001',
-    image: 'image7.png',
-    name: 'Kartikay Bhutani'
-  },
-  {
-    title: 'Carla Moratillo on Dribbble',
-    href: 'https://dribbble.com/Carla_Isela',
-    image: 'carla.jpg',
-    name: 'Carla Moratillo'
-  },
-  {
-    title: 'Saurabh Sharma on Twitter',
-    href: 'https://twitter.com/SAURABH20944279?s=09',
-    image: 'saurabh.jpg',
-    name: 'Saurabh Sharma'
-  },
-  {
-    title: 'Kateryna Marchak on Twitter',
-    href: 'https://twitter.com/ZenZippy',
-    image: 'kathie.png',
-    name: 'Kateryna Marchak'
-  },
-  {
-    title: 'Rishabh kohale on LinkedIn',
-    href: 'https://www.linkedin.com/in/r-kohale9/',
-    image: 'rishab.jpg',
-    name: 'Rishabh Kohale'
-  },
-  {
-    title: 'Aditya Sharma on LinkedIn',
-    href: 'https://www.linkedin.com/in/aditya-sharma-88541116a/',
-    image: 'aditya.png',
-    name: 'Aditya Sharma'
-  },
-  {
-    title: 'Devesh Vijaywargiya on LinkedIn',
-    href: 'https://www.linkedin.com/in/devesh-vijaywargiya/',
-    image: 'devesh.jpg',
-    name: 'Devesh Vijaywargiya'
-  },
-  {
-    title: 'Shashank Jarial on LinkedIn',
-    href: 'https://www.linkedin.com/in/shashank-jarial-354485152/',
-    image: 'shashank.jpg',
-    name: 'Shashank Jarial'
+    name: 'Jesus Herman',
+    description: 'I do stuff with code like pew pew pew!',
+    role: 'Developer',
+    image: require('../assets/images/contributors/image4.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/hesusjerman'
+      }
+      // {
+      //   title: 'linkedin',
+      //   link: '#'
+      // },
+      // {
+      //   title: 'git',
+      //   link: '#'
+      // }
+    ]
   }
+  // {
+  //   name: 'Kenneth Wimmer',
+  //   description: 'I do stuff with code like pew pew pew!',
+  //   role: 'Product Owner',
+  //   image: require('../assets/images/contributors/sorin.png'),
+  //   social: [
+  //     {
+  //       title: 'twitter',
+  //       link: '#'
+  //     },
+  //     {
+  //       title: 'linkedin',
+  //       link: '#'
+  //     },
+  //     {
+  //       title: 'git',
+  //       link: '#'
+  //     }
+  //   ]
+  // }
 ]
 
-export default contributors
+export const contributors = [
+  {
+    name: 'Kateryna Marchak',
+    role: 'Marketing',
+    image: require('../assets/images/contributors/kathie.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/ZenZippy'
+      },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/kateryna-marchak-618136b8/'
+      }
+    ]
+  },
+  {
+    name: 'Shashank Jarial',
+    role: 'Designer',
+    image: require('../assets/images/contributors/shashank.jpg'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/shashank-jarial-354485152/'
+      }
+    ]
+  },
+  {
+    name: 'Devesh Vijaywargiya',
+    role: 'Marketing',
+    image: require('../assets/images/contributors/devesh.jpg'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/devesh-vijaywargiya/'
+      }
+    ]
+  },
+  {
+    name: 'DEMO',
+    role: 'Marketing',
+    image: require('../assets/images/contributors/kathie.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/ZenZippy'
+      },
+      {
+        title: 'linkedin',
+        link: '#'
+      },
+      {
+        title: 'git',
+        link: '#'
+      }
+    ]
+  },
+  {
+    name: 'Abhinandan Sharma',
+    role: 'Developer',
+    image: require('../assets/images/contributors/image5.png'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/abhinandan-sharma-672299150/'
+      }
+    ]
+  },
+  {
+    name: 'Kartikay Bhutani',
+    role: 'Developer',
+    image: require('../assets/images/contributors/image7.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/kbhutani0001'
+      }
+    ]
+  },
+  {
+    name: 'Carla Moratillo',
+    role: 'Designer',
+    image: require('../assets/images/contributors/carla.jpg'),
+    social: [
+      {
+        title: 'dribble',
+        link: 'https://dribbble.com/Carla_Isela'
+      }
+    ]
+  },
+  {
+    name: 'Saurabh Sharma',
+    role: 'Designer',
+    image: require('../assets/images/contributors/saurabh.jpg'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/SAURABH20944279?s=09'
+      }
+    ]
+  },
+  {
+    name: 'Rishabh Kohale',
+    role: 'Developer',
+    image: require('../assets/images/contributors/rishab.jpg'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/r-kohale9/'
+      }
+    ]
+  },
+  {
+    name: 'Aditya Sharma',
+    role: 'Developer',
+    image: require('../assets/images/contributors/aditya.png'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/aditya-sharma-88541116a/'
+      }
+    ]
+  }
+]

@@ -1,6 +1,8 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import TeamBlock, { ContributorsBlock } from '../components/TeamBlock'
+import { contributors, maintainers } from '../utils/Contributors.store'
+import Button from '../components/Button';
 
 export const TeamPage = () => {
   return (
@@ -24,7 +26,7 @@ export const TeamPage = () => {
               Mouse over the images <br /> to discover more
             </p>
           </div>
-          {maintainersData.map((ele, i) => (
+          {maintainers.map((ele, i) => (
             <TeamBlock {...ele} key={i} />
           ))}
         </div>
@@ -36,9 +38,23 @@ export const TeamPage = () => {
           </h4>
 
           <div className='team-page-contributors-list'>
-            {contributorsData.map((ele, i) => (
+            {contributors.map((ele, i) => (
               <ContributorsBlock {...ele} key={i} />
             ))}
+          </div>
+        </div>
+
+        <div className='team-page-cta'>
+          <div className='slack-cta'>
+            <h4>Join us, become a contributor!</h4>
+
+            <p>
+              Be part of the team, enter our Slack channel and chat directly
+              with developers and designer. We’ll tell you how you can contrite,
+              you can share ideas and insight, learn and boost your career.
+            </p>
+
+            <Button>Join Slack</Button>
           </div>
         </div>
       </div>
@@ -46,225 +62,4 @@ export const TeamPage = () => {
   )
 }
 
-const maintainersData = [
-  {
-    name: 'Sorin Curescu',
-    description: 'I do stuff with code like pew pew pew!',
-    role: 'UX Developer',
-    image: require('../assets/images/pages/team/sorin.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/en3sis'
-      },
-      {
-        title: 'linkedin',
-        link: '#'
-      },
-      {
-        title: 'git',
-        link: '#'
-      }
-    ]
-  },
-  {
-    name: 'Cynthia Sanchez',
-    description: 'I do stuff with code like pew pew pew!',
-    role: 'Product Owner',
-    image: require('../assets/images/pages/team/sorin.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: '#'
-      },
-      {
-        title: 'linkedin',
-        link: '#'
-      },
-      {
-        title: 'git',
-        link: '#'
-      }
-    ]
-  },
-  {
-    name: 'Zvezdana Majanovic',
-    description: 'I do stuff with code like pew pew pew!',
-    role: 'Graphic Designer',
-    image: require('../assets/images/pages/team/sorin.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: '#'
-      },
-      {
-        title: 'linkedin',
-        link: '#'
-      },
-      {
-        title: 'git',
-        link: '#'
-      }
-    ]
-  }
-  // {
-  //   name: 'Manuele Carlini',
-  //   description: 'I do stuff with code like pew pew pew!',
-  //   role: 'Product Owner',
-  //   image: require('../assets/images/pages/team/sorin.png'),
-  //   social: [
-  //     {
-  //       title: 'twitter',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'linkedin',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'git',
-  //       link: '#'
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Richa Bhist',
-  //   description: 'I do stuff with code like pew pew pew!',
-  //   role: 'Product Owner',
-  //   image: require('../assets/images/pages/team/sorin.png'),
-  //   social: [
-  //     {
-  //       title: 'twitter',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'linkedin',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'git',
-  //       link: '#'
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Jesus Herman',
-  //   description: 'I do stuff with code like pew pew pew!',
-  //   role: 'Product Owner',
-  //   image: require('../assets/images/pages/team/sorin.png'),
-  //   social: [
-  //     {
-  //       title: 'twitter',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'linkedin',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'git',
-  //       link: '#'
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Kenneth Wimmer',
-  //   description: 'I do stuff with code like pew pew pew!',
-  //   role: 'Product Owner',
-  //   image: require('../assets/images/pages/team/sorin.png'),
-  //   social: [
-  //     {
-  //       title: 'twitter',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'linkedin',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'git',
-  //       link: '#'
-  //     }
-  //   ]
-  // }
-]
-
-const contributorsData = [
-  {
-    name: 'Kateryna Marchak',
-    role: 'Marketing',
-    image: require('../assets/images/pages/team/sorin.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/en3sis'
-      },
-      {
-        title: 'linkedin',
-        link: '#'
-      },
-      {
-        title: 'git',
-        link: '#'
-      }
-    ]
-  },
-  {
-    name: 'Kateryna Marchak',
-    role: 'Marketing',
-    image: require('../assets/images/pages/team/sorin.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/en3sis'
-      },
-      {
-        title: 'linkedin',
-        link: '#'
-      },
-      {
-        title: 'git',
-        link: '#'
-      }
-    ]
-  },
-  {
-    name: 'Kateryna Marchak',
-    role: 'Marketing',
-    image: require('../assets/images/pages/team/sorin.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/en3sis'
-      },
-      {
-        title: 'linkedin',
-        link: '#'
-      },
-      {
-        title: 'git',
-        link: '#'
-      }
-    ]
-  },
-  {
-    name: 'Kateryna Marchak',
-    role: 'Marketing',
-    image: require('../assets/images/pages/team/sorin.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/en3sis'
-      },
-      {
-        title: 'linkedin',
-        link: '#'
-      },
-      {
-        title: 'git',
-        link: '#'
-      }
-    ]
-  }
-]
 export default TeamPage
