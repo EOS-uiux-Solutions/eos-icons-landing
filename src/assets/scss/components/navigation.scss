@@ -18,12 +18,10 @@ header {
     }
 
     .brand-text {
-
       @media (max-width: 413px) {
         display: none;
       }
     }
-
   }
 
   nav {
@@ -32,6 +30,7 @@ header {
     a,
     a:visited {
       color: $dark-color;
+      font-weight: 300;
       margin-left: $l;
       padding: 0 $s;
       text-decoration: none;
@@ -49,7 +48,6 @@ header {
         position: absolute;
         width: 100%;
       }
-      // border-bottom: 5px solid $primary;
     }
   }
 

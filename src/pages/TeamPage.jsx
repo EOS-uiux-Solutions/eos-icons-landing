@@ -2,7 +2,7 @@ import React from 'react'
 import PageHeader from '../components/PageHeader'
 import TeamBlock, { ContributorsBlock } from '../components/TeamBlock'
 import { contributors, maintainers } from '../utils/Contributors.store'
-import Button from '../components/Button';
+import Button from '../components/Button'
 
 export const TeamPage = () => {
   return (

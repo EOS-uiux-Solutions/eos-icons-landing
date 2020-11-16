@@ -8,21 +8,33 @@ input {
   margin-bottom: $s;
 
   .input-group-element:first-child {
-    border-radius: 25px 0 0 25px;
-  }
-
-  button {
-    border-radius: 0px;
-    border-right: $light-color 2px solid;
-  }
-
-  button:nth-child(5),
-  button:nth-child(3) {
-    border-radius: 0 25px 25px 0;
-    border-right: 0px;
+    background: $light-gray;
+    border-radius: 10px;
+    min-width: 275px;
+    padding: $s $m;
   }
 
   .input-grow {
     flex-grow: 1;
+  }
+
+  button {
+    margin-left: $l;
+  }
+
+  &-information {
+    position: relative;
+
+    button {
+      background: transparent;
+      border: 0;
+      color: $dark-gray;
+      position: absolute;
+      right: 0px;
+
+      &:hover {
+         color: $dark-gray;
+      }
+    }
   }
 }

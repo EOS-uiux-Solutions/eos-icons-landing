@@ -1,7 +1,8 @@
 .icons-picker-footer {
   color: $dark-gray;
-  font-weight: 500;
-  padding: 16px;
+  display: flex;
+  font-weight: 300;
+  justify-content: space-between;
   width: 100%;
 
   .select-all-icons {
@@ -39,7 +40,6 @@
   .generate-div {
     display: block;
     float: right;
-    margin-right: 110px;
     margin-top: 10px;
     padding-bottom: 15px;
 
@@ -51,6 +51,22 @@
     button {
       margin-right: $m;
       outline: none;
+    }
+  }
+
+  &-upload {
+    align-items: center;
+    display: flex;
+
+    p {
+      margin-right: 10px;
+    }
+
+    .btn {
+      border: 1px solid $dark-gray;
+      color: $color;
+      font-weight: bold;
+      margin: 0 5px;
     }
   }
 }

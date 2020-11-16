@@ -7,7 +7,7 @@ const Tabs = (props) => {
   const [position, setPosition] = useState(0)
 
   useEffect(() => {
-    setPosition(document.querySelector('.page-header').clientHeight + 55)
+    setPosition(document.querySelector('.page-header').clientHeight + 54)
   }, [customize, showPanel])
   return (
     <div className='tabs'>

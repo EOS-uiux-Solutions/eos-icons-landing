@@ -1,27 +1,7 @@
 export const maintainers = [
   {
-    name: 'Sorin Curescu',
-    description: 'I do stuff with code like pew pew pew!',
-    role: 'Developer',
-    image: require('../assets/images/contributors/sorin.jpg'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/en3sis'
-      },
-      {
-        title: 'linkedin',
-        link: 'https://www.linkedin.com/in/en3sis/'
-      },
-      {
-        title: 'git',
-        link: 'https://github.com/en3sis'
-      }
-    ]
-  },
-  {
     name: 'Cynthia Sanchez',
-    description: 'I do stuff with code like pew pew pew!',
+    description: '',
     role: 'Product Owner',
     image: require('../assets/images/contributors/image1.png'),
     social: [
@@ -40,8 +20,28 @@ export const maintainers = [
     ]
   },
   {
+    name: 'Sorin Curescu',
+    description: '',
+    role: 'UX Developer',
+    image: require('../assets/images/contributors/sorin.jpg'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/en3sis'
+      },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/en3sis/'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/en3sis'
+      }
+    ]
+  },
+  {
     name: 'Zvezdana Majanovic',
-    description: 'I do stuff with code like pew pew pew!',
+    description: '',
     role: 'Graphic Designer',
     image: require('../assets/images/contributors/image8.png'),
     social: [
@@ -61,7 +61,7 @@ export const maintainers = [
   },
   {
     name: 'Manuele Carlini',
-    description: 'I do stuff with code like pew pew pew!',
+    description: '',
     role: 'Designer',
     image: require('../assets/images/contributors/image3.png'),
     social: [
@@ -81,7 +81,7 @@ export const maintainers = [
   },
   {
     name: 'Richa Bhist',
-    description: 'I do stuff with code like pew pew pew!',
+    description: '',
     role: 'Developer',
     image: require('../assets/images/contributors/image6.png'),
     social: [
@@ -100,8 +100,28 @@ export const maintainers = [
     ]
   },
   {
+    name: 'Kartikay Bhutani',
+    description: '',
+    role: 'Developer',
+    image: require('../assets/images/contributors/kt.jpg'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/kbhutani0001'
+      },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/richabisht/'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/kbhutani0001'
+      }
+    ]
+  },
+  {
     name: 'Jesus Herman',
-    description: 'I do stuff with code like pew pew pew!',
+    description: '',
     role: 'Developer',
     image: require('../assets/images/contributors/image4.png'),
     social: [
@@ -121,7 +141,7 @@ export const maintainers = [
   }
   // {
   //   name: 'Kenneth Wimmer',
-  //   description: 'I do stuff with code like pew pew pew!',
+  //   description: '',
   //   role: 'Product Owner',
   //   image: require('../assets/images/contributors/sorin.png'),
   //   social: [
@@ -180,43 +200,21 @@ export const contributors = [
     ]
   },
   {
-    name: 'DEMO',
-    role: 'Marketing',
-    image: require('../assets/images/contributors/kathie.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/ZenZippy'
-      },
-      {
-        title: 'linkedin',
-        link: '#'
-      },
-      {
-        title: 'git',
-        link: '#'
-      }
-    ]
-  },
-  {
     name: 'Abhinandan Sharma',
     role: 'Developer',
-    image: require('../assets/images/contributors/image5.png'),
+    image: require('../assets/images/contributors/abhinandan.png'),
     social: [
       {
         title: 'linkedin',
         link: 'https://www.linkedin.com/in/abhinandan-sharma-672299150/'
-      }
-    ]
-  },
-  {
-    name: 'Kartikay Bhutani',
-    role: 'Developer',
-    image: require('../assets/images/contributors/image7.png'),
-    social: [
+      },
       {
         title: 'twitter',
-        link: 'https://twitter.com/kbhutani0001'
+        link: 'https://twitter.com/notjustadev'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/abhinandansharma/'
       }
     ]
   },
@@ -226,7 +224,7 @@ export const contributors = [
     image: require('../assets/images/contributors/carla.jpg'),
     social: [
       {
-        title: 'dribble',
+        title: 'dribbble',
         link: 'https://dribbble.com/Carla_Isela'
       }
     ]

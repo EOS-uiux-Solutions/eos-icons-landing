@@ -4,6 +4,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $header-font-family;
   line-height: $line-height;
 }
 
@@ -19,4 +20,10 @@ h1 {
 
 .text-center {
   text-align: center;
+}
+
+
+p.subheadline {
+  font-family: $header-font-family;
+  font-size: $subheadline-font-size;
 }

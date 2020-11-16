@@ -1,5 +1,6 @@
 .tabs {
   margin-top: -10px;
+  z-index: 0;
 
   .tab-list {
     background: $light-color;
@@ -15,7 +16,6 @@
       cursor: pointer;
     }
   }
-
 
   .tab-list-item {
     display: inline-block;

@@ -1,31 +1,27 @@
-
-$primary: #00CCD1;
-
-$light-color: #fff;
-$dark-color: #000;
-$light-gray: #EEEFF1;
-$lighter-gray: #d0d0d0;
-$lightest-gray: #BFC0C1;
-$dark-gray: #7E7F7F;
-$dark-black: #333;
-$primary-light: #fe673a;
-$dark-red: #d60015;
-$hyper-link-color: #0285c4;
-$hyper-link-hover-color: #15578f;
-$command: #c0341d;
-$codes: #505050;
-$nav-border-color: #e3864e;
-$icons-picker-loading-background-color: rgba(0, 0, 0, 0.7);
-$modal-background-color: rgba(0, 0, 0, 0.7);
-$shadow-color: rgba(0, 0, 0, 0.5);
-$overlay-color: rgba(0, 0, 0, 0.8);
 /* Gradient */
-
+$codes: #505050;
+$color: #000000;
+$command: #c0341d;
+$dark-black: #333;
+$dark-color: #000;
+$dark-gray: #7E7F7F;
+$dark-red: #d60015;
+$grad-final: #bc0289;
 $grad-init: #ff890a;
 $grad-middle: #ff420a;
-$grad-final: #bc0289;
-$nav-gradient: linear-gradient(90deg, #fbb369, #ff814a);
 $header-gradient: linear-gradient(90deg, #694966, #5c415d);
-
-
-$light-overlay-gradient: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(128, 128, 128, 1) 100%);
+$hyper-link-color: #008ACF;
+$hyper-link-hover-color: #15578f;
+$icons-picker-loading-background-color: rgba(0, 0, 0, 0.7);
+$light-color: #fff;
+$light-gray: #EEEFF1;
+$light-overlay-gradient: linear-gradient(180deg, #020024 0%, white 0%, #131313 100%);
+$lighter-gray: #d0d0d0;
+$lightest-gray: #BFC0C1;
+$modal-background-color: rgba(0, 0, 0, 0.7);
+$nav-border-color: #e3864e;
+$nav-gradient: linear-gradient(90deg, #fbb369, #ff814a);
+$overlay-color: rgba(0, 0, 0, 0.8);
+$primary-light: #fe673a;
+$primary: #00CCD1;
+$shadow-color: rgba(0, 0, 0, 0.5);

@@ -3,7 +3,8 @@ import React from 'react'
 const socialMediaImg = {
   twitter: require('../assets/images/social/twitter.svg'),
   linkedin: require('../assets/images/social/linkedin.svg'),
-  git: require('../assets/images/social/git.svg')
+  git: require('../assets/images/social/git.svg'),
+  dribbble: require('../assets/images/social/dribbble.svg')
 }
 
 export const TeamBlock = ({ image, role, name, description, social }) => {

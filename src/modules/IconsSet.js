@@ -102,7 +102,7 @@ const IconsSet = (props) => {
             </div>
             <div className='icon-information'>
               {!state.customize ? (
-                <div className='how-to-use-block'>
+                <div className=''>
                   <HowTo
                     show={showPanel}
                     iconName={iconSelected.name}
@@ -161,11 +161,6 @@ const IconsSet = (props) => {
                 </div>
               </div>
               <div label='Animated Icons'>
-                <div className='total-icons'>
-                  <strong>
-                    <b>Total icons: {state.animatedIcons.length}</b>
-                  </strong>
-                </div>
                 <div className='icons-list'>
                   <AnimatedIcons animatedIconsList={state.animatedIcons} />
                 </div>
@@ -178,47 +173,4 @@ const IconsSet = (props) => {
   )
 }
 
-// TODO: Add the upload json functionality
-// {
-//   <div>
-//   <h2>Click on Icons to select them</h2>
-//   <p>
-//     To continue building an old font, upload icons-config.json
-//                 </p>
-//   <label className='btn btn-default upload' htmlFor='upload-file'>
-//     <i className='eos-icons eos-18'>cloud_upload</i>
-//                   Upload JSON
-//                 </label>
-//   <input
-//     type='file'
-//     id='upload-file'
-//     hidden
-//     name='file'
-//     onChange={(event) => search(event.target.files[0], dispatch)}
-//   />
-// </div>
-// }
-
-// const search = (file, dispatch) => {
-//   const fileReader = new window.FileReader()
-
-//   fileReader.onload = function (fileData) {
-//     const iconsArray = JSON.parse(fileData.target.result)
-//     let data = []
-//     try {
-//       // works for both versions for now
-//       if (Object.prototype.hasOwnProperty.call(iconsArray, 'icons'))
-//         data = iconsArray.icons
-//       if (Object.prototype.hasOwnProperty.call(iconsArray, 'extended_icons'))
-//         data = iconsArray.extended_icons
-//       return dispatch({
-//         type: 'UPLOAD_PREVIOUS_SELECTION',
-//         data: data
-//       })
-//     } catch (error) {
-//       alert('JSON file seems to be incorrect')
-//     }
-//   }
-//   return fileReader.readAsText(file)
-// }
 export default IconsSet

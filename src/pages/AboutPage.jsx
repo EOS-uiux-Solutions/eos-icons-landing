@@ -8,7 +8,9 @@ export const AboutPage = () => {
     <>
       <PageHeader simple>
         <h1>THE HI-TECH ICONS nobody thought about</h1>
-        <p>Open source, customisable, including all of Material icons.</p>
+        <p className='subheadline'>
+          Open source, customisable, including all of Material icons.
+        </p>
 
         <Button>Downlod EOS Icons</Button>
       </PageHeader>
