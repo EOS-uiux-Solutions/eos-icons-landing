@@ -9,7 +9,7 @@ export const TeamPage = () => {
     <>
       <PageHeader simple>
         <h1>Meet the team</h1>
-        <p>
+        <p className='subheadline'>
           EOS icons is made and maintained by passioned skilled people that
           brings creativity and innovation into this world.
         </p>
@@ -54,7 +54,13 @@ export const TeamPage = () => {
               you can share ideas and insight, learn and boost your career.
             </p>
 
-            <Button>Join Slack</Button>
+            <Button
+              onClick={() =>
+                window.open('https://slack.eosdesignsystem.com/', '_blank')
+              }
+            >
+              Join Slack
+            </Button>
           </div>
         </div>
       </div>

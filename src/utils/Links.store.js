@@ -37,21 +37,21 @@ export default [
     links: [
       {
         name: 'EOS Icons Gem',
-        href: '#',
+        href: 'https://rubygems.org/gems/eos-icons-font',
         category: 'External link',
         action: 'Link to EOS Icons Gem',
         label: 'Footer'
       },
       {
         name: 'EOS Icons NPM',
-        href: '#',
+        href: 'https://www.npmjs.com/package/eos-icons',
         category: 'External link',
         action: 'Link to EOS NPM',
         label: 'Footer'
       },
       {
         name: 'How to colaborate',
-        href: '#',
+        href: 'https://brand.eosdesignsystem.com/ContributingGuide',
         category: 'External link',
         action: 'Link to how to colaborate',
         label: 'Footer'
@@ -70,14 +70,14 @@ export default [
       },
       {
         name: 'User story',
-        href: '#',
+        href: 'https://userstory.eosdesignsystem.com/',
         category: 'External link',
         action: 'Link to user story',
         label: 'Footer'
       },
       {
         name: 'EOS Solutions',
-        href: '#',
+        href: 'https://www.eosdesignsystem.com/',
         category: 'External link',
         action: 'Link to how EOS Solutions',
         label: 'Footer'

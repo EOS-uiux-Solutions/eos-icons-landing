@@ -4,6 +4,8 @@ footer {
   bottom: 0;
 
   .container {
+    display: flex;
+    justify-content: space-between;
     padding-bottom: $m;
     padding-top: $m;
     text-align: center;

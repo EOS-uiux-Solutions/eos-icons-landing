@@ -65,7 +65,7 @@ export const maintainers = [
     name: 'Manuele Carlini',
     description: '',
     role: 'Designer',
-    image: require('../assets/images/contributors/image3.png'),
+    image: require('../assets/images/contributors/manuele.png'),
     social: [
       {
         title: 'twitter',
@@ -182,7 +182,7 @@ export const contributors = [
   },
   {
     name: 'Shashank Jarial',
-    role: 'Designer',
+    role: 'Developer',
     image: require('../assets/images/contributors/shashank.jpg'),
     social: [
       {
@@ -193,7 +193,7 @@ export const contributors = [
   },
   {
     name: 'Devesh Vijaywargiya',
-    role: 'Marketing',
+    role: 'Developer',
     image: require('../assets/images/contributors/devesh.jpg'),
     social: [
       {

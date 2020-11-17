@@ -32,6 +32,7 @@ $role-font-size: 16px;
   span {
     bottom: 8px;
     color: $light-color;
+    font-size: $name-font-size;
     font-weight: bold;
     position: absolute;
     right: 28px;
@@ -69,7 +70,7 @@ $role-font-size: 16px;
 
       h4 {
         font-size: $team-h2-font;
-        font-weight: 400;
+        font-weight: 800;
         margin: 0;
       }
     }
