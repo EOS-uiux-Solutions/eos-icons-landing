@@ -32,6 +32,16 @@ $font-size-p: 16px;
   }
 
   &-contributors {
+    margin-top: $xxxl;
+
+    h2 {
+      font-weight: bold;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 50%;
+    }
+
     &-list {
       display: flex;
       flex-direction: row;

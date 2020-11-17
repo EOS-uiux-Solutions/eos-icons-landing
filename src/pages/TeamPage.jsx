@@ -32,10 +32,10 @@ export const TeamPage = () => {
         </div>
 
         <div className='team-page-contributors'>
-          <h4>
+          <h2>
             The awesome people that contributed to the project, thanks for
             making it happen
-          </h4>
+          </h2>
 
           <div className='team-page-contributors-list'>
             {contributors.map((ele, i) => (
