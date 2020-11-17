@@ -1,10 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react'
 import Button from './Button'
 import IconEditor from './IconEditor'
+
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
-  // const svgDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/svg/download/${iconName}`
-  // const pngDownloadUrl = `https://eos-icons-picker-api.herokuapp.com/icon/png/download/${iconName}/1024`
   const ref = useRef()
 
   const [iconEditor, setIconEditor] = useState(false)
@@ -20,10 +19,11 @@ const HowToPanel = (props) => {
         if (
           !ref.current ||
           ref.current.contains(event.target) ||
-          event.target.innerHTML === iconName
-        ) {
+          event.target.innerHTML === iconName ||
+          event.target.className.includes('eos-icons')
+        )
           return
-        }
+
         handler(event)
       }
 

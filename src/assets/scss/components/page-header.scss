@@ -10,6 +10,7 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
   position: sticky;
   top: 55px;
   width: 100%;
+  z-index: 10;
 
   &-small {
     min-height: 10vh;

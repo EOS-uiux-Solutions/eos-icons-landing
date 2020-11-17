@@ -5,11 +5,6 @@
   margin-top: $xxl;
   width: fit-content;
 
-  .active {
-    background-color: $grad-init;
-    border-radius: 5px;
-    color: $light-color;
-  }
 
   .icon-container {
     align-items: center;
@@ -22,7 +17,7 @@
 
     .eos-icons,
     img {
-      border: 1px solid transparent;
+      border: 2px solid $light-color;
       height: 32px;
       margin: 10px;
       padding: 10px;
@@ -30,10 +25,13 @@
       width: 32px;
 
       &:hover {
-        border: 1px solid #f4f4f4;
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.091);
+        border: 2px solid $primary;
         cursor: pointer;
       }
+    }
+
+    .active {
+      border: 2px solid $primary;
     }
   }
 

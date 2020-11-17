@@ -1,5 +1,6 @@
 .tabs {
   margin-top: -10px;
+  position: relative;
   z-index: 0;
 
   .tab-list {
@@ -11,6 +12,7 @@
     padding: 0;
     position: sticky;
     width: 100%;
+    z-index: 0;
 
     &:hover {
       cursor: pointer;

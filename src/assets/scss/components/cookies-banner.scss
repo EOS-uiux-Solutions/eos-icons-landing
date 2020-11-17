@@ -1,6 +1,7 @@
 .cookies-alert {
-  background: $light-gray;
+  background: $dark-color;
   bottom: 0;
+  color: $light-color;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -12,6 +13,11 @@
 
   .cookies-alert-body {
     margin: 0 $xxl;
+
+    a {
+      color: $light-color;
+      text-decoration: underline;
+    }
   }
 
   .cookies-alert-buttons {
@@ -19,7 +25,9 @@
     padding: $l 0;
 
     a {
-      margin-right: $m;
+      border: 1px solid $light-color;
+      color: $light-color;
+      margin: 0 $m;
     }
   }
 }
@@ -33,10 +41,18 @@
   .cookies-alert {
     display: flex;
     flex-direction: column;
+    max-height: 150px;
+    position: absolute;
+    top: 0;
 
     .cookies-alert-buttons {
       margin: 0 auto;
       text-align: center;
+
+      a {
+        border-color: $light-color;
+        color: $light-color;
+      }
     }
   }
 

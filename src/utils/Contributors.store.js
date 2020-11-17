@@ -1,18 +1,19 @@
 export const maintainers = [
   {
     name: 'Cynthia Sanchez',
-    description: '',
-    role: 'Product Owner',
-    image: require('../assets/images/contributors/image1.png'),
+    description:
+      'Cynthia Sanchez Open source advocate, mentor, and UX/ UI enthusiast.Loves video games, playing with new tech, and her dog.',
+    role: 'FOUNDER & PO',
+    image: require('../assets/images/contributors/dsc07194.jpg'),
     social: [
       {
         title: 'twitter',
         link: 'https://twitter.com/cyntss'
+      },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/cyntsanchez/'
       }
-      // {
-      //   title: 'linkedin',
-      //   link: '#'
-      // },
       // {
       //   title: 'git',
       //   link: '#'
@@ -21,9 +22,10 @@ export const maintainers = [
   },
   {
     name: 'Sorin Curescu',
-    description: '',
+    description:
+      'A full-stack developer with UX/UI in mind and heart, In love tech and code. ',
     role: 'UX Developer',
-    image: require('../assets/images/contributors/sorin.jpg'),
+    image: require('../assets/images/contributors/sorin.jpeg'),
     social: [
       {
         title: 'twitter',
