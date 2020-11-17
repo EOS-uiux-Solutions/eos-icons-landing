@@ -85,7 +85,7 @@ export const maintainers = [
     name: 'Jesus Herman',
     description:
       'I’m a UX/UI & Front End developer based in Barcelona. My interests are Agile, Design, SEO & Cycling',
-    role: 'Developer',
+    role: 'UX/UI & Front End  Developer',
     image: require('../assets/images/contributors/jesus.png'),
     social: [
       {
