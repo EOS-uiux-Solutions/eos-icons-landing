@@ -82,6 +82,27 @@ export const maintainers = [
     ]
   },
   {
+    name: 'Jesus Herman',
+    description:
+      'I’m a UX/UI & Front End developer based in Barcelona. My interests are Agile, Design, SEO & Cycling',
+    role: 'Developer',
+    image: require('../assets/images/contributors/jesus.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/jhmarina2'
+      },
+      // {
+      //   title: 'linkedin',
+      //   link: '#'
+      // },
+      {
+        title: 'git',
+        link: 'https://gitlab.com/jhmarina'
+      }
+    ]
+  },
+  {
     name: 'Richa Bhist',
     description: '',
     role: 'Developer',
@@ -119,26 +140,6 @@ export const maintainers = [
         title: 'git',
         link: 'https://github.com/kbhutani0001'
       }
-    ]
-  },
-  {
-    name: 'Jesus Herman',
-    description: '',
-    role: 'Developer',
-    image: require('../assets/images/contributors/image4.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/hesusjerman'
-      }
-      // {
-      //   title: 'linkedin',
-      //   link: '#'
-      // },
-      // {
-      //   title: 'git',
-      //   link: '#'
-      // }
     ]
   }
   // {
