@@ -37,6 +37,14 @@ header {
       text-decoration: none;
     }
 
+
+    a {
+      i {
+        display: none !important; // sass-lint:disable-line no-important
+      }
+    }
+
+
     .active {
       position: relative;
 
@@ -48,6 +56,27 @@ header {
         left: 0;
         position: absolute;
         width: 100%;
+      }
+    }
+
+    @media (max-width: 413px) {
+      background: $light-color;
+      border-top: 1px solid $light-gray;
+      bottom: 0;
+      display: flex;
+      padding: $l;
+      position: fixed;
+      width: 100%;
+
+      a {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        i {
+          color: $primary;
+          display: block !important; // sass-lint:disable-line no-important
+        }
       }
     }
   }

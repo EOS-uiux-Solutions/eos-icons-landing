@@ -23,10 +23,22 @@ const Navigation = () => {
           </div>
         </Link>
         <nav className='padding-top-xs'>
-          <NavLink to='/'>Icons </NavLink>
-          <NavLink to='/about'>About Us</NavLink>
-          <NavLink to='/docs'>Docs </NavLink>
-          <NavLink to='/team'>Team </NavLink>
+          <NavLink to='/'>
+            <i className='eos-icons'>miscellaneous</i>
+            Icons
+          </NavLink>
+          <NavLink to='/about'>
+            <i className='eos-icons'>face</i>
+            About Us
+          </NavLink>
+          <NavLink to='/docs'>
+            <i className='eos-icons'>description</i>
+            Docs{' '}
+          </NavLink>
+          <NavLink to='/team'>
+            <i className='eos-icons'>group</i>
+            Team{' '}
+          </NavLink>
         </nav>
       </div>
     </header>
