@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from '../components/Button'
 import PageHeader from '../components/PageHeader'
 import AboutBlock from '../components/AboutBlock'
+import DownloadEOSicons from '../components/DownloadEOSicons'
 
 export const AboutPage = () => {
   return (
@@ -12,7 +12,7 @@ export const AboutPage = () => {
           Open source, customisable, including all of Material icons.
         </p>
 
-        <Button>Downlod EOS Icons</Button>
+        <DownloadEOSicons />
       </PageHeader>
       <div className='container'>
         {data.map((ele, i) => {
@@ -37,7 +37,8 @@ const data = [
     title: 'Hi-Tech Driven',
     description:
       'Made to fit specific niches in software development such as: virtualization, cloud computing, software for infrastructure, etc.',
-    linkTo: 'https://material.io/design/iconography/system-icons.html#grid-keyline-shapes',
+    linkTo:
+      'https://material.io/design/iconography/system-icons.html#grid-keyline-shapes',
     linkTitle: 'Creating system icons',
     image: require('../assets/images/pages/hi-tech.png'),
     reverse: true
@@ -46,7 +47,8 @@ const data = [
     title: 'Pixel Perfect',
     description:
       'Professionally designed following the state-of-the-art design specifications that created the same Material Design Icons.',
-    linkTo: 'https://gitlab.com/SUSE-UIUX/eos-icons/-/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=',
+    linkTo:
+      'https://gitlab.com/SUSE-UIUX/eos-icons/-/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=',
     linkTitle: 'Request icons for your project',
     image: require('../assets/images/pages/pixel-perfect.png'),
     reverse: false
