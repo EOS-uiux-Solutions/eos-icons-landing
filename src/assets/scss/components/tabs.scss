@@ -35,6 +35,14 @@
   }
 }
 
+.tab-content {
+  margin-top: $xxl;
+
+  h2 {
+    margin-top: $xxl;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .tabs {
     margin-top: -16px;

@@ -4,7 +4,9 @@ const socialMediaImg = {
   twitter: require('../assets/images/social/twitter.svg'),
   linkedin: require('../assets/images/social/linkedin.svg'),
   git: require('../assets/images/social/git.svg'),
-  dribbble: require('../assets/images/social/dribbble.svg')
+  dribbble: require('../assets/images/social/dribbble.svg'),
+  behance: require('../assets/images/social/behance.svg'),
+  medium: require('../assets/images/social/medium.svg')
 }
 
 export const TeamBlock = ({ image, role, name, description, social }) => {
@@ -20,7 +22,11 @@ export const TeamBlock = ({ image, role, name, description, social }) => {
               {social?.map((ele, i) => {
                 return (
                   <li key={i}>
-                    <a href={ele.link} target='_blank' rel='noreferrer'>
+                    <a
+                      href={ele.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
                       <img src={socialMediaImg[ele.title]} alt={ele.title} />
                     </a>
                   </li>
@@ -47,7 +53,11 @@ export const ContributorsBlock = ({ image, name, role, social }) => {
           {social?.map((ele, i) => {
             return (
               <li key={i}>
-                <a href={ele.link} target='_blank' rel='noreferrer'>
+                <a
+                  href={ele.link}
+                  target='_blank'
+                  rel='noopener noreferrer nofollow'
+                >
                   <img src={socialMediaImg[ele.title]} alt={ele.title} />
                 </a>
               </li>

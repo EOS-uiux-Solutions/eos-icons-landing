@@ -16,7 +16,9 @@ export const AboutBlock = ({
       <div className='about-block-description'>
         <h2>{title}</h2>
         <p>{description}</p>
-        <a href={linkTo}>{linkTitle}</a>
+        <a href={linkTo} target='_blank' rel='noopener noreferrer nofollow'>
+          {linkTitle}
+        </a>
       </div>
 
       <div className='about-block-image'>

@@ -2,9 +2,9 @@ export const maintainers = [
   {
     name: 'Cynthia Sanchez',
     description:
-      'Cynthia Sanchez Open source advocate, mentor, and UX/ UI enthusiast.Loves video games, playing with new tech, and her dog.',
-    role: 'FOUNDER & PO',
-    image: require('../assets/images/contributors/dsc07194.jpg'),
+      'Open source advocate, mentor, and UX/ UI enthusiast. Loves video games, playing with new tech, and her dog.',
+    role: 'FOUNDER & PRODUCT MANAGER',
+    image: require('../assets/images/contributors/cynthia.jpg'),
     social: [
       {
         title: 'twitter',
@@ -13,11 +13,90 @@ export const maintainers = [
       {
         title: 'linkedin',
         link: 'https://www.linkedin.com/in/cyntsanchez/'
+      },
+      {
+        title: 'medium',
+        link: 'https://medium.com/@cyntss'
+      }
+    ]
+  },
+  {
+    name: 'Zvezdana Majanovic',
+    description:
+      'Graphic designer, illustrator & brand identity designer. Loves arts and crafts, travelling and summer.',
+    role: 'Graphic Designer',
+    image: require('../assets/images/contributors/zvezdana.jpg'),
+    social: [
+      // {
+      //   title: 'twitter',
+      //   link: '#'
+      // },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/zvezdanam'
+      },
+      {
+        title: 'behance',
+        link: 'https://www.behance.net/zvezdanam'
+      }
+    ]
+  },
+  {
+    name: 'Manuele Carlini',
+    description: '',
+    role: 'Designer',
+    image: require('../assets/images/contributors/manuele.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/manuelecarlini'
+      }
+      // {
+      //   title: 'linkedin',
+      //   link: '#'
+      // },
+      // {
+      //   title: 'git',
+      //   link: '#'
+      // }
+    ]
+  },
+  {
+    name: 'Richa Bhist',
+    description:
+      'I am a Front end developer who also loves doing design and UX/UI.',
+    role: 'Front end Developer',
+    image: require('../assets/images/contributors/richa.jpg'),
+    social: [
+      // {
+      //   title: 'twitter',
+      //   link: '#'
+      // },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/richabisht/'
       }
       // {
       //   title: 'git',
       //   link: '#'
       // }
+    ]
+  },
+  {
+    name: 'Jesus Herman',
+    description:
+      'I’m a UX/UI & Front End developer based in Barcelona. My interests are Agile, Design, SEO & Cycling',
+    role: 'SEO strategist & FE developer',
+    image: require('../assets/images/contributors/jesus.png'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/jhmarina2'
+      },
+      {
+        title: 'git',
+        link: 'https://gitlab.com/jhmarina'
+      }
     ]
   },
   {
@@ -42,89 +121,9 @@ export const maintainers = [
     ]
   },
   {
-    name: 'Zvezdana Majanovic',
-    description: '',
-    role: 'Graphic Designer',
-    image: require('../assets/images/contributors/image8.png'),
-    social: [
-      // {
-      //   title: 'twitter',
-      //   link: '#'
-      // },
-      {
-        title: 'linkedin',
-        link: 'https://www.linkedin.com/in/zvezdanam'
-      }
-      // {
-      //   title: 'git',
-      //   link: '#'
-      // }
-    ]
-  },
-  {
-    name: 'Manuele Carlini',
-    description: '',
-    role: 'Designer',
-    image: require('../assets/images/contributors/manuele.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/manuelecarlini'
-      }
-      // {
-      //   title: 'linkedin',
-      //   link: '#'
-      // },
-      // {
-      //   title: 'git',
-      //   link: '#'
-      // }
-    ]
-  },
-  {
-    name: 'Jesus Herman',
-    description:
-      'I’m a UX/UI & Front End developer based in Barcelona. My interests are Agile, Design, SEO & Cycling',
-    role: 'UX/UI & Front End  Developer',
-    image: require('../assets/images/contributors/jesus.png'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/jhmarina2'
-      },
-      // {
-      //   title: 'linkedin',
-      //   link: '#'
-      // },
-      {
-        title: 'git',
-        link: 'https://gitlab.com/jhmarina'
-      }
-    ]
-  },
-  {
-    name: 'Richa Bhist',
-    description: '',
-    role: 'Developer',
-    image: require('../assets/images/contributors/image6.png'),
-    social: [
-      // {
-      //   title: 'twitter',
-      //   link: '#'
-      // },
-      {
-        title: 'linkedin',
-        link: 'https://www.linkedin.com/in/richabisht/'
-      }
-      // {
-      //   title: 'git',
-      //   link: '#'
-      // }
-    ]
-  },
-  {
     name: 'Kartikay Bhutani',
-    description: '',
+    description:
+      'Developer by profession, Designer by passion. Love building tech to solve problems, watching Office and clashing.',
     role: 'Developer',
     image: require('../assets/images/contributors/kt.jpg'),
     social: [
@@ -181,24 +180,24 @@ export const contributors = [
     ]
   },
   {
-    name: 'Shashank Jarial',
-    role: 'Developer',
-    image: require('../assets/images/contributors/shashank.jpg'),
+    name: 'Carla Moratillo',
+    role: 'Designer',
+    image: require('../assets/images/contributors/carla.jpg'),
     social: [
       {
-        title: 'linkedin',
-        link: 'https://www.linkedin.com/in/shashank-jarial-354485152/'
+        title: 'dribbble',
+        link: 'https://dribbble.com/Carla_Isela'
       }
     ]
   },
   {
-    name: 'Devesh Vijaywargiya',
-    role: 'Developer',
-    image: require('../assets/images/contributors/devesh.jpg'),
+    name: 'Saurabh Sharma',
+    role: 'Designer',
+    image: require('../assets/images/contributors/saurabh.jpg'),
     social: [
       {
-        title: 'linkedin',
-        link: 'https://www.linkedin.com/in/devesh-vijaywargiya/'
+        title: 'twitter',
+        link: 'https://twitter.com/SAURABH20944279?s=09'
       }
     ]
   },
@@ -222,27 +221,28 @@ export const contributors = [
     ]
   },
   {
-    name: 'Carla Moratillo',
-    role: 'Designer',
-    image: require('../assets/images/contributors/carla.jpg'),
+    name: 'Shashank Jarial',
+    role: 'Developer',
+    image: require('../assets/images/contributors/shashank.jpg'),
     social: [
       {
-        title: 'dribbble',
-        link: 'https://dribbble.com/Carla_Isela'
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/shashank-jarial-354485152/'
       }
     ]
   },
   {
-    name: 'Saurabh Sharma',
-    role: 'Designer',
-    image: require('../assets/images/contributors/saurabh.jpg'),
+    name: 'Devesh Vijaywargiya',
+    role: 'Developer',
+    image: require('../assets/images/contributors/devesh.jpg'),
     social: [
       {
-        title: 'twitter',
-        link: 'https://twitter.com/SAURABH20944279?s=09'
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/devesh-vijaywargiya/'
       }
     ]
   },
+
   {
     name: 'Rishabh Kohale',
     role: 'Developer',

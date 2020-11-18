@@ -1,23 +1,11 @@
 import React, { useEffect } from 'react'
 import PageHeader from '../components/PageHeader'
 import Tabs from '../components/Tabs'
-import Button from '../components/Button'
 import Prism from 'prismjs'
 import FontbookImg from '../assets/images/docs/fontbook.gif'
 import UsingIconsImg from '../assets/images/docs/using-eos-icons.gif'
-import axios from 'axios'
 import { Link } from '@reach/router'
-
-const getEOSIconsVersion = async () => {
-  const eosIconsPackage = await axios.get(
-    'https://cdn.jsdelivr.net/npm/eos-icons/package.json'
-  )
-
-  window.open(
-    `https://registry.npmjs.org/eos-icons/-/eos-icons-${eosIconsPackage.data.version}.tgz`,
-    '_blank'
-  )
-}
+import DownloadEOSicons from '../components/DownloadEOSicons'
 
 const Docs = () => {
   useEffect(() => {
@@ -36,7 +24,7 @@ const Docs = () => {
             </p>
           </div>
 
-          <Button onClick={getEOSIconsVersion}>Download EOS Icons</Button>
+          <DownloadEOSicons />
         </div>
       </PageHeader>
 
@@ -262,31 +250,12 @@ $eos-48: 48px;
               designs is now very easy with our ligature-based font files. We’ve
               also included optimized vector SVG files of each separate icon.
             </p>
-            <div className='cta-box'>
-              <div>
-                <p className='cta-box-title'>
-                  Download EOS icons for your computer
-                </p>
-                <p className='cta-box-text'>
-                  Download he latest copy of our computer-specific files. You’ll
-                  need them to be able to work with your desired design
-                  software.
-                </p>
-              </div>
-              <a
-                href='https://registry.npmjs.org/eos-icons/-/eos-icons-4.3.1.tgz'
-                data-event-category='External link'
-                data-event-action='Link to latest EOS icons package'
-                data-event-label='Docs page (on computer tab)'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <Button primary type='button'>
-                  <i className='eos-icons eos-18'>file_download</i>
-                  Download EOS Icons
-                </Button>
-              </a>
-            </div>
+            <p>
+              Download he latest copy of our computer-specific files. You’ll
+              need them to be able to work with your desired design software.
+            </p>
+            <DownloadEOSicons />
+
             <h2>What’s included in the package?</h2>
             <p>
               Once you’ve downloaded the EOS Icons package, you’ll need to
