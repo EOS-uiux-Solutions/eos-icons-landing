@@ -1,9 +1,9 @@
 header {
   align-items: center;
-  background: $nav-gradient;
+  background: $light-color;
+  border-bottom: 1px solid $light-gray;
   display: flex;
   justify-content: space-between;
-  padding: $m;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -15,30 +15,81 @@ header {
 
     .logo {
       margin-right: $m;
-      width: 86px;
     }
 
     .brand-text {
-
       @media (max-width: 413px) {
         display: none;
       }
     }
-
   }
 
   nav {
     font-size: $font-size;
 
     a,
-    a:visited {
-      color: $navbar-color;
-      padding: 0 8px;
+    a:visited,
+    a:hover {
+      color: $dark-color;
+      font-weight: 300;
+      margin-left: $l;
+      padding: 0 $s;
       text-decoration: none;
     }
 
+
+    a {
+      i {
+        display: none !important; // sass-lint:disable-line no-important
+      }
+    }
+
+
     .active {
-      color: $light-color;
+      position: relative;
+
+      &::after {
+        background-color: $primary;
+        bottom: -19px;
+        content: '';
+        height: 5px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 413px) {
+      background: $light-color;
+      border-top: 1px solid $light-gray;
+      bottom: 0;
+      display: flex;
+      padding: $l;
+      position: fixed;
+      width: 100%;
+
+      a {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        i {
+          color: $primary;
+          display: block !important; // sass-lint:disable-line no-important
+        }
+      }
+    }
+  }
+
+  .container {
+    padding: $m 0;
+  }
+
+  .navigation {
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
   }
 }

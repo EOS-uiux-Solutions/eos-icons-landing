@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import eosIcon from '../assets/images/logo.png'
+import eosIcon from '../assets/images/eos-icons-logo.svg'
 
 const NavLink = (props) => (
   <Link
@@ -15,18 +15,32 @@ const NavLink = (props) => (
 
 const Navigation = () => {
   return (
-    <header className='flex-wrap-sm'>
-      <Link to='/'>
-        <div className='brand'>
-          <img className='logo' src={eosIcon} alt='' />
-          <span className='brand-text'>Icons</span>
-        </div>
-      </Link>
-      <nav className='padding-top-xs'>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/cheatsheet'>Cheatsheet </NavLink>
-        <NavLink to='/docs'>Docs </NavLink>
-      </nav>
+    <header className='flex-wrap-sm navigation'>
+      <div className='container navigation-content'>
+        <Link to='/'>
+          <div className='brand'>
+            <img className='logo' src={eosIcon} alt='' />
+          </div>
+        </Link>
+        <nav className='padding-top-xs'>
+          <NavLink to='/'>
+            <i className='eos-icons'>miscellaneous</i>
+            Icons
+          </NavLink>
+          <NavLink to='/about'>
+            <i className='eos-icons'>face</i>
+            About Us
+          </NavLink>
+          <NavLink to='/docs'>
+            <i className='eos-icons'>description</i>
+            Docs{' '}
+          </NavLink>
+          <NavLink to='/team'>
+            <i className='eos-icons'>group</i>
+            Team{' '}
+          </NavLink>
+        </nav>
+      </div>
     </header>
   )
 }

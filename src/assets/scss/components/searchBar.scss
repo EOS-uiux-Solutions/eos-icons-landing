@@ -6,8 +6,4 @@
   transition: width .15s ease-in-out;
   width: 160px;
 
-  &:focus {
-    max-width: 200px;
-    width: 200px;
-  }
 }

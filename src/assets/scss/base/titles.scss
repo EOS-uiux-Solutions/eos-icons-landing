@@ -4,14 +4,43 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $header-font-family;
   line-height: $line-height;
 }
 
 h1,
 h2 {
   font-weight: $font-weight;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+h1 {
+  display: inline-block;
+  font-weight: 800;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+
+  &:after {
+    border: 13px solid $primary;
+    content: '';
+    margin-left: -40%;
+    margin-top: 15px;
+    position: absolute;
+    width: 45%;
+    z-index: -1;
+}
 }
 
 .text-center {
   text-align: center;
+}
+
+
+p.subheadline {
+  font-family: $header-font-family;
+  font-size: $subheadline-font-size;
+  font-weight: 300;
+  line-height: 37px;
 }

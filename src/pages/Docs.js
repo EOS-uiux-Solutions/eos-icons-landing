@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import DownloadEosIcons from '../components/DownloadEosIcons'
 import PageHeader from '../components/PageHeader'
 import Tabs from '../components/Tabs'
 import Button from '../components/Button'
@@ -28,10 +27,17 @@ const Docs = () => {
   return (
     <div className='docs'>
       <PageHeader theme='purple'>
-        <h2>
-          EOS Icons can be installed on your application and also on your
-          computer.
-        </h2>
+        <div className='docs-header'>
+          <div>
+            <h1>Get EOS ICONS</h1>
+            <p>
+              Download the latest copy of our computer-specific files. You’ll
+              need them to be able to work with your desired design software.
+            </p>
+          </div>
+
+          <Button onClick={getEOSIconsVersion}>Download EOS Icons</Button>
+        </div>
       </PageHeader>
 
       <div className='toolbar'></div>
@@ -39,25 +45,7 @@ const Docs = () => {
       <div className='container'>
         <Tabs>
           <div label='In your application'>
-            <div className='cta-box cta-installing'>
-              <div>
-                <p className='cta-box-title'>
-                  Download EOS icons for your computer
-                </p>
-                <p className='cta-box-text'>
-                  Download he latest copy of our computer-specific files. You’ll
-                  need them to be able to work with your desired design
-                  software.
-                </p>
-              </div>
-              <div className='download-link'>
-                <Button primary type='button' onClick={getEOSIconsVersion}>
-                  <i className='eos-icons eos-18'>file_download</i>
-                  Download EOS Icons
-                </Button>
-              </div>
-            </div>
-            <h1>Installing EOS icons</h1>
+            <h2>Installing EOS icons</h2>
             <p>
               There are several options for you to use EOS icons in your
               product:
@@ -146,14 +134,14 @@ const Docs = () => {
               <span className='command'>*= require eos-icons-font</span>
             </p>
 
-            <h1>Using EOS icons in your projects</h1>
+            <h2>Using EOS icons in your projects</h2>
             <p>
               Just like in any other iconic font, you need to add the Fonts and
               CSS files in your project:
             </p>
             <p>
               1- Add the <span className='command'>eos-icons.css</span> file
-              available under the dist/css folder into your project's{' '}
+              available under the dist/css folder into your project's
               <span className='command'> &lt;head&gt;</span>:
             </p>
 
@@ -189,10 +177,10 @@ const Docs = () => {
               </a>
               &nbsp; to see the icon's name.
             </p>
-            <h1>Using Animated icons</h1>
+            <h2>Using Animated icons</h2>
             <p>
               The animated EOS icons are built using SMIL SVG animations. To
-              implement them you don't need anything special, just an{' '}
+              implement them you don't need anything special, just an
               <code>img</code> tag with the <code>src</code> to the svg. For
               example:
             </p>
@@ -216,7 +204,7 @@ const Docs = () => {
               to download animated icons. Click on the icon you want to use to
               see the code snippet.
             </p>
-            <h1>Our recommended sizes</h1>
+            <h2>Our recommended sizes</h2>
             <p>
               Both MD icons and EOS icons have been designed to work and look
               perfect at: 18px, 24px, 36px, and 48px.
@@ -268,7 +256,7 @@ $eos-48: 48px;
             </p>
           </div>
           <div label='On your computer'>
-            <h1>Download EOS icons</h1>
+            <h2>Download EOS icons</h2>
             <p>
               EOS icons can be used on your computer. Adding them to your
               designs is now very easy with our ligature-based font files. We’ve
@@ -441,7 +429,6 @@ $eos-48: 48px;
           </div>
         </Tabs>
       </div>
-      <DownloadEosIcons />
     </div>
   )
 }

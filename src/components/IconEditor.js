@@ -135,27 +135,6 @@ const IconEditor = (props) => {
               disableAlpha={true}
               onChangeComplete={changeColor}
             />
-            <div className='transform-div'>
-              <p>Transform</p>
-              <div>
-                <p>Rotate</p>
-                <button onClick={() => rotateIcon(-90)}>
-                  <i className='eos-icons'>rotate_left</i>
-                </button>
-                <button onClick={() => rotateIcon(90)}>
-                  <i className='eos-icons'>rotate_right</i>
-                </button>
-              </div>
-              <div>
-                <p>Flip</p>
-                <button onClick={flipIconHorizontal}>
-                  <i className='eos-icons'>flip</i>
-                </button>
-                <button onClick={flipIconVertical}>
-                  <i className='eos-icons rotate-flip-icon'>flip</i>
-                </button>
-              </div>
-            </div>
           </div>
           <div className='icon-div'>
             <p>
@@ -194,7 +173,30 @@ const IconEditor = (props) => {
                 ''
               )}
             </div>
-            <p>Select Image Format</p>
+            <div className='transform-div'>
+              <div>
+                <p>Rotate</p>
+                <div>
+                  <button onClick={() => rotateIcon(-90)}>
+                    <i className='eos-icons'>rotate_left</i>
+                  </button>
+                  <button onClick={() => rotateIcon(90)}>
+                    <i className='eos-icons'>rotate_right</i>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <p>Flip</p>
+                <div>
+                  <button onClick={flipIconHorizontal}>
+                    <i className='eos-icons'>flip</i>
+                  </button>
+                  <button onClick={flipIconVertical}>
+                    <i className='eos-icons rotate-flip-icon'>flip</i>
+                  </button>
+                </div>
+              </div>
+            </div>
             <div className='dropdown fill-dropdown'>
               <select className='export-type' onChange={changeExportType}>
                 {exportTypes.map((type, key) => (
@@ -224,14 +226,10 @@ const IconEditor = (props) => {
             ) : (
               ''
             )}
-
             <div className='export-btn'>
               <Button type='button' onClick={generateCustomizedIcon}>
                 {!generating ? (
-                  <span>
-                    <i className='eos-icons eos-18'>file_download</i> Export as{' '}
-                    {exportAs.toUpperCase()}
-                  </span>
+                  <span>Export as {exportAs.toUpperCase()}</span>
                 ) : (
                   <span>
                     Exporting Icon{' '}

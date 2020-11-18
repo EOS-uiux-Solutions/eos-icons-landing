@@ -7,11 +7,14 @@ import './assets/scss/index.scss'
 import { GTM } from './config.json'
 
 /* Pages */
+// import Home from './pages/Home'
 import Home from './pages/Home'
-import Cheatsheet from './pages/Cheatsheet'
 import Docs from './pages/Docs'
 import PageNotFound from './pages/PageNotFound'
 import CookiesPage from './pages/Cookies'
+import AboutPage from './pages/AboutPage'
+import TeamPage from './pages/TeamPage'
+import Cheatsheet from './pages/Cheatsheet'
 
 /* Componets */
 import Navigation from './components/Navigation'
@@ -36,11 +39,13 @@ const App = () => {
         <div className='app-container'>
           <Router primary={false}>
             <Home path='/' />
-            <Cheatsheet path='/cheatsheet' />
             <Docs path='/docs' />
             <CookiesPage path='/cookies-policy' />
             <ThankYou path='/thankyou' />
             <PageNotFound path='*' />
+            <AboutPage path='/about' />
+            <TeamPage path='/team' />
+            <Cheatsheet path='/cheatsheet' />
           </Router>
           <ScrollToTopBtn />
         </div>

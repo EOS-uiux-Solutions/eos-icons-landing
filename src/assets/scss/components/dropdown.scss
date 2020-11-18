@@ -15,9 +15,8 @@
 
 
 .fill-dropdown {
-  background: $buttons;
-  border-radius: $xl;
-  box-shadow: 0px $s $s -6px rgba(0, 0, 0, 0.25);
+  background: $primary;
+  border-radius: 10px;
 
   select {
     color: $light-color;
@@ -25,7 +24,7 @@
   }
 
   option {
-    background-color: $buttons;
+    background-color: $primary;
     border-radius: $m;
     padding: $s;
   }

@@ -1,5 +1,17 @@
 import React from 'react'
 
+/* Create a config object with the classes neded as the size and theme */
+const config = {
+  size: {
+    small: 'page-header-small',
+    medium: 'page-header-medium'
+  },
+  theme: {
+    orange: 'page-header-orange',
+    purple: 'page-header-purple'
+  }
+}
+
 /**
  * @name PageHeader
  * @param {string} size takes a size value between small or medium
@@ -9,29 +21,22 @@ import React from 'react'
  */
 const PageHeader = (props) => {
   /* We destructure the props pased to the component */
-  const { children, size: height, theme: color } = props
-
-  /* Create a config object with the classes neded as the size and theme */
-  const config = {
-    size: {
-      small: 'page-header-small',
-      medium: 'page-header-medium'
-    },
-    theme: {
-      orange: 'page-header-orange',
-      purple: 'page-header-purple'
-    }
-  }
-
+  const { children, size: height, theme: color, simple } = props
   const { size, theme } = config
 
   return (
     <div
-      className={`page-header ${size[height] ?? size.small} ${
-        theme[color] ?? theme.orange
-      }`}
+      className={
+        !simple
+          ? `page-header ${size[height] ?? size.small} ${
+              theme[color] ?? theme.orange
+            }`
+          : 'page-header-simple'
+      }
     >
-      {children}
+      <div className='page-header-wrapper'>
+        <div className='page-header-wrapper-content container'>{children}</div>
+      </div>
     </div>
   )
 }

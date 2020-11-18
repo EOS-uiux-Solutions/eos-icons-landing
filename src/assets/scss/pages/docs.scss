@@ -7,7 +7,6 @@
     margin-top: -104px;
 
     .tab-list {
-      margin-left: -2em;
       top: 82px;
     }
   }
@@ -18,5 +17,17 @@
 
   img {
     max-width: 619px;
+  }
+
+  .docs-header {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      width: 66%;
+    }
   }
 }

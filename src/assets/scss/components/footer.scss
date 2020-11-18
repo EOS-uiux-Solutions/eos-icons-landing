@@ -1,8 +1,11 @@
 footer {
-  background: $lightest-gray;
+  background: $light-color;
+  border-top: 38px solid $light-gray;
   bottom: 0;
 
   .container {
+    display: flex;
+    justify-content: space-between;
     padding-bottom: $m;
     padding-top: $m;
     text-align: center;
@@ -10,5 +13,27 @@ footer {
 
   a {
     margin: $s;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .footer-block {
+    align-items: flex-start;
+    display: flex;
+    margin: $l;
+
+    span {
+      font-weight: bold;
+    }
+
+    &-list {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

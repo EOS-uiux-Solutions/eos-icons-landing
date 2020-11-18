@@ -3,10 +3,10 @@
   -ms-user-select: none;
   -webkit-user-select: none;
   border: 1px solid transparent;
-  border-radius: 30px;
+  border-radius: 10px;
   display: inline-block;
   line-height: 1.5;
-  padding: 8px 16px;
+  padding: 4px 17px;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   user-select: none;
@@ -17,27 +17,25 @@
   }
 
   &-default {
-    background-color: $grad-init;
-    border-color: $grad-init;
+    background-color: $primary;
+    border-color: $primary;
     color: $light-color;
 
     &:hover {
-      background-color: $primary-light;
-      border-color: $primary-light;
       color: $light-color;
     }
   }
 
   &-primary {
-    background-color: $buttons;
-    border-color: $buttons;
+    background-color: $primary;
+    border-color: $primary;
     color: $light-color;
 
     &:visited,
     &:active,
     &:hover {
       background-color: black;
-      color: $light-color;
+      // color: $light-color;
     }
   }
 }

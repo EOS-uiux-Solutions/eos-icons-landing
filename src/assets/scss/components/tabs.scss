@@ -1,10 +1,18 @@
 .tabs {
-  margin-top: -67px;
+  margin-top: -10px;
+  position: relative;
+  z-index: 0;
 
   .tab-list {
+    background: $light-color;
+    border-bottom: 1px solid $light-gray;
+    border-top: 1px solid $light-color;
     display: inline-block;
+    margin: 0;
+    padding: 0;
     position: sticky;
-    top: 77px;
+    width: 100%;
+    z-index: 0;
 
     &:hover {
       cursor: pointer;
@@ -12,18 +20,18 @@
   }
 
   .tab-list-item {
-    color: $hyper-link-color;
     display: inline-block;
     list-style: none;
-    margin-bottom: -1px;
+    margin-bottom: -2px;
     padding: 16px;
   }
 
   .tab-list-active {
     background-color: $light-color;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    border-bottom: 3px solid $primary;
     color: $dark-color;
+    font-weight: bold;
+
   }
 }
 
@@ -32,7 +40,6 @@
     margin-top: -16px;
 
     .tab-list {
-      background-color: $lightest-gray;
       padding-top: 10px;
       top: 130px;
       width: 100%;

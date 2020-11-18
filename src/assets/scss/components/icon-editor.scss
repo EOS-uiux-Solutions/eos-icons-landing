@@ -79,7 +79,10 @@
   }
 
   .icon-div {
-    margin-left: 150px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
     right: 20px;
   }
 
@@ -112,7 +115,6 @@
     background-image: url('../../images/white-grey-checkbox.svg');
     background-size: $xl * 12;
     border-radius: $s;
-    box-shadow: 2px 4px 6px rgba($color: $dark-color, $alpha: 0.2);
     height: $l * 8;
     margin: $xs;
     text-align: center;
@@ -125,52 +127,58 @@
     }
   }
 
-  .export-btn {
-    button {
-      bottom: 20px;
-      position: fixed;
-      right: 15px;
-    }
-  }
-
   .btn-loading-icon {
     margin-left: $s;
     vertical-align: middle;
     width: $l;
   }
+}
 
-  .transform-div {
+.export-btn {
+  button {
+    margin-top: $l;
+  }
+}
+
+.transform-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: $l;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
     div {
-      display: inline-block;
-      margin-right: $l;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .rotate-flip-icon {
+    transform: rotateZ(90deg);
+  }
+
+  button {
+    background-color: $light-color;
+    border: 0px;
+    border-radius: $xs;
+    color: $dark-gray;
+
+    &:hover {
+      background-color: $dark-gray;
+      color: $light-color;
+      transition-duration: 0.2s;
     }
 
-    .rotate-flip-icon {
-      transform: rotateZ(90deg);
+    &:focus {
+      outline: none;
     }
 
-    button {
-      background-color: $light-color;
-      border: 0px;
-      border-radius: $xs;
-      box-shadow: 1px 2px $xs rgba($color: $dark-color, $alpha: 0.3);
-      color: $dark-gray;
-      margin-right: $m;
-
-      &:hover {
-        background-color: $dark-gray;
-        color: $light-color;
-        transition-duration: 0.2s;
-      }
-
-      &:focus {
-        outline: none;
-      }
-
-      i {
-        margin: $xs;
-      }
+    i {
+      margin: $xs;
     }
   }
 }
-  

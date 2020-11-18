@@ -1,48 +1,24 @@
 import React from 'react'
-/* Footer links */
-const footerLinks = [
-  {
-    name: 'Join us on Slack',
-    href: 'https://slack.eosdesignsystem.com/',
-    category: 'External link',
-    action: 'Link to EOS Slack',
-    label: 'Footer'
-  },
-  {
-    name: 'Repository',
-    href: 'https://gitlab.com/SUSE-UIUX/eos-icons',
-    category: 'External link',
-    action: 'Link to Gitlab repo',
-    label: 'Footer'
-  },
-  {
-    name: 'Report an issue',
-    href: 'https://gitlab.com/SUSE-UIUX/eos-icons/issues',
-    category: 'External link',
-    action: 'Link to Gitlab issues',
-    label: 'Footer'
-  },
-  {
-    name: 'EOS on Twitter',
-    href: 'https://twitter.com/eosdesignsystem',
-    category: 'External link',
-    action: 'EOS in Twitter',
-    label: 'Footer'
-  },
-  {
-    name: 'Cookie policy',
-    href: '/cookies-policy',
-    category: 'External link',
-    action: '',
-    label: 'Footer'
-  }
-]
+import links from '../utils/Links.store'
 
 const Footer = () => {
   return (
     <footer>
       <div className='container flex flex-wrap'>
-        {footerLinks.map((ele, index) => (
+        {links.map((ele, i) => {
+          return <FooterBlock {...ele} key={i} />
+        })}
+      </div>
+    </footer>
+  )
+}
+
+const FooterBlock = ({ img, title, links }) => {
+  return (
+    <div className='footer-block'>
+      <span>{img ? <img src={img} alt='EOS Logo footer' /> : title}</span>
+      <div className='footer-block-list'>
+        {links?.map((ele, index) => (
           <a
             key={index}
             href={ele.href}
@@ -56,7 +32,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-    </footer>
+    </div>
   )
 }
 

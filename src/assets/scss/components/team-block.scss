@@ -1,0 +1,143 @@
+$team-h2-font: 28px;
+$name-font-size: 20px;
+$role-font-size: 16px;
+
+.team-member {
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 310px;
+  border: 1px solid #707070;
+  display: flex;
+  flex-direction: column;
+  height: 310px;
+  margin-right: 46px;
+  margin-top: $xxl;
+  position: relative;
+  width: 310px;
+
+  &:first-child {
+    margin-left: $m;
+  }
+
+  &:after {
+    background: $light-overlay-gradient;
+    content: '';
+    height: 100%;
+    opacity: .2;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  span {
+    bottom: 8px;
+    color: $light-color;
+    font-size: $name-font-size;
+    font-weight: bold;
+    position: absolute;
+    right: 28px;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  &:hover {
+    .team-member-overlay {
+      height: 100%;
+      visibility: visible;
+    }
+
+    .team-member-overlay-content {
+      opacity: 1;
+    }
+  }
+
+  &-overlay {
+    background-color: $overlay-color;
+    color: $light-color;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    visibility: hidden;
+    width: 100%;
+    z-index: 2;
+
+    &-content {
+      opacity: 0;
+      padding: 28px;
+      transition: opacity 0.1s ease-in-out;
+
+      h4 {
+        font-size: $team-h2-font;
+        font-weight: 800;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+.team-contributor {
+  border: 1px solid $dark-gray;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: $xxl;
+  margin-top: $xxl;
+  width: 300px;
+
+  &-description {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+
+    .name {
+      font-size: $name-font-size;
+    }
+
+    .role {
+      color: $dark-gray;
+      font-size: $role-font-size;
+    }
+
+    ul {
+      bottom: 5px;
+      position: absolute;
+
+      img {
+        filter: invert(1);
+        width: 16px;
+      }
+    }
+  }
+
+  &-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 124px;
+    height: 124px;
+    width: 124px;
+  }
+}
+
+
+.team-member,
+.team-contributor {
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0 8px;
+
+      &-first-child {
+        padding-left: 0;
+      }
+    }
+  }
+}

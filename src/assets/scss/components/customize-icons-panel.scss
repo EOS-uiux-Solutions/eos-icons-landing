@@ -1,7 +1,8 @@
 .icons-picker-footer {
-  color: $dark-gray;
-  font-weight: 500;
-  padding: 16px;
+  color: $dark-color;
+  display: flex;
+  font-weight: 300;
+  justify-content: space-between;
   width: 100%;
 
   .select-all-icons {
@@ -39,7 +40,6 @@
   .generate-div {
     display: block;
     float: right;
-    margin-right: 110px;
     margin-top: 10px;
     padding-bottom: 15px;
 
@@ -52,5 +52,25 @@
       margin-right: $m;
       outline: none;
     }
+  }
+
+  &-upload {
+    align-items: center;
+    display: flex;
+
+    p {
+      margin-right: 10px;
+    }
+
+    .btn {
+      border: 1px solid $dark-gray;
+      color: $dark-color;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
   }
 }
