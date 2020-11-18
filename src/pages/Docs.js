@@ -250,19 +250,12 @@ $eos-48: 48px;
               designs is now very easy with our ligature-based font files. We’ve
               also included optimized vector SVG files of each separate icon.
             </p>
-            <div className='cta-box'>
-              <div>
-                <p className='cta-box-title'>
-                  Download EOS icons for your computer
-                </p>
-                <p className='cta-box-text'>
-                  Download he latest copy of our computer-specific files. You’ll
-                  need them to be able to work with your desired design
-                  software.
-                </p>
-              </div>
-              <DownloadEOSicons />
-            </div>
+            <p>
+              Download he latest copy of our computer-specific files. You’ll
+              need them to be able to work with your desired design software.
+            </p>
+            <DownloadEOSicons />
+
             <h2>What’s included in the package?</h2>
             <p>
               Once you’ve downloaded the EOS Icons package, you’ll need to

@@ -22,7 +22,8 @@ export const maintainers = [
   },
   {
     name: 'Zvezdana Majanovic',
-    description: '',
+    description:
+      'Graphic designer, illustrator & brand identity designer. Loves arts and crafts, travelling and summer.',
     role: 'Graphic Designer',
     image: require('../assets/images/contributors/zvezdana.jpg'),
     social: [
@@ -33,11 +34,11 @@ export const maintainers = [
       {
         title: 'linkedin',
         link: 'https://www.linkedin.com/in/zvezdanam'
+      },
+      {
+        title: 'git',
+        link: 'https://www.behance.net/zvezdanam'
       }
-      // {
-      //   title: 'git',
-      //   link: '#'
-      // }
     ]
   },
   {
