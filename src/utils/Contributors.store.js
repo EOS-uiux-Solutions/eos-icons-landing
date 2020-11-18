@@ -15,8 +15,8 @@ export const maintainers = [
         link: 'https://www.linkedin.com/in/cyntsanchez/'
       },
       {
-        title: 'git',
-        link: 'https://github.com/cyntss'
+        title: 'medium',
+        link: 'https://medium.com/@cyntss'
       }
     ]
   },
@@ -36,7 +36,7 @@ export const maintainers = [
         link: 'https://www.linkedin.com/in/zvezdanam'
       },
       {
-        title: 'git',
+        title: 'behance',
         link: 'https://www.behance.net/zvezdanam'
       }
     ]

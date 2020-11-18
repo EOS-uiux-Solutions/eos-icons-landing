@@ -4,7 +4,9 @@ const socialMediaImg = {
   twitter: require('../assets/images/social/twitter.svg'),
   linkedin: require('../assets/images/social/linkedin.svg'),
   git: require('../assets/images/social/git.svg'),
-  dribbble: require('../assets/images/social/dribbble.svg')
+  dribbble: require('../assets/images/social/dribbble.svg'),
+  behance: require('../assets/images/social/behance.svg'),
+  medium: require('../assets/images/social/medium.svg')
 }
 
 export const TeamBlock = ({ image, role, name, description, social }) => {
