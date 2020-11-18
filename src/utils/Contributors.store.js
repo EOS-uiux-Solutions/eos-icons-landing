@@ -65,7 +65,7 @@ export const maintainers = [
     name: 'Richa Bhist',
     description:
       'I am a Front end developer who also loves doing design and UX/UI.',
-    role: 'Developer',
+    role: 'Front end Developer',
     image: require('../assets/images/contributors/richa.jpg'),
     social: [
       // {
