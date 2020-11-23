@@ -16,30 +16,7 @@ const AnimatedIcons = (props) => {
     setIconSelected('')
   }
 
-  return (
-    <>
-      {animatedIconsList.map((icon, index) => (
-        <div className='icon-container' key={index}>
-          <img
-            src={require(`eos-icons/animated-svg/${icon}.svg`)}
-            alt={icon}
-            className={icon === iconSelected ? 'active' : ''}
-            onClick={() => {
-              selectAndShowInfo(icon)
-            }}
-          />
-          {icon}
-        </div>
-      ))}
-      <HowTo
-        show={showPanel}
-        iconName={iconSelected}
-        iconTags=''
-        type='animated'
-        close={closeHowTo}
-      />
-    </>
-  )
+  return <></>
 }
 
 export default AnimatedIcons
