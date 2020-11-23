@@ -23,20 +23,19 @@ h1 {
   z-index: 1;
 
   &:after {
-    border: 13px solid $primary;
+    border: 12px solid $primary;
     content: '';
-    margin-left: -40%;
-    margin-top: 15px;
+    margin-left: -35%;
+    margin-top: 14px;
     position: absolute;
-    width: 45%;
+    width: 32%;
     z-index: -1;
-}
+  }
 }
 
 .text-center {
   text-align: center;
 }
-
 
 p.subheadline {
   font-family: $header-font-family;

@@ -132,6 +132,7 @@ const IconsSet = (props) => {
                   {state.iconsCategory.map((categoryObject, index) => {
                     return categoryObject.icons.length > 0 ? (
                       <div className='icons-list-category' key={index}>
+                        <h4>{categoryObject.category}</h4>
                         <div className='icons-list-category-icons'>
                           {categoryObject.icons.map((icon, i) => (
                             <Icon

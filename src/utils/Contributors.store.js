@@ -21,7 +21,7 @@ export const maintainers = [
     ]
   },
   {
-    name: 'Zvezdana Majanovic',
+    name: 'Zvezdana Marjanović',
     description:
       'Graphic designer, illustrator & brand identity designer. Loves arts and crafts, travelling and summer.',
     role: 'Graphic Designer',

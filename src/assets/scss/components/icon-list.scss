@@ -6,6 +6,18 @@
   width: fit-content;
 
 
+  h4 {
+    border-bottom: 1px solid $light-gray;
+    color: $primary;
+    padding: $l $xl;
+    text-transform: capitalize;
+    width: 90%;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
   .icon-container {
     align-items: center;
     display: flex;
