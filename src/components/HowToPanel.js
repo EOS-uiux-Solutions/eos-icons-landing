@@ -57,28 +57,31 @@ const HowToPanel = (props) => {
         </small>
 
         {type === 'animated' ? (
-          <div className='input-group'>
-            <input
-              className='input-group-element input-grow'
-              readOnly='readOnly'
-              value={`<img src='${iconName}.svg'/>`}
-            />
-            <a
-              target='_blank'
-              rel='noopener noreferrer'
-              href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}
-            >
-              <Button primary type='button'>
-                <i className='eos-icons eos-18'>file_download</i> Download icon
+          <div className='how-to-use-block-left'>
+            <div className='input-group'>
+              <input
+                className='input-group-element input-grow'
+                readOnly='readOnly'
+                value={`<img src='${iconName}.svg'/>`}
+              />
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}
+              >
+                <Button primary type='button'>
+                  <i className='eos-icons eos-18'>file_download</i> Download
+                  icon
+                </Button>
+              </a>
+              <Button
+                primary
+                type='button'
+                onClick={() => iconEditorToggle('animated')}
+              >
+                <i className='eos-icons eos-18'>edit</i> Edit Icon
               </Button>
-            </a>
-            <Button
-              primary
-              type='button'
-              onClick={() => iconEditorToggle('animated')}
-            >
-              <i className='eos-icons eos-18'>edit</i> Edit Icon
-            </Button>
+            </div>
           </div>
         ) : (
           <div className='how-to-use-block-left'>

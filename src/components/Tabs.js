@@ -9,6 +9,7 @@ const Tabs = (props) => {
   useEffect(() => {
     setPosition(document.querySelector('.page-header').clientHeight + 54)
   }, [customize, showPanel])
+
   return (
     <div className='tabs'>
       <ol className='tab-list' style={{ top: position }}>

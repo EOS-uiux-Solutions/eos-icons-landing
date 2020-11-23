@@ -10,6 +10,7 @@ import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
+import { CategorySelector } from '../components/CategorySelector'
 
 const IconsSet = (props) => {
   const selectIcon = (icon, callback) => {
@@ -89,9 +90,12 @@ const IconsSet = (props) => {
                     })
                   }
                 />
+                <CategorySelector disabled={tab === 'Animated Icons'} />
               </div>
+
               <div className='icons-control-toggle'>
                 <Toogle
+                  disabledStatus={tab === 'Animated Icons'}
                   name='Select multiple'
                   id='js-icon-picker'
                   onClick={() =>
