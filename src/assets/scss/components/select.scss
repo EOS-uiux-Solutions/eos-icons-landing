@@ -1,0 +1,53 @@
+select {
+  appearance: none;
+}
+
+.category-filter {
+  align-items: center;
+  display: flex;
+  margin-left: $l;
+
+  label {
+    font-weight: bold;
+  }
+
+  select {
+    margin: 0;
+    margin-left: $m;
+  }
+}
+
+/* Select css */
+.custom-select {
+  background: $eos-select-bg-active;
+  background-color: transparent;
+  background-size: $eos-select-bg-size;
+  border: 0;
+  border-radius: 0;
+  color: $eos-select-txt-color;
+  cursor: pointer;
+  font-size: $eos-select-font;
+  font-weight: 300;
+  padding: $eos-select-padding;
+  width: 100%;
+
+  option {
+    font-weight: $eos-select-option-font-weight;
+    padding: $eos-select-option-padding;
+  }
+
+  &:focus {
+    border-color: $eos-form-element-color;
+    outline: 0;
+  }
+
+  &:disabled {
+    background: $eos-select-bg-disabled;
+    cursor: not-allowed;
+  }
+
+  &.disabled {
+    @extend .disabled
+  }
+
+}

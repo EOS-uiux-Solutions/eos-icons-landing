@@ -37,6 +37,7 @@ export const eosIconsState = {
   animatedIcons: animatedIcons,
   icons: staticIcons,
   iconsCategory,
+  iconsCategoryList: iconsCategory.map((ele) => ele.category),
   multipleIcons,
   customize: false,
   cookiesToggle: false,
@@ -104,6 +105,11 @@ export const eosIconsState = {
       alert("JSON file doesn't seem to be right")
     }
     return multipleIcons
+  },
+  setCategoryFilter: function (value) {
+    return value === 'all'
+      ? iconsCategory
+      : iconsCategory.filter((ele) => ele.category === value)
   }
 }
 
@@ -148,6 +154,11 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         cookiesToggle: eosIconsState.toggleCookies()
+      }
+    case 'SET_CATEGORY_SELECTOR':
+      return {
+        ...state,
+        iconsCategory: eosIconsState.setCategoryFilter(action.category)
       }
     default:
       return { ...state }

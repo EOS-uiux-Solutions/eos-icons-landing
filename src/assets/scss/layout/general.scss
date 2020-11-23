@@ -22,3 +22,8 @@ body {
   color: $command;
   padding: 2px 4px;
 }
+
+.disabled {
+  color: $dark-gray;
+  cursor: not-allowed;
+}

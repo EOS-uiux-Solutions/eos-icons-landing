@@ -22,4 +22,8 @@
   &:focus {
     outline: none;
   }
+
+  @media screen and (max-width: 430px) {
+    bottom: 100px;
+ }
 }

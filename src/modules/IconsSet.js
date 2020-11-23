@@ -6,30 +6,13 @@ import Icon from '../components/IconDisplay'
 import Tabs from '../components/Tabs'
 import Toogle from '../components/Toggle'
 import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
-import AnimatedIcons from './AnimatedIcons'
+// import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
+import { CategorySelector } from '../components/CategorySelector'
 
 const IconsSet = (props) => {
-  const selectIcon = (icon, callback) => {
-    setShowPanel(icon !== iconSelected)
-    setIconSelected(icon === iconSelected ? '' : icon)
-    window.history.replaceState(
-      '',
-      'EOS Icons',
-      `${window.location.pathname}?iconName=${icon.name}`
-    )
-    return callback
-  }
-
-  /* Toggle customizable functionality */
-  const toggleCustomize = (callback) => {
-    props.action()
-    return callback
-  }
-
-  // show HowTo panel
   const [iconSelected, setIconSelected] = useState('')
   const [showPanel, setShowPanel] = useState(false)
 
@@ -66,6 +49,23 @@ const IconsSet = (props) => {
     }
   }
 
+  const selectIcon = (icon, callback) => {
+    setShowPanel(icon !== iconSelected)
+    setIconSelected(icon === iconSelected ? '' : icon)
+    window.history.replaceState(
+      '',
+      'EOS Icons',
+      `${window.location.pathname}?iconName=${icon.name}`
+    )
+    return callback
+  }
+
+  /* Toggle customizable functionality */
+  const toggleCustomize = (callback) => {
+    props.action()
+    return callback
+  }
+
   return (
     <AppContext.Consumer>
       {({ state, dispatch }) => (
@@ -89,9 +89,12 @@ const IconsSet = (props) => {
                     })
                   }
                 />
+                <CategorySelector disabled={tab === 'Animated Icons'} />
               </div>
+
               <div className='icons-control-toggle'>
                 <Toogle
+                  disabledStatus={tab === 'Animated Icons'}
                   name='Select multiple'
                   id='js-icon-picker'
                   onClick={() =>
@@ -102,13 +105,12 @@ const IconsSet = (props) => {
             </div>
             <div className='icon-information'>
               {!state.customize ? (
-                <div className=''>
-                  <HowTo
-                    show={showPanel}
-                    iconName={iconSelected.name}
-                    iconTags={iconSelected.tags}
-                    type='static'
-                    close={closeHowTo}
+                <div>
+                  <ShowHowToUse
+                    tab={tab}
+                    showPanel={showPanel}
+                    iconSelected={iconSelected}
+                    closeHowTo={closeHowTo}
                   />
                 </div>
               ) : (
@@ -132,6 +134,7 @@ const IconsSet = (props) => {
                   {state.iconsCategory.map((categoryObject, index) => {
                     return categoryObject.icons.length > 0 ? (
                       <div className='icons-list-category' key={index}>
+                        <h4>{categoryObject.category}</h4>
                         <div className='icons-list-category-icons'>
                           {categoryObject.icons.map((icon, i) => (
                             <Icon
@@ -162,7 +165,20 @@ const IconsSet = (props) => {
               </div>
               <div label='Animated Icons'>
                 <div className='icons-list'>
-                  <AnimatedIcons animatedIconsList={state.animatedIcons} />
+                  {state.animatedIcons.map((icon, index) => (
+                    <div className='icon-container' key={index}>
+                      <img
+                        src={require(`eos-icons/animated-svg/${icon}.svg`)}
+                        alt={icon}
+                        className={icon === iconSelected?.name ? 'active' : ''}
+                        onClick={() => {
+                          setIconSelected({ name: icon })
+                          setShowPanel(true)
+                        }}
+                      />
+                      {icon}
+                    </div>
+                  ))}
                 </div>
               </div>
             </Tabs>
@@ -170,6 +186,28 @@ const IconsSet = (props) => {
         </>
       )}
     </AppContext.Consumer>
+  )
+}
+
+const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo }) => {
+  return tab === 'Static Icons' ? (
+    <div>
+      <HowTo
+        show={showPanel}
+        iconName={iconSelected?.name}
+        iconTags={iconSelected?.tags}
+        type='static'
+        close={closeHowTo}
+      />
+    </div>
+  ) : (
+    <HowTo
+      show={showPanel}
+      iconName={iconSelected?.name}
+      iconTags=''
+      type='animated'
+      close={closeHowTo}
+    />
   )
 }
 

@@ -4,7 +4,7 @@ const Toggle = (props) => {
   const { onClick, onChange, name, id, checkedStatus, disabledStatus } = props
 
   return (
-    <div className='toggle'>
+    <div className={`toggle ${disabledStatus ? 'disabled' : ''}`}>
       <span className='label-name'>{name}</span>
       <input
         className='toggle-checkbox'
