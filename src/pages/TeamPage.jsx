@@ -3,10 +3,22 @@ import PageHeader from '../components/PageHeader'
 import TeamBlock, { ContributorsBlock } from '../components/TeamBlock'
 import { contributors, maintainers } from '../utils/Contributors.store'
 import Button from '../components/Button'
+import { Helmet } from 'react-helmet'
 
 export const TeamPage = () => {
   return (
     <>
+      <Helmet>
+        <title>Meet the team | EOS Icons</title>
+        <meta
+          name='description'
+          content='EOS icons is made and maintained by passioned skilled people that brings creativity and innovation into this world. Join us, become a contributor!'
+        />
+        <meta
+          name='keywords'
+          content='open source icon, ligature icon, action icon, animated icon, ai icon, design icon'
+        />
+      </Helmet>
       <PageHeader simple>
         <h1>Meet the team</h1>
         <p className='subheadline'>

@@ -2,6 +2,7 @@ import React from 'react'
 import AppContext from '../utils/AppContext'
 import Toogle from '../components/Toggle'
 import Cookies from 'js-cookie'
+import { Helmet } from 'react-helmet'
 
 const CookiesPage = () => {
   /* Toggle customizable functionality */
@@ -15,6 +16,15 @@ const CookiesPage = () => {
     <AppContext.Consumer>
       {({ state, dispatch }) => (
         <>
+          <Helmet>
+            <title>Cookie policy | EOS Icons</title>
+            <meta name='robots' content='noindex' />
+            <meta name='description' content='Cookie policy page' />
+            <meta
+              name='keywords'
+              content='open source icon, ligature icon, action icon, animated icon, ai icon, design icon'
+            />
+          </Helmet>
           <div className='container'>
             <div>
               <h1>Cookie policy</h1>

@@ -2,10 +2,23 @@ import React from 'react'
 import PageHeader from '../components/PageHeader'
 import AboutBlock from '../components/AboutBlock'
 import DownloadEOSicons from '../components/DownloadEOSicons'
+import { Helmet } from 'react-helmet'
 
 export const AboutPage = () => {
   return (
     <>
+      <Helmet>
+        <title>About Us | EOS Icons</title>
+        <meta
+          name='description'
+          content='Commercial, non-commercial, use them as you please. EOS icons comes with an MIT license, has an open source community, and welcomes your collaboration too.'
+        />
+        <meta
+          name='keywords'
+          content='open source icon, ligature icon, action icon, animated icon, ai icon, design icon'
+        />
+      </Helmet>
+
       <PageHeader simple>
         <h1>THE HI-TECH ICONS nobody thought about</h1>
         <p className='subheadline'>
