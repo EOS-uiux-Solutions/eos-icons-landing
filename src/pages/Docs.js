@@ -6,6 +6,7 @@ import FontbookImg from '../assets/images/docs/fontbook.gif'
 import UsingIconsImg from '../assets/images/docs/using-eos-icons.gif'
 import { Link } from '@reach/router'
 import DownloadEOSicons from '../components/DownloadEOSicons'
+import { Helmet } from 'react-helmet'
 
 const Docs = () => {
   useEffect(() => {
@@ -14,6 +15,18 @@ const Docs = () => {
 
   return (
     <div className='docs'>
+      <Helmet>
+        <title>Get EOS Icons | EOS Icons</title>
+        <meta
+          name='description'
+          content='Download the latest copy of our computer-specific icon files for your design or install them in your application using npm, our CDN or our Rails gem.'
+        />
+        <meta
+          name='keywords'
+          content='open source icon, ligature icon, action icon, animated icon, ai icon, design icon'
+        />
+      </Helmet>
+
       <PageHeader theme='purple'>
         <div className='docs-header'>
           <div>
