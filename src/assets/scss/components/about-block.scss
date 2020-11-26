@@ -12,6 +12,10 @@
     }
   }
 
+  &.is-reversed {
+    flex-direction: row-reverse;
+  }
+
   &-image {
     align-items: center;
     display: flex;
@@ -19,7 +23,15 @@
     width: 50%;
 
     img {
-      max-width: 340px;
+      max-width: 430px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    flex-direction: column-reverse;
+
+    &.is-reversed {
+      flex-direction: column-reverse;
     }
   }
 }

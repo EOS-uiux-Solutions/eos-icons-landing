@@ -18,7 +18,7 @@ header {
     }
 
     .brand-text {
-      @media (max-width: 413px) {
+      @media (max-width: 430px) {
         display: none;
       }
     }
@@ -59,12 +59,13 @@ header {
       }
     }
 
-    @media (max-width: 413px) {
+    @media (max-width: 430px) {
       background: $light-color;
       border-top: 1px solid $light-gray;
       bottom: 0;
       display: flex;
-      padding: $l;
+      justify-content: space-between;
+      padding: $l 0;
       position: fixed;
       width: 100%;
 
@@ -72,6 +73,11 @@ header {
         align-items: center;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+
+        &:last-child {
+          margin-right: $l;
+        }
 
         i {
           color: $primary;

@@ -9,10 +9,7 @@ export const AboutBlock = ({
   reverse
 }) => {
   return (
-    <div
-      className='about-block'
-      style={{ flexDirection: reverse ? 'row-reverse' : '' }}
-    >
+    <div className={`about-block ${reverse ? 'is-reversed' : ''}`}>
       <div className='about-block-description'>
         <h2>{title}</h2>
         <p>{description}</p>

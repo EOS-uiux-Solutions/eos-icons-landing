@@ -13,8 +13,13 @@
     display: flex;
     height: 27px;
     position: relative;
-    transition: background-color 0.2s;
+    transition: background-color 0.1s;
     width: 50px;
+
+
+    &.disabled {
+      background-color: #c2c2c2;
+    }
   }
 
   &-button {

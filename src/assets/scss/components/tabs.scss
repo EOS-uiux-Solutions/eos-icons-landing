@@ -14,8 +14,10 @@
     width: 100%;
     z-index: 0;
 
-    &:hover {
-      cursor: pointer;
+    li {
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 

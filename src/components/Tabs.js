@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react'
+import useWindow from '../hooks/useWidow'
 
 const Tabs = (props) => {
   const { children, setTab, customize, showPanel } = props
 
   const [activeTab, setActiveTab] = useState(children[0].props.label)
   const [position, setPosition] = useState(0)
+  const [windowsSize] = useWindow()
 
   useEffect(() => {
     setPosition(document.querySelector('.page-header').clientHeight + 54)
-  }, [customize, showPanel])
+  }, [customize, showPanel, windowsSize])
 
   return (
     <div className='tabs'>
-      <ol className='tab-list' style={{ top: position }}>
+      <ul className='tab-list' style={{ top: position }}>
         {children.map((child, idx) => {
           const { label } = child.props
+
           return (
             <li
               className={
@@ -29,7 +32,7 @@ const Tabs = (props) => {
             </li>
           )
         })}
-      </ol>
+      </ul>
 
       <div className='tab-content'>
         {children.map((child) => {
