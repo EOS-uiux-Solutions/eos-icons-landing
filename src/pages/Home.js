@@ -27,7 +27,7 @@ const Home = () => {
             <title>More than 1000 free icons | EOS Icons</title>
             <meta
               name='description'
-              content='EOS icons are open source and they are fully customizable. Available as a ligature font face, SVG, PNG, font, CDN, NPM, Rubygem.'
+              content='EOS icons are open source and they are fully customizable. Available as a ligature-based font face, SVG, PNG, font, CDN, NPM, Rubygem.'
             />
             <meta
               name='keywords'
