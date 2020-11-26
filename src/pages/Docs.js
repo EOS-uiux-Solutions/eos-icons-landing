@@ -19,7 +19,7 @@ const Docs = () => {
         <title>Get EOS Icons | EOS Icons</title>
         <meta
           name='description'
-          content='Download the latest copy of our computer-specific filesfor your design or install them in your application using npm, our CDN or our Rails gem.'
+          content='Download the latest copy of our computer-specific icon files for your design or install them in your application using npm, our CDN or our Rails gem.'
         />
         <meta
           name='keywords'
