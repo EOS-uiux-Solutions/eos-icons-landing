@@ -12,9 +12,9 @@ export const useWindowsSize = () => {
     return setState({
       width: window.innerWidth,
       height: window.innerHeight,
-      isMobile: window.innerWidth < 430,
-      isScrolled: window.scrollY > 10,
-      isScrooledAndMobile: window.innerWidth < 430 && window.scrollY > 10
+      isMobile: window.innerWidth <= 430,
+      isScrolled: window.scrollY >= 10,
+      isScrooledAndMobile: window.innerWidth <= 430 && window.scrollY >= 10
     })
   }
 

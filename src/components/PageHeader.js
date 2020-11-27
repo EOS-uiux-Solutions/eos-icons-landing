@@ -1,5 +1,6 @@
 import React from 'react'
 import useWindow from '../hooks/useWidow'
+
 /* Create a config object with the classes neded as the size and theme */
 const config = {
   size: {
@@ -41,11 +42,7 @@ const PageHeader = (props) => {
       }}
     >
       <div className='page-header-wrapper'>
-        <div
-          className={`page-header-wrapper-content container ${
-            windowsSize.isScrolled ? 'page-header-hide-title' : ''
-          }`}
-        >
+        <div className={`page-header-wrapper-content container`}>
           {children}
         </div>
       </div>
