@@ -11,10 +11,12 @@ import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
 import { CategorySelector } from '../components/CategorySelector'
+import { useWindowsSize } from '../hooks/useWidow'
 
 const IconsSet = (props) => {
   const [iconSelected, setIconSelected] = useState('')
   const [showPanel, setShowPanel] = useState(false)
+  const [size] = useWindowsSize()
 
   const [tab, setActiveTab] = useState('Static Icons')
 
@@ -89,18 +91,30 @@ const IconsSet = (props) => {
                     })
                   }
                 />
-                <CategorySelector disabled={tab === 'Animated Icons'} />
+                {!size?.isMobile ? (
+                  <CategorySelector disabled={tab === 'Animated Icons'} />
+                ) : (
+                  ' '
+                )}
               </div>
 
-              <div className='icons-control-toggle'>
-                <Toogle
-                  disabledStatus={tab === 'Animated Icons'}
-                  name='Select multiple'
-                  id='js-icon-picker'
-                  onClick={() =>
-                    toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
-                  }
-                />
+              <div className='icons-control-dynamic'>
+                {size?.isMobile ? (
+                  <CategorySelector disabled={tab === 'Animated Icons'} />
+                ) : (
+                  ' '
+                )}
+
+                <div className='icons-control-toggle'>
+                  <Toogle
+                    disabledStatus={tab === 'Animated Icons'}
+                    name='Select multiple'
+                    id='js-icon-picker'
+                    onClick={() =>
+                      toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
+                    }
+                  />
+                </div>
               </div>
             </div>
             <div className='icon-information'>

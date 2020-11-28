@@ -3,17 +3,18 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
 .page-header {
   align-items: center;
   background: $page-header-illustration;
-  background-size: fixed;
   color: $dark-color;
   display: flex;
   padding: $xxl 0;
   position: sticky;
   top: 55px;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.2s;
   width: 100%;
   z-index: 10;
 
   &-small {
-    min-height: 10vh;
+    min-height: 8vh;
   }
 
   &-medium {
@@ -26,6 +27,21 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
 
     .container {
       padding: 0 24px;
+    }
+  }
+
+  &-hide-title {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      display: none;
+
+    }
+
+    .icons-control {
+      padding: $m 0;
     }
   }
 }

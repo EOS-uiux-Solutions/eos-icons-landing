@@ -36,7 +36,7 @@ const CookiesBanner = () => {
               </p>
             </div>
             <div className='cookies-alert-buttons'>
-              <a className='btn btn-primary' href='/cookies-policy'>
+              <a className='btn btn-default' href='/cookies-policy'>
                 Edit preferences
               </a>
               <Button

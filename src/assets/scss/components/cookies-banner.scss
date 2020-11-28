@@ -25,7 +25,6 @@
     padding: $l 0;
 
     a {
-      border: 1px solid $light-color;
       color: $light-color;
       margin: 0 $m;
     }
@@ -42,17 +41,12 @@
     display: flex;
     flex-direction: column;
     max-height: 150px;
-    position: absolute;
+    position: fixed;
     top: 0;
 
     .cookies-alert-buttons {
       margin: 0 auto;
       text-align: center;
-
-      a {
-        border-color: $light-color;
-        color: $light-color;
-      }
     }
   }
 

@@ -36,4 +36,8 @@ footer {
       padding: 0;
     }
   }
+
+  @media (max-width: 430px) {
+    margin-bottom: 80px;
+  }
 }

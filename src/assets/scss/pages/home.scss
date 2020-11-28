@@ -35,9 +35,38 @@
     }
   }
 
-  &-toggle {
+  &-dynamic {
     display: flex;
     justify-content: flex-end;
     width: 40%;
   }
+
+  &-toggle {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+
+    &-dynamic {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $xl;
+      width: 100%;
+
+      .category-filter  {
+        margin-left: 0;
+      }
+
+      .icons-control-toggle {
+        width: 100%;
+      }
+    }
+
+    input.search-input,
+    .icons-control-search {
+      width: 100%;
+   }
+ }
 }

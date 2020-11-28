@@ -1,6 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import AboutBlock from '../components/AboutBlock'
+import { UsedBy } from '../components/UsedBy'
 import DownloadEOSicons from '../components/DownloadEOSicons'
 import { Helmet } from 'react-helmet'
 
@@ -31,6 +32,8 @@ export const AboutPage = () => {
         {data.map((ele, i) => {
           return <AboutBlock {...ele} key={i} />
         })}
+
+        <UsedBy />
       </div>
     </>
   )

@@ -87,6 +87,10 @@ $font-size-20px: 20px;
         line-height: 30px;
         text-align: center;
       }
+
+      @media (max-width: 430px) {
+        padding-left: 15%;
+      }
     }
   }
 }

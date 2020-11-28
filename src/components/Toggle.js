@@ -15,8 +15,11 @@ const Toggle = (props) => {
         onChange={onChange}
         disabled={disabledStatus}
       />
-      <label className='toggle-label' htmlFor={id}>
-        <span className='toggle-button' />
+      <label
+        className={`toggle-label ${disabledStatus ? 'disabled' : ''}`}
+        htmlFor={id}
+      >
+        <span className={`toggle-button ${disabledStatus ? 'disabled' : ''}`} />
       </label>
     </div>
   )
