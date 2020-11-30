@@ -12,6 +12,7 @@ const IconEditor = (props) => {
   const { isActive, show, iconNames, iconType } = props
   const [currentPosition, setCurrentPosition] = useState(0)
   const [exportAs, setExportAs] = useState('svg')
+  console.log('exportAs: ', exportAs)
   const [exportSize, setExportSize] = useState('512')
   const [color, setColor] = useState('#000000')
   const [rotateAngle, setRotateAngle] = useState(0)
@@ -40,9 +41,9 @@ const IconEditor = (props) => {
     setRotateAngle(angle)
   }
 
-  const changeExportType = () => {
-    setExportAs(document.getElementsByClassName('export-type')[0].value)
-  }
+  // const changeExportType = () => {
+  //   setExportAs(document.getElementsByClassName('export-type')[0].value)
+  // }
   const changeExportSize = () => {
     setExportSize(document.getElementsByClassName('export-size')[0].value)
   }
@@ -197,17 +198,25 @@ const IconEditor = (props) => {
                 </div>
               </div>
             </div>
-            <div className='dropdown fill-dropdown'>
-              <select className='export-type' onChange={changeExportType}>
-                {exportTypes.map((type, key) => (
-                  <option key={key} value={type}>
-                    {type.toUpperCase()}
-                  </option>
-                ))}
-              </select>
+            <div className='type-selector'>
+              {exportTypes.map((type, key) => (
+                <div className='type-selector-option'>
+                  <input
+                    type='radio'
+                    name={type}
+                    value={type}
+                    checked={type === exportAs}
+                    onChange={() => {
+                      setExportAs(type)
+                    }}
+                  />
+
+                  <label htmlFor={type}>{type.toUpperCase()}</label>
+                </div>
+              ))}
             </div>
             {exportAs === 'png' ? (
-              <div>
+              <div className='size-selector'>
                 <p>Select Size</p>
                 <div className='dropdown fill-dropdown'>
                   <select
