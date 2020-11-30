@@ -45,9 +45,7 @@ const PageHeader = (props) => {
       }}
     >
       <div className='page-header-wrapper'>
-        <div className={`page-header-wrapper-content container`}>
-          {children}
-        </div>
+        <div className={`container`}>{children}</div>
       </div>
     </div>
   )

@@ -45,5 +45,9 @@ p.subheadline {
   font-family: $header-font-family;
   font-size: $subheadline-font-size;
   font-weight: 300;
-  line-height: 37px;
+  line-height: $line-height;
+
+  @media (max-width: $mobile-max) {
+    font-size: $subheadline-font-size-mobile;
+  }
 }
