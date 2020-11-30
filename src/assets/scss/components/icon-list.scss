@@ -2,15 +2,18 @@
   @extend .flex;
   @extend .flex-wrap;
   margin-bottom: $xxxl;
-  margin-top: $xxl;
   width: fit-content;
-
 
   h4 {
     color: $primary;
     padding: $l $m;
     text-transform: capitalize;
     width: 90%;
+
+    @media (max-width: $mobile-max) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
 
     &:first-child {
       padding-top: 0;

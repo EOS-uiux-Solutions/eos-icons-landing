@@ -38,7 +38,11 @@
 }
 
 .tab-content {
-  margin-top: $xxl;
+  margin-top: $l;
+
+  @media screen and (max-width: $mobile-max) {
+    margin-top: $m;
+  }
 
   h2 {
     margin-top: $xxl;
