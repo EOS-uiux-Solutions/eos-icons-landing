@@ -144,38 +144,36 @@ const IconsSet = (props) => {
               showPanel={showPanel}
             >
               <div label='Static Icons'>
-                <div className='icons-list' style={{ flexDirection: 'column' }}>
-                  {state.iconsCategory.map((categoryObject, index) => {
-                    return categoryObject.icons.length > 0 ? (
-                      <div className='icons-list-category' key={index}>
-                        <h4>{categoryObject.category}</h4>
-                        <div className='icons-list-category-icons'>
-                          {categoryObject.icons.map((icon, i) => (
-                            <Icon
-                              size={36}
-                              active={isActive(icon.name, state)}
-                              key={i}
-                              name={icon.name}
-                              action={() =>
-                                selectIcon(
-                                  icon,
-                                  dispatch({
-                                    type: state.customize
-                                      ? 'ADD_MULTIPLE_ICONS'
-                                      : '',
-                                    selection: icon.name
-                                  })
-                                )
-                              }
-                            />
-                          ))}
-                        </div>
+                {state.iconsCategory.map((categoryObject, index) => {
+                  return categoryObject.icons.length > 0 ? (
+                    <div key={index}>
+                      <h4 className='category'>{categoryObject.category}</h4>
+                      <div className='icons-list'>
+                        {categoryObject.icons.map((icon, i) => (
+                          <Icon
+                            size={36}
+                            active={isActive(icon.name, state)}
+                            key={i}
+                            name={icon.name}
+                            action={() =>
+                              selectIcon(
+                                icon,
+                                dispatch({
+                                  type: state.customize
+                                    ? 'ADD_MULTIPLE_ICONS'
+                                    : '',
+                                  selection: icon.name
+                                })
+                              )
+                            }
+                          />
+                        ))}
                       </div>
-                    ) : (
-                      ''
-                    )
-                  })}
-                </div>
+                    </div>
+                  ) : (
+                    ''
+                  )
+                })}
               </div>
               <div label='Animated Icons'>
                 <div className='icons-list'>

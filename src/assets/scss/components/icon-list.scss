@@ -4,22 +4,6 @@
   margin-bottom: $xxxl;
   width: fit-content;
 
-  h4 {
-    color: $primary;
-    padding: $l $m;
-    text-transform: capitalize;
-    width: 90%;
-
-    @media (max-width: $mobile-max) {
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    &:first-child {
-      padding-top: 0;
-    }
-  }
-
   .icon-container {
     align-items: center;
     display: flex;
@@ -48,28 +32,24 @@
       border: 2px solid $primary;
     }
   }
-
-  &-category {
-    display: flex;
-    flex-direction: column;
-    margin-top: $m;
-
-    h3 {
-      color: $primary-light;
-      font-weight: 400;
-      margin-top: $xxl;
-      padding: 0 $xl;
-      text-transform: capitalize;
-    }
-
-    &-icons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  }
 }
 
 .total-icons {
   margin: 5px 0px 0px 40px;
+}
+
+h4.category {
+  color: $primary;
+  margin-top: $xxl;
+  padding: $l $m;
+  text-transform: capitalize;
+
+  @media (max-width: $mobile-max) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
 }
