@@ -7,4 +7,3 @@ src/serviceWorker.js
 package-lock.json
 package.json
 .gitlab/
-src/assets/scss/base/reset.scss
