@@ -6,6 +6,11 @@
   &-description {
     width: 50%;
 
+    @media (max-width: $mobile-max) {
+      margin-top: $xxl;
+      width: 100%;
+    }
+
     h2 {
       font-weight: bold;
       text-transform: uppercase;
