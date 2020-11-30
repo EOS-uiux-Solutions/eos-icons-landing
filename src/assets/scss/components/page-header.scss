@@ -36,6 +36,10 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
 
   h1 {
     margin-bottom: $xl;
+
+    @media (max-width: $mobile-max) {
+      margin-bottom: $s;
+    }
   }
 
   &-hide-title {

@@ -48,12 +48,16 @@ header {
 
       &::after {
         background-color: $primary;
-        bottom: -23px;
+        bottom: -22px;
         content: '';
         height: 5px;
         left: 0;
         position: absolute;
         width: 100%;
+
+        @media (max-width: $mobile-max) {
+          bottom: -16px;
+        }
       }
     }
 
@@ -64,7 +68,7 @@ header {
       display: flex;
       height: 40px;
       justify-content: space-between;
-      padding: $l 0;
+      padding: $m 0;
       position: fixed;
       width: 100%;
 

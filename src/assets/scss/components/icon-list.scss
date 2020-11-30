@@ -18,6 +18,11 @@
     white-space: nowrap;
     width: 100px;
 
+    @media (max-width: $mobile-max) {
+      margin: $xs;
+      padding: $xs;
+    }
+
     &.active {
       border: 2px solid $primary;
     }
