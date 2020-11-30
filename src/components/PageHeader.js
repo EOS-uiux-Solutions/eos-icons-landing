@@ -6,10 +6,6 @@ const config = {
   size: {
     small: 'page-header-small',
     medium: 'page-header-medium'
-  },
-  theme: {
-    orange: 'page-header-orange',
-    purple: 'page-header-purple'
   }
 }
 
@@ -24,16 +20,14 @@ const PageHeader = (props) => {
   const [windowsSize] = useWindow()
 
   /* We destructure the props pased to the component */
-  const { children, size: height, theme: color, simple } = props
-  const { size, theme } = config
+  const { children, size: height, simple } = props
+  const { size } = config
 
   return (
     <div
       className={
         !simple
-          ? `page-header ${size[height] ?? size.small} ${
-              theme[color] ?? theme.orange
-            }`
+          ? `page-header ${size[height] ?? size.small}`
           : 'page-header-simple'
       }
       style={{

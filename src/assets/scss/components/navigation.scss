@@ -71,12 +71,11 @@ header {
       padding: $m 0;
       position: fixed;
       width: 100%;
+      z-index: 1000;
 
       a {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        padding: auto $m;
+        text-align: center;
 
         &:last-child {
           margin-right: $l;

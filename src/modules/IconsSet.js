@@ -137,7 +137,7 @@ const IconsSet = (props) => {
               )}
             </div>
           </PageHeader>
-          <div className='container icons-set'>
+          <div className='container no-padding'>
             <Tabs
               setTab={setActiveTab}
               customize={state.customize}

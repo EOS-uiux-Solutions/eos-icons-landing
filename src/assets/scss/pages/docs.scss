@@ -20,14 +20,21 @@
   }
 
   .docs-header {
-    align-items: center;
-    align-self: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-    div {
-      width: 66%;
+    h1 {
+      margin-bottom: 0;
+    }
+
+    .flex {
+      justify-content: space-between;
+
+      @media (max-width: $mobile-max) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $mobile-max) {
+      display: inline;
     }
   }
 }
