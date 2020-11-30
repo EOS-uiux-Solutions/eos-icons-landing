@@ -45,7 +45,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: $mobile-max) {
   .tabs {
     margin-top: -16px;
 

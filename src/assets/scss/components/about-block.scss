@@ -27,7 +27,7 @@
     }
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: $mobile-max) {
     flex-direction: column-reverse;
 
     &.is-reversed {

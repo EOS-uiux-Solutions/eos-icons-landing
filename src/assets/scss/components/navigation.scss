@@ -18,7 +18,7 @@ header {
     }
 
     .brand-text {
-      @media (max-width: 430px) {
+      @media (max-width: $mobile-max) {
         display: none;
       }
     }
@@ -59,7 +59,7 @@ header {
       }
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: $mobile-max) {
       background: $light-color;
       border-top: 1px solid $light-gray;
       bottom: 0;

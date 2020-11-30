@@ -16,7 +16,7 @@ $font-normal: 16px;
     position: absolute;
     width: 98vw;
 
-    @media (max-width: 430px) {
+    @media (max-width: $mobile-max) {
       margin-top: -80px;
     }
   }
@@ -56,7 +56,7 @@ $font-normal: 16px;
     }
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: $mobile-max) {
     flex-direction: column;
 
     span {

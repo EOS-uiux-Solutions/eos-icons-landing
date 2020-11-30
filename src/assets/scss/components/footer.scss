@@ -37,7 +37,7 @@ footer {
     }
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: $mobile-max) {
     margin-bottom: 80px;
   }
 }
