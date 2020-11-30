@@ -13,7 +13,6 @@
 
 .icons-control {
   display: flex;
-  padding-bottom: 50px;
 
   &-search {
     display: flex;
@@ -39,6 +38,10 @@
     display: flex;
     justify-content: flex-end;
     width: 40%;
+
+    @media (max-width: $mobile-max) {
+      display: none;
+    }
   }
 
   &-toggle {
@@ -48,21 +51,6 @@
 
   @media screen and (max-width: $mobile-max) {
     flex-direction: column;
-
-    &-dynamic {
-      display: flex;
-      justify-content: space-between;
-      margin-top: $xl;
-      width: 100%;
-
-      .category-filter  {
-        margin-left: 0;
-      }
-
-      .icons-control-toggle {
-        width: 100%;
-      }
-    }
 
     input.search-input,
     .icons-control-search {

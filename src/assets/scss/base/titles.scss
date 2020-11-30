@@ -22,6 +22,10 @@ h1 {
   text-transform: uppercase;
   z-index: 1;
 
+  @media (max-width: $mobile-max) {
+    font-size: $h1-mobile;
+  }
+
   &:after {
     border: 12px solid $primary;
     content: '';

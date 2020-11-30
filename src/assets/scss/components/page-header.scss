@@ -26,8 +26,12 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
     width: 100%;
 
     .container {
-      padding: 0 24px;
+      padding: 24px;
     }
+  }
+
+  h1 {
+    margin-bottom: $xl;
   }
 
   &-hide-title {
@@ -41,7 +45,7 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
     }
 
     .icons-control {
-      padding: $m 0;
+      padding: 0;
     }
   }
 }
