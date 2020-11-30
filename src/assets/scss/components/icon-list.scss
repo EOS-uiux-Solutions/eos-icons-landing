@@ -1,7 +1,7 @@
 .icons-list {
   @extend .flex;
   @extend .flex-wrap;
-  justify-content: space-around;
+  justify-content: left;
   margin-bottom: $xxxl;
 
   .icon-container {
@@ -11,7 +11,7 @@
     flex-direction: column;
     font-size: $small-font;
     font-weight: 300;
-    margin: $xs;
+    margin: $s;
     overflow: hidden;
     padding: $s;
     text-overflow: ellipsis;
