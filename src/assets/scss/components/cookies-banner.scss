@@ -7,7 +7,6 @@
   margin: 0;
   padding: $s 0;
   position: fixed;
-  right: 0;
   width: 100%;
   z-index: 1030;
 
@@ -35,18 +34,27 @@
   display: none;
 }
 
-@media only screen and (max-width: $screen-max) {
+@media only screen and (max-width: $mobile-max) {
   /* For tablets and mobile: */
   .cookies-alert {
     display: flex;
     flex-direction: column;
-    max-height: 150px;
+    max-height: 130px;
     position: fixed;
     top: 0;
 
     .cookies-alert-buttons {
-      margin: 0 auto;
+      margin: 0;
+      padding: 0;
       text-align: center;
+    }
+
+    .cookies-alert-body {
+      margin: $m;
+
+      p {
+        margin: 0;
+      }
     }
   }
 
