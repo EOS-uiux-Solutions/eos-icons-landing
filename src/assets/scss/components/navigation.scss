@@ -37,20 +37,18 @@ header {
       text-decoration: none;
     }
 
-
     a {
       i {
         display: none !important; // sass-lint:disable-line no-important
       }
     }
 
-
     .active {
       position: relative;
 
       &::after {
         background-color: $primary;
-        bottom: -21px;
+        bottom: -23px;
         content: '';
         height: 5px;
         left: 0;
@@ -64,6 +62,7 @@ header {
       border-top: 1px solid $light-gray;
       bottom: 0;
       display: flex;
+      height: 40px;
       justify-content: space-between;
       padding: $l 0;
       position: fixed;

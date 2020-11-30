@@ -37,8 +37,11 @@ const PageHeader = (props) => {
           : 'page-header-simple'
       }
       style={{
-        paddingTop: windowsSize.isScrolled ? 0 : `48px`,
-        paddingBottom: windowsSize.isScrolled ? 0 : `48px`
+        padding: windowsSize.isScrolled
+          ? 0
+          : windowsSize.isMobile
+          ? 0
+          : `48px 0`
       }}
     >
       <div className='page-header-wrapper'>
