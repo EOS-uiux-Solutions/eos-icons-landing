@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import AppContext from '../utils/AppContext'
 
 /* Components */
@@ -15,10 +15,11 @@ import { useWindowsSize } from '../hooks/useWidow'
 const IconsSet = (props) => {
   const [iconSelected, setIconSelected] = useState('')
   const [showPanel, setShowPanel] = useState(false)
+  const [searchValue, setSearchValue] = useState('')
   const [size] = useWindowsSize()
   const { state, dispatch } = useContext(AppContext)
-
   const [tab, setActiveTab] = useState('Static Icons')
+  const searchRef = useRef(null)
 
   const queryString = window.location.search
   const urlParams = new URLSearchParams(queryString)
@@ -41,6 +42,7 @@ const IconsSet = (props) => {
 
       if (!iconSelected) {
         setIconInSearch()
+        setSearchValue(urlIconName)
       }
 
       if (iconDetails.length) {
@@ -52,6 +54,7 @@ const IconsSet = (props) => {
   }, [urlIconName])
 
   const closeHowTo = () => {
+    setSearchValue('')
     setShowPanel(false)
     setIconSelected('')
     window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
@@ -89,13 +92,33 @@ const IconsSet = (props) => {
         <h1>More than 1000 free icons</h1>
         <div className='icons-control'>
           <div className='icons-control-search'>
-            <i className='eos-icons'>search</i>
+            <i
+              className={`eos-icons ${
+                searchValue.length ? 'cursor-pointer' : ''
+              }`}
+              onClick={() => {
+                if (searchValue.length > 0) {
+                  searchRef.current.value = ''
+                  closeHowTo()
+
+                  return dispatch({
+                    type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+                    search: ''
+                  })
+                }
+              }}
+            >
+              {searchValue === '' ? 'search' : 'close'}
+            </i>
             <input
               defaultValue={setSearchWithUrlParam}
+              ref={searchRef}
               className='search-input'
               type='text'
               name='search'
               onChange={(event) => {
+                setSearchValue(event.target.value)
+
                 dispatch({
                   type:
                     tab === 'Static Icons'
