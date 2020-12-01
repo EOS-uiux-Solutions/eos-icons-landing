@@ -22,7 +22,7 @@ export const TeamPage = () => {
       <PageHeader simple>
         <h1>Meet the team</h1>
         <p className='subheadline'>
-          EOS icons is made and maintained by passioned skilled people that
+          EOS icons is made and maintained by a passionate and skilled team that
           brings creativity and innovation into this world.
         </p>
       </PageHeader>
@@ -43,8 +43,8 @@ export const TeamPage = () => {
 
         <div className='team-page-contributors'>
           <h2>
-            The awesome people that contributed to the project, thanks for
-            making it happen
+            The amazing people that contributed to the project. Thanks for
+            making it happen.
           </h2>
 
           <div className='team-page-contributors-list'>
@@ -59,9 +59,9 @@ export const TeamPage = () => {
             <h4>Join us, become a contributor!</h4>
 
             <p>
-              Be part of the team, enter our Slack channel and chat directly
-              with developers and designer. We’ll tell you how you can contrite,
-              you can share ideas and insight, learn and boost your career.
+              Be part of the team, join our Slack channel, and chat
+              with our incredible community. There are endless ways you can contribute,
+              share ideas and insight, learn from others, and boost your career.
             </p>
 
             <Button
