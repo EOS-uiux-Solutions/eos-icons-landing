@@ -177,11 +177,15 @@ const IconsSet = (props) => {
               <div label='Animated Icons'>
                 <div className='icons-list'>
                   {state.animatedIcons.map((icon, index) => (
-                    <div className='icon-container' key={index}>
+                    <div
+                      className={`icon-container ${
+                        icon === iconSelected?.name ? 'active' : ''
+                      }`}
+                      key={index}
+                    >
                       <img
                         src={require(`eos-icons/animated-svg/${icon}.svg`)}
                         alt={icon}
-                        className={icon === iconSelected?.name ? 'active' : ''}
                         onClick={() => {
                           setIconSelected({ name: icon })
                           setShowPanel(true)
