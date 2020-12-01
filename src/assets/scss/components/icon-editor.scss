@@ -147,6 +147,13 @@
 
 .size-selector {
   flex-direction: column;
+  padding-top: $l;
+
+  i {
+    position: absolute;
+    right: 55px;
+    z-index: -1;
+  }
 }
 
 .type-selector {

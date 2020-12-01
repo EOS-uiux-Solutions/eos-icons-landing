@@ -199,7 +199,7 @@ const IconEditor = (props) => {
             </div>
             <div className='type-selector'>
               {exportTypes.map((type, key) => (
-                <div className='type-selector-option'>
+                <div key={key} className='type-selector-option'>
                   <input
                     type='radio'
                     name={type}
@@ -216,9 +216,10 @@ const IconEditor = (props) => {
             </div>
             {exportAs === 'png' ? (
               <div className='size-selector'>
-                <p>Select Size</p>
-                <div className='dropdown fill-dropdown'>
+                <label htmlFor='size-select'>Select Size</label>
+                <div className='dropdown'>
                   <select
+                    name='size-select'
                     defaultValue={exportSize}
                     className='export-size'
                     onChange={changeExportSize}
@@ -229,6 +230,7 @@ const IconEditor = (props) => {
                       </option>
                     ))}
                   </select>
+                  <i className='eos-icons'>keyboard_arrow_down</i>
                 </div>
               </div>
             ) : (
