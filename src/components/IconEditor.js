@@ -40,9 +40,9 @@ const IconEditor = (props) => {
     setRotateAngle(angle)
   }
 
-  const changeExportType = () => {
-    setExportAs(document.getElementsByClassName('export-type')[0].value)
-  }
+  // const changeExportType = () => {
+  //   setExportAs(document.getElementsByClassName('export-type')[0].value)
+  // }
   const changeExportSize = () => {
     setExportSize(document.getElementsByClassName('export-size')[0].value)
   }
@@ -197,20 +197,29 @@ const IconEditor = (props) => {
                 </div>
               </div>
             </div>
-            <div className='dropdown fill-dropdown'>
-              <select className='export-type' onChange={changeExportType}>
-                {exportTypes.map((type, key) => (
-                  <option key={key} value={type}>
-                    {type.toUpperCase()}
-                  </option>
-                ))}
-              </select>
+            <div className='type-selector'>
+              {exportTypes.map((type, key) => (
+                <div key={key} className='type-selector-option'>
+                  <input
+                    type='radio'
+                    name={type}
+                    value={type}
+                    checked={type === exportAs}
+                    onChange={() => {
+                      setExportAs(type)
+                    }}
+                  />
+
+                  <label htmlFor={type}>{type.toUpperCase()}</label>
+                </div>
+              ))}
             </div>
             {exportAs === 'png' ? (
-              <div>
-                <p>Select Size</p>
-                <div className='dropdown fill-dropdown'>
+              <div className='size-selector'>
+                <label htmlFor='size-select'>Select Size</label>
+                <div className='dropdown'>
                   <select
+                    name='size-select'
                     defaultValue={exportSize}
                     className='export-size'
                     onChange={changeExportSize}
@@ -221,6 +230,7 @@ const IconEditor = (props) => {
                       </option>
                     ))}
                   </select>
+                  <i className='eos-icons'>keyboard_arrow_down</i>
                 </div>
               </div>
             ) : (

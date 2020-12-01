@@ -24,6 +24,12 @@ footer {
     display: flex;
     margin: $l;
 
+    @media (max-width: $mobile-max) {
+      display: inline;
+      margin: $s 0;
+      text-align: left;
+    }
+
     span {
       font-weight: bold;
     }
@@ -34,10 +40,16 @@ footer {
       flex-direction: column;
       margin: 0;
       padding: 0;
+
+      @media (max-width: $mobile-max) {
+        a {
+          margin: 0;
+        }
+      }
     }
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: $mobile-max) {
     margin-bottom: 80px;
   }
 }

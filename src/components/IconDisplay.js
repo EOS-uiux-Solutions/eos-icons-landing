@@ -11,19 +11,16 @@ const Icon = (props) => {
   }
 
   const iconClass = () => {
-    const eosClass = 'eos-icons'
+    const initialClass = 'icon-container'
     const activeClass = active ? 'active' : ''
-    const sizeClass = sizes[size] ?? sizes.medium
-    const finalClass = `${eosClass} ${activeClass} ${sizeClass}`
+    const finalClass = `${initialClass} ${activeClass}`
 
     return finalClass
   }
 
   return (
-    <div className='icon-container'>
-      <i className={iconClass()} onClick={action}>
-        {name}
-      </i>
+    <div className={iconClass()} onClick={action}>
+      <i className={`eos-icons ${sizes[size]}`}>{name}</i>
       {name}
     </div>
   )

@@ -1,6 +1,6 @@
 .col-md {
 
-  @media (max-width: 663px) {
+  @media (max-width: $mobile-max) {
     display: inline;
     text-align: center;
 

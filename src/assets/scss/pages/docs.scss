@@ -1,14 +1,7 @@
 .docs {
-  .toolbar {
-    height: 40px;
-  }
 
   .tabs {
-    margin-top: -104px;
-
-    .tab-list {
-      top: 82px;
-    }
+    margin-top: -33px;
   }
 
   .cta-installing {
@@ -20,14 +13,30 @@
   }
 
   .docs-header {
-    align-items: center;
-    align-self: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-    div {
-      width: 66%;
+    &-tools {
+      @extend .flex;
+      margin-top: $m;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    .flex {
+      justify-content: space-between;
+
+      @media (max-width: $mobile-max) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $mobile-max) {
+      display: inline;
     }
   }
 }

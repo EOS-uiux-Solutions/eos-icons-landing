@@ -1,5 +1,4 @@
 .tabs {
-  margin-top: -10px;
   position: relative;
   z-index: 0;
 
@@ -38,19 +37,23 @@
 }
 
 .tab-content {
-  margin-top: $xxl;
+  margin-top: $l;
+
+  @media screen and (max-width: $mobile-max) {
+    margin-top: $m;
+  }
 
   h2 {
     margin-top: $xxl;
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: $mobile-max) {
   .tabs {
     margin-top: -16px;
 
     .tab-list {
-      padding-top: 10px;
+      padding-top: 0px;
       top: 130px;
       width: 100%;
     }

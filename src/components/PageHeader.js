@@ -6,10 +6,6 @@ const config = {
   size: {
     small: 'page-header-small',
     medium: 'page-header-medium'
-  },
-  theme: {
-    orange: 'page-header-orange',
-    purple: 'page-header-purple'
   }
 }
 
@@ -24,27 +20,26 @@ const PageHeader = (props) => {
   const [windowsSize] = useWindow()
 
   /* We destructure the props pased to the component */
-  const { children, size: height, theme: color, simple } = props
-  const { size, theme } = config
+  const { children, size: height, simple } = props
+  const { size } = config
 
   return (
     <div
       className={
         !simple
-          ? `page-header ${size[height] ?? size.small} ${
-              theme[color] ?? theme.orange
-            }`
+          ? `page-header ${size[height] ?? size.small}`
           : 'page-header-simple'
       }
       style={{
-        paddingTop: windowsSize.isScrolled ? 0 : `48px`,
-        paddingBottom: windowsSize.isScrolled ? 0 : `48px`
+        padding: windowsSize.isScrolled
+          ? 0
+          : windowsSize.isMobile
+          ? 0
+          : `48px 0`
       }}
     >
       <div className='page-header-wrapper'>
-        <div className={`page-header-wrapper-content container`}>
-          {children}
-        </div>
+        <div className={`container`}>{children}</div>
       </div>
     </div>
   )

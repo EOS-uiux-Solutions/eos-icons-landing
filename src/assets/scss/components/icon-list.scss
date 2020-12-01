@@ -1,30 +1,36 @@
 .icons-list {
   @extend .flex;
   @extend .flex-wrap;
+  justify-content: left;
   margin-bottom: $xxxl;
-  margin-top: $xxl;
-  width: fit-content;
-
-
-  h4 {
-    color: $primary;
-    padding: $l $m;
-    text-transform: capitalize;
-    width: 90%;
-
-    &:first-child {
-      padding-top: 0;
-    }
-  }
 
   .icon-container {
     align-items: center;
+    border: 2px solid transparent;
     display: flex;
     flex-direction: column;
-    font-size: $font-size-body;
+    font-size: $small-font;
     font-weight: 300;
-    padding: $m;
-    width: 150px;
+    margin: $s;
+    overflow: hidden;
+    padding: $s;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100px;
+
+    @media (max-width: $mobile-max) {
+      margin: $xs;
+      padding: $xs;
+    }
+
+    &.active {
+      border: 2px solid $primary;
+    }
+
+    &:hover {
+      border: 2px solid $primary;
+      cursor: pointer;
+    }
 
     .eos-icons,
     img {
@@ -34,39 +40,26 @@
       padding: 10px;
       text-align: center;
       width: 32px;
-
-      &:hover {
-        border: 2px solid $primary;
-        cursor: pointer;
-      }
-    }
-
-    .active {
-      border: 2px solid $primary;
-    }
-  }
-
-  &-category {
-    display: flex;
-    flex-direction: column;
-    margin-top: $m;
-
-    h3 {
-      color: $primary-light;
-      font-weight: 400;
-      margin-top: $xxl;
-      padding: 0 $xl;
-      text-transform: capitalize;
-    }
-
-    &-icons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
     }
   }
 }
 
 .total-icons {
   margin: 5px 0px 0px 40px;
+}
+
+h4.category {
+  color: $primary;
+  margin-top: $xxl;
+  padding: $l $m;
+  text-transform: capitalize;
+
+  @media (max-width: $mobile-max) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
 }

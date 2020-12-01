@@ -23,7 +23,7 @@
 }
 
 .flex-wrap-sm {
-  @media (max-width: 430px) {
+  @media (max-width: $mobile-max) {
 
     flex-wrap: wrap;
     justify-content: center;

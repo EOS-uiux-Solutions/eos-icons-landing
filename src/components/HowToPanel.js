@@ -15,29 +15,15 @@ const HowToPanel = (props) => {
 
   function useOnClickOrEsc(ref, handler) {
     useEffect(() => {
-      const listenerMousedown = (event) => {
-        if (
-          !ref.current ||
-          ref.current.contains(event.target) ||
-          event.target.innerHTML === iconName ||
-          event.target.className.includes('eos-icons')
-        )
-          return
-
-        handler(event)
-      }
-
       const listenerKeydown = (event) => {
         if (event.keyCode === 27) {
           handler(event)
         }
       }
 
-      document.addEventListener('mousedown', listenerMousedown)
       document.addEventListener('keydown', listenerKeydown)
 
       return () => {
-        document.removeEventListener('mousedown', listenerMousedown)
         document.removeEventListener('keydown', listenerKeydown)
       }
     }, [ref, handler])
@@ -50,20 +36,30 @@ const HowToPanel = (props) => {
       <div className='container'>
         <span>How to use it:</span>
 
-        <small className='close-button'>
-          <i className='eos-icons eos-18' onClick={() => close()}>
-            close
-          </i>
-        </small>
+        <i className='close-button eos-icons eos-18' onClick={() => close()}>
+          close
+        </i>
 
         {type === 'animated' ? (
           <div className='how-to-use-block-left'>
             <div className='input-group'>
-              <input
-                className='input-group-element input-grow'
-                readOnly='readOnly'
-                value={`<img src='${iconName}.svg'/>`}
-              />
+              <div className='input-group-information'>
+                <input
+                  id='copy-code'
+                  className='input-group-element'
+                  readOnly='readOnly'
+                  value={`<img src='${iconName}.svg'/>`}
+                />
+                <Button
+                  type='button'
+                  onClick={() => {
+                    document.getElementById('copy-code').select()
+                    document.execCommand('copy')
+                  }}
+                >
+                  <i className='eos-icons eos-18'>content_copy</i>
+                </Button>
+              </div>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
@@ -89,7 +85,7 @@ const HowToPanel = (props) => {
               <div className='input-group-information'>
                 <input
                   id='copy-code'
-                  className='input-group-element input-grow'
+                  className='input-group-element'
                   readOnly='readOnly'
                   value={`<i class='eos-icons'>${iconName}</i>`}
                 />

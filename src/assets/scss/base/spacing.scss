@@ -13,7 +13,7 @@
 
 .padding-top-xs {
 
-  @media (max-width: 430px) {
+  @media (max-width: $mobile-max) {
     padding-top: $s;
   }
 }

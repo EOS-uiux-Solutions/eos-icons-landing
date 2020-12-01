@@ -41,7 +41,6 @@
     display: block;
     float: right;
     margin-top: 10px;
-    padding-bottom: 15px;
 
     span {
       display: inline;
@@ -70,7 +69,7 @@
     }
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: $mobile-max) {
     flex-direction: column;
   }
 }

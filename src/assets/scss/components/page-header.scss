@@ -13,6 +13,10 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
   width: 100%;
   z-index: 10;
 
+  @media (max-width: $mobile-max) {
+    padding: 0;
+  }
+
   &-small {
     min-height: 8vh;
   }
@@ -26,7 +30,15 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
     width: 100%;
 
     .container {
-      padding: 0 24px;
+      padding: $l;
+    }
+  }
+
+  h1 {
+    margin-bottom: $xl;
+
+    @media (max-width: $mobile-max) {
+      margin-bottom: $s;
     }
   }
 
@@ -41,7 +53,7 @@ $page-header-illustration: url('../../images/page-header-illustrations.png') cen
     }
 
     .icons-control {
-      padding: $m 0;
+      padding: 0;
     }
   }
 }

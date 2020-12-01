@@ -2,8 +2,8 @@
   border-top: 1px solid $light-gray;
   bottom: 0;
   left: 0;
-  padding: $l 0;
-  padding-bottom: $m;
+  margin-top: $xl;
+  padding: $l 0 0;
   position: relative;
   width: 100%;
   z-index: $z-index-10;
@@ -33,28 +33,35 @@
   }
 
   .close-button {
+    cursor: pointer;
+    padding: $s;
     position: absolute;
     right: 10px;
     top: 30px;
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: $mobile-max) {
     .container {
       display: flex;
       flex-direction: column;
 
       .how-to-use-block-left {
-        margin: 0;
+        margin: $s 0 0;
 
         button.btn-primary {
-          margin: $m 0;
+          margin: $s;
+        }
+
+        button.btn-primary:first-of-type {
+          margin-left: 0;
         }
       }
 
       .input-group {
         align-items: flex-start;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
       }
     }
   }
