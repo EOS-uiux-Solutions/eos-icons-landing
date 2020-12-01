@@ -14,6 +14,15 @@
 
   .docs-header {
 
+    &-tools {
+      @extend .flex;
+      margin-top: $m;
+
+      p {
+        margin: 0;
+      }
+    }
+
     h1 {
       margin-bottom: 0;
     }
