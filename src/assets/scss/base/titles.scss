@@ -34,6 +34,11 @@ h1 {
     position: absolute;
     width: 32%;
     z-index: -1;
+
+    @media (max-width: $mobile-max) {
+      border: 8px solid $primary;
+      margin-top: 10px;
+    }
   }
 }
 
@@ -45,5 +50,9 @@ p.subheadline {
   font-family: $header-font-family;
   font-size: $subheadline-font-size;
   font-weight: 300;
-  line-height: 37px;
+  line-height: $line-height;
+
+  @media (max-width: $mobile-max) {
+    font-size: $subheadline-font-size-mobile;
+  }
 }

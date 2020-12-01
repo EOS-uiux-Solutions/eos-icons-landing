@@ -37,25 +37,27 @@ header {
       text-decoration: none;
     }
 
-
     a {
       i {
         display: none !important; // sass-lint:disable-line no-important
       }
     }
 
-
     .active {
       position: relative;
 
       &::after {
         background-color: $primary;
-        bottom: -21px;
+        bottom: -22px;
         content: '';
         height: 5px;
         left: 0;
         position: absolute;
         width: 100%;
+
+        @media (max-width: $mobile-max) {
+          bottom: -16px;
+        }
       }
     }
 
@@ -64,16 +66,16 @@ header {
       border-top: 1px solid $light-gray;
       bottom: 0;
       display: flex;
+      height: 40px;
       justify-content: space-between;
-      padding: $l 0;
+      padding: $m 0;
       position: fixed;
       width: 100%;
+      z-index: 1000;
 
       a {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        padding: auto $m;
+        text-align: center;
 
         &:last-child {
           margin-right: $l;

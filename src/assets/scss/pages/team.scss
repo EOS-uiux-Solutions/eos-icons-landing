@@ -11,7 +11,6 @@ $font-size-20px: 20px;
   &-maintainers {
     display: flex;
     flex-wrap: wrap;
-    margin: $xxl 0;
     width: 100%;
 
     &-introduction {
@@ -27,6 +26,10 @@ $font-size-20px: 20px;
       h2 {
         font-size: $font-size-28px;
         font-weight: bold;
+
+        @media (max-width: $mobile-max) {
+          font-size: $font-size-20px;
+        }
       }
 
       p {
@@ -38,11 +41,26 @@ $font-size-20px: 20px;
         margin: 0;
         margin-left: $xxxl;
       }
+
+      @media (max-width: $mobile-max) {
+        height: auto;
+        margin: 0;
+        width: 100%;
+
+        h2,
+        p {
+          margin-left: 0;
+        }
+
+        br {
+          display: none;
+        }
+      }
     }
   }
 
   &-contributors {
-    margin-top: $xxxl;
+    margin-top: 120px;
 
     h2 {
       font-weight: bold;
@@ -50,6 +68,11 @@ $font-size-20px: 20px;
       margin-right: auto;
       text-align: center;
       width: 50%;
+
+      @media (max-width: $mobile-max) {
+        text-align: left;
+        width: 100%;
+      }
     }
 
     &-list {
@@ -63,8 +86,7 @@ $font-size-20px: 20px;
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-
+    margin-top: 120px;
 
     .slack-cta {
       align-items: center;
@@ -89,7 +111,18 @@ $font-size-20px: 20px;
       }
 
       @media (max-width: $mobile-max) {
-        padding-left: 15%;
+        align-items: end;
+        background: none;
+        padding: 0;
+        width: 100%;
+
+        h4 {
+          font-size: $font-size-20px;
+        }
+
+        p {
+          text-align: left;
+        }
       }
     }
   }

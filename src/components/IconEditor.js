@@ -12,7 +12,6 @@ const IconEditor = (props) => {
   const { isActive, show, iconNames, iconType } = props
   const [currentPosition, setCurrentPosition] = useState(0)
   const [exportAs, setExportAs] = useState('svg')
-
   const [exportSize, setExportSize] = useState('512')
   const [color, setColor] = useState('#000000')
   const [rotateAngle, setRotateAngle] = useState(0)

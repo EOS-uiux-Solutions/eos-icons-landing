@@ -15,6 +15,10 @@ $role-font-size: 16px;
   position: relative;
   width: 310px;
 
+  @media (max-width: $mobile-max) {
+    margin-right: 0;
+  }
+
   &:first-child {
     margin-left: $m;
   }
@@ -86,6 +90,11 @@ $role-font-size: 16px;
   margin-right: $xxl;
   margin-top: $xxl;
   width: 300px;
+
+  @media (max-width: $mobile-max) {
+    margin-right: 0;
+    width: 100%;
+  }
 
   &-description {
     display: flex;

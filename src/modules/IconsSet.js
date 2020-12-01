@@ -6,7 +6,6 @@ import Icon from '../components/IconDisplay'
 import Tabs from '../components/Tabs'
 import Toogle from '../components/Toggle'
 import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
-// import AnimatedIcons from './AnimatedIcons'
 import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
@@ -137,7 +136,7 @@ const IconsSet = (props) => {
               )}
             </div>
           </PageHeader>
-          <div className='container icons-set'>
+          <div className='container no-padding'>
             <Tabs
               setTab={setActiveTab}
               customize={state.customize}
