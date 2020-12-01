@@ -10,19 +10,18 @@ input {
   .input-group-element:first-child {
     background: $light-gray;
     border-radius: 10px;
+    margin-top: $s;
     min-width: 275px;
     padding: $s $m;
   }
 
-  .input-grow {
-    flex-grow: 1;
-  }
-
   button {
     margin-left: $l;
+    margin-top: $s;
   }
 
   &-information {
+    margin-right: $s;
     position: relative;
 
     button {

@@ -1,14 +1,7 @@
 .docs {
-  .toolbar {
-    height: 40px;
-  }
 
   .tabs {
-    margin-top: -104px;
-
-    .tab-list {
-      top: 82px;
-    }
+    margin-top: -33px;
   }
 
   .cta-installing {
@@ -20,6 +13,15 @@
   }
 
   .docs-header {
+
+    &-tools {
+      @extend .flex;
+      margin-top: $m;
+
+      p {
+        margin: 0;
+      }
+    }
 
     h1 {
       margin-bottom: 0;

@@ -59,11 +59,23 @@ const HowToPanel = (props) => {
         {type === 'animated' ? (
           <div className='how-to-use-block-left'>
             <div className='input-group'>
-              <input
-                className='input-group-element input-grow'
-                readOnly='readOnly'
-                value={`<img src='${iconName}.svg'/>`}
-              />
+              <div className='input-group-information'>
+                <input
+                  id='copy-code'
+                  className='input-group-element'
+                  readOnly='readOnly'
+                  value={`<img src='${iconName}.svg'/>`}
+                />
+                <Button
+                  type='button'
+                  onClick={() => {
+                    document.getElementById('copy-code').select()
+                    document.execCommand('copy')
+                  }}
+                >
+                  <i className='eos-icons eos-18'>content_copy</i>
+                </Button>
+              </div>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
@@ -89,7 +101,7 @@ const HowToPanel = (props) => {
               <div className='input-group-information'>
                 <input
                   id='copy-code'
-                  className='input-group-element input-grow'
+                  className='input-group-element'
                   readOnly='readOnly'
                   value={`<i class='eos-icons'>${iconName}</i>`}
                 />
