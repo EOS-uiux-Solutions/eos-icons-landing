@@ -59,8 +59,8 @@ export const TeamPage = () => {
             <h4>Join us, become a contributor!</h4>
 
             <p>
-              Be part of the team, join our Slack channel, and chat
-              with our incredible community. There are endless ways you can contribute,
+              Be part of the team, join our Slack channel, and chat with our
+              incredible community. There are endless ways you can contribute,
               share ideas and insight, learn from others, and boost your career.
             </p>
 

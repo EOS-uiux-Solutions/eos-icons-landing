@@ -17,6 +17,12 @@
     position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: $mobile-max) {
+      max-height: 80vh;
+      overflow: scroll;
+      width: 90vw;
+    }
   }
 
   h2 {
@@ -25,6 +31,15 @@
 
   .icon-editor-content {
     padding: $s $xxl $xxl $xxl;
+
+    @media (max-width: $mobile-max) {
+      align-items: center;
+      flex-direction: column;
+
+      .icon-div {
+        margin-left: 0;
+      }
+    }
   }
 
   .icon-editor-btn {
