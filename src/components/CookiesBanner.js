@@ -36,13 +36,18 @@ const CookiesBanner = () => {
               </p>
             </div>
             <div className='cookies-alert-buttons'>
-              <a className='btn btn-default' href='/cookies-policy'>
+              <a
+                className='btn btn-default btn-inverted'
+                href='/cookies-policy'
+              >
                 Edit preferences
               </a>
               <Button
                 onClick={() =>
                   cookiesHandler(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES' }))
                 }
+                primary
+                customClass='js-cookies-accept'
               >
                 Accept
               </Button>

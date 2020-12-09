@@ -43,7 +43,7 @@
   }
 
   .icon-editor-btn {
-    color: $light-color;
+    color: $white;
     font-weight: bold;
     padding: 16px;
 
@@ -118,7 +118,7 @@
       background-color: $dark-gray;
       border: 0px;
       border-radius: $l;
-      color: $light-color;
+      color: $white;
       cursor: pointer;
       height: $l;
       transition-duration: 0.2s;
@@ -218,19 +218,19 @@
   }
 
   button {
-    background-color: $light-color;
+    background-color: $white;
     border: 0px;
     border-radius: $xs;
     color: $dark-gray;
 
     i {
-      color: $color;
+      color: $black;
       margin: $xs;
     }
 
     &:hover {
       background-color: $dark-gray;
-      color: $light-color;
+      color: $white;
       transition-duration: 0.2s;
     }
 

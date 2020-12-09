@@ -81,7 +81,7 @@ const CustomizeIconsPanel = (props) => {
         <div>
           <div className='icons-picker-footer-upload'>
             <p>Continue building your font </p>
-            <label className='btn' htmlFor='upload-file'>
+            <label className='btn btn-default' htmlFor='upload-file'>
               Upload JSON
             </label>
             <input

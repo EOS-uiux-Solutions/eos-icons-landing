@@ -1,7 +1,7 @@
 .cookies-alert {
-  background: $dark-color;
+  background: $black;
   bottom: 0;
-  color: $light-color;
+  color: $white;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -14,7 +14,7 @@
     margin: 0 $xxl;
 
     a {
-      color: $light-color;
+      color: $white;
       text-decoration: underline;
     }
   }
@@ -24,7 +24,7 @@
     padding: $l 0;
 
     a {
-      color: $light-color;
+      color: $white;
       margin: 0 $m;
     }
   }
