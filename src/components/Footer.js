@@ -26,7 +26,7 @@ const FooterBlock = ({ img, title, links }) => {
             data-types-label={ele.label}
             data-types-action={ele.action}
             rel='noopener noreferrer'
-            target='_blank'
+            target={ele.target}
           >
             {ele.name}
           </a>
