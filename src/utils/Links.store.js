@@ -7,28 +7,32 @@ export default [
         href: 'https://twitter.com/eosdesignsystem',
         category: 'External link',
         action: 'EOS in Twitter',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       },
       {
         name: 'Join us on Slack',
         href: 'https://slack.eosdesignsystem.com/',
         category: 'External link',
         action: 'Link to EOS Slack',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       },
       {
         name: 'Repository',
         href: 'https://gitlab.com/SUSE-UIUX/eos-icons',
         category: 'External link',
         action: 'Link to Gitlab repo',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       },
       {
         name: 'Report an issue',
         href: 'https://gitlab.com/SUSE-UIUX/eos-icons/issues',
         category: 'External link',
         action: 'Link to Gitlab issues',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       }
     ]
   },
@@ -40,21 +44,24 @@ export default [
         href: 'https://rubygems.org/gems/eos-icons-font',
         category: 'External link',
         action: 'Link to EOS Icons Gem',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       },
       {
         name: 'EOS Icons NPM',
         href: 'https://www.npmjs.com/package/eos-icons',
         category: 'External link',
         action: 'Link to EOS NPM',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       },
       {
         name: 'How to colaborate',
         href: 'https://brand.eosdesignsystem.com/ContributingGuide',
         category: 'External link',
         action: 'Link to how to colaborate',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       }
     ]
   },
@@ -66,21 +73,24 @@ export default [
         href: 'https://suse.eosdesignsystem.com/',
         category: 'External link',
         action: 'Link to EOS Design System',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       },
       {
         name: 'User story',
         href: 'https://userstory.eosdesignsystem.com/',
         category: 'External link',
         action: 'Link to user story',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       },
       {
         name: 'EOS Solutions',
         href: 'https://www.eosdesignsystem.com/',
         category: 'External link',
         action: 'Link to how EOS Solutions',
-        label: 'Footer'
+        label: 'Footer',
+        target: '_blank'
       }
     ]
   },
@@ -91,8 +101,8 @@ export default [
       {
         name: 'Cookies Policy',
         href: '/cookies-policy',
-        category: 'External link',
-        action: 'Link to EOS Design System',
+        category: 'Internal link',
+        action: 'Link to Cookies policy',
         label: 'Footer'
       }
     ]

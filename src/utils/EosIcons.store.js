@@ -67,7 +67,8 @@ export const eosIconsState = {
       Cookies.set('acceptance', 'true', { expires: 60 })
       Cookies.set('cookies-preference', 'true')
     }
-    return (this.cookiesToggle = !this.cookiesToggle)
+    this.cookiesToggle = !this.cookiesToggle
+    return window.location.reload()
   },
   selectAllIcons() {
     multipleIcons.splice(0, multipleIcons.length)
