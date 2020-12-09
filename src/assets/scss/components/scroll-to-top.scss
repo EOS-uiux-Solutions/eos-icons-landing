@@ -1,5 +1,5 @@
 .scroll-to-top-btn {
-  background-color: $light-color;
+  background-color: $white;
   border: 0;
   border-radius: 50%;
   bottom: 30px;
@@ -16,7 +16,7 @@
 
   &:hover {
     background-color: $dark-black;
-    color: $light-color;
+    color: $white;
   }
 
   &:focus {

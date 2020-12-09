@@ -1,29 +1,25 @@
-/* Gradient */
-$codes: #505050;
-$color: #000000;
-$command: #c0341d;
+/* General colors */
+
+$black: #000000;
 $dark-black: #333;
-$dark-color: #000000;
 $dark-gray: #7E7F7F;
-$dark-red: #d60015;
-$grad-final: #bc0289;
-$grad-init: #ff890a;
-$grad-middle: #ff420a;
-$header-gradient: linear-gradient(90deg, #694966, #5c415d);
-$hyper-link-color: #008ACF;
-$hyper-link-hover-color: #15578f;
-$icons-picker-loading-background-color: rgba(0, 0, 0, 0.7);
-$light-color: #fff;
-$light-gray: #EEEFF1;
-$light-overlay-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
-;
 $lighter-gray: #d0d0d0;
 $lightest-gray: #BFC0C1;
+$white: #fff;
+$light-gray: #EEEFF1;
+
+// Hierarchy colors
+$primary: #00CCD1;
+$primary-dark: #0AA5A5;
+$secondary: $black;
+
+// Component specific colors
+$hyper-link-color: #008ACF;
+$hyper-link-hover-color: #15578f;
+$light-overlay-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+;
 $modal-background-color: rgba(0, 0, 0, 0.7);
-$nav-border-color: #e3864e;
 $nav-gradient: linear-gradient(90deg, #fbb369, #ff814a);
 $overlay-color: rgba(0, 0, 0, 0.8);
 $primary-light: #fe673a;
-$primary: #00CCD1;
-$primary-dark: #0AA5A5;
 $shadow-color: rgba(0, 0, 0, 0.5);

@@ -1,3 +1,4 @@
+a.btn,
 .btn {
   -moz-user-select: none;
   -ms-user-select: none;
@@ -5,6 +6,7 @@
   border: 1px solid transparent;
   border-radius: 10px;
   display: inline-block;
+  font-weight: bold;
   line-height: 1.5;
   padding: 4px 17px;
   text-decoration: none;
@@ -17,19 +19,24 @@
   }
 
   &-default {
-    background-color: $primary;
-    border-color: $primary;
-    color: $light-color;
+    background: transparent;
+    border-color: $secondary;
+    color: $secondary;
+
+    &.btn-inverted {
+      border-color: $white;
+      color: $white;
+    }
 
     &:hover {
-      color: $light-color;
+      color: $dark-black;
     }
   }
 
   &-primary {
     background-color: $primary;
     border-color: $primary;
-    color: $light-color;
+    color: $white;
 
     &:visited,
     &:active,

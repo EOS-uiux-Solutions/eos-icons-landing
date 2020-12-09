@@ -35,7 +35,7 @@ $role-font-size: 16px;
 
   span {
     bottom: 8px;
-    color: $light-color;
+    color: $white;
     font-size: $name-font-size;
     font-weight: bold;
     position: absolute;
@@ -58,7 +58,7 @@ $role-font-size: 16px;
 
   &-overlay {
     background-color: $overlay-color;
-    color: $light-color;
+    color: $white;
     display: flex;
     flex-direction: column;
     height: 0;

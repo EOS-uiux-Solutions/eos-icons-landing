@@ -3,9 +3,9 @@
   z-index: 0;
 
   .tab-list {
-    background: $light-color;
+    background: $white;
     border-bottom: 1px solid $light-gray;
-    border-top: 1px solid $light-color;
+    border-top: 1px solid $white;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -28,9 +28,9 @@
   }
 
   .tab-list-active {
-    background-color: $light-color;
+    background-color: $white;
     border-bottom: 3px solid $primary;
-    color: $dark-color;
+    color: $black;
     font-weight: bold;
 
   }

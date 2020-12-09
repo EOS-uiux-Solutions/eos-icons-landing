@@ -1,5 +1,5 @@
 .icons-picker-footer {
-  color: $dark-color;
+  color: $black;
   display: flex;
   font-weight: 300;
   justify-content: space-between;
@@ -17,7 +17,7 @@
     }
 
     &:hover {
-      color: $dark-color;
+      color: $black;
     }
   }
 
@@ -33,7 +33,7 @@
     }
 
     &:hover {
-      color: $dark-color;
+      color: $black;
     }
   }
 
@@ -59,13 +59,6 @@
 
     p {
       margin-right: 10px;
-    }
-
-    .btn {
-      border: 1px solid $dark-gray;
-      color: $dark-color;
-      font-weight: bold;
-      margin: 0 5px;
     }
   }
 

@@ -1,6 +1,6 @@
 header {
   align-items: center;
-  background: $light-color;
+  background: $white;
   border-bottom: 1px solid $light-gray;
   display: flex;
   justify-content: space-between;
@@ -10,7 +10,7 @@ header {
 
   .brand {
     align-items: center;
-    color: $light-color;
+    color: $white;
     display: flex;
 
     @media (max-width: $mobile-max) {
@@ -34,7 +34,7 @@ header {
     a,
     a:visited,
     a:hover {
-      color: $dark-color;
+      color: $black;
       font-weight: 300;
       margin-left: $l;
       padding: 0 $s;
@@ -66,7 +66,7 @@ header {
     }
 
     @media (max-width: $mobile-max) {
-      background: $light-color;
+      background: $white;
       border-top: 1px solid $light-gray;
       bottom: 0;
       display: flex;
