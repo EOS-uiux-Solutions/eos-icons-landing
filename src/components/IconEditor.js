@@ -5,9 +5,10 @@ import axios from 'axios'
 import loading from '../assets/images/loading-white.svg'
 /* https://www.npmjs.com/package/react-svg the package to work with SVG's */
 import { ReactSVG } from 'react-svg'
+import { ICON_PICKER_API_URL } from '../config.json'
 
 const IconEditor = (props) => {
-  const apiBaseUrl = 'https://eos-icons-picker-api.herokuapp.com/'
+  const apiBaseUrl = ICON_PICKER_API_URL
 
   const { isActive, show, iconNames, iconType } = props
   const [currentPosition, setCurrentPosition] = useState(0)
