@@ -7,6 +7,7 @@ import ThankYou from './ThankYou'
 import IconEditor from './IconEditor'
 import axios from 'axios'
 import AppContext from '../utils/AppContext'
+import { ICON_PICKER_API_URL } from '../config.json'
 
 const sendData = async (params) => {
   const { url, payload } = params
@@ -21,7 +22,7 @@ const sendData = async (params) => {
 
 const downloadFont = (props) => {
   const { timestamp } = props
-  const downloadEndPoints = `https://eos-icons-picker-api.herokuapp.com/download?ts=${timestamp}`
+  const downloadEndPoints = `${ICON_PICKER_API_URL}/download?ts=${timestamp}`
   return window.open(downloadEndPoints, '_blank')
 }
 
@@ -50,7 +51,7 @@ const CustomizeIconsPanel = (props) => {
       e.preventDefault()
       modalToggle()
       sendData({
-        url: 'https://eos-icons-picker-api.herokuapp.com/iconsapi',
+        url: `${ICON_PICKER_API_URL}/iconsapi`,
         payload: value.multipleIcons
       }).then(setServerResponse)
     }
