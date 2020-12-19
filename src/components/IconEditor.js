@@ -90,10 +90,10 @@ const IconEditor = (props) => {
   }
   const downloadCustomizedIcon = (props) => {
     const { timestamp } = props
-    const downloadEndPoints = `${apiBaseUrl}download?ts=${timestamp}`
+    const downloadEndPoints = `${apiBaseUrl}/download?ts=${timestamp}`
     if (iconNames.length === 1) {
       return window.open(
-        `${apiBaseUrl}icon-download?ts=${timestamp}&type=${exportAs}&iconName=${iconNames[0]}`,
+        `${apiBaseUrl}/icon-download?ts=${timestamp}&type=${exportAs}&iconName=${iconNames[0]}`,
         '_blank'
       )
     }
@@ -104,7 +104,7 @@ const IconEditor = (props) => {
       e.preventDefault()
       setGenerate(true)
       postDataToApi({
-        url: `${apiBaseUrl}icon-customization`,
+        url: `${apiBaseUrl}/icon-customization`,
         payload: {
           icons: iconNames,
           exportAs: exportAs,
