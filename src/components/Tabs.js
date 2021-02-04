@@ -15,7 +15,7 @@ const Tabs = (props) => {
   return (
     <div className='tabs'>
       <ul className='tab-list' style={{ top: position }}>
-        {children.map((child, idx) => {
+        {children.map((child) => {
           const { label } = child.props
 
           return (
