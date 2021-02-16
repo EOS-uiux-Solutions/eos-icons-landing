@@ -155,20 +155,31 @@ const IconsSet = (props) => {
           </div>
         </div>
         <div className='icon-information'>
-          {!state.customize ? (
+          {tab === 'Static Icons' ? (
+            !state.customize ? (
+              <div>
+                <ShowHowToUse
+                  tab={tab}
+                  showPanel={showPanel}
+                  iconSelected={iconSelected}
+                  closeHowTo={closeHowTo}
+                />
+              </div>
+            ) : (
+              <div className='how-to-use-block'>
+                <CustomizeIconsPanel
+                  selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
+                  deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
+                />
+              </div>
+            )
+          ) : (
             <div>
               <ShowHowToUse
                 tab={tab}
                 showPanel={showPanel}
                 iconSelected={iconSelected}
                 closeHowTo={closeHowTo}
-              />
-            </div>
-          ) : (
-            <div className='how-to-use-block'>
-              <CustomizeIconsPanel
-                selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
-                deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
               />
             </div>
           )}
