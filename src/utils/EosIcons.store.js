@@ -32,6 +32,13 @@ const iconsCategory = categories.map((category) => {
   }
 })
 
+function searchMutliple(element, searchArray) {
+  for (let i = 0; i < searchArray.length; i++) {
+    if (element.includes(searchArray[i])) return true
+  }
+  return false
+}
+
 /* EOS Icons state */
 export const eosIconsState = {
   animatedIcons: animatedIcons,
@@ -80,13 +87,32 @@ export const eosIconsState = {
     return multipleIcons
   },
   setSearchRegularList: function (value) {
+    let array
+
+    if (value.includes(',')) {
+      array = value.split(',')
+    } else if (value.includes(';')) {
+      array = value.split(';')
+    } else if (value.includes('-')) {
+      array = value.split('-')
+    } else {
+      array = value.split(' ')
+    }
+
+    const searchArray = []
+
+    for (let i = 0; i < array.length; i++) {
+      array[i] = array[i].trim()
+      if (array[i] !== '') searchArray.push(array[i])
+    }
+
     return this.iconsCategory.map((ele) => {
       return {
         category: ele.category,
         icons: ele.icons.filter(
           (ele) =>
-            ele.name.includes(value.toLowerCase()) ||
-            ele.tags.includes(value.toLowerCase())
+            searchMutliple(ele.name, searchArray) ||
+            searchMutliple(ele.tags, searchArray)
         )
       }
     })

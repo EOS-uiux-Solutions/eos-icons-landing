@@ -154,6 +154,10 @@ const IconsSet = (props) => {
             </div>
           </div>
         </div>
+        <p>
+          To search for multiple icons, separate them with commas (",") ,
+          semicolons(";") , dashes("-") or spaces(" "){' '}
+        </p>
         <div className='icon-information'>
           {!state.customize ? (
             <div>
