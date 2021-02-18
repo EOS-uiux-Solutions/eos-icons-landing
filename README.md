@@ -8,10 +8,15 @@ Visit the [EOS icons website](https://icons.eosdesignsystem.com)
 
 In the project directory, you can run:
 
-### Starting up the project
+### Setting up
 
 After cloning this repository you will need to install all the dependencies: `npm i`
 
+#### Configuration
+Run `cd src && cp config.example.json config.json`   
+Open the new created `/src/config.json` with your favourite editor and change the `ICON_PICKER_API_URL` variables to point to `https://eos-icons-picker-api.herokuapp.com/`
+
+#### Staring up
 Then run: `npm start` to run the app in the development mode.
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
