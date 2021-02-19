@@ -14,7 +14,7 @@ After cloning this repository you will need to install all the dependencies: `np
 
 #### Configuration
 Run `cd src && cp config.example.json config.json`   
-Open the new created `/src/config.json` with your favourite editor and change the `ICON_PICKER_API_URL` variables to point to `https://eos-icons-picker-api.herokuapp.com/`
+Open the new created `/src/config.json` with your favourite editor and change the `ICON_PICKER_API_URL` variables to point to your instance of [Icon picker](https://gitlab.com/SUSE-UIUX/eos-icon-picker) (http://localhost:3131/)
 
 #### Staring up
 Then run: `npm start` to run the app in the development mode.
