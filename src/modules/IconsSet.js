@@ -229,14 +229,14 @@ const IconsSet = (props) => {
                     icon === iconSelected?.name ? 'active' : ''
                   }`}
                   key={index}
+                  onClick={() => {
+                    setIconSelected({ name: icon })
+                    setShowPanel(true)
+                  }}
                 >
                   <img
                     src={require(`eos-icons/animated-svg/${icon}.svg`)}
                     alt={icon}
-                    onClick={() => {
-                      setIconSelected({ name: icon })
-                      setShowPanel(true)
-                    }}
                   />
                   {icon}
                 </div>
