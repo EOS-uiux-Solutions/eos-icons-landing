@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react'
 import bunny from '../assets/images/eos-bunny.png'
 
 const ThankYou = (props) => {
-  const { fn, timestamp } = props
+  const {
+    fn,
+    timestamp,
+    shouldDownload: { download, setDownload }
+  } = props
 
   const [time, setTime] = useState(5)
 
@@ -12,7 +16,8 @@ const ThankYou = (props) => {
         setTime(time - 1)
       } else {
         clearTimeout(timer)
-        fn({ timestamp })
+        fn({ timestamp, shouldDownload: { download, setDownload } })
+        setDownload(false)
       }
     }, 1000)
   })
