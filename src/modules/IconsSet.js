@@ -100,11 +100,35 @@ const IconsSet = (props) => {
                 if (searchValue.length > 0) {
                   searchRef.current.value = ''
                   closeHowTo()
-
-                  return dispatch({
-                    type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-                    search: ''
-                  })
+                  const element = document.getElementsByClassName(
+                    'icon-container'
+                  )
+                  if (tab === 'Static Icons') {
+                    if (element.length !== 1279) {
+                      return dispatch({
+                        type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+                        search: ''
+                      })
+                    } else {
+                      return dispatch({
+                        type: 'TOGGLE_SEARCH_ANIMATED_ICONS',
+                        search: ''
+                      })
+                    }
+                  }
+                  if (tab === 'Animated Icons') {
+                    if (element.length !== 10) {
+                      return dispatch({
+                        type: 'TOGGLE_SEARCH_ANIMATED_ICONS',
+                        search: ''
+                      })
+                    } else {
+                      return dispatch({
+                        type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+                        search: ''
+                      })
+                    }
+                  }
                 }
               }}
             >
