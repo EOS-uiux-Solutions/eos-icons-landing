@@ -10,6 +10,7 @@ import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
 import { CategorySelector } from '../components/CategorySelector'
+import { TagSelector } from '../components/TagSelector'
 import { useWindowsSize } from '../hooks/useWidow'
 
 const IconsSet = (props) => {
@@ -24,13 +25,25 @@ const IconsSet = (props) => {
   const queryString = window.location.search
   const urlParams = new URLSearchParams(queryString)
   const urlIconName = urlParams.get('iconName')
+  const urlTagName = urlParams.get('tagName')
 
-  const setSearchWithUrlParam = urlIconName && !iconSelected ? urlIconName : ''
+  let setSearchWithUrlParam = urlIconName && !iconSelected ? urlIconName : ''
+
+  if (setSearchWithUrlParam === '') {
+    setSearchWithUrlParam = urlTagName
+  }
 
   const setIconInSearch = () => {
     return dispatch({
       type: 'TOGGLE_SEARCH_REGULAR_ICONS',
       search: urlIconName
+    })
+  }
+
+  const setTagInSearch = () => {
+    return dispatch({
+      type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+      search: urlTagName
     })
   }
 
@@ -44,14 +57,19 @@ const IconsSet = (props) => {
         setIconInSearch()
         setSearchValue(urlIconName)
       }
-
       if (iconDetails.length) {
         setShowPanel(true)
         setIconSelected({ name: urlIconName, tags: iconDetails[0].tags })
       }
     }
+
+    if (urlTagName != null) {
+      setTagInSearch()
+      setSearchValue(urlTagName)
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [urlIconName])
+  }, [urlIconName, urlTagName])
 
   const closeHowTo = () => {
     setSearchValue('')
@@ -133,11 +151,21 @@ const IconsSet = (props) => {
             ) : (
               ' '
             )}
+            {!size?.isMobile ? (
+              <TagSelector disabled={tab === 'Animated Icons'} />
+            ) : (
+              ' '
+            )}
           </div>
 
           <div className='icons-control-dynamic'>
             {size?.isMobile ? (
               <CategorySelector disabled={tab === 'Animated Icons'} />
+            ) : (
+              ' '
+            )}
+            {size?.isMobile ? (
+              <TagSelector disabled={tab === 'Animated Icons'} />
             ) : (
               ' '
             )}
