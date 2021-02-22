@@ -9,7 +9,6 @@ export const useWindowsSize = () => {
   })
 
   function handleWindows() {
-    console.log(window.scrollY)
     return setState({
       width: window.innerWidth,
       height: window.innerHeight,
