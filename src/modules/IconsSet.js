@@ -89,7 +89,6 @@ const IconsSet = (props) => {
   return (
     <>
       <PageHeader>
-        <h1>More than 1000 free icons</h1>
         <div className='icons-control'>
           <div className='icons-control-search'>
             <i
