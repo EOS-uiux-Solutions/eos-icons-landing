@@ -20,17 +20,28 @@ const IconsSet = (props) => {
   const { state, dispatch } = useContext(AppContext)
   const [tab, setActiveTab] = useState('Static Icons')
   const searchRef = useRef(null)
-
   const queryString = window.location.search
   const urlParams = new URLSearchParams(queryString)
   const urlIconName = urlParams.get('iconName')
+  const urlTagName = urlParams.get('tagName')
 
-  const setSearchWithUrlParam = urlIconName && !iconSelected ? urlIconName : ''
+  let setSearchWithUrlParam = urlIconName 
+
+  if (setSearchWithUrlParam === null || setSearchWithUrlParam === '') {
+    setSearchWithUrlParam = urlTagName
+  }
 
   const setIconInSearch = () => {
     return dispatch({
       type: 'TOGGLE_SEARCH_REGULAR_ICONS',
       search: urlIconName
+    })
+  }
+
+  const setTagInSearch = () => {
+    return dispatch({
+      type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+      search: urlTagName
     })
   }
 
@@ -44,14 +55,19 @@ const IconsSet = (props) => {
         setIconInSearch()
         setSearchValue(urlIconName)
       }
-
       if (iconDetails.length) {
         setShowPanel(true)
         setIconSelected({ name: urlIconName, tags: iconDetails[0].tags })
       }
     }
+
+    if (urlTagName != null) {
+      setTagInSearch()
+      setSearchValue(urlTagName)
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [urlIconName])
+  }, [urlIconName, urlTagName])
 
   const closeHowTo = () => {
     setSearchValue('')
@@ -111,7 +127,7 @@ const IconsSet = (props) => {
               {searchValue === '' ? 'search' : 'close'}
             </i>
             <input
-              defaultValue={setSearchWithUrlParam}
+              value={setSearchWithUrlParam}
               ref={searchRef}
               className='search-input'
               type='text'
@@ -162,6 +178,7 @@ const IconsSet = (props) => {
                 showPanel={showPanel}
                 iconSelected={iconSelected}
                 closeHowTo={closeHowTo}
+                setSearchValue={setSearchValue}
               />
             </div>
           ) : (
@@ -238,7 +255,7 @@ const IconsSet = (props) => {
   )
 }
 
-const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo }) => {
+const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo, setSearchValue }) => {
   return tab === 'Static Icons' ? (
     <div>
       <HowTo
@@ -247,6 +264,7 @@ const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo }) => {
         iconTags={iconSelected?.tags}
         type='static'
         close={closeHowTo}
+        setSearchValue = {setSearchValue.bind(this)}
       />
     </div>
   ) : (
@@ -256,6 +274,7 @@ const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo }) => {
       iconTags=''
       type='animated'
       close={closeHowTo}
+      setSearchValue={setSearchValue.bind(this)}
     />
   )
 }
