@@ -10,6 +10,7 @@ import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
 import { CategorySelector } from '../components/CategorySelector'
+import { TagSelector } from '../components/TagSelector'
 import { useWindowsSize } from '../hooks/useWidow'
 
 const IconsSet = (props) => {
@@ -25,9 +26,9 @@ const IconsSet = (props) => {
   const urlIconName = urlParams.get('iconName')
   const urlTagName = urlParams.get('tagName')
 
-  let setSearchWithUrlParam = urlIconName 
+  let setSearchWithUrlParam = urlIconName && !iconSelected ? urlIconName : ''
 
-  if (setSearchWithUrlParam === null || setSearchWithUrlParam === '') {
+  if (setSearchWithUrlParam === '') {
     setSearchWithUrlParam = urlTagName
   }
 
@@ -149,11 +150,21 @@ const IconsSet = (props) => {
             ) : (
               ' '
             )}
+            {!size?.isMobile ? (
+              <TagSelector disabled={tab === 'Animated Icons'} />
+            ) : (
+              ' '
+            )}
           </div>
 
           <div className='icons-control-dynamic'>
             {size?.isMobile ? (
               <CategorySelector disabled={tab === 'Animated Icons'} />
+            ) : (
+              ' '
+            )}
+            {size?.isMobile ? (
+              <TagSelector disabled={tab === 'Animated Icons'} />
             ) : (
               ' '
             )}
