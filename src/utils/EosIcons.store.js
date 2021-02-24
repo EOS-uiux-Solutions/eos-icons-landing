@@ -32,12 +32,42 @@ const iconsCategory = categories.map((category) => {
   }
 })
 
+function getIconsTags() {
+  const tagArray = []
+  const map = {}
+  for (let i = 0; i < eosIcons.length; i++) {
+    for (let j = 0; j < eosIcons[i].tags.length; j++) {
+      if (eosIcons[i].tags[j] in map) {
+        map[eosIcons[i].tags[j]] = parseInt(map[eosIcons[i].tags[j]]) + 1
+      } else {
+        map[eosIcons[i].tags[j]] = 1
+      }
+    }
+  }
+
+  for (const tag in map) {
+    tagArray.push([tag, map[tag]])
+  }
+
+  tagArray.sort(function (a, b) {
+    return b[1] - a[1]
+  })
+
+  const array = []
+  for (let i = 0; i < 40; i++) {
+    array.push(tagArray[i][0])
+  }
+  array.sort()
+  return array
+}
+
 /* EOS Icons state */
 export const eosIconsState = {
   animatedIcons: animatedIcons,
   icons: staticIcons,
   iconsCategory,
   iconsCategoryList: iconsCategory.map((ele) => ele.category),
+  iconsTagsList: getIconsTags(),
   multipleIcons,
   customize: false,
   cookiesToggle: false,
@@ -55,6 +85,17 @@ export const eosIconsState = {
     multipleIcons.splice(0, multipleIcons.length)
 
     return (this.customize = !this.customize)
+  },
+  selectAllTagsIcons(tagName) {
+    if (tagName === 'all') return this.iconsCategory
+
+    tagName = tagName.toLowerCase()
+    return this.iconsCategory.map((ele) => {
+      return {
+        category: ele.category,
+        icons: ele.icons.filter((ele) => ele.tags.includes(tagName))
+      }
+    })
   },
   toggleCookies() {
     Cookies.set('acceptance-remainder', 'true')
@@ -120,6 +161,11 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         multipleIcons: eosIconsState.setMultipleIcons(action.selection)
+      }
+    case 'TOGGLE_ICON_TAGS':
+      return {
+        ...state,
+        iconsCategory: eosIconsState.selectAllTagsIcons(action.selection)
       }
     case 'TOGGLE_CUSTOMIZE':
       return {
