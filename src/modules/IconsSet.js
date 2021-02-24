@@ -255,13 +255,7 @@ const IconsSet = (props) => {
   )
 }
 
-const ShowHowToUse = ({
-  tab,
-  showPanel,
-  iconSelected,
-  closeHowTo,
-  setSearchValue
-}) => {
+const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo, setSearchValue }) => {
   return tab === 'Static Icons' ? (
     <div>
       <HowTo
@@ -270,7 +264,7 @@ const ShowHowToUse = ({
         iconTags={iconSelected?.tags}
         type='static'
         close={closeHowTo}
-        setSearchValue={setSearchValue.bind(this)}
+        setSearchValue = {setSearchValue.bind(this)}
       />
     </div>
   ) : (

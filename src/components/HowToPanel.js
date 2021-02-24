@@ -146,18 +146,15 @@ const HowToPanel = (props) => {
             <div>
               <strong>Tags:</strong>
               {iconTags?.map((tag, key) => (
-                <span
-                  key={key}
-                  className='badge'
-                  onClick={() => {
-                    selectTag(
-                      tag,
-                      dispatch({
-                        type: 'TOGGLE_ICON_TAGS',
-                        selection: tag
-                      })
-                    )
-                  }}
+                <span key={key} className='badge' onClick={() => {
+                  selectTag(
+                    tag,
+                    dispatch({
+                      type: 'TOGGLE_ICON_TAGS',
+                      selection: tag
+                    })
+                  )
+                }}
                   style={{ cursor: 'pointer' }}
                 >
                   <small>{tag}</small>
