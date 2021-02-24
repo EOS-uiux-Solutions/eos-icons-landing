@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
+import AppContext from '../utils/AppContext'
 import Button from './Button'
 import IconEditor from './IconEditor'
 
@@ -13,6 +14,7 @@ const HowToPanel = (props) => {
     setIconEditor(!iconEditor)
   }
 
+  const { dispatch } = useContext(AppContext)
   function useOnClickOrEsc(ref, handler) {
     useEffect(() => {
       const listenerKeydown = (event) => {
@@ -30,6 +32,40 @@ const HowToPanel = (props) => {
   }
 
   useOnClickOrEsc(ref, () => close())
+
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  const urlIconName = urlParams.get('iconName')
+  const urlTagName = urlParams.get('tagName')
+
+  let setSearchWithUrlParam = urlIconName && !iconName ? urlIconName : ''
+
+  if (setSearchWithUrlParam === '') {
+    setSearchWithUrlParam = urlTagName
+  }
+
+  const selectTag = (urlTagName, callback) => {
+    window.history.replaceState(
+      '',
+      'EOS Icons',
+      `${window.location.pathname}?tagName=${urlTagName}`
+    )
+    return callback
+  }
+  const setTagInSearch = () => {
+    return dispatch({
+      type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+      search: urlTagName
+    })
+  }
+
+  useEffect(() => {
+    if (urlTagName != null) {
+      setTagInSearch()
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [urlTagName])
 
   return show ? (
     <div ref={ref} className='how-to-use-block'>
@@ -110,7 +146,20 @@ const HowToPanel = (props) => {
             <div>
               <strong>Tags:</strong>
               {iconTags?.map((tag, key) => (
-                <span key={key} className='badge'>
+                <span
+                  key={key}
+                  className='badge'
+                  onClick={() => {
+                    selectTag(
+                      tag,
+                      dispatch({
+                        type: 'TOGGLE_ICON_TAGS',
+                        selection: tag
+                      })
+                    )
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
                   <small>{tag}</small>
                 </span>
               ))}
