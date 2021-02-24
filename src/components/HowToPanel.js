@@ -109,7 +109,7 @@ const HowToPanel = (props) => {
             </div>
             <div>
               <strong>Tags:</strong>
-              {iconTags.map((tag, key) => (
+              {iconTags?.map((tag, key) => (
                 <span key={key} className='badge'>
                   <small>{tag}</small>
                 </span>
