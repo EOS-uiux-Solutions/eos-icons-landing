@@ -19,6 +19,8 @@ const IconsSet = (props) => {
   const [size] = useWindowsSize()
   const { state, dispatch } = useContext(AppContext)
   const [tab, setActiveTab] = useState('Static Icons')
+  const [staticHistory, setStaticHistory] = useState('')
+  const [animatedHistory, setAnimatedHistory] = useState('')
   const searchRef = useRef(null)
 
   const queryString = window.location.search
@@ -84,6 +86,32 @@ const IconsSet = (props) => {
   const toggleCustomize = (callback) => {
     props.action()
     return callback
+  }
+
+  /* Function to close HowToPanel upon switching tabs */
+  const tabSwitch = (e) => {
+    if (e === tab) {
+      setActiveTab(e)
+    } else {
+      setActiveTab(e)
+      if (e === 'Static Icons') {
+        setAnimatedHistory(iconSelected)
+        if (staticHistory === '') {
+          closeHowTo()
+        } else {
+          setIconSelected(staticHistory)
+          setShowPanel(true)
+        }
+      } else {
+        setStaticHistory(iconSelected)
+        if (animatedHistory === '') {
+          closeHowTo()
+        } else {
+          setIconSelected(animatedHistory)
+          setShowPanel(true)
+        }
+      }
+    }
   }
 
   return (
@@ -187,7 +215,7 @@ const IconsSet = (props) => {
       </PageHeader>
       <div className='container no-padding'>
         <Tabs
-          setTab={setActiveTab}
+          setTab={(e) => tabSwitch(e)}
           customize={state.customize}
           showPanel={showPanel}
         >
