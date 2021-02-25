@@ -305,7 +305,7 @@ const ShowHowToUse = ({
         iconTags={iconSelected?.tags}
         type='static'
         close={closeHowTo}
-        setSearchValue={setSearchValue.bind(this)}
+        setSearchValue={setSearchValue}
       />
     </div>
   ) : (
@@ -315,7 +315,7 @@ const ShowHowToUse = ({
       iconTags=''
       type='animated'
       close={closeHowTo}
-      setSearchValue={setSearchValue.bind(this)}
+      setSearchValue={setSearchValue}
     />
   )
 }
