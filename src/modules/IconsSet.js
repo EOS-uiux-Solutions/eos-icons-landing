@@ -20,17 +20,28 @@ const IconsSet = (props) => {
   const { state, dispatch } = useContext(AppContext)
   const [tab, setActiveTab] = useState('Static Icons')
   const searchRef = useRef(null)
-
   const queryString = window.location.search
   const urlParams = new URLSearchParams(queryString)
   const urlIconName = urlParams.get('iconName')
+  const urlTagName = urlParams.get('tagName')
 
-  const setSearchWithUrlParam = urlIconName && !iconSelected ? urlIconName : ''
+  let setSearchWithUrlParam = urlIconName
+
+  if (setSearchWithUrlParam === '' || setSearchWithUrlParam === null) {
+    setSearchWithUrlParam = urlTagName
+  }
 
   const setIconInSearch = () => {
     return dispatch({
       type: 'TOGGLE_SEARCH_REGULAR_ICONS',
       search: urlIconName
+    })
+  }
+
+  const setTagInSearch = () => {
+    return dispatch({
+      type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+      search: urlTagName
     })
   }
 
@@ -44,14 +55,19 @@ const IconsSet = (props) => {
         setIconInSearch()
         setSearchValue(urlIconName)
       }
-
       if (iconDetails.length) {
         setShowPanel(true)
         setIconSelected({ name: urlIconName, tags: iconDetails[0].tags })
       }
     }
+
+    if (urlTagName != null) {
+      setTagInSearch()
+      setSearchValue(urlTagName)
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [urlIconName])
+  }, [urlIconName, urlTagName])
 
   const closeHowTo = () => {
     setSearchValue('')
@@ -100,18 +116,42 @@ const IconsSet = (props) => {
                 if (searchValue.length > 0) {
                   searchRef.current.value = ''
                   closeHowTo()
-
-                  return dispatch({
-                    type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-                    search: ''
-                  })
+                  const element = document.getElementsByClassName(
+                    'icon-container'
+                  )
+                  if (tab === 'Static Icons') {
+                    if (element.length !== 1279) {
+                      return dispatch({
+                        type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+                        search: ''
+                      })
+                    } else {
+                      return dispatch({
+                        type: 'TOGGLE_SEARCH_ANIMATED_ICONS',
+                        search: ''
+                      })
+                    }
+                  }
+                  if (tab === 'Animated Icons') {
+                    if (element.length !== 10) {
+                      return dispatch({
+                        type: 'TOGGLE_SEARCH_ANIMATED_ICONS',
+                        search: ''
+                      })
+                    } else {
+                      return dispatch({
+                        type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+                        search: ''
+                      })
+                    }
+                  }
                 }
               }}
             >
               {searchValue === '' ? 'search' : 'close'}
             </i>
             <input
-              defaultValue={setSearchWithUrlParam}
+              value={setSearchWithUrlParam}
               ref={searchRef}
               className='search-input'
               type='text'
@@ -155,20 +195,32 @@ const IconsSet = (props) => {
           </div>
         </div>
         <div className='icon-information'>
-          {!state.customize ? (
+          {tab === 'Static Icons' ? (
+            !state.customize ? (
+              <div>
+                <ShowHowToUse
+                  tab={tab}
+                  showPanel={showPanel}
+                  iconSelected={iconSelected}
+                  closeHowTo={closeHowTo}
+                />
+              </div>
+            ) : (
+              <div className='how-to-use-block'>
+                <CustomizeIconsPanel
+                  selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
+                  deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
+                />
+              </div>
+            )
+          ) : (
             <div>
               <ShowHowToUse
                 tab={tab}
                 showPanel={showPanel}
                 iconSelected={iconSelected}
                 closeHowTo={closeHowTo}
-              />
-            </div>
-          ) : (
-            <div className='how-to-use-block'>
-              <CustomizeIconsPanel
-                selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
-                deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
+                setSearchValue={setSearchValue}
               />
             </div>
           )}
@@ -218,14 +270,14 @@ const IconsSet = (props) => {
                     icon === iconSelected?.name ? 'active' : ''
                   }`}
                   key={index}
+                  onClick={() => {
+                    setIconSelected({ name: icon })
+                    setShowPanel(true)
+                  }}
                 >
                   <img
                     src={require(`eos-icons/animated-svg/${icon}.svg`)}
                     alt={icon}
-                    onClick={() => {
-                      setIconSelected({ name: icon })
-                      setShowPanel(true)
-                    }}
                   />
                   {icon}
                 </div>
@@ -238,7 +290,13 @@ const IconsSet = (props) => {
   )
 }
 
-const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo }) => {
+const ShowHowToUse = ({
+  tab,
+  showPanel,
+  iconSelected,
+  closeHowTo,
+  setSearchValue
+}) => {
   return tab === 'Static Icons' ? (
     <div>
       <HowTo
@@ -247,6 +305,7 @@ const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo }) => {
         iconTags={iconSelected?.tags}
         type='static'
         close={closeHowTo}
+        setSearchValue={setSearchValue.bind(this)}
       />
     </div>
   ) : (
@@ -256,6 +315,7 @@ const ShowHowToUse = ({ tab, showPanel, iconSelected, closeHowTo }) => {
       iconTags=''
       type='animated'
       close={closeHowTo}
+      setSearchValue={setSearchValue.bind(this)}
     />
   )
 }
