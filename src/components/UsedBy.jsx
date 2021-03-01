@@ -8,7 +8,9 @@ export const UsedBy = () => {
         {data.map((ele, i) => {
           return (
             <li key={i}>
-              <img src={ele.image} alt={ele.title} />
+              <a href={ele.url} target='_blank' rel='noopener noreferrer'>
+                <img src={ele.image} alt={ele.title} />
+              </a>
             </li>
           )
         })}
@@ -20,32 +22,32 @@ export const UsedBy = () => {
 const data = [
   {
     name: 'kubernetes',
-    url: '',
+    url: 'https://kubernetes.io/',
     image: require('../assets/images/logos/kubernetes.svg')
   },
   {
     name: 'suse',
-    url: '',
+    url: 'https://www.suse.com/',
     image: require('../assets/images/logos/suse.svg')
   },
   {
     name: 'uyuni',
-    url: '',
+    url: 'https://www.uyuni-project.org/',
     image: require('../assets/images/logos/uyuni.svg')
   },
   {
     name: 'openSUSE',
-    url: '',
+    url: 'https://www.opensuse.org/',
     image: require('../assets/images/logos/opensuse.svg')
   },
   {
     name: 'Open Build Service',
-    url: '',
+    url: 'https://openbuildservice.org/',
     image: require('../assets/images/logos/obs.svg')
   },
   {
     name: 'Stratos',
-    url: '',
+    url: 'https://stratos.app/',
     image: require('../assets/images/logos/stratos.png')
   }
 ]
