@@ -46,6 +46,16 @@ const IconsSet = (props) => {
   }
 
   useEffect(() => {
+    dispatch({
+      type:
+        tab === 'Static Icons'
+          ? 'TOGGLE_SEARCH_REGULAR_ICONS'
+          : 'TOGGLE_SEARCH_ANIMATED_ICONS',
+      search: searchValue
+    })
+  }, [dispatch, searchValue, tab])
+
+  useEffect(() => {
     if (urlIconName) {
       const iconDetails = eosIconsState.icons.filter(
         (icon) => icon.name === urlIconName
