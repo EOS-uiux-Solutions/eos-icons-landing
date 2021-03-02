@@ -1,8 +1,8 @@
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://icons.eosdesignsystem.com)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://eos-icons.com)
 
-Visit the [EOS icons website](https://icons.eosdesignsystem.com)
+Visit the [EOS icons website](https://eos-icons.com)
 
 # Guideline to develop this site
 
@@ -69,7 +69,7 @@ If you'd like to add new icons, you'll need to head over to the [icons repositor
 
 - [EOS Design System](https://www.eosdesignsystem.com/)
 
-- [EOS Icons](icons.eosdesignsystem.com/)
+- [EOS Icons](eos-icons.com)
 
 - [Follow us on Twitter](https://twitter.com/eosdesignsystem)
 
