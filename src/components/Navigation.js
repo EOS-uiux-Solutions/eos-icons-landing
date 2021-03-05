@@ -19,7 +19,7 @@ const Navigation = () => {
       <div className='container navigation-content'>
         <Link to='/'>
           <div className='brand'>
-            <img className='logo' src={eosIcon} alt='' />
+            <img className='logo' src={eosIcon} alt='eos-icons logo' />
           </div>
         </Link>
         <nav className='padding-top-xs'>

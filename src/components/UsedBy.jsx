@@ -9,7 +9,7 @@ export const UsedBy = () => {
           return (
             <li key={i}>
               <a href={ele.url} target='_blank' rel='noopener noreferrer'>
-                <img src={ele.image} alt={ele.title} />
+                <img src={ele.image} alt={ele.name} />
               </a>
             </li>
           )
