@@ -45,7 +45,6 @@ export const eosIconsState = {
   icons: staticIcons,
   iconsCategory,
   iconsCategoryList: iconsCategory.map((ele) => ele.category),
-  iconsTagsList: getIconsTags(),
   multipleIcons,
   customize: false,
   cookiesToggle: false,
@@ -124,7 +123,8 @@ export const eosIconsState = {
 
     for (let i = 0; i < keywordsArray.length; i++) {
       keywordsArray[i] = keywordsArray[i].trim()
-      if (keywordsArray[i] !== '') searchArray.push(keywordsArray[i])
+      if (keywordsArray[i] !== '')
+        searchArray.push(keywordsArray[i].toLowerCase())
     }
 
     return this.iconsCategory.map((ele) => {
