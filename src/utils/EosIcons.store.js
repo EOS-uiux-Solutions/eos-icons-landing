@@ -32,33 +32,11 @@ const iconsCategory = categories.map((category) => {
   }
 })
 
-function getIconsTags() {
-  const tagArray = []
-  const map = {}
-  for (let i = 0; i < eosIcons.length; i++) {
-    for (let j = 0; j < eosIcons[i].tags.length; j++) {
-      if (eosIcons[i].tags[j] in map) {
-        map[eosIcons[i].tags[j]] = parseInt(map[eosIcons[i].tags[j]]) + 1
-      } else {
-        map[eosIcons[i].tags[j]] = 1
-      }
-    }
+function searchMutliple(element, searchArray) {
+  for (let i = 0; i < searchArray.length; i++) {
+    if (element.includes(searchArray[i])) return true
   }
-
-  for (const tag in map) {
-    tagArray.push([tag, map[tag]])
-  }
-
-  tagArray.sort(function (a, b) {
-    return b[1] - a[1]
-  })
-
-  const array = []
-  for (let i = 0; i < 40; i++) {
-    array.push(tagArray[i][0])
-  }
-  array.sort()
-  return array
+  return false
 }
 
 /* EOS Icons state */
@@ -67,7 +45,6 @@ export const eosIconsState = {
   icons: staticIcons,
   iconsCategory,
   iconsCategoryList: iconsCategory.map((ele) => ele.category),
-  iconsTagsList: getIconsTags(),
   multipleIcons,
   customize: false,
   cookiesToggle: false,
@@ -121,13 +98,42 @@ export const eosIconsState = {
     return multipleIcons
   },
   setSearchRegularList: function (value) {
+    if (value === '') {
+      return this.iconsCategory.map((ele) => {
+        return {
+          category: ele.category,
+          icons: ele.icons
+        }
+      })
+    }
+
+    let keywordsArray
+
+    if (value.includes(',')) {
+      keywordsArray = value.split(',')
+    } else if (value.includes(';')) {
+      keywordsArray = value.split(';')
+    } else if (value.includes('-')) {
+      keywordsArray = value.split('-')
+    } else {
+      keywordsArray = value.split(' ')
+    }
+
+    const searchArray = []
+
+    for (let i = 0; i < keywordsArray.length; i++) {
+      keywordsArray[i] = keywordsArray[i].trim()
+      if (keywordsArray[i] !== '')
+        searchArray.push(keywordsArray[i].toLowerCase())
+    }
+
     return this.iconsCategory.map((ele) => {
       return {
         category: ele.category,
         icons: ele.icons.filter(
           (ele) =>
-            ele.name.includes(value.toLowerCase()) ||
-            ele.tags.includes(value.toLowerCase())
+            searchMutliple(ele.name, searchArray) ||
+            searchMutliple(ele.tags, searchArray)
         )
       }
     })
