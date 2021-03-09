@@ -4,7 +4,7 @@ import Toggle from './Toggle'
 import AppContext from '../utils/AppContext'
 
 const Tabs = (props) => {
-  const { children, setTab, customize, showPanel } = props
+  const { children, setTab, customize, showPanel, toggleCustomize } = props
 
   const [activeTab, setActiveTab] = useState(children[0].props.label)
   const [position, setPosition] = useState(0)
@@ -15,9 +15,6 @@ const Tabs = (props) => {
     setPosition(document.querySelector('.page-header').clientHeight + 54)
   }, [customize, showPanel, windowsSize])
 
-  const toggleCustomize = (callback) => {
-    return callback
-  }
   return (
     <div className='tabs'>
       <ul className='tab-list' style={{ top: position }}>
