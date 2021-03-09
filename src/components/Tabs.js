@@ -15,9 +15,6 @@ const Tabs = (props) => {
     setPosition(document.querySelector('.page-header').clientHeight + 54)
   }, [customize, showPanel, windowsSize])
 
-  const toggleCustomize = (callback) => {
-    return callback
-  }
   return (
     <div className='tabs'>
       <ul className='tab-list' style={{ top: position }}>

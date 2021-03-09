@@ -25,12 +25,52 @@ const IconsSet = (props) => {
   const urlParams = new URLSearchParams(queryString)
   const urlIconName = urlParams.get('iconName')
   const urlTagName = urlParams.get('tagName')
+  const [selectMultiple, setSelectMultiple] = useState(true)
 
   let setSearchWithUrlParam = urlIconName
 
   if (setSearchWithUrlParam === '' || setSearchWithUrlParam === null) {
-    setSearchWithUrlParam = urlTagName
+    if (urlTagName !== null && urlTagName !== '')
+      setSearchWithUrlParam = urlTagName
   }
+
+  useEffect(() => {
+    if (setSearchWithUrlParam !== null && setSearchWithUrlParam !== '')
+      setSearchValue(setSearchWithUrlParam)
+  }, [setSearchWithUrlParam])
+
+  useEffect(() => {
+    if (!selectMultiple) {
+      window.history.replaceState(
+        '',
+        'EOS Icons',
+        `${window.location.pathname}`
+      )
+      setSearchValue('')
+    }
+
+    dispatch({
+      type:
+        tab === 'Static Icons'
+          ? 'TOGGLE_SEARCH_REGULAR_ICONS'
+          : 'TOGGLE_SEARCH_ANIMATED_ICONS',
+      search: selectMultiple ? searchValue : ''
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tab, dispatch, selectMultiple])
+
+  useEffect(() => {
+    if (searchValue === '' || searchValue === null) {
+      closeHowTo()
+      dispatch({
+        type:
+          tab === 'Static Icons'
+            ? 'TOGGLE_SEARCH_REGULAR_ICONS'
+            : 'TOGGLE_SEARCH_ANIMATED_ICONS',
+        search: ''
+      })
+    }
+  }, [dispatch, searchValue, tab])
 
   const setIconInSearch = () => {
     return dispatch({
@@ -45,16 +85,6 @@ const IconsSet = (props) => {
       search: urlTagName
     })
   }
-
-  useEffect(() => {
-    dispatch({
-      type:
-        tab === 'Static Icons'
-          ? 'TOGGLE_SEARCH_REGULAR_ICONS'
-          : 'TOGGLE_SEARCH_ANIMATED_ICONS',
-      search: searchValue
-    })
-  }, [dispatch, searchValue, tab])
 
   useEffect(() => {
     if (urlIconName) {
@@ -72,7 +102,7 @@ const IconsSet = (props) => {
       }
     }
 
-    if (urlTagName != null) {
+    if (urlTagName !== null) {
       setTagInSearch()
       setSearchValue(urlTagName)
     }
@@ -99,11 +129,20 @@ const IconsSet = (props) => {
   const selectIcon = (icon, callback) => {
     setShowPanel(icon !== iconSelected)
     setIconSelected(icon === iconSelected ? '' : icon)
-    window.history.replaceState(
-      '',
-      'EOS Icons',
-      `${window.location.pathname}?iconName=${icon.name}`
-    )
+    if (selectMultiple) {
+      window.history.replaceState(
+        '',
+        'EOS Icons',
+        `${window.location.pathname}?iconName=${icon.name}`
+      )
+    }
+    return callback
+  }
+
+  /* Toggle customizable functionality */
+  const toggleCustomize = (callback) => {
+    setSelectMultiple(!selectMultiple)
+    props.action()
     return callback
   }
 
@@ -116,7 +155,9 @@ const IconsSet = (props) => {
       if (e === 'Static Icons') {
         setAnimatedHistory(iconSelected)
         if (staticHistory === '') {
+          const storeSearchValue = searchValue
           closeHowTo()
+          setSearchValue(storeSearchValue)
         } else {
           setIconSelected(staticHistory)
           setShowPanel(true)
@@ -124,7 +165,9 @@ const IconsSet = (props) => {
       } else {
         setStaticHistory(iconSelected)
         if (animatedHistory === '') {
+          const storeSearchValue = searchValue
           closeHowTo()
+          setSearchValue(storeSearchValue)
         } else {
           setIconSelected(animatedHistory)
           setShowPanel(true)
@@ -146,48 +189,23 @@ const IconsSet = (props) => {
                 if (searchValue.length > 0) {
                   searchRef.current.value = ''
                   closeHowTo()
-                  const element = document.getElementsByClassName(
-                    'icon-container'
-                  )
-                  if (tab === 'Static Icons') {
-                    if (element.length !== 1279) {
-                      return dispatch({
-                        type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-                        search: ''
-                      })
-                    } else {
-                      return dispatch({
-                        type: 'TOGGLE_SEARCH_ANIMATED_ICONS',
-                        search: ''
-                      })
-                    }
-                  }
-                  if (tab === 'Animated Icons') {
-                    if (element.length !== 10) {
-                      return dispatch({
-                        type: 'TOGGLE_SEARCH_ANIMATED_ICONS',
-                        search: ''
-                      })
-                    } else {
-                      return dispatch({
-                        type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-                        search: ''
-                      })
-                    }
-                  }
                 }
               }}
             >
               {searchValue === '' ? 'search' : 'close'}
             </i>
             <input
-              value={setSearchWithUrlParam}
+              value={searchValue}
               ref={searchRef}
               className='search-input'
               type='text'
               name='search'
               onChange={(event) => {
                 setSearchValue(event.target.value)
+
+                if (event.target.value === '') {
+                  closeHowTo()
+                }
 
                 dispatch({
                   type:
@@ -228,7 +246,15 @@ const IconsSet = (props) => {
               <div className='how-to-use-block'>
                 <CustomizeIconsPanel
                   selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
-                  deselectAll={() => dispatch({ type: 'REMOVE_ALL_ICONS' })}
+                  deselectAll={() => {
+                    dispatch({ type: 'REMOVE_ALL_ICONS' })
+                    setSearchValue('')
+                    window.history.replaceState(
+                      '',
+                      'EOS Icons',
+                      `${window.location.pathname}`
+                    )
+                  }}
                 />
               </div>
             )
@@ -250,7 +276,7 @@ const IconsSet = (props) => {
           setTab={(e) => tabSwitch(e)}
           customize={state.customize}
           showPanel={showPanel}
-          toggleCustomize={(e) => toggleCustomize(e)}
+          toggleCustomize={(callback) => toggleCustomize(callback)}
         >
           <div label='Static Icons'>
             {state.iconsCategory.map((categoryObject, index) => {
