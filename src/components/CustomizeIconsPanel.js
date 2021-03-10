@@ -21,14 +21,9 @@ const sendData = async (params) => {
 }
 
 const downloadFont = (props) => {
-  const {
-    timestamp,
-    shouldDownload: { download, setDownload }
-  } = props
+  const { timestamp } = props
   const downloadEndPoints = `${ICON_PICKER_API_URL}/download?ts=${timestamp}`
-  const action = download ? window.open(downloadEndPoints, '_blank') : null
-  setDownload(false)
-  return action
+  return window.open(downloadEndPoints, '_blank')
 }
 
 const CustomizeIconsPanel = (props) => {
@@ -45,11 +40,9 @@ const CustomizeIconsPanel = (props) => {
   const value = eosIconsState
 
   const [modal, setModal] = useState(false)
-  const [download, setDownload] = useState(true)
   const [serverResponse, setServerResponse] = useState(null)
 
   const modalToggle = () => {
-    modal ? setDownload(false) : setDownload(true)
     setModal(!modal)
   }
 
@@ -115,25 +108,12 @@ const CustomizeIconsPanel = (props) => {
         <Modal
           showButtons={serverResponse !== null}
           okText='Download'
-          onOk={() =>
-            downloadFont({
-              timestamp: serverResponse,
-              shouldDownload: { download, setDownload }
-            })
-          }
+          onOk={() => downloadFont({ timestamp: serverResponse })}
           onCancel={modalToggle}
           isActive={modal}
           show={modalToggle}
         >
-          {serverResponse === null ? (
-            <GeneratingFont />
-          ) : (
-            <ThankYou
-              fn={downloadFont}
-              timestamp={serverResponse}
-              shouldDownload={{ download, setDownload }}
-            />
-          )}
+          {serverResponse === null ? <GeneratingFont /> : <ThankYou />}
         </Modal>
       ) : (
         ''
