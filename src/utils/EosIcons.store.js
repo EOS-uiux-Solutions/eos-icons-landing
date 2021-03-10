@@ -32,6 +32,13 @@ const iconsCategory = categories.map((category) => {
   }
 })
 
+function searchMutliple(element, searchArray) {
+  for (let i = 0; i < searchArray.length; i++) {
+    if (element.includes(searchArray[i])) return true
+  }
+  return false
+}
+
 /* EOS Icons state */
 export const eosIconsState = {
   animatedIcons: animatedIcons,
@@ -55,6 +62,17 @@ export const eosIconsState = {
     multipleIcons.splice(0, multipleIcons.length)
 
     return (this.customize = !this.customize)
+  },
+  selectAllTagsIcons(tagName) {
+    if (tagName === 'all') return this.iconsCategory
+
+    tagName = tagName.toLowerCase()
+    return this.iconsCategory.map((ele) => {
+      return {
+        category: ele.category,
+        icons: ele.icons.filter((ele) => ele.tags.includes(tagName))
+      }
+    })
   },
   toggleCookies() {
     Cookies.set('acceptance-remainder', 'true')
@@ -80,13 +98,42 @@ export const eosIconsState = {
     return multipleIcons
   },
   setSearchRegularList: function (value) {
+    if (value === '') {
+      return this.iconsCategory.map((ele) => {
+        return {
+          category: ele.category,
+          icons: ele.icons
+        }
+      })
+    }
+
+    let keywordsArray
+
+    if (value.includes(',')) {
+      keywordsArray = value.split(',')
+    } else if (value.includes(';')) {
+      keywordsArray = value.split(';')
+    } else if (value.includes('-')) {
+      keywordsArray = value.split('-')
+    } else {
+      keywordsArray = value.split(' ')
+    }
+
+    const searchArray = []
+
+    for (let i = 0; i < keywordsArray.length; i++) {
+      keywordsArray[i] = keywordsArray[i].trim()
+      if (keywordsArray[i] !== '')
+        searchArray.push(keywordsArray[i].toLowerCase())
+    }
+
     return this.iconsCategory.map((ele) => {
       return {
         category: ele.category,
         icons: ele.icons.filter(
           (ele) =>
-            ele.name.includes(value.toLowerCase()) ||
-            ele.tags.includes(value.toLowerCase())
+            searchMutliple(ele.name, searchArray) ||
+            searchMutliple(ele.tags, searchArray)
         )
       }
     })
@@ -120,6 +167,11 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         multipleIcons: eosIconsState.setMultipleIcons(action.selection)
+      }
+    case 'TOGGLE_ICON_TAGS':
+      return {
+        ...state,
+        iconsCategory: eosIconsState.selectAllTagsIcons(action.selection)
       }
     case 'TOGGLE_CUSTOMIZE':
       return {

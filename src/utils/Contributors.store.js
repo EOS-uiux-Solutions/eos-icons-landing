@@ -133,7 +133,7 @@ export const maintainers = [
       },
       {
         title: 'linkedin',
-        link: 'https://www.linkedin.com/in/richabisht/'
+        link: 'https://www.linkedin.com/in/kartikaybhutani/'
       },
       {
         title: 'git',

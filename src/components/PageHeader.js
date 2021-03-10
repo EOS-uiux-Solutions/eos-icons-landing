@@ -35,11 +35,20 @@ const PageHeader = (props) => {
           ? 0
           : windowsSize.isMobile
           ? 0
-          : `48px 0`
+          : `40px 0`
       }}
     >
       <div className='page-header-wrapper'>
-        <div className={`container`}>{children}</div>
+        <div className={`container`}>
+          <h1
+            style={{
+              display: windowsSize.isScrolled ? 'none' : ''
+            }}
+          >
+            More than 1000 free icons
+          </h1>
+          {children}
+        </div>
       </div>
     </div>
   )

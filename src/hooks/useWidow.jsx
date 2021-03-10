@@ -13,8 +13,8 @@ export const useWindowsSize = () => {
       width: window.innerWidth,
       height: window.innerHeight,
       isMobile: window.innerWidth <= 770,
-      isScrolled: window.scrollY >= 10,
-      isScrooledAndMobile: window.innerWidth <= 770 && window.scrollY >= 10
+      isScrolled: window.scrollY !== 0,
+      isScrooledAndMobile: window.innerWidth <= 770 && window.scrollY > 1
     })
   }
 
