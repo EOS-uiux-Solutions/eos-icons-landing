@@ -7,8 +7,6 @@ const multipleIcons = []
 
 const staticIcons = eosIcons.filter((ele) => ele.type === 'static')
 
-const allIconsByName = staticIcons.map((icon) => icon.name)
-
 /* Create an array with categories */
 const categories = Array.from(
   new Set(
@@ -88,9 +86,15 @@ export const eosIconsState = {
     this.cookiesToggle = !this.cookiesToggle
     return window.location.reload()
   },
-  selectAllIcons() {
+  selectAllIcons(search) {
     multipleIcons.splice(0, multipleIcons.length)
-    multipleIcons.push(...allIconsByName)
+    for (let i = 0; i < this.icons.length; i++) {
+      if (
+        this.icons[i].name.includes(search) ||
+        this.icons[i].tags.includes(search)
+      )
+        multipleIcons.push(this.icons[i].name)
+    }
     return multipleIcons
   },
   deselectAllIcons() {
@@ -181,7 +185,7 @@ export const iconsReducer = (state, action) => {
     case 'ADD_ALL_ICONS':
       return {
         ...state,
-        multipleIcons: eosIconsState.selectAllIcons()
+        multipleIcons: eosIconsState.selectAllIcons(action.search)
       }
     case 'REMOVE_ALL_ICONS':
       return {

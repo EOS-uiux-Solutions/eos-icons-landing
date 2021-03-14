@@ -257,7 +257,12 @@ const IconsSet = (props) => {
             ) : (
               <div className='how-to-use-block'>
                 <CustomizeIconsPanel
-                  selectAll={() => dispatch({ type: 'ADD_ALL_ICONS' })}
+                  selectAll={() =>
+                    dispatch({
+                      type: 'ADD_ALL_ICONS',
+                      search: searchValue
+                    })
+                  }
                   deselectAll={() => {
                     dispatch({ type: 'REMOVE_ALL_ICONS' })
                     setSearchValue('')
