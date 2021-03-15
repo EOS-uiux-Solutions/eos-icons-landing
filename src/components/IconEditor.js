@@ -19,6 +19,8 @@ const IconEditor = (props) => {
   const [horizontalFlip, setHorizontalFlip] = useState(false)
   const [verticalFlip, setVerticalFlip] = useState(false)
   const [generating, setGenerate] = useState(false)
+  const [svgCode, setSvgCode] = useState([])
+  const [svgError, setSvgError] = useState(true)
   const exportSizes = [
     '18',
     '24',
@@ -80,7 +82,32 @@ const IconEditor = (props) => {
         horizontalFlip ? -1 : 1
       }) scaleY(${verticalFlip ? -1 : 1}) rotate(${rotateAngle}deg)`
     }
-  }, [rotateAngle, color, horizontalFlip, verticalFlip])
+  }, [
+    rotateAngle,
+    color,
+    horizontalFlip,
+    verticalFlip,
+    iconNames,
+    apiBaseUrl,
+    currentPosition
+  ])
+
+  useEffect(() => {
+    const svgUrl = `${apiBaseUrl}/icon/svg/svgcode`
+    fetchSvg(svgUrl, iconNames)
+  }, [apiBaseUrl, iconNames])
+
+  const fetchSvg = async (Url, iconArray) => {
+    await axios
+      .post(Url, iconArray)
+      .then((req) => {
+        setSvgError(false)
+        setSvgCode(req.data.responseObject)
+      })
+      .catch(() => {
+        setSvgError(true)
+      })
+  }
 
   const postDataToApi = async (params) => {
     const { url, payload } = params
@@ -136,6 +163,33 @@ const IconEditor = (props) => {
               disableAlpha={true}
               onChangeComplete={changeColor}
             />
+            <br />
+            {!svgError && (
+              <div>
+                <p>SVG Code:</p>
+                <div className='input-group'>
+                  <div className='input-group-information'>
+                    <input
+                      id='copy-svg'
+                      className='input-group-element'
+                      readOnly='readOnly'
+                      value={`${svgCode[currentPosition]}`}
+                      disabled={!svgCode.length}
+                    />
+                    <Button
+                      type='button'
+                      disabled={!svgCode.length}
+                      onClick={() => {
+                        document.getElementById('copy-svg').select()
+                        document.execCommand('copy')
+                      }}
+                    >
+                      <i className='eos-icons eos-18'>content_copy</i>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           <div className='icon-div'>
             <p>
