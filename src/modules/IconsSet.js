@@ -27,6 +27,8 @@ const IconsSet = (props) => {
   const urlIconName = urlParams.get('iconName')
   const urlTagName = urlParams.get('tagName')
   const [selectMultiple, setSelectMultiple] = useState(true)
+  const [emptySearchResult, setEmptySearchResult] = useState(false)
+  const [suggestedString, setSuggestedString] = useState('')
 
   let setSearchWithUrlParam = urlIconName
 
@@ -40,6 +42,70 @@ const IconsSet = (props) => {
       setSearchValue(setSearchWithUrlParam)
   }, [setSearchWithUrlParam])
 
+  const editDistance = (string1, string2) => {
+    if (string2.length > string1.length) {
+      string2 = string2.slice(0, string1.length)
+    }
+    const m = string1.length
+    const n = string2.length
+    const dp = new Array(m + 1)
+
+    for (let i = 0; i <= m; i++) {
+      dp[i] = new Array(n + 1)
+    }
+
+    for (let i = 0; i <= m; i++) {
+      for (let j = 0; j <= n; j++) {
+        if (i === 0) dp[i][j] = j
+        else if (j === 0) dp[i][j] = i
+        else if (string1[i - 1] === string2[j - 1]) dp[i][j] = dp[i - 1][j - 1]
+        else
+          dp[i][j] = 1 + Math.min(dp[i][j - 1], dp[i - 1][j], dp[i - 1][j - 1])
+      }
+    }
+    return dp[m][n]
+  }
+
+  useEffect(() => {
+    if (emptySearchResult) {
+      let minimum = 100
+      let suggestedString
+      if (tab === 'Static Icons') {
+        for (let i = 0; i < eosIconsState.iconsCategory.length; i++) {
+          for (
+            let j = 0;
+            j < eosIconsState.iconsCategory[i].icons.length;
+            j++
+          ) {
+            const currentDistance = editDistance(
+              searchValue,
+              eosIconsState.iconsCategory[i].icons[j].name
+            )
+            if (currentDistance < minimum) {
+              minimum = currentDistance
+              suggestedString = eosIconsState.iconsCategory[i].icons[j].name
+            }
+          }
+        }
+        setSuggestedString(suggestedString)
+      } else {
+        let minimum = 100
+        let suggestedString
+        for (let i = 0; i < eosIconsState.animatedIcons.length; i++) {
+          const currentDistance = editDistance(
+            searchValue,
+            eosIconsState.animatedIcons[i]
+          )
+          if (currentDistance < minimum) {
+            minimum = currentDistance
+            suggestedString = eosIconsState.animatedIcons[i]
+          }
+        }
+        setSuggestedString(suggestedString)
+      }
+    }
+  }, [emptySearchResult, tab, searchValue])
+
   useEffect(() => {
     if (!selectMultiple) {
       window.history.replaceState(
@@ -48,6 +114,14 @@ const IconsSet = (props) => {
         `${window.location.pathname}`
       )
       setSearchValue('')
+    }
+
+    const count = getSearchResults(searchValue)
+
+    if (count === 0) {
+      setEmptySearchResult(true)
+    } else {
+      setEmptySearchResult(false)
     }
 
     dispatch({
@@ -62,6 +136,7 @@ const IconsSet = (props) => {
 
   useEffect(() => {
     if (searchValue === '' || searchValue === null) {
+      setEmptySearchResult(false)
       closeHowTo()
       dispatch({
         type:
@@ -177,6 +252,32 @@ const IconsSet = (props) => {
     }
   }
 
+  const getSearchResults = (value) => {
+    if (tab === 'Static Icons') {
+      let count = 0
+      for (let i = 0; i < eosIconsState.iconsCategory.length; i++) {
+        for (let j = 0; j < eosIconsState.iconsCategory[i].icons.length; j++) {
+          const icon = eosIconsState.iconsCategory[i].icons[j]
+          if (
+            icon.name.includes(value.toLowerCase()) ||
+            icon.tags.includes(value.toLowerCase())
+          ) {
+            count += 1
+          }
+        }
+      }
+      return count
+    } else {
+      let count = 0
+      for (let i = 0; i < eosIconsState.animatedIcons.length; i++) {
+        if (eosIconsState.animatedIcons[i].includes(value)) {
+          count += 1
+        }
+      }
+      return count
+    }
+  }
+
   return (
     <>
       <PageHeader>
@@ -206,6 +307,14 @@ const IconsSet = (props) => {
 
                 if (event.target.value === '') {
                   closeHowTo()
+                }
+
+                const count = getSearchResults(event.target.value)
+
+                if (count === 0) {
+                  setEmptySearchResult(true)
+                } else {
+                  setEmptySearchResult(false)
                 }
 
                 dispatch({
@@ -290,6 +399,16 @@ const IconsSet = (props) => {
           showPanel={showPanel}
         >
           <div label='Static Icons'>
+            {emptySearchResult && (
+              <div>
+                <h3>Did you mean {suggestedString} ?</h3>
+                <img
+                  src={require('../assets/images/no.jpg')}
+                  height='400px'
+                  alt='Sorry, no icons were found'
+                />
+              </div>
+            )}
             {state.iconsCategory.map((categoryObject, index) => {
               return categoryObject.icons.length > 0 ? (
                 <div key={index}>
@@ -320,6 +439,16 @@ const IconsSet = (props) => {
             })}
           </div>
           <div label='Animated Icons'>
+            {emptySearchResult && (
+              <div>
+                <h3>Did you mean {suggestedString} ?</h3>
+                <img
+                  src={require('../assets/images/no.jpg')}
+                  height='400px'
+                  alt='Sorry, no icons were found'
+                />
+              </div>
+            )}
             <div className='icons-list'>
               {state.animatedIcons.map((icon, index) => (
                 <div
