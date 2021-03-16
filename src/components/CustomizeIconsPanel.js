@@ -113,11 +113,7 @@ const CustomizeIconsPanel = (props) => {
           isActive={modal}
           show={modalToggle}
         >
-          {serverResponse === null ? (
-            <GeneratingFont />
-          ) : (
-            <ThankYou fn={downloadFont} timestamp={serverResponse} />
-          )}
+          {serverResponse === null ? <GeneratingFont /> : <ThankYou />}
         </Modal>
       ) : (
         ''
