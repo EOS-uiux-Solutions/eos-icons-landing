@@ -2,6 +2,11 @@
   position: relative;
   z-index: 0;
 
+  .toggle {
+    float: right;
+    margin-top: 7px;
+  }
+
   .tab-list {
     background: $white;
     border-bottom: 1px solid $light-gray;

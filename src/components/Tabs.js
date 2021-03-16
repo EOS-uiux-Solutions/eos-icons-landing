@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import useWindow from '../hooks/useWidow'
+import Toggle from './Toggle'
+import AppContext from '../utils/AppContext'
 
 const Tabs = (props) => {
-  const { children, setTab, customize, showPanel } = props
+  const { children, setTab, customize, showPanel, toggleCustomize } = props
 
   const [activeTab, setActiveTab] = useState(children[0].props.label)
   const [position, setPosition] = useState(0)
   const [windowsSize] = useWindow()
+  const { dispatch } = useContext(AppContext)
 
   useEffect(() => {
     setPosition(document.querySelector('.page-header').clientHeight + 54)
@@ -32,6 +35,20 @@ const Tabs = (props) => {
             </li>
           )
         })}
+        {!windowsSize.isMobile ? (
+          <div className='icons-control-toggle toggle'>
+            <Toggle
+              disabledStatus={activeTab === 'Animated Icons'}
+              name='Select multiple'
+              id='js-icon-picker'
+              onClick={() =>
+                toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
+              }
+            />
+          </div>
+        ) : (
+          ' '
+        )}
       </ul>
 
       <div className='tab-content'>

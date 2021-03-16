@@ -4,7 +4,6 @@ import AppContext from '../utils/AppContext'
 /* Components */
 import Icon from '../components/IconDisplay'
 import Tabs from '../components/Tabs'
-import Toogle from '../components/Toggle'
 import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
 import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
@@ -339,17 +338,6 @@ const IconsSet = (props) => {
             ) : (
               ' '
             )}
-
-            <div className='icons-control-toggle'>
-              <Toogle
-                disabledStatus={tab === 'Animated Icons'}
-                name='Select multiple'
-                id='js-icon-picker'
-                onClick={() =>
-                  toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
-                }
-              />
-            </div>
           </div>
         </div>
         <div className='icon-information'>
@@ -397,6 +385,7 @@ const IconsSet = (props) => {
           setTab={(e) => tabSwitch(e)}
           customize={state.customize}
           showPanel={showPanel}
+          toggleCustomize={(callback) => toggleCustomize(callback)}
         >
           <div label='Static Icons'>
             {emptySearchResult && (
