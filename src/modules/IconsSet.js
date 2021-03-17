@@ -403,9 +403,12 @@ const IconsSet = (props) => {
           <div label='Static Icons'>
             {emptySearchResult && (
               <div>
-                <h3>
+                <h3 className='suggested-search-line'>
                   Did you mean{' '}
-                  <span onClick={suggestionSearch}>{suggestedString}</span> ?
+                  <span className='suggested-search' onClick={suggestionSearch}>
+                    {suggestedString}
+                  </span>{' '}
+                  ?
                 </h3>
                 <img
                   className='icons-search'
@@ -447,9 +450,12 @@ const IconsSet = (props) => {
           <div label='Animated Icons'>
             {emptySearchResult && (
               <div>
-                <h3>
+                <h3 className='suggested-search-line'>
                   Did you mean{' '}
-                  <span onClick={suggestionSearch}>{suggestedString}</span> ?
+                  <span className='suggested-search' onClick={suggestionSearch}>
+                    {suggestedString}
+                  </span>{' '}
+                  ?
                 </h3>
                 <img
                   className='icons-search'

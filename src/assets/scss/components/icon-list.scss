@@ -50,6 +50,15 @@
   margin-right: auto;
 }
 
+.suggested-search-line {
+  font-weight: normal;
+
+  .suggested-search {
+    font-weight: bold;
+    text-decoration-line: underline;
+  }
+}
+
 .total-icons {
   margin: 5px 0px 0px 40px;
 }
