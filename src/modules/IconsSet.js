@@ -192,6 +192,19 @@ const IconsSet = (props) => {
     window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
   }
 
+  const suggestionSearch = () => {
+    setEmptySearchResult(false)
+    closeHowTo()
+    dispatch({
+      type:
+        tab === 'Static Icons'
+          ? 'TOGGLE_SEARCH_REGULAR_ICONS'
+          : 'TOGGLE_SEARCH_ANIMATED_ICONS',
+      search: suggestedString
+    })
+    setSearchValue(suggestedString)
+  }
+
   // Mark icon as active
   const isActive = (current, appState) => {
     if (appState.customize) {
@@ -390,8 +403,12 @@ const IconsSet = (props) => {
           <div label='Static Icons'>
             {emptySearchResult && (
               <div>
-                <h3>Did you mean {suggestedString} ?</h3>
+                <h3>
+                  Did you mean{' '}
+                  <span onClick={suggestionSearch}>{suggestedString}</span> ?
+                </h3>
                 <img
+                  className='icons-search'
                   src={require('../assets/images/no.jpg')}
                   height='400px'
                   alt='Sorry, no icons were found'
@@ -430,8 +447,12 @@ const IconsSet = (props) => {
           <div label='Animated Icons'>
             {emptySearchResult && (
               <div>
-                <h3>Did you mean {suggestedString} ?</h3>
+                <h3>
+                  Did you mean{' '}
+                  <span onClick={suggestionSearch}>{suggestedString}</span> ?
+                </h3>
                 <img
+                  className='icons-search'
                   src={require('../assets/images/no.jpg')}
                   height='400px'
                   alt='Sorry, no icons were found'
