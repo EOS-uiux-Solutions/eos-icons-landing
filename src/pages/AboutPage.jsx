@@ -20,7 +20,7 @@ export const AboutPage = () => {
         />
       </Helmet>
 
-      <PageHeader simple>
+      <PageHeader simple showHeaderIcon={false}>
         <h1>THE HI-TECH ICONS nobody thought about</h1>
         <p className='subheadline'>
           Open source, customisable, including all of Material icons.
