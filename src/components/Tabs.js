@@ -4,7 +4,14 @@ import Toggle from './Toggle'
 import AppContext from '../utils/AppContext'
 
 const Tabs = (props) => {
-  const { children, setTab, customize, showPanel, toggleCustomize } = props
+  const {
+    children,
+    setTab,
+    customize,
+    showPanel,
+    toggleCustomize,
+    showMultipleSwitch
+  } = props
 
   const [activeTab, setActiveTab] = useState(children[0].props.label)
   const [position, setPosition] = useState(0)
@@ -35,7 +42,7 @@ const Tabs = (props) => {
             </li>
           )
         })}
-        {!windowsSize.isMobile ? (
+        {!windowsSize.isMobile && showMultipleSwitch ? (
           <div className='icons-control-toggle toggle'>
             <Toggle
               disabledStatus={activeTab === 'Animated Icons'}

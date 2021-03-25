@@ -20,7 +20,7 @@ const PageHeader = (props) => {
   const [windowsSize] = useWindow()
 
   /* We destructure the props pased to the component */
-  const { children, size: height, simple } = props
+  const { children, size: height, simple, showHeaderIcon } = props
   const { size } = config
 
   return (
@@ -40,13 +40,16 @@ const PageHeader = (props) => {
     >
       <div className='page-header-wrapper'>
         <div className={`container`}>
-          <h1
-            style={{
-              display: windowsSize.isScrolled ? 'none' : ''
-            }}
-          >
-            More than 1000 free icons
-          </h1>
+          {showHeaderIcon && (
+            <h1
+              style={{
+                display: windowsSize.isScrolled ? 'none' : ''
+              }}
+            >
+              More than 1000 free icons
+            </h1>
+          )}
+
           {children}
         </div>
       </div>

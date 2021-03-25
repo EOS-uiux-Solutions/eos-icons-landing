@@ -292,7 +292,7 @@ const IconsSet = (props) => {
 
   return (
     <>
-      <PageHeader>
+      <PageHeader showHeaderIcon={true}>
         <div className='icons-control'>
           <div className='icons-control-search'>
             <i
@@ -404,6 +404,7 @@ const IconsSet = (props) => {
           customize={state.customize}
           showPanel={showPanel}
           toggleCustomize={(callback) => toggleCustomize(callback)}
+          showMultipleSwitch={true}
         >
           <div label='Static Icons'>
             {emptySearchResult && (
