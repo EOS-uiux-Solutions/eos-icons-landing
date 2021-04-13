@@ -94,20 +94,28 @@ const IconEditor = (props) => {
 
   useEffect(() => {
     const svgUrl = `${apiBaseUrl}/icon/svg/svgcode`
-    fetchSvg(svgUrl, iconNames)
-  }, [apiBaseUrl, iconNames])
 
-  const fetchSvg = async (Url, iconArray) => {
-    await axios
-      .post(Url, iconArray)
-      .then((req) => {
-        setSvgError(false)
-        setSvgCode(req.data.responseObject)
-      })
-      .catch(() => {
-        setSvgError(true)
-      })
-  }
+    const fetchSvg = async (Url, iconArray) => {
+      const payload = {
+        iconArray: iconArray,
+        customizationConfig: {
+          colorCode: color,
+          rotateAngle: rotateAngle,
+          flip: { horizontal: horizontalFlip, vertical: verticalFlip }
+        }
+      }
+      await axios
+        .post(Url, payload)
+        .then((req) => {
+          setSvgError(false)
+          setSvgCode(req.data.responseObject)
+        })
+        .catch(() => {
+          setSvgError(true)
+        })
+    }
+    fetchSvg(svgUrl, iconNames)
+  }, [apiBaseUrl, color, horizontalFlip, iconNames, rotateAngle, verticalFlip])
 
   const postDataToApi = async (params) => {
     const { url, payload } = params
