@@ -1,0 +1,48 @@
+/*
+Generated with grunt-webfont
+Created by EOS Design System - EOS icons
+Visit our Design System: https://gitlab.com/SUSE-UIUX/eos/
+Visit our Iconic font repo: https://gitlab.com/SUSE-UIUX/eos-icons
+*/
+
+@font-face {
+  font-family: 'eos-icons-outlined';
+  src: url('../../fonts/outlined/eos-icons-outlined.eot?9c65b41daec2202c415b4986d50f00fb');
+  src: url('../../fonts/outlined/eos-icons-outlined.eot?9c65b41daec2202c415b4986d50f00fb#iefix')
+      format('embedded-opentype'),
+    url('../../fonts/outlined/eos-icons-outlined.woff2?9c65b41daec2202c415b4986d50f00fb')
+      format('woff2'),
+    url('../../fonts/outlined/eos-icons-outlined.woff?9c65b41daec2202c415b4986d50f00fb')
+      format('woff'),
+    url('../../fonts/outlined/eos-icons-outlined.ttf?9c65b41daec2202c415b4986d50f00fb')
+      format('truetype'),
+    url('../../fonts/outlined/eos-icons-outlined.svg?9c65b41daec2202c415b4986d50f00fb#eos-icons-outlined')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.eos-icons-outlined {
+  font-family: 'eos-icons-outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

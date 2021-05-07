@@ -433,8 +433,9 @@ const IconsSet = (props) => {
                       <Icon
                         size={36}
                         active={isActive(icon.name, state)}
-                        key={i}
+                        key={icon.name}
                         name={icon.name}
+                        iconsTheme={state.iconsTheme}
                         action={() =>
                           selectIcon(
                             icon,

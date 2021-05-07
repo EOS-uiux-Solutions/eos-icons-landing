@@ -1,0 +1,30 @@
+$toggle-background: #e0e0e0;
+
+.icon-version-wrapper {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+
+  .icon-version-toggle {
+    align-items: center;
+    background: $toggle-background;
+    display: flex;
+    margin-left: $s;
+    margin-top: 6px;
+    max-height: 34px;
+
+    span {
+      align-content: center;
+      display: flex;
+      padding: 5px 8px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.active {
+        background: $primary;
+      }
+    }
+  }
+}

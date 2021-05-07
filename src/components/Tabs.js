@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from 'react'
 import useWindow from '../hooks/useWidow'
 import Toggle from './Toggle'
 import AppContext from '../utils/AppContext'
+import IconVersionToggle from '../components/IconVersionToggle'
+import { SHOW_THEME_SWITCH } from '../config.json'
 
 const Tabs = (props) => {
   const {
@@ -42,8 +44,11 @@ const Tabs = (props) => {
             </li>
           )
         })}
+
         {!windowsSize.isMobile && showMultipleSwitch ? (
-          <div className='icons-control-toggle toggle'>
+          <div className='icons-control-toggle'>
+            {SHOW_THEME_SWITCH ? <IconVersionToggle /> : undefined}
+
             <Toggle
               disabledStatus={activeTab === 'Animated Icons'}
               name='Select multiple'

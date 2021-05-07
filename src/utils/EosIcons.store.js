@@ -45,6 +45,7 @@ export const eosIconsState = {
   iconsCategoryList: iconsCategory.map((ele) => ele.category),
   multipleIcons,
   customize: false,
+  iconsTheme: 'filled',
   cookiesToggle: false,
   setMultipleIcons(iconName) {
     !multipleIcons.includes(iconName)
@@ -216,6 +217,11 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         iconsCategory: eosIconsState.setCategoryFilter(action.category)
+      }
+    case 'SET_ICONS_THEME':
+      return {
+        ...state,
+        iconsTheme: (eosIconsState.iconsTheme = action.action)
       }
     default:
       return { ...state }
