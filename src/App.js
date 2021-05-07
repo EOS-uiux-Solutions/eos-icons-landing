@@ -2,7 +2,7 @@ import React, { useReducer } from 'react'
 import { Router } from '@reach/router'
 import { iconsReducer, eosIconsState } from './utils/EosIcons.store'
 import TagManager from 'react-gtm-module'
-import '../node_modules/eos-icons/dist/css/eos-icons.css'
+// import '../node_modules/eos-icons/dist/css/eos-icons.css'
 import './assets/scss/index.scss'
 import { GTM } from './config.json'
 

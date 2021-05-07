@@ -1,4 +1,5 @@
 {
   "GTM": "Your GTM",
-  "ICON_PICKER_API_URL": "Your API URL"
+  "ICON_PICKER_API_URL": "Your API URL",
+  "SHOW_THEME_SWITCH": "boolean"
 }

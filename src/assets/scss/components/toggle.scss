@@ -1,4 +1,6 @@
 .toggle {
+  align-items: center;
+  align-self: center;
   display: flex;
   margin: 0 $m;
 
@@ -58,4 +60,10 @@
   &-label:active &-button {
     width: 60px;
   }
+}
+
+.icons-control-toggle {
+  position: absolute;
+  right: 8px;
+  top: 9px;
 }
