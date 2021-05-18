@@ -53,8 +53,8 @@ const Docs = () => {
                 product:
               </p>
 
-              <h2>
-                Installing with npm
+              <h3 className='padding-top-xs'>
+                Installing the npm
                 <a
                   href='https://www.npmjs.com/package/eos-icons'
                   data-event-category='External link'
@@ -66,15 +66,15 @@ const Docs = () => {
                   {' '}
                   <i className='eos-icons eos-18'>open_in_new</i>
                 </a>
-              </h2>
+              </h3>
               <pre className='code language-shell'>
                 <code>npm install eos-icons --save</code>
               </pre>
 
-              <h2>
-                With our CDN
+              <h3 className='padding-top-xs'>
+                Using the CDN
                 <a
-                  href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css'
+                  href='https://cdn.jsdelivr.net/npm/eos-icons/dist/'
                   data-event-category='External link'
                   data-event-action='Link to EOS Icons CDN (title)'
                   data-event-label='Docs page'
@@ -84,9 +84,9 @@ const Docs = () => {
                   {' '}
                   <i className='eos-icons eos-18'>open_in_new</i>
                 </a>
-              </h2>
+              </h3>
               <p>
-                For EOS set:
+                Default theme (filled):
                 <a
                   href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css'
                   data-event-category='External link'
@@ -98,7 +98,27 @@ const Docs = () => {
                   {' '}
                   https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css
                 </a>
+                <br />
+                Outline theme:
+                <a
+                  href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/outlined/eos-icons-outlined.css'
+                  data-event-category='External link'
+                  data-event-action='Link to EOS Icons CDN'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  https://cdn.jsdelivr.net/npm/eos-icons/dist/css/outlined/eos-icons-outlined.css
+                </a>
               </p>
+              <p>
+                Add one of the following lines in your{' '}
+                <code> &lt;head&gt;</code> tag as{' '}
+                <code> link:css </code>
+                according to which theme you want to import:
+              </p>
+              <h4>Default theme</h4>
               <pre className='code language-html'>
                 <code>
                   {
@@ -106,15 +126,17 @@ const Docs = () => {
                   }
                 </code>
               </pre>
+              <h4>Outlined theme</h4>
+              <pre className='code language-html'>
+                <code>
+                  {
+                    "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/outlined/eos-icons-outlined.css' />"
+                  }
+                </code>
+              </pre>
 
-              <p>
-                Import them in your{' '}
-                <span className='command'> &lt;head&gt;</span> tag as{' '}
-                <span className='command'> link:css </span>.
-              </p>
-
-              <h2>
-                With our Rails gem
+              <h3 className='padding-top-xs'>
+                Installing the Ruby gem
                 <a
                   href='https://rubygems.org/gems/eos-icons-font'
                   data-event-category='External link'
@@ -126,7 +148,7 @@ const Docs = () => {
                   {' '}
                   <i className='eos-icons eos-18'>open_in_new</i>
                 </a>
-              </h2>
+              </h3>
 
               <pre className='code language-shell'>
                 <code>gem install eos-icons-font</code>
@@ -134,7 +156,7 @@ const Docs = () => {
 
               <p>
                 Add the following directive to your application:{' '}
-                <span className='command'>*= require eos-icons-font</span>
+                <code>*= require eos-icons-font</code>
               </p>
 
               <h2>Using EOS icons in your projects</h2>
@@ -143,21 +165,31 @@ const Docs = () => {
                 and CSS files in your project:
               </p>
               <p>
-                1- Add the <span className='command'>eos-icons.css</span> file
-                available under the dist/css folder into your project's
-                <span className='command'> &lt;head&gt;</span>:
+                1- Add the <code>eos-icons.css</code> or <code>eos-icons-outlined.css</code> file
+                available under the
+                <code> dist/css </code>
+                folder into your project's
+                <code> &lt;head&gt;</code>:
               </p>
 
               <pre className='code language-html'>
                 <code>
-                  {"<link rel='stylesheet' href='assets/eos-icons.css'/>"}
+                  {"<link rel='stylesheet' href='eos-icons.css'/>"}
+                </code>
+              </pre>
+
+              or
+
+              <pre className='code language-html'>
+                <code>
+                  {"<link rel='stylesheet' href='eos-icons-outlined.css'/>"}
                 </code>
               </pre>
               <p>
-                2- Make sure the font files available in{' '}
-                <span className='command'>thedist/fonts</span> folder are placed
-                under your <span className='command'>assets/fonts</span> folder
-                so the .css file can read them correctly.
+                2- Make sure the font files available in the{' '}
+                <code>dist/fonts</code> folder are placed
+                at the same location as your <code>eos-icons.css</code>
+                so the files can be read correctly.
               </p>
               <p>3- Use the icons in your html as follows:</p>
 
