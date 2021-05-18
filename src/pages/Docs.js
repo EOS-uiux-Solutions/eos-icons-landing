@@ -119,7 +119,7 @@ const Docs = () => {
               <pre className='code language-html'>
                 <code>
                   {
-                    "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css' />"
+                    "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/eos-icons.css' />"
                   }
                 </code>
               </pre>
@@ -127,7 +127,7 @@ const Docs = () => {
               <pre className='code language-html'>
                 <code>
                   {
-                    "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/outlined/eos-icons-outlined.css' />"
+                    "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/outlined/eos-icons-outlined.css' />"
                   }
                 </code>
               </pre>
@@ -162,7 +162,9 @@ const Docs = () => {
                 <code>eos-icons-outlined.css</code> file available under the
                 <code> dist/css </code>
                 folder into your project's
-                <code> &lt;head&gt;</code>:
+                <code> &lt;head&gt;</code>.
+                <br />
+                (*) If you're using the CDN, you can skip this step.
               </p>
               <pre className='code language-html'>
                 <code>{"<link rel='stylesheet' href='eos-icons.css'/>"}</code>
@@ -174,36 +176,50 @@ const Docs = () => {
                 </code>
               </pre>
               <p>
-                2- Make sure the font files available in the{' '}
-                <code>dist/fonts</code> folder are placed at the same location
-                as your <code>eos-icons.css </code>
-                so the files can be read correctly.
+                2- Make sure the fonts folder available at{' '}
+                <code>dist/fonts</code> is placed at the same location as your{' '}
+                <code>eos-icons.css </code> file so the fonts can be read
+                correctly.
+                <br />
+                (*) If you're using the CDN, you can skip this step.
               </p>
+              <code>
+                - index.html
+                <br />
+                - eos-icons.css
+                <br />- fonts/...
+              </code>
               <p>3- Use the icons in your html as follows:</p>
               <pre className='code language-html'>
                 <code>{"<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"}</code>
               </pre>
+              or for outlined icons
+              <pre className='code language-html'>
+                <code>
+                  {"<i class='eos-icons-outlined'>LIGATURE_OF_THE_ICON</i>"}
+                </code>
+              </pre>
               <p>
-                Where the LIGATURE_OF_THE_ICON is the name of the icon. Use our
-                &nbsp;
+                Where the <code>LIGATURE_OF_THE_ICON</code> is the name of the
+                icon. Go to the
                 <a
-                  href='/cheatsheet'
+                  href='/'
                   data-event-category='Internal link'
-                  data-event-action='Link to cheatsheet'
+                  data-event-action='Link to home page'
                   data-event-label='Docs page'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   {' '}
-                  cheatsheet
-                </a>
-                &nbsp; to see the icon's name.
+                  home page
+                </a>{' '}
+                to see the all icons' names.
               </p>
               <h2>Using Animated icons</h2>
               <p>
                 The animated EOS icons are built using SMIL SVG animations. To
                 implement them you don't need anything special, just an
-                <code>img</code> tag with the <code>src</code> to the svg. For
+                <code> img</code> tag with the <code>src</code> to the svg. For
                 example:
               </p>
               <pre className='code language-html'>
@@ -212,15 +228,15 @@ const Docs = () => {
               <p>
                 Head to the
                 <a
-                  href='/cheatsheet'
+                  href='/'
                   data-event-category='Internal link'
-                  data-event-action='Link to cheatsheet (animated)'
+                  data-event-action='Link to home page'
                   data-event-label='Docs page'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   {' '}
-                  cheatsheet
+                  home page
                 </a>{' '}
                 to download animated icons. Click on the icon you want to use to
                 see the code snippet.
