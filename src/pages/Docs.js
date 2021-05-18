@@ -52,7 +52,6 @@ const Docs = () => {
                 There are several options for you to use EOS icons in your
                 product:
               </p>
-
               <h3 className='padding-top-xs'>
                 Installing the npm
                 <a
@@ -70,7 +69,6 @@ const Docs = () => {
               <pre className='code language-shell'>
                 <code>npm install eos-icons --save</code>
               </pre>
-
               <h3 className='padding-top-xs'>
                 Using the CDN
                 <a
@@ -134,7 +132,6 @@ const Docs = () => {
                   }
                 </code>
               </pre>
-
               <h3 className='padding-top-xs'>
                 Installing the Ruby gem
                 <a
@@ -149,16 +146,13 @@ const Docs = () => {
                   <i className='eos-icons eos-18'>open_in_new</i>
                 </a>
               </h3>
-
               <pre className='code language-shell'>
                 <code>gem install eos-icons-font</code>
               </pre>
-
               <p>
                 Add the following directive to your application:{' '}
                 <code>*= require eos-icons-font</code>
               </p>
-
               <h2>Using EOS icons in your projects</h2>
               <p>
                 Just like in any other iconic font, you need to add the Fonts
@@ -171,7 +165,6 @@ const Docs = () => {
                 folder into your project's
                 <code> &lt;head&gt;</code>:
               </p>
-
               <pre className='code language-html'>
                 <code>
                   {"<link rel='stylesheet' href='eos-icons.css'/>"}
@@ -188,7 +181,7 @@ const Docs = () => {
               <p>
                 2- Make sure the font files available in the{' '}
                 <code>dist/fonts</code> folder are placed
-                at the same location as your <code>eos-icons.css</code>
+                at the same location as your <code>eos-icons.css </code>
                 so the files can be read correctly.
               </p>
               <p>3- Use the icons in your html as follows:</p>
