@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext, useRef} from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import AppContext from '../utils/AppContext'
 
 /* Components */
@@ -6,17 +6,17 @@ import Icon from '../components/IconDisplay'
 import Tabs from '../components/Tabs'
 import CustomizeIconsPanel from '../components/CustomizeIconsPanel'
 import HowTo from '../components/HowToPanel'
-import {eosIconsState} from '../utils/EosIcons.store'
+import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
-import {CategorySelector} from '../components/CategorySelector'
-import {useWindowsSize} from '../hooks/useWidow'
+import { CategorySelector } from '../components/CategorySelector'
+import { useWindowsSize } from '../hooks/useWidow'
 
 const IconsSet = (props) => {
   const [iconSelected, setIconSelected] = useState('')
   const [showPanel, setShowPanel] = useState(false)
   const [searchValue, setSearchValue] = useState('')
   const [size] = useWindowsSize()
-  const {state, dispatch} = useContext(AppContext)
+  const { state, dispatch } = useContext(AppContext)
   const [tab, setActiveTab] = useState('Static Icons')
   const [staticHistory, setStaticHistory] = useState('')
   const [animatedHistory, setAnimatedHistory] = useState('')
@@ -49,12 +49,12 @@ const IconsSet = (props) => {
     const n = string2.length
     const dp = new Array(m + 1)
 
-    for (let i = 0;i <= m;i++) {
+    for (let i = 0; i <= m; i++) {
       dp[i] = new Array(n + 1)
     }
 
-    for (let i = 0;i <= m;i++) {
-      for (let j = 0;j <= n;j++) {
+    for (let i = 0; i <= m; i++) {
+      for (let j = 0; j <= n; j++) {
         if (i === 0) dp[i][j] = j
         else if (j === 0) dp[i][j] = i
         else if (string1[i - 1] === string2[j - 1]) dp[i][j] = dp[i - 1][j - 1]
@@ -70,7 +70,7 @@ const IconsSet = (props) => {
       let minimum = 100
       let suggestedString
       if (tab === 'Static Icons') {
-        for (let i = 0;i < eosIconsState.iconsCategory.length;i++) {
+        for (let i = 0; i < eosIconsState.iconsCategory.length; i++) {
           for (
             let j = 0;
             j < eosIconsState.iconsCategory[i].icons.length;
@@ -90,7 +90,7 @@ const IconsSet = (props) => {
       } else {
         let minimum = 100
         let suggestedString
-        for (let i = 0;i < eosIconsState.animatedIcons.length;i++) {
+        for (let i = 0; i < eosIconsState.animatedIcons.length; i++) {
           const currentDistance = editDistance(
             searchValue,
             eosIconsState.animatedIcons[i]
@@ -173,7 +173,7 @@ const IconsSet = (props) => {
       }
       if (iconDetails.length) {
         setShowPanel(true)
-        setIconSelected({name: urlIconName, tags: iconDetails[0].tags})
+        setIconSelected({ name: urlIconName, tags: iconDetails[0].tags })
       }
     }
 
@@ -267,8 +267,8 @@ const IconsSet = (props) => {
   const getSearchResults = (value) => {
     if (tab === 'Static Icons') {
       let count = 0
-      for (let i = 0;i < eosIconsState.iconsCategory.length;i++) {
-        for (let j = 0;j < eosIconsState.iconsCategory[i].icons.length;j++) {
+      for (let i = 0; i < eosIconsState.iconsCategory.length; i++) {
+        for (let j = 0; j < eosIconsState.iconsCategory[i].icons.length; j++) {
           const icon = eosIconsState.iconsCategory[i].icons[j]
           if (
             icon.name.includes(value.toLowerCase()) ||
@@ -281,7 +281,7 @@ const IconsSet = (props) => {
       return count
     } else {
       let count = 0
-      for (let i = 0;i < eosIconsState.animatedIcons.length;i++) {
+      for (let i = 0; i < eosIconsState.animatedIcons.length; i++) {
         if (eosIconsState.animatedIcons[i].includes(value)) {
           count += 1
         }
@@ -296,8 +296,9 @@ const IconsSet = (props) => {
         <div className='icons-control'>
           <div className='icons-control-search'>
             <i
-              className={`eos-icons ${searchValue.length ? 'cursor-pointer' : ''
-                }`}
+              className={`eos-icons ${
+                searchValue.length ? 'cursor-pointer' : ''
+              }`}
               onClick={() => {
                 if (searchValue.length > 0) {
                   searchRef.current.value = ''
@@ -374,7 +375,7 @@ const IconsSet = (props) => {
                     })
                   }
                   deselectAll={() => {
-                    dispatch({type: 'REMOVE_ALL_ICONS'})
+                    dispatch({ type: 'REMOVE_ALL_ICONS' })
                     setSearchValue('')
                     window.history.replaceState(
                       '',
@@ -476,11 +477,12 @@ const IconsSet = (props) => {
             <div className='icons-list'>
               {state.animatedIcons.map((icon, index) => (
                 <div
-                  className={`icon-container ${icon === iconSelected?.name ? 'active' : ''
-                    }`}
+                  className={`icon-container ${
+                    icon === iconSelected?.name ? 'active' : ''
+                  }`}
                   key={index}
                   onClick={() => {
-                    setIconSelected({name: icon})
+                    setIconSelected({ name: icon })
                     setShowPanel(true)
                   }}
                 >
