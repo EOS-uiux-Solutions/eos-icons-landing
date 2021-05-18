@@ -112,8 +112,7 @@ const Docs = () => {
               </p>
               <p>
                 Add one of the following lines in your{' '}
-                <code> &lt;head&gt;</code> tag as{' '}
-                <code> link:css </code>
+                <code> &lt;head&gt;</code> tag as <code> link:css </code>
                 according to which theme you want to import:
               </p>
               <h4>Default theme</h4>
@@ -159,20 +158,16 @@ const Docs = () => {
                 and CSS files in your project:
               </p>
               <p>
-                1- Add the <code>eos-icons.css</code> or <code>eos-icons-outlined.css</code> file
-                available under the
+                1- Add the <code>eos-icons.css</code> or{' '}
+                <code>eos-icons-outlined.css</code> file available under the
                 <code> dist/css </code>
                 folder into your project's
                 <code> &lt;head&gt;</code>:
               </p>
               <pre className='code language-html'>
-                <code>
-                  {"<link rel='stylesheet' href='eos-icons.css'/>"}
-                </code>
+                <code>{"<link rel='stylesheet' href='eos-icons.css'/>"}</code>
               </pre>
-
               or
-
               <pre className='code language-html'>
                 <code>
                   {"<link rel='stylesheet' href='eos-icons-outlined.css'/>"}
@@ -180,12 +175,11 @@ const Docs = () => {
               </pre>
               <p>
                 2- Make sure the font files available in the{' '}
-                <code>dist/fonts</code> folder are placed
-                at the same location as your <code>eos-icons.css </code>
+                <code>dist/fonts</code> folder are placed at the same location
+                as your <code>eos-icons.css </code>
                 so the files can be read correctly.
               </p>
               <p>3- Use the icons in your html as follows:</p>
-
               <pre className='code language-html'>
                 <code>{"<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"}</code>
               </pre>
@@ -212,7 +206,6 @@ const Docs = () => {
                 <code>img</code> tag with the <code>src</code> to the svg. For
                 example:
               </p>
-
               <pre className='code language-html'>
                 <code>{"<img src='loading'/>"}</code>
               </pre>
