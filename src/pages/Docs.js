@@ -72,7 +72,7 @@ const Docs = () => {
               <h3 className='padding-top-xs'>
                 Using the CDN
                 <a
-                  href='https://cdn.jsdelivr.net/npm/eos-icons/dist/'
+                  href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/'
                   data-event-category='External link'
                   data-event-action='Link to EOS Icons CDN (title)'
                   data-event-label='Docs page'
@@ -86,7 +86,7 @@ const Docs = () => {
               <p>
                 Default theme (filled):
                 <a
-                  href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css'
+                  href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/eos-icons.css'
                   data-event-category='External link'
                   data-event-action='Link to EOS Icons CDN'
                   data-event-label='Docs page'
@@ -94,12 +94,12 @@ const Docs = () => {
                   rel='noopener noreferrer'
                 >
                   {' '}
-                  https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css
+                  https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/eos-icons.css
                 </a>
                 <br />
                 Outline theme:
                 <a
-                  href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/outlined/eos-icons-outlined.css'
+                  href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/outlined/eos-icons-outlined.css'
                   data-event-category='External link'
                   data-event-action='Link to EOS Icons CDN'
                   data-event-label='Docs page'
@@ -107,7 +107,7 @@ const Docs = () => {
                   rel='noopener noreferrer'
                 >
                   {' '}
-                  https://cdn.jsdelivr.net/npm/eos-icons/dist/css/outlined/eos-icons-outlined.css
+                  https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/outlined/eos-icons-outlined.css
                 </a>
               </p>
               <p>
