@@ -126,7 +126,7 @@ const HowToPanel = (props) => {
                   value={
                     theme === 'filled'
                       ? `<i class='eos-icons'>${iconName}</i>`
-                      : `<i class='eos-icons-oulined'>${iconName}</i>`
+                      : `<i class='eos-icons-outlined'>${iconName}</i>`
                   }
                 />
                 <Button
