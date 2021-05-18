@@ -4,7 +4,7 @@ import Button from './Button'
 import IconEditor from './IconEditor'
 
 const HowToPanel = (props) => {
-  const { show, close, iconName, type, iconTags } = props
+  const { show, close, iconName, type, iconTags, theme } = props
   const ref = useRef()
 
   const [iconEditor, setIconEditor] = useState(false)
@@ -123,7 +123,11 @@ const HowToPanel = (props) => {
                   id='copy-code'
                   className='input-group-element'
                   readOnly='readOnly'
-                  value={`<i class='eos-icons'>${iconName}</i>`}
+                  value={
+                    theme === 'filled'
+                      ? `<i class='eos-icons'>${iconName}</i>`
+                      : `<i class='eos-icons-oulined'>${iconName}</i>`
+                  }
                 />
                 <Button
                   type='button'
