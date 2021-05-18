@@ -362,6 +362,7 @@ const IconsSet = (props) => {
                   showPanel={showPanel}
                   iconSelected={iconSelected}
                   closeHowTo={closeHowTo}
+                  theme={state.iconsTheme}
                 />
               </div>
             ) : (
@@ -393,6 +394,7 @@ const IconsSet = (props) => {
                 iconSelected={iconSelected}
                 closeHowTo={closeHowTo}
                 setSearchValue={setSearchValue}
+                theme={state.iconsTheme}
               />
             </div>
           )}
@@ -504,7 +506,8 @@ const ShowHowToUse = ({
   showPanel,
   iconSelected,
   closeHowTo,
-  setSearchValue
+  setSearchValue,
+  theme
 }) => {
   return tab === 'Static Icons' ? (
     <div>
@@ -513,6 +516,7 @@ const ShowHowToUse = ({
         iconName={iconSelected?.name}
         iconTags={iconSelected?.tags}
         type='static'
+        theme={theme}
         close={closeHowTo}
         setSearchValue={setSearchValue}
       />
