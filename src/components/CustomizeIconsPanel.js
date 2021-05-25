@@ -52,7 +52,7 @@ const CustomizeIconsPanel = (props) => {
       modalToggle()
       sendData({
         url: `${ICON_PICKER_API_URL}/iconsapi${
-          state.iconsTheme ? '?theme=outlined' : ''
+          state.iconsTheme === 'outlined' ? '?theme=outlined' : ''
         }`,
         payload: value.multipleIcons
       }).then(setServerResponse)
