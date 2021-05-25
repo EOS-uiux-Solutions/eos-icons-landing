@@ -4,7 +4,7 @@ import Button from './Button'
 import IconEditor from './IconEditor'
 
 const HowToPanel = (props) => {
-  const { show, close, iconName, type, iconTags, theme } = props
+  const { show, close, iconName, type, iconTags } = props
   const ref = useRef()
 
   const [iconEditor, setIconEditor] = useState(false)
@@ -14,7 +14,7 @@ const HowToPanel = (props) => {
     setIconEditor(!iconEditor)
   }
 
-  const { dispatch } = useContext(AppContext)
+  const { state, dispatch } = useContext(AppContext)
   function useOnClickOrEsc(ref, handler) {
     useEffect(() => {
       const listenerKeydown = (event) => {
@@ -124,7 +124,7 @@ const HowToPanel = (props) => {
                   className='input-group-element'
                   readOnly='readOnly'
                   value={
-                    theme === 'filled'
+                    state.iconsTheme === 'filled'
                       ? `<i class='eos-icons'>${iconName}</i>`
                       : `<i class='eos-icons-outlined'>${iconName}</i>`
                   }
@@ -176,6 +176,7 @@ const HowToPanel = (props) => {
             show={iconEditorToggle}
             iconNames={[iconName]}
             iconType={iconType}
+            theme={state.iconsTheme}
           />
         ) : (
           ''

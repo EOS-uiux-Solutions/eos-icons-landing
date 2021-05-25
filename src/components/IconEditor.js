@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { SketchPicker } from 'react-color'
 import Button from './Button'
 import axios from 'axios'
 import loading from '../assets/images/loading-white.svg'
+import AppContext from '../utils/AppContext'
 /* https://www.npmjs.com/package/react-svg the package to work with SVG's */
 import { ReactSVG } from 'react-svg'
 import { ICON_PICKER_API_URL } from '../config.json'
@@ -21,6 +22,8 @@ const IconEditor = (props) => {
   const [generating, setGenerate] = useState(false)
   const [svgCode, setSvgCode] = useState([])
   const [svgError, setSvgError] = useState(true)
+  const { state } = useContext(AppContext)
+
   const exportSizes = [
     '18',
     '24',
@@ -93,7 +96,9 @@ const IconEditor = (props) => {
   ])
 
   useEffect(() => {
-    const svgUrl = `${apiBaseUrl}/icon/svg/svgcode`
+    const svgUrl = `${apiBaseUrl}/icon/svg/svgcode${
+      state.iconsTheme === 'outlined' ? '?theme=outlined' : ''
+    }`
 
     const fetchSvg = async (Url, iconArray) => {
       const payload = {
@@ -115,7 +120,15 @@ const IconEditor = (props) => {
         })
     }
     fetchSvg(svgUrl, iconNames)
-  }, [apiBaseUrl, color, horizontalFlip, iconNames, rotateAngle, verticalFlip])
+  }, [
+    apiBaseUrl,
+    color,
+    horizontalFlip,
+    iconNames,
+    rotateAngle,
+    state.iconsTheme,
+    verticalFlip
+  ])
 
   const postDataToApi = async (params) => {
     const { url, payload } = params
@@ -139,7 +152,9 @@ const IconEditor = (props) => {
       e.preventDefault()
       setGenerate(true)
       postDataToApi({
-        url: `${apiBaseUrl}/icon-customization`,
+        url: `${apiBaseUrl}/icon-customization${
+          state.iconsTheme === 'outlined' ? '?theme=outlined' : ''
+        }`,
         payload: {
           icons: iconNames,
           exportAs: exportAs,
@@ -225,7 +240,13 @@ const IconEditor = (props) => {
                     />
                   </>
                 ) : (
-                  <i className='eos-icons'>{iconNames[currentPosition]}</i>
+                  <i
+                    className={`eos-icons${
+                      state.iconsTheme === 'outlined' ? '-outlined' : ''
+                    }`}
+                  >
+                    {iconNames[currentPosition]}
+                  </i>
                 )}
               </div>
               {iconNames.length > 1 ? (
