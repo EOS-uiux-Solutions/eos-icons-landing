@@ -27,7 +27,7 @@ const downloadFont = (props) => {
 }
 
 const CustomizeIconsPanel = (props) => {
-  const { dispatch } = useContext(AppContext)
+  const { state, dispatch } = useContext(AppContext)
   const [iconEditor, setIconEditor] = useState(false)
 
   const iconEditorToggle = (e) => {
@@ -51,7 +51,9 @@ const CustomizeIconsPanel = (props) => {
       e.preventDefault()
       modalToggle()
       sendData({
-        url: `${ICON_PICKER_API_URL}/iconsapi`,
+        url: `${ICON_PICKER_API_URL}/iconsapi${
+          state.iconsTheme === 'outlined' ? '?theme=outlined' : ''
+        }`,
         payload: value.multipleIcons
       }).then(setServerResponse)
     }
