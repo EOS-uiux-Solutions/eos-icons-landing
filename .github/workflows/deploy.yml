@@ -2,7 +2,7 @@ name: Deployment
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,6 +24,8 @@ jobs:
         run: npm install
       - name: Build page
         run: npm run build
+      - name: copy index to 404
+        run: cp public/index.html public/404.html
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
