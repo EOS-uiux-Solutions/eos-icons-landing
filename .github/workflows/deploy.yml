@@ -18,10 +18,14 @@ jobs:
 
       - name: Install Packages
         run: npm install
+      - name: create config.json
+        run: 'echo "${{ secrets.CONFIG_JSON }}" > src/config.json'
       - name: test_lints_sass
         run: npm run test:sass
       - name: test_lints_js
         run: npm run test:js
+      - name: update eos-npm
+        run: npm update eos-icons
       - name: Build page
         run: npm run build
       - name: copy index to 404
