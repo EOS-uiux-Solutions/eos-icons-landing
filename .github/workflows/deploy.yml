@@ -19,7 +19,7 @@ jobs:
       - name: Install Packages
         run: npm install
       - name: create config.json
-        run: 'echo "${{ secrets.CONFIG_JSON }}" > src/config.json'
+        run: 'echo ${{ secrets.CONFIG_JSON }} > src/config.json'
       - name: test_lints_sass
         run: npm run test:sass
       - name: test_lints_js
