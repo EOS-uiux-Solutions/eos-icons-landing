@@ -29,7 +29,7 @@ jobs:
 
       - name: Build the page
         run: |
-          "echo '$CONFIG_JSON' > src/config.json"
+          echo $CONFIG_JSON > src/config.json
           npm update eos-icons
           npm run build
           cp build/index.html build/404.html
