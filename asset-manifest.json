@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "https://test.eos-icons.com/static/css/main.41e1245a.chunk.css",
-    "main.js": "https://test.eos-icons.com/static/js/main.396731a0.chunk.js",
-    "main.js.map": "https://test.eos-icons.com/static/js/main.396731a0.chunk.js.map",
+    "main.js": "https://test.eos-icons.com/static/js/main.f72ae6b1.chunk.js",
+    "main.js.map": "https://test.eos-icons.com/static/js/main.f72ae6b1.chunk.js.map",
     "runtime-main.js": "https://test.eos-icons.com/static/js/runtime-main.45902339.js",
     "runtime-main.js.map": "https://test.eos-icons.com/static/js/runtime-main.45902339.js.map",
-    "static/js/2.b2415efa.chunk.js": "https://test.eos-icons.com/static/js/2.b2415efa.chunk.js",
-    "static/js/2.b2415efa.chunk.js.map": "https://test.eos-icons.com/static/js/2.b2415efa.chunk.js.map",
+    "static/js/2.422b7038.chunk.js": "https://test.eos-icons.com/static/js/2.422b7038.chunk.js",
+    "static/js/2.422b7038.chunk.js.map": "https://test.eos-icons.com/static/js/2.422b7038.chunk.js.map",
     "index.html": "https://test.eos-icons.com/index.html",
-    "precache-manifest.49898d986bc05b498b5d7a37bf548cd7.js": "https://test.eos-icons.com/precache-manifest.49898d986bc05b498b5d7a37bf548cd7.js",
+    "precache-manifest.0293cc31c815ca4b808a0b9267a86571.js": "https://test.eos-icons.com/precache-manifest.0293cc31c815ca4b808a0b9267a86571.js",
     "service-worker.js": "https://test.eos-icons.com/service-worker.js",
     "static/css/main.41e1245a.chunk.css.map": "https://test.eos-icons.com/static/css/main.41e1245a.chunk.css.map",
-    "static/js/2.b2415efa.chunk.js.LICENSE.txt": "https://test.eos-icons.com/static/js/2.b2415efa.chunk.js.LICENSE.txt",
+    "static/js/2.422b7038.chunk.js.LICENSE.txt": "https://test.eos-icons.com/static/js/2.422b7038.chunk.js.LICENSE.txt",
     "static/media/abhinandan.png": "https://test.eos-icons.com/static/media/abhinandan.b18ba27c.png",
     "static/media/aditya.png": "https://test.eos-icons.com/static/media/aditya.e025b233.png",
     "static/media/arrow_rotate.svg": "https://test.eos-icons.com/static/media/arrow_rotate.8fc7f75b.svg",
@@ -60,8 +60,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.45902339.js",
-    "static/js/2.b2415efa.chunk.js",
+    "static/js/2.422b7038.chunk.js",
     "static/css/main.41e1245a.chunk.css",
-    "static/js/main.396731a0.chunk.js"
+    "static/js/main.f72ae6b1.chunk.js"
   ]
 }
