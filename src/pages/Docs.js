@@ -453,8 +453,8 @@ const Docs = () => {
             <div className='container'>
               <h2>Installing EOS icons React</h2>
               <p>
-                Note: we've introduced several upgrades in eos-icons-react@2.1.1
-                and we strongly suggest upgrading.
+                Note: we've introduced several improvements in
+                eos-icons-react@2.1.1 and we strongly suggest upgrading.
               </p>
               <h3 className='padding-top-xs'>
                 Installation with npm
