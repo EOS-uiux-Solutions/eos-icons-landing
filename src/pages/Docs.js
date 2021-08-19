@@ -453,8 +453,8 @@ const Docs = () => {
             <div className='container'>
               <h2>Installing EOS icons React</h2>
               <p>
-                Note: upgrade to eos-icons-react@2.1.1 as the version@2.1.0 has
-                issues.
+                Note: we've introduced several upgrades in eos-icons-react@2.1.1
+                and we strongly suggest upgrading.
               </p>
               <h3 className='padding-top-xs'>
                 Installation with npm
@@ -491,6 +491,8 @@ const Docs = () => {
                 <code>yarn add eos-icons-react</code>
               </pre>
               <h2>Using EOS icons React in your projects</h2>
+              Note: the middle part of the component name is the same as the
+              icon name and should always be written in uppercase.
               <pre className='code language-js'>
                 <code>{`import { EOS_STAR, EOS_STAR_FILLED, EOS_STAR_OUTLINED } from 'eos-icons-react';
 
@@ -756,6 +758,8 @@ export default App;`}</code>
                 <code>yarn add eos-icons-vue2</code>
               </pre>
               <h2>Using EOS icons Vue in your projects</h2>
+              Note: the middle part of the component name is the same as the
+              icon name and should always be written in uppercase.
               <h3>Vue 3 usage:</h3>
               <pre className='code language-js'>
                 <code>{`<template>
