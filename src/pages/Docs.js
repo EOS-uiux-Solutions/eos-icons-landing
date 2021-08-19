@@ -449,6 +449,514 @@ const Docs = () => {
               />
             </div>
           </div>
+          <div label='React'>
+            <div className='container'>
+              <h2>Installing EOS icons React</h2>
+              <p>
+                Note: we've introduced several improvements in
+                eos-icons-react@2.1.1 and we strongly suggest upgrading.
+              </p>
+              <h3 className='padding-top-xs'>
+                Installation with npm
+                <a
+                  href='https://www.npmjs.com/package/eos-icons-react'
+                  data-event-category='External link'
+                  data-event-action='Link to EOS Icons React NPM'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <i className='eos-icons eos-18'>open_in_new</i>
+                </a>
+              </h3>
+              <pre className='code language-shell'>
+                <code>npm install eos-icons-react</code>
+              </pre>
+              <h3 className='padding-top-xs'>
+                Installation with yarn
+                <a
+                  href='https://yarnpkg.com/package/eos-icons-react'
+                  data-event-category='External link'
+                  data-event-action='Link to EOS Icons React yarn'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <i className='eos-icons eos-18'>open_in_new</i>
+                </a>
+              </h3>
+              <pre className='code language-shell'>
+                <code>yarn add eos-icons-react</code>
+              </pre>
+              <h2>Using EOS icons React in your projects</h2>
+              Note: the middle part of the component name is the same as the
+              icon name and should always be written in uppercase.
+              <pre className='code language-js'>
+                <code>{`import { EOS_STAR, EOS_STAR_FILLED, EOS_STAR_OUTLINED } from 'eos-icons-react';
+
+function App() {
+  return (
+    <div>
+        <EOS_STAR/>
+        <EOS_STAR_FILLED />
+        <EOS_STAR_OUTLINED />
+    </div>
+  );
+}
+
+export default App;`}</code>
+              </pre>
+              <h2>Using Animated icons</h2>
+              <pre className='code language-js'>
+                <code>{`import { EOS_LOADING_ANIMATED } from 'eos-icons-react';
+
+function App() {
+  return (
+    <div>
+        <EOS_LOADING_ANIMATED />
+    </div>
+  );
+}
+
+export default App;`}</code>
+              </pre>
+              <h2>Props</h2>
+              <div>
+                <table className='table'>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Default</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>size</code>
+                      </td>
+                      <td>string, number</td>
+                      <td>'m'</td>
+                      <td>sets the size of icon *</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>color</code>
+                      </td>
+                      <td>string</td>
+                      <td>black</td>
+                      <td>sets the color of icon</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>rotate</code>
+                      </td>
+                      <td>string, number</td>
+                      <td>0</td>
+                      <td>sets the rotation degree of icon</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>horizontalFlip</code>
+                      </td>
+                      <td>boolean</td>
+                      <td>false</td>
+                      <td>Flips icon horizontally</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>verticalFlip</code>
+                      </td>
+                      <td>boolean</td>
+                      <td>false</td>
+                      <td>Flips icon vertically</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>theme</code>
+                      </td>
+                      <td>string</td>
+                      <td>'filled'</td>
+                      <td>
+                        sets icon theme (only available for common components)**
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>className</code>
+                      </td>
+                      <td>string</td>
+                      <td>''</td>
+                      <td>set custom styling class for icon component</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                (**) The theme prop is only available for common icon component.
+                Eos-Icons React has 4 different types of icon components (common
+                / filled / outlined / animated). The common icon component
+                contains both filled and outlined version of the icon. For
+                switching between the two types of version you can either supply
+                'outlined' or 'filled' to the theme prop.
+              </p>
+              <h4>Pre-defined size list</h4>
+              <p>
+                (*) Size can be provided using either string or number.
+                Pre-Defined size list
+              </p>
+              <div>
+                <table className='table'>
+                  <thead>
+                    <tr>
+                      <th>Size Name</th>
+                      <th>Size Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>xs</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>s</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>base</td>
+                      <td>14</td>
+                    </tr>
+                    <tr>
+                      <td>m</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>l</td>
+                      <td>24</td>
+                    </tr>
+                    <tr>
+                      <td>xl</td>
+                      <td>32</td>
+                    </tr>
+                    <tr>
+                      <td>xxl</td>
+                      <td>48</td>
+                    </tr>
+                    <tr>
+                      <td>xxxl</td>
+                      <td>64</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                checkout storybook for an in-depth look at the various different
+                icons that are provided by EOS-Icons React as well the props
+                available for configuring icons.
+                <a
+                  href='https://storybook.eos-icons.com/'
+                  data-event-category='External link'
+                  data-event-action='Link to storybook react'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  https://storybook.eos-icons.com/
+                </a>
+              </p>
+              <p>
+                EOS icons React is open source. Go to our GitHub repository to
+                find out more :
+                <a
+                  href='https://github.com/EOS-uiux-Solutions/eos-icons-react'
+                  data-event-category='External link'
+                  data-event-action='Link to Github repository'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  https://github.com/EOS-uiux-Solutions/eos-icons-react
+                </a>
+              </p>
+            </div>
+          </div>
+          <div label='Vue 2/3'>
+            <div className='container'>
+              <h2>Installing EOS icons for Vue 3</h2>
+              <h3 className='padding-top-xs'>
+                Installation with npm
+                <a
+                  href='https://www.npmjs.com/package/eos-icons-vue3'
+                  data-event-category='External link'
+                  data-event-action='Link to EOS Icons vue3 NPM'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <i className='eos-icons eos-18'>open_in_new</i>
+                </a>
+              </h3>
+              <pre className='code language-shell'>
+                <code>npm install eos-icons-vue3</code>
+              </pre>
+              <h3 className='padding-top-xs'>
+                Installation with yarn
+                <a
+                  href='https://yarnpkg.com/package/eos-icons-vue3'
+                  data-event-category='External link'
+                  data-event-action='Link to EOS Icons React vue3'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <i className='eos-icons eos-18'>open_in_new</i>
+                </a>
+              </h3>
+              <pre className='code language-shell'>
+                <code>yarn add eos-icons-vue3</code>
+              </pre>
+              <h2>Installing EOS icons for Vue 2</h2>
+              <h3 className='padding-top-xs'>
+                Installation with npm
+                <a
+                  href='https://www.npmjs.com/package/eos-icons-vue2'
+                  data-event-category='External link'
+                  data-event-action='Link to EOS Icons vue2 NPM'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <i className='eos-icons eos-18'>open_in_new</i>
+                </a>
+              </h3>
+              <pre className='code language-shell'>
+                <code>npm install eos-icons-vue2</code>
+              </pre>
+              <h3 className='padding-top-xs'>
+                Installation with yarn
+                <a
+                  href='https://yarnpkg.com/package/eos-icons-vue2'
+                  data-event-category='External link'
+                  data-event-action='Link to EOS Icons React vue2'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <i className='eos-icons eos-18'>open_in_new</i>
+                </a>
+              </h3>
+              <pre className='code language-shell'>
+                <code>yarn add eos-icons-vue2</code>
+              </pre>
+              <h2>Using EOS icons Vue in your projects</h2>
+              Note: the middle part of the component name is the same as the
+              icon name and should always be written in uppercase.
+              <h3>Vue 3 usage:</h3>
+              <pre className='code language-js'>
+                <code>{`<template>
+  <div>
+    <EOS_10K_FILLED />
+    <EOS_10K_OUTLINED />
+    <EOS_LOADING_ANIMATED />
+  </div>
+</template>
+
+<script>
+import { EOS_10K_FILLED, EOS_10K_OUTLINED, EOS_LOADING_ANIMATED } from "eos-icons-vue3";
+
+export default {
+  name: "App",
+  components: {
+    EOS_10K_FILLED,
+    EOS_10K_OUTLINED,
+    EOS_LOADING_ANIMATED
+  },
+};
+</script>`}</code>
+              </pre>
+              <h3>Vue 2 usage:</h3>
+              <pre className='code language-js'>
+                <code>{`<template>
+  <div>
+    <EOS_10K_FILLED />
+    <EOS_10K_OUTLINED />
+    <EOS_LOADING_ANIMATED />
+  </div>
+</template>
+
+<script>
+import { EOS_10K_FILLED, EOS_10K_OUTLINED, EOS_LOADING_ANIMATED } from "eos-icons-vue2";
+
+export default {
+  name: "App",
+  components: {
+    EOS_10K_FILLED,
+    EOS_10K_OUTLINED,
+    EOS_LOADING_ANIMATED
+  },
+};
+</script>`}</code>
+              </pre>
+              <h2>Props</h2>
+              <div>
+                <table className='table'>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Default</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>size</code>
+                      </td>
+                      <td>string</td>
+                      <td>'m'</td>
+                      <td>sets the size of icon *</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>color</code>
+                      </td>
+                      <td>string</td>
+                      <td>#000000</td>
+                      <td>sets the color of icon</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>rotate</code>
+                      </td>
+                      <td>string</td>
+                      <td>0</td>
+                      <td>sets the rotation degree of icon</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>horizontalFlip</code>
+                      </td>
+                      <td>boolean</td>
+                      <td>false</td>
+                      <td>Flips icon horizontally</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>verticalFlip</code>
+                      </td>
+                      <td>boolean</td>
+                      <td>false</td>
+                      <td>Flips icon vertically</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>theme</code>
+                      </td>
+                      <td>string</td>
+                      <td>'filled'</td>
+                      <td>
+                        sets icon theme (only available for common components)**
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                (**) The theme prop is only available for common icon component.
+                Eos-Icons React has 4 different types of icon components (common
+                / filled / outlined / animated). The common icon component
+                contains both filled and outlined version of the icon. For
+                switching between the two types of version you can either supply
+                'outlined' or 'filled' to the theme prop.
+              </p>
+              <h4>Pre-defined size list</h4>
+              <p>
+                (*) Size can be provided using either string or number.
+                Pre-Defined size list
+              </p>
+              <div>
+                <table className='table'>
+                  <thead>
+                    <tr>
+                      <th>Size Name</th>
+                      <th>Size Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>xs</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>s</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>base</td>
+                      <td>14</td>
+                    </tr>
+                    <tr>
+                      <td>m</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>l</td>
+                      <td>24</td>
+                    </tr>
+                    <tr>
+                      <td>xl</td>
+                      <td>32</td>
+                    </tr>
+                    <tr>
+                      <td>xxl</td>
+                      <td>48</td>
+                    </tr>
+                    <tr>
+                      <td>xxxl</td>
+                      <td>64</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                EOS icons Vue 3 -{' '}
+                <a
+                  href='https://github.com/EOS-uiux-Solutions/eos-icons-vue'
+                  data-event-category='External link'
+                  data-event-action='Link to Github repository'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  https://github.com/EOS-uiux-Solutions/eos-icons-vue
+                </a>{' '}
+                and Vue 2 -{' '}
+                <a
+                  href='https://github.com/EOS-uiux-Solutions/eos-icons-vue2'
+                  data-event-category='External link'
+                  data-event-action='Link to Github repository'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  https://github.com/EOS-uiux-Solutions/eos-icons-vue2
+                </a>{' '}
+                are open source. Go to our GitHub repository to find out more.
+              </p>
+            </div>
+          </div>
         </Tabs>
       </div>
     </div>
