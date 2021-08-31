@@ -30,7 +30,7 @@ export const TeamPage = () => {
         <div className='team-page-maintainers'>
           <div className='team-page-maintainers-introduction'>
             <h2>
-              Offical <br /> Maintainers
+              Official <br /> Maintainers
             </h2>
             <p>
               Mouse over the images <br /> to discover more
