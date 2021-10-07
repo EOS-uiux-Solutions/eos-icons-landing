@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1923461ffb5069559eb2574014a41281",
+    "revision": "b1aa45b6548bf6eb0c39a63ed1263c99",
     "url": "https://eos-icons.com/index.html"
   },
   {
-    "revision": "5e32016ddef5662fa18a",
+    "revision": "fab08fd6b6aed79bf547",
     "url": "https://eos-icons.com/static/css/main.8016bf65.chunk.css"
   },
   {
-    "revision": "933f89a69dd188c21c4c",
-    "url": "https://eos-icons.com/static/js/2.422b7038.chunk.js"
+    "revision": "bfbc6c45f4ba8999ce1b",
+    "url": "https://eos-icons.com/static/js/2.74bb955b.chunk.js"
   },
   {
     "revision": "fe54e5ad6c74e3ae21c81b0c489397bb",
-    "url": "https://eos-icons.com/static/js/2.422b7038.chunk.js.LICENSE.txt"
+    "url": "https://eos-icons.com/static/js/2.74bb955b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5e32016ddef5662fa18a",
-    "url": "https://eos-icons.com/static/js/main.564b4c05.chunk.js"
+    "revision": "fab08fd6b6aed79bf547",
+    "url": "https://eos-icons.com/static/js/main.f5151338.chunk.js"
   },
   {
     "revision": "7af3f975fc0404f5bb14",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b18ba27cc31e015909c14cfabc8a751c",
     "url": "https://eos-icons.com/static/media/abhinandan.b18ba27c.png"
+  },
+  {
+    "revision": "7690102cd0a45b361350c308eaea415e",
+    "url": "https://eos-icons.com/static/media/abhirup.7690102c.jpg"
   },
   {
     "revision": "e025b23304a9d41834880b617807c800",
@@ -72,12 +76,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://eos-icons.com/static/media/eos-icons-logo.b8cf23f8.svg"
   },
   {
+    "revision": "e2b6f5b952112b25ac71acaa7da706c3",
+    "url": "https://eos-icons.com/static/media/fawzi.e2b6f5b9.jpeg"
+  },
+  {
     "revision": "4d998d46c2cdb400d67c9c048c611bc5",
     "url": "https://eos-icons.com/static/media/fontbook.4d998d46.gif"
   },
   {
     "revision": "f4aa826409a896f8125359aa98e877f2",
     "url": "https://eos-icons.com/static/media/git.f4aa8264.svg"
+  },
+  {
+    "revision": "90fe99a455869b6dc7dc09d0f12d144d",
+    "url": "https://eos-icons.com/static/media/harshita.90fe99a4.jpg"
   },
   {
     "revision": "09b889a66259eebd1b61528060aae80a",
@@ -184,6 +196,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://eos-icons.com/static/media/stratos.8bc535ce.png"
   },
   {
+    "revision": "0499683232bd4a71d630d0096345ed21",
+    "url": "https://eos-icons.com/static/media/sundeep.04996832.jpeg"
+  },
+  {
     "revision": "35a73af57d42ecbebce9d673a888c2f9",
     "url": "https://eos-icons.com/static/media/suse.35a73af5.svg"
   },
@@ -206,6 +222,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6df4316d841382d8f4cf7f18ca224741",
     "url": "https://eos-icons.com/static/media/uyuni.6df4316d.svg"
+  },
+  {
+    "revision": "831fcf494875e4bbb72c418108d6ee7d",
+    "url": "https://eos-icons.com/static/media/vinayak.831fcf49.jpg"
   },
   {
     "revision": "f26b42ca5182a77b265de6b7aca66600",
