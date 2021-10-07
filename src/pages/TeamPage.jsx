@@ -33,7 +33,8 @@ export const TeamPage = () => {
               Community <br /> Leads
             </h2>
             <p>
-              Mouse over the images <br /> to discover more about <br/> the people leading the open source community.
+              Mouse over the images <br /> to discover more about <br /> the
+              people leading the open source community.
             </p>
           </div>
           {leads.map((ele, i) => (
@@ -42,9 +43,7 @@ export const TeamPage = () => {
         </div>
 
         <div className='team-page-contributors'>
-          <h2>
-            The creators and maintainers of the eos-icons npm package.
-          </h2>
+          <h2>The creators and maintainers of the eos-icons npm package.</h2>
           <div className='team-page-contributors-list'>
             {creators.map((ele, i) => (
               <ContributorsBlock {...ele} key={i} />
@@ -53,8 +52,8 @@ export const TeamPage = () => {
         </div>
         <div className='team-page-contributors'>
           <h2>
-            The amazing people that contributed to the wide array of projects. Thanks for
-            making it happen.
+            The amazing people that contributed to the wide array of projects.
+            Thanks for making it happen.
           </h2>
 
           <div className='team-page-contributors-list'>

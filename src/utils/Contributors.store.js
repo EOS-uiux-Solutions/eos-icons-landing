@@ -74,7 +74,7 @@ export const leads = [
         link: 'https://www.linkedin.com/in/aditya-sharma-88541116a/'
       }
     ]
-  },
+  }
 ]
 
 export const creators = [
