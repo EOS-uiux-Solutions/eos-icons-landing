@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "The open source iconic font made for EOS Design System to work together with Material Icons.",
   "private": false,
-  "homepage": "https://test.eos-icons.com",
+  "homepage": "https://eos-icons.com",
   "dependencies": {
     "@reach/router": "^1.3.4",
     "@testing-library/jest-dom": "^4.2.4",
