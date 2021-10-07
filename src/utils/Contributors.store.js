@@ -27,10 +27,6 @@ export const maintainers = [
     role: 'Graphic Designer',
     image: require('../assets/images/contributors/zvezdana.jpg'),
     social: [
-      // {
-      //   title: 'twitter',
-      //   link: '#'
-      // },
       {
         title: 'linkedin',
         link: 'https://www.linkedin.com/in/zvezdanam'
@@ -51,14 +47,6 @@ export const maintainers = [
         title: 'twitter',
         link: 'https://twitter.com/manuelecarlini'
       }
-      // {
-      //   title: 'linkedin',
-      //   link: '#'
-      // },
-      // {
-      //   title: 'git',
-      //   link: '#'
-      // }
     ]
   },
   {
@@ -68,18 +56,10 @@ export const maintainers = [
     role: 'Front end Developer',
     image: require('../assets/images/contributors/richa.jpg'),
     social: [
-      // {
-      //   title: 'twitter',
-      //   link: '#'
-      // },
       {
         title: 'linkedin',
         link: 'https://www.linkedin.com/in/richabisht/'
       }
-      // {
-      //   title: 'git',
-      //   link: '#'
-      // }
     ]
   },
   {
@@ -141,26 +121,6 @@ export const maintainers = [
       }
     ]
   }
-  // {
-  //   name: 'Kenneth Wimmer',
-  //   description: '',
-  //   role: 'Product Owner',
-  //   image: require('../assets/images/contributors/sorin.png'),
-  //   social: [
-  //     {
-  //       title: 'twitter',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'linkedin',
-  //       link: '#'
-  //     },
-  //     {
-  //       title: 'git',
-  //       link: '#'
-  //     }
-  //   ]
-  // }
 ]
 
 export const contributors = [
@@ -203,7 +163,7 @@ export const contributors = [
   },
   {
     name: 'Abhinandan Sharma',
-    role: 'Developer',
+    role: 'Blockchain Developer',
     image: require('../assets/images/contributors/abhinandan.png'),
     social: [
       {
@@ -222,7 +182,7 @@ export const contributors = [
   },
   {
     name: 'Shashank Jarial',
-    role: 'Developer',
+    role: 'FE Developer',
     image: require('../assets/images/contributors/shashank.jpg'),
     social: [
       {
@@ -233,7 +193,7 @@ export const contributors = [
   },
   {
     name: 'Devesh Vijaywargiya',
-    role: 'Developer',
+    role: 'FE Developer',
     image: require('../assets/images/contributors/devesh.jpg'),
     social: [
       {
@@ -245,7 +205,7 @@ export const contributors = [
 
   {
     name: 'Rishabh Kohale',
-    role: 'Developer',
+    role: 'FE Developer',
     image: require('../assets/images/contributors/rishab.jpg'),
     social: [
       {
@@ -256,7 +216,7 @@ export const contributors = [
   },
   {
     name: 'Aditya Sharma',
-    role: 'Developer',
+    role: 'Full Stack Developer',
     image: require('../assets/images/contributors/aditya.png'),
     social: [
       {
@@ -264,5 +224,84 @@ export const contributors = [
         link: 'https://www.linkedin.com/in/aditya-sharma-88541116a/'
       }
     ]
-  }
+  },
+  {
+    name: 'Harshita Mangla',
+    role: 'FE Developer',
+    image: require('../assets/images/contributors/harshita.jpg'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/harshitamangla'
+      },
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/_mharshita'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/mharshita'
+      }
+    ]
+  },
+  {
+    name: 'Abhirup Pal',
+    role: 'FE Developer',
+    image: require('../assets/images/contributors/abhirup.jpg'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/abhiruppal99/'
+      }
+    ]
+  },
+  {
+    name: 'Fawzi E. Abdulfattah',
+    role: 'Full stack Developer',
+    image: require('../assets/images/contributors/fawzi.jpeg'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/iifawzi/'
+      },
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/iifawzi_'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/iifawzi'
+      }
+    ]
+  },
+  {
+    name: 'Sundeep Chand',
+    role: 'Full stack Developer',
+    image: require('../assets/images/contributors/sundeep.jpeg'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/sundeep-c-418862135/'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/SundeepChand'
+      }
+    ]
+  },
+  {
+    name: 'Vinayak Sharma',
+    role: 'JS Developer',
+    image: require('../assets/images/contributors/vinayak.jpg'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/vinayak-sharma-141096193/'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/vinayaksh42'
+      }
+    ]
+  },
 ]
