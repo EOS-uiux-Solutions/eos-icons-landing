@@ -1,7 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import TeamBlock, { ContributorsBlock } from '../components/TeamBlock'
-import { contributors, maintainers } from '../utils/Contributors.store'
+import { contributors, leads, creators } from '../utils/Contributors.store'
 import Button from '../components/Button'
 import { Helmet } from 'react-helmet'
 
@@ -30,21 +30,30 @@ export const TeamPage = () => {
         <div className='team-page-maintainers'>
           <div className='team-page-maintainers-introduction'>
             <h2>
-              Official <br /> Maintainers
+              Community <br /> Leads
             </h2>
             <p>
-              Mouse over the images <br /> to discover more
+              Mouse over the images <br /> to discover more about <br /> the
+              people leading the open source community.
             </p>
           </div>
-          {maintainers.map((ele, i) => (
+          {leads.map((ele, i) => (
             <TeamBlock {...ele} key={i} />
           ))}
         </div>
 
         <div className='team-page-contributors'>
+          <h2>The creators and maintainers of the eos-icons npm package.</h2>
+          <div className='team-page-contributors-list'>
+            {creators.map((ele, i) => (
+              <ContributorsBlock {...ele} key={i} />
+            ))}
+          </div>
+        </div>
+        <div className='team-page-contributors'>
           <h2>
-            The amazing people that contributed to the project. Thanks for
-            making it happen.
+            The amazing people that contributed to the wide array of projects.
+            Thanks for making it happen.
           </h2>
 
           <div className='team-page-contributors-list'>
