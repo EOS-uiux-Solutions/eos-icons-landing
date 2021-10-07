@@ -1,4 +1,4 @@
-export const maintainers = [
+export const leads = [
   {
     name: 'Cynthia Sanchez',
     description:
@@ -20,6 +20,64 @@ export const maintainers = [
       }
     ]
   },
+  {
+    name: 'Sorin Curescu',
+    description:
+      'A full-stack developer with UX/UI in mind and heart, In love tech and code. ',
+    role: 'UX Developer',
+    image: require('../assets/images/contributors/sorin.jpeg'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/en3sis'
+      },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/en3sis/'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/en3sis'
+      }
+    ]
+  },
+  {
+    name: 'Kartikay Bhutani',
+    description:
+      'Developer by profession, Designer by passion. Love building tech to solve problems, watching Office and clashing.',
+    role: 'Developer',
+    image: require('../assets/images/contributors/kt.jpg'),
+    social: [
+      {
+        title: 'twitter',
+        link: 'https://twitter.com/kbhutani0001'
+      },
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/kartikaybhutani/'
+      },
+      {
+        title: 'git',
+        link: 'https://github.com/kbhutani0001'
+      }
+    ]
+  },
+  {
+    name: 'Aditya Sharma',
+    description:
+      'Mentor, social media influencer, and keen to explore all corners of software development.',
+    role: 'Full Stack Developer',
+    image: require('../assets/images/contributors/aditya.png'),
+    social: [
+      {
+        title: 'linkedin',
+        link: 'https://www.linkedin.com/in/aditya-sharma-88541116a/'
+      }
+    ]
+  },
+]
+
+export const creators = [
   {
     name: 'Zvezdana Marjanović',
     description:
@@ -76,48 +134,6 @@ export const maintainers = [
       {
         title: 'git',
         link: 'https://gitlab.com/jhmarina'
-      }
-    ]
-  },
-  {
-    name: 'Sorin Curescu',
-    description:
-      'A full-stack developer with UX/UI in mind and heart, In love tech and code. ',
-    role: 'UX Developer',
-    image: require('../assets/images/contributors/sorin.jpeg'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/en3sis'
-      },
-      {
-        title: 'linkedin',
-        link: 'https://www.linkedin.com/in/en3sis/'
-      },
-      {
-        title: 'git',
-        link: 'https://github.com/en3sis'
-      }
-    ]
-  },
-  {
-    name: 'Kartikay Bhutani',
-    description:
-      'Developer by profession, Designer by passion. Love building tech to solve problems, watching Office and clashing.',
-    role: 'Developer',
-    image: require('../assets/images/contributors/kt.jpg'),
-    social: [
-      {
-        title: 'twitter',
-        link: 'https://twitter.com/kbhutani0001'
-      },
-      {
-        title: 'linkedin',
-        link: 'https://www.linkedin.com/in/kartikaybhutani/'
-      },
-      {
-        title: 'git',
-        link: 'https://github.com/kbhutani0001'
       }
     ]
   }
@@ -215,17 +231,6 @@ export const contributors = [
     ]
   },
   {
-    name: 'Aditya Sharma',
-    role: 'Full Stack Developer',
-    image: require('../assets/images/contributors/aditya.png'),
-    social: [
-      {
-        title: 'linkedin',
-        link: 'https://www.linkedin.com/in/aditya-sharma-88541116a/'
-      }
-    ]
-  },
-  {
     name: 'Harshita Mangla',
     role: 'FE Developer',
     image: require('../assets/images/contributors/harshita.jpg'),
@@ -303,5 +308,5 @@ export const contributors = [
         link: 'https://github.com/vinayaksh42'
       }
     ]
-  },
+  }
 ]
