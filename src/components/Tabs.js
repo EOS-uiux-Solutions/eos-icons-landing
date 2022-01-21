@@ -16,6 +16,8 @@ const Tabs = (props) => {
   } = props
 
   const [activeTab, setActiveTab] = useState(children[0].props.label)
+  const [checked, setChecked] = useState(false);
+  const [staticCheck, setStaticCheck] = useState(false);
   const [position, setPosition] = useState(0)
   const [windowsSize] = useWindow()
   const { dispatch } = useContext(AppContext)
@@ -24,12 +26,27 @@ const Tabs = (props) => {
     setPosition(document.querySelector('.page-header').clientHeight + 54)
   }, [customize, showPanel, windowsSize])
 
+  useEffect(() => {
+    if (activeTab === children[0].props.label) {
+      setChecked(staticCheck)
+    } else {
+      setChecked(false);
+    }
+
+  }, [activeTab, staticCheck,children])
+
+  const changeCheckedStatus = () => {
+    if (activeTab === children[0].props.label) {
+      setStaticCheck(!checked);
+    }
+    setChecked(!checked);
+  }
+
   return (
     <div className='tabs'>
       <ul className='tab-list' style={{ top: position }}>
         {children.map((child) => {
           const { label } = child.props
-
           return (
             <li
               className={
@@ -53,8 +70,15 @@ const Tabs = (props) => {
               disabledStatus={activeTab === 'Animated Icons'}
               name='Select multiple'
               id='js-icon-picker'
-              onClick={() =>
+              activeTab={activeTab}
+              checkedStatus={checked}
+              onChange={()=>{
+                console.log("onChange Called")
+                changeCheckedStatus()
+              }}
+              onClick={() => {
                 toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
+                }
               }
             />
           </div>
