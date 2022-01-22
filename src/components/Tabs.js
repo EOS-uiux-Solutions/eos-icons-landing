@@ -73,7 +73,6 @@ const Tabs = (props) => {
               activeTab={activeTab}
               checkedStatus={checked}
               onChange={()=>{
-                console.log("onChange Called")
                 changeCheckedStatus()
               }}
               onClick={() => {
