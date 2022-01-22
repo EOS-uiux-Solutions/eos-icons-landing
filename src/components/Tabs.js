@@ -16,8 +16,8 @@ const Tabs = (props) => {
   } = props
 
   const [activeTab, setActiveTab] = useState(children[0].props.label)
-  const [checked, setChecked] = useState(false);
-  const [staticCheck, setStaticCheck] = useState(false);
+  const [checked, setChecked] = useState(false)
+  const [staticCheck, setStaticCheck] = useState(false)
   const [position, setPosition] = useState(0)
   const [windowsSize] = useWindow()
   const { dispatch } = useContext(AppContext)
@@ -30,16 +30,15 @@ const Tabs = (props) => {
     if (activeTab === children[0].props.label) {
       setChecked(staticCheck)
     } else {
-      setChecked(false);
+      setChecked(false)
     }
-
-  }, [activeTab, staticCheck,children])
+  }, [activeTab, staticCheck, children])
 
   const changeCheckedStatus = () => {
     if (activeTab === children[0].props.label) {
-      setStaticCheck(!checked);
+      setStaticCheck(!checked)
     }
-    setChecked(!checked);
+    setChecked(!checked)
   }
 
   return (
@@ -72,13 +71,12 @@ const Tabs = (props) => {
               id='js-icon-picker'
               activeTab={activeTab}
               checkedStatus={checked}
-              onChange={()=>{
+              onChange={() => {
                 changeCheckedStatus()
               }}
               onClick={() => {
                 toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
-                }
-              }
+              }}
             />
           </div>
         ) : (
