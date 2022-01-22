@@ -264,17 +264,41 @@ const IconsSet = (props) => {
     }
   }
 
+  const getWords = (values) => {
+    let keywordsArray = []
+
+    if (values.includes(',')) {
+      keywordsArray = values.split(',')
+    } else if (values.includes(';')) {
+      keywordsArray = values.split(';')
+    } else if (values.includes('-')) {
+      keywordsArray = values.split('-')
+    } else {
+      keywordsArray = values.split(' ')
+    }
+    return keywordsArray
+  }
   const getSearchResults = (value) => {
+    let words = getWords(value)
     if (tab === 'Static Icons') {
       let count = 0
-      for (let i = 0; i < eosIconsState.iconsCategory.length; i++) {
-        for (let j = 0; j < eosIconsState.iconsCategory[i].icons.length; j++) {
-          const icon = eosIconsState.iconsCategory[i].icons[j]
-          if (
-            icon.name.includes(value.toLowerCase()) ||
-            icon.tags.includes(value.toLowerCase())
+      for (let k = 0; k < words.length; k++) {
+        if (words[k].length === 0) {
+          continue
+        }
+        for (let i = 0; i < eosIconsState.iconsCategory.length; i++) {
+          for (
+            let j = 0;
+            j < eosIconsState.iconsCategory[i].icons.length;
+            j++
           ) {
-            count += 1
+            const icon = eosIconsState.iconsCategory[i].icons[j]
+            if (
+              icon.name.includes(words[k].toLowerCase()) ||
+              icon.tags.includes(words[k].toLowerCase())
+            ) {
+              count += 1
+            }
           }
         }
       }
