@@ -279,7 +279,7 @@ const IconsSet = (props) => {
     return keywordsArray
   }
   const getSearchResults = (value) => {
-    let words = getWords(value)
+    const words = getWords(value)
     if (tab === 'Static Icons') {
       let count = 0
       for (let k = 0; k < words.length; k++) {
