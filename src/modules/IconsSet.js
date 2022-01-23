@@ -266,16 +266,19 @@ const IconsSet = (props) => {
 
   const getWords = (values) => {
     let keywordsArray = []
-
-    if (values.includes(',')) {
-      keywordsArray = values.split(',')
-    } else if (values.includes(';')) {
+    if (values.includes(';')) {
       keywordsArray = values.split(';')
-    } else if (values.includes('-')) {
-      keywordsArray = values.split('-')
-    } else {
-      keywordsArray = values.split(' ')
+      values = keywordsArray.join(',')
     }
+    if (values.includes('-')) {
+      keywordsArray = values.split('-')
+      values = keywordsArray.join(',')
+    }
+    if (values.includes(' ')) {
+      keywordsArray = values.split(' ')
+      values = keywordsArray.join(',')
+    }
+    keywordsArray = values.split(',')
     return keywordsArray
   }
   const getSearchResults = (value) => {
