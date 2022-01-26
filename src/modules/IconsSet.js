@@ -114,7 +114,6 @@ const IconsSet = (props) => {
       )
       setSearchValue('')
     }
-
     const count = getSearchResults(searchValue)
 
     if (count === 0) {
@@ -484,6 +483,14 @@ const IconsSet = (props) => {
                   onClick={() => {
                     setIconSelected({ name: icon })
                     setShowPanel(true)
+                    setSearchValue(icon)
+                    if (selectMultiple) {
+                      window.history.replaceState(
+                        '',
+                        'EOS Icons',
+                        `${window.location.pathname}?iconName=${icon}`
+                      )
+                    }
                   }}
                 >
                   <img
