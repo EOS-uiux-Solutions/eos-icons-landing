@@ -28,13 +28,13 @@ const IconsSet = (props) => {
   const [selectMultiple, setSelectMultiple] = useState(true)
   const [emptySearchResult, setEmptySearchResult] = useState(false)
   const [suggestedString, setSuggestedString] = useState('')
- 
-  const activeIconRef = useRef(null) 
-  useEffect(()=> {
-    if(iconSelected!=='') {
-      window.addEventListener('DOMContentLoaded', ()=> {
-        window.scrollTo(0, activeIconRef.current.offsetTop);
-      });
+
+  const activeIconRef = useRef(null)
+  useEffect(() => {
+    if (iconSelected !== '') {
+      window.addEventListener('DOMContentLoaded', () => {
+        window.scrollTo(0, activeIconRef.current.offsetTop)
+      })
     }
   })
 
@@ -439,9 +439,9 @@ const IconsSet = (props) => {
               return categoryObject.icons.length > 0 ? (
                 <div key={index}>
                   <h4 className='category'>{categoryObject.category}</h4>
-                  <div className='icons-list'>  
-                    {categoryObject.icons.map((icon, i) => (
-                      isActive(icon.name,state) ? (
+                  <div className='icons-list'>
+                    {categoryObject.icons.map((icon, i) =>
+                      isActive(icon.name, state) ? (
                         <div ref={activeIconRef}>
                           <Icon
                             size={36}
@@ -453,7 +453,9 @@ const IconsSet = (props) => {
                               selectIcon(
                                 icon,
                                 dispatch({
-                                  type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                                  type: state.customize
+                                    ? 'ADD_MULTIPLE_ICONS'
+                                    : '',
                                   selection: icon.name
                                 })
                               )
@@ -471,14 +473,16 @@ const IconsSet = (props) => {
                             selectIcon(
                               icon,
                               dispatch({
-                                type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                                type: state.customize
+                                  ? 'ADD_MULTIPLE_ICONS'
+                                  : '',
                                 selection: icon.name
                               })
                             )
                           }
                         />
                       )
-                    ))}
+                    )}
                   </div>
                 </div>
               ) : (

@@ -22,7 +22,7 @@ import Footer from './components/Footer'
 import ThankYou from './components/ThankYou'
 import ScrollToTopBtn from './components/ScrollToTop'
 import AppContext from './utils/AppContext'
-import CookiesBanner from './components/CookiesBanner' 
+import CookiesBanner from './components/CookiesBanner'
 
 const tagManagerArgs = {
   gtmId: GTM
@@ -38,14 +38,14 @@ const App = () => {
         <Navigation />
         <div className='app-container'>
           <Router primary={false}>
-              <Home path='/' />
-              <Docs path='/docs' />
-              <CookiesPage path='/cookies-policy' />
-              <ThankYou path='/thankyou' />
-              <PageNotFound path='*' />
-              <AboutPage path='/about' />
-              <TeamPage path='/team' />
-              <Cheatsheet path='/cheatsheet' />
+            <Home path='/' />
+            <Docs path='/docs' />
+            <CookiesPage path='/cookies-policy' />
+            <ThankYou path='/thankyou' />
+            <PageNotFound path='*' />
+            <AboutPage path='/about' />
+            <TeamPage path='/team' />
+            <Cheatsheet path='/cheatsheet' />
           </Router>
           <ScrollToTopBtn />
         </div>
