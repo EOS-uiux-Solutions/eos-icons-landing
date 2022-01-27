@@ -28,6 +28,15 @@ const IconsSet = (props) => {
   const [selectMultiple, setSelectMultiple] = useState(true)
   const [emptySearchResult, setEmptySearchResult] = useState(false)
   const [suggestedString, setSuggestedString] = useState('')
+ 
+  const activeIconRef = useRef(null) 
+  useEffect(()=> {
+    if(iconSelected!=='') {
+      window.addEventListener('DOMContentLoaded', ()=> {
+        window.scrollTo(0, activeIconRef.current.offsetTop);
+      });
+    }
+  })
 
   let setSearchWithUrlParam = urlIconName
 
@@ -128,7 +137,7 @@ const IconsSet = (props) => {
         tab === 'Static Icons'
           ? 'TOGGLE_SEARCH_REGULAR_ICONS'
           : 'TOGGLE_SEARCH_ANIMATED_ICONS',
-      search: selectMultiple ? searchValue : ''
+      search: ''
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab, dispatch, selectMultiple])
@@ -150,14 +159,14 @@ const IconsSet = (props) => {
   const setIconInSearch = () => {
     return dispatch({
       type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-      search: urlIconName
+      search: ''
     })
   }
 
   const setTagInSearch = () => {
     return dispatch({
       type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-      search: urlTagName
+      search: ''
     })
   }
 
@@ -200,7 +209,7 @@ const IconsSet = (props) => {
         tab === 'Static Icons'
           ? 'TOGGLE_SEARCH_REGULAR_ICONS'
           : 'TOGGLE_SEARCH_ANIMATED_ICONS',
-      search: suggestedString
+      search: ''
     })
     setSearchValue(suggestedString)
   }
@@ -430,24 +439,45 @@ const IconsSet = (props) => {
               return categoryObject.icons.length > 0 ? (
                 <div key={index}>
                   <h4 className='category'>{categoryObject.category}</h4>
-                  <div className='icons-list'>
+                  <div className='icons-list'>  
                     {categoryObject.icons.map((icon, i) => (
-                      <Icon
-                        size={36}
-                        active={isActive(icon.name, state)}
-                        key={icon.name}
-                        name={icon.name}
-                        iconsTheme={state.iconsTheme}
-                        action={() =>
-                          selectIcon(
-                            icon,
-                            dispatch({
-                              type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                              selection: icon.name
-                            })
-                          )
-                        }
-                      />
+                      isActive(icon.name,state) ? (
+                        <div ref={activeIconRef}>
+                          <Icon
+                            size={36}
+                            active={isActive(icon.name, state)}
+                            key={icon.name}
+                            name={icon.name}
+                            iconsTheme={state.iconsTheme}
+                            action={() =>
+                              selectIcon(
+                                icon,
+                                dispatch({
+                                  type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                                  selection: icon.name
+                                })
+                              )
+                            }
+                          />
+                        </div>
+                      ) : (
+                        <Icon
+                          size={36}
+                          active={isActive(icon.name, state)}
+                          key={icon.name}
+                          name={icon.name}
+                          iconsTheme={state.iconsTheme}
+                          action={() =>
+                            selectIcon(
+                              icon,
+                              dispatch({
+                                type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                                selection: icon.name
+                              })
+                            )
+                          }
+                        />
+                      )
                     ))}
                   </div>
                 </div>
