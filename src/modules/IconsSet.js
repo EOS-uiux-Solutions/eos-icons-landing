@@ -137,7 +137,7 @@ const IconsSet = (props) => {
         tab === 'Static Icons'
           ? 'TOGGLE_SEARCH_REGULAR_ICONS'
           : 'TOGGLE_SEARCH_ANIMATED_ICONS',
-      search: ''
+      search: selectMultiple ? searchValue : ''
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab, dispatch, selectMultiple])
@@ -166,7 +166,7 @@ const IconsSet = (props) => {
   const setTagInSearch = () => {
     return dispatch({
       type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-      search: ''
+      search: urlTagName
     })
   }
 
@@ -209,7 +209,7 @@ const IconsSet = (props) => {
         tab === 'Static Icons'
           ? 'TOGGLE_SEARCH_REGULAR_ICONS'
           : 'TOGGLE_SEARCH_ANIMATED_ICONS',
-      search: ''
+      search: suggestedString
     })
     setSearchValue(suggestedString)
   }
