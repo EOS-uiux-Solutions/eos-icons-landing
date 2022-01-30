@@ -35,7 +35,7 @@ const CookiesPage = () => {
                 your agreement to any such changes.
               </p>
               <hr />
-              <h4>Cookie preferences</h4>
+              <h2>Cookie preferences</h2>
               <p>
                 Some essential features on our sites just won’t work without
                 cookies. And having other cookies switched off can seriously
@@ -90,7 +90,7 @@ const CookiesPage = () => {
                 </div>
               </div>
               <hr />
-              <h4>Our use of cookies</h4>
+              <h2>Our use of cookies</h2>
               <p>
                 Like many websites, EOS Icons uses 'cookies'. A cookie is a
                 small file of letters and numbers that is placed on your
