@@ -30,6 +30,15 @@ const IconsSet = (props) => {
   const [emptySearchResult, setEmptySearchResult] = useState(false)
   const [suggestedString, setSuggestedString] = useState('')
 
+  const activeIconRef = useRef(null)
+  useEffect(() => {
+    if (iconSelected !== '') {
+      window.addEventListener('DOMContentLoaded', () => {
+        window.scrollTo(0, activeIconRef.current.offsetTop)
+      })
+    }
+  })
+
   let setSearchWithUrlParam = urlIconName
 
   if (setSearchWithUrlParam === '' || setSearchWithUrlParam === null) {
@@ -451,24 +460,49 @@ const IconsSet = (props) => {
                 <div key={index}>
                   <h4 className='category'>{categoryObject.category}</h4>
                   <div className='icons-list'>
-                    {categoryObject.icons.map((icon, i) => (
-                      <Icon
-                        size={36}
-                        active={isActive(icon.name, state)}
-                        key={icon.name}
-                        name={icon.name}
-                        iconsTheme={state.iconsTheme}
-                        action={() =>
-                          selectIcon(
-                            icon,
-                            dispatch({
-                              type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                              selection: icon.name
-                            })
-                          )
-                        }
-                      />
-                    ))}
+                    {categoryObject.icons.map((icon, i) =>
+                      isActive(icon.name, state) ? (
+                        <div ref={activeIconRef}>
+                          <Icon
+                            size={36}
+                            active={isActive(icon.name, state)}
+                            key={icon.name}
+                            name={icon.name}
+                            iconsTheme={state.iconsTheme}
+                            action={() =>
+                              selectIcon(
+                                icon,
+                                dispatch({
+                                  type: state.customize
+                                    ? 'ADD_MULTIPLE_ICONS'
+                                    : '',
+                                  selection: icon.name
+                                })
+                              )
+                            }
+                          />
+                        </div>
+                      ) : (
+                        <Icon
+                          size={36}
+                          active={isActive(icon.name, state)}
+                          key={icon.name}
+                          name={icon.name}
+                          iconsTheme={state.iconsTheme}
+                          action={() =>
+                            selectIcon(
+                              icon,
+                              dispatch({
+                                type: state.customize
+                                  ? 'ADD_MULTIPLE_ICONS'
+                                  : '',
+                                selection: icon.name
+                              })
+                            )
+                          }
+                        />
+                      )
+                    )}
                   </div>
                 </div>
               ) : (
