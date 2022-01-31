@@ -7,10 +7,12 @@ import UsingIconsImg from '../assets/images/docs/using-eos-icons.gif'
 import { Link } from '@reach/router'
 import DownloadEOSicons from '../components/DownloadEOSicons'
 import { Helmet } from 'react-helmet'
+import scrollToTop from '../utils/scrollToTop'
 
 const Docs = () => {
   useEffect(() => {
     Prism.highlightAll()
+    scrollToTop()
   })
 
   return (

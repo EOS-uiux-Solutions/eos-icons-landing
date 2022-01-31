@@ -4,8 +4,14 @@ import TeamBlock, { ContributorsBlock } from '../components/TeamBlock'
 import { contributors, leads, creators } from '../utils/Contributors.store'
 import Button from '../components/Button'
 import { Helmet } from 'react-helmet'
+import scrollToTop from '../utils/scrollToTop'
+import { useEffect } from 'react'
 
 export const TeamPage = () => {
+  useEffect(() => {
+    scrollToTop()
+  })
+
   return (
     <>
       <Helmet>
