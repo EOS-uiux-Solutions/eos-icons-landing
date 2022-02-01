@@ -1,5 +1,5 @@
 {
   "GTM": "Your GTM",
-  "ICON_PICKER_API_URL": "http://localhost:3131/",
+  "ICON_PICKER_API_URL": "Your API URL",
   "SHOW_THEME_SWITCH": "boolean"
 }
