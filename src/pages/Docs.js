@@ -85,6 +85,9 @@ const Docs = () => {
               </h3>
               <p>
                 Default theme (filled):
+              </p>
+                <div className='resp-link-edit'>
+               
                 <a
                   href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/eos-icons.css'
                   data-event-category='External link'
@@ -92,12 +95,18 @@ const Docs = () => {
                   data-event-label='Docs page'
                   target='_blank'
                   rel='noopener noreferrer'
+       
+                  
                 >
                   {' '}
                   https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/eos-icons.css
                 </a>
+                </div>
                 <br />
+                <p>
                 Outline theme:
+                </p>
+                <div className='resp-link-edit'>
                 <a
                   href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/outlined/eos-icons-outlined.css'
                   data-event-category='External link'
@@ -109,7 +118,7 @@ const Docs = () => {
                   {' '}
                   https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/outlined/eos-icons-outlined.css
                 </a>
-              </p>
+                </div>
               <p>
                 Add one of the following lines in your{' '}
                 <code> &lt;head&gt;</code> tag as <code> link:css </code>
@@ -357,7 +366,7 @@ const Docs = () => {
                 font-file formats. You can also download them individually from
                 here:
               </p>
-              <div>
+              <div className='resp-link-edit'>
                 <table className='table'>
                   <thead>
                     <tr>
@@ -430,10 +439,13 @@ const Docs = () => {
                 manager tool provided by your operative system. For Macs, the
                 default tool is Font Book:
               </p>
+              
               <img
                 src={FontbookImg}
                 alt='Animation displaying how to install the eos-icons font'
+                className='onyour-img-edit'
               />
+          
               <h2>Using EOS icons in your favourite design tool</h2>
               <p>
                 Once you’ve installed the font, you’re ready to use EOS Icons in
@@ -446,6 +458,7 @@ const Docs = () => {
               <img
                 src={UsingIconsImg}
                 alt='Animation displaying how to use eos icons in design tool'
+                className='onyour-img-edit'
               />
             </div>
           </div>
@@ -523,7 +536,7 @@ function App() {
 export default App;`}</code>
               </pre>
               <h2>Props</h2>
-              <div>
+              <div className='resp-link-edit'>
                 <table className='table'>
                   <thead>
                     <tr>
@@ -937,6 +950,7 @@ export default {
                   data-event-label='Docs page'
                   target='_blank'
                   rel='noopener noreferrer'
+                  
                 >
                   {' '}
                   https://github.com/EOS-uiux-Solutions/eos-icons-vue

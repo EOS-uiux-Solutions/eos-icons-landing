@@ -40,3 +40,12 @@
     }
   }
 }
+
+@media(max-width: 1024px) {
+  .resp-link-edit {
+   overflow:scroll;
+  }
+  .onyour-img-edit{
+    width: 100%;
+  }
+}
