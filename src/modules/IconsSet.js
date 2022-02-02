@@ -25,6 +25,7 @@ const IconsSet = (props) => {
   const urlParams = new URLSearchParams(queryString)
   const urlIconName = urlParams.get('iconName')
   const urlTagName = urlParams.get('tagName')
+  const tabType = urlParams.get('type')
   const [selectMultiple, setSelectMultiple] = useState(true)
   const [emptySearchResult, setEmptySearchResult] = useState(false)
   const [suggestedString, setSuggestedString] = useState('')
@@ -48,7 +49,12 @@ const IconsSet = (props) => {
   useEffect(() => {
     if (setSearchWithUrlParam !== null && setSearchWithUrlParam !== '')
       setSearchValue(setSearchWithUrlParam)
-  }, [setSearchWithUrlParam])
+    if (tabType === 'static') {
+      setActiveTab('Static Icons')
+    } else if (tabType === 'animated') {
+      setActiveTab('Animated Icons')
+    }
+  }, [setSearchWithUrlParam, tabType])
 
   const editDistance = (string1, string2) => {
     if (string2.length > string1.length) {
@@ -123,7 +129,6 @@ const IconsSet = (props) => {
       )
       setSearchValue('')
     }
-
     const count = getSearchResults(searchValue)
 
     if (count === 0) {
@@ -157,10 +162,17 @@ const IconsSet = (props) => {
   }, [dispatch, searchValue, tab])
 
   const setIconInSearch = () => {
-    return dispatch({
-      type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-      search: ''
-    })
+    if (tabType === 'static') {
+      return dispatch({
+        type: 'TOGGLE_SEARCH_REGULAR_ICONS',
+        search: urlIconName
+      })
+    } else {
+      return dispatch({
+        type: 'TOGGLE_SEARCH_ANIMATED_ICONS',
+        search: urlIconName
+      })
+    }
   }
 
   const setTagInSearch = () => {
@@ -172,9 +184,16 @@ const IconsSet = (props) => {
 
   useEffect(() => {
     if (urlIconName) {
-      const iconDetails = eosIconsState.icons.filter(
-        (icon) => icon.name === urlIconName
-      )
+      let iconDetails
+      if (tabType === 'static') {
+        iconDetails = eosIconsState.icons.filter(
+          (icon) => icon.name === urlIconName
+        )
+      } else {
+        iconDetails = eosIconsState.animatedIcons.filter(
+          (icon) => icon === urlIconName
+        )
+      }
 
       if (!iconSelected) {
         setIconInSearch()
@@ -230,7 +249,7 @@ const IconsSet = (props) => {
       window.history.replaceState(
         '',
         'EOS Icons',
-        `${window.location.pathname}?iconName=${icon.name}`
+        `${window.location.pathname}?iconName=${icon.name}&type=static`
       )
     }
     return callback
@@ -414,6 +433,7 @@ const IconsSet = (props) => {
           setTab={(e) => tabSwitch(e)}
           customize={state.customize}
           showPanel={showPanel}
+          currentTab={tab}
           toggleCustomize={(callback) => toggleCustomize(callback)}
           showMultipleSwitch={true}
         >
@@ -518,6 +538,14 @@ const IconsSet = (props) => {
                   onClick={() => {
                     setIconSelected({ name: icon })
                     setShowPanel(true)
+                    setSearchValue(icon)
+                    if (selectMultiple) {
+                      window.history.replaceState(
+                        '',
+                        'EOS Icons',
+                        `${window.location.pathname}?iconName=${icon}&type=animated`
+                      )
+                    }
                   }}
                 >
                   <img
