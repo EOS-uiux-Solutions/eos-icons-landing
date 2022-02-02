@@ -4,6 +4,7 @@ import { globalHistory } from '@reach/router'
 import { Helmet } from 'react-helmet'
 
 import IconsSet from '../modules/IconsSet'
+import scrollToTop from '../utils/scrollToTop'
 
 const Home = () => {
   const [header, setHeader] = useState(true)
@@ -14,6 +15,10 @@ const Home = () => {
       state.customize ? dispatch({ type: 'TOGGLE_CUSTOMIZE' }) : ''
     )
   })
+
+  useEffect(() => {
+    scrollToTop()
+  }, [])
 
   const manageHeader = () => {
     setHeader(!header)

@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageHeader from '../components/PageHeader'
 import AboutBlock from '../components/AboutBlock'
 import { UsedBy } from '../components/UsedBy'
 import DownloadEOSicons from '../components/DownloadEOSicons'
 import { Helmet } from 'react-helmet'
+import scrollToTop from '../utils/scrollToTop'
 
 export const AboutPage = () => {
+  useEffect(() => {
+    scrollToTop()
+  })
+
   return (
     <>
       <Helmet>
