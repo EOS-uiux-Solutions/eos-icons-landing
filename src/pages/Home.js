@@ -11,11 +11,14 @@ const Home = () => {
   const { state, dispatch } = useContext(AppContext)
 
   useEffect(() => {
-    scrollToTop()
     return globalHistory.listen(() =>
       state.customize ? dispatch({ type: 'TOGGLE_CUSTOMIZE' }) : ''
     )
   })
+
+  useEffect(() => {
+    scrollToTop()
+  }, [])
 
   const manageHeader = () => {
     setHeader(!header)

@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageHeader from '../components/PageHeader'
 import AboutBlock from '../components/AboutBlock'
 import { UsedBy } from '../components/UsedBy'
 import DownloadEOSicons from '../components/DownloadEOSicons'
 import { Helmet } from 'react-helmet'
 import scrollToTop from '../utils/scrollToTop'
-import { useEffect } from 'react'
 
 export const AboutPage = () => {
   useEffect(() => {

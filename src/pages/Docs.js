@@ -13,6 +13,18 @@ const Docs = () => {
   useEffect(() => {
     Prism.highlightAll()
     scrollToTop()
+
+    const getTab = document.getElementsByClassName('tab-list-item')
+    const getTabList = document.getElementsByClassName('tabs')
+    const uprDiv = document.getElementsByClassName('page-header')
+    for (let i = 0; i < getTab.length; i++) {
+      getTab[i].addEventListener('click', () => {
+        if (uprDiv[0].clientHeight < 217) {
+          getTabList[0].scrollIntoView()
+          window.scrollTo(0, 30)
+        }
+      })
+    }
   })
 
   return (
