@@ -40,4 +40,4 @@ jobs:
           echo $CONFIG_JSON > src/config.json
           npm run build
         env:
-          CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
+          CONFIG_JSON: src/config.example.json
