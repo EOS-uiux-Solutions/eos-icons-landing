@@ -37,7 +37,5 @@ jobs:
 
       - name: Test build
         run: |
-          echo $CONFIG_JSON > src/config.json
+          cp src/config.example.json src/config.json
           npm run build
-        env:
-          CONFIG_JSON: src/config.example.json
