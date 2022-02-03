@@ -102,7 +102,7 @@ const HowToPanel = (props) => {
                 href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}
               >
                 <Button primary type='button'>
-                  <i className='eos-icons eos-18'>file_download</i> Download
+                  <i className='eos-icons eos-18'>download</i> Download
                   icon
                 </Button>
               </a>
