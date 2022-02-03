@@ -58,7 +58,7 @@ const Docs = () => {
       <div className='toolbar'></div>
 
       <div className='container no-padding'>
-        <Tabs showMultipleSwitch={false}>
+        <Tabs showMultipleSwitch={false} currentTab={'In your application'}>
           <div label='In your application'>
             <div className='container'>
               <h2>Installing EOS icons</h2>
