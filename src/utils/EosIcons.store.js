@@ -114,15 +114,19 @@ export const eosIconsState = {
 
     let keywordsArray
 
-    if (value.includes(',')) {
-      keywordsArray = value.split(',')
-    } else if (value.includes(';')) {
+    if (value.includes(';')) {
       keywordsArray = value.split(';')
-    } else if (value.includes('-')) {
-      keywordsArray = value.split('-')
-    } else {
-      keywordsArray = value.split(' ')
+      value = keywordsArray.join(',')
     }
+    if (value.includes('-')) {
+      keywordsArray = value.split('-')
+      value = keywordsArray.join(',')
+    }
+    if (value.includes(' ')) {
+      keywordsArray = value.split(' ')
+      value = keywordsArray.join(',')
+    }
+    keywordsArray = value.split(',')
 
     const searchArray = []
 
