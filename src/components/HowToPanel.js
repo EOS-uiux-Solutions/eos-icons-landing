@@ -139,12 +139,22 @@ const HowToPanel = (props) => {
                   <i className='eos-icons eos-18'>content_copy</i>
                 </Button>
               </div>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/svg-outlined/${iconName}.svg?inline=false`}
+              >
+                <Button primary type='button'>
+                  <i className='eos-icons eos-18'>download</i> Download
+                  Icon
+                </Button>
+              </a>
               <Button
                 primary
                 type='button'
                 onClick={() => iconEditorToggle('static')}
               >
-                <i className='eos-icons eos-18'>edit</i> Edit and download
+                <i className='eos-icons eos-18'>edit</i> Edit Icon
               </Button>
             </div>
             <div>
