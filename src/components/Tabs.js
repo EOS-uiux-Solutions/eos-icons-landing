@@ -12,10 +12,11 @@ const Tabs = (props) => {
     customize,
     showPanel,
     toggleCustomize,
-    showMultipleSwitch
+    showMultipleSwitch,
+    currentTab
   } = props
 
-  const [activeTab, setActiveTab] = useState(children[0].props.label)
+  const [activeTab, setActiveTab] = useState(currentTab)
   const [checked, setChecked] = useState(false)
   const [staticCheck, setStaticCheck] = useState(false)
   const [position, setPosition] = useState(0)
@@ -23,19 +24,23 @@ const Tabs = (props) => {
   const { dispatch } = useContext(AppContext)
 
   useEffect(() => {
+    setActiveTab(currentTab)
+  }, [currentTab])
+
+  useEffect(() => {
     setPosition(document.querySelector('.page-header').clientHeight + 54)
   }, [customize, showPanel, windowsSize])
 
   useEffect(() => {
-    if (activeTab === children[0].props.label) {
+    if (activeTab === currentTab) {
       setChecked(staticCheck)
     } else {
       setChecked(false)
     }
-  }, [activeTab, staticCheck, children])
+  }, [activeTab, staticCheck, children, currentTab])
 
   const changeCheckedStatus = () => {
-    if (activeTab === children[0].props.label) {
+    if (activeTab === currentTab) {
       setStaticCheck(!checked)
     }
     setChecked(!checked)
