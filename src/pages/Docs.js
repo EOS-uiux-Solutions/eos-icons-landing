@@ -112,7 +112,6 @@ const Docs = () => {
                   https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/outlined/eos-icons-outlined.css
                 </a>
               </div>
-
               <p>
                 Add one of the following lines in your{' '}
                 <code> &lt;head&gt;</code> tag as <code> link:css </code>
