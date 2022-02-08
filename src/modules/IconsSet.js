@@ -121,7 +121,7 @@ const IconsSet = (props) => {
   }, [emptySearchResult, tab, searchValue])
 
   useEffect(() => {
-    if (!selectMultiple) {
+    if (tab === 'Static Icons') {
       window.history.replaceState(
         '',
         'EOS Icons',
@@ -142,10 +142,10 @@ const IconsSet = (props) => {
         tab === 'Static Icons'
           ? 'TOGGLE_SEARCH_REGULAR_ICONS'
           : 'TOGGLE_SEARCH_ANIMATED_ICONS',
-      search: selectMultiple ? searchValue : ''
+      search: tab === 'Static Icons' ? searchValue : ''
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [tab, dispatch, selectMultiple])
+  }, [tab, dispatch])
 
   useEffect(() => {
     if (searchValue === '' || searchValue === null) {

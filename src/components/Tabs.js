@@ -32,12 +32,12 @@ const Tabs = (props) => {
   }, [customize, showPanel, windowsSize])
 
   useEffect(() => {
-    if (activeTab === currentTab) {
+    if (activeTab === 'Static Icons') {
       setChecked(staticCheck)
     } else {
       setChecked(false)
     }
-  }, [activeTab, staticCheck, children, currentTab])
+  }, [activeTab, staticCheck])
 
   const changeCheckedStatus = () => {
     if (activeTab === currentTab) {
