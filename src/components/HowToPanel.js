@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useContext, useRef } from 'react'
 import AppContext from '../utils/AppContext'
+import LocalStorage from '../utils/LocalStorage'
 import Button from './Button'
 import IconEditor from './IconEditor'
 
+
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
+  const setSelected = LocalStorage.read('icons-theme') ?? 'filled'
+  const svgFolder = setSelected === 'filled' ? 'svg' : 'svg-outlined'
   const ref = useRef()
 
   const [iconEditor, setIconEditor] = useState(false)
@@ -25,6 +29,7 @@ const HowToPanel = (props) => {
 
       document.addEventListener('keydown', listenerKeydown)
 
+
       return () => {
         document.removeEventListener('keydown', listenerKeydown)
       }
@@ -38,11 +43,14 @@ const HowToPanel = (props) => {
   const urlIconName = urlParams.get('iconName')
   const urlTagName = urlParams.get('tagName')
 
+
   let setSearchWithUrlParam = urlIconName && !iconName ? urlIconName : ''
 
   if (setSearchWithUrlParam === '') {
     setSearchWithUrlParam = urlTagName
   }
+
+
 
   const selectTag = (urlTagName, callback) => {
     window.history.replaceState(
@@ -140,9 +148,10 @@ const HowToPanel = (props) => {
                 </Button>
               </div>
               <a
+
                 target='_blank'
                 rel='noopener noreferrer'
-                href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/svg-outlined/${iconName}.svg?inline=false`}
+                href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/${svgFolder}/${iconName}.svg?inline=false`}
               >
                 <Button primary type='button'>
                   <i className='eos-icons eos-18'>download</i> Download
@@ -198,4 +207,4 @@ const HowToPanel = (props) => {
   )
 }
 
-export default HowToPanel
+export default HowToPanel;
