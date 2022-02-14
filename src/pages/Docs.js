@@ -129,7 +129,7 @@ const Docs = () => {
                 <code> &lt;head&gt;</code> tag as <code> link:css </code>
                 according to which theme you want to import:
               </p>
-              <h4>Default theme</h4>
+              <h3>Default theme</h3>
               <pre className='code language-html'>
                 <code>
                   {
@@ -137,7 +137,7 @@ const Docs = () => {
                   }
                 </code>
               </pre>
-              <h4>Outlined theme</h4>
+              <h3>Outlined theme</h3>
               <pre className='code language-html'>
                 <code>
                   {
@@ -261,7 +261,7 @@ const Docs = () => {
                 perfect at: 18px, 24px, 36px, and 48px.
               </p>
               <h2>Implementation Examples</h2>
-              <h4>Implementation example</h4>
+              <h3>Implementation example</h3>
               <i className='eos-icons eos-18 mr-3'>miscellaneous</i>
               <i className='eos-icons eos-24 mr-3'>miscellaneous</i>
               <i className='eos-icons eos-36 mr-3'>miscellaneous</i>
@@ -274,7 +274,7 @@ const Docs = () => {
   <i class='eos-icons eos-48'>miscellaneous</i> `}
                 </code>
               </pre>
-              <h4>SCSS code snippet</h4>
+              <h3>SCSS code snippet</h3>
               <pre className='code language-css'>
                 <code>
                   {`/* size variables */
@@ -617,7 +617,7 @@ export default App;`}</code>
                 switching between the two types of version you can either supply
                 'outlined' or 'filled' to the theme prop.
               </p>
-              <h4>Pre-defined size list</h4>
+              <h3>Pre-defined size list</h3>
               <p>
                 (*) Size can be provided using either string or number.
                 Pre-Defined size list
@@ -893,7 +893,7 @@ export default {
                 switching between the two types of version you can either supply
                 'outlined' or 'filled' to the theme prop.
               </p>
-              <h4>Pre-defined size list</h4>
+              <h3>Pre-defined size list</h3>
               <p>
                 (*) Size can be provided using either string or number.
                 Pre-Defined size list
