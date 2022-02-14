@@ -121,14 +121,8 @@ const IconsSet = (props) => {
   }, [emptySearchResult, tab, searchValue])
 
   useEffect(() => {
-    if (tab === 'Static Icons') {
-      window.history.replaceState(
-        '',
-        'EOS Icons',
-        `${window.location.pathname}`
-      )
-      setSearchValue('')
-    }
+    window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
+    setSearchValue('')
     const count = getSearchResults(searchValue)
 
     if (count === 0) {
@@ -264,9 +258,7 @@ const IconsSet = (props) => {
 
   /* Function to close HowToPanel upon switching tabs */
   const tabSwitch = (e) => {
-    if (e === tab) {
-      setActiveTab(e)
-    } else {
+    if (e !== tab) {
       setActiveTab(e)
       if (e === 'Static Icons') {
         setAnimatedHistory(iconSelected)
@@ -538,7 +530,7 @@ const IconsSet = (props) => {
             })}
           </div>
           <div label='Animated Icons'>
-            {emptySearchResult && (
+            {searchValue !== '' && emptySearchResult && (
               <div>
                 <h3 className='suggested-search-line'>
                   Did you mean{' '}
