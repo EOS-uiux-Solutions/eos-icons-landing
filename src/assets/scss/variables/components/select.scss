@@ -1,4 +1,4 @@
-$eos-select-padding: $xs + 1 $s $s $l;
+$eos-select-padding: $xs + 2 $s $s $l - $xs;
 $eos-select-bg-active: $white url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNy40MSA3Ljg0TDEyIDEyLjQybDQuNTktNC41OEwxOCA5LjI1bC02IDYtNi02eiIvPjwvc3ZnPg==') no-repeat left center;
 $eos-select-bg-size: 18px;
 $eos-select-border-radius: 2px;
