@@ -44,14 +44,15 @@ const Docs = () => {
       <PageHeader>
         <div className='docs-header'>
           <h1>Get EOS ICONS</h1>
+
           <div className='docs-header-tools'>
             <p>
               Download the latest copy of our computer-specific files. You’ll
               need them to be able to work with your desired design software.
             </p>
-
-            <DownloadEOSicons />
           </div>
+          <br />
+          <DownloadEOSicons />
         </div>
       </PageHeader>
 
