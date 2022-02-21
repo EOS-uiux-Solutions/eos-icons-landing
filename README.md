@@ -15,7 +15,7 @@ After cloning this repository you will need to install all the dependencies: `np
 #### Configuration
 
 Run `cd src && cp config.example.json config.json`  
-Open the new created `/src/config.json` with your favourite editor and change the `ICON_PICKER_API_URL` variables to point to your instance of [Icon picker](https://gitlab.com/SUSE-UIUX/eos-icon-picker) (http://localhost:3131/)
+Open the new created `/src/config.json` with your favourite editor and change the `ICON_PICKER_API_URL` variables to point to your instance of [Icon API](https://github.com/EOS-uiux-Solutions/eos-icons-api) (http://localhost:3131/)
 
 #### Staring up
 
@@ -50,28 +50,30 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Code contributions
 
 1. Open a new or pick an open issue from the issue list and claim it in the comments. Make sure that the issue is confirmed so you don't work on something that will not be approved to be merged.
-2. Make sure you follow our best practices: [refer to our Wiki](https://gitlab.com/SUSE-UIUX/eos-icons-landing/-/wikis/home). You'll find information on writing code, how to name a branch, how we release, etc.
+2. Make sure you follow our best practices: [refer to our Wiki](https://github.com/EOS-uiux-Solutions/wiki). You'll find information on writing code, how to name a branch, how we release, etc.
 3. Join Slack [optional] to get in touch with the maintainers if you have any doubt: [join slack](http://slack.eosdesignsystem.com/)
-4. Make sure you fork the project, cloning it will not give you the right access to open a PR/MR. [How to open a PR in open source](https://gitlab.com/SUSE-UIUX/eos/-/wikis/Basic-git-instructions-for-beginners)
+4. Make sure you fork the project, cloning it will not give you the right access to open a PR/MR. [How to open a PR in open source](https://github.com/EOS-uiux-Solutions/wiki/blob/main/Basic-git-instructions-for-beginners.md)
 
 ### Design contributions
 
 If you'd like to contribute with design changes, you'll have to do as follows:
 
-1. [Open an issue](https://gitlab.com/SUSE-UIUX/eos-icons-landing/-/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=)
+1. [Open an issue](https://github.com/EOS-uiux-Solutions/eos-icons-landing/issues)
 2. Add all relevant information to the issue. Please be as descriptive as possible. Add links to references, images, videos, etc.
-3. While working on your design, please make sure you follow our [design guidelines](https://gitlab.com/SUSE-UIUX/eos/wikis/Design-process-and-feedback-gathering).
+3. While working on your design, please make sure you follow our [design guidelines](https://github.com/EOS-uiux-Solutions/wiki/blob/main/Design-process-and-feedback-gathering.md).
 4. Once the issue is approved by us, it'll be ready to be implemented.
 
 ### Adding new icons
 
 If you'd like to add new icons, you'll need to head over to the [icons repository](https://gitlab.com/SUSE-UIUX/eos-icons) where you'll find thorough instructions on how to design & add icons to the iconic font.
 
-# Learn more about the EOS Design System
+# Learn more about the EOS UX/UI Solutions
 
-- [EOS Design System](https://www.eosdesignsystem.com/)
+- [EOS Design System](https://brand.eosdesignsystem.com/)
 
-- [EOS Icons](eos-icons.com)
+- [EOS Icons](https://eos-icons.com)
+
+- [User Story](https://userstory.eosdesignsystem.com/)
 
 - [Follow us on Twitter](https://twitter.com/eosdesignsystem)
 
