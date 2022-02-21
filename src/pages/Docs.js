@@ -166,8 +166,7 @@ const Docs = () => {
               </pre>
               <p>
                 Add the following directive to your application:
-                <br />
-                <code>*= require eos-icons-font</code>
+                <code className='line-edit'>*= require eos-icons-font</code>
               </p>
               <h2>Using EOS icons in your projects</h2>
               <p>
@@ -295,7 +294,6 @@ const Docs = () => {
               <p>
                 EOS icons is open source. Go to our Gitlab repository to find
                 out more :
-                <br />
                 <a
                   href='https://gitlab.com/SUSE-UIUX/eos-icons'
                   data-event-category='External link'
@@ -303,6 +301,7 @@ const Docs = () => {
                   data-event-label='Docs page'
                   target='_blank'
                   rel='noopener noreferrer'
+                  className='line-edit'
                 >
                   {' '}
                   https://gitlab.com/SUSE-UIUX/eos-icons
@@ -690,19 +689,18 @@ export default App;`}</code>
               <p>
                 EOS icons React is open source. Go to our GitHub repository to
                 find out more :
-                <div className='resp-link-edit'>
-                  <a
-                    href='https://github.com/EOS-uiux-Solutions/eos-icons-react'
-                    data-event-category='External link'
-                    data-event-action='Link to Github repository'
-                    data-event-label='Docs page'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    {' '}
-                    https://github.com/EOS-uiux-Solutions/eos-icons-react
-                  </a>
-                </div>
+                <a
+                  href='https://github.com/EOS-uiux-Solutions/eos-icons-react'
+                  data-event-category='External link'
+                  data-event-action='Link to Github repository'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='line-edit'
+                >
+                  {' '}
+                  https://github.com/EOS-uiux-Solutions/eos-icons-react
+                </a>
               </p>
             </div>
           </div>
