@@ -52,7 +52,9 @@ const Docs = () => {
             </p>
           </div>
           <br />
-          <DownloadEOSicons />
+          <div className='download-button-edit'>
+            <DownloadEOSicons />
+          </div>
         </div>
       </PageHeader>
 
