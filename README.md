@@ -31,7 +31,9 @@ You will also see any lint errors in the console.
 Before submitting a PR/MR make sure your code is compliant with our JS rules by running: `npm run test:js`
 You can format it automatically by running: `npm run format`.
 
-To make sure your SCSS is compliant run: `npm run test:scss`
+To make sure your SCSS/SASS is compliant run: `npm run test:sass`
+
+If you encounter any deploy error in JS try fixing it by running : `npm run js:fix`
 
 ### Build it to ensure it will work on production
 
