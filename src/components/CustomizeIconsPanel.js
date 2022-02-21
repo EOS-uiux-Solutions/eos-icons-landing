@@ -105,6 +105,7 @@ const CustomizeIconsPanel = (props) => {
           isActive={iconEditor}
           show={iconEditorToggle}
           iconNames={value.multipleIcons}
+          iconType={props.iconType}
         />
       ) : (
         ''
