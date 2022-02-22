@@ -40,12 +40,3 @@
     }
   }
 }
-
-.container-about {
-  margin: auto;
-  max-width: 1140px;
-
-  @media (max-width: $mobile-max) {
-    padding: $l;
-  }
-}

@@ -33,7 +33,7 @@ export const AboutPage = () => {
 
         <DownloadEOSicons />
       </PageHeader>
-      <div className='container-about'>
+      <div className='container'>
         {data.map((ele, i) => {
           return <AboutBlock {...ele} key={i} />
         })}
