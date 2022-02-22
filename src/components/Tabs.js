@@ -89,8 +89,10 @@ const Tabs = (props) => {
               id='js-icon-picker'
               activeTab={activeTab}
               checkedStatus={checked}
+              onChange={() => {
+                changeCheckedStatus()
+              }}
               onClick={() => {
-                setChecked(!checked)
                 toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE' }))
               }}
             />
