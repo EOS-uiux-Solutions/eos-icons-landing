@@ -173,7 +173,7 @@ export const contributors = [
     social: [
       {
         title: 'twitter',
-        link: 'https://twitter.com/SAURABH20944279?s=09'
+        link: 'https://twitter.com/SAURABH81098'
       }
     ]
   },

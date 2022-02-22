@@ -165,8 +165,8 @@ const Docs = () => {
                 <code>gem install eos-icons-font</code>
               </pre>
               <p>
-                Add the following directive to your application:{' '}
-                <code>*= require eos-icons-font</code>
+                Add the following directive to your application:
+                <code className='line-edit'>*= require eos-icons-font</code>
               </p>
               <h2>Using EOS icons in your projects</h2>
               <p>
@@ -234,8 +234,8 @@ const Docs = () => {
               <h2>Using Animated icons</h2>
               <p>
                 The animated EOS icons are built using SMIL SVG animations. To
-                implement them you don't need anything special, just an
-                <code> img</code> tag with the <code>src</code> to the svg. For
+                implement them you don't need anything special, just an{' '}
+                <code>img</code> tag with the <code>src</code> to the svg. For
                 example:
               </p>
               <pre className='code language-html'>
@@ -260,10 +260,9 @@ const Docs = () => {
               <h2>Our recommended sizes</h2>
               <p>
                 Both MD icons and EOS icons have been designed to work and look
-                perfect at: 18px, 24px, 36px, and 48px.
+                perfect at: 18px, 24px, 36px and 48px.
               </p>
               <h2>Implementation Examples</h2>
-              <h3>Implementation example</h3>
               <i className='eos-icons eos-18 mr-3'>miscellaneous</i>
               <i className='eos-icons eos-24 mr-3'>miscellaneous</i>
               <i className='eos-icons eos-36 mr-3'>miscellaneous</i>
@@ -302,6 +301,7 @@ const Docs = () => {
                   data-event-label='Docs page'
                   target='_blank'
                   rel='noopener noreferrer'
+                  className='line-edit'
                 >
                   {' '}
                   https://gitlab.com/SUSE-UIUX/eos-icons
@@ -319,7 +319,7 @@ const Docs = () => {
                 icon.
               </p>
               <p>
-                Download he latest copy of our computer-specific files. You’ll
+                Download the latest copy of our computer-specific files. You’ll
                 need them to be able to work with your desired design software.
               </p>
               <DownloadEOSicons />
@@ -455,9 +455,9 @@ const Docs = () => {
               <p>
                 Once you’ve installed the font, you’re ready to use EOS Icons in
                 your designs. All you need to do, is select the
-                <em>“eos-icons”</em>
-                font and use type the ligature for your icon. We have a
-                cheatsheet with all the ligatures which can be found &nbsp;
+                <em>“eos-icons”</em> font and use type the ligature for your
+                icon. We have a cheatsheet with all the ligatures which can be
+                found &nbsp;
                 <Link to='../cheatsheet'>here</Link>.
               </p>
               <img
@@ -696,6 +696,7 @@ export default App;`}</code>
                   data-event-label='Docs page'
                   target='_blank'
                   rel='noopener noreferrer'
+                  className='line-edit'
                 >
                   {' '}
                   https://github.com/EOS-uiux-Solutions/eos-icons-react
@@ -971,7 +972,20 @@ export default {
                   {' '}
                   https://github.com/EOS-uiux-Solutions/eos-icons-vue2
                 </a>{' '}
-                are open source. Go to our GitHub repository to find out more.
+                are open source.
+                <br />
+                Go to our GitHub repository to find out more:{''}
+                <a
+                  href='https://github.com/EOS-uiux-Solutions'
+                  data-event-category='External link'
+                  data-event-action='Link to Github repository'
+                  data-event-label='Docs page'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  https://github.com/EOS-uiux-Solutions
+                </a>
               </p>
             </div>
           </div>

@@ -41,6 +41,13 @@
   }
 }
 
+@media (max-width: $mobile-max) {
+  .line-edit {
+    display: block;
+  }
+}
+
+
 @media (max-width: 1024px) {
   .resp-link-edit {
     overflow: scroll;
