@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4ac3ee4d3b820270f4b919888369cfc7",
+    "revision": "1f4df42e1de073a58fa5feb4ff69713f",
     "url": "https://eos-icons.com/index.html"
   },
   {
