@@ -22,14 +22,15 @@ select {
   background: $eos-select-bg-active;
   background-color: transparent;
   background-size: $eos-select-bg-size;
-  border: 1px solid $eos-form-element-color;
-  border-radius: 8px;
+  border: 1px solid $secondary;
+  border-radius: 10px;
   color: $eos-select-txt-color;
   cursor: pointer;
   font-family: $font-family;
   font-size: $eos-select-font;
   font-weight: 300;
   padding: $eos-select-padding;
+  text-shadow: 0.8px 0px $secondary;
   width: 100%;
 
   option {
