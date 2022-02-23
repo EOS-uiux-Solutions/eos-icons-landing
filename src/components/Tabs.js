@@ -19,7 +19,6 @@ const Tabs = (props) => {
   const [activeTab, setActiveTab] = useState(currentTab)
   const [checked, setChecked] = useState(false)
   const [staticCheck, setStaticCheck] = useState(false)
-
   const [position, setPosition] = useState(0)
   const [windowsSize] = useWindow()
   const { dispatch } = useContext(AppContext)

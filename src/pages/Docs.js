@@ -44,7 +44,6 @@ const Docs = () => {
       <PageHeader>
         <div className='docs-header'>
           <h1>Get EOS ICONS</h1>
-
           <div className='docs-header-tools'>
             <p>
               Download the latest copy of our computer-specific files. You’ll
@@ -52,9 +51,9 @@ const Docs = () => {
             </p>
           </div>
           <br />
-          <div className='download-button-edit'>
+          <span className='flex'>
             <DownloadEOSicons />
-          </div>
+          </span>
         </div>
       </PageHeader>
 

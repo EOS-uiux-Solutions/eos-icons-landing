@@ -39,15 +39,7 @@
       display: inline;
     }
   }
-
-  .download-button-edit {
-    @media (max-width: $mobile-max) {
-      display: none;
-    }
-  }
 }
-
-
 
 @media (max-width: 1024px) {
   .resp-link-edit {
