@@ -3,10 +3,11 @@ import AppContext from '../utils/AppContext'
 import Button from './Button'
 import IconEditor from './IconEditor'
 
+import copyToClipboard from '../utils/copyToClipboard'
+
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
   const ref = useRef()
-
   const [iconEditor, setIconEditor] = useState(false)
   const [iconType, setIconType] = useState('static')
   const iconEditorToggle = (type) => {
@@ -71,7 +72,6 @@ const HowToPanel = (props) => {
     <div ref={ref} className='how-to-use-block'>
       <div className='container'>
         <span>How to use it:</span>
-
         <i className='close-button eos-icons eos-18' onClick={() => close()}>
           close
         </i>
@@ -88,10 +88,7 @@ const HowToPanel = (props) => {
                 />
                 <Button
                   type='button'
-                  onClick={() => {
-                    document.getElementById('copy-code').select()
-                    document.execCommand('copy')
-                  }}
+                  onClick={() => copyToClipboard('copy-code')}
                 >
                   <i className='eos-icons eos-18'>content_copy</i>
                 </Button>
@@ -131,10 +128,7 @@ const HowToPanel = (props) => {
                 />
                 <Button
                   type='button'
-                  onClick={() => {
-                    document.getElementById('copy-code').select()
-                    document.execCommand('copy')
-                  }}
+                  onClick={() => copyToClipboard('copy-code')}
                 >
                   <i className='eos-icons eos-18'>content_copy</i>
                 </Button>

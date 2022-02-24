@@ -8,7 +8,7 @@ import { Link } from '@reach/router'
 import DownloadEOSicons from '../components/DownloadEOSicons'
 import { Helmet } from 'react-helmet'
 import scrollToTop from '../utils/scrollToTop'
-import linkData from '../utils/linksData'
+import copyToClipboard from '../utils/copyToClipboard'
 
 const Docs = () => {
   useEffect(() => {
@@ -27,25 +27,6 @@ const Docs = () => {
       })
     }
   })
-
-  const copyToClipboard = async (value) => {
-    let copyText
-    linkData.map((val) => {
-      if (val.classname === value) {
-        copyText = val.link
-      }
-      return null
-    })
-
-    await navigator.clipboard
-      .writeText(copyText)
-      .then(() => {
-        alert('Successfully Copied')
-      })
-      .catch(() => {
-        alert("Couldn't Copy")
-      })
-  }
 
   return (
     <div className='docs'>
@@ -69,9 +50,9 @@ const Docs = () => {
               Download the latest copy of our computer-specific files. You’ll
               need them to be able to work with your desired design software.
             </p>
-
-            <DownloadEOSicons />
           </div>
+          <br />
+          <DownloadEOSicons />
         </div>
       </PageHeader>
 
@@ -101,7 +82,7 @@ const Docs = () => {
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code className='copytext1 code-style'>
+                <code id='copy-code' className=' code-style'>
                   npm install eos-icons --save
                 </code>
                 <i
