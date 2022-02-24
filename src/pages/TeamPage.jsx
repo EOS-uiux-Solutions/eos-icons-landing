@@ -70,9 +70,7 @@ export const TeamPage = () => {
 
         <div className='team-page-cta'>
           <div className='slack-cta'>
-            <h4 style={{ textAlign: 'center' }}>
-              Join us, become a contributor!
-            </h4>
+            <h2>Join us, become a contributor!</h2>
 
             <p>
               Be part of the team, join our Slack channel, and chat with our
