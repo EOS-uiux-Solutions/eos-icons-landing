@@ -100,7 +100,7 @@ const CookiesPage = () => {
                 features in which you may have the greatest interest. Cookies
                 may enhance your online experience by saving your preferences
                 while you are visiting a particular page. For more information
-                on cookies, please see
+                on cookies, please see{' '}
                 <a
                   href='www.whatarecookies.com'
                   data-event-category='External link'
