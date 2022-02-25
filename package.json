@@ -13,7 +13,6 @@
     "eos-icons": "^5.0.0",
     "i": "^0.3.6",
     "js-cookie": "^2.2.1",
-    "node-sass": "^4.14.1",
     "npm": "^6.14.8",
     "prismjs": "^1.23.0",
     "react": "^16.13.1",
@@ -23,7 +22,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
-    "react-svg": "^11.0.41"
+    "react-svg": "^11.0.41",
+    "sass": "^1.49.9"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
