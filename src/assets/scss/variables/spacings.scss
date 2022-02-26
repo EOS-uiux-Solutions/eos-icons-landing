@@ -13,11 +13,11 @@ $eos-36: 36px;
 $eos-48: 48px;
 
 $m: $space-base; // this is the regular size = 16px
-$xs: $m / 4; // = 4px
-$s: $m / 2; // = 8px
-$l: $m + ($m / 2); // = 24px
-$xl: $m * 2; // = 32px
-$xxl: $m * 3; // = 48px
-$xxxl: $m * 4; // = 64px
+$xs: calc($m / 4); // = 4px
+$s: calc($m / 2); // = 8px
+$l: calc($m + ($m / 2)); // = 24px
+$xl: calc($m * 2); // = 32px
+$xxl: calc($m * 3); // = 48px
+$xxxl: calc($m * 4); // = 64px
 
 $editor-icon-size: $l * 6; //font size for icon preview in Editor window
