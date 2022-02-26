@@ -12,6 +12,12 @@ object-assign
  * Released under the MIT license
  */
 
+/*!
+ * content-type
+ * Copyright(c) 2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
 /**
  * Prism: Lightweight, robust, elegant syntax highlighting
  *
@@ -30,7 +36,7 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react-dom-server.browser.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -39,7 +45,7 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react-dom.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -48,7 +54,7 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
