@@ -4,6 +4,8 @@ import LocalStorage from '../utils/LocalStorage'
 import Button from './Button'
 import IconEditor from './IconEditor'
 
+import { toast } from 'react-toastify'
+
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
   const setSelected = LocalStorage.read('icons-theme') ?? 'filled'
@@ -94,6 +96,16 @@ const HowToPanel = (props) => {
                   onClick={() => {
                     document.getElementById('copy-code').select()
                     document.execCommand('copy')
+
+                    toast.info('Copied !!!', {
+                      position: 'top-right',
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined
+                    })
                   }}
                 >
                   <i className='eos-icons eos-18'>content_copy</i>
@@ -136,6 +148,16 @@ const HowToPanel = (props) => {
                   onClick={() => {
                     document.getElementById('copy-code').select()
                     document.execCommand('copy')
+
+                    toast.info('Copied !!!', {
+                      position: 'top-right',
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined
+                    })
                   }}
                 >
                   <i className='eos-icons eos-18'>content_copy</i>

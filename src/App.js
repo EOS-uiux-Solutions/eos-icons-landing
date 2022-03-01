@@ -24,6 +24,9 @@ import ScrollToTopBtn from './components/ScrollToTop'
 import AppContext from './utils/AppContext'
 import CookiesBanner from './components/CookiesBanner'
 
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const tagManagerArgs = {
   gtmId: GTM
 }
@@ -51,6 +54,7 @@ const App = () => {
         </div>
         <CookiesBanner />
         <Footer />
+        <ToastContainer />
       </div>
     </AppContext.Provider>
   )
