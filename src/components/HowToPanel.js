@@ -1,15 +1,11 @@
 import React, { useState, useEffect, useContext, useRef } from 'react'
 import AppContext from '../utils/AppContext'
-import LocalStorage from '../utils/LocalStorage'
 import Button from './Button'
 import IconEditor from './IconEditor'
 
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
-  const setSelected = LocalStorage.read('icons-theme') ?? 'filled'
-  const svgFolder = setSelected === 'filled' ? 'svg' : 'svg-outlined'
   const ref = useRef()
-
   const [iconEditor, setIconEditor] = useState(false)
   const [iconType, setIconType] = useState('static')
   const iconEditorToggle = (type) => {
@@ -99,21 +95,12 @@ const HowToPanel = (props) => {
                   <i className='eos-icons eos-18'>content_copy</i>
                 </Button>
               </div>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/animated-svg/${iconName}.svg?inline=false`}
-              >
-                <Button primary type='button'>
-                  <i className='eos-icons eos-18'>download</i> Download Icon
-                </Button>
-              </a>
               <Button
                 primary
                 type='button'
                 onClick={() => iconEditorToggle('animated')}
               >
-                <i className='eos-icons eos-18'>edit</i> Edit Icon
+                <i className='eos-icons eos-18'>edit</i> Edit & Download Icon
               </Button>
             </div>
           </div>
@@ -141,21 +128,12 @@ const HowToPanel = (props) => {
                   <i className='eos-icons eos-18'>content_copy</i>
                 </Button>
               </div>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href={`https://gitlab.com/SUSE-UIUX/eos-icons/raw/master/${svgFolder}/${iconName}.svg?inline=false`}
-              >
-                <Button primary type='button'>
-                  <i className='eos-icons eos-18'>download</i> Download Icon
-                </Button>
-              </a>
               <Button
                 primary
                 type='button'
                 onClick={() => iconEditorToggle('static')}
               >
-                <i className='eos-icons eos-18'>edit</i> Edit Icon
+                <i className='eos-icons eos-18'>edit</i> Edit & Download Icon
               </Button>
             </div>
             <div>
