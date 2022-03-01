@@ -68,7 +68,13 @@ const Tabs = (props) => {
 
         {!windowsSize.isMobile && showMultipleSwitch ? (
           <div className='icons-control-toggle'>
-            {SHOW_THEME_SWITCH ? <IconVersionToggle /> : undefined}
+            {activeTab === 'Static Icons' && SHOW_THEME_SWITCH ? (
+              <IconVersionToggle />
+            ) : (
+              <div style={{ visibility: 'hidden' }}>
+                <IconVersionToggle />
+              </div>
+            )}
 
             <Toggle
               disabledStatus={activeTab === 'Animated Icons'}

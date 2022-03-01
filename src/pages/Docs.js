@@ -49,9 +49,11 @@ const Docs = () => {
               Download the latest copy of our computer-specific files. You’ll
               need them to be able to work with your desired design software.
             </p>
-
-            <DownloadEOSicons />
           </div>
+          <br />
+          <span className='flex'>
+            <DownloadEOSicons />
+          </span>
         </div>
       </PageHeader>
 
