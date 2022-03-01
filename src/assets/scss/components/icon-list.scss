@@ -2,7 +2,7 @@
   @extend .flex;
   @extend .flex-wrap;
   justify-content: left;
-  margin-bottom: $xxxl;
+  margin-bottom: 0;
 
   .icon-container {
     align-items: center;
@@ -66,8 +66,9 @@
 
 h4.category {
   color: $primary;
-  margin-top: $xxl;
-  padding: $l $m;
+  margin-bottom: 0;
+  margin-top: $xl;
+  padding: 0 $m;
   text-transform: capitalize;
 
   @media (max-width: $mobile-max) {
