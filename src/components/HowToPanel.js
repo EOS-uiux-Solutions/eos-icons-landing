@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react'
 import AppContext from '../utils/AppContext'
 import Button from './Button'
 import IconEditor from './IconEditor'
+import copyToClipboard from '../utils/copyToClipboard'
 
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
@@ -87,10 +88,7 @@ const HowToPanel = (props) => {
                 />
                 <Button
                   type='button'
-                  onClick={() => {
-                    document.getElementById('copy-code').select()
-                    document.execCommand('copy')
-                  }}
+                  onClick={() => copyToClipboard('copy-code')}
                 >
                   <i className='eos-icons eos-18'>content_copy</i>
                 </Button>
@@ -120,10 +118,7 @@ const HowToPanel = (props) => {
                 />
                 <Button
                   type='button'
-                  onClick={() => {
-                    document.getElementById('copy-code').select()
-                    document.execCommand('copy')
-                  }}
+                  onClick={() => copyToClipboard('copy-code')}
                 >
                   <i className='eos-icons eos-18'>content_copy</i>
                 </Button>

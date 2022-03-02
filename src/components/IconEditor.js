@@ -4,6 +4,7 @@ import Button from './Button'
 import axios from 'axios'
 import loading from '../assets/images/loading-white.svg'
 import AppContext from '../utils/AppContext'
+import copyToClipboard from '../utils/copyToClipboard'
 /* https://www.npmjs.com/package/react-svg the package to work with SVG's */
 import { ReactSVG } from 'react-svg'
 import { ICON_PICKER_API_URL } from '../config.json'
@@ -202,10 +203,7 @@ const IconEditor = (props) => {
                     <Button
                       type='button'
                       disabled={!svgCode.length}
-                      onClick={() => {
-                        document.getElementById('copy-svg').select()
-                        document.execCommand('copy')
-                      }}
+                      onClick={() => copyToClipboard('copy-code')}
                     >
                       <i className='eos-icons eos-18'>content_copy</i>
                     </Button>

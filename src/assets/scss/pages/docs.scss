@@ -39,6 +39,10 @@
       display: inline;
     }
   }
+
+  .code-style {
+    display: inline-block;
+  }
 }
 
 @media (max-width: $mobile-max) {

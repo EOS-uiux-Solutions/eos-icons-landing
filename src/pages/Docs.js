@@ -8,6 +8,7 @@ import { Link } from '@reach/router'
 import DownloadEOSicons from '../components/DownloadEOSicons'
 import { Helmet } from 'react-helmet'
 import scrollToTop from '../utils/scrollToTop'
+import copyToClipboard from '../utils/copyToClipboard'
 
 const Docs = () => {
   useEffect(() => {
@@ -83,7 +84,16 @@ const Docs = () => {
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code>npm install eos-icons --save</code>
+                <code id='copy-code' className=' code-style'>
+                  npm install eos-icons --save
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext1')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h3 className='padding-top-xs'>
                 Using the CDN
@@ -135,19 +145,33 @@ const Docs = () => {
               </p>
               <h3>Default theme</h3>
               <pre className='code language-html'>
-                <code>
+                <code className='copytext2 code-style'>
                   {
                     "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/eos-icons.css' />"
                   }
                 </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext2')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h3>Outlined theme</h3>
               <pre className='code language-html'>
-                <code>
+                <code className='copytext3 code-style'>
                   {
                     "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons@latest/dist/css/outlined/eos-icons-outlined.css' />"
                   }
                 </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext3')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h3 className='padding-top-xs'>
                 Installing the Ruby gem
@@ -164,7 +188,16 @@ const Docs = () => {
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code>gem install eos-icons-font</code>
+                <code className='copytext4 code-style'>
+                  gem install eos-icons-font
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext4')}
+                >
+                  content_copy
+                </i>
               </pre>
               <p>
                 Add the following directive to your application:
@@ -185,13 +218,29 @@ const Docs = () => {
                 (*) If you're using the CDN, you can skip this step.
               </p>
               <pre className='code language-html'>
-                <code>{"<link rel='stylesheet' href='eos-icons.css'/>"}</code>
+                <code className='copytext5 code-style'>
+                  {"<link rel='stylesheet' href='eos-icons.css'/>"}
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext5')}
+                >
+                  content_copy
+                </i>
               </pre>
               or
               <pre className='code language-html'>
-                <code>
+                <code className='copytext6 code-style'>
                   {"<link rel='stylesheet' href='eos-icons-outlined.css'/>"}
                 </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext6')}
+                >
+                  content_copy
+                </i>
               </pre>
               <p>
                 2- Make sure the fonts folder available at{' '}
@@ -209,13 +258,29 @@ const Docs = () => {
               </code>
               <p>3- Use the icons in your html as follows:</p>
               <pre className='code language-html'>
-                <code>{"<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"}</code>
+                <code className='copytext7 code-style'>
+                  {"<i class='eos-icons'>LIGATURE_OF_THE_ICON</i>"}
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext7')}
+                >
+                  content_copy
+                </i>
               </pre>
               or for outlined icons
               <pre className='code language-html'>
-                <code>
+                <code className='copytext8 code-style'>
                   {"<i class='eos-icons-outlined'>LIGATURE_OF_THE_ICON</i>"}
                 </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext8')}
+                >
+                  content_copy
+                </i>
               </pre>
               <p>
                 Where the <code>LIGATURE_OF_THE_ICON</code> is the name of the
@@ -241,7 +306,16 @@ const Docs = () => {
                 example:
               </p>
               <pre className='code language-html'>
-                <code>{"<img src='loading'/>"}</code>
+                <code className='copytext9 code-style'>
+                  {"<img src='loading'/>"}
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext9')}
+                >
+                  content_copy
+                </i>
               </pre>
               <p>
                 Head to the
@@ -270,16 +344,23 @@ const Docs = () => {
               <i className='eos-icons eos-36 mr-3'>miscellaneous</i>
               <i className='eos-icons eos-48'>miscellaneous</i>
               <pre className='code language-html'>
-                <code>
+                <code className='copytext10 code-style'>
                   {`<i class='eos-icons eos-18'>miscellaneous</i>
   <i class='eos-icons eos-24'>miscellaneous</i>
   <i class='eos-icons eos-36'>miscellaneous</i>
   <i class='eos-icons eos-48'>miscellaneous</i> `}
                 </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext10')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h3>SCSS code snippet</h3>
               <pre className='code language-css'>
-                <code>
+                <code className='copytext11 code-style'>
                   {`/* size variables */
   $eos-18: 18px;
   $eos-24: 24px;
@@ -292,6 +373,13 @@ const Docs = () => {
   .eos-36 { font-size: $eos-36; }
   .eos-48 { font-size: $eos-48; } `}
                 </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext11')}
+                >
+                  content_copy
+                </i>
               </pre>
               <p>
                 EOS icons is open source. Go to our Gitlab repository to find
@@ -491,7 +579,16 @@ const Docs = () => {
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code>npm install eos-icons-react</code>
+                <code className='copytext12 code-style'>
+                  npm install eos-icons-react
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext12')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h3 className='padding-top-xs'>
                 Installation with yarn
@@ -508,13 +605,22 @@ const Docs = () => {
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code>yarn add eos-icons-react</code>
+                <code className='copytext13 code-style'>
+                  yarn add eos-icons-react
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext13')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h2>Using EOS icons React in your projects</h2>
               Note: the middle part of the component name is the same as the
               icon name and should always be written in uppercase.
               <pre className='code language-js'>
-                <code>{`import { EOS_STAR, EOS_STAR_FILLED, EOS_STAR_OUTLINED } from 'eos-icons-react';
+                <code className='copytext14 code-style'>{`import { EOS_STAR, EOS_STAR_FILLED, EOS_STAR_OUTLINED } from 'eos-icons-react';
 
 function App() {
   return (
@@ -527,10 +633,17 @@ function App() {
 }
 
 export default App;`}</code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext14')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h2>Using Animated icons</h2>
               <pre className='code language-js'>
-                <code>{`import { EOS_LOADING_ANIMATED } from 'eos-icons-react';
+                <code className='copytext15 code-style'>{`import { EOS_LOADING_ANIMATED } from 'eos-icons-react';
 
 function App() {
   return (
@@ -541,6 +654,13 @@ function App() {
 }
 
 export default App;`}</code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext15')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h2>Props</h2>
               <div className='resp-link-edit'>
@@ -724,7 +844,16 @@ export default App;`}</code>
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code>npm install eos-icons-vue3</code>
+                <code className='copytext16 code-style'>
+                  npm install eos-icons-vue3
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext16')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h3 className='padding-top-xs'>
                 Installation with yarn
@@ -741,7 +870,16 @@ export default App;`}</code>
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code>yarn add eos-icons-vue3</code>
+                <code className='copytext17 code-style'>
+                  yarn add eos-icons-vue3
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext17')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h2>Installing EOS icons for Vue 2</h2>
               <h3 className='padding-top-xs'>
@@ -759,7 +897,16 @@ export default App;`}</code>
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code>npm install eos-icons-vue2</code>
+                <code className='copytext18 code-style'>
+                  npm install eos-icons-vue2
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext18')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h3 className='padding-top-xs'>
                 Installation with yarn
@@ -776,14 +923,23 @@ export default App;`}</code>
                 </a>
               </h3>
               <pre className='code language-shell'>
-                <code>yarn add eos-icons-vue2</code>
+                <code className='copytext19 code-style'>
+                  yarn add eos-icons-vue2
+                </code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext19')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h2>Using EOS icons Vue in your projects</h2>
               Note: the middle part of the component name is the same as the
               icon name and should always be written in uppercase.
               <h3>Vue 3 usage:</h3>
               <pre className='code language-js'>
-                <code>{`<template>
+                <code className='copytext20 code-style'>{`<template>
   <div>
     <EOS_10K_FILLED />
     <EOS_10K_OUTLINED />
@@ -803,10 +959,17 @@ export default {
   },
 };
 </script>`}</code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext20')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h3>Vue 2 usage:</h3>
               <pre className='code language-js'>
-                <code>{`<template>
+                <code className='copytext21 code-style'>{`<template>
   <div>
     <EOS_10K_FILLED />
     <EOS_10K_OUTLINED />
@@ -826,6 +989,13 @@ export default {
   },
 };
 </script>`}</code>
+                <i
+                  class='eos-icons'
+                  style={{ cursor: 'pointer', float: 'right' }}
+                  onClick={() => copyToClipboard('.copytext21')}
+                >
+                  content_copy
+                </i>
               </pre>
               <h2>Props</h2>
               <div>
