@@ -20,7 +20,7 @@ export default [
       },
       {
         name: 'Repository',
-        href: 'https://gitlab.com/SUSE-UIUX/eos-icons',
+        href: 'https://github.com/EOS-uiux-Solutions/eos-icons-landing',
         category: 'External link',
         action: 'Link to Gitlab repo',
         label: 'Footer',
@@ -28,7 +28,7 @@ export default [
       },
       {
         name: 'Report an issue',
-        href: 'https://gitlab.com/SUSE-UIUX/eos-icons/issues',
+        href: 'https://github.com/EOS-uiux-Solutions/eos-icons-landing/issues',
         category: 'External link',
         action: 'Link to Gitlab issues',
         label: 'Footer',
