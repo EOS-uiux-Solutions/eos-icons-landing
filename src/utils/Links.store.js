@@ -22,7 +22,7 @@ export default [
         name: 'Repository',
         href: 'https://github.com/EOS-uiux-Solutions/eos-icons-landing',
         category: 'External link',
-        action: 'Link to Gitlab repo',
+        action: 'Link to Github repo',
         label: 'Footer',
         target: '_blank'
       },
@@ -30,7 +30,7 @@ export default [
         name: 'Report an issue',
         href: 'https://github.com/EOS-uiux-Solutions/eos-icons-landing/issues',
         category: 'External link',
-        action: 'Link to Gitlab issues',
+        action: 'Link to Github issues',
         label: 'Footer',
         target: '_blank'
       }
