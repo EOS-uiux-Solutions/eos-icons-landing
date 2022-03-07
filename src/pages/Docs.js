@@ -294,19 +294,19 @@ const Docs = () => {
                 </code>
               </pre>
               <p>
-                EOS icons is open source. Go to our Github repository to find
+                EOS icons is open source. Go to our Gitlab repository to find
                 out more :
                 <a
-                  href='https://github.com/EOS-uiux-Solutions/eos-icons-landing'
+                  href='https://gitlab.com/SUSE-UIUX/eos-icons'
                   data-event-category='External link'
-                  data-event-action='Link to Github repository'
+                  data-event-action='Link to Gitlab repository'
                   data-event-label='Docs page'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='line-edit'
                 >
                   {' '}
-                  https://github.com/EOS-uiux-Solutions/eos-icons-landing
+                  https://gitlab.com/SUSE-UIUX/eos-icons
                 </a>
               </p>
             </div>

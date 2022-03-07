@@ -49,7 +49,7 @@ const data = [
     title: 'Open Source',
     description:
       'Commercial, non-commercial, use them as you please. EOS icons comes with an MIT license, has an open source community, and welcomes your collaboration too.',
-    linkTo: 'https://github.com/EOS-uiux-Solutions/eos-icons-landing',
+    linkTo: 'https://gitlab.com/SUSE-UIUX/eos-icons/',
     linkTitle: 'View the git repository ',
     image: require('../assets/images/pages/open-source.png'),
     reverse: false
