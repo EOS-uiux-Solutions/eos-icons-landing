@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b97e20c039e253156e696714dbf5e20d",
+    "revision": "42efa32179132f95afd2f48081b5e734",
     "url": "https://eos-icons.com/index.html"
   },
   {
-    "revision": "d8d907e996b629d85fc0",
+    "revision": "ff24eab4f8278ca24dea",
     "url": "https://eos-icons.com/static/css/main.80cd9893.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://eos-icons.com/static/js/2.7f258dc6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d8d907e996b629d85fc0",
-    "url": "https://eos-icons.com/static/js/main.99e0c9dc.chunk.js"
+    "revision": "ff24eab4f8278ca24dea",
+    "url": "https://eos-icons.com/static/js/main.64a82c62.chunk.js"
   },
   {
     "revision": "7af3f975fc0404f5bb14",
