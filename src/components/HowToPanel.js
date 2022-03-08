@@ -97,7 +97,7 @@ const HowToPanel = (props) => {
                     document.getElementById('copy-code').select()
                     document.execCommand('copy')
 
-                    toast.info('Copied !!!', {
+                    toast.info('Copied to Clipboard!', {
                       position: 'top-right',
                       autoClose: 2000,
                       hideProgressBar: false,
@@ -149,7 +149,7 @@ const HowToPanel = (props) => {
                     document.getElementById('copy-code').select()
                     document.execCommand('copy')
 
-                    toast.info('Copied !!!', {
+                    toast.info('Copied to Clipboard!', {
                       position: 'top-right',
                       autoClose: 2000,
                       hideProgressBar: false,
