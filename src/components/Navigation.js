@@ -17,11 +17,11 @@ const Navigation = () => {
   return (
     <header className='flex-wrap-sm navigation'>
       <div className='container navigation-content'>
-        <Link to='/'>
+        <a href='/'>
           <div className='brand'>
             <img className='logo' src={eosIcon} alt='eos-icons logo' />
           </div>
-        </Link>
+        </a>
         <nav className='padding-top-xs'>
           <NavLink to='/'>
             <i className='eos-icons'>miscellaneous</i>
