@@ -41,7 +41,7 @@ const IconsSet = (props) => {
 
   useEffect(() => {
     props.payload.current = resetToDefaultState
-  }, [])
+  }, [props.payload])
 
   const resetToDefaultState = () => {
     setShowPanel(false)

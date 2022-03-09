@@ -27,7 +27,7 @@ const Home = (props) => {
 
   useEffect(() => {
     props.payload.current = payload.current
-  }, [])
+  }, [props.payload])
 
   return (
     <AppContext.Consumer>
