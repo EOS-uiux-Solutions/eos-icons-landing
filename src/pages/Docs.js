@@ -828,7 +828,7 @@ export default {
 </script>`}</code>
               </pre>
               <h2>Props</h2>
-              <div>
+              <div className='resp-link-edit'>
                 <table className='table'>
                   <thead>
                     <tr>
