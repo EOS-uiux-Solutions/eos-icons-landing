@@ -6,9 +6,10 @@ import { Helmet } from 'react-helmet'
 import IconsSet from '../modules/IconsSet'
 import scrollToTop from '../utils/scrollToTop'
 
-const Home = () => {
+const Home = (props) => {
   const [header, setHeader] = useState(true)
   const { state, dispatch } = useContext(AppContext)
+  const payload = React.useRef(null)
 
   useEffect(() => {
     return globalHistory.listen(() =>
@@ -23,6 +24,10 @@ const Home = () => {
   const manageHeader = () => {
     setHeader(!header)
   }
+
+  useEffect(() => {
+    props.payload.current = payload.current
+  }, [])
 
   return (
     <AppContext.Consumer>
@@ -40,7 +45,7 @@ const Home = () => {
             />
           </Helmet>
           <div>
-            <IconsSet action={manageHeader} />
+            <IconsSet action={manageHeader} payload={payload} />
           </div>
         </>
       )}

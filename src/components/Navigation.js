@@ -13,15 +13,21 @@ const NavLink = (props) => (
   />
 )
 
-const Navigation = () => {
+const Navigation = (props) => {
   return (
     <header className='flex-wrap-sm navigation'>
       <div className='container navigation-content'>
-        <a href='/'>
+        <Link
+          to='/'
+          onClick={() => {
+            window.scroll(0, 0)
+            props.resetIconSetState()
+          }}
+        >
           <div className='brand'>
             <img className='logo' src={eosIcon} alt='eos-icons logo' />
           </div>
-        </a>
+        </Link>
         <nav className='padding-top-xs'>
           <NavLink to='/'>
             <i className='eos-icons'>miscellaneous</i>

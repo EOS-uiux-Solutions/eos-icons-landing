@@ -39,6 +39,15 @@ const IconsSet = (props) => {
     }
   })
 
+  useEffect(() => {
+    props.payload.current = resetToDefaultState
+  }, [])
+
+  const resetToDefaultState = () => {
+    setShowPanel(false)
+    setSearchValue('')
+  }
+
   let setSearchWithUrlParam = urlIconName
 
   if (setSearchWithUrlParam === '' || setSearchWithUrlParam === null) {
