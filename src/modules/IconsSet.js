@@ -40,10 +40,11 @@ const IconsSet = (props) => {
   })
 
   useEffect(() => {
-    props.payload.current = resetToDefaultState
-  }, [props.payload])
+    props.container.current = resetStateFromNavbarLogo
+  }, [props.container])
 
-  const resetToDefaultState = () => {
+  const resetStateFromNavbarLogo = () => {
+    window.scroll(0, 0)
     setShowPanel(false)
     setSearchValue('')
   }

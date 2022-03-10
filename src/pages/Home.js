@@ -9,7 +9,6 @@ import scrollToTop from '../utils/scrollToTop'
 const Home = (props) => {
   const [header, setHeader] = useState(true)
   const { state, dispatch } = useContext(AppContext)
-  const payload = React.useRef(null)
 
   useEffect(() => {
     return globalHistory.listen(() =>
@@ -24,10 +23,6 @@ const Home = (props) => {
   const manageHeader = () => {
     setHeader(!header)
   }
-
-  useEffect(() => {
-    props.payload.current = payload.current
-  }, [props.payload])
 
   return (
     <AppContext.Consumer>
@@ -45,7 +40,7 @@ const Home = (props) => {
             />
           </Helmet>
           <div>
-            <IconsSet action={manageHeader} payload={payload} />
+            <IconsSet action={manageHeader} container={props.container} />
           </div>
         </>
       )}

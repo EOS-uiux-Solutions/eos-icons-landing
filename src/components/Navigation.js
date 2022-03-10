@@ -20,7 +20,6 @@ const Navigation = (props) => {
         <Link
           to='/'
           onClick={() => {
-            window.scroll(0, 0)
             props.resetIconSetState()
           }}
         >
