@@ -251,7 +251,11 @@ const IconsSet = (props) => {
 
   /* Toggle customizable functionality */
   const toggleCustomize = (callback) => {
+    setShowPanel(false)
+    setSearchValue('')
+    setIconSelected('')
     setSelectMultiple(!selectMultiple)
+    window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
     props.action()
     return callback
   }
