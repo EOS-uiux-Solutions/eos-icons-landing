@@ -345,6 +345,9 @@ const IconsSet = (props) => {
     <>
       <PageHeader showHeaderIcon={true}>
         <div className='icons-control'>
+          <label htmlFor='search-input-id' className='search-input-label'>
+            Search:
+          </label>
           <div className='icons-control-search'>
             <i
               className={`eos-icons ${
@@ -360,6 +363,7 @@ const IconsSet = (props) => {
               {searchValue === '' ? 'search' : 'close'}
             </i>
             <input
+              id='search-input-id'
               value={searchValue}
               ref={searchRef}
               className='search-input'

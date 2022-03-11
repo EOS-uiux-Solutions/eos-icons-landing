@@ -11,7 +11,13 @@
   padding: 0;
 }
 
+.search-input-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
 .icons-control {
+  align-items: center;
   display: flex;
 
   &-search {
