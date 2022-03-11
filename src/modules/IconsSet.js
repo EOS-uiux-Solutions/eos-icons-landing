@@ -239,6 +239,7 @@ const IconsSet = (props) => {
   const selectIcon = (icon, callback) => {
     setShowPanel(icon !== iconSelected)
     setIconSelected(icon === iconSelected ? '' : icon)
+    setSearchValue(icon.name === searchValue ? '' : icon.name)
     if (selectMultiple) {
       window.history.replaceState(
         '',
