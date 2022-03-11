@@ -365,6 +365,7 @@ const IconsSet = (props) => {
             <input
               id='search-input-id'
               value={searchValue}
+              placeholder='Search'
               ref={searchRef}
               className='search-input'
               type='text'
