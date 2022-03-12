@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import AppContext from '../utils/AppContext'
-
+import { Link } from '@reach/router'
 import Button from '../components/Button'
 import Cookies from 'js-cookie'
 
@@ -32,16 +32,18 @@ const CookiesBanner = () => {
                 EOS Icons uses cookies to help us learn more about how we can
                 improve our product.
                 <br />
-                <a href='/cookies-policy'>Learn more about our cookie policy</a>
+                <Link to='/cookies-policy'>
+                  Learn more about our cookie policy
+                </Link>
               </p>
             </div>
             <div className='cookies-alert-buttons'>
-              <a
+              <Link
                 className='btn btn-default btn-inverted'
-                href='/cookies-policy'
+                to='/cookies-policy'
               >
                 Edit preferences
-              </a>
+              </Link>
               <Button
                 onClick={() =>
                   cookiesHandler(dispatch({ type: 'TOGGLE_CUSTOMIZE_COOKIES' }))
