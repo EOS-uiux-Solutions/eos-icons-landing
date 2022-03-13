@@ -1,5 +1,5 @@
 import React from 'react'
-import useWindow from '../hooks/useWidow'
+import useWindow from '../hooks/useWindow'
 
 /* Create a config object with the classes neded as the size and theme */
 const config = {
