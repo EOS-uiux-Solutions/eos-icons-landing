@@ -9,7 +9,7 @@ import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
 import { CategorySelector } from '../components/CategorySelector'
-import { useWindowsSize } from '../hooks/useWidow'
+import { useWindowsSize } from '../hooks/useWindow'
 
 const IconsSet = (props) => {
   const [iconSelected, setIconSelected] = useState('')

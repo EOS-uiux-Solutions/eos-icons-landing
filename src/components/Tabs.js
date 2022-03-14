@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import useWindow from '../hooks/useWidow'
+import useWindow from '../hooks/useWindow'
 import Toggle from './Toggle'
 import AppContext from '../utils/AppContext'
 import IconVersionToggle from '../components/IconVersionToggle'
