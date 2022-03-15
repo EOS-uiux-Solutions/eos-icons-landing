@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://eos-icons.com/static/css/main.03dd0cbe.chunk.css",
+    "main.css": "https://eos-icons.com/static/css/main.da8c9f83.chunk.css",
     "main.js": "https://eos-icons.com/static/js/main.1ab8a0dc.chunk.js",
     "main.js.map": "https://eos-icons.com/static/js/main.1ab8a0dc.chunk.js.map",
     "runtime-main.js": "https://eos-icons.com/static/js/runtime-main.b4f395ad.js",
@@ -8,9 +8,9 @@
     "static/js/2.7f258dc6.chunk.js": "https://eos-icons.com/static/js/2.7f258dc6.chunk.js",
     "static/js/2.7f258dc6.chunk.js.map": "https://eos-icons.com/static/js/2.7f258dc6.chunk.js.map",
     "index.html": "https://eos-icons.com/index.html",
-    "precache-manifest.a199e14a65a4d61198ac7744b0d72088.js": "https://eos-icons.com/precache-manifest.a199e14a65a4d61198ac7744b0d72088.js",
+    "precache-manifest.bdf6908001329657e3b85ec2a99c3242.js": "https://eos-icons.com/precache-manifest.bdf6908001329657e3b85ec2a99c3242.js",
     "service-worker.js": "https://eos-icons.com/service-worker.js",
-    "static/css/main.03dd0cbe.chunk.css.map": "https://eos-icons.com/static/css/main.03dd0cbe.chunk.css.map",
+    "static/css/main.da8c9f83.chunk.css.map": "https://eos-icons.com/static/css/main.da8c9f83.chunk.css.map",
     "static/js/2.7f258dc6.chunk.js.LICENSE.txt": "https://eos-icons.com/static/js/2.7f258dc6.chunk.js.LICENSE.txt",
     "static/media/abhinandan.png": "https://eos-icons.com/static/media/abhinandan.b18ba27c.png",
     "static/media/abhirup.jpg": "https://eos-icons.com/static/media/abhirup.7690102c.jpg",
@@ -66,7 +66,7 @@
   "entrypoints": [
     "static/js/runtime-main.b4f395ad.js",
     "static/js/2.7f258dc6.chunk.js",
-    "static/css/main.03dd0cbe.chunk.css",
+    "static/css/main.da8c9f83.chunk.css",
     "static/js/main.1ab8a0dc.chunk.js"
   ]
 }
