@@ -56,10 +56,10 @@ export default [
         target: '_blank'
       },
       {
-        name: 'How to colaborate',
+        name: 'How to collaborate',
         href: 'https://brand.eosdesignsystem.com/ContributingGuide',
         category: 'External link',
-        action: 'Link to how to colaborate',
+        action: 'Link to how to collaborate',
         label: 'Footer',
         target: '_blank'
       }
