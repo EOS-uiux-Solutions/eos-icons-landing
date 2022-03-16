@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import { SketchPicker } from 'react-color'
 import Button from './Button'
 import axios from 'axios'
@@ -7,6 +7,7 @@ import AppContext from '../utils/AppContext'
 /* https://www.npmjs.com/package/react-svg the package to work with SVG's */
 import { ReactSVG } from 'react-svg'
 import { ICON_PICKER_API_URL } from '../config.json'
+import useClickOutside from '../hooks/useClickOutside'
 
 const IconEditor = (props) => {
   const apiBaseUrl = ICON_PICKER_API_URL
@@ -23,6 +24,9 @@ const IconEditor = (props) => {
   const [svgCode, setSvgCode] = useState([])
   const [svgError, setSvgError] = useState(true)
   const { state } = useContext(AppContext)
+
+  const iconEditorRef = useRef()
+  useClickOutside(iconEditorRef, () => show())
 
   const exportSizes = [
     '18',
@@ -174,7 +178,7 @@ const IconEditor = (props) => {
 
   return isActive ? (
     <div className='icon-editor'>
-      <div className='icon-editor-card'>
+      <div className='icon-editor-card' ref={iconEditorRef}>
         <div className='close' onClick={show} />
         <h2>Customize Icon</h2>
         <div className='flex flex-row icon-editor-content'>
