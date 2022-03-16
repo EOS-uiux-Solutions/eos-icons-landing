@@ -9,7 +9,7 @@ import HowTo from '../components/HowToPanel'
 import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
 import { CategorySelector } from '../components/CategorySelector'
-import { useWindowsSize } from '../hooks/useWidow'
+import { useWindowsSize } from '../hooks/useWindow'
 
 const IconsSet = (props) => {
   const [iconSelected, setIconSelected] = useState('')
@@ -261,7 +261,11 @@ const IconsSet = (props) => {
 
   /* Toggle customizable functionality */
   const toggleCustomize = (callback) => {
+    setShowPanel(false)
+    setSearchValue('')
+    setIconSelected('')
     setSelectMultiple(!selectMultiple)
+    window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
     props.action()
     return callback
   }
@@ -351,6 +355,9 @@ const IconsSet = (props) => {
     <>
       <PageHeader showHeaderIcon={true}>
         <div className='icons-control'>
+          <label htmlFor='search-input-id' className='search-input-label'>
+            Search:
+          </label>
           <div className='icons-control-search'>
             <i
               className={`eos-icons ${
@@ -366,7 +373,9 @@ const IconsSet = (props) => {
               {searchValue === '' ? 'search' : 'close'}
             </i>
             <input
+              id='search-input-id'
               value={searchValue}
+              placeholder='Search'
               ref={searchRef}
               className='search-input'
               type='text'

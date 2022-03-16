@@ -184,7 +184,7 @@ const IconEditor = (props) => {
               className='color-picker'
               color={color}
               disableAlpha={true}
-              onChangeComplete={changeColor}
+              onChange={changeColor}
             />
             <br />
             {!svgError && (

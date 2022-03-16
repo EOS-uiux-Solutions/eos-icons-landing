@@ -56,6 +56,8 @@ const CustomizeIconsPanel = (props) => {
         }`,
         payload: value.multipleIcons
       }).then(setServerResponse)
+    } else {
+      window.alert('Please select atleast one icon')
     }
   }
 

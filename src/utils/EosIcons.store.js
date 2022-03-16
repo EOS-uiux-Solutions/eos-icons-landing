@@ -85,7 +85,6 @@ export const eosIconsState = {
       Cookies.set('cookies-preference', 'true')
     }
     this.cookiesToggle = !this.cookiesToggle
-    return window.location.reload()
   },
   selectAllIcons(search) {
     multipleIcons.splice(0, multipleIcons.length)
