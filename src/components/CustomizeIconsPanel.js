@@ -92,6 +92,7 @@ const CustomizeIconsPanel = (props) => {
             <input
               type='file'
               id='upload-file'
+              accept='application/JSON'
               hidden
               name='file'
               onChange={(event) => search(event.target.files[0], dispatch)}
