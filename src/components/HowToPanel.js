@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react'
 import AppContext from '../utils/AppContext'
 import Button from './Button'
 import IconEditor from './IconEditor'
+import toast, { Toaster } from 'react-hot-toast'
 
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
@@ -123,10 +124,12 @@ const HowToPanel = (props) => {
                   onClick={() => {
                     document.getElementById('copy-code').select()
                     document.execCommand('copy')
+                    toast('HTML Tag Copied')
                   }}
                 >
                   <i className='eos-icons eos-18'>content_copy</i>
                 </Button>
+                <Toaster />
               </div>
               <Button
                 primary
