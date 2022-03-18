@@ -2,7 +2,10 @@ import React, { useState, useEffect, useContext, useRef } from 'react'
 import AppContext from '../utils/AppContext'
 import Button from './Button'
 import IconEditor from './IconEditor'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
+toast.configure()
 const HowToPanel = (props) => {
   const { show, close, iconName, type, iconTags } = props
   const ref = useRef()
@@ -123,6 +126,7 @@ const HowToPanel = (props) => {
                   onClick={() => {
                     document.getElementById('copy-code').select()
                     document.execCommand('copy')
+                    toast.info('Code Copied')
                   }}
                 >
                   <i className='eos-icons eos-18'>content_copy</i>
