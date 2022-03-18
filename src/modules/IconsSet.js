@@ -484,6 +484,7 @@ const IconsSet = (props) => {
           currentTab={tab}
           toggleCustomize={(callback) => toggleCustomize(callback)}
           showMultipleSwitch={true}
+          resetTabsState={true}
           resetTabsStateRef={resetTabsStateRef}
         >
           <div label='Static Icons'>

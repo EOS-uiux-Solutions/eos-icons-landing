@@ -13,7 +13,8 @@ const Tabs = (props) => {
     showPanel,
     toggleCustomize,
     showMultipleSwitch,
-    currentTab
+    currentTab,
+    resetTabsState
   } = props
 
   const [activeTab, setActiveTab] = useState(currentTab)
@@ -56,8 +57,9 @@ const Tabs = (props) => {
   }, [changeCheckedStatus, currentTab, dispatch])
 
   useEffect(() => {
-    props.resetTabsStateRef.current = resetTabsStateFromNavbarLogo
-  }, [props.resetTabsStateRef, resetTabsStateFromNavbarLogo])
+    if (resetTabsState)
+      props.resetTabsStateRef.current = resetTabsStateFromNavbarLogo
+  }, [props.resetTabsStateRef, resetTabsState, resetTabsStateFromNavbarLogo])
 
   return (
     <div className='tabs'>
