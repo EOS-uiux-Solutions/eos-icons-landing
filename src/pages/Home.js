@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import AppContext from '../utils/AppContext'
-import { globalHistory } from '@reach/router'
 import { Helmet } from 'react-helmet'
 
 import IconsSet from '../modules/IconsSet'
@@ -8,13 +7,6 @@ import scrollToTop from '../utils/scrollToTop'
 
 const Home = (props) => {
   const [header, setHeader] = useState(true)
-  const { state, dispatch } = useContext(AppContext)
-
-  useEffect(() => {
-    return globalHistory.listen(() =>
-      state.customize ? dispatch({ type: 'TOGGLE_CUSTOMIZE' }) : ''
-    )
-  })
 
   useEffect(() => {
     scrollToTop()

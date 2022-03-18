@@ -40,13 +40,23 @@ const IconsSet = (props) => {
   })
 
   useEffect(() => {
-    props.container.current = resetStateFromNavbarLogo
+    props.container.current = resetIconSetStateFromNavbarLogo
   }, [props.container])
 
-  const resetStateFromNavbarLogo = () => {
+  const resetTabsStateRef = useRef(null)
+
+  const resetIconSetStateFromNavbarLogo = () => {
     window.scroll(0, 0)
     setShowPanel(false)
     setSearchValue('')
+    setIconSelected('')
+    setActiveTab('Static Icons')
+    setStaticHistory('')
+    setSelectMultiple(true)
+    setAnimatedHistory('')
+    setEmptySearchResult(false)
+    setSuggestedString('')
+    resetTabsStateRef.current()
   }
 
   let setSearchWithUrlParam = urlIconName
@@ -474,6 +484,7 @@ const IconsSet = (props) => {
           currentTab={tab}
           toggleCustomize={(callback) => toggleCustomize(callback)}
           showMultipleSwitch={true}
+          resetTabsStateRef={resetTabsStateRef}
         >
           <div label='Static Icons'>
             {emptySearchResult && (

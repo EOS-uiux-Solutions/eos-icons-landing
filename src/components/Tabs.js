@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, useCallback } from 'react'
 import useWindow from '../hooks/useWindow'
 import Toggle from './Toggle'
 import AppContext from '../utils/AppContext'
@@ -39,12 +39,25 @@ const Tabs = (props) => {
     }
   }, [activeTab, staticCheck])
 
-  const changeCheckedStatus = () => {
+  const changeCheckedStatus = useCallback(() => {
     if (activeTab === currentTab) {
       setStaticCheck(!checked)
     }
     setChecked(!checked)
-  }
+  }, [activeTab, checked, currentTab])
+
+  const resetTabsStateFromNavbarLogo = useCallback(() => {
+    changeCheckedStatus()
+    dispatch({ type: 'RESET_CUSTOMIZE' })
+    setActiveTab(currentTab)
+    setChecked(false)
+    setStaticCheck(false)
+    setPosition(0)
+  }, [changeCheckedStatus, currentTab, dispatch])
+
+  useEffect(() => {
+    props.resetTabsStateRef.current = resetTabsStateFromNavbarLogo
+  }, [props.resetTabsStateRef, resetTabsStateFromNavbarLogo])
 
   return (
     <div className='tabs'>

@@ -62,6 +62,9 @@ export const eosIconsState = {
 
     return (this.customize = !this.customize)
   },
+  resetCustomize() {
+    return (this.customize = false)
+  },
   selectAllTagsIcons(tagName) {
     if (tagName === 'all') return this.iconsCategory
 
@@ -185,6 +188,11 @@ export const iconsReducer = (state, action) => {
       return {
         ...state,
         customize: eosIconsState.toggleCustomize()
+      }
+    case 'RESET_CUSTOMIZE':
+      return {
+        ...state,
+        customize: eosIconsState.resetCustomize()
       }
     case 'ADD_ALL_ICONS':
       return {
