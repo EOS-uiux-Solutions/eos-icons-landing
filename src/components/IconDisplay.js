@@ -1,7 +1,8 @@
 import React from 'react'
 
 const Icon = (props) => {
-  const { name, size, action, active, iconsTheme } = props
+  const { name, size, onClickAction, onDoubleClickAction, active, iconsTheme } =
+    props
   /* Possible icon sizes */
   const sizes = {
     18: 'eos-18',
@@ -19,7 +20,13 @@ const Icon = (props) => {
   }
 
   return (
-    <div className={iconClass()} onClick={action}>
+    <div
+      className={iconClass()}
+      onClick={(event) => {
+        if (event.detail === 1) onClickAction()
+        if (event.detail === 2) onDoubleClickAction()
+      }}
+    >
       <i
         className={`eos-icons${iconsTheme === 'outlined' ? '-outlined' : ' '} ${
           sizes[size]

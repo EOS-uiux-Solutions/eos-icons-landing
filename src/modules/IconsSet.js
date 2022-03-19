@@ -10,6 +10,7 @@ import { eosIconsState } from '../utils/EosIcons.store'
 import PageHeader from '../components/PageHeader'
 import { CategorySelector } from '../components/CategorySelector'
 import { useWindowsSize } from '../hooks/useWindow'
+import IconEditor from '../components/IconEditor'
 
 const IconsSet = (props) => {
   const [iconSelected, setIconSelected] = useState('')
@@ -29,6 +30,11 @@ const IconsSet = (props) => {
   const [selectMultiple, setSelectMultiple] = useState(true)
   const [emptySearchResult, setEmptySearchResult] = useState(false)
   const [suggestedString, setSuggestedString] = useState('')
+  const [iconEditor, setIconEditor] = useState(false)
+
+  const iconEditorToggle = () => {
+    setIconEditor(!iconEditor)
+  }
 
   const activeIconRef = useRef(null)
   useEffect(() => {
@@ -500,7 +506,7 @@ const IconsSet = (props) => {
                             key={icon.name}
                             name={icon.name}
                             iconsTheme={state.iconsTheme}
-                            action={() =>
+                            onClickAction={() =>
                               selectIcon(
                                 icon,
                                 dispatch({
@@ -511,6 +517,7 @@ const IconsSet = (props) => {
                                 })
                               )
                             }
+                            onDoubleClickAction={() => iconEditorToggle()}
                           />
                         </div>
                       ) : (
@@ -520,7 +527,7 @@ const IconsSet = (props) => {
                           key={icon.name}
                           name={icon.name}
                           iconsTheme={state.iconsTheme}
-                          action={() =>
+                          onClickAction={() =>
                             selectIcon(
                               icon,
                               dispatch({
@@ -531,6 +538,7 @@ const IconsSet = (props) => {
                               })
                             )
                           }
+                          onDoubleClickAction={() => iconEditorToggle()}
                         />
                       )
                     )}
@@ -566,17 +574,20 @@ const IconsSet = (props) => {
                     icon === iconSelected?.name ? 'active' : ''
                   }`}
                   key={index}
-                  onClick={() => {
-                    setIconSelected({ name: icon })
-                    setShowPanel(true)
-                    setSearchValue(icon)
-                    if (selectMultiple) {
-                      window.history.replaceState(
-                        '',
-                        'EOS Icons',
-                        `${window.location.pathname}?iconName=${icon}&type=animated`
-                      )
+                  onClick={(event) => {
+                    if (event.detail === 1) {
+                      setIconSelected({ name: icon })
+                      setShowPanel(true)
+                      setSearchValue(icon)
+                      if (selectMultiple) {
+                        window.history.replaceState(
+                          '',
+                          'EOS Icons',
+                          `${window.location.pathname}?iconName=${icon}&type=animated`
+                        )
+                      }
                     }
+                    if (event.detail === 2) iconEditorToggle()
                   }}
                 >
                   <img
@@ -589,6 +600,27 @@ const IconsSet = (props) => {
             </div>
           </div>
         </Tabs>
+        {iconEditor ? (
+          tab === 'Static Icons' ? (
+            <IconEditor
+              isActive={iconEditor}
+              show={iconEditorToggle}
+              iconNames={[iconSelected?.name]}
+              iconType={'static'}
+              theme={state.iconsTheme}
+            />
+          ) : (
+            <IconEditor
+              isActive={iconEditor}
+              show={iconEditorToggle}
+              iconNames={[iconSelected?.name]}
+              iconType={'animated'}
+              theme={state.iconsTheme}
+            />
+          )
+        ) : (
+          ''
+        )}
       </div>
     </>
   )
