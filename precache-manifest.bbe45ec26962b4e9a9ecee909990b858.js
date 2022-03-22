@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bbee953f2dfd8415a3834efbfa3afc23",
+    "revision": "6cca30e697b5e7011a730ca1d3c2ebe8",
     "url": "https://eos-icons.com/index.html"
   },
   {
-    "revision": "16ca11edb12335a613c0",
+    "revision": "16aad4f5a0da557ab427",
     "url": "https://eos-icons.com/static/css/main.2b23d5d2.chunk.css"
   },
   {
-    "revision": "0c896c68457d75f33136",
-    "url": "https://eos-icons.com/static/js/2.6b9135f4.chunk.js"
+    "revision": "c8b60ca7299a1ac15ab3",
+    "url": "https://eos-icons.com/static/js/2.d0a1dd59.chunk.js"
   },
   {
     "revision": "d665341c7e4015a106d7747f2703df2f",
-    "url": "https://eos-icons.com/static/js/2.6b9135f4.chunk.js.LICENSE.txt"
+    "url": "https://eos-icons.com/static/js/2.d0a1dd59.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "16ca11edb12335a613c0",
-    "url": "https://eos-icons.com/static/js/main.3cdf242d.chunk.js"
+    "revision": "16aad4f5a0da557ab427",
+    "url": "https://eos-icons.com/static/js/main.5df47387.chunk.js"
   },
   {
     "revision": "7af3f975fc0404f5bb14",
