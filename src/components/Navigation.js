@@ -22,7 +22,7 @@ const Navigation = () => {
             <img className='logo' src={eosIcon} alt='eos-icons logo' />
           </div>
         </Link>
-        <nav className='padding-top-xs'>
+        <nav className='padding-bottom-s'>
           <NavLink to='/'>
             <i className='eos-icons'>miscellaneous</i>
             Icons
