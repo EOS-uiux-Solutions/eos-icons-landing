@@ -500,6 +500,7 @@ const IconsSet = (props) => {
                             key={icon.name}
                             name={icon.name}
                             iconsTheme={state.iconsTheme}
+                            type={'static'}
                             action={() =>
                               selectIcon(
                                 icon,
@@ -520,6 +521,7 @@ const IconsSet = (props) => {
                           key={icon.name}
                           name={icon.name}
                           iconsTheme={state.iconsTheme}
+                          type={'static'}
                           action={() =>
                             selectIcon(
                               icon,
@@ -561,12 +563,12 @@ const IconsSet = (props) => {
             )}
             <div className='icons-list'>
               {state.animatedIcons.map((icon, index) => (
-                <div
-                  className={`icon-container ${
-                    icon === iconSelected?.name ? 'active' : ''
-                  }`}
+                <Icon
                   key={index}
-                  onClick={() => {
+                  name={icon}
+                  type={'animated'}
+                  active={icon === iconSelected?.name}
+                  action={() => {
                     setIconSelected({ name: icon })
                     setShowPanel(true)
                     setSearchValue(icon)
@@ -578,13 +580,7 @@ const IconsSet = (props) => {
                       )
                     }
                   }}
-                >
-                  <img
-                    src={require(`eos-icons/animated-svg/${icon}.svg`)}
-                    alt={icon}
-                  />
-                  {icon}
-                </div>
+                />
               ))}
             </div>
           </div>
