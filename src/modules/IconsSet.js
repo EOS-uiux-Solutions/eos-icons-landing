@@ -259,9 +259,9 @@ const IconsSet = (props) => {
   }
 
   const selectAnimatedIcon = (icon) => {
-    setIconSelected({ name: icon })
-    setShowPanel(true)
-    setSearchValue(icon)
+    setIconSelected({ name: icon } === iconSelected ? '' : { name: icon })
+    setShowPanel({ name: icon } !== iconSelected)
+    setSearchValue(icon === searchValue ? '' : icon)
     if (selectMultiple) {
       window.history.replaceState(
         '',
