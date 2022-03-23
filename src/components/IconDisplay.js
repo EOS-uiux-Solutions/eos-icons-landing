@@ -1,8 +1,15 @@
 import React from 'react'
 
 const Icon = (props) => {
-  const { name, size, onClickAction, onDoubleClickAction, active, iconsTheme } =
-    props
+  const {
+    name,
+    size,
+    onClickAction,
+    onDoubleClickAction,
+    type,
+    active,
+    iconsTheme
+  } = props
   /* Possible icon sizes */
   const sizes = {
     18: 'eos-18',
@@ -19,7 +26,7 @@ const Icon = (props) => {
     return finalClass
   }
 
-  return (
+  return type === 'static' ? (
     <div
       className={iconClass()}
       onClick={(event) => {
@@ -34,6 +41,17 @@ const Icon = (props) => {
       >
         {name}
       </i>
+      {name}
+    </div>
+  ) : (
+    <div
+      className={iconClass()}
+      onClick={(event) => {
+        if (event.detail === 1) onClickAction()
+        if (event.detail === 2) onDoubleClickAction()
+      }}
+    >
+      <img src={require(`eos-icons/animated-svg/${name}.svg`)} alt={name} />
       {name}
     </div>
   )

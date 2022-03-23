@@ -258,6 +258,19 @@ const IconsSet = (props) => {
     return callback
   }
 
+  const selectAnimatedIcon = (icon) => {
+    setIconSelected({ name: icon })
+    setShowPanel(true)
+    setSearchValue(icon)
+    if (selectMultiple) {
+      window.history.replaceState(
+        '',
+        'EOS Icons',
+        `${window.location.pathname}?iconName=${icon}&type=animated`
+      )
+    }
+  }
+
   /* Toggle customizable functionality */
   const toggleCustomize = (callback) => {
     setShowPanel(false)
@@ -506,6 +519,7 @@ const IconsSet = (props) => {
                             key={icon.name}
                             name={icon.name}
                             iconsTheme={state.iconsTheme}
+                            type={'static'}
                             onClickAction={() =>
                               selectIcon(
                                 icon,
@@ -527,6 +541,7 @@ const IconsSet = (props) => {
                           key={icon.name}
                           name={icon.name}
                           iconsTheme={state.iconsTheme}
+                          type={'static'}
                           onClickAction={() =>
                             selectIcon(
                               icon,
@@ -569,33 +584,16 @@ const IconsSet = (props) => {
             )}
             <div className='icons-list'>
               {state.animatedIcons.map((icon, index) => (
-                <div
-                  className={`icon-container ${
-                    icon === iconSelected?.name ? 'active' : ''
-                  }`}
+                <Icon
                   key={index}
-                  onClick={(event) => {
-                    if (event.detail === 1) {
-                      setIconSelected({ name: icon })
-                      setShowPanel(true)
-                      setSearchValue(icon)
-                      if (selectMultiple) {
-                        window.history.replaceState(
-                          '',
-                          'EOS Icons',
-                          `${window.location.pathname}?iconName=${icon}&type=animated`
-                        )
-                      }
-                    }
-                    if (event.detail === 2) iconEditorToggle()
+                  name={icon}
+                  type={'animated'}
+                  active={icon === iconSelected?.name}
+                  onClickAction={() => {
+                    selectAnimatedIcon(icon)
                   }}
-                >
-                  <img
-                    src={require(`eos-icons/animated-svg/${icon}.svg`)}
-                    alt={icon}
-                  />
-                  {icon}
-                </div>
+                  onDoubleClickAction={() => iconEditorToggle()}
+                />
               ))}
             </div>
           </div>
