@@ -13,11 +13,16 @@ const NavLink = (props) => (
   />
 )
 
-const Navigation = () => {
+const Navigation = (props) => {
   return (
     <header className='flex-wrap-sm navigation'>
       <div className='container navigation-content'>
-        <Link to='/'>
+        <Link
+          to='/'
+          onClick={() => {
+            props.resetIconSetState()
+          }}
+        >
           <div className='brand'>
             <img className='logo' src={eosIcon} alt='eos-icons logo' />
           </div>

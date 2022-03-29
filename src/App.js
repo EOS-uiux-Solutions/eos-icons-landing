@@ -32,13 +32,14 @@ TagManager.initialize(tagManagerArgs)
 
 const App = () => {
   const [state, dispatch] = useReducer(iconsReducer, eosIconsState)
+  const container = React.useRef(null)
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className='App'>
-        <Navigation />
+        <Navigation resetIconSetState={container.current} />
         <div className='app-container'>
           <Router primary={false}>
-            <Home path='/' />
+            <Home path='/' container={container} />
             <Docs path='/docs' />
             <CookiesPage path='/cookies-policy' />
             <ThankYou path='/thankyou' />
