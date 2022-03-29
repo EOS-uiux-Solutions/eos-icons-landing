@@ -31,10 +31,33 @@ const IconsSet = (props) => {
   const [emptySearchResult, setEmptySearchResult] = useState(false)
   const [suggestedString, setSuggestedString] = useState('')
   const [iconEditor, setIconEditor] = useState(false)
+  const [userSearchInput, setUserSearchInput] = useState(false)
 
   const iconEditorToggle = () => {
     setIconEditor(!iconEditor)
   }
+
+  const handleKeyPress = (event) => {
+    if (event) {
+      setUserSearchInput(true)
+    }
+  }
+
+  useEffect(() => {
+    if (iconSelected !== '') {
+      tab === 'Static Icons'
+        ? window.history.replaceState(
+            '',
+            'EOS Icons',
+            `${window.location.pathname}?iconName=${iconSelected.name}&type=static`
+          )
+        : window.history.replaceState(
+            '',
+            'EOS Icons',
+            `${window.location.pathname}?iconName=${iconSelected.name}&type=animated`
+          )
+    }
+  })
 
   const activeIconRef = useRef(null)
   useEffect(() => {
@@ -149,6 +172,7 @@ const IconsSet = (props) => {
 
   useEffect(() => {
     if (searchValue === '' || searchValue === null) {
+      setUserSearchInput(false)
       setEmptySearchResult(false)
       closeHowTo()
       dispatch({
@@ -165,7 +189,7 @@ const IconsSet = (props) => {
     if (tabType === 'static') {
       return dispatch({
         type: 'TOGGLE_SEARCH_REGULAR_ICONS',
-        search: urlIconName
+        search: ''
       })
     } else {
       return dispatch({
@@ -210,6 +234,10 @@ const IconsSet = (props) => {
       setSearchValue(urlTagName)
     }
 
+    if (!userSearchInput && urlIconName === null) {
+      setSearchValue('')
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [urlIconName, urlTagName])
 
@@ -243,17 +271,23 @@ const IconsSet = (props) => {
   }
 
   const selectIcon = (icon, callback) => {
-    setShowPanel(icon !== iconSelected)
-    setIconSelected(icon === iconSelected ? '' : icon)
-    setSearchValue((searchValue) =>
-      icon.name === searchValue ? '' : icon.name
-    )
     if (selectMultiple) {
-      window.history.replaceState(
-        '',
-        'EOS Icons',
-        `${window.location.pathname}?iconName=${icon.name}&type=static`
+      const iconObj = { name: icon.name, tags: icon.tags }
+      setIconSelected(
+        JSON.stringify(iconObj) === JSON.stringify(iconSelected) ? '' : iconObj
       )
+      setShowPanel(JSON.stringify(iconObj) !== JSON.stringify(iconSelected))
+      JSON.stringify(iconObj) === JSON.stringify(iconSelected)
+        ? window.history.replaceState(
+            '',
+            'EOS Icons',
+            `${window.location.pathname}`
+          )
+        : window.history.replaceState(
+            '',
+            'EOS Icons',
+            `${window.location.pathname}?iconName=${icon.name}&type=static`
+          )
     }
     return callback
   }
@@ -392,6 +426,7 @@ const IconsSet = (props) => {
               className='search-input'
               type='text'
               name='search'
+              onKeyDown={handleKeyPress}
               onChange={(event) => {
                 setSearchValue(event.target.value)
 
