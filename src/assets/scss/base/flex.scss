@@ -22,6 +22,15 @@
   }
 }
 
+.flex-col {
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $mobile-max) {
+    flex-direction: row;
+  }
+}
+
 .flex-wrap-sm {
   @media (max-width: $mobile-max) {
 

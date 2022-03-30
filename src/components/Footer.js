@@ -4,7 +4,7 @@ import links from '../utils/Links.store'
 const Footer = () => {
   return (
     <footer>
-      <div className='container flex flex-wrap'>
+      <div className='container flex flex-col flex-wrap'>
         {links.map((ele, i) => {
           return <FooterBlock {...ele} key={i} />
         })}
@@ -20,6 +20,7 @@ const FooterBlock = ({ img, title, links }) => {
       <div className='footer-block-list'>
         {links?.map((ele, index) => (
           <a
+            className='color-gray'
             key={index}
             href={ele.href}
             data-types-category={ele.category}

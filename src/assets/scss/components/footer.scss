@@ -49,6 +49,10 @@ footer {
     }
   }
 
+  .color-gray {
+    color: gray;
+  }
+
   @media (max-width: $mobile-max) {
     margin-bottom: 80px;
   }
