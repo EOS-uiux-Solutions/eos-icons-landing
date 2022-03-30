@@ -44,7 +44,7 @@ const IconsSet = (props) => {
   }
 
   useEffect(() => {
-    if (iconSelected !== '') {
+    if (iconSelected !== '' && !urlTagName) {
       tab === 'Static Icons'
         ? window.history.replaceState(
             '',
@@ -254,7 +254,7 @@ const IconsSet = (props) => {
       setSearchValue(urlTagName)
     }
 
-    if (!userSearchInput && urlIconName === null) {
+    if (!userSearchInput && urlTagName === null && urlIconName === null) {
       setSearchValue('')
     }
 
