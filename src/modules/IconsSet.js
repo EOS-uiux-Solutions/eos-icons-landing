@@ -48,7 +48,6 @@ const IconsSet = (props) => {
     if (urlTagName) setTagSelected(urlTagName)
     else {
       if (iconSelected !== '') {
-        setTagSelected('')
         tab === 'Static Icons'
           ? window.history.replaceState(
               '',
@@ -63,6 +62,16 @@ const IconsSet = (props) => {
       }
     }
   }, [urlTagName, iconSelected, tab])
+
+  useEffect(() => {
+    if (tagSelected && iconSelected === '') {
+      window.history.replaceState(
+        '',
+        'EOS Icons',
+        `${window.location.pathname}?tagName=${tagSelected}`
+      )
+    }
+  })
 
   const activeIconRef = useRef(null)
   useEffect(() => {
@@ -443,6 +452,7 @@ const IconsSet = (props) => {
               onClick={() => {
                 if (searchValue.length > 0) {
                   searchRef.current.value = ''
+                  setTagSelected('')
                   closeHowTo()
                 }
               }}
