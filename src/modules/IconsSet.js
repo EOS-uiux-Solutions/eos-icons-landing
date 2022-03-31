@@ -32,6 +32,7 @@ const IconsSet = (props) => {
   const [suggestedString, setSuggestedString] = useState('')
   const [iconEditor, setIconEditor] = useState(false)
   const [userSearchInput, setUserSearchInput] = useState(false)
+  const [tagSelected, setTagSelected] = useState('')
 
   const iconEditorToggle = () => {
     setIconEditor(!iconEditor)
@@ -44,20 +45,24 @@ const IconsSet = (props) => {
   }
 
   useEffect(() => {
-    if (iconSelected !== '' && !urlTagName) {
-      tab === 'Static Icons'
-        ? window.history.replaceState(
-            '',
-            'EOS Icons',
-            `${window.location.pathname}?iconName=${iconSelected.name}&type=static`
-          )
-        : window.history.replaceState(
-            '',
-            'EOS Icons',
-            `${window.location.pathname}?iconName=${iconSelected.name}&type=animated`
-          )
+    if (urlTagName) setTagSelected(urlTagName)
+    else {
+      if (iconSelected !== '') {
+        setTagSelected('')
+        tab === 'Static Icons'
+          ? window.history.replaceState(
+              '',
+              'EOS Icons',
+              `${window.location.pathname}?iconName=${iconSelected.name}&type=static`
+            )
+          : window.history.replaceState(
+              '',
+              'EOS Icons',
+              `${window.location.pathname}?iconName=${iconSelected.name}&type=animated`
+            )
+      }
     }
-  })
+  }, [urlTagName, iconSelected, tab])
 
   const activeIconRef = useRef(null)
   useEffect(() => {
@@ -85,6 +90,7 @@ const IconsSet = (props) => {
     setAnimatedHistory('')
     setEmptySearchResult(false)
     setSuggestedString('')
+    setTagSelected('')
     resetTabsStateRef.current()
   }
 
@@ -254,7 +260,12 @@ const IconsSet = (props) => {
       setSearchValue(urlTagName)
     }
 
-    if (!userSearchInput && urlTagName === null && urlIconName === null) {
+    if (
+      !userSearchInput &&
+      urlTagName === null &&
+      urlIconName === null &&
+      tagSelected === ''
+    ) {
       setSearchValue('')
     }
 
