@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "https://eos-icons.com/static/css/main.2b23d5d2.chunk.css",
-    "main.js": "https://eos-icons.com/static/js/main.3206bc85.chunk.js",
-    "main.js.map": "https://eos-icons.com/static/js/main.3206bc85.chunk.js.map",
+    "main.css": "https://eos-icons.com/static/css/main.5b58be6d.chunk.css",
+    "main.js": "https://eos-icons.com/static/js/main.c9e8b9af.chunk.js",
+    "main.js.map": "https://eos-icons.com/static/js/main.c9e8b9af.chunk.js.map",
     "runtime-main.js": "https://eos-icons.com/static/js/runtime-main.b4f395ad.js",
     "runtime-main.js.map": "https://eos-icons.com/static/js/runtime-main.b4f395ad.js.map",
-    "static/js/2.dd0ed89c.chunk.js": "https://eos-icons.com/static/js/2.dd0ed89c.chunk.js",
-    "static/js/2.dd0ed89c.chunk.js.map": "https://eos-icons.com/static/js/2.dd0ed89c.chunk.js.map",
+    "static/js/2.0dd818fc.chunk.js": "https://eos-icons.com/static/js/2.0dd818fc.chunk.js",
+    "static/js/2.0dd818fc.chunk.js.map": "https://eos-icons.com/static/js/2.0dd818fc.chunk.js.map",
     "index.html": "https://eos-icons.com/index.html",
-    "precache-manifest.288875d1f856737b3abd5495ccffca4e.js": "https://eos-icons.com/precache-manifest.288875d1f856737b3abd5495ccffca4e.js",
+    "precache-manifest.b34e3488d791993151ca46576d3a5cfe.js": "https://eos-icons.com/precache-manifest.b34e3488d791993151ca46576d3a5cfe.js",
     "service-worker.js": "https://eos-icons.com/service-worker.js",
-    "static/css/main.2b23d5d2.chunk.css.map": "https://eos-icons.com/static/css/main.2b23d5d2.chunk.css.map",
-    "static/js/2.dd0ed89c.chunk.js.LICENSE.txt": "https://eos-icons.com/static/js/2.dd0ed89c.chunk.js.LICENSE.txt",
+    "static/css/main.5b58be6d.chunk.css.map": "https://eos-icons.com/static/css/main.5b58be6d.chunk.css.map",
+    "static/js/2.0dd818fc.chunk.js.LICENSE.txt": "https://eos-icons.com/static/js/2.0dd818fc.chunk.js.LICENSE.txt",
     "static/media/abhinandan.png": "https://eos-icons.com/static/media/abhinandan.b18ba27c.png",
     "static/media/abhirup.jpg": "https://eos-icons.com/static/media/abhirup.7690102c.jpg",
     "static/media/aditya.png": "https://eos-icons.com/static/media/aditya.e025b233.png",
@@ -65,8 +65,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b4f395ad.js",
-    "static/js/2.dd0ed89c.chunk.js",
-    "static/css/main.2b23d5d2.chunk.css",
-    "static/js/main.3206bc85.chunk.js"
+    "static/js/2.0dd818fc.chunk.js",
+    "static/css/main.5b58be6d.chunk.css",
+    "static/js/main.c9e8b9af.chunk.js"
   ]
 }
