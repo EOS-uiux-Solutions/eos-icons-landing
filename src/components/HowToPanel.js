@@ -70,7 +70,6 @@ const HowToPanel = (props) => {
   return show ? (
     <div ref={ref} className='how-to-use-block'>
       <div className='container'>
-
         <i className='close-button eos-icons eos-18' onClick={() => close()}>
           close
         </i>
