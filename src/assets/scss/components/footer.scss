@@ -23,7 +23,7 @@ footer {
     align-items: flex-start;
     display: flex;
     margin: $l;
-    min-height: 9rem;
+    min-height: 9remq;
 
     @media (max-width: $mobile-max) {
       display: inline;
@@ -44,6 +44,7 @@ footer {
 
       @media (max-width: $mobile-max) {
         min-width: 9rem;
+
         a {
           margin: 0;
         }
@@ -52,7 +53,7 @@ footer {
   }
 
   .color-gray {
-    color: gray;
+    color: $light-gray;
   }
 
   @media (max-width: $mobile-max) {
