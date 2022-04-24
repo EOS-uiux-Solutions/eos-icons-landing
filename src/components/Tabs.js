@@ -14,7 +14,8 @@ const Tabs = (props) => {
     toggleCustomize,
     showMultipleSwitch,
     currentTab,
-    resetTabsState
+    resetTabsState,
+    tabChangeHandler
   } = props
 
   const [activeTab, setActiveTab] = useState(currentTab)
@@ -33,12 +34,13 @@ const Tabs = (props) => {
   }, [customize, showPanel, windowsSize])
 
   useEffect(() => {
+    if (tabChangeHandler) tabChangeHandler()
     if (activeTab === 'Static Icons') {
       setChecked(staticCheck)
     } else {
       setChecked(false)
     }
-  }, [activeTab, staticCheck])
+  }, [activeTab, staticCheck, tabChangeHandler])
 
   const changeCheckedStatus = useCallback(() => {
     if (activeTab === currentTab) {
