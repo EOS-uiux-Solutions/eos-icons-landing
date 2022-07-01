@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet'
 import scrollToTop from '../utils/scrollToTop'
 
 const Docs = () => {
-  useEffect(() => {
+  const colorizeCodeSnippet = () => {
     Prism.highlightAll()
     scrollToTop()
 
@@ -25,6 +25,9 @@ const Docs = () => {
         }
       })
     }
+  }
+  useEffect(() => {
+    colorizeCodeSnippet()
   })
 
   return (
@@ -60,7 +63,11 @@ const Docs = () => {
       <div className='toolbar'></div>
 
       <div className='container no-padding'>
-        <Tabs showMultipleSwitch={false} currentTab={'In your application'}>
+        <Tabs
+          showMultipleSwitch={false}
+          currentTab={'In your application'}
+          tabChangeHandler={colorizeCodeSnippet}
+        >
           <div label='In your application'>
             <div className='container'>
               <h2>Installing EOS icons</h2>
