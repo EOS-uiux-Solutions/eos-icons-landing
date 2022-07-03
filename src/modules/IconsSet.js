@@ -27,7 +27,7 @@ const IconsSet = (props) => {
   const urlIconName = urlParams.get('iconName')
   const urlTagName = urlParams.get('tagName')
   const tabType = urlParams.get('type')
-  const [selectMultiple, setSelectMultiple] = useState(true)
+  const selectMultiple = state.customize
   const [emptySearchResult, setEmptySearchResult] = useState(false)
   const [suggestedString, setSuggestedString] = useState('')
   const [iconEditor, setIconEditor] = useState(false)
@@ -95,7 +95,6 @@ const IconsSet = (props) => {
     setIconSelected('')
     setActiveTab('Static Icons')
     setStaticHistory('')
-    setSelectMultiple(true)
     setAnimatedHistory('')
     setEmptySearchResult(false)
     setSuggestedString('')
@@ -311,7 +310,7 @@ const IconsSet = (props) => {
   }
 
   const selectIcon = (icon, callback) => {
-    if (selectMultiple) {
+    if (!selectMultiple) {
       const iconObj = { name: icon.name, tags: icon.tags }
       setIconSelected(
         JSON.stringify(iconObj) === JSON.stringify(iconSelected) ? '' : iconObj
@@ -332,17 +331,18 @@ const IconsSet = (props) => {
     return callback
   }
 
-  const selectAnimatedIcon = (icon) => {
-    setIconSelected({ name: icon } === iconSelected ? '' : { name: icon })
-    setShowPanel({ name: icon } !== iconSelected)
-    setSearchValue(icon === searchValue ? '' : icon)
-    if (selectMultiple) {
+  const selectAnimatedIcon = (icon, callback) => {
+    if (!selectMultiple) {
+      setIconSelected({ name: icon })
+      setShowPanel(true)
+      setSearchValue(icon)
       window.history.replaceState(
         '',
         'EOS Icons',
         `${window.location.pathname}?iconName=${icon}&type=animated`
       )
     }
+    return callback
   }
 
   /* Toggle customizable functionality */
@@ -350,7 +350,6 @@ const IconsSet = (props) => {
     setShowPanel(false)
     setSearchValue('')
     setIconSelected('')
-    setSelectMultiple(!selectMultiple)
     window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
     props.action()
     return callback
@@ -358,7 +357,10 @@ const IconsSet = (props) => {
 
   /* Function to close HowToPanel upon switching tabs */
   const tabSwitch = (e) => {
-    if (e !== tab) {
+    if (e === tab) {
+      setActiveTab(e)
+    } else {
+      toggleCustomize(dispatch({ type: 'TOGGLE_CUSTOMIZE_AND_DESELECT' }))
       setActiveTab(e)
       if (e === 'Static Icons') {
         setAnimatedHistory(iconSelected)
@@ -508,47 +510,40 @@ const IconsSet = (props) => {
           </div>
         </div>
         <div className='icon-information'>
-          {tab === 'Static Icons' ? (
-            !state.customize ? (
-              <div>
-                <ShowHowToUse
-                  tab={tab}
-                  showPanel={showPanel}
-                  iconSelected={iconSelected}
-                  closeHowTo={closeHowTo}
-                  theme={state.iconsTheme}
-                />
-              </div>
-            ) : (
-              <div className='how-to-use-block'>
-                <CustomizeIconsPanel
-                  selectAll={() =>
-                    dispatch({
-                      type: 'ADD_ALL_ICONS',
-                      search: searchValue
-                    })
-                  }
-                  deselectAll={() => {
-                    dispatch({ type: 'REMOVE_ALL_ICONS' })
-                    setSearchValue('')
-                    window.history.replaceState(
-                      '',
-                      'EOS Icons',
-                      `${window.location.pathname}`
-                    )
-                  }}
-                />
-              </div>
-            )
-          ) : (
+          {!state.customize ? (
             <div>
               <ShowHowToUse
                 tab={tab}
                 showPanel={showPanel}
                 iconSelected={iconSelected}
                 closeHowTo={closeHowTo}
-                setSearchValue={setSearchValue}
                 theme={state.iconsTheme}
+              />
+            </div>
+          ) : (
+            <div className='how-to-use-block'>
+              <CustomizeIconsPanel
+                iconType={tab === 'Animated Icons' ? 'animated' : 'static'}
+                selectAll={() =>
+                  dispatch({
+                    type:
+                      tab === 'Animated Icons'
+                        ? 'ADD_ALL_ANIMATED_ICONS'
+                        : 'ADD_ALL_STATIC_ICONS',
+                    search: searchValue
+                  })
+                }
+                deselectAll={() => {
+                  dispatch({
+                    type: 'REMOVE_ALL_ICONS'
+                  })
+                  setSearchValue('')
+                  window.history.replaceState(
+                    '',
+                    'EOS Icons',
+                    `${window.location.pathname}`
+                  )
+                }}
               />
             </div>
           )}
@@ -590,7 +585,7 @@ const IconsSet = (props) => {
                   <div className='icons-list'>
                     {categoryObject.icons.map((icon, i) =>
                       isActive(icon.name, state) ? (
-                        <div ref={activeIconRef}>
+                        <div ref={activeIconRef} key={i}>
                           <Icon
                             size={36}
                             active={isActive(icon.name, state)}
@@ -609,7 +604,9 @@ const IconsSet = (props) => {
                                 })
                               )
                             }
-                            onDoubleClickAction={() => iconEditorToggle()}
+                            onDoubleClickAction={() =>
+                              !selectMultiple ? iconEditorToggle() : null
+                            }
                           />
                         </div>
                       ) : (
@@ -631,7 +628,9 @@ const IconsSet = (props) => {
                               })
                             )
                           }
-                          onDoubleClickAction={() => iconEditorToggle()}
+                          onDoubleClickAction={() =>
+                            !selectMultiple ? iconEditorToggle() : null
+                          }
                         />
                       )
                     )}
@@ -663,14 +662,23 @@ const IconsSet = (props) => {
             <div className='icons-list'>
               {state.animatedIcons.map((icon, index) => (
                 <Icon
-                  key={index}
+                  size={36}
+                  key={icon}
+                  active={isActive(icon, state)}
                   name={icon}
-                  type={'animated'}
-                  active={icon === iconSelected?.name}
-                  onClickAction={() => {
-                    selectAnimatedIcon(icon)
-                  }}
-                  onDoubleClickAction={() => iconEditorToggle()}
+                  iconsTheme={state.iconsTheme}
+                  onClickAction={() =>
+                    selectAnimatedIcon(
+                      icon,
+                      dispatch({
+                        type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                        selection: icon
+                      })
+                    )
+                  }
+                  onDoubleClickAction={() =>
+                    !selectMultiple ? iconEditorToggle() : null
+                  }
                 />
               ))}
             </div>
