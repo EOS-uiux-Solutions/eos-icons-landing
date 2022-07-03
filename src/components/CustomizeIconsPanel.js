@@ -75,9 +75,12 @@ const CustomizeIconsPanel = (props) => {
         <div className='generate-div'>
           <span>{value.multipleIcons.length} icons selected</span>
           <span>Export as: </span>
-          <Button type='submit' onClick={generateFont}>
-            Font
-          </Button>
+          {props.iconType !== 'animated' ? (
+            <Button type='submit' onClick={generateFont}>
+              Font
+            </Button>
+          ) : null}
+
           <Button type='button' onClick={iconEditorToggle}>
             Images
           </Button>

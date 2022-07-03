@@ -27,7 +27,7 @@ const IconsSet = (props) => {
   const urlIconName = urlParams.get('iconName')
   const urlTagName = urlParams.get('tagName')
   const tabType = urlParams.get('type')
-  const [selectMultiple, setSelectMultiple] = useState(true)
+  const selectMultiple = state.customize
   const [emptySearchResult, setEmptySearchResult] = useState(false)
   const [suggestedString, setSuggestedString] = useState('')
   const [iconEditor, setIconEditor] = useState(false)
@@ -95,7 +95,6 @@ const IconsSet = (props) => {
     setIconSelected('')
     setActiveTab('Static Icons')
     setStaticHistory('')
-    setSelectMultiple(true)
     setAnimatedHistory('')
     setEmptySearchResult(false)
     setSuggestedString('')
@@ -311,7 +310,7 @@ const IconsSet = (props) => {
   }
 
   const selectIcon = (icon, callback) => {
-    if (selectMultiple) {
+    if (!selectMultiple) {
       const iconObj = { name: icon.name, tags: icon.tags }
       setIconSelected(
         JSON.stringify(iconObj) === JSON.stringify(iconSelected) ? '' : iconObj
@@ -332,17 +331,18 @@ const IconsSet = (props) => {
     return callback
   }
 
-  const selectAnimatedIcon = (icon) => {
-    setIconSelected({ name: icon } === iconSelected ? '' : { name: icon })
-    setShowPanel({ name: icon } !== iconSelected)
-    setSearchValue(icon === searchValue ? '' : icon)
-    if (selectMultiple) {
+  const selectAnimatedIcon = (icon, callback) => {
+    if (!selectMultiple) {
+      setIconSelected({ name: icon })
+      setShowPanel(true)
+      setSearchValue(icon)
       window.history.replaceState(
         '',
         'EOS Icons',
         `${window.location.pathname}?iconName=${icon}&type=animated`
       )
     }
+    return callback
   }
 
   /* Toggle customizable functionality */
@@ -350,7 +350,6 @@ const IconsSet = (props) => {
     setShowPanel(false)
     setSearchValue('')
     setIconSelected('')
-    setSelectMultiple(!selectMultiple)
     window.history.replaceState('', 'EOS Icons', `${window.location.pathname}`)
     props.action()
     return callback
@@ -605,7 +604,9 @@ const IconsSet = (props) => {
                                 })
                               )
                             }
-                            onDoubleClickAction={() => iconEditorToggle()}
+                            onDoubleClickAction={() =>
+                              !selectMultiple ? iconEditorToggle() : null
+                            }
                           />
                         </div>
                       ) : (
@@ -627,7 +628,9 @@ const IconsSet = (props) => {
                               })
                             )
                           }
-                          onDoubleClickAction={() => iconEditorToggle()}
+                          onDoubleClickAction={() =>
+                            !selectMultiple ? iconEditorToggle() : null
+                          }
                         />
                       )
                     )}
@@ -658,32 +661,24 @@ const IconsSet = (props) => {
             )}
             <div className='icons-list'>
               {state.animatedIcons.map((icon, index) => (
-                <div
-                  className={`icon-container ${
-                    isActive(icon, state) ? 'active' : ''
-                  }`}
-                  key={index}
-                  onClick={() => {
-                    if (state.customize) {
-                      selectIcon(
-                        icon,
-                        dispatch({
-                          type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
-                          selection: icon
-                        })
-                      )
-                    } else {
-                      setIconSelected({ name: icon })
-                      setShowPanel(true)
-                      setSearchValue(icon)
-                      window.history.replaceState(
-                        '',
-                        'EOS Icons',
-                        `${window.location.pathname}?iconName=${icon}&type=animated`
-                      )
-                    }
-                  }}
-                  onDoubleClickAction={() => iconEditorToggle()}
+                <Icon
+                  size={36}
+                  key={icon}
+                  active={isActive(icon, state)}
+                  name={icon}
+                  iconsTheme={state.iconsTheme}
+                  onClickAction={() =>
+                    selectAnimatedIcon(
+                      icon,
+                      dispatch({
+                        type: state.customize ? 'ADD_MULTIPLE_ICONS' : '',
+                        selection: icon
+                      })
+                    )
+                  }
+                  onDoubleClickAction={() =>
+                    !selectMultiple ? iconEditorToggle() : null
+                  }
                 />
               ))}
             </div>
