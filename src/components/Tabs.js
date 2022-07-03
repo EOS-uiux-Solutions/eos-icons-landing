@@ -37,9 +37,9 @@ const Tabs = (props) => {
     if (tabChangeHandler) tabChangeHandler()
   }, [tabChangeHandler])
 
-  const changeCheckedStatus = () => {
+  const changeCheckedStatus = useCallback(() => {
     setChecked(!checked)
-  }
+  }, [checked])
 
   const resetTabsStateFromNavbarLogo = useCallback(() => {
     changeCheckedStatus()
