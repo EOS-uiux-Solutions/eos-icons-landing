@@ -83,6 +83,10 @@ If you'd like to add new icons, you'll need to head over to the [icons repositor
 
 # Our "thank you" section
 
+### Deployed with Vercel
+
+[![vercel](https://eos-icons-frontend.vercel.app/_next/static/media/vercel-banner.84416612.svg)](https://vercel.com/?utm_source=eos-icons&utm_campaign=oss)
+
 ### Tested for every browser in every device
 
 Thanks to [Browserstack](https://www.browserstack.com) and their continuous contribution to open source projects, we continuously test the EOS to make sure all our features and components work perfectly fine in all browsers.
