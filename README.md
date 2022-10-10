@@ -69,17 +69,15 @@ If you'd like to contribute with design changes, you'll have to do as follows:
 
 If you'd like to add new icons, you'll need to head over to the [icons repository](https://gitlab.com/SUSE-UIUX/eos-icons) where you'll find thorough instructions on how to design & add icons to the iconic font.
 
-# Learn more about the EOS UX/UI Solutions
-
-- [EOS Design System](https://brand.eosdesignsystem.com/)
+## Learn more about the EOS UX/UI Solutions
 
 - [EOS Icons](https://eos-icons.com)
 
-- [User Story](https://userstory.eosdesignsystem.com/)
+- [EOS User Story](https://userstory.site)
 
-- [Follow us on Twitter](https://twitter.com/eosdesignsystem)
+- [Follow us on Twitter](https://twitter.com/eos_uxui)
 
-- [Join us in Slack](https://slack.eosdesignsystem.com)
+- [Join us on Slack](https://slack.userstory.site)
 
 # Our "thank you" section
 
