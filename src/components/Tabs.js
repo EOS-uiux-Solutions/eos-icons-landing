@@ -20,13 +20,13 @@ const Tabs = (props) => {
 
   const [activeTab, setActiveTab] = useState(currentTab)
   const [checked, setChecked] = useState(false)
-  const [staticCheck, setStaticCheck] = useState(false)
   const [position, setPosition] = useState(0)
   const [windowsSize] = useWindow()
   const { dispatch } = useContext(AppContext)
 
   useEffect(() => {
     setActiveTab(currentTab)
+    setChecked(false)
   }, [currentTab])
 
   useEffect(() => {
@@ -35,26 +35,17 @@ const Tabs = (props) => {
 
   useEffect(() => {
     if (tabChangeHandler) tabChangeHandler()
-    if (activeTab === 'Static Icons') {
-      setChecked(staticCheck)
-    } else {
-      setChecked(false)
-    }
-  }, [activeTab, staticCheck, tabChangeHandler])
+  }, [tabChangeHandler])
 
   const changeCheckedStatus = useCallback(() => {
-    if (activeTab === currentTab) {
-      setStaticCheck(!checked)
-    }
     setChecked(!checked)
-  }, [activeTab, checked, currentTab])
+  }, [checked])
 
   const resetTabsStateFromNavbarLogo = useCallback(() => {
     changeCheckedStatus()
     dispatch({ type: 'RESET_CUSTOMIZE' })
     setActiveTab(currentTab)
     setChecked(false)
-    setStaticCheck(false)
     setPosition(0)
   }, [changeCheckedStatus, currentTab, dispatch])
 
@@ -94,7 +85,6 @@ const Tabs = (props) => {
             )}
 
             <Toggle
-              disabledStatus={activeTab === 'Animated Icons'}
               name='Select multiple'
               id='js-icon-picker'
               activeTab={activeTab}
