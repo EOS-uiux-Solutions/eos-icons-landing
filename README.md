@@ -2,7 +2,7 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://eos-icons.com)
 
-Visit the [EOS icons website](https://eos-icons.com)
+Visit the [EOS icons website](https://eos-icons-frontend-1t6flcbwl-eos-icons.vercel.app/)
 
 # Guideline to develop this site
 
