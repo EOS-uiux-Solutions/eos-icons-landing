@@ -59,8 +59,13 @@ export const eosIconsState = {
   toggleCustomize() {
     /* Clear arrays when switching between customize */
     multipleIcons.splice(0, multipleIcons.length)
-
-    return (this.customize = !this.customize)
+    this.customize = !this.customize
+    return this.customize
+  },
+  toggleCustomizeAndDeselect() {
+    multipleIcons.splice(0, multipleIcons.length)
+    this.customize = false
+    return this.customize
   },
   resetCustomize() {
     return (this.customize = false)
@@ -89,7 +94,7 @@ export const eosIconsState = {
     }
     this.cookiesToggle = !this.cookiesToggle
   },
-  selectAllIcons(search) {
+  selectAllStaticIcons(search) {
     multipleIcons.splice(0, multipleIcons.length)
     for (let i = 0; i < this.icons.length; i++) {
       if (
@@ -102,6 +107,14 @@ export const eosIconsState = {
   },
   deselectAllIcons() {
     multipleIcons.splice(0, multipleIcons.length)
+    return multipleIcons
+  },
+  selectAllAnimatedIcons(search) {
+    multipleIcons.splice(0, multipleIcons.length)
+    for (let i = 0; i < this.animatedIcons.length; i++) {
+      if (this.animatedIcons[i].includes(search))
+        multipleIcons.push(this.animatedIcons[i])
+    }
     return multipleIcons
   },
   setSearchRegularList: function (value) {
@@ -184,6 +197,13 @@ export const iconsReducer = (state, action) => {
         ...state,
         iconsCategory: eosIconsState.selectAllTagsIcons(action.selection)
       }
+    case 'TOGGLE_CUSTOMIZE_AND_DESELECT': {
+      return {
+        ...state,
+        multipleIcons: eosIconsState.deselectAllIcons(),
+        customize: eosIconsState.toggleCustomizeAndDeselect()
+      }
+    }
     case 'TOGGLE_CUSTOMIZE':
       return {
         ...state,
@@ -194,10 +214,15 @@ export const iconsReducer = (state, action) => {
         ...state,
         customize: eosIconsState.resetCustomize()
       }
-    case 'ADD_ALL_ICONS':
+    case 'ADD_ALL_STATIC_ICONS':
       return {
         ...state,
-        multipleIcons: eosIconsState.selectAllIcons(action.search)
+        multipleIcons: eosIconsState.selectAllStaticIcons(action.search)
+      }
+    case 'ADD_ALL_ANIMATED_ICONS':
+      return {
+        ...state,
+        multipleIcons: eosIconsState.selectAllAnimatedIcons(action.search)
       }
     case 'REMOVE_ALL_ICONS':
       return {
