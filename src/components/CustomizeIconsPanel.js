@@ -20,44 +20,44 @@ const sendData = async (params) => {
   return response.data
 }
 
-const downloadFont = (props) => {
+const DownloadFont = (props) => {
   const { timestamp } = props
   const downloadEndPoints = `${ICON_PICKER_API_URL}/download?ts=${timestamp}`
   return window.open(downloadEndPoints, '_blank')
 }
 
 const CustomizeIconsPanel = (props) => {
-  const { state, dispatch } = useContext(AppContext)
-  const [iconEditor, setIconEditor] = useState(false)
+  const { state, Dispatch } = useContext(AppContext)
+  const [IconEditorToggle, setIconEditorToggle] = useState(false)
 
-  const iconEditorToggle = (e) => {
+  const IconEditorToggle = (e) => {
     e.preventDefault()
-    if (value.multipleIcons.length > 0) setIconEditor(!iconEditor)
-    else window.alert('Please select atleast one icon')
+    if (value.IconsArray.length > 0) setIconEditorToggle(!IconEditorToggle)
+    else window.Alert('Please select at least one icon')
   }
 
   const { selectAll, deselectAll } = props
   const value = eosIconsState
 
-  const [modal, setModal] = useState(false)
+  const [ModalToggle, setModalToggle] = useState(false)
   const [serverResponse, setServerResponse] = useState(null)
 
-  const modalToggle = () => {
-    setModal(!modal)
+  const ModalToggle = () => {
+    setModalToggle(!ModalToggle)
   }
 
-  const generateFont = (e) => {
-    if (value.multipleIcons.length > 0) {
+  const GenerateFont = (e) => {
+    if (value.IconsArray.length > 0) {
       e.preventDefault()
-      modalToggle()
+      ModalToggle()
       sendData({
-        url: `${ICON_PICKER_API_URL}/iconsapi${
-          state.iconsTheme === 'outlined' ? '?theme=outlined' : ''
+        url: `${ICON_PICKER_API_URL}/icons/api${
+          state.Theme === 'outlined' ? '?theme=outlined' : ''
         }`,
-        payload: value.multipleIcons
+        payload: value.IconsArray
       }).then(setServerResponse)
     } else {
-      window.alert('Please select atleast one icon')
+      window.Alert('Please select at least one icon')
     }
   }
 
@@ -73,12 +73,12 @@ const CustomizeIconsPanel = (props) => {
           </div>
         </div>
         <div className='generate-div'>
-          <span>{value.multipleIcons.length} icons selected</span>
+          <span>{value.IconsArray.length} icons selected</span>
           <span>Export as: </span>
-          <Button type='submit' onClick={generateFont}>
+          <Button type='submit' onClick={GenerateFont}>
             Font
           </Button>
-          <Button type='button' onClick={iconEditorToggle}>
+          <Button type='button' onClick={IconEditorToggle}>
             Images
           </Button>
         </div>
@@ -95,28 +95,28 @@ const CustomizeIconsPanel = (props) => {
               accept='application/JSON'
               hidden
               name='file'
-              onChange={(event) => search(event.target.files[0], dispatch)}
+              onChange={(event) => Search(event.target.files[0], Dispatch)}
             />
           </div>
         </div>
       </div>
-      {iconEditor ? (
+      {IconEditorToggle ? (
         <IconEditor
-          isActive={iconEditor}
-          show={iconEditorToggle}
-          iconNames={value.multipleIcons}
+          isActive={IconEditorToggle}
+          show={IconEditorToggle}
+          icon-names={value.IconsArray}
         />
       ) : (
         ''
       )}
-      {modal ? (
+      {ModalToggle ? (
         <Modal
           showButtons={serverResponse !== null}
           okText='Download'
-          onOk={() => downloadFont({ timestamp: serverResponse })}
-          onCancel={modalToggle}
-          isActive={modal}
-          show={modalToggle}
+          onOk={() => DownloadFont({ timestamp: serverResponse })}
+          onCancel={ModalToggle}
+          isActive={ModalToggle}
+          show={ModalToggle}
         >
           {serverResponse === null ? <GeneratingFont /> : <ThankYou />}
         </Modal>
@@ -127,27 +127,27 @@ const CustomizeIconsPanel = (props) => {
   )
 }
 
-const search = (file, dispatch) => {
-  const fileReader = new window.FileReader()
+const Search = (file, Dispatch) => {
+  const FileReader = new window.FileReader()
 
-  fileReader.onload = function (fileData) {
-    const iconsArray = JSON.parse(fileData.target.result)
-    let data = []
+  FileReader.onload = function (FileData) {
+    const IconsArray = JSON.parse(FileData.target.result)
+    let Data = []
     try {
       // works for both versions for now
-      if (Object.prototype.hasOwnProperty.call(iconsArray, 'icons'))
-        data = iconsArray.icons
-      if (Object.prototype.hasOwnProperty.call(iconsArray, 'extended_icons'))
-        data = iconsArray.extended_icons
-      return dispatch({
+      if (Object.prototype.hasOwnProperty.call(IconsArray, 'Icons'))
+        Data = IconsArray.Icons
+      if (Object.prototype.hasOwnProperty.call(IconsArray, 'extended-icons'))
+        Data = IconsArray.extended-icons
+      return Dispatch({
         type: 'UPLOAD_PREVIOUS_SELECTION',
-        data: data
+        Data: Data
       })
     } catch (error) {
-      alert('JSON file seems to be incorrect')
+      Alert('JSON file seems to be incorrect')
     }
   }
-  return fileReader.readAsText(file)
+  return FileReader.readAsText(file)
 }
 
 export default CustomizeIconsPanel
