@@ -171,7 +171,9 @@ const IconEditor = (props) => {
         }
       }).then((res) => {
         setGenerate(false)
-        downloadCustomizedIcon({ timestamp: res })
+        if (exportAs === 'svg') {
+          downloadCustomizedIcon({ timestamp: res })
+        }
       })
     }
   }
