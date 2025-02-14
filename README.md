@@ -17,7 +17,7 @@ After cloning this repository you will need to install all the dependencies: `np
 Run `cd src && cp config.example.json config.json`  
 Open the new created `/src/config.json` with your favourite editor and change the `ICON_PICKER_API_URL` variables to point to your instance of [Icon API](https://github.com/EOS-uiux-Solutions/eos-icons-api) (http://localhost:3131/)
 
-#### Staring up
+#### Starting up
 
 Then run: `npm start` to run the app in the development mode.
 
